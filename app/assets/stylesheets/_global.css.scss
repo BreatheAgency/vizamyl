@@ -6,6 +6,7 @@ html {
 
 body {
   font-family: $global-font;
+  font-weight: bold;
   min-height: 400px;
   background: #fff;
   color: $primary-color
@@ -104,8 +105,7 @@ main {
   }
 
   .button-container {
-
-    padding:50px 0 0 0;
+    padding: 30px 0 0 0;
 
     a, i, .btn {
       font-size:rem-calc(32);
@@ -139,7 +139,11 @@ main {
 
 footer {
   min-height: 120px;
-  margin:40px 0 0 0;
+  margin: 40px 0 0 0;
+
+  .row {
+    border-top: solid 1px $primary-highlight;
+  }
 
   p {
     line-height: .9em;
@@ -150,7 +154,6 @@ footer {
 
   p:first-child {
     padding:20px 0 0 0;
-    border-top:solid 1px $primary-highlight;
   }
 }
 
