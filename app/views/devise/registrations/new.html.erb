@@ -1,0 +1,42 @@
+<%= bootstrap_devise_error_messages! %>
+<div class="row">
+  <div class="small-0 large-6 columns with-content with-minimum">
+  </div>
+  <div class="small-12 large-6 columns with-content with-minimum">
+    <h1 class="vh"><%= t('.sign_up') %></h1>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form' }) do |f| %>
+      <fieldset>
+        <legend class="vh"><%= t('.sign_up') %></legend>
+          <div class="form-group">
+            <%= f.label :email %>
+            <%= f.email_field :email, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <label>Title</label>
+            <input type="radio" name="title" value="Dr" id="dr" class=""><label for="dr"><span><span></span></span>Dr</label>
+            <input type="radio" name="title" value="Mr" id="mr" class=""><label for="mr"><span><span></span></span>Mr</label>
+          </div>
+          <div class="form-group">
+            <%= f.label :first_name %>
+            <%= f.text_field :first_name, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :last_name %>
+            <%= f.text_field :last_name, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password %>
+            <%= f.password_field :password, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password_confirmation %>
+            <%= f.password_field :password_confirmation, class: "form-control" %>
+          </div>
+          <div class="button-container">
+            <%= f.submit t('.sign_up'), class: "btn btn-default" %><i class="fi-arrow-right"></i>
+          </div>
+      </fieldset>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.course {
+  .columns.with-media {
+    padding-top: 100px;
+  }
+
+  nav {
+
+    li {
+      color: #fff
+    }
+  }
+
+  main {
+    h1 {
+      font-family: $global-font;
+      font-size: rem-calc(32);
+      color: $primary-color;
+      margin: 20px 0 30px 0;
+      line-height: 40px;
+      letter-spacing: 1px;
+    }
+
+    video {
+      max-width: 100%;
+      min-height: 300px;
+      height: auto;
+    }
+  }
+}

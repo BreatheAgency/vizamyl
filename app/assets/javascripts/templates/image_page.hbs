@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="small-5 large-5 columns with-content with-minimum">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="small-7 large-7 columns with-media">
+    <img src="http://placehold.it/540x310" class="img-responsive">
+    {{partial 'actions'}}
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    {{module.title}} : {{title}}
+    {{module.progress}} | {{module.currentProgress }} / {{ module.totalProgress}}
+    <small>{{controller}}</small>
+  </div>
+</div>

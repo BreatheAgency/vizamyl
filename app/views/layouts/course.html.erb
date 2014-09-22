@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%= render partial: 'head' %>
+  <body class="course">
+    <%= tag(:meta, content: UserSerializer.new(current_user).to_json(root: false), name: 'current-user') if user_signed_in? %>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/video.js/4.1.0/video.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es5-shim/4.0.3/es5-shim.min.js"></script>
+    <%= javascript_include_tag :course %>
+  </body>
+</html>

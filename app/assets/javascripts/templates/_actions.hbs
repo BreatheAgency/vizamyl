@@ -1,0 +1,5 @@
+<div class="button-container">
+  {{#each page_action in actions}}
+    <a {{action 'select' page_action.module page_action.page}}>{{page_action.title}}<i class="fi-arrow-right"></i></a>
+  {{/each}}
+</div>

@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="small-5 large-5 columns with-content with-minimum">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="small-7 large-7 columns with-media">
+    <video class="flex-video video-js vjs-default-skin vjs-big-play-centered" controls preload="auto" width="auto" height="auto" poster="http://video-js.zencoder.com/oceans-clip.png">
+      <source src="http://djqy74tsvke0j.cloudfront.net/demo/playlist.m3u8" type='application/vnd.apple.mpegurl'/>
+      <source src="http://djqy74tsvke0j.cloudfront.net/demo/web.mp4" type='video/mp4'/>
+      <source src="http://djqy74tsvke0j.cloudfront.net/demo/web.webm" type='video/webm'/>
+    </video>
+    {{partial 'actions'}}
+  </div>
+</div>
+<div class="row">
+  <div class="large-12 columns">
+    {{module.title}} : {{title}}
+    {{module.progress}} | {{module.currentProgress }} / {{ module.totalProgress}}
+    <small>{{controller}}</small>
+  </div>
+</div>

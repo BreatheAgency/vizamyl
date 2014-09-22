@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%= render partial: 'head' %>
+  <body class="content">
+    <nav role="nav">
+			<div class="row">
+				<ul class="inline-list">
+					<li><%= link_to t('layouts.application.course'), static_path(id: 'course') %></li>
+					<li><%= link_to t('layouts.application.prescribing_information'), static_path(id: 'prescribing-information') %></li>
+					<li><%= link_to t('layouts.application.references'), static_path(id: 'references') %></li>
+					<li><%= link_to t('layouts.application.resources'), static_path(id: 'resources') %></li>
+					<li><%= link_to t('layouts.application.contact'), static_path(id: 'contact') %></li>
+					<% if user_signed_in? %>
+						<li><%= link_to t('layouts.application.edit_account'), edit_user_registration_path %></li>
+						<li><%= link_to t('layouts.application.sign_out'), destroy_user_session_path %></li>
+					<% else %>
+						<li><%= link_to t('layouts.application.sign_in'), new_user_session_path %></li>
+						<li><%= link_to t('layouts.application.sign_up'), new_user_registration_path %></li>
+					<% end %>
+					<li class="right">
+						<p class="global-brand">
+							<%= link_to 'Vizamyl', root_path, class: '' %><span class="indicator"></span>
+							<span>Flutemetamol F18</span>
+							<span>Injection</span>
+						</p>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<main role="main">
+			<%= yield %>
+		</main>
+		<%= render partial: 'footer' %>
+	</body>
+</html>

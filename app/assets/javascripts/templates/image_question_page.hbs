@@ -1,0 +1,25 @@
+<div class="page">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h1>{{chapter.title}} | {{title}}</h1>
+      <h2>{{chapter.progress}} | {{chapter.currentProgress }} / {{chapter.totalProgress}}</h2>
+      <hr>
+      {{{body}}}
+      <hr>
+      {{#if isInCorrect}}
+        <h4>You've answered the question correctly!</h4>
+        <button {{action 'next' }}>Next</button>
+      {{/if}}
+      {{#if isInIncorrect}}
+        <h4>You've answered the question incorrectly</h4>
+        <button {{action 'next' }}>Next</button>
+      {{/if}}
+      {{#if isInUnanswered}}
+        {{ext-radio content=questionSet value=selectedQuestion}}
+        <button {{action 'submit' }}>Submit</button>
+      {{/if}}
+      <hr>
+      <small>{{controller}}</small> | <small>{{currentState}}</small>
+    </div>
+  </div>
+</div>

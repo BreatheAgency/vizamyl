@@ -1,0 +1,18 @@
+$global-font:'geinspira', Helvetica, Arial, sans-serif;
+$primary-color: #005cb9;
+$primary-highlight:#009ee2;
+$nav-text:#fff;
+$chapter:#666;
+$chapter-text:#fff;
+$subsection:#08a5e1;
+
+
+@mixin linear-gradient($fromColor, $toColor, $toSide:to bottom, $stop: 100%) {
+  background-color: $toColor;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background: -webkit-linear-gradient($toSide, $fromColor 0%, $toColor $stop);
+  background: -moz-linear-gradient($toSide, $fromColor 0%, $toColor $stop);
+  background: linear-gradient($toSide, $fromColor 0%, $toColor $stop);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
+}
