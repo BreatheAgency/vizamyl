@@ -6,12 +6,12 @@
       <p>If you are returning to the course, <br><strong>welcome back and please login.</strong></p>
       <p>If you would like to begin the course, <br><strong>welcome, and please enrole.</strong></p>
       <div class="button-container row">
-      <div class="small-3 large-4 columns">
-        <a class="forward-icon" href="">Login<i class="fi-arrow-right"></i></a>
-      </div>
-      <div class="small-9 large-8 columns">
-        <a class="forward-icon" href="">Enrole<i class="fi-arrow-right"></i></a>
-      </div>
+        <div class="small-3 large-5 columns">
+          <a class="forward-icon" href="<%= new_user_session_path %>"><%= t('.sign_in') %><i class="fi-arrow-right"></i></a>
+        </div>
+        <div class="small-9 large-7 columns">
+          <a class="forward-icon" href="<%= new_user_registration_path %>"><%= t('.sign_up') %><i class="fi-arrow-right"></i></a>
+        </div>
       </div>
     </div>
 </div>

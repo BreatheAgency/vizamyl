@@ -18,7 +18,8 @@ nav {
 
   li {
     margin: 35px 0 40px 0;
-    line-height: 16px
+    line-height: 16px;
+    border-left: solid 1px rgba(255,255,255, 0.8);
   }
 
   li.right {
@@ -27,13 +28,15 @@ nav {
 
   a {
     color: $nav-text;
-    border-left: solid 1px rgb(255,255,255);
-    border-left: solid 1px rgba(255,255,255,0.8);
     padding: 0 8px;
     line-height: 16px
   }
 
-  li:first-child a, li.right a {
+  a:hover {
+    color: white;
+  }
+
+  li:first-child, li.right {
     border: none;
   }
 
@@ -44,17 +47,17 @@ nav {
   }
 
   .global-brand a {
-    padding:0;
+    padding: 0;
     text-transform: uppercase;
-    font-size:rem-calc(28);
-    line-height:rem-calc(20);
+    font-size: rem-calc(28);
+    line-height: rem-calc(20);
   }
 
   .global-brand span {
-    display:block;
-    color:$nav-text;
-    font-size:rem-calc(13);
-    line-height:rem-calc(13);
+    display: block;
+    color: $nav-text;
+    font-size: rem-calc(13);
+    line-height: rem-calc(13);
   }
 }
 
@@ -131,6 +134,11 @@ main {
     }
 
     a:hover, a:hover i {
+      color: $primary-highlight;
+      border-color: $primary-highlight;
+    }
+
+    button:hover, button:hover i {
       color: $primary-highlight;
       border-color: $primary-highlight;
     }

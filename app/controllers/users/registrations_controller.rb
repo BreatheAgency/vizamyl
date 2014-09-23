@@ -18,16 +18,16 @@ class Users::RegistrationsController < Devise::RegistrationsController
       render 'edit'
     end
   end
- 
+
   protected
- 
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) do |u|
-      u.permit(:locale, :email, :password, :password_confirmation)
+      u.permit(:first_name, :last_name, :locale, :email, :password, :password_confirmation)
     end
     devise_parameter_sanitizer.for(:account_update) do |u|
-      u.permit(:locale, :email, :password, :password_confirmation, :current_password)
+      u.permit(:first_name, :last_name, :locale, :email, :password, :password_confirmation, :current_password)
     end
   end
- 
+
 end

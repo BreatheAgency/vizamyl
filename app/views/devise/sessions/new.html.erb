@@ -22,7 +22,9 @@
               <%= f.label :remember_me %>
           </div>
           <div class="button-container">
-            <%= f.submit t('.sign_in'), class: "btn btn-default" %><i class="fi-arrow-right"></i>
+            <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+              <%= t('.sign_in') %><i class="fi-arrow-right"></i>
+            <% end %>
           </div>
       </fieldset>
     <% end %>

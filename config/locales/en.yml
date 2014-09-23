@@ -24,7 +24,7 @@ en:
     application:
       course: Course
       menu: Menu
-      edit_account: Edit account
+      my_account: My account
       sign_in: Sign in
       sign_up: Sign up
       sign_out: Sign out
