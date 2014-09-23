@@ -22,9 +22,8 @@ de:
         it: Italienisch
   layouts:
     application:
-      course: Kurs
-      menu: Menu
-      edit_account: Konto bearbeiten
+      course_menu: Course menu (DE)
+      my_account: My account (DE)
       sign_in: Anmelden
       sign_up: Registrieren
       sign_out: Austragen
@@ -35,8 +34,6 @@ de:
       contact: Kontakt
       terms_and_conditions: Geschäftsbedingungen
       accessibility: Zugänglichkeit
-    course:
-      menu: Menu
   pages:
     home:
       title: Zuhause

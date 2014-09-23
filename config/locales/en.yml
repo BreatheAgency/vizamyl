@@ -22,9 +22,8 @@ en:
         it: Italian
   layouts:
     application:
-      course: Course
-      menu: Menu
       my_account: My account
+      course_menu: Course menu
       sign_in: Sign in
       sign_up: Sign up
       sign_out: Sign out
@@ -35,8 +34,6 @@ en:
       contact: Contact
       terms_and_conditions: Terms And Conditions
       accessibility: Accessibility
-    course:
-      menu: Menu
   pages:
     home:
       title: Home

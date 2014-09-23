@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   resources :chapters, only: %i(index show)
   resources :progressions, only: %i(create index)
 
+
+  get '/course', to: redirect('/course/start')
   get '/course/*other' => 'static#show', id: 'course'
   get '/*id' => 'static#show', as: :static
   root to: 'static#show', id: 'home'

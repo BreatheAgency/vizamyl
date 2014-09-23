@@ -22,9 +22,8 @@ fr:
         it: Italien
   layouts:
     application:
-      course: Cours
-      menu: Menu
-      edit_account: Modifier compte
+      course_menu: Course menu (FR)
+      my_account: My account (FR)
       sign_in: Connexion
       sign_up: Inscription
       sign_out: Se déconnecter
@@ -35,8 +34,6 @@ fr:
       contact: Contactez
       terms_and_conditions: Termes et conditions
       accessibility: Accessibilité
-    course:
-      menu: Menu
   pages:
     home:
       title: Maison

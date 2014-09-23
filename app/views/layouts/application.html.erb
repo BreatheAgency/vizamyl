@@ -5,7 +5,7 @@
     <nav role="nav">
 			<div class="row">
 				<ul class="inline-list">
-					<li><%= link_to t('layouts.application.course'), static_path(id: 'course') %></li>
+					<li><%= link_to t('layouts.application.course_menu'), '/course/start' %></li>
           <% if user_signed_in? %>
             <li><%= link_to t('layouts.application.my_account'), edit_user_registration_path %></li>
           <% else %>
