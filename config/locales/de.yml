@@ -23,7 +23,7 @@ de:
   layouts:
     application:
       course_menu: Course menu (DE)
-      my_account: My account (DE)
+      my_account: Mein konto
       sign_in: Anmelden
       sign_up: Registrieren
       sign_out: Austragen

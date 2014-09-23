@@ -23,7 +23,7 @@ fr:
   layouts:
     application:
       course_menu: Course menu (FR)
-      my_account: My account (FR)
+      my_account: Mon compte
       sign_in: Connexion
       sign_up: Inscription
       sign_out: Se déconnecter
