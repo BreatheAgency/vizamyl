@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :chapters, only: %i(index show)
-  resources :progressions, only: %i(create index)
-
+  resources :progressions, only: %i(create index update)
 
   get '/course', to: redirect('/course/start')
   get '/course/*other' => 'static#show', id: 'course'

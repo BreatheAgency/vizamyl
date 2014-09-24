@@ -31,28 +31,30 @@ Course.MenuController = Ember.ArrayController.extend({
       console.log('page available: ' + page.get('available'));
 
       var currentUser = this.get('controllers.application').get('currentUser')
-      var progression = this.store.createRecord('progression', { step: step, user: currentUser });
+      // var progression = this.store.createRecord('progression', { step: step, user: currentUser });
+      var progression = step.get('progression');
+      progression.set('amount', 1);
 
       if (chapter.get('available') && page.get('available')){
         // progression.set('amount', 1);
         // procceed = true;
       } else if (chapter.get('available') && !page.get('available')) {
-      //   // - 2 becuase the page's position is not zero-based and we want the one before it
-      //   var previous_page = chapter.get('pages').objectAt(page.get('position') - 2)
-      //   if (previous_page && previous_page.get('completed')) {
-      //     progression.set('amount', 0.5);
-      //     procceed = true;
+        //   // - 2 becuase the page's position is not zero-based and we want the one before it
+        //   var previous_page = chapter.get('pages').objectAt(page.get('position') - 2)
+        //   if (previous_page && previous_page.get('completed')) {
+        //     progression.set('amount', 0.5);
+        //     procceed = true;
       //   }
       } else {
       //   // - 2 becuase the chapter's position is not zero-based and we want the one before it
       //   var previous_chapter = this.get('model').objectAt(chapter.get('position') - 2);
       //   if (previous_chapter && previous_chapter.get('completed')) {
-      //     progression.set('amount', 0.5);
+          // progression.set('amount', 0.5);
       //     procceed = true;
       //   }
       }
 
-      // progression.save();
+      progression.save();
 
       // if (procceed) {
         // this.transitionToRoute(chapter.get('location') + '.page', page.get('type'), page.get('id'));

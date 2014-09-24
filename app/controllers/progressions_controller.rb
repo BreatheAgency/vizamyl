@@ -15,6 +15,13 @@ class ProgressionsController < ApplicationController
     render json: progression
   end
 
+  def update
+    # find or create?
+    progression = current_user.progressions.find(params[:id])
+    progression.update(progression_params.slice(:amount))
+    render json: progression
+  end
+
   private
 
   def progression_params

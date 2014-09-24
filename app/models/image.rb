@@ -1,7 +1,9 @@
 class Image < ActiveRecord::Base
   self.table_name = 'steps'
   default_scope { where(type: 'Image') }
+
   belongs_to :chapter
+  has_one :progression, foreign_key: :step_id
 
   translates :title
   # active_admin_translates :title do
