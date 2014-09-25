@@ -16,7 +16,7 @@ class ProgressionsController < ApplicationController
   end
 
   def update
-    # find or create?
+    # TODO find or create?
     progression = current_user.progressions.find(params[:id])
     progression.update(progression_params.slice(:amount))
     render json: progression
