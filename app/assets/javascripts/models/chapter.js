@@ -2,27 +2,31 @@ Course.Chapter = DS.Model.extend({
   position: DS.attr('number'),
   // location: DS.attr('string'),
   title: DS.attr('string'),
-  // pages: DS.hasMany('page', {async: true, polymorphic: true}),
   steps: DS.hasMany('step'),
-  //
+
   hashId: function(){
     return '#' + this.get('id');
   }.property('id'),
-  //
-  // progressedPages: function() {
-  //   return this.get('pages').filter(function(page, index, self) {
-  //     if (page.get('progress') > 0) { return true; }
-  //   });
-  // }.property('pages.@each.progress'),
-  //
+
+  progressedSteps: function() {
+    return this.get('steps').filter(function(step, index, self) {
+      if (step.get('progression').get('amount') > 0) { return true; }
+    });
+  }.property('steps.@each.progression.amount'),
+
+  completedSteps: function() {
+    return this.get('steps').filter(function(step, index, self) {
+      if (step.get('progression').get('amount') === 1) { return true; }
+    });
+  }.property('steps.@each.progression.amount'),
+
   available: function() {
-    return true;
-  }.property()
-  // available: function() {
-  //   return this.get('progressedPages').get('length') !== 0;
-  // }.property('progressedPages'),
-  //
-  // completed: Ember.aliasMethod('available'),
+    return this.get('progressedSteps').get('length') !== 0;
+  }.property('progressedSteps'),
+
+  completed: function() {
+    return this.get('completedSteps').get('length') === this.get('steps').get('length');
+  }.property('completedSteps'),
   //
   // currentProgress: function() {
   //   return this.get('progressedPages').get('length');

@@ -1,8 +1,6 @@
 ActiveAdmin.register User do
   config.filters = false
 
-  # permit_params translations_attributes: [:id, :title, :locale, :_destroy]
-
   controller do
     def permitted_params
       params.permit!

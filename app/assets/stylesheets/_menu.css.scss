@@ -6,12 +6,12 @@
 
     li {
 
-      padding:0;
-      margin:0 0 3px 0;
+      padding: 0;
+      margin: 0;
 
       h2 {
-        margin:0;
-        padding:10px;
+        margin: 0;
+        padding: 10px;
         font-size: rem-calc(20);
         background: $chapter;
       }
@@ -23,36 +23,41 @@
   }
 
   .row {
-    margin-top:30px;
+    margin-top: 30px;
   }
 
   .panel {
     border: none;
-    background:#fff;
-    padding:0;
+    background: #fff;
+    padding: 0;
   }
 
   ol.list-group {
-    margin:0 0 0 24px;
+    margin: 0 0 0 24px;
 
     li {
-      margin:1px 0 1px 0;
+      margin: 1px 0 1px 0;
+      vertical-align: middle;
 
       a {
-          color: $chapter-text;
-          font-size:rem-calc(14);
-          line-height:rem-calc(36);
+        color: $chapter-text;
+        font-size: rem-calc(14);
+        line-height: rem-calc(36);
       }
 
       h3 {
-        margin:0;
-        padding:0 12px;
+        margin: 0;
+        padding: 0 12px;
         background: $subsection;
       }
 
       i {
-        margin-left:10px;
+        font-size: rem-calc(24);
+        line-height: rem-calc(36);
+        padding-right: 5px;
+        vertical-align: middle;
       }
+
     }
   }
 }

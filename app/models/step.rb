@@ -6,9 +6,9 @@ class Step < ActiveRecord::Base
   has_one :progression
 
   translates :title
-  # active_admin_translates :title do
-  #   validates_presence_of :title
-  # end
+  active_admin_translates :title do
+    validates_presence_of :title
+  end
 
   def self.inheritance_column
     :no_such_column_because_we_dont_want_type_casting

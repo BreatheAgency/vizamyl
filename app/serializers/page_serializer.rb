@@ -1,4 +1,8 @@
 class PageSerializer < ActiveModel::Serializer
-  attributes :id, :type, :title
-  # has_one :progression
+  attributes :id, :position, :title, :title
+  has_one :progression
+
+  def progression
+    scope.progressions.where(step: object).first
+  end
 end

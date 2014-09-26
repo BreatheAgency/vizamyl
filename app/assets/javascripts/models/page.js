@@ -1,34 +1,32 @@
 Course.Page = DS.Model.extend({
   type: DS.attr('string', { defaultValue: false }),
   chapter: DS.belongsTo('chapter'),
-  // position: DS.attr('number'),
-  // progress: DS.attr('float'),
+  progression: DS.belongsTo('progression'),
+  position: DS.attr('number'),
   title: DS.attr('string'),
   // template_name: DS.attr('string'),
   // controller_name: DS.attr('string'),
   // page_actions: DS.attr('array'),
 
-  example:function(){
-    return 'page'
-  }.property()
+  available: function() {
+    return this.get('progression').get('amount') !== 0;
+  }.property('progression.amount'),
 
-  // available: function() {
-  //   return this.get('progress') !== 0;
-  // }.property('progress'),
-  //
-  // completed: Ember.aliasMethod('available'),
-  //
-  // progressClass: function(){
-  //   switch(this.get('progress')) {
-  //     case 1:
-  //       return 'fa-circle';
-  //     case 0.5:
-  //       return 'fa-dot-circle-o';
-  //     default:
-  //       return 'fa-circle-o';
-  //   }
-  // }.property('progress'),
-  //
+  completed: function() {
+    return this.get('progression').get('amount') == 1;
+  }.property('progression.amount'),
+
+  progressClass: function(){
+    switch(this.get('progression').get('amount')) {
+      case 1:
+        return 'fa-circle';
+      case 0.5:
+        return 'fa-dot-circle-o';
+      default:
+        return 'fa-circle-o';
+    }
+  }.property('progression.amount'),
+
   // actions: function(){
   //   var actions = [];
   //   this.get('page_actions').map(function(item, index, enumerable) {

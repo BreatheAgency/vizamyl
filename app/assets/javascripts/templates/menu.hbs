@@ -14,7 +14,7 @@
 								<li>
 									<h3>
 										<a {{action 'select' chapter step}} {{bind-attr class=":list-group-item step.available:available"}}>
-                      {{step.page.title}} <i {{bind-attr class="step.page.progressClass"}}></i>
+                      <i {{bind-attr class="step.progressClass"}}></i> {{step.title}} (available: {{step.available}} completed: {{step.completed}})
                     </a>
 									</h3>
 								</li>

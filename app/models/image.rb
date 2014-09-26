@@ -6,9 +6,9 @@ class Image < ActiveRecord::Base
   has_one :progression, foreign_key: :step_id
 
   translates :title
-  # active_admin_translates :title do
-  #   validates_presence_of :title
-  # end
+  active_admin_translates :title do
+    validates_presence_of :title
+  end
 
   def self.create_for_chapter(chapter, attributes = {})
     content = new(attributes)

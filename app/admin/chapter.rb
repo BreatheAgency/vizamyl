@@ -42,13 +42,5 @@ ActiveAdmin.register Chapter do
     attributes_table do
       row :title
     end
-    panel 'Steps' do
-      table_for(chapter.steps) do
-        column :id
-        column :type do |step|
-          link_to(step.type, admin_chapter_steps_path(step))
-        end
-      end
-    end
   end
 end

@@ -2,7 +2,6 @@ ActiveAdmin.register Image do
   config.paginate = false
   config.filters = false
 
-  # permit_params translations_attributes: [:id, :title, :locale, :_destroy]
   belongs_to :chapter, polymorphic: true
   sortable
 

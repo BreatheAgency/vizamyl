@@ -22,43 +22,91 @@ Course.MenuController = Ember.ArrayController.extend({
     },
 
     select: function(chapter, step) {
-      var procceed = false;
-      var page = step.get('page');
+      var procceed = false,
+          progression = step.get('progression'),
+          currentUser = this.get('controllers.application').get('currentUser');
 
-      console.log(step.get('progression'));
+        if (chapter.get('available')) {
+          console.log('chapter available');
 
-      console.log('chapter available: ' + chapter.get('available'));
-      console.log('page available: ' + page.get('available'));
+          if (step.get('available')) {
+            console.log('step available');
+            procceed = true;
+          } else {
+            console.log('step unavailable');
 
-      var currentUser = this.get('controllers.application').get('currentUser')
-      // var progression = this.store.createRecord('progression', { step: step, user: currentUser });
-      var progression = step.get('progression');
-      progression.set('amount', 1);
+            var previous_step = chapter.get('steps').objectAt(step.get('position') - 2)
+            if (previous_step) {
+              console.log('previous_step found');
 
-      if (chapter.get('available') && page.get('available')){
-        // progression.set('amount', 1);
-        // procceed = true;
-      } else if (chapter.get('available') && !page.get('available')) {
-        //   // - 2 becuase the page's position is not zero-based and we want the one before it
-        //   var previous_page = chapter.get('pages').objectAt(page.get('position') - 2)
-        //   if (previous_page && previous_page.get('completed')) {
-        //     progression.set('amount', 0.5);
-        //     procceed = true;
-      //   }
-      } else {
-      //   // - 2 becuase the chapter's position is not zero-based and we want the one before it
-      //   var previous_chapter = this.get('model').objectAt(chapter.get('position') - 2);
-      //   if (previous_chapter && previous_chapter.get('completed')) {
-          // progression.set('amount', 0.5);
+              if (previous_step.get('completed')) {
+                  console.log('previous step completed');
+                  procceed = true;
+              } else {
+                  console.log('previous step not completed');
+              }
+
+            } else {
+              console.log('previous_step not found');
+            }
+
+          }
+
+        } else {
+          console.log('chapter unavailable');
+
+          var previous_chapter = this.store.all('chapter').objectAt(chapter.get('position') - 2);
+          if (previous_chapter) {
+            console.log('previous_chapter found');
+
+            if (previous_chapter.get('completed')) {
+                console.log('previous chapter completed');
+                procceed = true;
+            } else {
+                console.log('previous chapter not completed');
+            }
+
+          } else {
+            console.log('previous_chapter not found');
+          }
+        }
+
+      // if (chapter.get('available') && step.get('available')){
+      //   progression.set('amount', 1);
+      //   procceed = true;
+      // } else if (chapter.get('available') && !step.get('available')) {
+      //   // -2 becuase the step's position is not zero-based and we want the one before it
+      //   var previous_step = chapter.get('steps').objectAt(step.get('position') - 2)
+      //   if (previous_step && previous_step.get('completed')) {
+      //     progression.set('amount', 0.5);
       //     procceed = true;
+      //   } else if (step.get('position') == 1 ) {
+      //     // we're on the first step
+      //   } else {
+      //     console.log('previous_step is not completed?');
       //   }
+      // } else {
+      // // -2 becuase the chapter's position is not zero-based and we want the one before it
+      // //   var previous_chapter = this.get('model').objectAt(chapter.get('position') - 2);
+      // //   if (previous_chapter && previous_chapter.get('completed')) {
+      //     // progression.set('amount', 0.5);
+      // //     procceed = true;
+      // //   }
+      // }
+
+      if (procceed && !step.get('completed')) {
+        progression.set('amount', 0.5);
       }
 
-      progression.save();
+      // only save the progression when its changed
+      if (progression.get('isDirty')) {
+        progression.save();
+      }
 
-      // if (procceed) {
+      if (procceed) {
+        console.log('proceed');
         // this.transitionToRoute(chapter.get('location') + '.page', page.get('type'), page.get('id'));
-      // }
+      }
 
       this.set('open', false);
     }
