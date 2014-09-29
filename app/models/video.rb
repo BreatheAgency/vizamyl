@@ -7,7 +7,7 @@ class Video < ActiveRecord::Base
 
   translates :title
   active_admin_translates :title do
-    validates_presence_of :title
+    # validates_presence_of :title
   end
 
   def self.create_for_chapter(chapter, attributes = {})

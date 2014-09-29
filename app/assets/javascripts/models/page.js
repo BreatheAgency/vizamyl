@@ -4,8 +4,8 @@ Course.Page = DS.Model.extend({
   progression: DS.belongsTo('progression'),
   position: DS.attr('number'),
   title: DS.attr('string'),
-  // template_name: DS.attr('string'),
-  // controller_name: DS.attr('string'),
+  template_name: DS.attr('string'),
+  controller_name: DS.attr('string'),
   // page_actions: DS.attr('array'),
 
   available: function() {
@@ -13,7 +13,7 @@ Course.Page = DS.Model.extend({
   }.property('progression.amount'),
 
   completed: function() {
-    return this.get('progression').get('amount') == 1;
+    return this.get('progression').get('amount') === 1;
   }.property('progression.amount'),
 
   progressClass: function(){

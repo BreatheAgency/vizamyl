@@ -1,5 +1,6 @@
+<div class="backdrop" {{action "toggle"}}></div>
 <div class="row">
-	<div class="large-12 columns panel-group items with-minimum with-content" id="accordion">
+	<div class="large-12 columns panel-group items with-minimum" id="accordion">
 		<ol>
 			{{#each chapter in controller}}
 				<li {{bind-attr class=":panel :panel-default chapter.available:available"}}>
@@ -26,4 +27,3 @@
 		</ol>
 	</div>
 </div>
-<div class="backdrop" {{action "toggle"}}></div>

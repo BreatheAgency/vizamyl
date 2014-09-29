@@ -2,7 +2,7 @@ Course.MenuController = Ember.ArrayController.extend({
   needs: ['application'],
   sortProperties: ['position'],
   sortAscending: true,
-  open: true,
+  open: false,
 
   closed: function() {
     return !this.get('open');
@@ -18,6 +18,7 @@ Course.MenuController = Ember.ArrayController.extend({
     },
 
     toggle: function() {
+      console.log('toggle');
       this.set('open', !this.get('open'));
     },
 
@@ -69,6 +70,7 @@ Course.MenuController = Ember.ArrayController.extend({
           } else {
             console.log('previous_chapter not found');
           }
+
         }
 
       // if (chapter.get('available') && step.get('available')){
@@ -100,13 +102,13 @@ Course.MenuController = Ember.ArrayController.extend({
 
       // only save the progression when its changed
       if (progression.get('isDirty')) {
-        progression.save();
+        // progression.save();
       }
 
-      if (procceed) {
+      // if (procceed) {
         console.log('proceed');
-        // this.transitionToRoute(chapter.get('location') + '.page', page.get('type'), page.get('id'));
-      }
+        this.transitionToRoute('/chapters/' + chapter.id + '/' + step.get('page').get('type').toLowerCase() + '/' + step.get('page').get('id'));
+      // }
 
       this.set('open', false);
     }

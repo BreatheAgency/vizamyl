@@ -9,7 +9,7 @@ Course.Step = DS.Model.extend({
   }.property('progression.amount'),
 
   completed: function() {
-    return this.get('progression').get('amount') == 1;
+    return this.get('progression').get('amount') === 1;
   }.property('progression.amount'),
 
   progressClass: function(){
