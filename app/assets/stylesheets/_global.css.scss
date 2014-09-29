@@ -9,7 +9,7 @@ body {
   font-weight: bold;
   min-height: 400px;
   background: #fff;
-  color: $primary-color
+  color: $primary-color;
 }
 
 nav {
@@ -78,6 +78,7 @@ nav {
 }
 
 main {
+  height: 100%;
 
   form {
 

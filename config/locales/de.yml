@@ -22,7 +22,7 @@ de:
         it: Italienisch
   layouts:
     application:
-      course_menu: Course menu (DE)
+      course_menu: Gang-Menü
       my_account: Mein konto
       sign_in: Anmelden
       sign_up: Registrieren
