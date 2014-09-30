@@ -42,7 +42,21 @@ en:
     prescribing-information:
       title: Prescribing Information
     references:
-      title: References
+      title: |
+       References
+      body_html: |
+        <ol>
+          <li>Hello!</li>
+          <li>Hello!</li>
+          <li>Hello!</li>
+          <li>Hello!</li>
+          <li>Hello!</li>
+          <li>Hello!</li>
+          <li>Hello!</li>
+          <li>Hello!</li>
+          <li>Hello!</li>
+          <li>Hello!</li>
+        </ol>
     resources:
       title: Resources
     contact:

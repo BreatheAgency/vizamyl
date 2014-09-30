@@ -10,6 +10,8 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     desired_locale = I18n.default_locale
+    # TODO
+    return if request.domain == 'herokuapp.com'
     locale_subdomain = request.subdomain.empty? ? nil : request.subdomain.to_sym
     if user_signed_in?
       desired_locale = current_user.locale.to_sym
