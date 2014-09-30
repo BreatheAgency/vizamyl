@@ -9,7 +9,11 @@ body {
   font-weight: bold;
   min-height: 400px;
   background: #fff;
-  color: $primary-color;
+  color: #666;
+}
+
+a {
+  font-weight: bold;
 }
 
 nav {
@@ -174,7 +178,7 @@ footer {
   p {
     line-height: .9em;
     font-size: rem-calc(12);
-    color: #777777;
+    color: #777;
     margin:0 0 8px 0;
   }
 

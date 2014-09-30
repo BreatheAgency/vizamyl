@@ -1,11 +1,10 @@
-$global-font:'geinspira', Helvetica, Arial, sans-serif;
+$global-font: 'geinspira', Helvetica, Arial, sans-serif;
 $primary-color: #005cb9;
-$primary-highlight:#009ee2;
-$nav-text:#fff;
-$chapter:#666;
-$chapter-text:#fff;
-$subsection:#08a5e1;
-
+$primary-highlight: #009ee2;
+$nav-text: #fff;
+$chapter: #666;
+$chapter-text: #fff;
+$subsection: #08a5e1;
 
 @mixin linear-gradient($fromColor, $toColor, $toSide:to bottom, $stop: 100%) {
   background-color: $toColor;
