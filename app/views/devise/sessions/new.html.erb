@@ -1,8 +1,8 @@
 <%= bootstrap_devise_error_messages! %>
-<div class="row">
-  <div class="small-0 large-6 columns with-content with-minimum">
+<div class="devise row">
+  <div class="small-6 medium-6 large-6 columns with-content with-minimum">
   </div>
-  <div class="small-12 large-6 columns with-content with-minimum">
+  <div class="small-6 medium-6 large-6 columns with-content with-minimum">
     <h1 class="vh"><%= t('.sign_in') %></h1>
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
       <fieldset>

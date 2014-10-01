@@ -4,17 +4,27 @@
     color: $primary-color;
   }
 
+  .motion {
+    background-repeat: no-repeat;
+    background-position: left middle;
+    @include retina-background-image("motion", 500px, 500px);
+  }
+
   .home {
+    div:first-of-type {
+      @extend .motion;
+    }
+
     h1 {
       margin: 50px 0;
-      line-height: 48px;
-      letter-spacing: 1px;
+      line-height: rem-calc(48);
+      letter-spacing: rem-calc(1);
     }
 
     p {
       font-size: rem-calc(18);
-      line-height: 22px;
-      letter-spacing: 1px;
+      line-height: rem-calc(22);
+      letter-spacing: rem-calc(1);
     }
   }
 
@@ -33,7 +43,46 @@
       padding-bottom: rem-calc(16);
       line-height: rem-calc(30);
     }
+  }
 
+  .resources {
+    background-color: white;
+
+    .columns {
+      padding-top: rem-calc(20);
+      padding-left: rem-calc(50);
+      padding-right: rem-calc(50);
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: $h3-font-size;
+      padding-bottom: rem-calc(16);
+      line-height: rem-calc(30);
+    }
+  }
+
+  .prescribing-information {
+    background-color: white;
+
+    .columns {
+      padding-top: rem-calc(20);
+      padding-left: rem-calc(50);
+      padding-right: rem-calc(50);
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: $h3-font-size;
+      padding-bottom: rem-calc(16);
+      line-height: rem-calc(30);
+    }
+  }
+
+  .devise {
+    div:first-of-type {
+      @extend .motion;
+    }
   }
 
   .contact {
@@ -65,7 +114,6 @@
     }
 
     .right {
-
       h3:first-of-type {
         margin-top: rem-calc(18);
       }
