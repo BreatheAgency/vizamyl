@@ -24,9 +24,9 @@ en:
     application:
       course_menu: Course menu
       my_account: My account
-      sign_in: Sign in
-      sign_up: Sign up
-      sign_out: Sign out
+      login: Login
+      logout: Logout
+      enrole: Enrole
       privacy_policy: Privacy Policy
       prescribing_information: Prescribing Information
       references: References
