@@ -12,8 +12,12 @@ body {
   color: #666;
 }
 
-a {
+a, button {
   font-weight: bold;
+}
+
+button {
+  -webkit-font-smoothing: antialiased;
 }
 
 nav {
@@ -133,9 +137,14 @@ main {
   .button-container {
     padding: 30px 0 0 0;
 
-    a, i, .btn {
+    a, i, .btn, button {
+      font-family: $global-font;
       font-size: rem-calc(32);
       color: $primary-color;
+    }
+
+    button {
+      line-height: rem-calc(24);
     }
 
     .btn {

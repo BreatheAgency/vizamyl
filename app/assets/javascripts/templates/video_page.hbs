@@ -5,11 +5,7 @@
     {{controller}} | {{currentState}}
   </div>
   <div class="small-7 large-7 columns with-media">
-    <video class=" video-js vjs-default-skin" data-setup controls preload="auto" width="auto" height="auto">
-      <source src="http://djqy74tsvke0j.cloudfront.net/test/playlist.m3u8" type='application/vnd.apple.mpegurl'/>
-      <source src="http://djqy74tsvke0j.cloudfront.net/test/web.mp4" type='video/mp4'/>
-      <source src="http://djqy74tsvke0j.cloudfront.net/test/web.webm" type='video/webm'/>
-    </video>
-    {{partial 'actions'}}
+    {{wistia-video videoId="2lev331682"}}
   </div>
+  {{!-- {{partial 'actions'}} --}}
 </div>

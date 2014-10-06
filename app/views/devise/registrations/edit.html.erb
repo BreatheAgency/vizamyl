@@ -1,43 +1,27 @@
-<%= bootstrap_devise_error_messages! %>
-<div class="devise row">
-  <div class="small-6 medium-6 large-6 columns with-content with-minimum">
-  </div>
-  <div class="small-6 medium-6 large-6 columns with-content with-minimum">
-    <h1 class="vh"><%= t('.title', resource: resource_class.model_name.human) %></h1>
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, role: 'form' }) do |f| %>
-      <fieldset>
-        <legend class="vh"><%= t('.title', resource: resource_class.model_name.human) %></legend>
-          <div class="form-group">
-            <label>Title</label>
-            <input type="radio" name="title" value="Dr" id="dr" class=""><label for="dr"><span><span></span></span>Dr</label>
-            <input type="radio" name="title" value="Mr" id="mr" class=""><label for="mr"><span><span></span></span>Mr</label>
-          </div>
-          <div class="form-group">
-            <%= f.label :first_name %>
-            <%= f.text_field :first_name, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :last_name %>
-            <%= f.text_field :last_name, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :email %>
-            <%= f.email_field :email, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :password %>
-            <%= f.password_field :password, class: "form-control" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :password_confirmation %>
-            <%= f.password_field :password_confirmation, class: "form-control" %>
-          </div>
-          <div class="button-container">
-            <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
-              <%= t('.update') %><i class="fi-arrow-right"></i>
-            <% end %>
-          </div>
-      </fieldset>
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :email, required: true, autofocus: true %>
+
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
+
+    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+    <%= f.input :password_confirmation, required: false %>
+    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
   </div>
-</div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Update" %>
+  </div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>

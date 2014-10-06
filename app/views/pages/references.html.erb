@@ -1,6 +1,6 @@
 <div class="references row">
   <div class="large-12 columns with-content with-minimum left">
-    <%= simple_format t('.title'), {}, wrapper_tag: 'h1' %>
+    <h1><%= link_to t('.title'), request.path %></1>
     <%= t('.body_html') %>
   </div>
 </div>

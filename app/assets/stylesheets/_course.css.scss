@@ -1,6 +1,11 @@
+video::-webkit-media-controls {
+  display:none !important;
+}
+
 .course {
   .columns.with-media {
     // padding-top: 100px;
+    margin-top: 25px;
   }
 
   nav {

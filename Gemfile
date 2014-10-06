@@ -22,6 +22,7 @@ gem 'i18n-js'
 gem 'skylight'
 gem 'uglifier'
 gem 'ember-rails'
+gem 'simple_form'
 gem 'rack-noindex'
 gem 'rack-timeout'
 gem 'acts_as_list'
@@ -35,6 +36,7 @@ group :test do
 end
 
 group :development do
+  gem 'bullet'
   gem 'quiet_assets'
   gem 'binding_of_caller'
 end

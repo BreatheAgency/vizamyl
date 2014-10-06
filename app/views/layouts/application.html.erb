@@ -9,15 +9,15 @@
           <% if user_signed_in? %>
             <li><%= link_to t('layouts.application.my_account'), edit_user_registration_path %></li>
           <% else %>
-            <li><%= link_to t('layouts.application.sign_in'), new_user_session_path %></li>
-            <li><%= link_to t('layouts.application.sign_up'), new_user_registration_path %></li>
+            <li><%= link_to t('layouts.application.login'), new_user_session_path %></li>
+            <li><%= link_to t('layouts.application.enrole'), new_user_registration_path %></li>
           <% end %>
 					<li><%= link_to t('layouts.application.prescribing_information'), static_path(id: 'prescribing-information') %></li>
 					<li><%= link_to t('layouts.application.references'), static_path(id: 'references') %></li>
 					<li><%= link_to t('layouts.application.resources'), static_path(id: 'resources') %></li>
 					<li><%= link_to t('layouts.application.contact'), static_path(id: 'contact') %></li>
 					<% if user_signed_in? %>
-						<li><%= link_to t('layouts.application.sign_out'), destroy_user_session_path %></li>
+						<li><%= link_to t('layouts.application.logout'), destroy_user_session_path %></li>
 					<% end %>
 					<li class="right">
 						<p class="global-brand">
