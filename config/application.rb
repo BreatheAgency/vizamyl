@@ -35,13 +35,5 @@ module Vizamyl
     # config.assets.precompile += %w( video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff )
     config.assets.precompile += %w( course.js )
     config.assets.initialize_on_precompile = true
-
-    #
-    config.before_configuration do
-      I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
-      I18n.locale = :en
-      I18n.default_locale = :en
-      I18n.reload!
-    end
   end
 end
