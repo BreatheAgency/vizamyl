@@ -127,6 +127,8 @@ GEM
       handlebars-source (~> 1.0)
     erubis (2.7.0)
     execjs (2.2.1)
+    faker (1.4.3)
+      i18n (~> 0.5)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
     foreman (0.75.0)
@@ -270,6 +272,7 @@ DEPENDENCIES
   email_validator
   ember-data-source (= 1.0.0.beta.9)
   ember-rails
+  faker
   font-awesome-rails
   foreman
   foundation-rails

@@ -16,6 +16,7 @@ Course.PagesRoute = Ember.Route.extend({
   },
 
   renderTemplate: function(controller, model) {
+    this.controllerFor('application').set('currentPage', model);
     this.render(model.get('template_name'), {
       controller: model.get('controller_name'),
       model: model,

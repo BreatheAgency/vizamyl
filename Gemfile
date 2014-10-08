@@ -44,6 +44,7 @@ end
 group :test, :development do
   gem 'pry-rails'
   gem 'foreman'
+  gem 'faker'
 end
 
 group :staging, :production do
