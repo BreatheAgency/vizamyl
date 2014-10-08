@@ -32,6 +32,8 @@ gem 'foundation-rails'
 gem 'font-awesome-rails'
 gem 'active_model_serializers'
 
+gem 'faker'
+
 group :test do
 end
 
@@ -44,7 +46,6 @@ end
 group :test, :development do
   gem 'pry-rails'
   gem 'foreman'
-  gem 'faker'
 end
 
 group :staging, :production do
