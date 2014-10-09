@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/fabn/activeadmin-globalize.git
-  revision: ccaa2adc44c6d455d1bb506da61dc7554116f90b
+  revision: 0bdb3d260d407962bdcadb323c068e7ce0a8a64c
   branch: develop
   specs:
     activeadmin-globalize (1.0.0.pre)
@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 40ac6655d67eece5f43f72ff6137db1ba34aa711
+  revision: 0c83cfe0b9b43a4a27a63c13f27d6682b0ff6cae
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -33,20 +33,21 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: 13c99d81627e95fbfd22046cda9581da89fd19e1
+  revision: f246f62b106e14e0e123d823f5ad5496d8641c83
   specs:
-    devise (3.3.0)
+    devise (3.4.0)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
+      responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
 
 GIT
   remote: git://github.com/tigrish/devise-i18n.git
-  revision: e672ae85e409cadf48b9fa595d28cb11e6d87bdc
+  revision: 969c3af4d19477711e15e0f643fea47333de6759
   specs:
-    devise-i18n (0.11.1)
+    devise-i18n (0.11.2)
 
 GEM
   remote: https://rubygems.org/
@@ -136,7 +137,7 @@ GEM
       thor (~> 0.19.1)
     formtastic (3.0.0)
       actionpack (>= 3.2.13)
-    foundation-rails (5.4.3.1)
+    foundation-rails (5.4.5.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     globalize (4.0.2)
@@ -167,10 +168,10 @@ GEM
     mail (2.6.1)
       mime-types (>= 1.16, < 3)
     method_source (0.8.2)
-    mime-types (2.3)
-    minitest (5.4.1)
+    mime-types (2.4.1)
+    minitest (5.4.2)
     multi_json (1.10.1)
-    oj (2.10.2)
+    oj (2.10.3)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyamorous (1.1.0)
@@ -228,7 +229,7 @@ GEM
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
-    skylight (0.3.20)
+    skylight (0.3.21)
       activesupport (>= 3.0.0)
     slop (3.6.0)
     sprockets (2.11.0)
