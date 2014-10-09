@@ -20,6 +20,10 @@ button {
   -webkit-font-smoothing: antialiased;
 }
 
+.columns.with-minimum {
+  min-height:500px;
+}
+
 nav {
   @include linear-gradient($primary-highlight, $primary-color, to right);
   padding:0;
@@ -206,23 +210,8 @@ footer {
 
 }
 
-
-@media #{$small-only} {
+@media #{$large-up} {
   main {
     @include linear-gradient(#e8e7e7, #fff, top, 450px);
-  }
-
-  .columns.with-minimum {
-    min-height:500px;
-  }
-}
-
-@media #{$medium-up} {
-  main {
-    @include linear-gradient(#e8e7e7, #fff, top, 450px);
-  }
-
-  .columns.with-minimum {
-    min-height:500px;
   }
 }

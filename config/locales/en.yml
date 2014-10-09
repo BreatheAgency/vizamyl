@@ -22,6 +22,10 @@ en:
         it: Italian
   layouts:
     application:
+      brand_html: |
+        <a href="/">Vizamyl <span class="indicator"></span></a>
+        <span>Flutemetamol F18</span>
+        <span>Injection</span>
       course_menu: Course menu
       my_account: My account
       login: Login
@@ -34,15 +38,19 @@ en:
       contact: Contact
       terms_and_conditions: Terms And Conditions
       accessibility: Accessibility
-      copyright: |
-        &copy; 2014 General Electric Company - All rights reserved.
-        GE and the GE monogram are trademarks of General Electric Company.
-        VIZAMYL is a trademark of General Electirc Company or one of its subsidaries.
-      reference: |
-        11-2014 JB6231/OS INT'L EN
+      copyright_html: |
+        <p>&copy; 2014 General Electric Company - All rights reserved.</p>
+        <p>GE and the GE monogram are trademarks of General Electric Company.</p>
+        <p>VIZAMYL is a trademark of General Electirc Company or one of its subsidaries.</p>
+      reference_html: |
+        <p class="right">11-2014 JB6231/OS INT'L ENG</p>
   pages:
     home:
       title: Home
+      body_html: |
+        <h1>Welcome to the <br><strong>Vizamyl e-learning</strong> programme</h1>
+        <p>If you are returning to the course, <br><strong>welcome back and please login.</strong></p>
+        <p>If you would like to begin the course, <br><strong>welcome, and please enrole.</strong></p>
     course:
       title: Course
     prescribing-information:

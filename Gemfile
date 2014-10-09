@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.1.3'
 
-
 gem 'devise', github: 'plataformatec/devise'
 gem 'devise-i18n', github: 'tigrish/devise-i18n'
 gem 'activeadmin', github: 'gregbell/active_admin'
@@ -18,6 +17,7 @@ gem 'globalize', '~> 4.0.2'
 
 gem 'oj'
 gem 'pg'
+gem 'faker'
 gem 'i18n-js'
 gem 'skylight'
 gem 'uglifier'
@@ -31,8 +31,6 @@ gem 'email_validator'
 gem 'foundation-rails'
 gem 'font-awesome-rails'
 gem 'active_model_serializers'
-
-gem 'faker'
 
 group :test do
 end

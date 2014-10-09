@@ -1,22 +1,28 @@
 Course.VideoPlayerComponent = Ember.Component.extend({
+  maxSecondsSeek: 0,
+  timeBeforeChange: 0,
+
   didInsertElement: function() {
     this.player = window.videojs('player', { nativeControlsForTouch: false, customControlsOnMobile: true, controls: true, preload: true, autoplay: false });
+    var that = this;
     if (this.mandatory) {
-      var maxSecondsSeek = 0;
-      var timeBeforeChange = 0;
-      var p = this.player;
-      p.on('timeupdate', function(e) {
-        if (Math.floor(this.currentTime()) > maxSecondsSeek) {
-          p.currentTime(maxSecondsSeek - 2);
-        } else if (Math.floor(this.currentTime()) == maxSecondsSeek) {
-          maxSecondsSeek += 1;
+      this.player.on('timeupdate', function(e){
+        if (Math.floor(this.currentTime()) > that.get('maxSecondsSeek')) {
+          that.player.currentTime(that.get('maxSecondsSeek') - 2);
+        } else if (Math.floor(this.currentTime()) == that.get('maxSecondsSeek')) {
+          that.incrementProperty('maxSecondsSeek');
         }
-        timeBeforeChange = this.currentTime();
+        that.set('timeBeforeChange', this.currentTime());
       });
     }
+    this.player.one('ended', function(e){
+      that.sendAction('finished', true);
+    });
   },
 
   willDestroyElement: function() {
+    this.player.off('timeupdate', this.onTimeUpdate);
+    this.player.off('ended', this.onEnded);
     this.player.dispose();
   },
 
