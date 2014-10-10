@@ -24,3 +24,18 @@
   </div>
   {{!-- {{partial 'actions'}} --}}
 </div>
+
+
+<div class="row" {{bindAttr style="style"}}>
+  <div class="small-5 large-5 columns with-content with-minimum">
+    <h1>{{title}}</h1>
+  </div>
+  <div class="small-7 large-7 columns with-media">
+    <img src="http://placehold.it/570x480" class="img-responsive">
+    <div class="button-container row">
+      <div class="small-12 medium-12 large-12 columns">
+        <a {{bind-attr class=":right complete:enabled:disabled"}} href="/">Next<i class="fi-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

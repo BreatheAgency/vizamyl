@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <%= render partial: 'head' %>
-  <body class="content">
+  <body class="application">
     <nav role="nav">
 			<div class="row">
 				<ul class="inline-list">
-					<li><%= link_to t('layouts.application.course_menu'), '/course/start' %></li>
+					<li><%= link_to t('layouts.application.course_menu'), static_path(id: 'course', locale: I18n.locale) %></li>
           <% if user_signed_in? %>
             <li><%= link_to t('layouts.application.my_account'), edit_user_registration_path %></li>
           <% else %>
             <li><%= link_to t('layouts.application.login'), new_user_session_path %></li>
             <li><%= link_to t('layouts.application.enrole'), new_user_registration_path %></li>
           <% end %>
-					<li><%= link_to t('layouts.application.prescribing_information'), static_path(id: 'prescribing-information') %></li>
-					<li><%= link_to t('layouts.application.references'), static_path(id: 'references') %></li>
-					<li><%= link_to t('layouts.application.resources'), static_path(id: 'resources') %></li>
-					<li><%= link_to t('layouts.application.contact'), static_path(id: 'contact') %></li>
+					<li><%= link_to t('layouts.application.prescribing_information'), static_path(id: 'prescribing-information', locale: I18n.locale) %></li>
+					<li><%= link_to t('layouts.application.references'), static_path(id: 'references', locale: I18n.locale) %></li>
+					<li><%= link_to t('layouts.application.resources'), static_path(id: 'resources', locale: I18n.locale) %></li>
+					<li><%= link_to t('layouts.application.contact'), static_path(id: 'contact', locale: I18n.locale) %></li>
 					<% if user_signed_in? %>
 						<li><%= link_to t('layouts.application.logout'), destroy_user_session_path %></li>
 					<% end %>

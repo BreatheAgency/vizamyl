@@ -16,12 +16,17 @@ a, button {
   font-weight: bold;
 }
 
+a.disabled {
+ pointer-events: none;
+ cursor: default;
+}
+
 button {
   -webkit-font-smoothing: antialiased;
 }
 
 .columns.with-minimum {
-  min-height:500px;
+  min-height: 580px;
 }
 
 nav {
@@ -41,7 +46,8 @@ nav {
   a {
     color: $nav-text;
     padding: 0 8px;
-    line-height: 16px
+    line-height: 16px;
+    font-weight: normal;
   }
 
   a:hover, a:focus {
@@ -148,6 +154,7 @@ main {
     }
 
     button {
+      vertical-align: text-bottom;
       line-height: rem-calc(24);
     }
 
@@ -163,8 +170,8 @@ main {
       display:inline-block;
       width: 44px;
       height: 44px;
-      margin: 0 0 0 12px;
-      padding: 4px 8px;
+      margin-left: 12px;
+      padding-left: 8px;
       border: solid 2px $primary-color;
       border-radius: 22px;
     }
@@ -177,6 +184,14 @@ main {
     button:hover, button:hover i {
       color: $primary-highlight;
       border-color: $primary-highlight;
+    }
+
+    .disabled {
+      color: #bbb;
+      i {
+        color: #bbb;
+        border-color: #bbb;
+      }
     }
   }
 }

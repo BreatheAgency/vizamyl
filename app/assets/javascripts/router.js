@@ -1,18 +1,16 @@
 Course.Router.reopen({
-  rootURL: '/course/',
+  rootURL: '/',
   location: 'auto'
 });
 
 Course.Router.map(function() {
-  this.route('start');
-  this.resource('chapters', { path: '/chapters/:chapter_id' }, function() {
-    this.resource('pages', { path: '/:page_type/:page_id' }, function() {
+  this.route('locale', { path: '/:locale' }, function() {
+    this.route('course', function() {
+      this.route('start');
+      this.resource('chapters', { path: '/chapters/:chapter_id' }, function() {
+        this.resource('steps', { path: '/:step_type/:step_id' }, function() {
+        });
+      });
     });
-    // this.resource('introduction', function() {
-    //   this.route('page', { path: '/:page_type/:page_id' });
-    // });
-    // this.resource('one-a', function() {
-    //   this.route('page', { path: '/:page_type/:page_id' });
-    // });
   });
 });

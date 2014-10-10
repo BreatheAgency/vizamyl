@@ -1,8 +1,15 @@
 Course.VideoPageController = Ember.ObjectController.extend({
   needs: ['menu'],
   videoId: 'test',
-  mandatory: false,
   finished: false,
+
+  complete: function(){
+    if (this.get('mandatory')) {
+      return this.get('finished');
+    } else {
+      return true;
+    }
+  }.property('finished', 'mandatory'),
 
   actions: {
     select: function(chapter, page) {

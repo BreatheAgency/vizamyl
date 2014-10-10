@@ -29,7 +29,6 @@ gem 'acts_as_list'
 gem 'high_voltage'
 gem 'email_validator'
 gem 'foundation-rails'
-gem 'font-awesome-rails'
 gem 'active_model_serializers'
 
 group :test do
