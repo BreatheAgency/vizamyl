@@ -107,7 +107,7 @@ Course.MenuController = Ember.ArrayController.extend({
 
       // if (procceed) {
         console.log('proceed');
-        this.transitionToRoute('/chapters/' + chapter.id + '/' + step.get('page').get('type').toLowerCase() + '/' + step.get('page').get('id'));
+        this.transitionToRoute('steps.index', step.get('page').get('type').toLowerCase(), step.get('page').get('id'));
       // }
 
       this.set('open', false);

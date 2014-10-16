@@ -1,7 +1,9 @@
-(1...8).each do |i|
+(1...1).each do |i|
   c = Chapter.create!(title: "#{Faker::Commerce.product_name} (#{i})", position: i)
   Video.create_for_chapter(c, title: "(Video) #{Faker::Commerce.product_name}")
   Image.create_for_chapter(c, title: "(Image) #{Faker::Commerce.product_name}")
+  Text.create_for_chapter(c, title: "(Text) #{Faker::Commerce.product_name}")
+  Interactive.create_for_chapter(c, title: "(Interactive) #{Faker::Commerce.product_name}")
 end
 
 I18n.available_locales.each do |locale|

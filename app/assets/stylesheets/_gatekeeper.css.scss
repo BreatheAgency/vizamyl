@@ -1,2 +1,79 @@
 .gatekeeper {
+
+  .map {
+    padding-top: rem-calc(50);
+    min-height: rem-calc(800);
+    background: url('http://ima.gs/FFF/EEE/EEE/1000x700.png') no-repeat top center fixed white;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://lorempixel.com/1000/400/', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://lorempixel.com/1000/400/', sizingMethod='scale')";
+  }
+
+  h1, h2, p {
+    padding-left: rem-calc(40);
+  }
+
+  h1 {
+    margin-bottom: 0;
+    line-height: rem-calc(30);
+
+    sup {
+      font-size: rem-calc(24);
+      line-height: rem-calc(18);
+    }
+
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-top: rem-calc(18);
+    margin-bottom: rem-calc(50);
+    font-size: rem-calc(54);
+    line-height: rem-calc(30);
+  }
+
+  p {
+    font-family: $global-font;
+    font-size: rem-calc(22);
+  }
+
+  .blue {
+    color: $primary-color;
+  }
+
+  .locale-select {
+    background: rgba(255, 255, 255, 0.5);
+    border-top: 1px #eee solid;
+    border-bottom: 1px #eee solid;
+    margin-left: 0;
+    margin-top: rem-calc(40);
+    text-align: center;
+    list-style: none;
+    padding: rem-calc(40) 0 rem-calc(40) 0;
+
+    li {
+      vertical-align: top;
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+
+      img {
+        display: block;
+      }
+    }
+
+  }
+
+  .locale-label {
+    margin-left: 0;
+    text-align: center;
+    list-style: none;
+
+    li {
+      vertical-align: top;
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      width: 50px;
+    }
+  }
 }

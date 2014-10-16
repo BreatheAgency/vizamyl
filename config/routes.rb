@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  %w(videos images).each do |step_type|
+  %w(texts videos images).each do |step_type|
     get "/#{step_type}/:id" => 'steps#show'
   end
 

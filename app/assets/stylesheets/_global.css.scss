@@ -1,6 +1,7 @@
 html {
   min-height:100%;
   height: 100%;
+  user-select: none;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -23,6 +24,16 @@ a.disabled {
 
 button {
   -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+  font-family: $global-font;
+  color: $primary-color;
+}
+
+h2 {
+  font-family: $global-font;
+  color: $primary-color;
 }
 
 .columns.with-minimum {
@@ -227,6 +238,6 @@ footer {
 
 @media #{$large-up} {
   main {
-    @include linear-gradient(#e8e7e7, #fff, top, 450px);
+    @include linear-gradient($background-top, $background-bottom, top, 450px);
   }
 }

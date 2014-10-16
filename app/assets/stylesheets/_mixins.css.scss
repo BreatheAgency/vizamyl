@@ -5,6 +5,8 @@ $nav-text: #fff;
 $chapter: #666;
 $chapter-text: #fff;
 $subsection: #08a5e1;
+$background-top: #e8e7e7;
+$background-bottom: white;
 
 @mixin linear-gradient($fromColor, $toColor, $toSide:to bottom, $stop: 100%) {
   background-color: $toColor;

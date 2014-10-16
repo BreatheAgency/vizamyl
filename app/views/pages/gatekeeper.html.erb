@@ -1,8 +1,24 @@
 <div class="row">
-  <div class="large-12 large-centered columns with-content with-minimum" style="padding-top: 250px;">
-    <ul class="button-group even-3">
+  <div class="large-12 large-centered map">
+    <h1>VIZAMYL Flutemetamol F<sup>18</sup> Injection</h1>
+    <h2>Electronic training programme</h2>
+    <p><span class="blue">This site is intended for medical professionals only</span><br> To proceed, please select which country you are from.</p>
+    <ul class="locale-select">
       <% I18n.available_locales.each do |locale| %>
-        <li><%= link_to locale, "/#{locale}", class: 'button' %></li>
+        <li>
+          <a href="<%= "/#{locale}" %>" class="<%= "#{locale}-button" %>">
+            <img src="http://lorempixel.com/50/50/"></img>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+    <ul class="locale-label">
+      <% I18n.available_locales.each do |locale| %>
+        <li>
+          <a href="<%= "/#{locale}" %>" class="<%= "#{locale}-button" %>">
+            <%= locale %>
+          </a>
+        </li>
       <% end %>
     </ul>
   </div>
