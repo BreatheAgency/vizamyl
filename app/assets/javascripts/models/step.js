@@ -38,20 +38,20 @@ Course.Video = Course.Step.extend({
 
   style: function() {
     if (this.get('mandatory')) {
-      return 'border: solid 1px Crimson';
+      return 'border: solid 1px #00FFFF';
     } else {
-      return 'border: solid 1px LightSkyBlue';
+      return 'border: solid 1px #FF0000';
     }
   }.property('mandatory')
 });
 
 Course.Image = Course.Step.extend({
-  style: 'border: solid 1px Blue;',
+  style: 'border: solid 1px #1CC444;',
   type: DS.attr('string', { defaultValue: 'Image' } )
 });
 
 Course.Text = Course.Step.extend({
-  style: 'border: solid 1px Green;',
+  style: 'border: solid 1px #1CC444;',
   type: DS.attr('string', { defaultValue: 'Text' } )
 });
 
