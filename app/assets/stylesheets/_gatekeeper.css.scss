@@ -55,6 +55,7 @@
       display: inline-block;
       *display: inline;
       zoom: 1;
+      margin-left: rem-calc(20);
 
       img {
         display: block;
@@ -73,7 +74,8 @@
       display: inline-block;
       *display: inline;
       zoom: 1;
-      width: 50px;
+      width: 60px;
+      margin-left: rem-calc(20);
     }
   }
 }
