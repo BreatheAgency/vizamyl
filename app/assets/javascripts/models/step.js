@@ -56,7 +56,7 @@ Course.Text = Course.Step.extend({
 });
 
 Course.Interactive = Course.Step.extend({
-  style: 'border: solid 1px LightSkyBlue;',
+  style: 'border: solid 1px #FFFF00;',
   type: DS.attr('string', { defaultValue: 'Interactive' } )
 });
 

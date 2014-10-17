@@ -19,7 +19,6 @@ Course.ImageScrollerComponent = Ember.Component.extend({
   }.property('rangeValue'),
 
   onScroll: function() {
-    console.log(this.get('scrollPosition'));
     Ember.run.throttle(this, function() {
       Ember.run.scheduleOnce('afterRender', this, function(){
         this.$('.img_wrapper').scrollTo(this.get('scrollPosition'));

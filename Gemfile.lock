@@ -85,6 +85,8 @@ GEM
     arbre (1.0.2)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
+    autoprefixer-rails (3.1.2.20141016)
+      execjs
     barber (0.4.2)
       ember-source
       execjs
@@ -264,6 +266,7 @@ DEPENDENCIES
   activeadmin-globalize!
   activeadmin-sortable!
   acts_as_list
+  autoprefixer-rails
   binding_of_caller
   bullet
   devise!

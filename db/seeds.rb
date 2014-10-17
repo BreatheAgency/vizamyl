@@ -1,10 +1,57 @@
-(1...1).each do |i|
-  c = Chapter.create!(title: "#{Faker::Commerce.product_name} (#{i})", position: i)
-  Video.create_for_chapter(c, title: "(Video) #{Faker::Commerce.product_name}")
-  Image.create_for_chapter(c, title: "(Image) #{Faker::Commerce.product_name}")
-  Text.create_for_chapter(c, title: "(Text) #{Faker::Commerce.product_name}")
-  Interactive.create_for_chapter(c, title: "(Interactive) #{Faker::Commerce.product_name}")
-end
+chapter_zero = Chapter.create!(title: 'Module 0', position: 1)
+Text.create_for_chapter(chapter_zero, title: "(Text) #{Faker::Commerce.product_name}")
+Video.create_for_chapter(chapter_zero, title: "(Video) #{Faker::Commerce.product_name}")
+
+chapter_one = Chapter.create!(title: 'Module 1', position: 2)
+Text.create_for_chapter(chapter_one, title: "(Text) #{Faker::Commerce.product_name}")
+
+chapter_one_a = Chapter.create!(title: 'Module 1a', position: 3)
+Text.create_for_chapter(chapter_one_a, title: "(Text) #{Faker::Commerce.product_name}")
+Video.create_for_chapter(chapter_one_a, title: "(Video) #{Faker::Commerce.product_name}")
+Video.create_for_chapter(chapter_one_a, title: "(Video) #{Faker::Commerce.product_name}")
+# question intro
+# image question
+Video.create_for_chapter(chapter_one_a, title: "(Video) #{Faker::Commerce.product_name}")
+# question intro
+# image question
+Video.create_for_chapter(chapter_one_a, title: "(Video) #{Faker::Commerce.product_name}")
+
+chapter_one_b = Chapter.create!(title: 'Chapter 1b', position: 4)
+Text.create_for_chapter(chapter_one_b, title: "(Text) #{Faker::Commerce.product_name}")
+Video.create_for_chapter(chapter_one_b, title: "(Video) #{Faker::Commerce.product_name}")
+Video.create_for_chapter(chapter_one_b, title: "(Video) #{Faker::Commerce.product_name}")
+Interactive.create_for_chapter(chapter_one_b, title: "(Interactive) #{Faker::Commerce.product_name}")
+# question intro
+# image question
+Video.create_for_chapter(chapter_one_b, title: "(Video) #{Faker::Commerce.product_name}")
+Interactive.create_for_chapter(chapter_one_b, title: "(Interactive) #{Faker::Commerce.product_name}")
+# question intro
+# image question
+Video.create_for_chapter(chapter_one_b, title: "(Video) #{Faker::Commerce.product_name}")
+Interactive.create_for_chapter(chapter_one_b, title: "(Interactive) #{Faker::Commerce.product_name}")
+# question intro
+# image question
+
+chapter_two = Chapter.create!(title: 'Module 2', position: 5)
+Text.create_for_chapter(chapter_two, title: "(Text) #{Faker::Commerce.product_name}")
+
+chapter_two_a = Chapter.create!(title: 'Module 2a', position: 6)
+Text.create_for_chapter(chapter_two_a, title: "(Text) #{Faker::Commerce.product_name}")
+Video.create_for_chapter(chapter_two_a, title: "(Video) #{Faker::Commerce.product_name}")
+Video.create_for_chapter(chapter_two_a, title: "(Video) #{Faker::Commerce.product_name}")
+Video.create_for_chapter(chapter_two_a, title: "(Video) #{Faker::Commerce.product_name}")
+Video.create_for_chapter(chapter_two_a, title: "(Video) #{Faker::Commerce.product_name}")
+# question intro
+# interactive question
+Video.create_for_chapter(chapter_two_a, title: "(Video) #{Faker::Commerce.product_name}")
+# question intro
+# interactive question
+Video.create_for_chapter(chapter_two_a, title: "(Video) #{Faker::Commerce.product_name}")
+# question intro
+# interactive question
+Video.create_for_chapter(chapter_two_a, title: "(Video) #{Faker::Commerce.product_name}")
+
+
 
 I18n.available_locales.each do |locale|
   admin = AdminUser.create!(locale: locale, email: "#{locale}-admin@example.com", password: 'password', password_confirmation: 'password')

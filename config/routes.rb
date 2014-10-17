@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  %w(texts videos images).each do |step_type|
+  %w(interactives texts videos images).each do |step_type|
     get "/#{step_type}/:id" => 'steps#show'
   end
 
@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'enrole' }, controllers: { registrations: 'users/registrations' }
-    get '/course', to: redirect("/%{locale}/course/start")
+    get '/course', to: redirect("/%{locale}/course/text/1")
     get '/course/*other' => 'static#show', id: 'course'
     get '/*id' => 'static#show', id: 'home', as: :static
     get '/' => 'static#show', id: 'home'

@@ -17,7 +17,6 @@
     min-height: 580px;
 
     h1 {
-      font-weight: bold;
       line-height: rem-calc(30);
       font-family: $global-font;
       font-size: $h3-font-size;
@@ -75,6 +74,14 @@
 
     }
 
+    .text-page {
+
+      h1 {
+        margin-bottom: rem-calc(20);
+      }
+
+    }
+
     .img_wrapper.loaded {
 
       img {
@@ -86,6 +93,19 @@
       }
 
     }
+
+  }
+
+  .progresssion {
+    margin-top: rem-calc(20);
+    margin-bottom: rem-calc(10);
+    padding-top: rem-calc(12);
+    border-top: solid 1px $primary-highlight;
+    height: 55px;
+  }
+
+  .visual-progresssion {
+
   }
 }
 
@@ -98,9 +118,6 @@
   right: rem-calc(-20);
   left: 0;
   bottom: 0;
-  -webkit-animation: rotation 1s infinite linear;
-  -moz-animation: rotation 1s infinite linear;
-  -o-animation: rotation 1s infinite linear;
   animation: rotation 1s infinite linear;
   border-left: 6px solid $background-top;
   border-right: 6px solid $background-top;
