@@ -18,7 +18,6 @@ Course.MenuController = Ember.ArrayController.extend({
     },
 
     toggle: function() {
-      console.log('toggle');
       this.set('open', !this.get('open'));
     },
 

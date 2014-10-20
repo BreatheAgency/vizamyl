@@ -161,20 +161,8 @@ main {
     a, i, .btn, button {
       font-family: $global-font;
       font-size: rem-calc(32);
+      line-height: rem-calc(44);
       color: $primary-color;
-    }
-
-    button {
-      vertical-align: text-bottom;
-      line-height: rem-calc(24);
-    }
-
-    .btn {
-      border:none;
-      background:transparent;
-      margin:0;
-      padding:0;
-      cursor:pointer;
     }
 
     i {
@@ -185,6 +173,23 @@ main {
       padding-left: 8px;
       border: solid 2px $primary-color;
       border-radius: 22px;
+    }
+
+    button {
+      line-height: rem-calc(44);
+
+      i {
+        padding-left: 0;
+      }
+
+    }
+
+    .btn {
+      border:none;
+      background:transparent;
+      margin:0;
+      padding:0;
+      cursor:pointer;
     }
 
     a:hover, a:hover i {

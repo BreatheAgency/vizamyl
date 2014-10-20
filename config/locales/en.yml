@@ -50,7 +50,7 @@ en:
       body_html: |
         <h1>Welcome to the <br><strong>Vizamyl e-learning</strong> programme</h1>
         <p>If you are returning to the course, <br><strong>welcome back and please login.</strong></p>
-        <p>If you would like to begin the course, <br><strong>welcome, and please enrole.</strong></p>
+        <p>If you would like to begin the course, <br><strong>welcome, and please enrol.</strong></p>
     course:
       title: Course
     prescribing-information:
