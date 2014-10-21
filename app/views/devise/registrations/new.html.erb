@@ -7,11 +7,9 @@
       <div class="form-inputs">
         <div class="form-group">
           <label>Title</label>
-          <input type="radio" name="title" value="Dr" id="dr" class=""><label for="dr"><span><span></span></span>Dr</label>
-          <input type="radio" name="title" value="Mr" id="mr" class=""><label for="mr"><span><span></span></span>Mr</label>
-          <input type="radio" name="title" value="Mrs" id="mrs" class=""><label for="mrs"><span><span></span></span>Mrs</label>
-          <input type="radio" name="title" value="Miss" id="miss" class=""><label for="miss"><span><span></span></span>Miss</label>
-          <input type="radio" name="title" value="Ms" id="ms" class=""><label for="ms"><span><span></span></span>Ms</label>
+          <% t('.titles').each do |title| %>
+            <input type="radio" name="title" value="<%= title %>" id="<%= title %>" class=""><label for="<%= title %>"><span><span></span></span><%= title %></label>
+          <% end %>
         </div>
         <%= f.input :first_name, required: true %>
         <%= f.input :last_name, required: true %>

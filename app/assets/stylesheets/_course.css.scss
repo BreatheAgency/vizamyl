@@ -103,7 +103,13 @@
     border-top: solid 1px $primary-highlight;
     height: 55px;
 
+    .large-12 .columns {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+
     h4 {
+      padding-left: rem-calc(2);
       font-size: $h5-font-size;
       color: $primary-color;
     }
@@ -111,9 +117,12 @@
   }
 
   .visual-progression {
+    padding-right: rem-calc(8);
+
     .progression-amount {
-      padding-left: rem-calc(15);
+      padding-left: rem-calc(10);
     }
+
     .progression-blocks {
       @extend .inline-list;
       margin-top: rem-calc(3);

@@ -23,7 +23,7 @@ en:
   layouts:
     application:
       brand_html: |
-        <a href="/">Vizamyl <span class="indicator"></span></a>
+        <a href="/">Vizamyl</a>
         <span>Flutemetamol F18</span>
         <span>Injection</span>
       course_menu: Course menu
@@ -54,7 +54,9 @@ en:
     course:
       title: Course
     prescribing-information:
-      title: Prescribing Information
+      left:
+        body_html: |
+          <p>PRESCRIBING INFORMATION VIZAMYLTM 400 MBq/ml solution for injection <span class="black-triangle">&#9660;</span> Flutemetamol (18F)</p>
     references:
       title: |
        References
@@ -161,6 +163,12 @@ en:
       updated_not_active: "Your password was changed successfully."
     registrations:
       edit:
+        titles:
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
         are_you_sure: "Are you sure?"
         cancel_my_account: "Cancel my account"
         leave_blank_if_you_don_t_want_to_change_it: "leave blank if you dont want to change it"

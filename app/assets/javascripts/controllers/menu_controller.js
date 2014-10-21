@@ -72,29 +72,6 @@ Course.MenuController = Ember.ArrayController.extend({
 
         }
 
-      // if (chapter.get('available') && step.get('available')){
-      //   progression.set('amount', 1);
-      //   procceed = true;
-      // } else if (chapter.get('available') && !step.get('available')) {
-      //   // -2 becuase the step's position is not zero-based and we want the one before it
-      //   var previous_step = chapter.get('steps').objectAt(step.get('position') - 2)
-      //   if (previous_step && previous_step.get('completed')) {
-      //     progression.set('amount', 0.5);
-      //     procceed = true;
-      //   } else if (step.get('position') == 1 ) {
-      //     // we're on the first step
-      //   } else {
-      //     console.log('previous_step is not completed?');
-      //   }
-      // } else {
-      // // -2 becuase the chapter's position is not zero-based and we want the one before it
-      // //   var previous_chapter = this.get('model').objectAt(chapter.get('position') - 2);
-      // //   if (previous_chapter && previous_chapter.get('completed')) {
-      //     // progression.set('amount', 0.5);
-      // //     procceed = true;
-      // //   }
-      // }
-
       if (procceed && !step.get('completed')) {
         progression.set('amount', 0.5);
       }
