@@ -46,4 +46,7 @@ Rails.application.configure do
     Bullet.console = true
     Bullet.rails_logger = true
   end
+
+  #
+  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 end

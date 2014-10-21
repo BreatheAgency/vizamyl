@@ -38,6 +38,8 @@ end
 group :development do
   gem 'bullet'
   gem 'quiet_assets'
+  gem 'rack-livereload'
+  gem 'guard-livereload', require: false
   gem 'binding_of_caller'
 end
 
