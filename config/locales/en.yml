@@ -76,11 +76,22 @@ en:
           <p><strong>Cost</strong> Not applicable. Product not currently available in the UK.</p>
           <p class="bordered">Adverse events should be reported. Reporting forms and information can be found at <a href="http://www.mhra.go.uk/yellowcard" target="_blank">http://www.mhra.go.uk/yellowcard</a>. Adverse events should also be reported GE Healthcare Ltd, email: <a href="mailto:UKpharmacovigilance@ge.com">UKpharmacovigilance@ge.com</a>.</p>
     references:
-      title: |
-       References
-      body_html: |
-        <ol>
-        </ol>
+      left:
+        title: |
+         References
+        body_html: |
+          <p>Braak H, Braak E. Neuropathological stageing of Alzheimer-related changes. Acta Neuropathol 1991; 82: 239-59.</p>
+          <p>Herholz K, Ebmeier K. Clinical amyloid imaging in Alzheimer’s disease. Lancet Neurol 2011; 10: 667–70.</p>
+          <p>McKhann G, Drachman D, Folstein M et al. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. Neurology 1984; 34: 939-44.</p>
+          <p>Nelissen N, Van Laere K, Thurfjell L et al. Phase 1 study of the Pittsburgh compound B derivative 18F-flutemetamol in healthy volunteers and patients with probable Alzheimer disease. J Nucl Med 2009; 50: 1251-9.</p>
+          <p>Querfurth HW, LaFerla FM. Alzheimer’s disease. N Engl J Med 2010; 362: 329-44.</p>
+          <p>Sperling RA, Aisen PS, Beckett LA et al. Toward defining the preclinical stages of Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 280–92.</p>
+      right:
+        body_html: |
+          <p>Thal DR, Griffin WST, Braak H. Parenchymal and vascular A-deposition and its effects on the degeneration of neurons and cognition in Alzheimer’s disease. J Cell Mol Med Vol 2008; 12: 1848-62.</p>
+          <p>Wolk DA, Grachev ID, Buckley C et al. Association between in vivo fluorine 18–labeled flutemetamol amyloid positron emission tomography imaging and in vivo cerebral cortical histopathology. Ann Neurol 2010; 68: 1398-403.</p>
+          <p>Vandenberghe R, Van Laere K, Ivanoiu A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. Arch Neurol 2011; 68: 319-29.</p>
+          <p>Vizamyl, European Summary of Product Characteristics. Date: August 2014.</p>
     resources:
       title: Resources
     contact:

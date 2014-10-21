@@ -40,6 +40,15 @@
       padding-bottom: rem-calc(16);
       line-height: rem-calc(30);
     }
+
+    .no-title {
+      padding-top: rem-calc(75);
+    }
+
+    p {
+      font-size: rem-calc(12);
+      line-height: rem-calc(14);
+    }
   }
 
   .resources {
@@ -57,6 +66,7 @@
       padding-bottom: rem-calc(16);
       line-height: rem-calc(30);
     }
+
   }
 
   .prescribing-information {
