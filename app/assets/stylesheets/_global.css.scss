@@ -252,6 +252,5 @@ footer {
 @media #{$large-up} {
   main {
      @include background-image(linear-gradient($background-top, $background-bottom 450px));
-    // @include linear-gradient($background-top, $background-bottom, top, 450px);
   }
 }

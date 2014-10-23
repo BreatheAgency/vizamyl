@@ -178,6 +178,7 @@ en:
       success: "Successfully authenticated from %{kind} account."
     passwords:
       new:
+        send: "Send"
         forgot_your_password: "Forgot your password?"
         send_me_reset_password_instructions: "Send me reset password instructions"
       edit:
