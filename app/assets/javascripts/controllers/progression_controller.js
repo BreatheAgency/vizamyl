@@ -1,8 +1,10 @@
 Course.ProgressionController = Ember.Controller.extend({
-  needs: ['application'],
-  total: 100,
+  needs: ['application', 'menu'],
+  total: Math.floor((Math.random() * 100) + 1),
+  chapters: Ember.A(),
 
-  totalPercent:function(){
-    return this.get('total') + '%';
-  }.property('total')
+  chapters:function(){
+    return this.get('controllers.menu').get('model');
+  }.property('controllers.menu.model'),
+
 });
