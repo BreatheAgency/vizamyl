@@ -13,7 +13,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if @user.update_attributes(account_update_params)
       set_flash_message :notice, :updated
       sign_in @user, bypass: true
-      redirect_to after_update_path_for(@user)
+      redirect_to edit_user_registration_path
     else
       render 'edit'
     end
@@ -26,7 +26,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       u.permit(:title, :first_name, :last_name, :locale, :email, :password, :password_confirmation)
     end
     devise_parameter_sanitizer.for(:account_update) do |u|
-      u.permit(:title, :first_name, :last_name, :locale, :email, :password, :password_confirmation, :current_password)
+      u.permit(:title, :first_name, :last_name, :locale, :email, :password, :password_confirmation)
     end
   end
 

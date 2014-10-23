@@ -125,30 +125,30 @@ main {
       @extend .visuallyhidden;
     }
 
-    input[type='radio'] + label {
-      display:inline-block;
-      margin:0 10px 16px 0;
-      padding:0;
+    .radio_buttons label {
+      display: inline-block;
+      margin: 0 10px 16px 0;
+      padding: 0;
     }
 
-    input[type='radio'] + label > span {
-      position:relative;
-      display:inline-block;
-      margin:0 6px 0 0;
+    input[type='radio'] + span {
+      position: relative;
+      display: inline-block;
+      margin: 0 6px 0 0;
       vertical-align: middle;
-      width:16px;
-      height:16px;
-      border:solid 1px $primary-color;
-      border-radius:8px;
+      width: 16px;
+      height: 16px;
+      border: solid 1px $primary-color;
+      border-radius: 8px;
     }
 
-    input[type='radio']:checked + label > span > span {
-      position:absolute;
-      display:inline-block;
-      left:5px;
-      top:5px;
-      width:4px;
-      height:4px;
+    input[type='radio']:checked + span > span {
+      position: absolute;
+      display: inline-block;
+      left: 5px;
+      top: 5px;
+      width: 4px;
+      height: 4px;
       background: $primary-color;
       border-radius:2px;
     }

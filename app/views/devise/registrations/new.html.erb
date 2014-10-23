@@ -5,12 +5,11 @@
     <h1 class="vh"><%= t('.sign_up') %></h1>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form' }) do |f| %>
       <div class="form-inputs">
-        <div class="form-group">
-          <label>Title</label>
-          <% t('.titles').each do |title| %>
-            <input type="radio" name="title" value="<%= title %>" id="<%= title %>" class=""><label for="<%= title %>"><span><span></span></span><%= title %></label>
-          <% end %>
-        </div>
+        <label><abbr title="required">*</abbr> Title</label>
+        <%= f.collection_radio_buttons(:title, t('.titles'), :to_s, :to_s, checked: resource.title, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
+            b.label { b.radio_button + "<span><span></span></span>".html_safe + " " + b.text.html_safe }
+          end
+        %>
         <%= f.input :first_name, required: true %>
         <%= f.input :last_name, required: true %>
         <%= f.input :email, required: true %>
