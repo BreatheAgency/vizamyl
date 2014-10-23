@@ -110,9 +110,11 @@
   }
 
   .devise {
+
     div:first-of-type {
       @extend .motion;
     }
+
   }
 
   .sessions, .passwords {
@@ -178,8 +180,15 @@
     }
 
     .right {
+      margin-bottom: rem-calc(40);
+
       h3:first-of-type {
         margin-top: rem-calc(18);
+      }
+
+      p {
+        margin-top: rem-calc(4);
+        margin-bottom: 0;
       }
 
       p + p {
@@ -189,6 +198,7 @@
       hr {
         margin: rem-calc(18) 0 rem-calc(18) 0;
       }
+
     }
   }
 }
