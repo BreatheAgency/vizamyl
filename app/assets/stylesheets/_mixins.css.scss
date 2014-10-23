@@ -8,16 +8,6 @@ $subsection: #08a5e1;
 $background-top: #e8e7e7;
 $background-bottom: white;
 
-@mixin linear-gradient($fromColor, $toColor, $toSide:to bottom, $stop: 100%) {
-  background-color: $toColor;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background: -webkit-linear-gradient($toSide, $fromColor 0%, $toColor $stop);
-  background: -moz-linear-gradient($toSide, $fromColor 0%, $toColor $stop);
-  background: linear-gradient($toSide, $fromColor 0%, $toColor $stop);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
-}
-
 @mixin non-retina {
   @media (min--moz-device-pixel-ratio: 1),
   (-o-min-device-pixel-ratio: 1),

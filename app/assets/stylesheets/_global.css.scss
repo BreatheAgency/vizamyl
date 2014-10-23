@@ -49,7 +49,7 @@ h2 {
 }
 
 nav {
-  @include linear-gradient($primary-highlight, $primary-color, to right);
+  @include background-image(linear-gradient(to right, $primary-highlight, $primary-color));
   padding:0;
 
   li {
@@ -251,6 +251,7 @@ footer {
 
 @media #{$large-up} {
   main {
-    @include linear-gradient($background-top, $background-bottom, top, 450px);
+     @include background-image(linear-gradient($background-top, $background-bottom 450px));
+    // @include linear-gradient($background-top, $background-bottom, top, 450px);
   }
 }
