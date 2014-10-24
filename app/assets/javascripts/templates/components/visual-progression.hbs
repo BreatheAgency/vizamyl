@@ -1,6 +1,6 @@
 <div class='progression-amount right'><h4>{{totalPercent}}</h4></div>
 <ul class='progression-blocks right'>
   {{#each chapter in chapters}}
-    <li {bind-attr class=':block chapter.available:available'}}>{{#link-to 'steps.index' 'text' 1}}{{chapter.id}}{{/link-to}}</li>
+    <li {bind-attr class=':block chapter.available:available'}}>{{#link-to 'steps.index' chapter.steps.firstObject.page.type chapter.steps.firstObject.page.id}}{{chapter.id}}{{/link-to}}</li>
   {{/each}}
 </ul>

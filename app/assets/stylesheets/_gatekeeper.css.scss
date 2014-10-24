@@ -3,9 +3,10 @@
   .map {
     padding-top: rem-calc(50);
     min-height: rem-calc(800);
-    background: url('http://ima.gs/FFF/EEE/EEE/1000x700.png') no-repeat top center fixed white;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://lorempixel.com/1000/400/', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://lorempixel.com/1000/400/', sizingMethod='scale')";
+    background-color: white;
+    background-position: center;
+    @include retina-background-image('map', 771px, 452px);
+
   }
 
   h1, h2, p {
