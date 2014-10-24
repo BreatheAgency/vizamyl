@@ -1,9 +1,9 @@
 Course.TextPageController = Ember.ObjectController.extend({
-  needs: ['menu'],
+  needs: ['localeCourseMenu'],
   complete: true,
   actions: {
     select: function(chapter, step) {
-      this.get('controllers.menu').send('select', chapter, step);
+      this.get('controllers.localeCourseMenu').send('select', chapter, step);
     }
   }
 });

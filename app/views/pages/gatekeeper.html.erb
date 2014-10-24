@@ -1,21 +1,21 @@
-<div class="row">
-  <div class="large-12 large-centered map">
+<div class='row'>
+  <div class='large-12 large-centered map'>
     <h1>VIZAMYL Flutemetamol F<sup>18</sup> Injection</h1>
     <h2>Electronic training programme</h2>
-    <p><span class="blue">This site is intended for medical professionals only</span><br> To proceed, please select which country you are from.</p>
-    <ul class="locale-select">
+    <p><span class='blue'>This site is intended for medical professionals only</span><br> To proceed, please select which country you are from.</p>
+    <ul class='locale-select'>
       <% I18n.available_locales.each do |locale| %>
         <li>
-          <a href="<%= "/#{locale}" %>" class="<%= "#{locale}-button" %>">
-            <img src="http://ima.gs/000/EEE/EEE/60x60.png"></img>
+          <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
+            <img src='http://ima.gs/000/EEE/EEE/60x60.png'></img>
           </a>
         </li>
       <% end %>
     </ul>
-    <ul class="locale-label">
+    <ul class='locale-label'>
       <% I18n.available_locales.each do |locale| %>
         <li>
-          <a href="<%= "/#{locale}" %>" class="<%= "#{locale}-button" %>">
+          <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
             <%= locale %>
           </a>
         </li>

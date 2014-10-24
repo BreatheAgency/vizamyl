@@ -7,7 +7,7 @@ run Rack::Builder.new {
   end
 
   map '/robots.txt' do
-    run proc { |_env| Rack::Response.new("User-agent: *\nDisallow: /", 200, 'Content-Type' => 'text/plain') }
+    run proc { |_env| Rack::Response.new('User-agent: *\nDisallow: /', 200, 'Content-Type' => 'text/plain') }
   end
 
   use Rack::Noindex, -> (_env) { true }

@@ -3,7 +3,7 @@
   .motion {
     background-repeat: no-repeat;
     background-position: left middle;
-    @include retina-background-image("motion", 500px, 500px);
+    @include retina-background-image('motion', 500px, 500px);
   }
 
   .home {

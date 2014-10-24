@@ -1,5 +1,5 @@
 Course.ImageQuestionPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
-  needs: ['menu'],
+  needs: ['localeCourseMenu'],
   answeredQuestionSets: Ember.A(),
   unansweredQuestionSetIndices: Ember.A(),
 
@@ -55,7 +55,7 @@ Course.ImageQuestionPageController = Ember.ObjectController.extend(Em.FSM.Statef
 
   actions: {
     next: function() {
-      this.get('controllers.menu').send('select', this.get('selectedQuestion').chapter, this.get('selectedQuestion').page);
+      this.get('controllers.localeCourseMenu').send('select', this.get('selectedQuestion').chapter, this.get('selectedQuestion').page);
       this.sendStateEvent('reset');
     },
     submit: function() {

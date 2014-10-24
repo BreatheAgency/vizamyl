@@ -1,5 +1,5 @@
 Course.VideoPageController = Ember.ObjectController.extend({
-  needs: ['menu'],
+  needs: ['localeCourseMenu'],
   videoId: 'test',
   finished: false,
 
@@ -13,7 +13,7 @@ Course.VideoPageController = Ember.ObjectController.extend({
 
   actions: {
     select: function(chapter, page) {
-      this.get('controllers.menu').send('select', chapter, page);
+      this.get('controllers.localeCourseMenu').send('select', chapter, page);
     },
 
     finished: function(bool) {

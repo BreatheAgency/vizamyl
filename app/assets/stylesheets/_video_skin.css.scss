@@ -18,7 +18,7 @@
       border-color: transparent transparent transparent white;
       border-style: solid;
       border-width: 25px 0 25px 50px;
-      content: "";
+      content: '';
       display: block; }
   .vjs-sublime-skin.vjs-controls-disabled .vjs-big-play-button, .vjs-sublime-skin.vjs-has-started .vjs-big-play-button, .vjs-sublime-skin.vjs-using-native-controls .vjs-big-play-button {
     opacity: 0; }
@@ -59,7 +59,7 @@
       .vjs-sublime-skin .vjs-progress-control .vjs-progress-holder:after {
         background-color: rgba(255, 255, 255, 0.3);
         border-radius: 2px;
-        content: "";
+        content: '';
         display: block;
         height: 4px;
         margin-top: -2px;
@@ -88,12 +88,12 @@
       border-color: transparent transparent transparent white;
       border-style: solid;
       border-width: 8px 0 8px 15px;
-      content: "";
+      content: '';
       display: block; }
   .vjs-sublime-skin.vjs-playing .vjs-play-control:before, .vjs-sublime-skin.vjs-playing .vjs-play-control:after {
     background-color: white;
     border: none;
-    content: "";
+    content: '';
     display: block;
     height: 100%;
     position: absolute;
@@ -118,7 +118,7 @@
     background: white; }
     .vjs-sublime-skin.vjs-fullscreen .vjs-fullscreen-control:after {
       background: black;
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       bottom: 0;

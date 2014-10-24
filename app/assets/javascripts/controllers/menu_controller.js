@@ -1,25 +1,25 @@
-Course.MenuController = Ember.ArrayController.extend({
+Course.LocaleCourseMenuController = Ember.ArrayController.extend({
   needs: ['application'],
   sortProperties: ['position'],
   sortAscending: true,
-  open: false,
+  // open: false,
 
-  closed: function() {
-    return !this.get('open');
-  }.property('open'),
+  // closed: function() {
+  //   return !this.get('open');
+  // }.property('open'),
 
   actions: {
-    open: function() {
-      this.set('open', true);
-    },
-
-    close: function() {
-      this.set('open', false);
-    },
-
-    toggle: function() {
-      this.set('open', !this.get('open'));
-    },
+    // open: function() {
+    //   this.set('open', true);
+    // },
+    //
+    // close: function() {
+    //   this.set('open', false);
+    // },
+    //
+    // toggle: function() {
+    //   this.set('open', !this.get('open'));
+    // },
 
     select: function(chapter, step) {
       var procceed = false,

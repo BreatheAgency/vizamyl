@@ -5,19 +5,19 @@ ActiveAdmin.setup do |config|
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = "Vizamyl"
+  config.site_title = 'Vizamyl'
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
-  config.site_title_link = "/admin"
+  config.site_title_link = '/admin'
 
   # Set an optional image to be displayed for the header
   # instead of a string (overrides :site_title)
   #
   # Note: Aim for an image that's 21px high so it fits in the header.
   #
-  # config.site_title_image = "logo.png"
+  # config.site_title_image = 'logo.png'
 
   # == Default Namespace
   #
@@ -41,11 +41,11 @@ ActiveAdmin.setup do |config|
   # within a namespace:
   #
   #   config.namespace :admin do |admin|
-  #     admin.site_title = "Custom Admin Title"
+  #     admin.site_title = 'Custom Admin Title'
   #   end
   #
   # This will ONLY change the title for the admin section. Other
-  # namespaces will continue to use the main "site_title" configuration.
+  # namespaces will continue to use the main 'site_title' configuration.
 
   # == User Authentication
   #
@@ -66,7 +66,7 @@ ActiveAdmin.setup do |config|
   # config.authorization_adapter = ActiveAdmin::CanCanAdapter
 
   # You can customize your CanCan Ability class name here.
-  # config.cancan_ability_class = "Ability"
+  # config.cancan_ability_class = 'Ability'
 
   # You can specify a method to be called on unauthorized access.
   # This is necessary in order to prevent a redirect loop which happens
@@ -188,7 +188,7 @@ ActiveAdmin.setup do |config|
   #
   #   config.namespace :admin do |admin|
   #     admin.build_menu :utility_navigation do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
+  #       menu.add label: 'My Great Website', url: 'http://www.mygreatwebsite.com', html_options: { target: :blank }
   #       admin.add_logout_button_to_menu menu
   #     end
   #   end
@@ -197,7 +197,7 @@ ActiveAdmin.setup do |config|
   #
   #   config.namespace :admin do |admin|
   #     admin.build_menu :default do |menu|
-  #       menu.add label: "My Great Website", url: "http://www.mygreatwebsite.com", html_options: { target: :blank }
+  #       menu.add label: 'My Great Website', url: 'http://www.mygreatwebsite.com', html_options: { target: :blank }
   #     end
   #   end
 

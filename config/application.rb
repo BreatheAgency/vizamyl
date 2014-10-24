@@ -35,5 +35,8 @@ module Vizamyl
     # config.assets.precompile += %w( video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff )
     config.assets.precompile += %w( course.js )
     config.assets.initialize_on_precompile = true
+
+    #
+    config.font_assets.origin = '*'
   end
 end

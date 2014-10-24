@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
   <%= render partial: 'head' %>
-  <body class="course">
+  <body class='course'>
     <%= tag(:meta, content: UserSerializer.new(current_user).to_json(root: false), name: 'current-user') if user_signed_in? %>
     <%= javascript_include_tag :course %>
   </body>
