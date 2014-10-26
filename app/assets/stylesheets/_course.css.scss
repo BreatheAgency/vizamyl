@@ -13,10 +13,6 @@
     }
   }
 
-  $chapter: #666;
-  $chapter-text: #fff;
-  $subsection: #08a5e1;
-
   main {
     min-height: 580px;
 
@@ -46,7 +42,7 @@
             margin: 0;
             padding: 10px;
             font-size: rem-calc(20);
-            background: lighten($primary-color, 2);
+            background: #005DBA;
           }
 
           a {
@@ -137,7 +133,31 @@
 
     }
 
+    .video-page {
+
+      h1 {
+        margin-bottom: rem-calc(20);
+      }
+
+      .references {
+
+        p {
+          font-size: rem-calc(14);
+          margin-bottom: 0;
+        }
+
+      }
+    }
+
     .text-page {
+
+      h1 {
+        margin-bottom: rem-calc(20);
+      }
+
+    }
+
+    .interactive-page {
 
       h1 {
         margin-bottom: rem-calc(20);

@@ -45,6 +45,11 @@ en:
       reference_html: |
         <p class="right">11-2014 JB6231/OS INT'L ENG</p>
   pages:
+    gatekeeper:
+      locale_titles:
+        en_html: <p>UK</p>
+        fr_html: <p>France</p>
+        de_html: <p>Germany</p>
     home:
       title: Home
       body_html: |
@@ -181,6 +186,7 @@ en:
         forgot_your_password: "Forgot your password?"
         send_me_reset_password_instructions: "Send me reset password instructions"
       edit:
+        submit: "Submit"
         change_my_password: "Change my password"
         change_your_password: "Change your password"
         confirm_new_password: "Confirm new password"

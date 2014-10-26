@@ -46,19 +46,24 @@
     border-top: 1px #eee solid;
     border-bottom: 1px #eee solid;
     margin-left: 0;
-    margin-top: rem-calc(40);
+    margin-top: rem-calc(60);
     text-align: center;
     list-style: none;
-    padding: rem-calc(40) 0 rem-calc(40) 0;
+    padding: rem-calc(30) 0 rem-calc(30) 0;
 
     li {
       vertical-align: top;
       display: inline-block;
-      margin-left: rem-calc(20);
+      margin-left: rem-calc(50);
 
-      img {
+      a {
+        height: 60px;
+        width: 60px;
         display: block;
+        font-size: 0;
+        @include retina-background-image('locales/fr', 60px, 60px);
       }
+
     }
 
   }
@@ -72,7 +77,14 @@
       vertical-align: top;
       display: inline-block;
       width: 60px;
-      margin-left: rem-calc(20);
+      margin-left: rem-calc(50);
+
+      p {
+        padding-left: 0;
+        font-weight: normal;
+        font-size: rem-calc(18);
+      }
+
     }
   }
 }

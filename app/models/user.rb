@@ -2,6 +2,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
   validates :email, email: true
 
+  attr_accessor :invite_code
+  validates :invite_code, inclusion: { in: %w[invite], message: 'is invalid'}, on: :create
+
   has_many :progressions
 
   def latest_chapter

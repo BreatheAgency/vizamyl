@@ -7,7 +7,7 @@
       <% I18n.available_locales.each do |locale| %>
         <li>
           <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-            <img src='http://ima.gs/000/EEE/EEE/60x60.png'></img>
+            <%= locale %>
           </a>
         </li>
       <% end %>
@@ -16,7 +16,7 @@
       <% I18n.available_locales.each do |locale| %>
         <li>
           <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-            <%= locale %>
+            <%= t(".locale_titles.#{locale}_html") %>
           </a>
         </li>
       <% end %>

@@ -13,9 +13,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if @user.update_attributes(account_update_params)
       set_flash_message :notice, :updated
       sign_in @user, bypass: true
-      redirect_to edit_user_registration_path
+      respond_with @user, location: edit_user_registration_path
     else
-      render 'edit'
+      clean_up_passwords @user
+      respond_with @user
     end
   end
 
@@ -23,7 +24,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) do |u|
-      u.permit(:title, :first_name, :last_name, :locale, :email, :password, :password_confirmation)
+      u.permit(:invite_code, :title, :first_name, :last_name, :locale, :email, :password, :password_confirmation)
     end
     devise_parameter_sanitizer.for(:account_update) do |u|
       u.permit(:title, :first_name, :last_name, :locale, :email, :password, :password_confirmation)
