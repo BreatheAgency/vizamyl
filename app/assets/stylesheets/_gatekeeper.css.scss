@@ -66,6 +66,10 @@
 
     }
 
+    li:first-child {
+      margin-left: 0;
+    }
+
   }
 
   .locale-label {
@@ -85,6 +89,10 @@
         font-size: rem-calc(18);
       }
 
+    }
+
+    li:first-child {
+      margin-left: 0;
     }
   }
 }
