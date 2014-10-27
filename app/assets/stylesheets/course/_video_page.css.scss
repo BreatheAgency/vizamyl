@@ -1,0 +1,28 @@
+.video-page {
+
+  h1 {
+    margin-bottom: rem-calc(20);
+  }
+
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .video-mandatory {
+    border: solid 2px red;
+  }
+
+  .video-optional {
+    border: solid 2px lime;
+  }
+
+  .references {
+
+    p {
+      font-size: rem-calc(14);
+      margin-bottom: 0;
+    }
+
+  }
+}

@@ -3,7 +3,7 @@ Course.ProgressionController = Ember.Controller.extend({
   total: Math.floor((Math.random() * 100) + 1),
   chapters: Ember.A(),
 
-  chapters:function() {
+  chapters:function()  {
     return this.get('controllers.localeCourseMenu').get('arrangedContent');
   }.property('controllers.localeCourseMenu.arrangedContent'),
 

@@ -60,8 +60,17 @@ Course.Interactive = Course.Step.extend({
   type: DS.attr('string', { defaultValue: 'Interactive' } )
 });
 
-// InteractiveQuestion HotPink
-// ImageQuestion Maroon
-Course.Question = Course.Step.extend({
-  type: DS.attr('string', { defaultValue: 'Question' } )
+Course.QuestionIntro = Course.Step.extend({
+  style: 'border: solid 1px #FF9900;',
+  type: DS.attr('string', { defaultValue: 'QuestionIntro' } )
+});
+
+Course.InteractiveQuestion = Course.Step.extend({
+  style: 'border: solid 1px #EE96C4;',
+  type: DS.attr('string', { defaultValue: 'InteractiveQuestion' } )
+});
+
+Course.ImageQuestion = Course.Step.extend({
+  style: 'border: solid 1px #980000;',
+  type: DS.attr('string', { defaultValue: 'ImageQuestion' } )
 });

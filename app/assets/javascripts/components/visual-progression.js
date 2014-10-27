@@ -6,10 +6,4 @@ Course.VisualProgressionComponent = Ember.Component.extend({
   totalPercent:function(){
     return this.get('total') + '%';
   }.property('total'),
-
-  didInsertElement: function() {
-  }.on('didInsertElement'),
-
-  willRemoveElement: function() {
-  }.on('willRemoveElement'),
 });

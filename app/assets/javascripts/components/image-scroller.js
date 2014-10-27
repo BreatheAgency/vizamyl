@@ -11,9 +11,6 @@ Course.ImageScrollerComponent = Ember.Component.extend({
     }.bind(this));
   }.on('didInsertElement'),
 
-  willRemoveElement: function() {
-  }.on('willRemoveElement'),
-
   scrollPosition: function(){
     return this.get('rangeValue');
   }.property('rangeValue'),
