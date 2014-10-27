@@ -16,7 +16,7 @@ QuestionIntro.create_for_chapter(chapter_one_a, title: "(Question Intro)")
 ImageQuestion.create_for_chapter(chapter_one_a, title: "(Image Question)")
 Video.create_for_chapter(chapter_one_a, title: "(Video)")
 
-chapter_one_b = Chapter.create!(title: 'Chapter 1b', position: 4)
+chapter_one_b = Chapter.create!(title: 'Module 1b', position: 4)
 Text.create_for_chapter(chapter_one_b, title: "(Text)")
 Video.create_for_chapter(chapter_one_b, title: "(Video)")
 Video.create_for_chapter(chapter_one_b, title: "(Video)")
