@@ -4,3 +4,6 @@ application: 4eirwAUPPIoe
 
 # The authentication token for the application.
 authentication: CUAZqdPmarGTR9JIbDuISJa5PUyAgEd-sUuZcQnI5d4
+
+
+alert_log_file: '.tmp/skylight/alert.log'

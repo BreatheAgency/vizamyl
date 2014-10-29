@@ -1,12 +1,9 @@
 class StepSerializer < ActiveModel::Serializer
-  attributes :id, :position, :title, :page
+  attributes :id, :position, :page
   has_one :progression
 
-  def progression
-    scope.progressions.where(step: object).first
+  def page
+    { id: object.page_id, type: object.page_type }
   end
 
-  def page
-    { id: object.page.id, type: object.page.type }
-  end
 end

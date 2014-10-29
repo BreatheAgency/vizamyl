@@ -14,11 +14,10 @@ ActiveAdmin.register Step do
 
   index do
     sortable_handle_column
-    column :position
-    column :type
     column :title do |step|
       link_to(step.type, polymorphic_url([:admin, chapter, step.page]))
     end
+    column :type
     translation_status_flags
   end
 end

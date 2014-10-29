@@ -1,6 +1,7 @@
 class CreateChapters < ActiveRecord::Migration
   def up
     create_table :chapters do |t|
+      t.integer :position
       t.string :title
       t.timestamps
     end

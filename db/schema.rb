@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922132409) do
+ActiveRecord::Schema.define(version: 20141028160027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -62,37 +62,127 @@ ActiveRecord::Schema.define(version: 20140922132409) do
   add_index "chapter_translations", ["locale"], name: "index_chapter_translations_on_locale", using: :btree
 
   create_table "chapters", force: true do |t|
+    t.integer  "position"
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "position"
+  end
+
+  create_table "image_question_translations", force: true do |t|
+    t.integer  "image_question_id", null: false
+    t.string   "locale",            null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title",             null: false
+    t.string   "subject_area"
+  end
+
+  add_index "image_question_translations", ["image_question_id"], name: "index_image_question_translations_on_image_question_id", using: :btree
+  add_index "image_question_translations", ["locale"], name: "index_image_question_translations_on_locale", using: :btree
+
+  create_table "image_questions", force: true do |t|
+    t.string "title"
+    t.string "subject_area"
+  end
+
+  create_table "image_translations", force: true do |t|
+    t.integer  "image_id",     null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title",        null: false
+    t.string   "subject_area"
+  end
+
+  add_index "image_translations", ["image_id"], name: "index_image_translations_on_image_id", using: :btree
+  add_index "image_translations", ["locale"], name: "index_image_translations_on_locale", using: :btree
+
+  create_table "images", force: true do |t|
+    t.string "title"
+    t.string "subject_area"
+  end
+
+  create_table "interactive_question_translations", force: true do |t|
+    t.integer  "interactive_question_id", null: false
+    t.string   "locale",                  null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title",                   null: false
+    t.string   "subject_area"
+  end
+
+  add_index "interactive_question_translations", ["interactive_question_id"], name: "index_690cee133930fc59c0969752a5a73ac320fa3877", using: :btree
+  add_index "interactive_question_translations", ["locale"], name: "index_interactive_question_translations_on_locale", using: :btree
+
+  create_table "interactive_questions", force: true do |t|
+    t.string "title"
+    t.string "subject_area"
+  end
+
+  create_table "interactive_translations", force: true do |t|
+    t.integer  "interactive_id", null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title",          null: false
+    t.string   "subject_area"
+  end
+
+  add_index "interactive_translations", ["interactive_id"], name: "index_interactive_translations_on_interactive_id", using: :btree
+  add_index "interactive_translations", ["locale"], name: "index_interactive_translations_on_locale", using: :btree
+
+  create_table "interactives", force: true do |t|
+    t.string "title"
+    t.string "subject_area"
   end
 
   create_table "progressions", force: true do |t|
     t.integer "user_id"
     t.integer "step_id"
-    t.string  "step_type"
-    t.float   "amount",    default: 0.0
+    t.float   "amount",  default: 0.0
   end
 
   add_index "progressions", ["step_id", "user_id"], name: "index_progressions_on_step_id_and_user_id", unique: true, using: :btree
 
-  create_table "step_translations", force: true do |t|
-    t.integer  "step_id",    null: false
-    t.string   "locale",     null: false
+  create_table "question_intro_translations", force: true do |t|
+    t.integer  "question_intro_id", null: false
+    t.string   "locale",            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",      null: false
+    t.string   "title",             null: false
+    t.string   "subject_area"
   end
 
-  add_index "step_translations", ["locale"], name: "index_step_translations_on_locale", using: :btree
-  add_index "step_translations", ["step_id"], name: "index_step_translations_on_step_id", using: :btree
+  add_index "question_intro_translations", ["locale"], name: "index_question_intro_translations_on_locale", using: :btree
+  add_index "question_intro_translations", ["question_intro_id"], name: "index_question_intro_translations_on_question_intro_id", using: :btree
+
+  create_table "question_intros", force: true do |t|
+    t.string "title"
+    t.string "subject_area"
+  end
 
   create_table "steps", force: true do |t|
     t.integer "chapter_id"
-    t.string  "type"
-    t.string  "title"
     t.integer "position"
+    t.integer "page_id"
+    t.string  "page_type"
+  end
+
+  create_table "text_translations", force: true do |t|
+    t.integer  "text_id",      null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title",        null: false
+    t.string   "subject_area"
+  end
+
+  add_index "text_translations", ["locale"], name: "index_text_translations_on_locale", using: :btree
+  add_index "text_translations", ["text_id"], name: "index_text_translations_on_text_id", using: :btree
+
+  create_table "texts", force: true do |t|
+    t.string "title"
+    t.string "subject_area"
   end
 
   create_table "users", force: true do |t|
@@ -121,5 +211,23 @@ ActiveRecord::Schema.define(version: 20140922132409) do
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "video_translations", force: true do |t|
+    t.integer  "video_id",     null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title",        null: false
+    t.string   "subject_area"
+  end
+
+  add_index "video_translations", ["locale"], name: "index_video_translations_on_locale", using: :btree
+  add_index "video_translations", ["video_id"], name: "index_video_translations_on_video_id", using: :btree
+
+  create_table "videos", force: true do |t|
+    t.string  "title"
+    t.string  "subject_area"
+    t.boolean "mandatory",    default: true
+  end
 
 end

@@ -67,7 +67,7 @@ Course.LocaleCourseMenuController = Ember.ArrayController.extend({
 
       // if (procceed) {
         console.log('proceed');
-        this.transitionToRoute('steps.index', step.get('page').get('type').dasherize(), step.get('page').get('id'));
+        this.transitionToRoute('pages.index', step.get('page').get('type').dasherize(), step.get('page').get('id'));
       // }
 
       this.set('open', false);
