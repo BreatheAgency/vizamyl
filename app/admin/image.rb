@@ -15,14 +15,12 @@ ActiveAdmin.register Image do
     f.translated_inputs 'Translated fields', switch_locale: true do |t|
       t.input :title
     end
-    f.row :chapter
     f.actions
   end
 
   show do
     attributes_table do
       row :title
-      row :chapter
     end
   end
 end

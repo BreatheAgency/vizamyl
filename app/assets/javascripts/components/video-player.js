@@ -26,16 +26,16 @@ Course.VideoPlayerComponent = Ember.Component.extend({
     this.player.dispose();
   },
 
-  videoIdDidChange: function() {
-    Ember.run.scheduleOnce('afterRender', this, 'updateVideoId');
-  }.observes('videoId').on('init'),
+  sourceDidChange: function() {
+    Ember.run.scheduleOnce('afterRender', this, 'updateSource');
+  }.observes('source').on('init'),
 
-  updateVideoId: function() {
+  updateSource: function() {
     if (!this.player) { return; } // in case `player` isn't yet initialized
     this.player.src([
-      { type: 'application/vnd.apple.mpegurl', src: 'http://djqy74tsvke0j.cloudfront.net/' + this.get('videoId') + '/playlist.m3u8' },
-      { type: 'video/mp4', src: 'http://djqy74tsvke0j.cloudfront.net/' + this.get('videoId') + '/web.mp4' },
-      { type: 'video/webm', src: 'http://djqy74tsvke0j.cloudfront.net/' + this.get('videoId') + '/web.webm' }
+      { type: 'application/vnd.apple.mpegurl', src: 'http://djqy74tsvke0j.cloudfront.net/' + this.get('source') + '/playlist.m3u8' },
+      { type: 'video/mp4', src: 'http://djqy74tsvke0j.cloudfront.net/' + this.get('source') + '/web.mp4' },
+      { type: 'video/webm', src: 'http://djqy74tsvke0j.cloudfront.net/' + this.get('source') + '/web.webm' }
     ]);
     this.player.load();
   }

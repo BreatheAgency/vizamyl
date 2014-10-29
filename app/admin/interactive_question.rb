@@ -1,4 +1,4 @@
-ActiveAdmin.register Text do
+ActiveAdmin.register InteractiveQuestion do
   config.paginate = false
   config.filters = false
 

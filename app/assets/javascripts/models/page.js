@@ -1,5 +1,4 @@
-Course.Page = DS.Model.extend({
-  type: DS.attr('string', { defaultValue: false }),
+Course.Page = Ember.Mixin.create({
   title: DS.attr('string'),
   subject_area: DS.attr('string'),
   template_name: DS.attr('string'),
@@ -20,9 +19,10 @@ Course.Page = DS.Model.extend({
   }.property('progress'),
 });
 
-Course.Video = Course.Page.extend({
+Course.Video = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Video' } ),
   mandatory: DS.attr('boolean', {defaultValue: true }),
+  source: DS.attr('string'),
 
   style: function() {
     if (this.get('mandatory')) {
@@ -33,32 +33,32 @@ Course.Video = Course.Page.extend({
   }.property('mandatory')
 });
 
-Course.Image = Course.Page.extend({
+Course.Image = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Image' } ),
   style: 'border: solid 1px #1CC444;',
 });
 
-Course.Text = Course.Page.extend({
+Course.Text = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Text' } ),
   style: 'border: solid 1px #1CC444;',
 });
 
-Course.Interactive = Course.Page.extend({
+Course.Interactive = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Interactive' } ),
   style: 'border: solid 1px #FFFF00;',
 });
 
-Course.QuestionIntro = Course.Page.extend({
+Course.QuestionIntro = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'QuestionIntro' } ),
   style: 'border: solid 1px #FF9900;',
 });
 
-Course.InteractiveQuestion = Course.Page.extend({
+Course.InteractiveQuestion = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'InteractiveQuestion' } ),
   style: 'border: solid 1px #EE96C4;',
 });
 
-Course.ImageQuestion = Course.Page.extend({
+Course.ImageQuestion = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'ImageQuestion' } ),
   style: 'border: solid 1px #980000;',
 });

@@ -1,6 +1,5 @@
 Course.VideoPageController = Ember.ObjectController.extend({
   needs: ['localeCourseMenu'],
-  videoId: 'test',
   finished: false,
 
   complete: function(){

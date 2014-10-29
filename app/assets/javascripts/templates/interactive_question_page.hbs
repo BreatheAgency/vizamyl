@@ -1,4 +1,4 @@
-<div class='row image-question-page' {{bind-attr style='style'}}>
+<div class='row interactive-question-page' {{bind-attr style='style'}}>
   <div class='small-5 large-5 columns with-content with-minimum'>
     <h1>{{title}}</h1>
     <hr>
@@ -17,8 +17,15 @@
       <button {{action 'submit' }}>Submit</button>
     {{/if}}
   </div>
-  <div class='small-7 large-7 columns with-media'>
-    <img src='http://placehold.it/570x480' class='img-responsive'>
+  <div class='small-7 large-7 columns with-media with-minimum'>
+    <div class='row'>
+      <div class='small-6 large-6 columns'>
+        {{image-scroller imageHeight=500 imageHeightMax=5000 src='/assets/slice-test.png'}}
+      </div>
+      <div class='small-6 large-6 columns'>
+        {{image-scroller imageHeight=500 imageHeightMax=5000 src='/assets/slice-test.png'}}
+      </div>
+    </div>
     <div class='button-container row'>
       <div class='small-12 medium-12 large-12 columns'>
         <a {{bind-attr class=':right complete:enabled:disabled'}} href='/'>Next<i class='fi-arrow-right'></i></a>

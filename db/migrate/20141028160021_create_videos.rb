@@ -3,11 +3,13 @@ class CreateVideos < ActiveRecord::Migration
     create_table :videos do |t|
       t.string :title
       t.string :subject_area
+      t.string :source
       t.boolean :mandatory, default: true
     end
     Video.create_translation_table!(
       title: { type: :string, null: false },
-      subject_area: { type: :string }
+      subject_area: { type: :string },
+      source: { type: :string },
     )
   end
 

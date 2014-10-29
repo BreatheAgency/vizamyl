@@ -12,17 +12,23 @@ ActiveAdmin.register Video do
   end
 
   form do |f|
-    f.translated_inputs 'Translated fields', switch_locale: true do |t|
+    f.translated_inputs switch_locale: true do |t|
       t.input :title
+      t.input :subject_area
+      t.input :source
     end
-    f.row :chapter
+    f.inputs do
+      f.input :mandatory
+    end
     f.actions
   end
 
   show do
     attributes_table do
       row :title
-      row :chapter
+      row :subject_area
+      row(:mandatory) { |model| model['mandatory'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+      row :source
     end
   end
 end

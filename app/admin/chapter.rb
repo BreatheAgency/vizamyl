@@ -22,12 +22,14 @@ ActiveAdmin.register Chapter do
       link_to(chapter.title, admin_chapter_path(chapter))
     end
     translation_status_flags
-    actions
   end
 
   sidebar 'Associations', only: [:show, :edit] do
     ul do
       li(link_to('Steps', admin_chapter_steps_path(chapter)))
+      %i(videos texts images interactives question_intros image_questions interactive_questions).each do |page_type|
+        li(link_to(page_type.to_s.titleize, polymorphic_url([:admin, chapter, page_type.to_s.tableize])))
+      end
     end
   end
 

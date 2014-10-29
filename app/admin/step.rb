@@ -2,6 +2,7 @@ ActiveAdmin.register Step do
   config.sort_order = 'position_asc'
   config.paginate = false
   config.filters = false
+  config.clear_action_items!
 
   belongs_to :chapter, polymorphic: true
   sortable
@@ -14,10 +15,11 @@ ActiveAdmin.register Step do
 
   index do
     sortable_handle_column
-    column :title do |step|
-      link_to(step.type, polymorphic_url([:admin, chapter, step.page]))
+    column :position
+    column :page do |step|
+      link_to(step.page.title, polymorphic_url([:admin, chapter, step.page]))
     end
-    column :type
-    translation_status_flags
+    column :page_type
   end
+
 end

@@ -219,6 +219,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.datetime "updated_at"
     t.string   "title",        null: false
     t.string   "subject_area"
+    t.string   "source"
   end
 
   add_index "video_translations", ["locale"], name: "index_video_translations_on_locale", using: :btree
@@ -227,6 +228,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
   create_table "videos", force: true do |t|
     t.string  "title"
     t.string  "subject_area"
+    t.string  "source"
     t.boolean "mandatory",    default: true
   end
 
