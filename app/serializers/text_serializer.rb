@@ -1,4 +1,6 @@
 class TextSerializer < PageSerializer
+  attributes :body
+
   def controller_name
     'text_page'
   end

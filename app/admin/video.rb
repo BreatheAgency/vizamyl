@@ -14,10 +14,10 @@ ActiveAdmin.register Video do
   form do |f|
     f.translated_inputs switch_locale: true do |t|
       t.input :title
-      t.input :body
+      t.input :body, as: :html_editor
       t.input :subject_area
       t.input :source
-      t.input :references
+      t.input :references, as: :html_editor
     end
     f.inputs do
       f.input :mandatory

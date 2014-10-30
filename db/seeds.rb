@@ -1,6 +1,7 @@
 chapter_zero = Chapter.create(title: 'Module 0', position: 1)
 chapter_zero.texts.build({
   title: 'Text',
+  body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
   subject_area: 'Subject Area',
 })
 chapter_zero.videos.build({
@@ -21,6 +22,7 @@ chapter_zero.interactives.build({
 })
 chapter_zero.question_intros.build({
   title: 'Question Intro',
+  body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
   subject_area: 'Subject Area',
 })
 chapter_zero.image_questions.build({

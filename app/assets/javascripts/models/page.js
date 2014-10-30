@@ -44,6 +44,7 @@ Course.Image = DS.Model.extend(Course.Page, {
 Course.Text = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Text' } ),
   style: 'border: solid 1px #1CC444;',
+  body: DS.attr('string'),
 });
 
 Course.Interactive = DS.Model.extend(Course.Page, {
@@ -54,6 +55,7 @@ Course.Interactive = DS.Model.extend(Course.Page, {
 Course.QuestionIntro = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'QuestionIntro' } ),
   style: 'border: solid 1px #FF9900;',
+  body: DS.attr('string'),
 });
 
 Course.InteractiveQuestion = DS.Model.extend(Course.Page, {

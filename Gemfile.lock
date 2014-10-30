@@ -65,6 +65,26 @@ GEM
       activesupport (= 4.1.6)
       builder (~> 3.1)
       erubis (~> 2.7.0)
+    active_admin_editor (1.1.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      activeadmin (>= 0.4.0)
+      ejs
+      rails (>= 3.0.0)
     active_model_serializers (0.9.0)
       activemodel (>= 3.2)
     activemodel (4.1.6)
@@ -120,6 +140,7 @@ GEM
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
+    ejs (1.1.1)
     email_validator (1.4.0)
       activemodel
     ember-data-source (1.0.0.beta.9)
@@ -271,6 +292,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_admin_editor
   active_model_serializers
   activeadmin!
   activeadmin-globalize!

@@ -32,6 +32,7 @@ gem 'compass-rails'
 gem 'email_validator'
 gem 'foundation-rails'
 gem 'autoprefixer-rails'
+gem 'active_admin_editor'
 gem 'active_model_serializers'
 
 group :test do
