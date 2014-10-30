@@ -1,5 +1,5 @@
 class VideoSerializer < PageSerializer
-  attributes :body, :source, :references, :mandatory
+  attributes :body, :source, :abbreviations, :mandatory
 
   def controller_name
     'video_page'

@@ -17,7 +17,7 @@ ActiveAdmin.register Video do
       t.input :body, as: :html_editor
       t.input :subject_area
       t.input :source
-      t.input :references, as: :html_editor
+      t.input :abbreviations, as: :html_editor
     end
     f.inputs do
       f.input :mandatory
@@ -32,7 +32,7 @@ ActiveAdmin.register Video do
       row :subject_area
       row(:mandatory) { |model| model['mandatory'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row :source
-      row :references
+      row :abbreviations
     end
   end
 end

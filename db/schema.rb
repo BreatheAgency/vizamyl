@@ -138,6 +138,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.string "title"
     t.text   "body"
     t.string "subject_area"
+    t.text   "sources",      array: true
   end
 
   create_table "progressions", force: true do |t|
@@ -221,15 +222,15 @@ ActiveRecord::Schema.define(version: 20141028160027) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "video_translations", force: true do |t|
-    t.integer  "video_id",     null: false
-    t.string   "locale",       null: false
+    t.integer  "video_id",      null: false
+    t.string   "locale",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
     t.text     "body"
     t.string   "subject_area"
     t.string   "source"
-    t.text     "references"
+    t.text     "abbreviations"
   end
 
   add_index "video_translations", ["locale"], name: "index_video_translations_on_locale", using: :btree
@@ -240,8 +241,8 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.text    "body"
     t.string  "subject_area"
     t.string  "source"
-    t.text    "references"
-    t.boolean "mandatory",    default: true
+    t.text    "abbreviations"
+    t.boolean "mandatory",     default: true
   end
 
 end

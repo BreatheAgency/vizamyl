@@ -15,7 +15,8 @@ Course.ImageScrollerComponent = Ember.Component.extend({
       y: that.get('imageStep'),
       steps: that.get('imageStepMax'),
       animationCallback: function(x, y) {
-        that.set('imageStep', Math.round(y * that.get('imageStepMax')))
+        if (!that.get('drag')) { return; } // in case `drag` isn't yet initialized
+        that.set('imageStep', that.get('drag').getStep()[1] - 1);
       },
     })
 
@@ -41,7 +42,7 @@ Course.ImageScrollerComponent = Ember.Component.extend({
 
   onScroll: function() {
     Ember.run.scheduleOnce('afterRender', this, function(){
-      this.$('.img_wrapper').scrollTo(Math.round((this.get('imageStep')-1) * this.get('imageHeight')));
+      this.$('.img_wrapper').scrollTo(Math.round((this.get('imageStep')) * this.get('imageHeight')));
     });
   }.observes('imageStep'),
 });

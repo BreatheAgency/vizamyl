@@ -33,9 +33,9 @@ Course.VideoPlayerComponent = Ember.Component.extend({
   updateSource: function() {
     if (!this.player) { return; } // in case `player` isn't yet initialized
     this.player.src([
-      { type: 'application/vnd.apple.mpegurl', src: 'http://djqy74tsvke0j.cloudfront.net/' + this.get('source') + '/playlist.m3u8' },
-      { type: 'video/mp4', src: 'http://djqy74tsvke0j.cloudfront.net/' + this.get('source') + '/web.mp4' },
-      { type: 'video/webm', src: 'http://djqy74tsvke0j.cloudfront.net/' + this.get('source') + '/web.webm' }
+      { type: 'application/vnd.apple.mpegurl', src: '//djqy74tsvke0j.cloudfront.net/videos/' + this.get('source') + '/playlist.m3u8' },
+      { type: 'video/mp4', src: '//djqy74tsvke0j.cloudfront.net/videos/' + this.get('source') + '/web.mp4' },
+      { type: 'video/webm', src: '//djqy74tsvke0j.cloudfront.net/videos/' + this.get('source') + '/web.webm' }
     ]);
     this.player.load();
   }

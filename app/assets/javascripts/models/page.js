@@ -24,7 +24,7 @@ Course.Video = DS.Model.extend(Course.Page, {
   mandatory: DS.attr('boolean', {defaultValue: true }),
   source: DS.attr('string'),
   body: DS.attr('string'),
-  references: DS.attr('string'),
+  abbreviations: DS.attr('string'),
 
   style: function() {
     if (this.get('mandatory')) {
@@ -38,7 +38,10 @@ Course.Video = DS.Model.extend(Course.Page, {
 Course.Image = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Image' } ),
   style: 'border: solid 1px #1CC444;',
-  source: DS.attr('string')
+  source: DS.attr('string'),
+  sourceWithUrl: function(){
+    return '//djqy74tsvke0j.cloudfront.net/images/' + this.get('source') + '.png';
+  }.property('source'),
 });
 
 Course.Text = DS.Model.extend(Course.Page, {
@@ -51,6 +54,25 @@ Course.Interactive = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Interactive' } ),
   style: 'border: solid 1px #FFFF00;',
   body: DS.attr('string'),
+  sources: DS.attr(),
+
+  sourcesWithUrls: function(){
+   return this.get('sources').map(function(source) {
+     return '//djqy74tsvke0j.cloudfront.net/interactives/' + source + '.png';
+   });
+  }.property('sources'),
+
+  triplet:function (){
+    return this.get('sources').get('length') == 3;
+  }.property('sources'),
+
+  imageHeight:function () {
+    return 500;
+  }.property('triplet'),
+
+  imageHeightMax:function () {
+    return 5000;
+  }.property('triplet'),
 });
 
 Course.QuestionIntro = DS.Model.extend(Course.Page, {

@@ -5,7 +5,7 @@ class CreateVideos < ActiveRecord::Migration
       t.text :body
       t.string :subject_area
       t.string :source
-      t.text :references
+      t.text :abbreviations
       t.boolean :mandatory, default: true
     end
     Video.create_translation_table!(
@@ -13,7 +13,7 @@ class CreateVideos < ActiveRecord::Migration
       body: { type: :text },
       subject_area: { type: :string },
       source: { type: :string },
-      references: { type: :text },
+      abbreviations: { type: :text },
     )
   end
 

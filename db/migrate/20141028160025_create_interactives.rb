@@ -4,6 +4,7 @@ class CreateInteractives < ActiveRecord::Migration
       t.string :title
       t.text :body
       t.string :subject_area
+      t.text :sources, array: true
     end
     Interactive.create_translation_table!(
       title: { type: :string },

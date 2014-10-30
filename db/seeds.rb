@@ -9,17 +9,18 @@ chapter_zero.videos.build({
   body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
   subject_area: 'Subject Area',
   source: 'test',
-  references: '<p><strong>MRI:</strong> magnetic resonance imaging</p><p><strong>PET:</strong> positron emission tomography</p>',
+  abbreviations: '<p><strong>MRI:</strong> magnetic resonance imaging</p><p><strong>PET:</strong> positron emission tomography</p>',
 })
 chapter_zero.images.build({
   title: 'Image',
   subject_area: 'Subject Area',
-  source: 'http://placehold.it/968x460',
+  source: 'test',
 })
 chapter_zero.interactives.build({
   title: 'Interactive',
   body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
   subject_area: 'Subject Area',
+  sources: ['test', 'test']
 })
 chapter_zero.question_intros.build({
   title: 'Question Intro',

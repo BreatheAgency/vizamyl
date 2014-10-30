@@ -1,5 +1,5 @@
 class InteractiveSerializer < PageSerializer
-  attributes :body
+  attributes :body, :sources
 
   def controller_name
     'interactive_page'

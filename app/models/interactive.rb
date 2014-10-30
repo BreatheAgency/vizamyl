@@ -8,4 +8,13 @@ class Interactive < ActiveRecord::Base
     active_admin_translates translated_field
   end
 
+  def sources_raw
+    self.sources.join(',') unless self.sources.nil?
+  end
+
+  def sources_raw=(values)
+    self.sources = []
+    self.sources = values.split(',')
+  end
+
 end

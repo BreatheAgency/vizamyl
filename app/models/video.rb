@@ -3,7 +3,7 @@ class Video < ActiveRecord::Base
   has_one :chapter, through: :step
   delegate :progression, to: :step
 
-  %i(title body subject_area source references).each do |translated_field|
+  %i(title body subject_area source abbreviations).each do |translated_field|
     translates translated_field
     active_admin_translates translated_field
   end

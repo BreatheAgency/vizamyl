@@ -23,7 +23,7 @@ ActiveAdmin.register Image do
     attributes_table do
       row :title
       row :source do |image|
-        image_tag(image.source)
+        image_tag('//djqy74tsvke0j.cloudfront.net/images/' + image.source + '.png')
       end
     end
   end
