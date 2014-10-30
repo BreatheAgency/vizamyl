@@ -1,11 +1,36 @@
 chapter_zero = Chapter.create(title: 'Module 0', position: 1)
-chapter_zero.texts.build(title: 'Text')
-chapter_zero.videos.build(title: 'Video')
-chapter_zero.images.build(title: 'Image')
-chapter_zero.interactives.build(title: 'Interactive')
-chapter_zero.question_intros.build(title: 'Question Intro')
-chapter_zero.image_questions.build(title: 'Image Question')
-chapter_zero.interactive_questions.build(title: 'Interactive Question')
+chapter_zero.texts.build({
+  title: 'Text',
+  subject_area: 'Subject Area',
+})
+chapter_zero.videos.build({
+  title: 'Video',
+  body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
+  subject_area: 'Subject Area',
+  source: 'test',
+  references: '<p><strong>MRI:</strong> magnetic resonance imaging</p><p><strong>PET:</strong> positron emission tomography</p>',
+})
+chapter_zero.images.build({
+  title: 'Image',
+  subject_area: 'Subject Area',
+  source: 'http://placehold.it/968x460',
+})
+chapter_zero.interactives.build({
+  title: 'Interactive',
+  subject_area: 'Subject Area',
+})
+chapter_zero.question_intros.build({
+  title: 'Question Intro',
+  subject_area: 'Subject Area',
+})
+chapter_zero.image_questions.build({
+  title: 'Image Question',
+  subject_area: 'Subject Area',
+})
+chapter_zero.interactive_questions.build({
+  title: 'Interactive Question',
+  subject_area: 'Subject Area',
+})
 chapter_zero.save!
 
 #

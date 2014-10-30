@@ -14,6 +14,7 @@ ActiveAdmin.register Image do
   form do |f|
     f.translated_inputs 'Translated fields', switch_locale: true do |t|
       t.input :title
+      t.input :source
     end
     f.actions
   end
@@ -21,6 +22,9 @@ ActiveAdmin.register Image do
   show do
     attributes_table do
       row :title
+      row :source do |image|
+        image_tag(image.source)
+      end
     end
   end
 end

@@ -1,4 +1,6 @@
 class ImageSerializer < PageSerializer
+  attributes :source
+
   def controller_name
     'image_page'
   end

@@ -23,6 +23,8 @@ Course.Video = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Video' } ),
   mandatory: DS.attr('boolean', {defaultValue: true }),
   source: DS.attr('string'),
+  body: DS.attr('string'),
+  references: DS.attr('string'),
 
   style: function() {
     if (this.get('mandatory')) {
@@ -36,6 +38,7 @@ Course.Video = DS.Model.extend(Course.Page, {
 Course.Image = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Image' } ),
   style: 'border: solid 1px #1CC444;',
+  source: DS.attr('string')
 });
 
 Course.Text = DS.Model.extend(Course.Page, {

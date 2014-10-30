@@ -14,8 +14,10 @@ ActiveAdmin.register Video do
   form do |f|
     f.translated_inputs switch_locale: true do |t|
       t.input :title
+      t.input :body
       t.input :subject_area
       t.input :source
+      t.input :references
     end
     f.inputs do
       f.input :mandatory
@@ -26,9 +28,11 @@ ActiveAdmin.register Video do
   show do
     attributes_table do
       row :title
+      row :body
       row :subject_area
       row(:mandatory) { |model| model['mandatory'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row :source
+      row :references
     end
   end
 end

@@ -5,7 +5,7 @@ class CreateImageQuestions < ActiveRecord::Migration
       t.string :subject_area
     end
     ImageQuestion.create_translation_table!(
-      title: { type: :string, null: false },
+      title: { type: :string },
       subject_area: { type: :string }
     )
   end

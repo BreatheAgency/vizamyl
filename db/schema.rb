@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.string   "locale",            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",             null: false
+    t.string   "title"
     t.string   "subject_area"
   end
 
@@ -90,8 +90,9 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.string   "locale",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",        null: false
+    t.string   "title"
     t.string   "subject_area"
+    t.string   "source"
   end
 
   add_index "image_translations", ["image_id"], name: "index_image_translations_on_image_id", using: :btree
@@ -100,6 +101,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
   create_table "images", force: true do |t|
     t.string "title"
     t.string "subject_area"
+    t.string "source"
   end
 
   create_table "interactive_question_translations", force: true do |t|
@@ -107,7 +109,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.string   "locale",                  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",                   null: false
+    t.string   "title"
     t.string   "subject_area"
   end
 
@@ -124,7 +126,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.string   "locale",         null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",          null: false
+    t.string   "title"
     t.string   "subject_area"
   end
 
@@ -149,7 +151,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.string   "locale",            null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",             null: false
+    t.string   "title"
     t.string   "subject_area"
   end
 
@@ -173,7 +175,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.string   "locale",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",        null: false
+    t.string   "title"
     t.string   "subject_area"
   end
 
@@ -217,9 +219,11 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.string   "locale",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",        null: false
+    t.string   "title"
+    t.text     "body"
     t.string   "subject_area"
     t.string   "source"
+    t.text     "references"
   end
 
   add_index "video_translations", ["locale"], name: "index_video_translations_on_locale", using: :btree
@@ -227,8 +231,10 @@ ActiveRecord::Schema.define(version: 20141028160027) do
 
   create_table "videos", force: true do |t|
     t.string  "title"
+    t.text    "body"
     t.string  "subject_area"
     t.string  "source"
+    t.text    "references"
     t.boolean "mandatory",    default: true
   end
 
