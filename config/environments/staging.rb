@@ -55,7 +55,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = '//d3tnwc4szodljd.cloudfront.net'
+  config.action_controller.asset_host = '//dxugyqzjahy7a.cloudfront.net'
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
@@ -82,5 +82,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #
-  config.action_mailer.default_url_options = { host: 'vizamyl.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'vizamyl-staging.herokuapp.com' }
 end
