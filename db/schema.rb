@@ -127,6 +127,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+    t.text     "body"
     t.string   "subject_area"
   end
 
@@ -135,6 +136,7 @@ ActiveRecord::Schema.define(version: 20141028160027) do
 
   create_table "interactives", force: true do |t|
     t.string "title"
+    t.text   "body"
     t.string "subject_area"
   end
 

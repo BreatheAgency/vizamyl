@@ -50,6 +50,7 @@ Course.Text = DS.Model.extend(Course.Page, {
 Course.Interactive = DS.Model.extend(Course.Page, {
   type: DS.attr('string', { defaultValue: 'Interactive' } ),
   style: 'border: solid 1px #FFFF00;',
+  body: DS.attr('string'),
 });
 
 Course.QuestionIntro = DS.Model.extend(Course.Page, {

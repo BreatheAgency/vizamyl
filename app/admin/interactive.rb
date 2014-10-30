@@ -12,8 +12,9 @@ ActiveAdmin.register Interactive do
   end
 
   form do |f|
-    f.translated_inputs 'Translated fields', switch_locale: true do |t|
+    f.translated_inputs switch_locale: true do |t|
       t.input :title
+      t.input :body
     end
     f.actions
   end
@@ -21,6 +22,7 @@ ActiveAdmin.register Interactive do
   show do
     attributes_table do
       row :title
+      row :body
     end
   end
 end
