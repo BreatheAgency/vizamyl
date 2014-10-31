@@ -34,7 +34,7 @@ ActiveAdmin.register Chapter do
   end
 
   form do |f|
-    f.translated_inputs 'Translated fields', switch_locale: true do |t|
+    f.translated_inputs switch_locale: true do |t|
       t.input :title
     end
     f.actions

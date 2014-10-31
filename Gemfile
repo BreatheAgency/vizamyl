@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.3'
+# ruby '2.1.3'
 
 gem 'devise', github: 'plataformatec/devise'
 gem 'devise-i18n', github: 'tigrish/devise-i18n'
