@@ -44,6 +44,9 @@ en:
         <p>VIZAMYL is a trademark of General Electirc Company or one of its subsidaries.</p>
       reference_html: |
         <p class="right">11-2014 JB6231/OS INT'L ENG</p>
+  course:
+    actions:
+      next: Next
   pages:
     gatekeeper:
       locale_titles:

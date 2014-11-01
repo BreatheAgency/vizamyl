@@ -8,8 +8,9 @@ chapter_zero.videos.build({
   title: 'Video',
   body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
   subject_area: 'Subject Area',
-  source: 'test',
+  source: 'M0_P2_VIDEO',
   abbreviations: '<p><strong>MRI:</strong> magnetic resonance imaging</p><p><strong>PET:</strong> positron emission tomography</p>',
+  mandatory: false,
 })
 chapter_zero.images.build({
   title: 'Image',
@@ -36,6 +37,24 @@ chapter_zero.interactive_questions.build({
   subject_area: 'Subject Area',
 })
 chapter_zero.save!
+
+chapter_one = Chapter.create(title: 'Module 1', position: 2)
+chapter_one.texts.build({
+  title: 'Text 1',
+  body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
+  subject_area: 'Subject Area',
+})
+chapter_one.texts.build({
+  title: 'Text 2',
+  body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
+  subject_area: 'Subject Area',
+})
+chapter_one.texts.build({
+  title: 'Text 3',
+  body: '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>',
+  subject_area: 'Subject Area',
+})
+chapter_one.save!
 
 #
 # chapter_one = Chapter.create!(title: 'Module 1', position: 2)
@@ -94,8 +113,8 @@ I18n.available_locales.each do |locale|
   Step.all.each do |step|
     user.progressions.create!(step: step)
   end
-  # first_chapter = Chapter.first
-  # first_step = first_chapter.steps.first
-  # first_progression = user.progressions.where(step: first_step).first
-  # first_progression.update_attributes(amount: 0.5)
+  first_chapter = Chapter.first
+  first_step = first_chapter.steps.first
+  first_progression = user.progressions.where(step: first_step).first
+  first_progression.update_attributes(amount: 0.5)
 end

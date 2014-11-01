@@ -4,17 +4,13 @@ Course.Step = DS.Model.extend({
   position: DS.attr('number'),
   page: DS.belongsTo('page', {polymorphic: true}),
 
-  progress: function(){
-    this.get('progression').get('amount')
+  available: function() {
+    return this.get('progression.amount') !== 0;
   }.property('progression.amount'),
 
-  available: function() {
-    return this.get('progress') !== 0;
-  }.property('progress'),
-
   completed: function() {
-    return this.get('progression') === 1;
-  }.property('progress'),
+    return this.get('progression.amount') === 1;
+  }.property('progression.amount'),
 
   progressClass: function(){
     switch(this.get('progress')) {

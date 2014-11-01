@@ -4,6 +4,7 @@ Course.Page = Ember.Mixin.create({
   template_name: DS.attr('string'),
   controller_name: DS.attr('string'),
   chapter: DS.belongsTo('chapter'),
+  step: DS.belongsTo('step'),
   progression: DS.belongsTo('progression'),
 
   progress: function(){

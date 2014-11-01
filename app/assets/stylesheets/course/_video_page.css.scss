@@ -6,15 +6,18 @@
 
   video {
     max-width: 100%;
-    height: auto;
+    height: 100%;
+  	margin: 0 auto;
+  	display: block;
+  	position: relative;
   }
 
   .video-mandatory {
-    border: solid 2px red;
+    border: solid 1px red;
   }
 
   .video-optional {
-    border: solid 2px lime;
+    border: solid 1px lime;
   }
 
   .abbreviations {
