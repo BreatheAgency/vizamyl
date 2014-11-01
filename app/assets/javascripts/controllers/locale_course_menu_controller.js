@@ -2,6 +2,7 @@ Course.LocaleCourseMenuController = Ember.ArrayController.extend({
   needs: ['application'],
   sortProperties: ['position'],
   sortAscending: true,
+  user: Ember.computed.alias('controllers.application.currentUser'),
 
   actions: {
 
@@ -31,7 +32,9 @@ Course.LocaleCourseMenuController = Ember.ArrayController.extend({
   checkStep: function(chapter, step) {
     var procceed = false,
         progression = step.get('progression'),
-        currentUser = this.get('controllers.application').get('currentUser');
+        currentUser = this.get('user');
+
+    if (currentUser.get('super_user')) { return true; };
 
     if (chapter.get('available')) {
       console.log('chapter available');
