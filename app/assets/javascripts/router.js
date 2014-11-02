@@ -8,7 +8,8 @@ Course.Router.map(function() {
     this.route('course', function() {
       this.route('menu')
       this.route('start')
-      this.resource('pages', { path: '/:page_type/:page_id' });
+      this.resource('pages', { path: '/:page_type/:page_id' }, function() {
+      });
     });
   });
 });
