@@ -5,6 +5,11 @@ class ProgressionsController < ApplicationController
     render json: progressions
   end
 
+  def show
+    @progression = Progression.find(params[:id])
+    render json: @progression
+  end
+
   def create
     step = Step.find(progression_params[:step_id])
     progression = current_user.progressions.where(step: step).first_or_create
@@ -16,7 +21,6 @@ class ProgressionsController < ApplicationController
   end
 
   def update
-    # TODO find or create?
     progression = current_user.progressions.find(params[:id])
     progression.update(progression_params.slice(:amount))
     render json: progression

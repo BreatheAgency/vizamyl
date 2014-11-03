@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :chapters, only: %i(index show)
-  resources :progressions, only: %i(create index update)
+  resources :progressions, only: %i(create show index update)
 
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'enrole' }, controllers: { registrations: 'users/registrations' }

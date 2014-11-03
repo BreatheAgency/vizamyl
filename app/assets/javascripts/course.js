@@ -5,6 +5,7 @@
 //= require i18n
 //= require i18n/translations
 //= require ./ember-fsm
+//= require ./ember-google-analytics
 //= require_self
 //= require ./router
 //= require ./store

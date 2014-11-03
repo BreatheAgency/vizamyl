@@ -44,5 +44,14 @@ ActiveAdmin.register Chapter do
     attributes_table do
       row :title
     end
+    panel 'Pages' do
+      table_for chapter.steps do
+        column :position
+        column :page do |step|
+          link_to(step.page.title, polymorphic_url([:admin, chapter, step.page]))
+        end
+        column :page_type
+      end
+    end
   end
 end
