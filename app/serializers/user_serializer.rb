@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :locale
+  attributes :id, :email, :locale, :super_user
 
   def locale
     I18n.locale
