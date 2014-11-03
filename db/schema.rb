@@ -84,7 +84,6 @@ ActiveRecord::Schema.define(version: 20141102232841) do
     t.string  "page_id"
     t.string  "title"
     t.string  "subject_area"
-    t.integer "success_step_id"
     t.integer "failure_step_id"
   end
 

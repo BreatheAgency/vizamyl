@@ -24,9 +24,8 @@ ActiveAdmin.register Chapter do
     translation_status_flags
   end
 
-  sidebar 'Associations', only: [:show, :edit] do
+  sidebar 'Pages', only: [:show] do
     ul do
-      li(link_to('Steps', admin_chapter_steps_path(chapter)))
       %i(videos texts images interactives question_intros image_questions interactive_questions).each do |page_type|
         li(link_to(page_type.to_s.titleize, polymorphic_url([:admin, chapter, page_type.to_s.tableize])))
       end
@@ -41,17 +40,21 @@ ActiveAdmin.register Chapter do
   end
 
   show do
+    #
     attributes_table do
       row :title
     end
     panel 'Pages' do
       table_for chapter.steps do
-        column :position
+        column :id do |step|
+          link_to(step.page.page_id, polymorphic_url([:admin, chapter, step.page]))
+        end
         column :page do |step|
           link_to(step.page.title, polymorphic_url([:admin, chapter, step.page]))
         end
         column :page_type
       end
+      h5(link_to('Adjust page order', admin_chapter_steps_path(chapter)))
     end
   end
 end

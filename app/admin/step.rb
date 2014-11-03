@@ -16,6 +16,9 @@ ActiveAdmin.register Step do
   index do
     sortable_handle_column
     column :position
+    column 'ID' do |step|
+      link_to(step.page.page_id, polymorphic_url([:admin, chapter, step.page]))
+    end
     column :page do |step|
       link_to(step.page.title, polymorphic_url([:admin, chapter, step.page]))
     end
