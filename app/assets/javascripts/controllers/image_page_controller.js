@@ -1,5 +1,6 @@
 Course.ImagePageController = Ember.ObjectController.extend({
-  needs: ['localeCourseMenu'],
+  needs: ['application', 'localeCourseMenu'],
+  isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: true,
   actions: {
     next:function(chapter, step) {

@@ -15,6 +15,9 @@ ActiveAdmin.register ImageQuestion do
     f.translated_inputs 'Translated fields', switch_locale: true do |t|
       t.input :title
     end
+    f.has_many :question_sets, allow_destroy: true do |ff|
+      ff.input :title
+    end
     f.actions
   end
 

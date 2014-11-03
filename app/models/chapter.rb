@@ -6,6 +6,8 @@ class Chapter < ActiveRecord::Base
 
   acts_as_list scope: [:id]
 
-  active_admin_translates :title do
+  %i(title).each do |translated_field|
+    translates translated_field
+    active_admin_translates translated_field
   end
 end

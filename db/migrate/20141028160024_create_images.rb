@@ -1,6 +1,7 @@
 class CreateImages < ActiveRecord::Migration
   def up
     create_table :images do |t|
+      t.string :page_id
       t.string :title
       t.string :subject_area
       t.string :source

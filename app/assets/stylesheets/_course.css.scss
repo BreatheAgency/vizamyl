@@ -82,10 +82,12 @@
 
     }
 
-    @import 'course/_video_page';
-    @import 'course/_text_page';
-    @import 'course/_interactive_page';
-    @import 'course/_question_intro_page';
+    @import 'course/_video';
+    @import 'course/_text';
+    @import 'course/_interactive';
+    @import 'course/_question_intro';
+    @import 'course/_interactive_question';
+    @import 'course/_image_question';
 
   }
 

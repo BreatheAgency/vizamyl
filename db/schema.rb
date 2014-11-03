@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141101111530) do
+ActiveRecord::Schema.define(version: 20141102232841) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -81,8 +81,11 @@ ActiveRecord::Schema.define(version: 20141101111530) do
   add_index "image_question_translations", ["locale"], name: "index_image_question_translations_on_locale", using: :btree
 
   create_table "image_questions", force: true do |t|
-    t.string "title"
-    t.string "subject_area"
+    t.string  "page_id"
+    t.string  "title"
+    t.string  "subject_area"
+    t.integer "success_step_id"
+    t.integer "failure_step_id"
   end
 
   create_table "image_translations", force: true do |t|
@@ -99,6 +102,7 @@ ActiveRecord::Schema.define(version: 20141101111530) do
   add_index "image_translations", ["locale"], name: "index_image_translations_on_locale", using: :btree
 
   create_table "images", force: true do |t|
+    t.string "page_id"
     t.string "title"
     t.string "subject_area"
     t.string "source"
@@ -117,6 +121,7 @@ ActiveRecord::Schema.define(version: 20141101111530) do
   add_index "interactive_question_translations", ["locale"], name: "index_interactive_question_translations_on_locale", using: :btree
 
   create_table "interactive_questions", force: true do |t|
+    t.string "page_id"
     t.string "title"
     t.string "subject_area"
   end
@@ -135,6 +140,7 @@ ActiveRecord::Schema.define(version: 20141101111530) do
   add_index "interactive_translations", ["locale"], name: "index_interactive_translations_on_locale", using: :btree
 
   create_table "interactives", force: true do |t|
+    t.string "page_id"
     t.string "title"
     t.text   "body"
     t.string "subject_area"
@@ -163,9 +169,44 @@ ActiveRecord::Schema.define(version: 20141101111530) do
   add_index "question_intro_translations", ["question_intro_id"], name: "index_question_intro_translations_on_question_intro_id", using: :btree
 
   create_table "question_intros", force: true do |t|
+    t.string "page_id"
     t.string "title"
     t.text   "body"
     t.string "subject_area"
+  end
+
+  create_table "question_set_translations", force: true do |t|
+    t.integer  "question_set_id", null: false
+    t.string   "locale",          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "title"
+  end
+
+  add_index "question_set_translations", ["locale"], name: "index_question_set_translations_on_locale", using: :btree
+  add_index "question_set_translations", ["question_set_id"], name: "index_question_set_translations_on_question_set_id", using: :btree
+
+  create_table "question_sets", force: true do |t|
+    t.text    "title"
+    t.integer "subject_id"
+    t.string  "subject_type"
+  end
+
+  create_table "question_translations", force: true do |t|
+    t.integer  "question_id", null: false
+    t.string   "locale",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "body"
+  end
+
+  add_index "question_translations", ["locale"], name: "index_question_translations_on_locale", using: :btree
+  add_index "question_translations", ["question_id"], name: "index_question_translations_on_question_id", using: :btree
+
+  create_table "questions", force: true do |t|
+    t.text    "body"
+    t.boolean "correct",         default: false
+    t.integer "question_set_id"
   end
 
   create_table "steps", force: true do |t|
@@ -189,6 +230,7 @@ ActiveRecord::Schema.define(version: 20141101111530) do
   add_index "text_translations", ["text_id"], name: "index_text_translations_on_text_id", using: :btree
 
   create_table "texts", force: true do |t|
+    t.string "page_id"
     t.string "title"
     t.text   "body"
     t.string "subject_area"
@@ -238,6 +280,7 @@ ActiveRecord::Schema.define(version: 20141101111530) do
   add_index "video_translations", ["video_id"], name: "index_video_translations_on_video_id", using: :btree
 
   create_table "videos", force: true do |t|
+    t.string  "page_id"
     t.string  "title"
     t.text    "body"
     t.string  "subject_area"

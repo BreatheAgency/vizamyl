@@ -1,12 +1,9 @@
 class StepSerializer < ActiveModel::Serializer
-  # delegate :current_user, to: :scope
-  attributes :id, :position, :page
-  has_one :progression
+  attributes :id, :position, :page, :progression_id
 
-  #
-  # def progression
-  #   object.progressions.where(user: current_user)
-  # end
+  def progression_id
+    object.progressions.where(user: scope).first.id
+  end
 
   def page
     { id: object.page_id, type: object.page_type }

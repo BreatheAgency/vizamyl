@@ -2,16 +2,24 @@ Course.LocaleCourseMenuController = Ember.ArrayController.extend({
   needs: ['application'],
   sortProperties: ['position'],
   sortAscending: true,
-  user: Ember.computed.alias('controllers.application.currentUser'),
+  isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
 
   actions: {
 
     next: function(chapter, step) {
       this.completeStep(step);
 
-      var next_step = chapter.get('steps').objectAt(step.get('position') + 1)
+      // objectAt becuase the position on the step is not zero based but the steps array on the chapter is
+      var next_step = chapter.get('steps').objectAt(step.get('position'))
       if (!next_step) {
         console.log('next_step not found (eg, get the next chapters step)');
+        var next_chapter = this.store.all('chapter').objectAt(chapter.get('position'));
+        if (next_chapter.get('available')) {
+          console.log('next chapter available');
+        } else {
+          console.log('next chapter unavailable');
+        }
+
       }
 
       this.send('select', chapter, next_step);
@@ -31,10 +39,9 @@ Course.LocaleCourseMenuController = Ember.ArrayController.extend({
 
   checkStep: function(chapter, step) {
     var procceed = false,
-        progression = step.get('progression'),
-        currentUser = this.get('user');
+        progression = step.get('progression');
 
-    if (currentUser.get('super_user')) { return true; };
+    if (this.get('isSuperUser')) { return true; };
 
     if (chapter.get('available')) {
       console.log('chapter available');

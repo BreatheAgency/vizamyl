@@ -1,6 +1,7 @@
 class CreateInteractiveQuestions < ActiveRecord::Migration
   def up
     create_table :interactive_questions do |t|
+      t.string :page_id
       t.string :title
       t.string :subject_area
     end

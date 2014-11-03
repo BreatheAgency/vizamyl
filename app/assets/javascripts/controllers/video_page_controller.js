@@ -1,8 +1,11 @@
 Course.VideoPageController = Ember.ObjectController.extend({
-  needs: ['localeCourseMenu'],
+  needs: ['application', 'localeCourseMenu'],
+  isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   finished: false,
 
   complete: function(){
+    if (this.get('isSuperUser')) { return true; };
+
     if (this.get('mandatory')) {
       return this.get('finished');
     } else {
