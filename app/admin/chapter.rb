@@ -21,7 +21,7 @@ ActiveAdmin.register Chapter do
     column :title do |chapter|
       link_to(chapter.title, admin_chapter_path(chapter))
     end
-    translation_status_flags
+    # translation_status_flags
   end
 
   sidebar 'Pages', only: [:show] do
