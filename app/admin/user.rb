@@ -1,4 +1,5 @@
 ActiveAdmin.register User do
+  actions :all, except: [:new, :destroy]
   config.filters = false
 
   controller do
@@ -33,7 +34,7 @@ ActiveAdmin.register User do
     f.actions
   end
 
-  show do |user|
+  show title: :email do |user|
     attributes_table do
       row :id
       row :email

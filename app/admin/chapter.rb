@@ -1,4 +1,5 @@
 ActiveAdmin.register Chapter do
+  actions :all, except: [:new, :destroy]
   config.sort_order = 'position_asc'
   config.filters = false
   sortable
@@ -22,6 +23,7 @@ ActiveAdmin.register Chapter do
       link_to(chapter.title, admin_chapter_path(chapter))
     end
     # translation_status_flags
+    actions
   end
 
   sidebar 'Pages', only: [:show] do

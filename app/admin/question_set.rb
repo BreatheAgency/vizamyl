@@ -1,9 +1,11 @@
 ActiveAdmin.register QuestionSet do
   config.paginate = false
   config.filters = false
+  menu false
+
+  # belongs_to :subject, polymorphic: true
 
   controller do
-    belongs_to :subject, polymorphic: true
     def permitted_params
       params.permit!
     end

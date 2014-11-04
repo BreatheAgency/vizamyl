@@ -1,4 +1,5 @@
 ActiveAdmin.register ImageQuestion do
+  actions :all, except: [:new, :destroy]
   config.paginate = false
   config.filters = false
 
@@ -21,7 +22,7 @@ ActiveAdmin.register ImageQuestion do
     f.actions
   end
 
-  show do
+  show title: :page_id do
     attributes_table do
       row :title
     end

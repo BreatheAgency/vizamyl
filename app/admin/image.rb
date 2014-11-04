@@ -1,4 +1,5 @@
 ActiveAdmin.register Image do
+  actions :all, except: [:new, :destroy]
   config.paginate = false
   config.filters = false
 
@@ -11,6 +12,17 @@ ActiveAdmin.register Image do
     end
   end
 
+  index do
+    column :page_id do |video|
+      link_to(video.page_id, admin_chapter_video_path(chapter, video))
+    end
+    column :title do |video|
+      link_to(video.title, admin_chapter_video_path(chapter, video))
+    end
+    # translation_status_flags
+    actions
+  end
+
   form do |f|
     f.translated_inputs 'Translated fields', switch_locale: true do |t|
       t.input :title
@@ -19,7 +31,7 @@ ActiveAdmin.register Image do
     f.actions
   end
 
-  show do
+  show title: :page_id do
     attributes_table do
       row :title
       row :source do |image|

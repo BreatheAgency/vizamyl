@@ -1,4 +1,5 @@
 ActiveAdmin.register Video do
+  actions :all, except: [:new, :destroy]
   config.paginate = false
   config.filters = false
 
@@ -9,6 +10,18 @@ ActiveAdmin.register Video do
     def permitted_params
       params.permit!
     end
+  end
+
+  index do
+    column :page_id do |video|
+      link_to(video.page_id, admin_chapter_video_path(chapter, video))
+    end
+    column :title do |video|
+      link_to(video.title, admin_chapter_video_path(chapter, video))
+    end
+    column(:mandatory) { |model| model['mandatory'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+    # translation_status_flags
+    actions
   end
 
   form do |f|
@@ -25,7 +38,7 @@ ActiveAdmin.register Video do
     f.actions
   end
 
-  show do
+  show title: :page_id do
     attributes_table do
       row :title
       row :body
