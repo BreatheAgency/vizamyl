@@ -1,4 +1,5 @@
 ActiveAdmin.register Interactive do
+  config.sort_order = 'id_asc'
   actions :all, except: [:new, :destroy]
   config.paginate = false
   config.filters = false

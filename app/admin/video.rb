@@ -1,4 +1,5 @@
 ActiveAdmin.register Video do
+  config.sort_order = 'id_asc'
   actions :all, except: [:new, :destroy]
   config.paginate = false
   config.filters = false
@@ -44,7 +45,13 @@ ActiveAdmin.register Video do
       row :body
       row :subject_area
       row(:mandatory) { |model| model['mandatory'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
-      row :source
+      row :source do |video|
+        video_tag([
+          '//djqy74tsvke0j.cloudfront.net/videos/' + video.source + '/playlist.m3u8',
+          '//djqy74tsvke0j.cloudfront.net/videos/' + video.source + '/web.mp4',
+          '//djqy74tsvke0j.cloudfront.net/videos/' + video.source + '/web.webm'
+        ], controls: true, autobuffer: true, size: '550x413')
+      end
       row :abbreviations
     end
   end
