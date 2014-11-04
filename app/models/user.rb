@@ -15,6 +15,18 @@ class User < ActiveRecord::Base
     latest_progression.step
   end
 
+  def progress
+    return 100 if super_user
+    progress = progressions.where(amount: 1).count.to_f / progressions.count.to_f * 100.0
+    progress.round || 0
+  end
+
+  # TODO
+  # def completed
+  #   return true if super_user
+  #   Step.count == progressions.where(amount: 1).count
+  # end
+
   private
 
   def latest_progression
