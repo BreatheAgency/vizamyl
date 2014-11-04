@@ -49,7 +49,7 @@ ActiveAdmin.register Chapter do
         column :id do |step|
           link_to(step.page.page_id, polymorphic_url([:admin, chapter, step.page]))
         end
-        column :page do |step|
+        column :title do |step|
           link_to(step.page.title, polymorphic_url([:admin, chapter, step.page]))
         end
         column :page_type
