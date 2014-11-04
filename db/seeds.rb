@@ -772,10 +772,10 @@ module_four_b.texts.create({
 })
 
 I18n.available_locales.each do |locale|
-  admin = AdminUser.create!(locale: locale, email: "#{locale}-admin@readvizamyl.com", password: 'password', password_confirmation: 'password')
+  admin = AdminUser.create!(locale: locale, email: "#{locale}-admin@readvizamyl.com", password: 'vzmyl100', password_confirmation: 'vzmyl100')
 
   [true, false].each do |super_user|
-    user = User.new(locale: locale, invite_code: 'invite', title: 'Ms', first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "#{locale}-#{(super_user) ? 'super-' : ''}user@readvizamyl.com", password: 'password', password_confirmation: 'password', super_user: super_user)
+    user = User.new(locale: locale, invite_code: 'invite', title: 'Dr', first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "#{locale}-#{(super_user) ? 'super-' : ''}user@readvizamyl.com", password: 'vzmyl100', password_confirmation: 'vzmyl100', super_user: super_user)
     user.save!
     Step.all.each do |step|
       user.progressions.create!(step: step)
