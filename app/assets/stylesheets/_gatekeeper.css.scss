@@ -62,7 +62,12 @@
         width: 60px;
         display: block;
         font-size: 0;
-        @include retina-background-image('locales/fr', 60px, 60px);
+      }
+
+      @each $locale in $available-locales {
+        .#{$locale}-button {
+          @include retina-background-image(locales/#{$locale}, 60px, 60px);
+        }
       }
 
     }

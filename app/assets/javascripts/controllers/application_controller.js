@@ -10,4 +10,5 @@ Course.ApplicationController = Ember.Controller.extend({
   isSuperUser:function(){
     return this.get('currentUser').get('super_user') || false;
   }.property('currentUser'),
+
 });
