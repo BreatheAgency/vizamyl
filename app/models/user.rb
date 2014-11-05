@@ -7,10 +7,6 @@ class User < ActiveRecord::Base
 
   has_many :progressions
 
-  def latest_chapter
-    latest_step.chapter
-  end
-
   def latest_step
     latest_progression.step
   end
