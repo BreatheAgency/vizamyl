@@ -24,8 +24,15 @@ module Vizamyl
     # config.time_zone = 'Central Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
-    # config.i18n.default_locale = :de
+    config.i18n.load_path += Dir[Rails.root.join('congih', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.default_locale = :en
+
+    config.before_configuration do
+      I18n.load_path += Dir[Rails.root.join('congih', 'locales', '*.{rb,yml}').to_s]
+      I18n.locale = :en
+      I18n.default_locale = :en
+      I18n.reload!
+    end
 
     #
     config.i18n.available_locales = [:en, :fr, :de]
