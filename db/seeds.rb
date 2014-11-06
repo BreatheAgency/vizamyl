@@ -785,3 +785,9 @@ I18n.available_locales.each do |locale|
     first_progression.update_attributes(amount: 0.5)
   end
 end
+
+# User.all.each do |user|
+#   Step.all.each do |step|
+#     user.progressions.create(step:step)
+#   end
+# end
