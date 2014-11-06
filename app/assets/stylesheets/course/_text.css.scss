@@ -9,6 +9,16 @@
     color: $primary-color;
   }
 
+  .abbreviations {
+    position: absolute;
+    bottom: 0px;
+
+    p {
+      font-size: rem-calc(14);
+      margin-bottom: 0;
+    }
+  }
+
 }
 
 .text-page.super-user {

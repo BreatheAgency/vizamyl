@@ -1,5 +1,5 @@
-DUMMY_BODY = '<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>'
-DUMMY_ABBREVIATIONS = '<p><strong>MRI:</strong> magnetic resonance imaging</p><p><strong>PET:</strong> positron emission tomography</p>'
+DUMMY_BODY = 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.'
+DUMMY_ABBREVIATIONS = 'MRI: magnetic resonance imaging<br>PET: positron emission tomography<br>'
 
 module_zero = Chapter.create(title: 'Introduction', position: 1)
 module_zero.texts.create({
@@ -11,7 +11,6 @@ module_zero.videos.create({
   page_id: 'M0_P2',
   title: 'Video',
   body: DUMMY_BODY,
-  subject_area: 'Subject Area',
   source: 'M0_P2_VIDEO',
   abbreviations: DUMMY_ABBREVIATIONS,
 })
@@ -21,7 +20,6 @@ module_one.texts.create({
   page_id: 'M1_P1',
   title: 'Text',
   body: DUMMY_BODY,
-  subject_area: 'Subject Area',
 })
 
 module_one_a = Chapter.create(title: 'Module 1a', position: 3)
@@ -653,7 +651,7 @@ module_three.question_intros.create({
   body: DUMMY_BODY,
 })
 #M3_P62
-module_four_a = Chapter.create(title: 'Module 4a', position: 7)
+module_four_a = Chapter.create(title: 'Module 4a', position: 8)
 module_four_a.texts.create({
   page_id: 'M4A_P1',
   title: 'Text',
@@ -756,7 +754,7 @@ module_four_a.videos.create({
   mandatory: false,
 })
 
-module_four_b = Chapter.create(title: 'Module 4b', position: 8)
+module_four_b = Chapter.create(title: 'Module 4b', position: 9)
 module_four_b.texts.create({
   page_id: 'M4B_P1',
   title: 'Text',

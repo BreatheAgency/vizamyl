@@ -1,7 +1,10 @@
 <div {{bind-attr class=':row :text-page isSuperUser:super-user'}}>
   <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
     <h1>{{title}}</h1>
-    {{{body}}}
+    <p>{{{body}}}</p>
+    <div class="abbreviations">
+      <p>{{{abbreviations}}}</p>
+    </div>
     <div class='button-container row'>
       <div class='small-12 medium-12 large-12 columns'>
         <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
