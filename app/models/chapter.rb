@@ -1,7 +1,7 @@
 class Chapter < ActiveRecord::Base
   has_many :steps, -> { order('position ASC') }
   %i(videos texts images interactives question_intros image_questions interactive_questions).each do |page_type|
-    has_many page_type, through: :steps, source: :page, source_type: page_type.to_s.classify
+    has_many page_type, through: :steps, source: :page, source_type: page_type.to_s.classify, dependent: :destroy
   end
 
   acts_as_list scope: [:id]
