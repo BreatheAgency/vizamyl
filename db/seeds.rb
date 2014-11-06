@@ -26,7 +26,7 @@ module_one_a = Chapter.create(title: 'Module 1a', position: 3)
 module_one_a.texts.create({
   page_id: 'M1A_P1',
   title: 'Text',
-  body: DUMMY_BODY
+  body: DUMMY_BODY,
   subject_area: 'Subject Area',
 })
 module_one_a.videos.create({
