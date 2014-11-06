@@ -1,5 +1,5 @@
 Course.StartRoute = Ember.Route.extend({
-  activate: function() {
+  beforeModel: function() {
     this.transitionTo('locale.menu');
   },
 });

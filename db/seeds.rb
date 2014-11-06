@@ -21,6 +21,7 @@ module_one.texts.create({
   page_id: 'M1_P1',
   title: 'Text',
   body: DUMMY_BODY,
+  subject_area: 'Subject Area',
 })
 
 module_one_a = Chapter.create(title: 'Module 1a', position: 3)

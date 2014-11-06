@@ -2,7 +2,8 @@ Course.Step = DS.Model.extend({
   chapter: DS.belongsTo('chapter'),
   progression: DS.belongsTo('progression'),
   position: DS.attr('number'),
-  page: DS.belongsTo('page', {polymorphic: true}),
+  page: DS.belongsTo('page', { polymorphic: true }),
+  title: DS.attr('string'),
 
   available: function() {
     return this.get('progression.amount') !== 0;
@@ -13,7 +14,7 @@ Course.Step = DS.Model.extend({
   }.property('progression.amount'),
 
   progressClass: function(){
-    switch(this.get('progress')) {
+    switch(this.get('progression.amount')) {
       case 1:
         return 'fi-checkbox';
       case 0.5:
@@ -21,5 +22,5 @@ Course.Step = DS.Model.extend({
       default:
         return 'fi-x-circle';
     }
-  }.property('progress'),
+  }.property('progression.amount'),
 });
