@@ -27,6 +27,7 @@ ActiveAdmin.register QuestionIntro do
     f.translated_inputs switch_locale: true do |t|
       t.input :title
       t.input :body, as: :html_editor
+      t.input :subject_area
     end
     f.actions
   end
@@ -35,6 +36,7 @@ ActiveAdmin.register QuestionIntro do
     attributes_table do
       row :title
       row :body
+      row :subject_area
     end
   end
 end

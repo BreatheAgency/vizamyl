@@ -1,5 +1,5 @@
 Course.Router.reopen({
-  rootURL: '/',
+  rootURL: '/course/',
   location: 'auto'
 });
 

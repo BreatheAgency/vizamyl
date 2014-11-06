@@ -28,6 +28,7 @@ ActiveAdmin.register Interactive do
     f.translated_inputs switch_locale: true do |t|
       t.input :title
       t.input :body, as: :html_editor
+      t.input :subject_area
     end
     f.inputs do
       f.input :sources_raw, label: 'Sources'
@@ -39,6 +40,7 @@ ActiveAdmin.register Interactive do
     attributes_table do
       row :title
       row :body
+      row :subject_area
       row :sources do
         interactive.sources_raw
       end

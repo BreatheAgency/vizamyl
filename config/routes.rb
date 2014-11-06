@@ -9,10 +9,10 @@ Rails.application.routes.draw do
   resources :chapters, only: %i(index show)
   resources :progressions, only: %i(create show index update)
 
+  get '/course/*other' => 'static#show', id: 'course'
+
   scope ":locale", locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'enrole' }, controllers: { registrations: 'users/registrations' }
-    get '/course', to: redirect("/%{locale}/course/text/1")
-    get '/course/*other' => 'static#show', id: 'course'
     get '/*id' => 'static#show', id: 'home', as: :static
     get '/' => 'static#show', id: 'home'
   end

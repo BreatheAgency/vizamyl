@@ -27,6 +27,7 @@ ActiveAdmin.register Image do
   form do |f|
     f.translated_inputs 'Translated fields', switch_locale: true do |t|
       t.input :title
+      t.input :subject_area
       t.input :source
     end
     f.actions
@@ -35,6 +36,7 @@ ActiveAdmin.register Image do
   show title: :page_id do
     attributes_table do
       row :title
+      row :subject_area
       row :source do |image|
         image_tag('//djqy74tsvke0j.cloudfront.net/images/' + image.source + '.png')
       end
