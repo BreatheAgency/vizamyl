@@ -1,5 +1,5 @@
 class ImageQuestion < ActiveRecord::Base
-  has_one :step, as: :page
+  has_one :step, as: :page, dependent: :destroy
   has_one :chapter, through: :step
   has_many :question_sets, as: :subject
   accepts_nested_attributes_for :question_sets, allow_destroy: true

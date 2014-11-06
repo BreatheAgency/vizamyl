@@ -2,7 +2,7 @@ class StepSerializer < ActiveModel::Serializer
   attributes :id, :position, :page, :title, :progression_id
 
   def progression_id
-    object.progressions.where(user: scope).first.id
+    object.progressions.first_or_create(user: scope).id
   end
 
   def title
