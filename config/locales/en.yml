@@ -27,6 +27,7 @@ en:
         <span>Flutemetamol F18</span>
         <span>Injection</span>
       course_menu: Course menu
+      action_next: Next
       my_account: My account
       login: Login
       logout: Logout
@@ -44,9 +45,6 @@ en:
         <p>VIZAMYL is a trademark of General Electirc Company or one of its subsidaries.</p>
       reference_html: |
         <p class="right">11-2014 JB6231/OS INT'L ENG</p>
-  course:
-    actions:
-      next: Next
   pages:
     gatekeeper:
       locale_titles:
