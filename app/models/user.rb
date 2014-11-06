@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   validates :email, email: true
 
   attr_accessor :invite_code
-  validates :invite_code, inclusion: { in: %w[invite], message: 'is invalid'}, on: :create
+  validates :invite_code, inclusion: { in: %w[vzmyl100], message: 'is invalid'}, on: :create
 
   has_many :progressions
 
