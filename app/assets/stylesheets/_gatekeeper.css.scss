@@ -5,7 +5,7 @@
     min-height: rem-calc(800);
     background-color: white;
     background-position: center;
-    @include retina-background-image('map', 771px, 452px);
+    @include retina-background-image('map', 1000px, 800px);
 
   }
 
