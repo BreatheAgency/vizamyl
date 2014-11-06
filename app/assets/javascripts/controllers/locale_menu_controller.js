@@ -10,12 +10,14 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
       this.completeStep(step);
 
       // objectAt becuase the position on the step is not zero based but the steps array on the chapter is
-      var next_step = chapter.get('steps').objectAt(step.get('position'))
+      var next_step = chapter.get('steps').objectAt(step.get('position'));
       if (!next_step) {
-        console.log('next_step not found (eg, get the next chapters step)');
+        // console.log('next_step not found (eg, get the next chapters step)');
         var next_chapter = this.store.all('chapter').objectAt(chapter.get('position'));
         if (next_chapter.get('available')) {
-          console.log('next chapter available');
+          chapter = next_chapter;
+          next_step = next_chapter.get('steps.firstObject');
+          // console.log('next chapter available');
         } else {
           console.log('next chapter unavailable');
         }
@@ -105,6 +107,7 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   completeStep: function(step) {
     var progression = step.get('progression');
     progression.set('amount', 1);
+
     // only save the progression when its changed
     if (progression.get('isDirty')) {
       progression.save();
