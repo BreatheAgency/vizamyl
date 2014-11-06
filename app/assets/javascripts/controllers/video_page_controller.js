@@ -1,5 +1,5 @@
 Course.VideoPageController = Ember.ObjectController.extend({
-  needs: ['application', 'localeCourseMenu'],
+  needs: ['application', 'localeMenu'],
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   finished: false,
 
@@ -15,7 +15,7 @@ Course.VideoPageController = Ember.ObjectController.extend({
 
   actions: {
     next:function(chapter, step) {
-      this.get('controllers.localeCourseMenu').send('next', chapter, step);
+      this.get('controllers.localeMenu').send('next', chapter, step);
     },
 
     finished: function(bool) {

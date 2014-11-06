@@ -1,10 +1,10 @@
 Course.QuestionIntroPageController = Ember.ObjectController.extend({
-  needs: ['application', 'localeCourseMenu'],
+  needs: ['application', 'localeMenu'],
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: true,
   actions: {
     next:function(chapter, step) {
-      this.get('controllers.localeCourseMenu').send('next', chapter, step);
+      this.get('controllers.localeMenu').send('next', chapter, step);
     },
   }
 });

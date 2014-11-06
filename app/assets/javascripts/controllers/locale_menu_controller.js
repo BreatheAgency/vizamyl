@@ -1,4 +1,4 @@
-Course.LocaleCourseMenuController = Ember.ArrayController.extend({
+Course.LocaleMenuController = Ember.ArrayController.extend({
   needs: ['application'],
   sortProperties: ['position'],
   sortAscending: true,
