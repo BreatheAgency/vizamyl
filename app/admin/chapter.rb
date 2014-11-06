@@ -1,5 +1,5 @@
 ActiveAdmin.register Chapter do
-  actions :all, except: [:new, :destroy]
+  actions :all, except: [:new, :edit, :destroy]
   config.sort_order = 'position_asc'
   config.filters = false
   sortable
