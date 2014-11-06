@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141102232841) do
+ActiveRecord::Schema.define(version: 20141106145057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -216,13 +216,14 @@ ActiveRecord::Schema.define(version: 20141102232841) do
   end
 
   create_table "text_translations", force: true do |t|
-    t.integer  "text_id",      null: false
-    t.string   "locale",       null: false
+    t.integer  "text_id",       null: false
+    t.string   "locale",        null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
     t.text     "body"
     t.string   "subject_area"
+    t.text     "abbreviations"
   end
 
   add_index "text_translations", ["locale"], name: "index_text_translations_on_locale", using: :btree
@@ -233,6 +234,7 @@ ActiveRecord::Schema.define(version: 20141102232841) do
     t.string "title"
     t.text   "body"
     t.string "subject_area"
+    t.text   "abbreviations"
   end
 
   create_table "users", force: true do |t|

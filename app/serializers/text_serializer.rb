@@ -1,5 +1,5 @@
 class TextSerializer < PageSerializer
-  attributes :body
+  attributes :body, :abbreviations
 
   def controller_name
     'text_page'

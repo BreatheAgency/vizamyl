@@ -29,6 +29,7 @@ ActiveAdmin.register Text do
       t.input :title
       t.input :body, as: :html_editor
       t.input :subject_area
+      t.input :abbreviations, as: :html_editor
     end
     f.actions
   end
@@ -38,6 +39,7 @@ ActiveAdmin.register Text do
       row :title
       row :body
       row :subject_area
+      row :abbreviations
     end
   end
 end

@@ -6,7 +6,7 @@ class StepSerializer < ActiveModel::Serializer
   end
 
   def title
-    object.page.subject_area || ''
+     "#{object.page.title} (#{object.page.subject_area})"
   end
 
   def page
