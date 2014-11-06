@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
 
   def after_sign_in_path_for(resource)
-    request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}"
+    request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}/start"
   end
 
   private
