@@ -1,6 +1,7 @@
 Course.Chapter = DS.Model.extend({
   position: DS.attr('number'),
   title: DS.attr('string'),
+  short_title: DS.attr('string'),
   steps: DS.hasMany('step'),
 
   hashId: function(){

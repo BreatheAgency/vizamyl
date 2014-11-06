@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141106145057) do
+ActiveRecord::Schema.define(version: 20141106230830) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,11 +51,12 @@ ActiveRecord::Schema.define(version: 20141106145057) do
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "chapter_translations", force: true do |t|
-    t.integer  "chapter_id", null: false
-    t.string   "locale",     null: false
+    t.integer  "chapter_id",  null: false
+    t.string   "locale",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title",      null: false
+    t.string   "title"
+    t.string   "short_title"
   end
 
   add_index "chapter_translations", ["chapter_id"], name: "index_chapter_translations_on_chapter_id", using: :btree
@@ -66,6 +67,7 @@ ActiveRecord::Schema.define(version: 20141106145057) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "short_title"
   end
 
   create_table "image_question_translations", force: true do |t|

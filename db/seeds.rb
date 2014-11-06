@@ -1,7 +1,7 @@
 DUMMY_BODY = 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.'
 DUMMY_ABBREVIATIONS = 'MRI: magnetic resonance imaging<br>PET: positron emission tomography<br>'
 
-module_zero = Chapter.create(title: 'Introduction', position: 1)
+module_zero = Chapter.create(title: 'Introduction', short_title: 'Intro', position: 1)
 module_zero.texts.create({
   page_id: 'M0_P1',
   title: 'Text',
@@ -15,14 +15,14 @@ module_zero.videos.create({
   abbreviations: DUMMY_ABBREVIATIONS,
 })
 
-module_one = Chapter.create(title: 'Module 1', position: 2)
+module_one = Chapter.create(title: 'Module 1', short_title: '1', position: 2)
 module_one.texts.create({
   page_id: 'M1_P1',
   title: 'Text',
   body: DUMMY_BODY,
 })
 
-module_one_a = Chapter.create(title: 'Module 1a', position: 3)
+module_one_a = Chapter.create(title: 'Module 1a', short_title: '1a', position: 3)
 module_one_a.texts.create({
   page_id: 'M1A_P1',
   title: 'Text',
@@ -67,7 +67,7 @@ module_one_a.question_intros.create({
 })
 # M1A_P8
 
-module_one_b = Chapter.create(title: 'Module 1b', position: 4)
+module_one_b = Chapter.create(title: 'Module 1b', short_title: '1b', position: 4)
 module_one_b.texts.create({
   page_id: 'M1B_P1',
   title: 'Text',
@@ -140,14 +140,14 @@ module_one_b.question_intros.create({
 })
 # M1B_P14
 
-module_two = Chapter.create(title: 'Module 2', position: 5)
+module_two = Chapter.create(title: 'Module 2', short_title: '2', position: 5)
 module_two.texts.create({
   page_id: 'M2_P1',
   title: 'Text',
   body: DUMMY_BODY,
 })
 
-module_two_a = Chapter.create(title: 'Module 2a', position: 6)
+module_two_a = Chapter.create(title: 'Module 2a', short_title: '2a', position: 6)
 module_two_a.texts.create({
   page_id: 'M2A_P1',
   title: 'Text',
@@ -230,7 +230,7 @@ module_two_a.videos.create({
   abbreviations: DUMMY_ABBREVIATIONS,
 })
 
-module_two_b = Chapter.create(title: 'Module 2b', position: 6)
+module_two_b = Chapter.create(title: 'Module 2b', short_title: '2b', position: 6)
 module_two_b.texts.create({
   page_id: 'M2B_P1',
   title: 'Text',
@@ -287,7 +287,7 @@ module_two_b.question_intros.create({
 })
 #M2B_P11
 
-module_three = Chapter.create(title: 'Module 3', position: 7)
+module_three = Chapter.create(title: 'Module 3', short_title: '3', position: 7)
 module_three.texts.create({
   page_id: 'M3_P1',
   title: 'Text',
@@ -651,7 +651,7 @@ module_three.question_intros.create({
   body: DUMMY_BODY,
 })
 #M3_P62
-module_four_a = Chapter.create(title: 'Module 4a', position: 8)
+module_four_a = Chapter.create(title: 'Module 4a', short_title: '4a', position: 8)
 module_four_a.texts.create({
   page_id: 'M4A_P1',
   title: 'Text',
@@ -754,7 +754,7 @@ module_four_a.videos.create({
   mandatory: false,
 })
 
-module_four_b = Chapter.create(title: 'Module 4b', position: 9)
+module_four_b = Chapter.create(title: 'Module 4b', short_title: '4b', position: 9)
 module_four_b.texts.create({
   page_id: 'M4B_P1',
   title: 'Text',

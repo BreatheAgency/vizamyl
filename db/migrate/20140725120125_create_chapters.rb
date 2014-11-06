@@ -5,7 +5,7 @@ class CreateChapters < ActiveRecord::Migration
       t.string :title
       t.timestamps
     end
-    Chapter.create_translation_table! title: { type: :string, null: false }
+    Chapter.create_translation_table! title: { type: :string }
   end
   def down
     drop_table :chapters

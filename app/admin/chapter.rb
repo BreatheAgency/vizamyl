@@ -1,5 +1,5 @@
 ActiveAdmin.register Chapter do
-  actions :all, except: [:new, :edit, :destroy]
+  actions :all, except: [:new, :destroy]
   config.sort_order = 'position_asc'
   config.filters = false
   sortable
@@ -37,14 +37,15 @@ ActiveAdmin.register Chapter do
   form do |f|
     f.translated_inputs switch_locale: true do |t|
       t.input :title
+      t.input :short_title
     end
     f.actions
   end
 
   show do
-    #
     attributes_table do
       row :title
+      row :short_title
     end
     panel 'Pages' do
       table_for chapter.steps do
