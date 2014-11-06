@@ -252,7 +252,7 @@ module_two_b.videos.create({
   source: 'M0_P2_VIDEO',
   abbreviations: DUMMY_ABBREVIATIONS,
 })
-module_two_a.question_intros.create({
+module_two_b.question_intros.create({
   page_id: 'M2B_P4',
   title: 'Question Intro',
   body: DUMMY_BODY,
@@ -266,7 +266,7 @@ module_two_b.videos.create({
   source: 'M0_P2_VIDEO',
   abbreviations: DUMMY_ABBREVIATIONS,
 })
-module_two_a.question_intros.create({
+module_two_b.question_intros.create({
   page_id: 'M2B_P7',
   title: 'Question Intro',
   body: DUMMY_BODY,
@@ -280,7 +280,7 @@ module_two_b.videos.create({
   source: 'M0_P2_VIDEO',
   abbreviations: DUMMY_ABBREVIATIONS,
 })
-module_two_a.question_intros.create({
+module_two_b.question_intros.create({
   page_id: 'M2B_P10',
   title: 'Question Intro',
   body: DUMMY_BODY,
@@ -359,7 +359,7 @@ module_three.videos.create({
   source: 'M0_P2_VIDEO',
   abbreviations: DUMMY_ABBREVIATIONS,
 })
-module_two_a.question_intros.create({
+module_three.question_intros.create({
   page_id: 'M3_P12',
   title: 'Question Intro',
   body: DUMMY_BODY,
