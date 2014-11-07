@@ -41,7 +41,9 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
         console.log('check failed?');
       }
 
-      this.set('open', false);
+      if (!chapter.get('selected')) {
+        this.send('toggle', chapter);
+      }
     }
   },
 
