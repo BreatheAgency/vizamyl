@@ -6,6 +6,11 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
 
   actions: {
 
+    toggle:function(chapter){
+      this.get('model').setEach('selected', false);
+      chapter.set('selected', true);
+    },
+
     next: function(chapter, step) {
       this.completeStep(step);
 

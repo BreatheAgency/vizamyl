@@ -2,18 +2,18 @@
   <div class='small-12 medium-12 large-12 columns with-content with-minimum' id='accordion'>
     <ol>
       {{#each chapter in controller}}
-        <li {{bind-attr class=':panel :panel-default chapter.available:available'}}>
-          <div class='panel-heading'>
+        <li {{bind-attr class=':panel :panel-default chapter.available:available chapter.selected:selected:collapsed'}}>
+          <div {{action 'toggle' chapter}} class='panel-heading'>
             <h2 class='panel-title'>
-              <a data-toggle='collapse' data-parent='#accordion' {{bind-attr href=chapter.hashId}}>{{chapter.title}}</a>
+              <a>{{chapter.title}}</a>
             </h2>
           </div>
           <div {{bind-attr id=chapter.id}} class='panel-collapse collapse'>
             <ol class='list-group'>
               {{#each step in chapter.steps}}
-                <li>
+                <li {{action 'select' chapter step}}>
                   <h3>
-                    <a {{action 'select' chapter step}} {{bind-attr class=':list-group-item step.available:available'}}>
+                    <a {{bind-attr class=':list-group-item step.available:available'}}>
                       <i {{bind-attr class='step.progressClass'}}></i> {{step.title}}
                     </a>
                   </h3>

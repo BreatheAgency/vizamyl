@@ -1,0 +1,9 @@
+.loading-page {
+
+  .columns {
+    background-repeat: no-repeat;
+    background-position: center;
+    @include retina-background-image('loading', 200px, 200px);
+  }
+
+}
