@@ -4,7 +4,8 @@ Course.Interactive = DS.Model.extend(Course.Page, {
   sources: DS.attr(),
 
   sourcesWithUrls: function(){
-   return this.get('sources').map(function(source) {
+  var sources = this.get('sources') || Ember.A();
+   return sources.map(function(source) {
      return '//djqy74tsvke0j.cloudfront.net/interactives/' + source + '.png';
    });
   }.property('sources'),
