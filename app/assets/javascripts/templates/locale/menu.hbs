@@ -2,7 +2,7 @@
   <div class='small-12 medium-12 large-12 columns with-content with-minimum' id='accordion'>
     <ol>
       {{#each chapter in visibleChapters}}
-        <li {{bind-attr class=':panel :panel-default chapter.available:available chapter.selected:selected:collapsed'}}>
+        <li {{bind-attr class=':panel :panel-default chapter.available:available:unavailable chapter.selected:selected:collapsed'}}>
           <div {{action 'toggle' chapter}} class='panel-heading'>
             <h2 class='panel-title'>
               <a>{{chapter.title}}</a>

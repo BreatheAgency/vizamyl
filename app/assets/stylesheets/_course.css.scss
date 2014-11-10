@@ -34,19 +34,6 @@
         list-style-type: none;
         margin:0 20px;
 
-        .collapsed {
-          margin-top: 1px;
-
-          .panel-collapse {
-            display: none;
-          }
-
-        }
-
-        .selected {
-          margin-top: 1px;
-        }
-
         li {
           padding: 0;
           margin: 0;
@@ -64,6 +51,30 @@
             font-weight: normal;
           }
         }
+
+        .collapsed {
+          margin-top: 1px;
+
+          .panel-collapse {
+            display: none;
+          }
+
+        }
+
+        .selected {
+          margin-top: 1px;
+        }
+
+        .unavailable {
+          h2 {
+            background-color: tint(#005DBA, 50%);
+            cursor: default;
+          }
+          a {
+            cursor: default;
+          }
+        }
+
       }
 
       ol.list-group {
