@@ -4,6 +4,7 @@ Course.Step = DS.Model.extend({
   position: DS.attr('number'),
   page: DS.belongsTo('page', { polymorphic: true }),
   title: DS.attr('string'),
+  visible: DS.attr('boolean'),
 
   available: function() {
     return this.get('progression.amount') !== 0;

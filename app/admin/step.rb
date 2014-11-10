@@ -22,6 +22,7 @@ ActiveAdmin.register Step do
     column :page do |step|
       link_to(step.page.title, polymorphic_url([:admin, chapter, step.page]))
     end
+    column :visible
     column :page_type
   end
 

@@ -8,6 +8,10 @@ Course.Chapter = DS.Model.extend({
     return '#' + this.get('id');
   }.property('id'),
 
+  visibleSteps:function(){
+    return this.get('steps').filterBy('visible', true);
+  }.property('steps.@each.visible'),
+
   progressedSteps: function() {
     return this.get('steps').filter(function(step, index, self) {
       if (step.get('progression').get('amount') > 0) { return true; }
@@ -19,12 +23,6 @@ Course.Chapter = DS.Model.extend({
       if (step.get('progression').get('amount') === 1) { return true; }
     });
   }.property('steps.@each.progression.amount'),
-
-  // stepsWithSubjectAreas: function() {
-  //   return this.get('steps').filter(function(step, index, self) {
-  //     if (step.get('title') !== '') { return true; }
-  //   });
-  // }.property('steps.@each'),
 
   available: function() {
     return this.get('progressedSteps').get('length') !== 0;
