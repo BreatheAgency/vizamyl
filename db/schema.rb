@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141110135121) do
+ActiveRecord::Schema.define(version: 20141110142909) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -215,7 +215,7 @@ ActiveRecord::Schema.define(version: 20141110135121) do
     t.integer "position"
     t.integer "page_id"
     t.string  "page_type"
-    t.boolean "visible",    default: false
+    t.boolean "visible",    default: true
   end
 
   create_table "text_translations", force: true do |t|
