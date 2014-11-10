@@ -4,6 +4,12 @@
     margin-bottom: rem-calc(20);
   }
 
+  .label {
+    background: none;
+    color: $primary-color;
+    padding-left: 0;
+  }
+
   .spinner {
     width: rem-calc(50);
     height: rem-calc(50);
@@ -28,6 +34,7 @@
     width: 31px;
     height: 500px;
   }
+
   .dragdealer .handle {
     position: absolute;
     top: 0;
