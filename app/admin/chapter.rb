@@ -57,7 +57,7 @@ ActiveAdmin.register Chapter do
         end
         column :page_type
       end
-      h5(link_to('Adjust page order', admin_chapter_steps_path(chapter)))
+      h5(link_to('Adjust steps (eg page order)', admin_chapter_steps_path(chapter)))
     end
   end
 end

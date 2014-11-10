@@ -1,8 +1,8 @@
 ActiveAdmin.register Step do
+  actions :all, except: [:new, :destroy]
   config.sort_order = 'position_asc'
   config.paginate = false
   config.filters = false
-  config.clear_action_items!
 
   belongs_to :chapter, polymorphic: true
   sortable
@@ -16,14 +16,20 @@ ActiveAdmin.register Step do
   index do
     sortable_handle_column
     column :position
-    column :id do |step|
-      link_to(step.page.page_id, polymorphic_url([:admin, chapter, step.page]))
-    end
+    column :id
     column :page do |step|
       link_to(step.page.title, polymorphic_url([:admin, chapter, step.page]))
     end
-    column :visible
+    column(:visible) { |model| model['visible'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     column :page_type
+    actions
+  end
+
+  form do |f|
+    f.inputs do
+      f.input :visible
+    end
+    f.actions
   end
 
 end
