@@ -1,6 +1,6 @@
 Course.ProgressionController = Ember.Controller.extend({
   needs: ['application', 'localeMenu'],
-  chapters: Ember.computed.alias('controllers.localeMenu.arrangedContent'),
+  chapters: Ember.computed.alias('controllers.localeMenu.visibleChapters'),
   user: Ember.computed.alias('controllers.application.currentUser'),
   page: Ember.computed.alias('controllers.application.currentPage'),
 
