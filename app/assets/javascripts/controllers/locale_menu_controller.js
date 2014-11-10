@@ -113,10 +113,10 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   },
 
   visibleChapters:function(){
-    return this.get('model').filter(function(chapter, index, self) {
+    return this.get('arrangedContent').filter(function(chapter, index, self) {
       return (chapter.get('visibleSteps.length') !== 0);
     });
-  }.property('model.@each.visibleSteps.length'),
+  }.property('arrangedContent.@each.visibleSteps.length'),
 
   completeStep: function(step) {
     var progression = step.get('progression');
