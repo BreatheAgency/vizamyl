@@ -6,4 +6,4 @@ application: 4eirwAUPPIoe
 authentication: CUAZqdPmarGTR9JIbDuISJa5PUyAgEd-sUuZcQnI5d4
 
 
-alert_log_file: '.tmp/skylight/alert.log'
+alert_log_file: '/tmp/skylight/alert.log'
