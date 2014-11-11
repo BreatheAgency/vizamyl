@@ -13,10 +13,10 @@ ActiveAdmin.register QuestionSet do
 
   index do
     column :id do |question_set|
-      link_to(question_set.id, admin_question_set_path(question_set))
+      link_to(question_set.id, admin_question_sets_path(question_set))
     end
     column :title do |question_set|
-      link_to(question_set.title, admin_question_set_path(question_set))
+      link_to(question_set.title, admin_question_sets_path(question_set))
     end
     column :questions_count do |question_set|
       question_set.questions.count
@@ -48,7 +48,7 @@ ActiveAdmin.register QuestionSet do
       question_set.questions.each do |question|
         attributes_table_for question do
           row :id do |question|
-            link_to(question.id, admin_question_set_questions_path(question_set, question))
+            link_to(question.id, admin_question_set_question_path(question_set, question))
           end
           row :body
           row(:correct) { |model| model['correct'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
