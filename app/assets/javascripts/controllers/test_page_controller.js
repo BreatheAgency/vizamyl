@@ -65,7 +65,7 @@
 //   }
 // });
 
-Course.ImageQuestionPageController = Ember.ObjectController.extend({
+Course.TestPageController = Ember.ObjectController.extend({
   needs: ['application', 'localeMenu'],
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: true,

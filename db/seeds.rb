@@ -50,7 +50,23 @@ module_one_a.question_intros.create({
   title: 'Question Intro',
   body: DUMMY_BODY,
 })
-# M1A_P5
+
+m1a_p5 = module_one_a.tests.create({
+  page_id: 'M1A_P5',
+  title: 'Image Question'
+});
+
+m1a_p5_question_set = m1a_p5.question_sets.create({
+  title: 'Question Set'
+})
+
+[1,2,3].each do |i|
+  m1a_p5_question_set.questions.create({
+    body: "Question #{1}",
+    correct: i == 1
+  })
+end
+
 module_one_a.videos.create({
   page_id: 'M1A_P6',
   title: 'Video',

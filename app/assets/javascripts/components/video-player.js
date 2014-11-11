@@ -3,7 +3,9 @@ Course.VideoPlayerComponent = Ember.Component.extend({
   timeBeforeChange: 0,
 
   didInsertElement: function() {
-    this.player = window.videojs('player', { nativeControlsForTouch: false, customControlsOnMobile: true, controls: true, preload: true, autoplay: false });
+    this.player = window.videojs('player', { nativeControlsForTouch: false, customControlsOnMobile: true, controls: true, preload: true, autoplay: false }, function() {
+      this.ga();
+    });
     var that = this;
     if (this.mandatory) {
       this.player.on('timeupdate', function(e){
