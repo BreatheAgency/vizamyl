@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141110142909) do
+ActiveRecord::Schema.define(version: 20141111103415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -70,25 +70,6 @@ ActiveRecord::Schema.define(version: 20141110142909) do
     t.string   "short_title"
   end
 
-  create_table "image_question_translations", force: true do |t|
-    t.integer  "image_question_id", null: false
-    t.string   "locale",            null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "title"
-    t.string   "subject_area"
-  end
-
-  add_index "image_question_translations", ["image_question_id"], name: "index_image_question_translations_on_image_question_id", using: :btree
-  add_index "image_question_translations", ["locale"], name: "index_image_question_translations_on_locale", using: :btree
-
-  create_table "image_questions", force: true do |t|
-    t.string  "page_id"
-    t.string  "title"
-    t.string  "subject_area"
-    t.integer "failure_step_id"
-  end
-
   create_table "image_translations", force: true do |t|
     t.integer  "image_id",     null: false
     t.string   "locale",       null: false
@@ -107,24 +88,6 @@ ActiveRecord::Schema.define(version: 20141110142909) do
     t.string "title"
     t.string "subject_area"
     t.string "source"
-  end
-
-  create_table "interactive_question_translations", force: true do |t|
-    t.integer  "interactive_question_id", null: false
-    t.string   "locale",                  null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "title"
-    t.string   "subject_area"
-  end
-
-  add_index "interactive_question_translations", ["interactive_question_id"], name: "index_690cee133930fc59c0969752a5a73ac320fa3877", using: :btree
-  add_index "interactive_question_translations", ["locale"], name: "index_interactive_question_translations_on_locale", using: :btree
-
-  create_table "interactive_questions", force: true do |t|
-    t.string "page_id"
-    t.string "title"
-    t.string "subject_area"
   end
 
   create_table "interactive_translations", force: true do |t|
@@ -216,6 +179,24 @@ ActiveRecord::Schema.define(version: 20141110142909) do
     t.integer "page_id"
     t.string  "page_type"
     t.boolean "visible",    default: true
+  end
+
+  create_table "test_translations", force: true do |t|
+    t.integer  "test_id",      null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "subject_area"
+  end
+
+  add_index "test_translations", ["locale"], name: "index_test_translations_on_locale", using: :btree
+  add_index "test_translations", ["test_id"], name: "index_test_translations_on_test_id", using: :btree
+
+  create_table "tests", force: true do |t|
+    t.string "page_id"
+    t.string "title"
+    t.string "subject_area"
   end
 
   create_table "text_translations", force: true do |t|
