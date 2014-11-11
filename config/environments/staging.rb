@@ -69,10 +69,10 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address: ENV['SMTP_ADDRESS'],
-    port: ENV['SMTP_PORT'], # ports 587 and 2525 are also supported with STARTTLS
-    enable_starttls_auto: true, # detects and uses STARTTLS
+    port: ENV['SMTP_PORT'],
+    enable_starttls_auto: true,
     user_name: ENV['SMTP_USER_NAME'],
-    password: ENV['SMTP_PASSWORD'], # SMTP password is any valid API key
+    password: ENV['SMTP_PASSWORD'],
     authentication: ENV['SMTP_AUTHENTICATION'],
     domain: ENV['SMTP_DOMAIN'],
   }
