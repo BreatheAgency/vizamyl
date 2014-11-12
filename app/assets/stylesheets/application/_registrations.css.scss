@@ -1,0 +1,16 @@
+.registrations {
+
+  div:first-of-type {
+    @extend .motion;
+  }
+
+  .columns.with-content {
+    padding-top: rem-calc(30);
+  }
+
+  .button-container {
+    padding-top: rem-calc(15);
+    padding-bottom: rem-calc(30);
+  }
+
+}

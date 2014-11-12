@@ -1,0 +1,25 @@
+.references {
+
+  .columns {
+    padding-top: rem-calc(20);
+    padding-left: rem-calc(50);
+    padding-right: rem-calc(50);
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: $h3-font-size;
+    padding-bottom: rem-calc(16);
+    line-height: rem-calc(30);
+  }
+
+  .no-title {
+    padding-top: rem-calc(75);
+  }
+
+  p {
+    font-size: rem-calc(12);
+    line-height: rem-calc(14);
+  }
+
+}

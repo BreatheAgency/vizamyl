@@ -1,4 +1,5 @@
 .application {
+  background-color: white;
 
   .motion {
     background-repeat: no-repeat;
@@ -6,200 +7,15 @@
     @include retina-background-image('motion', 500px, 500px);
   }
 
-  .home {
-    div:first-of-type {
-      @extend .motion;
-    }
+  @import 'application/home';
+  @import 'application/contact';
+  @import 'application/references';
+  @import 'application/resources';
+  @import 'application/terms_and_conditions';
+  @import 'application/prescribing_information';
 
-    h1 {
-      margin: 50px 0;
-      line-height: rem-calc(48);
-      letter-spacing: rem-calc(1);
-    }
+  @import 'application/passwords';
+  @import 'application/sessions';
+  @import 'application/registrations';
 
-    p {
-      color: $primary-color;
-      font-size: rem-calc(18);
-      line-height: rem-calc(22);
-      letter-spacing: rem-calc(1);
-    }
-  }
-
-  .references {
-    background-color: white;
-
-    .columns {
-      padding-top: rem-calc(20);
-      padding-left: rem-calc(50);
-      padding-right: rem-calc(50);
-    }
-
-    h1 {
-      font-weight: bold;
-      font-size: $h3-font-size;
-      padding-bottom: rem-calc(16);
-      line-height: rem-calc(30);
-    }
-
-    .no-title {
-      padding-top: rem-calc(75);
-    }
-
-    p {
-      font-size: rem-calc(12);
-      line-height: rem-calc(14);
-    }
-  }
-
-  .resources {
-    background-color: white;
-
-    .columns {
-      padding-top: rem-calc(20);
-      padding-left: rem-calc(50);
-      padding-right: rem-calc(50);
-    }
-
-    h1 {
-      font-weight: bold;
-      font-size: $h3-font-size;
-      padding-bottom: rem-calc(16);
-      line-height: rem-calc(30);
-    }
-
-  }
-
-  .prescribing-information {
-    padding-top: rem-calc(20);
-    background-color: white;
-
-    .columns {
-      padding-top: rem-calc(20);
-      padding-left: rem-calc(50);
-      padding-right: rem-calc(50);
-    }
-
-    h1 {
-      font-weight: bold;
-      font-size: $h3-font-size;
-      padding-bottom: rem-calc(16);
-      line-height: rem-calc(30);
-    }
-
-    .tt {
-      font-size: rem-calc(10);
-    }
-
-    .bordered {
-      padding: rem-calc(6);
-      margin-top: rem-calc(10);
-      border: 1px solid black;
-      color: #666;
-
-      a, a:hover {
-        font-weight: normal;
-        color: #666;
-      }
-    }
-
-    p {
-      margin-bottom: rem-calc(3);
-      font-size: rem-calc(12);
-      line-height: rem-calc(14);
-    }
-  }
-
-  .devise {
-
-    div:first-of-type {
-      @extend .motion;
-    }
-
-  }
-
-  .sessions, .passwords {
-
-    .columns.with-content {
-      padding-top: rem-calc(100);
-    }
-
-    .button-container {
-      padding-top: rem-calc(20);
-    }
-
-    p {
-      font-weight: bold;
-      color: $primary-color;
-      font-size: rem-calc(22);
-      line-height: rem-calc(22);
-      letter-spacing: rem-calc(1);
-      padding-bottom: rem-calc(10);
-    }
-
-  }
-
-  .registrations {
-
-    .columns.with-content {
-      padding-top: rem-calc(30);
-    }
-
-    .button-container {
-      padding-top: rem-calc(15);
-      padding-bottom: rem-calc(30);
-    }
-
-  }
-
-
-  .contact {
-    background-color: white;
-
-    .columns {
-      padding-top: rem-calc(20);
-      padding-left: rem-calc(50);
-      padding-right: rem-calc(50);
-    }
-
-    h1 {
-      font-weight: bold;
-      font-size: $h3-font-size;
-      padding-bottom: rem-calc(6);
-      line-height: rem-calc(30);
-    }
-
-    h3 {
-      font-size: $h5-font-size;
-      color: #666;
-      line-height: $h5-font-size;
-      margin-bottom: 0;
-    }
-
-    p {
-      margin-top: rem-calc(12);
-      margin-bottom: 0;
-    }
-
-    .right {
-      margin-bottom: rem-calc(40);
-
-      h3:first-of-type {
-        margin-top: rem-calc(18);
-      }
-
-      p {
-        margin-top: rem-calc(4);
-        margin-bottom: 0;
-      }
-
-      p + p {
-        margin-top: 0;
-      }
-
-      hr {
-        margin: rem-calc(18) 0 rem-calc(18) 0;
-      }
-
-    }
-  }
 }

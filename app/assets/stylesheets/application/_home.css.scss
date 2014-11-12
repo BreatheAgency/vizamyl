@@ -1,0 +1,20 @@
+.home {
+
+  div:first-of-type {
+    @extend .motion;
+  }
+
+  h1 {
+    margin: 50px 0;
+    line-height: rem-calc(48);
+    letter-spacing: rem-calc(1);
+  }
+
+  p {
+    color: $primary-color;
+    font-size: rem-calc(18);
+    line-height: rem-calc(22);
+    letter-spacing: rem-calc(1);
+  }
+
+}

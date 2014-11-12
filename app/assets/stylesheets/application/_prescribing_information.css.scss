@@ -1,0 +1,40 @@
+.prescribing-information {
+  padding-top: rem-calc(20);
+  background-color: white;
+
+  .columns {
+    padding-top: rem-calc(20);
+    padding-left: rem-calc(50);
+    padding-right: rem-calc(50);
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: $h3-font-size;
+    padding-bottom: rem-calc(16);
+    line-height: rem-calc(30);
+  }
+
+  .tt {
+    font-size: rem-calc(10);
+  }
+
+  .bordered {
+    padding: rem-calc(6);
+    margin-top: rem-calc(10);
+    border: 1px solid black;
+    color: #666;
+
+    a, a:hover {
+      font-weight: normal;
+      color: #666;
+    }
+  }
+
+  p {
+    margin-bottom: rem-calc(3);
+    font-size: rem-calc(12);
+    line-height: rem-calc(14);
+  }
+
+}
