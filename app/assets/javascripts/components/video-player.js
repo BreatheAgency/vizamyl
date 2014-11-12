@@ -4,7 +4,9 @@ Course.VideoPlayerComponent = Ember.Component.extend({
 
   didInsertElement: function() {
     this.player = window.videojs('player', { nativeControlsForTouch: false, customControlsOnMobile: true, controls: true, preload: true, autoplay: false }, function() {
-      this.ga();
+      this.ga({
+        'eventsToTrack': ['percentsPlayed', 'start', 'end', 'seek', 'play', 'pause']
+      });
     });
     var that = this;
     if (this.mandatory) {
