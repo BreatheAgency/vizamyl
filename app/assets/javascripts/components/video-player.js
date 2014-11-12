@@ -3,11 +3,7 @@ Course.VideoPlayerComponent = Ember.Component.extend({
   timeBeforeChange: 0,
 
   didInsertElement: function() {
-    this.player = window.videojs('player', { nativeControlsForTouch: false, customControlsOnMobile: true, controls: true, preload: true, autoplay: false }, function() {
-      this.ga({
-        'eventsToTrack': ['percentsPlayed', 'start', 'end', 'seek', 'play', 'pause']
-      });
-    });
+    this.player = window.videojs('player', { nativeControlsForTouch: false, customControlsOnMobile: true, controls: true, preload: true, autoplay: false });
     var that = this;
     if (this.mandatory) {
       this.player.on('timeupdate', function(e){
@@ -41,6 +37,10 @@ Course.VideoPlayerComponent = Ember.Component.extend({
       { type: 'video/mp4', src: '//djqy74tsvke0j.cloudfront.net/videos/' + this.get('source') + '/web.mp4' },
       { type: 'video/webm', src: '//djqy74tsvke0j.cloudfront.net/videos/' + this.get('source') + '/web.webm' }
     ]);
+    this.player.ga({
+      'eventsToTrack': ['percentsPlayed', 'start', 'end', 'seek', 'play', 'pause'],
+      'eventLabel': this.get('source')
+    });
     this.player.load();
   }
 });
