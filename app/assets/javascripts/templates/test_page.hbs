@@ -1,20 +1,26 @@
 <div {{bind-attr class=':row :image-question-page isSuperUser:super-user'}}>
   <div class='small-5 large-5 columns with-content with-minimum'>
     <h1>{{title}}</h1>
+    {{#each question_set in question_sets}}
+      <h4>{{title}}</h4>
+      {{#each question in question_set.questions}}
+        <p>{{body}}</p>
+      {{/each}}
+    {{/each}}
     <hr>
     <p>{{{body}}}</p>
     <hr>
     {{#if isInCorrect}}
       <h4>You've answered the question correctly!</h4>
-      <button {{action 'next' }}>Next</button>
+      <button {{action 'next'}}>Next</button>
     {{/if}}
     {{#if isInIncorrect}}
       <h4>You've answered the question incorrectly</h4>
-      <button {{action 'next' }}>Next</button>
+      <button {{action 'next'}}>Next</button>
     {{/if}}
     {{#if isInUnanswered}}
       {{ext-radio content=questionSet value=selectedQuestion}}
-      <button {{action 'submit' }}>Submit</button>
+      <button {{action 'submit'}}>Submit</button>
     {{/if}}
   </div>
   <div class='small-7 large-7 columns with-media'>
