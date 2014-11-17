@@ -52,7 +52,7 @@ GIT
 
 GIT
   remote: git://github.com/tigrish/devise-i18n.git
-  revision: 969c3af4d19477711e15e0f643fea47333de6759
+  revision: 3065bb2f87425b2e4db499cba5343370ef4d0c4d
   specs:
     devise-i18n (0.11.2)
 
