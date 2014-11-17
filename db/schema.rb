@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141111103415) do
+ActiveRecord::Schema.define(version: 20141114160447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,23 @@ ActiveRecord::Schema.define(version: 20141111103415) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "answer_translations", force: true do |t|
+    t.integer  "answer_id",  null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "body"
+  end
+
+  add_index "answer_translations", ["answer_id"], name: "index_answer_translations_on_answer_id", using: :btree
+  add_index "answer_translations", ["locale"], name: "index_answer_translations_on_locale", using: :btree
+
+  create_table "answers", force: true do |t|
+    t.text    "body"
+    t.boolean "correct",     default: false
+    t.integer "question_id"
+  end
 
   create_table "chapter_translations", force: true do |t|
     t.integer  "chapter_id",  null: false
@@ -139,19 +156,7 @@ ActiveRecord::Schema.define(version: 20141111103415) do
     t.string "subject_area"
   end
 
-  create_table "question_set_translations", force: true do |t|
-    t.integer  "question_set_id", null: false
-    t.string   "locale",          null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.text     "title"
-  end
-
-  add_index "question_set_translations", ["locale"], name: "index_question_set_translations_on_locale", using: :btree
-  add_index "question_set_translations", ["question_set_id"], name: "index_question_set_translations_on_question_set_id", using: :btree
-
-  create_table "question_sets", force: true do |t|
-    t.text    "title"
+  create_table "question_rounds", force: true do |t|
     t.integer "subject_id"
     t.string  "subject_type"
   end
@@ -161,16 +166,15 @@ ActiveRecord::Schema.define(version: 20141111103415) do
     t.string   "locale",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "body"
+    t.text     "title"
   end
 
   add_index "question_translations", ["locale"], name: "index_question_translations_on_locale", using: :btree
   add_index "question_translations", ["question_id"], name: "index_question_translations_on_question_id", using: :btree
 
   create_table "questions", force: true do |t|
-    t.text    "body"
-    t.boolean "correct",         default: false
-    t.integer "question_set_id"
+    t.text    "title"
+    t.integer "question_round_id"
   end
 
   create_table "steps", force: true do |t|

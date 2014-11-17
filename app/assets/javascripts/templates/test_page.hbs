@@ -1,33 +1,40 @@
 <div {{bind-attr class=':row :image-question-page isSuperUser:super-user'}}>
   <div class='small-5 large-5 columns with-content with-minimum'>
-    <h1>{{title}}</h1>
-    {{#each question_set in question_sets}}
-      <h4>{{title}}</h4>
-      {{#each question in question_set.questions}}
-        <p>{{body}}</p>
+    <p>
+      unansweredQuestionRoundIndex: {{unansweredQuestionRoundIndex}}
+      unansweredQuestionIndex: {{unansweredQuestionIndex}}
+    </p>
+
+    <ul>
+      {{#each question in questions}}
+        <li>{{question.id}} {{question.answered}}</li>
       {{/each}}
-    {{/each}}
-    <hr>
-    <p>{{{body}}}</p>
-    <hr>
+    </ul>
+
+    <h1>{{question.title}}</h1>
     {{#if isInCorrect}}
       <h4>You've answered the question correctly!</h4>
-      <button {{action 'next'}}>Next</button>
     {{/if}}
     {{#if isInIncorrect}}
       <h4>You've answered the question incorrectly</h4>
-      <button {{action 'next'}}>Next</button>
     {{/if}}
     {{#if isInUnanswered}}
-      {{ext-radio content=questionSet value=selectedQuestion}}
-      <button {{action 'submit'}}>Submit</button>
+      {{ext-radio content=question.answers value=selectedAnswer}}
     {{/if}}
   </div>
   <div class='small-7 large-7 columns with-media'>
-    <img src='http://placehold.it/570x480' class='img-responsive'>
+    <img src='http://vizamyl.s3.amazonaws.com/images/question-debug.png' class='img-responsive'>
     <div class='button-container row'>
       <div class='small-12 medium-12 large-12 columns'>
-        <a {{bind-attr class=':right complete:enabled:disabled'}} href='/'>Next<i class='fi-arrow-right'></i></a>
+        {{#if isInCorrect}}
+          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next'}}>Next<i class='fi-arrow-right'></i></button>
+        {{/if}}
+        {{#if isInIncorrect}}
+          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next'}}>Next<i class='fi-arrow-right'></i></button>
+        {{/if}}
+        {{#if isInUnanswered}}
+          <a {{bind-attr class=':right'}} {{action 'submit'}}>Submit<i class='fi-arrow-right'></i></button>
+        {{/if}}
       </div>
     </div>
   </div>

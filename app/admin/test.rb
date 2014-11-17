@@ -29,10 +29,8 @@ ActiveAdmin.register Test do
       t.input :title, as: :html_editor
       t.input :subject_area
     end
-    f.has_many :question_sets, allow_destroy: true do |ff|
-      ff.translated_inputs switch_locale: true do |tt|
-        tt.input :title, as: :html_editor
-      end
+    f.has_many :question_rounds, allow_destroy: true do |ff|
+      ff.inputs
     end
     f.actions
   end
@@ -42,14 +40,14 @@ ActiveAdmin.register Test do
       row :title
       row :subject_area
     end
-    panel 'Question Sets' do
-      test.question_sets.each do |question_set|
-        attributes_table_for question_set do
-          row :title do |question_set|
-            link_to(question_set.title, admin_question_set_path(question_set))
+    panel 'Rounds' do
+      test.question_rounds.each do |question_round|
+        attributes_table_for question_round do
+          row :id do |question_round|
+            link_to(question_round.id, admin_question_round_path(question_round))
           end
-          row :questions_count do |question_set|
-            question_set.questions.count
+          row :questions_count do |question_round|
+            question_round.questions.count
           end
         end
       end

@@ -5,14 +5,16 @@ class CreateImageQuestions < ActiveRecord::Migration
       t.string :title
       t.string :subject_area
     end
-    ImageQuestion.create_translation_table!(
-      title: { type: :string },
-      subject_area: { type: :string }
-    )
+    if defined?(ImageQuestion)
+      ImageQuestion.create_translation_table!(
+        title: { type: :string },
+        subject_area: { type: :string }
+      )
+    end
   end
 
   def down
     drop_table :image_questions
-    ImageQuestion.drop_translation_table!
+    ImageQuestion.drop_translation_table! if defined?(ImageQuestion)
   end
 end

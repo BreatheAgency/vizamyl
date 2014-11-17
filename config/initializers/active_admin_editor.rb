@@ -4,3 +4,9 @@ ActiveAdmin::Editor.configure do |config|
   # config.aws_access_secret = ''
   # config.storage_dir = 'uploads'
 end
+
+# ActiveAdmin::Editor.configure do |config|
+#   config.parser_rules['tags']['strike'] = {
+#     'remove' => 0
+#   }
+# end

@@ -20,7 +20,7 @@ ActiveAdmin.register Video do
     column :title do |video|
       link_to(video.title, admin_chapter_video_path(chapter, video))
     end
-    column(:mandatory) { |model| model['mandatory'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+    column(:mandatory) { |model| model['mandatory'] ? status_tag('yes', :ok)  : status_tag('no',:ok) }
     # translation_status_flags
     actions
   end
@@ -44,7 +44,7 @@ ActiveAdmin.register Video do
       row :title
       row :body
       row :subject_area
-      row(:mandatory) { |model| model['mandatory'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+      row(:mandatory) { |model| model['mandatory'] ? status_tag('yes',:ok)  : status_tag('no',:ok) }
       row :source do |video|
         video_tag([
           '//djqy74tsvke0j.cloudfront.net/videos/' + video.source + '/playlist.m3u8',

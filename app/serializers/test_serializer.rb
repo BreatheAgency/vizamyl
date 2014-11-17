@@ -1,5 +1,5 @@
 class TestSerializer < PageSerializer
-  has_many :question_sets
+  has_many :question_rounds
 
   def controller_name
     'test_page'

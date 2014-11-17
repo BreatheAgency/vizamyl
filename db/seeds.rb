@@ -56,15 +56,17 @@ m1a_p5 = module_one_a.tests.create({
   title: 'Image Question'
 });
 
-m1a_p5_question_set = m1a_p5.question_sets.create({
-  title: 'Question Set'
-})
-
+m1a_p5_question_round = m1a_p5.question_rounds.create
 [1,2,3].each do |i|
-  m1a_p5_question_set.questions.create({
-    body: "Question #{1}",
-    correct: i == 1
+  question = m1a_p5_question_round.questions.create({
+    title: 'Question Title',
   })
+  [1,2,3].each do |ii|
+    question.answers.create({
+      body: "Answer #{ii}",
+      correct: ii == 1
+    })
+  end
 end
 
 module_one_a.videos.create({

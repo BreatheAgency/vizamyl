@@ -1,3 +1,4 @@
 Course.Question = DS.Model.extend({
-  body: DS.attr('string'),
+  title: DS.attr('string'),
+  answers: DS.hasMany('answer'),
 });

@@ -1,7 +1,8 @@
 class Question < ActiveRecord::Base
-  belongs_to :question_set
+  has_many :answers, -> { order('id ASC') }
+  accepts_nested_attributes_for :answers, allow_destroy: true
 
-  %i(body).each do |translated_field|
+  %i(title body).each do |translated_field|
     translates translated_field
     active_admin_translates translated_field
   end
