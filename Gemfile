@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.3'
+ruby '2.1.5'
 
 gem 'devise', github: 'plataformatec/devise'
 gem 'i18n-js', github: 'fnando/i18n-js'
