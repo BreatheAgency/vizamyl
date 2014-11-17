@@ -26,5 +26,5 @@ Course.PagesRoute = Ember.Route.extend({
 
   deactivate: function() {
     this.controllerFor('application').set('currentPage', null);
-  }
+  },
 });

@@ -1,5 +1,56 @@
 .test-page {
+
+  .columns.with-content {
+    padding-top: rem-calc(15);
+  }
+
+  h1 {
+    margin-bottom: rem-calc(20);
+  }
+
+  .test-progress {
+    margin-bottom: rem-calc(20);
+
+    p {
+      color: $primary-color;
+      margin-bottom: rem-calc(7);
+    }
+
+    ul {
+      @extend .inline-list;
+      counter-reset: question;
+
+      li:before {
+        counter-increment: question;
+        content: counter(question);
+      }
+
+      li {
+        width: 20px;
+        height: 20px;
+        background-color: #DDD;
+        border-radius: 50%;
+        padding-top: 4px;
+        margin-right: 10px;
+        text-align: center;
+        line-height: 12px;
+        color: white;
+        font-weight: normal;
+        font-size: 12px;
+      }
+
+      .active {
+        background-color: $primary-color;
+      }
+
+      .answered {
+        background-color: lighten($primary-color, 40);
+      }
+    }
+
+  }
 }
 
 .test-page.super-user {
+  border: solid 1px #980000;
 }

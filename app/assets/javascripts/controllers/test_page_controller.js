@@ -2,8 +2,6 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: false,
-  answeredQuestions: Ember.A(),
-  unansweredQuestionIndices: Ember.A(),
   unansweredQuestionRoundIndices: Ember.A(),
 
   states: {
@@ -18,7 +16,9 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     },
     correct: {
       didEnter: function() {
-        this.set('complete', true);
+        this.setProperties({
+          complete: true
+        });
       }
     }
   },
@@ -26,8 +26,8 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   stateEvents: {
     answer: {
       transitions: [
-        { unanswered: 'correct', doIf: 'questionIsRight' },
-        { unanswered: 'incorrect', doUnless: 'questionIsRight' }
+        { unanswered: 'correct', doIf: 'testCorrect' },
+        { unanswered: 'incorrect', doUnless: 'testCorrect' }
       ]
     },
     reset: {
@@ -38,14 +38,19 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     }
   },
 
-  pageDidChange: function() {
+  modelDidChange: function() {
     this.setProperties({
-      answeredQuestions: Ember.A(),
-      unansweredQuestionIndices: Ember.A(),
       unansweredQuestionRoundIndices: Ember.A()
     });
+    this.get('questions').forEach(function(question) {
+      question.setProperties({
+        answered: false,
+        active: false,
+        correct: false
+      });
+    });
     this.sendStateEvent('reset');
-  }.observes('page'),
+  }.observes('model'),
 
   unansweredQuestionRoundIndex: function() {
     if (this.get('unansweredQuestionRoundIndices').length === 0) {
@@ -58,30 +63,45 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     return this.get('question_rounds').objectAt(this.get('unansweredQuestionRoundIndex')).get('questions');
   }.property('question_rounds.[]', 'unansweredQuestionRoundIndex'),
 
-  unansweredQuestionIndex: function() {
-    if (this.get('unansweredQuestionIndices').length === 0) {
-      this.set('unansweredQuestionIndices', _.shuffle(_.range(this.get('questions.length'))));
-    }
-    return this.get('unansweredQuestionIndices').pop();
-  }.property('questions.[]').volatile(),
+  unansweredQuestions: function() {
+    return _.shuffle(this.get('questions').filterBy('answered', false));
+  }.property('questions.@each.answered'),
+
+  answeredQuestions: function() {
+    return this.get('questions').filterBy('answered', true);
+  }.property('questions.@each.answered'),
 
   question: function() {
-    return this.get('questions').objectAt(this.get('unansweredQuestionIndex'));
-  }.property('questions.[]', 'unansweredQuestionIndex'),
+    var q = this.get('unansweredQuestions.firstObject');
+    if (q) { q.set('active', true); }
+    return q;
+  }.property('unansweredQuestions'),
 
-  questionIsRight: function() {
-    return (this.target.get('selectedAnswer') && this.target.get('selectedAnswer.correct'));
-  },
+  testComplete: function() {
+    return this.get('questions.length') == this.get('answeredQuestions.length')
+  }.property('questions.[]', 'answeredQuestions'),
+
+  testCorrect: function() {
+    return !this.get('answeredQuestions').isAny('correct', false);
+  }.property('answeredQuestions'),
 
   actions: {
-    next: function() {
+    next:function(chapter, step) {
       this.get('controllers.localeMenu').send('next', chapter, step);
       this.sendStateEvent('reset');
     },
     submit: function() {
-      this.get('question').set('answered', true);
-      // this.answeredQuestions.push(this.get('unansweredQuestionIndex'));
-      // this.sendStateEvent('answer');
+      this.get('question').setProperties({
+        answered: true,
+        active: false,
+        correct: this.get('selectedAnswer.correct')
+      });
+
+      this.set('selectedAnswer', null);
+
+      if (this.get('testComplete')) {
+        this.sendStateEvent('answer');
+      }
     },
   }
 });

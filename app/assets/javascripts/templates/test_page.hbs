@@ -1,39 +1,38 @@
-<div {{bind-attr class=':row :image-question-page isSuperUser:super-user'}}>
+<div {{bind-attr class=':row :test-page isSuperUser:super-user'}}>
   <div class='small-5 large-5 columns with-content with-minimum'>
-    <p>
-      unansweredQuestionRoundIndex: {{unansweredQuestionRoundIndex}}
-      unansweredQuestionIndex: {{unansweredQuestionIndex}}
-    </p>
-
-    <ul>
-      {{#each question in questions}}
-        <li>{{question.id}} {{question.answered}}</li>
-      {{/each}}
-    </ul>
-
+    <div class='test-progress'>
+      <p>Self assestment question</p>
+      <ul>
+        {{#each question in questions}}
+          <li {{bind-attr class='question.active question.answered'}}></li>
+        {{/each}}
+      </ul>
+    </div>
     <h1>{{question.title}}</h1>
     {{#if isInCorrect}}
-      <h4>You've answered the question correctly!</h4>
+      <h4>You've answered the question(s) correctly!</h4>
     {{/if}}
     {{#if isInIncorrect}}
-      <h4>You've answered the question incorrectly</h4>
+      <h4>You've answered the question(s) incorrectly</h4>
     {{/if}}
     {{#if isInUnanswered}}
       {{ext-radio content=question.answers value=selectedAnswer}}
     {{/if}}
   </div>
   <div class='small-7 large-7 columns with-media'>
-    <img src='http://vizamyl.s3.amazonaws.com/images/question-debug.png' class='img-responsive'>
+    {{#if isInUnanswered}}
+      <img src='http://vizamyl.s3.amazonaws.com/images/question-debug.png' class='img-responsive'>
+    {{/if}}
     <div class='button-container row'>
       <div class='small-12 medium-12 large-12 columns'>
         {{#if isInCorrect}}
-          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next'}}>Next<i class='fi-arrow-right'></i></button>
+          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>Next<i class='fi-arrow-right'></i></button>
         {{/if}}
         {{#if isInIncorrect}}
-          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next'}}>Next<i class='fi-arrow-right'></i></button>
+          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>Next<i class='fi-arrow-right'></i></button>
         {{/if}}
         {{#if isInUnanswered}}
-          <a {{bind-attr class=':right'}} {{action 'submit'}}>Submit<i class='fi-arrow-right'></i></button>
+          <a {{bind-attr class=':right selectedAnswer:enabled:disabled'}} {{action 'submit'}}>Submit<i class='fi-arrow-right'></i></button>
         {{/if}}
       </div>
     </div>
