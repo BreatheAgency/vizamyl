@@ -17,6 +17,11 @@ Rails.application.routes.draw do
     get '/' => 'static#show', id: 'home'
   end
 
+  %w(404 422 500).each do |code|
+    get code, to: 'static#show', id: code
+  end
+
+
   get '/*id' => 'static#show', id: 'gatekeeper'
   root to: 'static#show', id: 'gatekeeper'
 end
