@@ -2,9 +2,10 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: false,
+  answered: Ember.computed.alias('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
 
-  states: {
+  fsmStates: {
     initialState: 'unanswered',
     knownStates: ['failed', 'incorrect', 'correct'],
     unanswered: {
@@ -23,7 +24,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     }
   },
 
-  stateEvents: {
+  fsmEvents: {
     answer: {
       transitions: [
         { unanswered: 'correct', doIf: 'testCorrect' },
@@ -105,14 +106,3 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     },
   }
 });
-//
-// Course.TestPageController = Ember.ObjectController.extend({
-//   needs: ['application', 'localeMenu'],
-//   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
-//   complete: true,
-//   actions: {
-//     next:function(chapter, step) {
-//       this.get('controllers.localeMenu').send('next', chapter, step);
-//     },
-//   }
-// });

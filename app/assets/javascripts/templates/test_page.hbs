@@ -26,13 +26,13 @@
     <div class='button-container row'>
       <div class='small-12 medium-12 large-12 columns'>
         {{#if isInCorrect}}
-          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>Next<i class='fi-arrow-right'></i></button>
+          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInIncorrect}}
-          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>Next<i class='fi-arrow-right'></i></button>
+          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInUnanswered}}
-          <a {{bind-attr class=':right selectedAnswer:enabled:disabled'}} {{action 'submit'}}>Submit<i class='fi-arrow-right'></i></button>
+          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>Submit<i class='fi-arrow-right'></i></a>
         {{/if}}
       </div>
     </div>
