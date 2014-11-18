@@ -265,8 +265,6 @@ GEM
     simple_form (3.0.2)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
-    sitemap_generator (5.0.5)
-      builder
     skylight (0.3.21)
       activesupport (>= 3.0.0)
     slop (3.6.0)
@@ -332,7 +330,6 @@ DEPENDENCIES
   rake (~> 10.3)
   sass-rails (~> 4.0)
   simple_form
-  sitemap_generator
   skylight
   uglifier
   unicorn (~> 4.8)
