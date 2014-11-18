@@ -19,14 +19,16 @@
       <h4>You've answered the question(s) incorrectly</h4>
     {{/if}}
     {{#if isInUnanswered}}
+    <div class='test'>
       {{ext-radio content=question.answers value=selectedAnswer}}
+    </div>
     {{/if}}
   </div>
   <div class='small-7 large-7 columns with-media'>
     {{#if isInUnanswered}}
       <img src='http://vizamyl.s3.amazonaws.com/images/question-debug.png' class='img-responsive'>
     {{/if}}
-    <div class='button-container row'>
+    <div class='row button-container'>
       <div class='small-12 medium-12 large-12 columns'>
         {{#if isInCorrect}}
           <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>

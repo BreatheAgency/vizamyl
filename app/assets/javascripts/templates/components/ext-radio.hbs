@@ -1,4 +1,5 @@
 {{#each content}}
-  <label>{{radio-button value=this name=view.name selection=view.value}}<br>{{{body}}}</label>
-  <br>
+  <div class='question'>
+    <label>{{radio-button value=this name=view.name selection=view.value}}<div class='body'>{{{body}}}</div></label>
+  </div>
 {{/each}}
