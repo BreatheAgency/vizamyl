@@ -3,8 +3,11 @@
     <div class='test-progress'>
       <p>Self assestment question</p>
       <ul>
-        {{#each question in questions}}
-          <li {{bind-attr class='question.active question.answered'}}></li>
+        {{#each question in answeredQuestions}}
+          <li class='answered'></li>
+        {{/each}}
+        {{#each question in unansweredQuestions}}
+          <li {{bind-attr class='question.active'}}></li>
         {{/each}}
       </ul>
     </div>
