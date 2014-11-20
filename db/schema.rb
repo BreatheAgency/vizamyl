@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141114160447) do
+ActiveRecord::Schema.define(version: 20141120161100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -107,6 +107,25 @@ ActiveRecord::Schema.define(version: 20141114160447) do
     t.string "source"
   end
 
+  create_table "interactive_source_translations", force: true do |t|
+    t.integer  "interactive_source_id", null: false
+    t.string   "locale",                null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "label"
+  end
+
+  add_index "interactive_source_translations", ["interactive_source_id"], name: "index_interactive_source_translations_on_interactive_source_id", using: :btree
+  add_index "interactive_source_translations", ["locale"], name: "index_interactive_source_translations_on_locale", using: :btree
+
+  create_table "interactive_sources", force: true do |t|
+    t.integer "subject_id"
+    t.string  "subject_type"
+    t.string  "source"
+    t.string  "label"
+    t.integer "height"
+  end
+
   create_table "interactive_translations", force: true do |t|
     t.integer  "interactive_id", null: false
     t.string   "locale",         null: false
@@ -125,7 +144,6 @@ ActiveRecord::Schema.define(version: 20141114160447) do
     t.string "title"
     t.text   "body"
     t.string "subject_area"
-    t.text   "sources",      array: true
   end
 
   create_table "progressions", force: true do |t|

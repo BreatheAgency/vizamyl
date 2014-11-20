@@ -53,7 +53,7 @@ module_one_a.question_intros.create({
 
 m1a_p5 = module_one_a.tests.create({
   page_id: 'M1A_P5',
-  title: 'Image Question'
+  title: 'Interactive Question'
 });
 
 m1a_p5_question_round = m1a_p5.question_rounds.create

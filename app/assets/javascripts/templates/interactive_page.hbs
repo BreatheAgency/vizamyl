@@ -5,9 +5,9 @@
   </div>
   <div class='small-7 large-7 columns with-media with-minimum'>
     <div class='image-scrollers row'>
-      {{#each source in sourcesWithUrls}}
+      {{#each interactive_source in interactive_sources}}
         <div {{bind-attr class=":columns columns"}}>
-          {{image-scroller imageHeight=imageHeight imageHeightMax=imageHeightMax src=source}}
+          {{interactive-scroller imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
         </div>
       {{/each}}
     </div>

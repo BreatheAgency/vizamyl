@@ -7,8 +7,9 @@ Course.InteractivePageController = Ember.ObjectController.extend({
       this.get('controllers.localeMenu').send('next', chapter, step);
     },
   },
+
   columns: function(){
-    switch(this.get('model.sources.length')) {
+    switch(this.get('model.interactive_sources.length')) {
       case 1:
         return 'small-12 large-12';
         break;
@@ -18,5 +19,5 @@ Course.InteractivePageController = Ember.ObjectController.extend({
       default:
         return 'small-4 large-4';
     }
-  }.property('model.sources.[]')
+  }.property('model.interactive_sources.[]')
 });

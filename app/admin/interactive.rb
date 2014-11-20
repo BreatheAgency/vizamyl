@@ -30,8 +30,14 @@ ActiveAdmin.register Interactive do
       t.input :body, as: :html_editor
       t.input :subject_area
     end
-    f.inputs do
-      f.input :sources_raw, label: 'Sources'
+    f.has_many :interactive_sources, allow_destroy: true do |ff|
+      ff.translated_inputs switch_locale: true do |tt|
+        tt.input :label
+      end
+      ff.inputs do
+        ff.input :source
+        ff.input :height
+      end
     end
     f.actions
   end
@@ -41,8 +47,17 @@ ActiveAdmin.register Interactive do
       row :title
       row :body
       row :subject_area
-      row :sources do
-        interactive.sources_raw
+    end
+    panel 'Interactive Sources' do
+      interactive.interactive_sources.each do |interactive_source|
+        attributes_table_for interactive_source do
+          row :id do |interactive_source|
+            link_to(interactive_source.id, admin_interactive_source_path(interactive_source))
+          end
+          row :label
+          row :source
+          row :height
+        end
       end
     end
   end

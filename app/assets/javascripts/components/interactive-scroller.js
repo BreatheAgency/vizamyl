@@ -1,8 +1,8 @@
-Course.ImageScrollerComponent = Ember.Component.extend({
+Course.InteractiveScrollerComponent = Ember.Component.extend({
   src: '',
   loaded: false,
   imageStep: 0,
-  imageHeight: 0,
+  imageHeight: 500,
   imageHeightMax: 0,
 
   didInsertElement: function() {
@@ -31,6 +31,10 @@ Course.ImageScrollerComponent = Ember.Component.extend({
   imageStepMax: function() {
     return Math.round(this.get('imageHeightMax') / this.get('imageHeight'));
   }.property('imageHeight', 'imageHeightMax'),
+
+  style: function() {
+    return 'height:' + this.get('imageHeightMax') + 'px;';
+  }.property('imageHeightMax'),
 
   onLoaded: function() {
     if (this.get('loaded')) {
