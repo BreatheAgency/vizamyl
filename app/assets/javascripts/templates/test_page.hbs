@@ -25,9 +25,15 @@
     {{/if}}
   </div>
   <div class='small-7 large-7 columns with-media'>
-    {{#if isInUnanswered}}
-      <img src='http://vizamyl.s3.amazonaws.com/images/debug.jpg' class='img-responsive'>
-    {{/if}}
+    <div class='image-scrollers row'>
+      {{#if isInUnanswered}}
+        {{#each interactive_source in question.interactive_sources}}
+          <div {{bind-attr class=":columns columns"}}>
+            {{interactive-scroller imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+          </div>
+        {{/each}}
+      {{/if}}
+    </div>
     <div class='row button-container'>
       <div class='small-12 medium-12 large-12 columns'>
         {{#if isInCorrect}}
