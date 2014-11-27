@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141120161100) do
+ActiveRecord::Schema.define(version: 20141124113806) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -216,9 +216,10 @@ ActiveRecord::Schema.define(version: 20141120161100) do
   add_index "test_translations", ["test_id"], name: "index_test_translations_on_test_id", using: :btree
 
   create_table "tests", force: true do |t|
-    t.string "page_id"
-    t.string "title"
-    t.string "subject_area"
+    t.string  "page_id"
+    t.string  "title"
+    t.string  "subject_area"
+    t.integer "failure_step_id"
   end
 
   create_table "text_translations", force: true do |t|

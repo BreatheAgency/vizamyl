@@ -1,27 +1,37 @@
 <div {{bind-attr class=':row :test-page isSuperUser:super-user'}}>
   <div class='small-5 large-5 columns with-content with-minimum'>
-    <div class='test-progress'>
-      <p>Self assestment question</p>
-      <ul>
-        {{#each question in answeredQuestions}}
-          <li class='answered'></li>
-        {{/each}}
-        {{#each question in unansweredQuestions}}
-          <li {{bind-attr class='question.active'}}></li>
-        {{/each}}
-      </ul>
-    </div>
-    <h1>{{question.title}}</h1>
     {{#if isInCorrect}}
+      <div class='test-progress'>
+        <p>Self-assessment question results</p>
+        <ul>
+          {{#each question in questions}}
+            <li>{{question.id}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      <p>Well done!</p>
+      <p>Your self assessment for {{chapter.title}} - {{title}}</p>
       <h4>You've answered the question(s) correctly!</h4>
     {{/if}}
     {{#if isInIncorrect}}
       <h4>You've answered the question(s) incorrectly</h4>
     {{/if}}
     {{#if isInUnanswered}}
-    <div class='test'>
-      {{ext-radio content=question.answers value=selectedAnswer}}
-    </div>
+      <div class='test-progress'>
+        <p>Self assestment question</p>
+        <ul>
+          {{#each question in answeredQuestions}}
+            <li class='answered'></li>
+          {{/each}}
+          {{#each question in unansweredQuestions}}
+            <li {{bind-attr class='question.active'}}></li>
+          {{/each}}
+        </ul>
+      </div>
+      <h1>{{question.title}}</h1>
+      <div class='test'>
+        {{ext-radio content=question.answers value=selectedAnswer}}
+      </div>
     {{/if}}
   </div>
   <div class='small-7 large-7 columns with-media'>
@@ -37,10 +47,12 @@
     <div class='row button-container'>
       <div class='small-12 medium-12 large-12 columns'>
         {{#if isInCorrect}}
-          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+          {{step}}
+          <a {{bind-attr class=':right'}} {{action 'next' chapter step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInIncorrect}}
-          <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' chapter step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+          {{failure_step}}
+          <a {{bind-attr class=':right'}} {{action 'next' failure_step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInUnanswered}}
           <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>Submit<i class='fi-arrow-right'></i></a>
