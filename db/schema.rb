@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141124113806) do
+ActiveRecord::Schema.define(version: 20141127150903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,6 +85,23 @@ ActiveRecord::Schema.define(version: 20141124113806) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "short_title"
+  end
+
+  create_table "image_source_translations", force: true do |t|
+    t.integer  "image_source_id", null: false
+    t.string   "locale",          null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "source"
+  end
+
+  add_index "image_source_translations", ["image_source_id"], name: "index_image_source_translations_on_image_source_id", using: :btree
+  add_index "image_source_translations", ["locale"], name: "index_image_source_translations_on_locale", using: :btree
+
+  create_table "image_sources", force: true do |t|
+    t.integer "subject_id"
+    t.string  "subject_type"
+    t.string  "source"
   end
 
   create_table "image_translations", force: true do |t|

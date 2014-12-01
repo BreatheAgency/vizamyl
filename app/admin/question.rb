@@ -38,6 +38,11 @@ ActiveAdmin.register Question do
         ff.input :height
       end
     end
+    f.has_many :image_sources, allow_destroy: true do |ff|
+      ff.translated_inputs switch_locale: true do |tt|
+        tt.input :source
+      end
+    end
     f.has_many :answers, allow_destroy: true do |ff|
       ff.translated_inputs switch_locale: true do |tt|
         tt.input :body, as: :html_editor
@@ -62,6 +67,16 @@ ActiveAdmin.register Question do
           row :label
           row :source
           row :height
+        end
+      end
+    end
+    panel 'Image Sources' do
+      question.image_sources.each do |image_source|
+        attributes_table_for image_source do
+          row :id do |image_source|
+            link_to(image_source.id, admin_image_source_path(image_source))
+          end
+          row :source
         end
       end
     end

@@ -1,4 +1,4 @@
-ActiveAdmin.register InteractiveSource do
+ActiveAdmin.register ImageSource do
   config.sort_order = 'id_asc'
   actions :all, except: [:new, :destroy]
   config.paginate = false
@@ -15,30 +15,22 @@ ActiveAdmin.register InteractiveSource do
   index do
     column :id
     column :source
-    column :label
-    column :height
     # translation_status_flags
     actions
   end
 
   form do |f|
     f.translated_inputs switch_locale: true do |t|
-      t.input :label
-    end
-    f.inputs do
-      f.input :source
-      f.input :height
+      t.input :source
     end
     f.actions
   end
 
   show do
     attributes_table do
-      row :label
       row :source do |image|
-        image_tag('//djqy74tsvke0j.cloudfront.net/interactives/' + image.source + '.jpg')
+        image_tag('//djqy74tsvke0j.cloudfront.net/images/' + image.source + '.jpg')
       end
-      row :height
     end
   end
 end

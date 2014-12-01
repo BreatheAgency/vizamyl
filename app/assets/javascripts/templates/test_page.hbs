@@ -35,13 +35,20 @@
     {{/if}}
   </div>
   <div class='small-7 large-7 columns with-media'>
-    <div class='image-scrollers row'>
+    <div class='row'>
       {{#if isInUnanswered}}
-        {{#each interactive_source in question.interactive_sources}}
-          <div {{bind-attr class=":columns columns"}}>
-            {{interactive-scroller imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
-          </div>
-        {{/each}}
+      {{#each image_source in question.image_sources}}
+        <div class="small-12 large-12 columns">
+          {{image-loader source=image_source.sourceWithUrl}}
+        </div>
+      {{/each}}
+        <div class='image-scrollers'>
+          {{#each interactive_source in question.interactive_sources}}
+            <div {{bind-attr class=":columns columns"}}>
+              {{interactive-scroller imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+            </div>
+          {{/each}}
+        </div>
       {{/if}}
     </div>
     <div class='row button-container'>
