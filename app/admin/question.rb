@@ -84,7 +84,7 @@ ActiveAdmin.register Question do
       question.answers.each do |answer|
         attributes_table_for answer do
           row :id do |answer|
-            link_to(answer.id, admin_question_answers_path(question, answer))
+            link_to(answer.id, admin_question_answer_path(question, answer))
           end
           row :body
           row(:correct) { |model| model['correct'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
