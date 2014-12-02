@@ -38,7 +38,7 @@ ActiveAdmin.register Test do
       ff.inputs
     end
     f.inputs do
-      f.input :failure_step, as: :select, collection: Step.includes(:page).all.map{|step| [step.page.page_id, step.id]}
+      f.input :failure_step, as: :select, collection: Step.includes(:page).all.map{|step| [step.page.page_id, step.id]}.sort_by { |step| step[0] }
       # f.input :failure_step, as: :select, collection: Step.select(:id).uniq
     end
     f.actions
