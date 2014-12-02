@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202164723) do
+ActiveRecord::Schema.define(version: 20141202170141) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -164,9 +164,11 @@ ActiveRecord::Schema.define(version: 20141202164723) do
   end
 
   create_table "progressions", force: true do |t|
-    t.integer "user_id"
-    t.integer "step_id"
-    t.float   "amount",  default: 0.0
+    t.integer  "user_id"
+    t.integer  "step_id"
+    t.float    "amount",     default: 0.0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "progressions", ["step_id", "user_id"], name: "index_progressions_on_step_id_and_user_id", unique: true, using: :btree
