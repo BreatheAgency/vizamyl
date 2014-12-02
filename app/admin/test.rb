@@ -21,7 +21,9 @@ ActiveAdmin.register Test do
       link_to(test.title, admin_chapter_test_path(chapter, test))
     end
     column :failure_step do |test|
-      link_to(test.failure_step.page.page_id, polymorphic_url([:admin, test.failure_step.page.chapter, test.failure_step.page]))
+      if test.failure_step.present?
+        link_to(test.failure_step.page.page_id, polymorphic_url([:admin, test.failure_step.page.chapter, test.failure_step.page]))
+      end
     end
     # translation_status_flags
     actions
@@ -47,7 +49,9 @@ ActiveAdmin.register Test do
       row :title
       row :subject_area
       row :failure_step do |test|
-        link_to(test.failure_step.page.page_id, polymorphic_url([:admin, test.failure_step.page.chapter, test.failure_step.page]))
+        if test.failure_step.present?
+          link_to(test.failure_step.page.page_id, polymorphic_url([:admin, test.failure_step.page.chapter, test.failure_step.page]))
+        end
       end
     end
     panel 'Rounds' do
