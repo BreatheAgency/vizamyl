@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     get '/:id' => 'pages#show'
   end
 
+  get '/course-completion' => 'course_completion#show'
   resources :chapters, only: %i(index show)
   resources :progressions, only: %i(create show index update)
 
@@ -20,7 +21,6 @@ Rails.application.routes.draw do
   %w(404 422 500).each do |code|
     get code, to: 'static#show', id: code
   end
-
 
   get '/*id' => 'static#show', id: 'gatekeeper'
   root to: 'static#show', id: 'gatekeeper'
