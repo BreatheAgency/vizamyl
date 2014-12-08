@@ -14,11 +14,11 @@ ActiveAdmin.register Text do
   end
 
   index do
-    column :page_id do |video|
-      link_to(video.page_id, admin_chapter_video_path(chapter, video))
+    column :page_id do |text|
+      link_to(text.page_id, admin_chapter_text_path(chapter, text))
     end
-    column :title do |video|
-      link_to(video.title, admin_chapter_video_path(chapter, video))
+    column :title do |text|
+      link_to(text.title, admin_chapter_text_path(chapter, text))
     end
     # translation_status_flags
     actions
