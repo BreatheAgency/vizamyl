@@ -154,12 +154,16 @@
       li {
         margin-left: rem-calc(5);
         height: 100%;
-        background-color: $primary-color;
+        background-color: tint(#005DBA, 50%);
         min-width: rem-calc(38);
         color: white;
         text-align: center;
         font-size: $h6-font-size;
         font-weight: normal;
+
+        .available {
+          background-color: $primary-color;
+        }
 
         a, a:hover {
           color:white
