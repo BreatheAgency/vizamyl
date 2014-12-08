@@ -20,7 +20,7 @@ ActiveAdmin.register ImageSource do
   end
 
   form do |f|
-    f.translated_inputs switch_locale: true do |t|
+    f.translated_inputs do |t|
       t.input :source
     end
     f.actions

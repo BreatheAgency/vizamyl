@@ -11,7 +11,7 @@ ActiveAdmin.register Answer do
   end
 
   form do |f|
-    f.translated_inputs switch_locale: true do |t|
+    f.translated_inputs do |t|
       t.input :body, as: :html_editor
     end
     f.inputs do

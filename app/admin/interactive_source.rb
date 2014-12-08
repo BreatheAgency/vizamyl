@@ -22,7 +22,7 @@ ActiveAdmin.register InteractiveSource do
   end
 
   form do |f|
-    f.translated_inputs switch_locale: true do |t|
+    f.translated_inputs do |t|
       t.input :label
     end
     f.inputs do

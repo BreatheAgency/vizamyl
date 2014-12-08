@@ -25,7 +25,7 @@ ActiveAdmin.register Image do
   end
 
   form do |f|
-    f.translated_inputs 'Translated fields', switch_locale: true do |t|
+    f.translated_inputs do |t|
       t.input :title
       t.input :subject_area
       t.input :source

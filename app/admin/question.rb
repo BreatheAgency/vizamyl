@@ -26,11 +26,11 @@ ActiveAdmin.register Question do
   end
 
   form do |f|
-    f.translated_inputs switch_locale: true do |t|
+    f.translated_inputs do |t|
       t.input :title, as: :html_editor
     end
     f.has_many :interactive_sources, allow_destroy: true do |ff|
-      ff.translated_inputs switch_locale: true do |tt|
+      ff.translated_inputs do |tt|
         tt.input :label
       end
       ff.inputs do
@@ -39,12 +39,12 @@ ActiveAdmin.register Question do
       end
     end
     f.has_many :image_sources, allow_destroy: true do |ff|
-      ff.translated_inputs switch_locale: true do |tt|
+      ff.translated_inputs do |tt|
         tt.input :source
       end
     end
     f.has_many :answers, allow_destroy: true do |ff|
-      ff.translated_inputs switch_locale: true do |tt|
+      ff.translated_inputs do |tt|
         tt.input :body, as: :html_editor
       end
       ff.inputs do

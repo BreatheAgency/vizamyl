@@ -25,13 +25,13 @@ ActiveAdmin.register Interactive do
   end
 
   form do |f|
-    f.translated_inputs switch_locale: true do |t|
+    f.translated_inputs do |t|
       t.input :title
       t.input :body, as: :html_editor
       t.input :subject_area
     end
     f.has_many :interactive_sources, allow_destroy: true do |ff|
-      ff.translated_inputs switch_locale: true do |tt|
+      ff.translated_inputs do |tt|
         tt.input :label
       end
       ff.inputs do

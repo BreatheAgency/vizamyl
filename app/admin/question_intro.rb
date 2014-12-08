@@ -24,7 +24,7 @@ ActiveAdmin.register QuestionIntro do
   end
 
   form do |f|
-    f.translated_inputs switch_locale: true do |t|
+    f.translated_inputs do |t|
       t.input :title
       t.input :body, as: :html_editor
       t.input :subject_area

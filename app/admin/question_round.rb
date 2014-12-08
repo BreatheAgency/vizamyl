@@ -26,7 +26,7 @@ ActiveAdmin.register QuestionRound do
 
   form do |f|
     f.has_many :questions, allow_destroy: true do |ff|
-      ff.translated_inputs switch_locale: true do |tt|
+      ff.translated_inputs do |tt|
         tt.input :title, as: :html_editor
       end
     end
