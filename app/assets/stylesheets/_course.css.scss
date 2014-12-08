@@ -161,10 +161,6 @@
         font-size: $h6-font-size;
         font-weight: normal;
 
-        .available {
-          background-color: $primary-color;
-        }
-
         a, a:hover {
           color:white
         }
@@ -172,6 +168,10 @@
 
       li:first-child {
         margin-left: 0;
+      }
+
+      .available {
+        background-color: $primary-color;
       }
     }
   }
