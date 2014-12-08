@@ -20,9 +20,8 @@ class ApplicationController < ActionController::Base
       desired_locale = current_user.locale
       # the current_user has logged in, but they are visiting the incorrect locale.
       # lets point them in the right direction
-      if desired_locale != locale_in_url
-        request.params[:locale] = current_user.locale
-        redirect_to(request.fullpath)
+      if desired_locale.to_sym != locale_in_url
+        redirect_to(request.fullpath.sub(locale_in_url.to_s, current_user.locale.to_s))
       end
     elsif I18n.available_locales.include?(locale_in_url)
       desired_locale = locale_in_url
