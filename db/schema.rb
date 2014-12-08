@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 20141202170141) do
     t.string   "locale",      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "title"
+    t.string   "title",       null: false
     t.string   "short_title"
   end
 

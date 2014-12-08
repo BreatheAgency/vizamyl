@@ -24,23 +24,22 @@ module Vizamyl
     # config.time_zone = 'Central Time (US & Canada)'
 
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    config.i18n.load_path += Dir[Rails.root.join('congih', 'locales', '*.{rb,yml}').to_s]
+    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
-
     config.before_configuration do
-      I18n.load_path += Dir[Rails.root.join('congih', 'locales', '*.{rb,yml}').to_s]
+      I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
       I18n.locale = :en
       I18n.default_locale = :en
       I18n.reload!
     end
 
     #
-    config.i18n.available_locales = [:en, :fr, :de]
+    config.i18n.available_locales = [:de, :en, :fr]
 
     #
-    config.assets.precompile += %w( active_admin/active_admin_globalize.css active_admin/active_admin_globalize.js )
-    # config.assets.precompile += %w( video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff )
-    config.assets.precompile += %w( course.js )
+    config.assets.precompile += %w(active_admin/active_admin_globalize.css active_admin/active_admin_globalize.js)
+    # config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
+    config.assets.precompile += %w(course.js )
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.assets.initialize_on_precompile = true
 

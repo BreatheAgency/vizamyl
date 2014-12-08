@@ -1,20 +1,26 @@
 <div {{bind-attr class=':row :test-page isSuperUser:super-user'}}>
   <div class='small-5 large-5 columns with-content with-minimum'>
     {{#if isInCorrect}}
-      <div class='test-progress'>
-        <p>Self-assessment question results</p>
+      <h1>Self-assessment question results</h1>
+      <div class='question-results'>
         <ul>
           {{#each question in questions}}
-            <li>{{question.id}}</li>
+            <li>Question {{question.id}}: {{question.correct}}</li>
           {{/each}}
         </ul>
       </div>
-      <p>Well done!</p>
-      <p>Your self assessment for {{chapter.title}} - {{title}}</p>
-      <h4>You've answered the question(s) correctly!</h4>
+      <p>Well done!</br>Your self assessment for {{chapter.title}} - {{title}} has been sucessfully completed, and you may now proceed.</p>
     {{/if}}
     {{#if isInIncorrect}}
-      <h4>You've answered the question(s) incorrectly</h4>
+    <h1>Self-assessment question results</h1>
+    <div class='question-results'>
+      <ul>
+        {{#each question in questions}}
+        <li>Question {{question.id}}: {{question.correct}}</li>
+        {{/each}}
+      </ul>
+    </div>
+    <p>Please review the training for {{chapter.title}} - {{title}}.</br> You will then be re-challenged with more questions on this topic.</p>
     {{/if}}
     {{#if isInUnanswered}}
       <div class='test-progress'>

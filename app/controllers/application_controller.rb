@@ -6,6 +6,10 @@ class ApplicationController < ActionController::Base
     request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}/menu"
   end
 
+  def set_admin_locale
+    I18n.locale = current_admin_user && current_admin_user.locale || I18n.default_locale
+  end
+
   private
 
   def set_locale

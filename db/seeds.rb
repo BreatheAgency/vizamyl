@@ -56,9 +56,10 @@ m1a_p5 = module_one_a.tests.create({
   title: 'Interactive Question'
 });
 
-# chapter = Chapter.find(3)
+# chapter = Chapter.find(9)
 # page = chapter.tests.create({
-#   page_id: 'M1A_P8'
+#   page_id: 'M4A_P21',
+#   title: 'Self-assessment question'
 # })
 # [1,2,3].each do |i|
 #   question_round = page.question_rounds.create!
