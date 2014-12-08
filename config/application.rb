@@ -34,7 +34,7 @@ module Vizamyl
     end
 
     #
-    config.i18n.available_locales = [:de, :en, :fr]
+    config.i18n.available_locales = [:en, :de, :fr]
 
     #
     config.assets.precompile += %w(active_admin/active_admin_globalize.css active_admin/active_admin_globalize.js)
