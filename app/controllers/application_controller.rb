@@ -22,8 +22,7 @@ class ApplicationController < ActionController::Base
       # lets point them in the right direction
       if desired_locale != locale_in_url
         request.params[:locale] = current_user.locale
-        # TODO
-        # redirect_to(request.params)
+        redirect_to(request.fullpath)
       end
     elsif I18n.available_locales.include?(locale_in_url)
       desired_locale = locale_in_url
