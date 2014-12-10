@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   end
 
   %w(404 422 500).each do |code|
-    get code, to: 'static#show', id: code
+    match code, to: 'static#show', id: code
   end
 
   get '/*id' => 'static#show', id: 'gatekeeper'
