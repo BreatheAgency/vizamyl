@@ -4,8 +4,8 @@
       <h1>Self-assessment question results</h1>
       <div class='question-results'>
         <ul>
-          {{#each question in questions}}
-            <li>Question {{question.id}}: {{question.correct}}</li>
+          {{#each question in questionsWithIndex}}
+            <li>Question {{question.index}}: {{question.value.correct}}</li>
           {{/each}}
         </ul>
       </div>
@@ -15,8 +15,8 @@
     <h1>Self-assessment question results</h1>
     <div class='question-results'>
       <ul>
-        {{#each question in questions}}
-        <li>Question {{question.id}}: {{question.correct}}</li>
+        {{#each question in questionsWithIndex}}
+          <li>Question {{question.index}}: {{question.value.correct}}</li>
         {{/each}}
       </ul>
     </div>

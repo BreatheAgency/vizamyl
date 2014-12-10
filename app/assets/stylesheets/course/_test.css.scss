@@ -32,10 +32,10 @@
         height: 20px;
         background-color: #DDD;
         border-radius: 50%;
-        padding-top: 4px;
+        // padding-top: 4px;
         margin-right: 10px;
         text-align: center;
-        line-height: 14px;
+        line-height: 20px;
         color: white;
         font-weight: normal;
         font-size: 12px;
@@ -48,6 +48,33 @@
       .answered {
         background-color: lighten($primary-color, 40);
       }
+    }
+
+  }
+
+  .question-results {
+
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      line-height: 32px;
+      font-weight: normal;
+
+      li {
+        border-top: 1px solid #666;
+        border-bottom: 1px solid #666;
+
+        :first-child {
+          border-top: none;
+        }
+
+        :last-child {
+          border-bottom: none;
+        }
+      }
+
     }
 
   }
@@ -74,7 +101,7 @@
         width: 325px;
 
         h2 {
-          font-size: 24px;
+          font-size: 22px;
           border-bottom: 1px solid #666;
         }
 

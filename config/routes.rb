@@ -2,9 +2,11 @@ Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  scope ':type', type: /#{%w(videos texts images interactives question_intros tests).join("|")}/ do
+  scope ':type', type: /#{%w(videos texts images interactives question_intros).join("|")}/ do
     get '/:id' => 'pages#show'
   end
+
+  resources :tests, only: %i(show)
 
   get '/course-completion' => 'course_completion#show'
   resources :chapters, only: %i(index show)

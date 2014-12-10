@@ -78,6 +78,16 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     return q;
   }.property('unansweredQuestions'),
 
+  questionsWithIndex: function() {
+    var index = 1;
+    return this.get('questions').map(function(item) {
+      return Em.Object.create({
+        value: item,
+        index: index++
+      });
+    })
+  }.property('questions.length'),
+
   testComplete: function() {
     return this.get('questions.length') == this.get('answeredQuestions.length')
   }.property('questions.[]', 'answeredQuestions'),
