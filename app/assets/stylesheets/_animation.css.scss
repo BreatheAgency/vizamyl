@@ -17,17 +17,17 @@
 
 @-webkit-keyframes ge-spinner-rotation {
   from {-webkit-transform: rotate(0deg);}
-  to {-webkit-transform: rotate(-359deg);}
+  to {-webkit-transform: rotate(359deg);}
 }
 @-moz-keyframes ge-spinnerspinner-rotation {
   from {-moz-transform: rotate(0deg);}
-  to {-moz-transform: rotate(-359deg);}
+  to {-moz-transform: rotate(359deg);}
 }
 @-o-keyframes ge-spinnerspinner-rotation {
   from {-o-transform: rotate(0deg);}
-  to {-o-transform: rotate(-359deg);}
+  to {-o-transform: rotate(359deg);}
 }
 @keyframes ge-spinnerspinner-rotation {
   from {transform: rotate(0deg);}
-  to {transform: rotate(-359deg);}
+  to {transform: rotate(359deg);}
 }
