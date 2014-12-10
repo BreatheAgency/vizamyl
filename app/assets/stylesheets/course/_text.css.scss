@@ -6,12 +6,10 @@
     font-weight: bold;
   }
 
-  p {
-  }
-
   ul {
-    margin-top: rem-calc(5);
-    margin-bottom: rem-calc(5);
+    list-style-position: inside;
+    margin-top: rem-calc(10);
+    margin-bottom: rem-calc(10);
   }
 
   .abbreviations {
