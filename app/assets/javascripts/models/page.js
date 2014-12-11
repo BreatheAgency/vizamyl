@@ -4,7 +4,7 @@ Course.Page = DS.Model.extend({
   subject_area: DS.attr('string'),
   template_name: DS.attr('string'),
   controller_name: DS.attr('string'),
-  chapter: DS.belongsTo('chapter'),
+  chapter: DS.belongsTo('chapter', { async: true }),
   step: DS.belongsTo('step'),
   progression: DS.belongsTo('progression'),
 
