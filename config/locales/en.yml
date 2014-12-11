@@ -31,12 +31,10 @@ en:
       login: Login
       logout: Logout
       enrole: Enrol
-      privacy_policy: Privacy Policy
       prescribing_information: Prescribing Information
       references: References
       resources: Resources
       contact: Contact
-      terms_and_conditions: Terms And Conditions
       accessibility: Accessibility
       copyright_html: |
         <p>&copy; 2014 General Electric Company - All rights reserved.</p>
