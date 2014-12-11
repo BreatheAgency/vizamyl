@@ -10,6 +10,8 @@
 //= require_self
 //= require ./router
 //= require ./store
+//= require_tree ./helpers
+//= require_tree ./controllers
 
 window.Course = Ember.Application.create({
   // LOG_TRANSITIONS: true,
