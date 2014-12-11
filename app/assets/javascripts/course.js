@@ -12,7 +12,11 @@
 //= require ./store
 //= require_tree ./helpers
 //= require_tree ./controllers
-
+//= require_tree ./routes
+//= require_tree ./views
+//= require_tree ./components
+//= require_tree ./templates
+//= require_tree ./initializers
 window.Course = Ember.Application.create({
   // LOG_TRANSITIONS: true,
   // LOG_TRANSITIONS_INTERNAL: true,
