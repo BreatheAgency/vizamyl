@@ -1,4 +1,5 @@
 ActiveAdmin.register QuestionRound do
+  actions :all, except: [:edit, :new, :destroy]
   config.paginate = false
   config.filters = false
   menu false
