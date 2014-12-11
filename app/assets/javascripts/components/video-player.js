@@ -21,6 +21,7 @@ Course.VideoPlayerComponent = Ember.Component.extend({
   },
 
   willDestroyElement: function() {
+    this.player.pause();
     this.player.off('timeupdate', this.onTimeUpdate);
     this.player.off('ended', this.onEnded);
     this.player.dispose();
