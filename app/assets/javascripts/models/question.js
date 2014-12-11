@@ -5,5 +5,5 @@ Course.Question = DS.Model.extend({
   image_sources: DS.hasMany('image_source'),
   answered: false,
   correct: false,
-  active: false,
+  active: false
 });

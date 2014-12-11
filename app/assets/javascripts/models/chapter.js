@@ -30,5 +30,5 @@ Course.Chapter = DS.Model.extend({
 
   completed: function() {
     return this.get('completedSteps').get('length') === this.get('steps').get('length');
-  }.property('completedSteps'),
+  }.property('completedSteps')
 });

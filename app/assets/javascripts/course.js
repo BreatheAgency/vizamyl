@@ -10,9 +10,9 @@
 //= require_self
 //= require ./router
 //= require ./store
-//= require_tree ./mixins
 //= require_tree ./helpers
 //= require_tree ./controllers
+//= require ./models/page
 //= require_tree ./models
 //= require_tree ./routes
 //= require_tree ./views

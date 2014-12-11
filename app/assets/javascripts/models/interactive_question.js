@@ -1,3 +1,3 @@
-Course.InteractiveQuestion = DS.Model.extend(Course.Page, {
-  type: DS.attr('string', { defaultValue: 'InteractiveQuestion' } ),
+Course.InteractiveQuestion = Course.Page.extend({
+  type: DS.attr('string', { defaultValue: 'InteractiveQuestion' } )
 });

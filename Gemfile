@@ -8,7 +8,8 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'activeadmin-globalize', github: 'fabn/activeadmin-globalize', branch: 'develop'
 gem 'activeadmin-sortable', github: 'neo/activeadmin-sortable'
 
-gem 'ember-data-source', '1.0.0.beta.9' # fixes 'modelFor' issue.
+gem 'ember-data-source'
+# , '1.0.0.beta.9' # fixes 'modelFor' issue.
 
 gem 'rake', '~> 10.3'
 gem 'rails', '~> 4.1'

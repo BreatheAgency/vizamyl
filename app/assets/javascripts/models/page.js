@@ -1,4 +1,4 @@
-Course.Page = Ember.Mixin.create({
+Course.Page = DS.Model.extend({
   page_id: DS.attr('string'),
   title: DS.attr('string'),
   subject_area: DS.attr('string'),

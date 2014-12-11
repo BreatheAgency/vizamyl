@@ -1,4 +1,4 @@
-Course.QuestionIntro = DS.Model.extend(Course.Page, {
+Course.QuestionIntro = Course.Page.extend({
   type: DS.attr('string', { defaultValue: 'QuestionIntro' } ),
-  body: DS.attr('string'),
+  body: DS.attr('string')
 });

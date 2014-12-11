@@ -1,3 +1,3 @@
-Course.ImageQuestion = DS.Model.extend(Course.Page, {
-  type: DS.attr('string', { defaultValue: 'ImageQuestion' } ),
+Course.ImageQuestion = Course.Page.extend({
+  type: DS.attr('string', { defaultValue: 'ImageQuestion' } )
 });
