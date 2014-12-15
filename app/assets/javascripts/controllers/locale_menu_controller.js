@@ -6,14 +6,15 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
 
   actions: {
 
-    toggle:function(chapter){
+    toggle: function(chapter){
       if (!chapter.get('available')) { return; }
       var original_selected_state = chapter.get('selected');
       this.get('model').setEach('selected', false);
       chapter.set('selected', !original_selected_state);
     },
 
-    next: function(chapter, step) {
+    next: function(step) {
+      var chapter = step.get('chapter');
       this.completeStep(step);
 
       // objectAt becuase the position on the step is not zero based but the steps array on the chapter is
@@ -35,9 +36,13 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
     },
 
     select: function(chapter, step) {
+      console.log(chapter);
+      console.log(step);
 
       if (this.checkStep(chapter, step)) {
-        this.transitionToRoute('pages.index', step.get('page').get('type').dasherize(), step.get('page').get('id'));
+        console.log(step.get('page.id'));
+        console.log(step.get('page.type'));
+        this.transitionToRoute('pages.index', step.get('page.type').dasherize(), step.get('page.id'));
       } else {
         console.log('check failed?');
       }

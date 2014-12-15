@@ -14,8 +14,8 @@ Course.VideoPageController = Ember.ObjectController.extend({
   }.property('finished', 'mandatory'),
 
   actions: {
-    next:function(chapter, step) {
-      this.get('controllers.localeMenu').send('next', chapter, step);
+    next: function(step) {
+      this.get('controllers.localeMenu').send('next', step);
     },
 
     finished: function(bool) {

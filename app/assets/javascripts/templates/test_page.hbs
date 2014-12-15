@@ -5,26 +5,28 @@
       <div class='question-results'>
         <ul>
           {{#each question in questionsWithIndex}}
-            <li>Question {{question.index}}: {{question.value.correct}}</li>
+            <li>Question {{question.index}}: {{question.value.correct}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
           {{/each}}
         </ul>
       </div>
-      <p>Well done!</br>Your self assessment for {{chapter.title}} - {{title}} has been sucessfully completed, and you may now proceed.</p>
+      <p>Well done!<br>Your self assessment for {{chapter.title}} - {{title}}</p>
+      <p>has been sucessfully completed, and you may now proceed.</p>
     {{/if}}
     {{#if isInIncorrect}}
     <h1>Self-assessment question results</h1>
     <div class='question-results'>
       <ul>
         {{#each question in questionsWithIndex}}
-          <li>Question {{question.index}}: {{question.value.correct}}</li>
+          <li>Question {{question.index}}: {{question.value.correct}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
         {{/each}}
       </ul>
     </div>
-    <p>Please review the training for {{chapter.title}} - {{title}}.</br> You will then be re-challenged with more questions on this topic.</p>
+    <p>Please review the training for {{chapter.title}} - {{title}}</p>
+    <p>You will then be re-challenged with more questions on this topic.</p>
     {{/if}}
     {{#if isInUnanswered}}
       <div class='test-progress'>
-        <p>Self assestment question</p>
+        <p>Self assessment question</p>
         <ul>
           {{#each question in answeredQuestions}}
             <li class='answered'></li>
@@ -42,29 +44,25 @@
   </div>
   <div class='small-7 large-7 columns with-media'>
     <div class='row'>
-      {{#if isInUnanswered}}
       {{#each image_source in question.image_sources}}
         <div class="small-12 large-12 columns">
           {{image-loader source=image_source.sourceWithUrl}}
         </div>
       {{/each}}
-        <div class='image-scrollers'>
-          {{#each interactive_source in question.interactive_sources}}
-            <div {{bind-attr class=":columns columns"}}>
-              {{interactive-scroller imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
-            </div>
-          {{/each}}
-        </div>
-      {{/if}}
+      <div class='image-scrollers'>
+        {{#each interactive_source in question.interactive_sources}}
+          <div {{bind-attr class=":columns columns"}}>
+            {{interactive-scroller imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+          </div>
+        {{/each}}
+      </div>
     </div>
     <div class='row button-container'>
       <div class='small-12 medium-12 large-12 columns'>
         {{#if isInCorrect}}
-          {{step}}
-          <a {{bind-attr class=':right'}} {{action 'next' chapter step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+          <a {{bind-attr class=':right'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInIncorrect}}
-          {{failure_step}}
           <a {{bind-attr class=':right'}} {{action 'next' failure_step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInUnanswered}}

@@ -17,8 +17,8 @@ Course.InteractivePageController = Ember.ObjectController.extend({
   }.property('model.interactive_sources.[]'),
 
   actions: {
-    next:function(chapter, step) {
-      this.get('controllers.localeMenu').send('next', chapter, step);
+    next: function(step) {
+      this.get('controllers.localeMenu').send('next', step);
     },
   }
 });
