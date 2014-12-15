@@ -10,6 +10,22 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     knownStates: ['failed', 'incorrect', 'correct'],
     unanswered: {
       didEnter: function() {
+
+        if (this.get('unansweredQuestionRoundIndices').length === 0) {
+          this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
+        }
+
+        var unansweredQuestionRoundIndex = this.get('unansweredQuestionRoundIndices').popObject();
+        this.set('unansweredQuestionRoundIndex', unansweredQuestionRoundIndex);
+
+        this.get('questions').forEach(function(question) {
+          question.setProperties({
+            answered: false,
+            active: false,
+            correct: false
+          });
+        });
+
         this.setProperties({
           selectedAnswer: null
         });
@@ -43,22 +59,8 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     this.setProperties({
       unansweredQuestionRoundIndices: Ember.A()
     });
-    this.get('questions').forEach(function(question) {
-      question.setProperties({
-        answered: false,
-        active: false,
-        correct: false
-      });
-    });
     this.sendStateEvent('reset');
   }.observes('model'),
-
-  unansweredQuestionRoundIndex: function() {
-    if (this.get('unansweredQuestionRoundIndices').length === 0) {
-      this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
-    }
-    return this.get('unansweredQuestionRoundIndices').pop();
-  }.property('question_rounds.[]').volatile(),
 
   questions: function() {
     return this.get('question_rounds').objectAt(this.get('unansweredQuestionRoundIndex')).get('questions');
@@ -110,8 +112,8 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   }.property('question.interactive_sources.[]'),
 
   actions: {
-    next:function(chapter, step) {
-      this.get('controllers.localeMenu').send('next', chapter, step);
+    next: function(step) {
+      this.get('controllers.localeMenu').send('next', step);
       this.sendStateEvent('reset');
     },
     submit: function() {
