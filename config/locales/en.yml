@@ -49,7 +49,7 @@ en:
   pages:
     gatekeeper:
       locale_titles:
-        en_html: <p>UK</p>
+        en_html: <p style='text-align:left'>Int English<br>GE representatives<br>use only</p>
         fr_html: <p>France</p>
         de_html: <p>Germany</p>
     home:

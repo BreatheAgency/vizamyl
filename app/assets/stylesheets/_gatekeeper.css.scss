@@ -45,10 +45,10 @@
     background: rgba(255, 255, 255, 0.75);
     border-top: 1px #eee solid;
     border-bottom: 1px #eee solid;
-    margin-left: 0;
     margin-top: rem-calc(60);
     margin-bottom: rem-calc(15);
-    text-align: center;
+    margin-left: rem-calc(40);
+    text-align: left;
     list-style: none;
     padding: rem-calc(30) 0 rem-calc(30) 0;
 
@@ -79,14 +79,14 @@
   }
 
   .locale-label {
-    margin-left: 0;
-    text-align: center;
+    margin-left: rem-calc(40);
+    text-align: left;
     list-style: none;
 
     li {
       vertical-align: top;
       display: inline-block;
-      width: 60px;
+      // width: 60px;
       margin-left: rem-calc(50);
 
       p {
