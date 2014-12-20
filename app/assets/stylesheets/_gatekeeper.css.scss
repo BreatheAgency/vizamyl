@@ -17,9 +17,13 @@
     margin-bottom: 0;
     line-height: rem-calc(30);
 
-    sup {
-      font-size: rem-calc(24);
-      line-height: rem-calc(18);
+    .one-eight {
+      font-size: rem-calc(28);
+    }
+
+    .trade-mark {
+      font-size: rem-calc(48);
+      top: 0.1rem;
     }
 
   }
