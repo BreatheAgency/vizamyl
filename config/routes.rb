@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'errors/file_not_found'
+
+  get 'errors/unprocessable'
+
+  get 'errors/internal_server_error'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -20,9 +26,9 @@ Rails.application.routes.draw do
     get '/' => 'static#show', id: 'home'
   end
 
-  %w(404 422 500).each do |code|
-    match code, to: 'static#show', id: code, via: [:get, :post]
-  end
+  match '/404', to: 'errors#file_not_found', via: [:get, :post]
+  match '/422', to: 'errors#unprocessable', via: [:get, :post]
+  match '/500', to: 'errors#internal_server_error', via: [:get, :post]
 
   get '/*id' => 'static#show', id: 'gatekeeper'
   root to: 'static#show', id: 'gatekeeper'

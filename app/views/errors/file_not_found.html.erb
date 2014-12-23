@@ -1,0 +1,25 @@
+<div class='row'>
+  <div class='large-12 large-centered map error'>
+    <h1>VIZAMYL<sup class='trade-mark'>&trade;</sup> Flutemetamol <sup class='one-eight'>18</sup>F Injection</h1>
+    <h2>Electronic training programme</h2>
+    <p><span class='blue'>We’re sorry, the page you were looking for could not be found</span><br> To proceed, please select which country you are from.</p>
+    <ul class='locale-select'>
+      <% I18n.available_locales.each do |locale| %>
+      <li>
+        <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
+          <%= locale %>
+        </a>
+      </li>
+      <% end %>
+    </ul>
+    <ul class='locale-label'>
+      <% I18n.available_locales.each do |locale| %>
+      <li>
+        <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
+          <%= t("pages.gatekeeper.locale_titles.#{locale}_html") %>
+        </a>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
