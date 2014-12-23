@@ -13,7 +13,7 @@ class StaticController < ApplicationController
     case params[:id]
     when 'course'
       'course'
-    when 'gatekeeper', '404', '422', '500'
+    when 'gatekeeper'
       'gatekeeper'
     else
       'application'
