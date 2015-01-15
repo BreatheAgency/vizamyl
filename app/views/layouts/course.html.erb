@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang='en'>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
   <%= render partial: 'head' %>
   <body class='course'>
     <%= tag(:meta, content: UserSerializer.new(current_user).to_json(root: false), name: 'current-user') if user_signed_in? %>
