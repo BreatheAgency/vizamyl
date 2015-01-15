@@ -52,6 +52,7 @@ en:
         en_html: <p style='text-align:left'>Int English<br>GE representatives<br>use only</p>
         fr_html: <p>France</p>
         de_html: <p>Germany</p>
+        us_html: <p>US</p>
     home:
       title: Home
       body_html: |

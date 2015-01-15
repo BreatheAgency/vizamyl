@@ -68,7 +68,7 @@
     li {
       vertical-align: top;
       display: inline-block;
-      margin-left: rem-calc(50);
+      margin-left: rem-calc(95);
 
       a {
         height: 60px;
@@ -82,7 +82,9 @@
           @include retina-background-image(locales/#{$locale}, 60px, 60px);
         }
       }
-
+      .us-button{
+        @include retina-background-image(locales/us, 60px, 60px);
+      }
     }
 
     li:first-child {
