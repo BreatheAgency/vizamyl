@@ -30,10 +30,10 @@ $background-bottom: white;
 
 @mixin retina-background-image($image, $width: 50%, $height: auto, $type: 'png') {
   @include non-retina {
-    background-image: asset-url("#{$image}.#{$type}");
+    @include background-image(asset-url("#{$image}.#{$type}"));
   }
   @include retina {
-    background-image: asset-url("#{$image}@2x.#{$type}");
-    background-size: $width $height;
+    @include background-image(asset-url("#{$image}@2x.#{$type}"));
+    @include background-size($width $height);
   }
 }
