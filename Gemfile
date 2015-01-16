@@ -36,6 +36,7 @@ gem 'normalize-rails'
 gem 'foundation-rails'
 gem 'autoprefixer-rails'
 gem 'active_admin_editor'
+gem 'rack-canonical-host'
 gem 'active_model_serializers'
 
 group :test do

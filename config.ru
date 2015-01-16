@@ -2,6 +2,8 @@
 require ::File.expand_path('../config/environment',  __FILE__)
 
 run Rack::Builder.new {
+  use Rack::CanonicalHost, 'readvizamyl.com', ignore: ['staging-vizamyl.herokuapp.com', 'vizamyl.herokuapp.com', '0.0.0.0']
+
   map '/ping' do
     run proc { |_env| Rack::Response.new('PING', 200) }
   end
