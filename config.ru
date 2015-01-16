@@ -5,7 +5,10 @@ run Rack::Builder.new {
 
   case ENV['RACK_ENV'].to_sym
     when :staging
-      use Rack::CanonicalHost, 'readvizamyl.com', ignore: ['staging-vizamyl.herokuapp.com', 'vizamyl.herokuapp.com']
+      # use Rack::CanonicalHost, 'readvizamyl.com', ignore: ['staging-vizamyl.herokuapp.com', 'vizamyl.herokuapp.com']
+      use Rack::Rewrite do
+        r301 %r{.*}, 'https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/'
+      end
     when :production
       use Rack::Rewrite do
         r301 %r{.*}, 'https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/'
