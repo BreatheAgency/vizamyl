@@ -39,7 +39,7 @@ en:
       copyright_html: |
         <p>&copy; 2014 General Electric Company - All rights reserved.</p>
         <p>GE and the GE monogram are trademarks of General Electric Company.</p>
-        <p>VIZAMYL is a trademark of General Electric Company or one of its subsidaries.</p>
+        <p>Vizamyl is a trademark of General Electric Company or one of its subsidaries.</p>
         <p><a href="/en/terms-and-conditions">Terms & Conditions</a></p>
       reference_html: |
         <p class="right">01-2014 JB6231 INT’L ENG</p>
@@ -118,30 +118,6 @@ en:
         terms: |
           Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.
           or one of its subsidiaries.
-      right:
-        title: |
-          Customer Services:
-        body_html: |
-          <p>Availability is subject to local regulatory approval. if you would like to speak to us about purchasing VIZAMYL, please contact:</p>
-          <h3>France:</h3>
-          <p><a href="mailto:FR.GEMDxCommandes@ge.com">FR.GEMDxCommandes@ge.com</a></p>
-          <p>Telephone: <a href="tel:0130831349">01 30 83 13 49</a></p>
-          <hr>
-          <h3>Germany:</h3>
-          <p><a href="mailto:KundenServiceBraunschweig@ge.com">KundenServiceBraunschweig@ge.com</a></p>
-          <p>Telephone: <a href="tel:08001007087">0800 1 00 70 87</a></p>
-          <hr>
-          <h3>Austria:</h3>
-          <p><a href="mailto:KundenserviceAustria@ge.com">KundenserviceAustria@ge.com</a></p>
-          <p>Telephone: <a href="tel:0800677426">0800 67 74 26</a></p>
-          <hr>
-          <h3>Italy:</h3>
-          <p><a href="mailto:MDx.CSTeamITA@ge.com">MDx.CSTeamITA@ge.com</a></p>
-          <p>Telephone: <a href="tel:0226001317">02 26001317</a></p>
-          <hr>
-          <h3>Spain:</h3>
-          <p><a href="mailto:aten.cliente@ge.com">aten.cliente@ge.com</a></p>
-          <p>Telephone: <a href="tel:902400730">902 400 730</a></p>
     terms-and-conditions:
       title: Terms and conditions
       body_html: |
