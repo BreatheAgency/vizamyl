@@ -2,7 +2,15 @@
 require ::File.expand_path('../config/environment',  __FILE__)
 
 run Rack::Builder.new {
-  use Rack::CanonicalHost, 'readvizamyl.com', ignore: ['staging-vizamyl.herokuapp.com', 'vizamyl.herokuapp.com', '0.0.0.0']
+
+  case ENV['RACK_ENV'].to_sym
+    when :staging
+      use Rack::CanonicalHost, 'readvizamyl.com', ignore: ['staging-vizamyl.herokuapp.com', 'vizamyl.herokuapp.com']
+    when :production
+      use Rack::Rewrite do
+        r301 %r{.*}, 'https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/'
+      end
+  end
 
   map '/ping' do
     run proc { |_env| Rack::Response.new('PING', 200) }
