@@ -1,10 +1,3 @@
-class NoCompression
-  def compress(string)
-    # do nothing
-    string
-  end
-end
-
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -28,9 +21,10 @@ Rails.application.configure do
 
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = false
+  config.static_cache_control = 'public, max-age=31536000'
 
   # Compress JavaScripts and CSS.
-  config.assets.js_compressor = :uglifier # NoCompression.new
+  config.assets.js_compressor = :uglifier
   config.assets.css_compressor = :sass
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
