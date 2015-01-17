@@ -1,0 +1,55 @@
+.four-b-page {
+
+  .explanation-question-results {
+
+    .circle {
+      margin-left: 5px;
+      margin-right: 10px;
+      margin-top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 15px;
+      display: inline;
+      border: 1px solid #666;
+      float: left;
+    }
+
+    a {
+      color: #666;
+    }
+
+    a:hover {
+      color: #666;
+    }
+
+    .incorrect {
+      color: red;
+
+      .circle {
+        border-color: red;
+        background-color: red;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      margin-top: 10px;
+      line-height: 26px;
+      font-weight: normal;
+      font-size: 13px;
+
+      li {
+        border-bottom: 1px solid #666;
+      }
+
+      .index {
+        float: right;
+        padding-right: 10px;
+        padding-top: 1px;
+      }
+
+    }
+
+  }
+}

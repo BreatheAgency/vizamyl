@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141202170141) do
+ActiveRecord::Schema.define(version: 20150117163357) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -85,6 +85,24 @@ ActiveRecord::Schema.define(version: 20141202170141) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "short_title"
+  end
+
+  create_table "four_b_translations", force: true do |t|
+    t.integer  "four_b_id",    null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title"
+    t.string   "subject_area"
+  end
+
+  add_index "four_b_translations", ["four_b_id"], name: "index_four_b_translations_on_four_b_id", using: :btree
+  add_index "four_b_translations", ["locale"], name: "index_four_b_translations_on_locale", using: :btree
+
+  create_table "four_bs", force: true do |t|
+    t.string "page_id"
+    t.string "title"
+    t.string "subject_area"
   end
 
   create_table "image_source_translations", force: true do |t|
@@ -199,11 +217,12 @@ ActiveRecord::Schema.define(version: 20141202170141) do
   end
 
   create_table "question_translations", force: true do |t|
-    t.integer  "question_id", null: false
-    t.string   "locale",      null: false
+    t.integer  "question_id",        null: false
+    t.string   "locale",             null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "title"
+    t.text     "explanation_source"
   end
 
   add_index "question_translations", ["locale"], name: "index_question_translations_on_locale", using: :btree
@@ -212,6 +231,7 @@ ActiveRecord::Schema.define(version: 20141202170141) do
   create_table "questions", force: true do |t|
     t.text    "title"
     t.integer "question_round_id"
+    t.text    "explanation_source"
   end
 
   create_table "steps", force: true do |t|

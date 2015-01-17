@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
   get 'errors/file_not_found'
-
   get 'errors/unprocessable'
-
   get 'errors/internal_server_error'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
@@ -13,6 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :tests, only: %i(show)
+  resources :four_bs, only: %i(show)
 
   get '/course-completion' => 'course_completion#show'
   resources :chapters, only: %i(index show)

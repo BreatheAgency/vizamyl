@@ -1,0 +1,69 @@
+<div {{bind-attr class=':row :test-page :four-b-page isSuperUser:super-user'}}>
+  <div class='small-5 large-5 columns with-content with-minimum'>
+    {{#if isInAnswered}}
+      <h1>Self-assessment question results</h1>
+      {{#if testCorrect}}
+        <p>Test cases - Assessment summary<br>Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the “next” button to finish the programme.</p>
+      {{else}}
+        <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases. If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the Vizamyl website [insert link to Vizamyl website] to schedule an in-person training session.</p>
+      {{/if}}
+      <div class='explanation-question-results'>
+        <ul>
+          {{#each question in questionsWithIndex}}
+            <a {{action 'selectExplanation' question.value.explanation_source}}>
+              <li {{bind-attr class='question.value.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>Review explanation video <span class="index">{{question.index}}</span></li>
+            </a>
+          {{/each}}
+        </ul>
+      </div>
+    {{/if}}
+    {{#if isInUnanswered}}
+    <div class='test-progress'>
+      <p>Self assessment question</p>
+      <ul>
+        {{#each question in answeredQuestions}}
+        <li class='answered'></li>
+        {{/each}}
+        {{#each question in unansweredQuestions}}
+        <li {{bind-attr class='question.active'}}></li>
+        {{/each}}
+      </ul>
+    </div>
+    <h1>{{{question.title}}}</h1>
+    <div class='test'>
+      {{ext-radio content=question.answers value=selectedAnswer}}
+    </div>
+    {{/if}}
+  </div>
+  <div class='small-7 large-7 columns with-media with-minimum'>
+    {{#if isInUnanswered}}
+    <div class='row'>
+      {{#each image_source in question.image_sources}}
+      <div class="small-12 large-12 columns">
+        {{image-loader source=image_source.sourceWithUrl}}
+      </div>
+      {{/each}}
+      <div class='image-scrollers'>
+        {{#each interactive_source in question.interactive_sources}}
+        <div {{bind-attr class=":columns columns"}}>
+          {{interactive-scroller imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+        </div>
+        {{/each}}
+      </div>
+    </div>
+    {{/if}}
+    {{#if isInAnswered}}
+      {{video-player finished='finished' mandatory=false source=explanationSource}}
+    {{/if}}
+    <div class='row button-container'>
+      <div class='small-12 medium-12 large-12 columns'>
+        {{#if isInAnswered}}
+          <a {{bind-attr class=':right'}} {{action 'next'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+        {{/if}}
+        {{#if isInUnanswered}}
+          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>Submit<i class='fi-arrow-right'></i></a>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,7 +8,7 @@ class Question < ActiveRecord::Base
   has_many :image_sources, as: :subject
   accepts_nested_attributes_for :image_sources, allow_destroy: true
 
-  %i(title body).each do |translated_field|
+  %i(title body explanation_source).each do |translated_field|
     translates translated_field
     active_admin_translates translated_field
   end

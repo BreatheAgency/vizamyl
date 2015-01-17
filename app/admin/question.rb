@@ -28,6 +28,7 @@ ActiveAdmin.register Question do
   form do |f|
     f.translated_inputs do |t|
       t.input :title, as: :html_editor
+      t.input :explanation_source
     end
     f.has_many :interactive_sources, allow_destroy: true do |ff|
       ff.translated_inputs do |tt|
@@ -57,6 +58,7 @@ ActiveAdmin.register Question do
   show do |question|
     attributes_table do
       row :title
+      row :explanation_source
     end
     panel 'Interactive Sources' do
       question.interactive_sources.each do |interactive_source|
