@@ -37,6 +37,7 @@ Course.InteractiveScrollerComponent = Ember.Component.extend({
   }.property('imageHeightMax'),
 
   onLoaded: function() {
+    this.sendAction('finished', true);
     if (this.get('loaded')) {
       this.get('drag').enable();
     } else {

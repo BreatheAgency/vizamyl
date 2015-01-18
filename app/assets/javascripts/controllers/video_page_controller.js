@@ -11,7 +11,7 @@ Course.VideoPageController = Ember.ObjectController.extend({
     } else {
       return true;
     }
-  }.property('finished', 'mandatory'),
+  }.property('finished', 'mandatory', 'isSuperUser'),
 
   actions: {
     next: function(step) {
