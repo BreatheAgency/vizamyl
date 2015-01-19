@@ -21,7 +21,7 @@ ActiveAdmin.register User do
     column :locale
     column :email
     column(:progress) {|model| "#{model.progress}%" }
-    # column(:completed) { |model| model['completed'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+    column(:completed) { |model| model['completed'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     actions
   end
 
@@ -39,7 +39,7 @@ ActiveAdmin.register User do
       row :id
       row :email
       row(:progress) {|model| "#{model.progress}%" }
-      # row(:completed) { |model| model['completed'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+      row(:completed) { |model| model['completed'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     end
   end
 end

@@ -7,8 +7,12 @@ Course.ApplicationController = Ember.Controller.extend({
     this.get('currentUser');
   }.property('currentUser'),
 
+  isComplete:function() {
+    return this.get('currentUser.completed');
+  }.property('currentUser'),
+
   isSuperUser:function(){
-    return this.get('currentUser').get('super_user') || false;
+    return this.get('currentUser.super_user') || false;
   }.property('currentUser'),
 
 });

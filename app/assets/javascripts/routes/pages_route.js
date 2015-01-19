@@ -9,9 +9,8 @@ Course.PagesRoute = Ember.Route.extend({
 
   redirect: function(page, transition) {
     if (page.get('chapter') && !page.get('chapter').get('available')) {
-      // transition.abort();
-      // TODO redirect to latest step?
-      // this.transitionTo('start');
+      transition.abort();
+      this.transitionTo('start');
     }
   },
 

@@ -3,14 +3,8 @@ Course.Chapter = DS.Model.extend({
   title: DS.attr('string'),
   short_title: DS.attr('string'),
   steps: DS.hasMany('step'),
-
-  hashId: function(){
-    return '#' + this.get('id');
-  }.property('id'),
-
-  visibleSteps:function(){
-    return this.get('steps').filterBy('visible', true);
-  }.property('steps.@each.visible'),
+  hidden: DS.attr('boolean'),
+  visibleSteps: Ember.computed.filterBy('steps', 'visible', true),
 
   progressedSteps: function() {
     return this.get('steps').filter(function(step, index, self) {

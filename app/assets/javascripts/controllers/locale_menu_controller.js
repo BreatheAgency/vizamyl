@@ -2,6 +2,7 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   needs: ['application'],
   sortProperties: ['position'],
   sortAscending: true,
+  isComplete: Ember.computed.alias('controllers.application.isComplete'),
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
 
   actions: {
@@ -36,8 +37,6 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
     },
 
     select: function(chapter, step) {
-      console.log(chapter);
-      console.log(step);
 
       if (this.checkStep(chapter, step)) {
         console.log(step.get('page.id'));
@@ -119,10 +118,15 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   },
 
   visibleChapters:function(){
+    var that = this;
     return this.get('arrangedContent').filter(function(chapter, index, self) {
-      return (chapter.get('visibleSteps.length') !== 0);
+      if (that.get('isComplete')) {
+        return (that.get('isSuperUser') || chapter.get('visibleSteps.length') !== 0);
+      } else {
+        return (that.get('isSuperUser') || chapter.get('visibleSteps.length') !== 0 && !chapter.get('hidden'));
+      }
     });
-  }.property('arrangedContent.@each.visibleSteps.length'),
+  }.property('arrangedContent.@each.visibleSteps.length', 'isSuperUser'),
 
   completeStep: function(step) {
     var progression = step.get('progression');

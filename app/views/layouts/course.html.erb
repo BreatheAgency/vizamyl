@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
   <%= render partial: 'head' %>
   <body class='course'>
-    <%= tag(:meta, content: UserSerializer.new(current_user).to_json(root: false), name: 'user') %>
+    <%= tag(:meta, content: UserSerializer.new(current_user).to_json, name: 'bootstrap') %>
     <%= render partial: 'ga' %>
     <%= javascript_include_tag :course %>
   </body>
