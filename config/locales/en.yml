@@ -40,7 +40,7 @@ en:
         <p>&copy; 2014 General Electric Company - All rights reserved.</p>
         <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
         <p>Vizamyl is a trademark of General Electric Company or one of its subsidaries.</p>
-        <p><a href="/en/terms-and-conditions">Terms & conditions</a></p>
+        <p><a href="/en/terms-and-conditions">Terms and conditions</a></p>
       reference_html: |
         <p class="right">01-2014 JB6231 INT’L ENG</p>
   course:
@@ -82,7 +82,7 @@ en:
           <p><strong>MARKETING AUTHORISATION NUMBERS</strong> EU/1/14/941/001, EU/1/14/941/002</p>
           <p><strong>DATE OF REVISION</strong> August 2014</p>
           <p><strong>Cost</strong> Not applicable. Product not currently available in the UK.</p>
-          <p class="bordered">Adverse events should be reported. Reporting forms and information can be found at <a href="http://www.mhra.go.uk/yellowcard" target="_blank">http://www.mhra.go.uk/yellowcard</a>. Adverse events should also be reported GE Healthcare Ltd, email: <a href="mailto:UKpharmacovigilance@ge.com">UKpharmacovigilance@ge.com</a>.</p>
+          <p class="bordered">Adverse events should be reported. Reporting forms and information can be found at <a href="http://www.yellowcard.mhra.gov.uk" target="_blank">http://www.yellowcard.mhra.gov.uk</a>. Adverse events should also be reported GE Healthcare Ltd, email: <a href="mailto:UKpharmacovigilance@ge.com">UKpharmacovigilance@ge.com</a>.</p>
     references:
       left:
         title: |
