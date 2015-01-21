@@ -5,12 +5,33 @@
     padding-left: rem-calc(50);
     padding-right: rem-calc(50);
   }
+  //used as a blue bar that goes full width
+  .blue-bar {
 
-  h1 {
-    font-weight: bold;
-    font-size: $h3-font-size;
-    padding-bottom: rem-calc(16);
-    line-height: rem-calc(30);
+    line-height: rem-calc(50);
+    background: #E4F3FC;
+    height:rem-calc(40);
   }
+
+  h2 {
+    font-size: $h4-font-size;
+    font-weight: normal;
+    line-height: rem-calc(40);
+    background: #E4F3FC;
+    padding-left: rem-calc(20);
+  }
+
+
+  a{
+
+    .download-pdf-button{
+
+    }
+
+
+  }
+
+
+
 
 }
