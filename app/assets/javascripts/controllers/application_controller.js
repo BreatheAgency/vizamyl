@@ -1,15 +1,16 @@
 Course.ApplicationController = Ember.Controller.extend({
+  currentLocale: null,
+  currentPage: null,
+  signedIn: Ember.computed.notEmpty('currentUser'),
+  isComplete: Ember.computed.bool('currentUser.completed'),
+
+  currentStep: function() {
+    return this.get('currentPage.step');
+  }.property('currentPage'),
+
   currentUser: function() {
     return Course.get('user');
   }.property('Course.user'),
-
-  signedIn:function(){
-    this.get('currentUser');
-  }.property('currentUser'),
-
-  isComplete:function() {
-    return this.get('currentUser.completed');
-  }.property('currentUser'),
 
   isSuperUser:function(){
     return this.get('currentUser.super_user') || false;

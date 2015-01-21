@@ -1,5 +1,5 @@
 Course.LocaleRoute = Ember.Route.extend({
   model: function(params) {
-    this.controllerFor('application').set('locale', params.locale);
+    this.controllerFor('application').set('currentLocale', params.locale);
   },
 });

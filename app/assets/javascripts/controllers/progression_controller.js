@@ -3,11 +3,14 @@ Course.ProgressionController = Ember.Controller.extend({
   chapters: Ember.computed.alias('controllers.localeMenu.visibleChapters'),
   user: Ember.computed.alias('controllers.application.currentUser'),
   page: Ember.computed.alias('controllers.application.currentPage'),
+  progressions: Ember.computed.alias('controllers.application.currentUser.progressions'),
+  completeProgressions: Ember.computed.filterBy('progressions', 'amount', 1),
 
   total: function() {
-    var progressions = this.get('model');
-    var complete_progressions_total = progressions.filterBy('amount', 1).get('length'),
-    incomplete_progressions_total = progressions.get('length');
-    return (Math.round((complete_progressions_total / incomplete_progressions_total) * 100)) || 0;
-  }.property('model','model.@each.amount')
+    console.log('Progressions ' + this.get('progressions.length'));
+    console.log('Complete Progressions ' + this.get('completeProgressions.length'));
+    var total = (Math.round((this.get('completeProgressions.length') / this.get('progressions.length')) * 100)) || 0;
+    console.log('Total ' + total);
+    return total
+  }.property('progressions.[]','completeProgressions.[]')
 });

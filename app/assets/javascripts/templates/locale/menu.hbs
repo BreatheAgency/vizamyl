@@ -12,9 +12,9 @@
             <ol class='list-group'>
               {{#if isSuperUser}}
                 {{#each step in chapter.steps}}
-                  <li {{action 'select' chapter step}}>
+                  <li {{action 'selectStep' step}} {{bind-attr class='step.available:available:unavailable'}}>
                     <h3>
-                      <a {{bind-attr class=':list-group-item step.available:available'}}>
+                      <a class='list-group-item'>
                         {{step.title}}
                       </a>
                     </h3>
@@ -22,9 +22,9 @@
                 {{/each}}
               {{else}}
                 {{#each step in chapter.visibleSteps}}
-                  <li {{action 'select' chapter step}}>
+                  <li {{action 'selectStep' step}} {{bind-attr class='step.available:available:unavailable'}}>
                     <h3>
-                      <a {{bind-attr class=':list-group-item step.available:available'}}>
+                      <a class='list-group-item'>
                         {{step.title}}
                       </a>
                     </h3>

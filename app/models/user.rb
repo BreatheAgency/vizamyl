@@ -26,6 +26,14 @@ class User < ActiveRecord::Base
     Step.count == progressions.where(amount: 1).count
   end
 
+  def reset_progress
+    self.progressions.update_all(amount: 0)
+    (Chapter.first.steps | Chapter.second.steps).each do |step|
+      self.progressions.where(step: step).first.update_attribute(:amount, 1)
+    end
+    self.progressions.where(step: Chapter.third.steps.first).first.update_attribute(:amount, 0.5)
+  end
+
   private
 
   def create_progressions

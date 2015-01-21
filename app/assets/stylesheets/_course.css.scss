@@ -107,6 +107,17 @@
           }
 
         }
+
+        .unavailable {
+          h3 {
+            background-color: #E8E7E7;
+            cursor: default;
+          }
+          a {
+            cursor: default;
+          }
+        }
+
       }
 
     }

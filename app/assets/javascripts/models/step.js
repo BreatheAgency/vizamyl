@@ -5,12 +5,6 @@ Course.Step = DS.Model.extend({
   page: DS.belongsTo('page', { polymorphic: true, async: true }),
   title: DS.attr('string'),
   visible: DS.attr('boolean'),
-
-  available: function() {
-    return this.get('progression.amount') !== 0;
-  }.property('progression.amount'),
-
-  completed: function() {
-    return this.get('progression.amount') === 1;
-  }.property('progression.amount')
+  completed: Ember.computed.equal('progression.amount', 1),
+  available: Ember.computed.gt('progression.amount', 0)
 });

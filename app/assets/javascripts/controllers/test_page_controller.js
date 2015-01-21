@@ -110,7 +110,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
 
   actions: {
     next: function(step) {
-      this.get('controllers.localeMenu').send('next', step);
+      this.get('controllers.localeMenu').send('nextStep', step);
       this.sendStateEvent('reset');
     },
     submit: function() {

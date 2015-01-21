@@ -23,6 +23,7 @@ class ProgressionsController < ApplicationController
   def update
     progression = current_user.progressions.find(params[:id])
     progression.update(progression_params.slice(:amount))
+    progression.save
     render json: progression
   end
 

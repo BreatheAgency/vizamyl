@@ -5,7 +5,7 @@ Course.ImagePageController = Ember.ObjectController.extend({
 
   actions: {
     next: function(step) {
-      this.get('controllers.localeMenu').send('next', step);
+      this.get('controllers.localeMenu').send('nextStep', step);
     },
   }
 });
