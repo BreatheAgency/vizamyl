@@ -2,6 +2,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: false,
+  selectedAnswer: null,
   selectedExplanationSource: null,
   answered: Ember.computed.alias('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
@@ -13,12 +14,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     knownStates: ['failed', 'answered'],
     unanswered: {
       didEnter: function() {
-
-        if (this.get('unansweredQuestionRoundIndices').length === 0) {
-          this.set('unansweredQuestionRoundIndices', _.range(this.get('question_rounds.length')));
-        }
-        var unansweredQuestionRoundIndex = this.get('unansweredQuestionRoundIndices').shiftObject();
-        this.set('unansweredQuestionRoundIndex', unansweredQuestionRoundIndex);
+        console.log('unanswered didEnter');
 
         this.get('questions').forEach(function(question) {
           question.setProperties({
@@ -35,6 +31,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     },
     answered: {
       didEnter: function() {
+        console.log('correct didEnter');
         this.setProperties({
           complete: true
         });
@@ -57,9 +54,11 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   },
 
   modelDidChange: function() {
-    this.setProperties({
-      unansweredQuestionRoundIndices: Ember.A()
-    });
+    console.log('modelDidChange');
+    if (this.get('unansweredQuestionRoundIndices.length') === 0) {
+      this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
+    }
+    this.set('unansweredQuestionRoundIndex', this.get('unansweredQuestionRoundIndices').popObject());
     this.sendStateEvent('reset');
   }.observes('model'),
 
@@ -122,7 +121,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     next: function() {
       if(this.get('testCorrect')) {
         console.log('completed');
-      } else if(this.get('unansweredQuestionRoundIndices').length === 0) {
+      } else if(this.get('unansweredQuestionRoundIndices.length') === 0) {
         console.log('failed');
       } else {
         this.sendStateEvent('reset');

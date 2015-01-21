@@ -2,7 +2,8 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: false,
-  answered: Ember.computed.alias('selectedAnswer'),
+  selectedAnswer: null,
+  answered: Ember.computed.bool('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
   answeredQuestions: Ember.computed.filterBy('questions', 'answered', true),
 
@@ -11,13 +12,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     knownStates: ['failed', 'incorrect', 'correct'],
     unanswered: {
       didEnter: function() {
-
-        if (this.get('unansweredQuestionRoundIndices').length === 0) {
-          this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
-        }
-
-        var unansweredQuestionRoundIndex = this.get('unansweredQuestionRoundIndices').popObject();
-        this.set('unansweredQuestionRoundIndex', unansweredQuestionRoundIndex);
+        console.log('unanswered didEnter');
 
         this.get('questions').forEach(function(question) {
           question.setProperties({
@@ -34,6 +29,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     },
     correct: {
       didEnter: function() {
+        console.log('correct didEnter');
         this.setProperties({
           complete: true
         });
@@ -57,15 +53,18 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   },
 
   modelDidChange: function() {
-    this.setProperties({
-      unansweredQuestionRoundIndices: Ember.A()
-    });
+    console.log('modelDidChange');
+    if (this.get('unansweredQuestionRoundIndices.length') === 0) {
+      this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
+    }
+    this.set('unansweredQuestionRoundIndex', this.get('unansweredQuestionRoundIndices').popObject());
     this.sendStateEvent('reset');
   }.observes('model'),
 
   questions: function() {
-    return this.get('question_rounds').objectAt(this.get('unansweredQuestionRoundIndex')).get('questions');
-  }.property('question_rounds.[]', 'unansweredQuestionRoundIndex'),
+    var unansweredQuestions = this.get('question_rounds').objectAt(this.get('unansweredQuestionRoundIndex'));
+    return unansweredQuestions.get('questions');
+  }.property('question_rounds', 'unansweredQuestionRoundIndex'),
 
   unansweredQuestions: function() {
     return _.shuffle(this.get('questions').filterBy('answered', false));
@@ -85,15 +84,15 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
         index: index++
       });
     })
-  }.property('questions.length'),
+  }.property('questions.[]'),
 
   testComplete: function() {
-    return this.get('questions.length') == this.get('answeredQuestions.length')
-  }.property('questions.[]', 'answeredQuestions'),
+    return this.get('questions.length') === this.get('answeredQuestions.length')
+  }.property('questions.[]', 'answeredQuestions.[]'),
 
   testCorrect: function() {
     return !this.get('answeredQuestions').isAny('correct', false);
-  }.property('answeredQuestions'),
+  }.property('answeredQuestions.@each.correct'),
 
   columns: function(){
     switch(this.get('question.interactive_sources.length')) {

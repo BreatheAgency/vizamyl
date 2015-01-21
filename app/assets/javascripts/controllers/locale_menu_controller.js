@@ -14,15 +14,18 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
       chapter.set('selected', !originalSelectedState);
     },
 
-
     selectStep: function(step) {
-      console.log(step);
-      console.log(step.get('chapter'));
-      console.log(step.get('progression'));
-      console.log(step.get('available'));
-
       // check the step's availabilty
       if(!step.get('available')) { return; }
+
+      console.log(step);
+      console.log(step.get('page'));
+      if (step.get('page') == undefined){
+        debugger;
+      }
+      console.log(step.get('page.type'));
+      console.log(step.get('page.id'));
+      console.log(step.get('page.type').dasherize());
 
       // go to the step's page
       this.transitionToRoute('pages.index', step.get('page.type').dasherize(), step.get('page.id'));
@@ -46,7 +49,7 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
       // if the step is the last in the chapter's steps then we need to get the next chapter
       // else the step is currently part of the chapter so we can simple select the next one
       if (previousStepIndex === (previousChapter.get('steps.length') - 1)) {
-        var nextChapter = this.store.all('chapter').objectAt(previousChapter.get('position'));
+        var nextChapter = this.get('arrangedContent').objectAt(previousChapter.get('position'));
         // if the nextChapter is not found, its because we've reached the end of the course, so lets send them back to the first step in the chapter
         // else get it's first step
         if (nextChapter == undefined) {
