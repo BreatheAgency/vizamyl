@@ -174,9 +174,9 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   visibleChapters:function(){
     return this.get('arrangedContent').filter(function(chapter, index, self) {
       if (this.get('isComplete')) {
-        return (this.get('isSuperUser') || chapter.get('visibleSteps.length') !== 0);
+        return (chapter.get('visibleSteps.length') !== 0);
       } else {
-        return (this.get('isSuperUser') || chapter.get('visibleSteps.length') !== 0 && !chapter.get('hidden'));
+        return (chapter.get('visibleSteps.length') !== 0 && !chapter.get('hidden'));
       }
     }.bind(this));
   }.property('arrangedContent.@each.visibleSteps.length', 'isSuperUser'),
