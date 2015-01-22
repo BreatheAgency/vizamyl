@@ -77,6 +77,38 @@
 
       }
 
+      ul.list-block {
+        margin: 0;
+        padding: 10px 20px 10px 20px;
+        background: #005DBA;
+
+        li {
+          padding: 5px 5px 5px 5px;
+          vertical-align: middle;
+          cursor: pointer;
+
+          i {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            padding-left: 7px;
+            border: solid 2px white;
+            border-radius: 30px;
+            margin-top: -2px;
+            padding-top: 1px;
+          }
+
+          .container {
+            padding: 12px 12px 10px 10px;
+            color: white;
+            font-weight: normal;
+            height: 50px;
+            margin-bottom: 0;
+            background: $primary-highlight;
+          }
+        }
+      }
+
       ol.list-group {
         margin: 0 0 0 24px;
 

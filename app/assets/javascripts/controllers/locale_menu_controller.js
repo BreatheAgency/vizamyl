@@ -4,6 +4,7 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   sortAscending: true,
   isComplete: Ember.computed.alias('controllers.application.isComplete'),
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
+  hiddenChapters: Ember.computed.filterBy('arrangedContent', 'hidden', true),
 
   actions: {
 
@@ -173,11 +174,7 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
 
   visibleChapters:function(){
     return this.get('arrangedContent').filter(function(chapter, index, self) {
-      if (this.get('isComplete')) {
-        return (chapter.get('visibleSteps.length') !== 0);
-      } else {
-        return (chapter.get('visibleSteps.length') !== 0 && !chapter.get('hidden'));
-      }
+      return (chapter.get('visibleSteps.length') !== 0 && !chapter.get('hidden'));
     }.bind(this));
   }.property('arrangedContent.@each.visibleSteps.length', 'isSuperUser'),
 
