@@ -14,7 +14,7 @@
   <% I18n.available_locales.each do |locale| %>
   <li>
     <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-      <%= t(".locale_titles.#{locale}_html") %>
+      <%= t("pages.gatekeeper.locale_titles.#{locale}_html") %>
     </a>
   </li>
   <% end %>
