@@ -5,13 +5,6 @@
     padding-left: rem-calc(50);
     padding-right: rem-calc(50);
   }
-  //used as a blue bar that goes full width
-  .blue-bar {
-
-    line-height: rem-calc(50);
-    background: #E4F3FC;
-    height:rem-calc(40);
-  }
 
   h2 {
     font-size: $h4-font-size;
@@ -21,17 +14,18 @@
     padding-left: rem-calc(20);
   }
 
-
-  a{
-
-    .download-pdf-button{
-
-    }
-
-
+  .blue-bar {
+    line-height: rem-calc(50);
+    background: #E4F3FC;
+    height:rem-calc(40);
   }
 
-
-
+  .download-pdf-button {
+    width: 69px;
+    height: 93px;
+    @include retina-background-image('pdf-download', 69px, 93px);
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
 
 }
