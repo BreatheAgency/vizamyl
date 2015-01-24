@@ -10,10 +10,11 @@ class CourseCompletionPDF < Prawn::Document
     font('geinspira')
     image(Rails.root.join("app/assets/images/#{I18n.locale}/course-completion-1.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
     left = 243
-    top = 373
+    top = 408
     height = 32
     margin = 3.5
     fill_color '005cb9'
+    # TODO locale
     text_box("Saluation: " + user.title, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
     text_box("First name: " + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box("Last name: " + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
@@ -23,13 +24,19 @@ class CourseCompletionPDF < Prawn::Document
   end
 end
 
-class CourseCompletionController < ApplicationController
-  def show
+class Users::CourseCompletionController < ApplicationController
+  before_action :authenticate_user!
+
+  def success
     respond_to do |format|
+      format.html
       format.pdf do
         pdf = CourseCompletionPDF.new(current_user)
         send_data pdf.render, filename: 'course_completion.pdf', type: 'application/pdf'
       end
     end
+  end
+
+  def failure
   end
 end
