@@ -1,3 +1,8 @@
-<h1>Success</h1>
-<meta http-equiv="refresh" content="3;<%= users_course_complete_path(format: :pdf) %>">
-<p>You're course completion statement should automatically download, if not <%= link_to 'click here', users_course_complete_path(format: :pdf) %> </p>
+<div class='course-completion row'>
+  <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
+    <h1>?</h1>
+    <p>Thank you for participating in the Vizamyl electronic training programme.<br>Please download the PDF of your results and keep for your records.</p>
+    <p><%= link_to 'Download results', users_course_complete_path(format: :pdf) %></p>
+    <meta http-equiv='refresh' content="3;<%= users_course_complete_path(format: :pdf) %>">
+  </div>
+</div>
