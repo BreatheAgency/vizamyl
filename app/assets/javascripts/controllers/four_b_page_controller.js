@@ -1,5 +1,6 @@
 Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
+  locale: Ember.computed.alias('controllers.application.currentLocale'),
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: false,
   selectedAnswer: null,
@@ -120,13 +121,12 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     },
     next: function() {
       if(this.get('testCorrect')) {
-        console.log('completed');
+        window.location.replace('/' + this.get('locale') + '/users/course-complete');
       } else if(this.get('unansweredQuestionRoundIndices.length') === 0) {
-        console.log('failed');
+        window.location.replace('/' + this.get('locale') + '/users/course-incomplete');
       } else {
         this.sendStateEvent('reset');
       }
-
     },
     submit: function() {
       this.get('question').setProperties({
