@@ -3,6 +3,6 @@ Course.Image = Course.Page.extend({
   source: DS.attr('string'),
 
   sourceWithUrl: function(){
-    return '//djqy74tsvke0j.cloudfront.net/images/' + this.get('source') + '.jpg';
+    return '//vizamyl-temp-backup.s3.amazonaws.com/images/' + this.get('source') + '.jpg';
   }.property('source')
 });

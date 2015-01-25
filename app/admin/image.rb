@@ -38,7 +38,7 @@ ActiveAdmin.register Image do
       row :title
       row :subject_area
       row :source do |image|
-        image_tag('//djqy74tsvke0j.cloudfront.net/images/' + image.source + '.jpg')
+        image_tag('//vizamyl-temp-backup.s3.amazonaws.com/images/' + image.source + '.jpg')
       end
     end
   end

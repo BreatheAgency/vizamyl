@@ -34,9 +34,9 @@ Course.VideoPlayerComponent = Ember.Component.extend({
   updateSource: function() {
     if (!this.player) { return; } // in case `player` isn't yet initialized
     this.player.src([
-      { type: 'application/vnd.apple.mpegurl', src: '//djqy74tsvke0j.cloudfront.net/videos/' + this.get('source') + '/playlist.m3u8' },
-      { type: 'video/mp4', src: '//djqy74tsvke0j.cloudfront.net/videos/' + this.get('source') + '/web.mp4' },
-      { type: 'video/webm', src: '//djqy74tsvke0j.cloudfront.net/videos/' + this.get('source') + '/web.webm' }
+      { type: 'application/vnd.apple.mpegurl', src: '//vizamyl-temp-backup.s3.amazonaws.com/videos/' + this.get('source') + '/playlist.m3u8' },
+      { type: 'video/mp4', src: '//vizamyl-temp-backup.s3.amazonaws.com/videos/' + this.get('source') + '/web.mp4' },
+      { type: 'video/webm', src: '//vizamyl-temp-backup.s3.amazonaws.com/videos/' + this.get('source') + '/web.webm' }
     ]);
     this.player.ga({
       'eventsToTrack': ['percentsPlayed', 'start', 'end', 'seek', 'play', 'pause'],

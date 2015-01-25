@@ -29,7 +29,7 @@ ActiveAdmin.register ImageSource do
   show do
     attributes_table do
       row :source do |image|
-        image_tag('//djqy74tsvke0j.cloudfront.net/images/' + image.source + '.jpg')
+        image_tag('//vizamyl-temp-backup.s3.amazonaws.com/images/' + image.source + '.jpg')
       end
     end
   end
