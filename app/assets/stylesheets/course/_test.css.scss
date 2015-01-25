@@ -125,6 +125,36 @@
     }
 
   }
+
+  .test-case {
+
+    .question {
+      display: inline-block;
+
+      h2 {
+        font-weight: bold;
+        font-size: rem-calc(16);
+      }
+
+      label {
+        display: inline;
+        width: 200px;
+        margin-right: 25px;
+      }
+
+      input {
+        margin-right: 10px;
+        width: 15px;
+      }
+
+      .body {
+        display: inline-block;
+        color: #666;
+      }
+
+    }
+
+  }
 }
 
 .test-page.super-user {

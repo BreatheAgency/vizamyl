@@ -18,6 +18,7 @@ ActiveAdmin.register Question do
     column :title do |question|
       link_to(question.title, admin_question_round_question_path(question_round, question))
     end
+    column(:test_case) { |model| model['test_case'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     column :answers_count do |question|
       question.answers.count
     end
@@ -29,6 +30,9 @@ ActiveAdmin.register Question do
     f.translated_inputs do |t|
       t.input :title, as: :html_editor
       t.input :explanation_source
+    end
+    f.inputs do
+      f.input :test_case
     end
     f.has_many :interactive_sources, allow_destroy: true do |ff|
       ff.translated_inputs do |tt|
@@ -59,6 +63,7 @@ ActiveAdmin.register Question do
     attributes_table do
       row :title
       row :explanation_source
+      row(:test_case) { |model| model['test_case'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     end
     panel 'Interactive Sources' do
       question.interactive_sources.each do |interactive_source|

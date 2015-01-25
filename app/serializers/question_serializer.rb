@@ -1,5 +1,5 @@
 class QuestionSerializer < ActiveModel::Serializer
-  attributes :id, :title, :explanation_source
+  attributes :id, :title, :explanation_source, :test_case
   has_many :answers
   has_many :interactive_sources
   has_many :image_sources
