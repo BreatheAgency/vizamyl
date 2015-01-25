@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/fnando/i18n-js.git
-  revision: 2d29bb6301ba494569fa9ec01eca9ce36b7e7fc0
+  revision: 2a7472d87748107f0ce176a773397009310cbca8
   specs:
     i18n-js (3.0.0.rc8)
       i18n (~> 0.6)
@@ -49,12 +49,6 @@ GIT
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-
-GIT
-  remote: git://github.com/tigrish/devise-i18n.git
-  revision: 3065bb2f87425b2e4db499cba5343370ef4d0c4d
-  specs:
-    devise-i18n (0.11.2)
 
 GEM
   remote: https://rubygems.org/
@@ -145,6 +139,7 @@ GEM
     compass-rails (2.0.0)
       compass (>= 0.12.2)
     debug_inspector (0.0.2)
+    devise-i18n (0.11.3)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
     dotenv-deployment (0.0.2)
@@ -320,7 +315,7 @@ DEPENDENCIES
   bullet
   compass-rails
   devise!
-  devise-i18n!
+  devise-i18n
   email_validator
   ember-data-source
   ember-rails (~> 0.16)

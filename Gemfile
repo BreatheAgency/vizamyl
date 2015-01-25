@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 ruby '2.2.0'
 
 gem 'devise', github: 'plataformatec/devise'
+
 gem 'i18n-js', github: 'fnando/i18n-js'
-gem 'devise-i18n', github: 'tigrish/devise-i18n'
+
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'activeadmin-globalize', github: 'fabn/activeadmin-globalize', branch: 'develop'
 gem 'activeadmin-sortable', github: 'neo/activeadmin-sortable'
@@ -20,6 +21,7 @@ gem 'puma'
 gem 'faker'
 gem 'skylight'
 gem 'uglifier'
+gem 'devise-i18n'
 gem 'font_assets'
 gem 'prawn-rails'
 gem 'simple_form'
