@@ -9,7 +9,7 @@
           {{/each}}
         </ul>
       </div>
-      <p>Well done!<br>Your self assessment for {{chapter.title}} - {{title}}</p>
+      <p>Well done!<br>Your self assessment for {{chapter.title}} - {{page.subject_area}}</p>
       <p>has been sucessfully completed, and you may now proceed.</p>
     {{/if}}
     {{#if isInIncorrect}}
@@ -21,7 +21,7 @@
         {{/each}}
       </ul>
     </div>
-    <p>Please review the training for {{chapter.title}} - {{title}}</p>
+    <p>Please review the training for {{chapter.title}} - {{page.subject_area}}</p>
     <p>You will then be re-challenged with more questions on this topic.</p>
     {{/if}}
     {{#if isInUnanswered}}
