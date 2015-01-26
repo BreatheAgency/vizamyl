@@ -28,7 +28,7 @@ ActiveAdmin.register Chapter do
 
   sidebar 'Pages', only: [:show] do
     ul do
-      %i(videos texts images interactives question_intros tests).each do |page_type|
+      %i(videos texts images interactives question_intros tests four_bs).each do |page_type|
         li(link_to(page_type.to_s.titleize, polymorphic_url([:admin, chapter, page_type.to_s.tableize])))
       end
     end

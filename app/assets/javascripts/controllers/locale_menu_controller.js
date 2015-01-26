@@ -19,17 +19,15 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
       // check the step's availabilty
       if(!step.get('available')) { return; }
 
-      console.log(step);
-      console.log(step.get('page'));
-      if (step.get('page') == undefined){
-        debugger;
-      }
-      console.log(step.get('page.type'));
-      console.log(step.get('page.id'));
-      console.log(step.get('page.type').dasherize());
+      var page_id = step.get('page.id');
+      var page_type = step.get('page.type');
+      if (page_id == undefined){ page_id = step._data.page.id; }
+      if (page_type == undefined){ page_type = step._data.page.type; }
+
+      console.log(page_id, page_type);
 
       // go to the step's page
-      this.transitionToRoute('pages.index', step.get('page.type').dasherize(), step.get('page.id'));
+      this.transitionToRoute('pages.index', Ember.String.dasherize(page_type), page_id);
 
       // ensure the menu is showing correct the correct chapter being open
       if (!step.get('chapter.selected')) {
