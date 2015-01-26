@@ -5,6 +5,31 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   selectedAnswer: null,
   answered: Ember.computed.bool('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
+  questionSetOne: [
+    Ember.Object.create({correct: true, body: 'Positive'}),
+    Ember.Object.create({correct: true, body: 'Negative'}),
+  ],
+  questionSetOneSelection: null,
+  questionSetTwo: [
+    Ember.Object.create({correct: true, body: 'Positive'}),
+    Ember.Object.create({correct: true, body: 'Negative'}),
+  ],
+  questionSetTwoSelection: null,
+  questionSetThree: [
+    Ember.Object.create({correct: true, body: 'Positive'}),
+    Ember.Object.create({correct: true, body: 'Negative'}),
+  ],
+  questionSetThreeSelection: null,
+  questionSetFour: [
+    Ember.Object.create({correct: true, body: 'Positive'}),
+    Ember.Object.create({correct: true, body: 'Negative'}),
+  ],
+  questionSetFourSelection: null,
+  questionSetFive: [
+    Ember.Object.create({correct: true, body: 'Positive'}),
+    Ember.Object.create({correct: true, body: 'Negative'}),
+  ],
+  questionSetFiveSelection: null,
 
   fsmStates: {
     initialState: 'unanswered',
