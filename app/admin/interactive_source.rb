@@ -36,7 +36,7 @@ ActiveAdmin.register InteractiveSource do
     attributes_table do
       row :label
       row :source do |image|
-        image_tag('//vizamyl-temp-backup.s3.amazonaws.com/interactives/' + image.source + '.jpg')
+        image_tag('//vizamyl-live.s3.amazonaws.com/interactives/' + image.source + '.jpg')
       end
       row :height
     end
