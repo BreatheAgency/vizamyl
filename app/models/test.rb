@@ -10,9 +10,6 @@ class Test < ActiveRecord::Base
     active_admin_translates translated_field
   end
 
-  # TODO
-  def title
-    "NOT USED"
-  end
+  alias_attribute :title, :subject_area
 
 end
