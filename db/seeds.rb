@@ -829,3 +829,11 @@ end
 # end
 
 User.new(locale: 'en', invite_code: 'vzmyl100', title: 'Dr', first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, email: "user1@readvizamyl.com", password: 'vzmyl100', password_confirmation: 'vzmyl100', super_user: false).save!
+
+
+qr = QuestionRound.find(96)
+(1..15).each do |i|
+  q = qr.questions.create!(title: "Case #{i}", test_case: true)
+  q.answers.create!(body: 'Positive', correct: true)
+  q.answers.create!(body: 'Negative', correct: false)
+end

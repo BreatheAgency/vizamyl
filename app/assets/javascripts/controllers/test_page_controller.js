@@ -5,7 +5,6 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   selectedAnswer: null,
   answered: Ember.computed.bool('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
-  answeredQuestions: Ember.computed.filterBy('questions', 'answered', true),
 
   fsmStates: {
     initialState: 'unanswered',
@@ -68,6 +67,10 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
 
   unansweredQuestions: function() {
     return _.shuffle(this.get('questions').filterBy('answered', false));
+  }.property('questions.@each.answered'),
+
+  answeredQuestions: function() {
+    return this.get('questions').filterBy('answered', true);
   }.property('questions.@each.answered'),
 
   question: function() {

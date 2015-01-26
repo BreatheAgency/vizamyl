@@ -18,6 +18,8 @@
       </div>
     {{/if}}
     {{#if isInUnanswered}}
+    {{unansweredQuestions.length}}
+    {{question.answered}}
       {{#if question.test_case}}
         <h1>{{question.title}}</h1>
         <p>Navigate the three views with the slider.<br> Assess the five regions and then make an overall assessment.</p>

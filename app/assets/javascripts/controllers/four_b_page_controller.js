@@ -7,8 +7,6 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   selectedExplanationSource: null,
   answered: Ember.computed.alias('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
-  unansweredQuestions: Ember.computed.filterBy('questions', 'answered', false),
-  answeredQuestions: Ember.computed.filterBy('questions', 'answered', true),
   questionSetOne: [
     Ember.Object.create({correct: true, body: 'Positive'}),
     Ember.Object.create({correct: true, body: 'Negative'}),
@@ -92,6 +90,14 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     return this.get('question_rounds').objectAt(this.get('unansweredQuestionRoundIndex')).get('questions');
   }.property('question_rounds.[]', 'unansweredQuestionRoundIndex'),
 
+  unansweredQuestions: function() {
+    return this.get('questions').filterBy('answered', false);
+  }.property('questions.@each.answered'),
+
+  answeredQuestions: function() {
+    return this.get('questions').filterBy('answered', true);
+  }.property('questions.@each.answered'),
+
   question: function() {
     var q = this.get('unansweredQuestions.firstObject');
     if (q) { q.set('active', true); }
@@ -123,8 +129,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
 
   testCorrect: function() {
     var correct_questions_length = this.get('answeredQuestions').filterBy('correct', true).get('length');
-    // The user must get at least 14 questions right
-    return (correct_questions_length >= 1);
+    return (correct_questions_length >= 14);
   }.property('answeredQuestions'),
 
   columns: function(){
