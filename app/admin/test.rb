@@ -17,8 +17,8 @@ ActiveAdmin.register Test do
     column :page_id do |test|
       link_to(test.page_id, admin_chapter_test_path(chapter, test))
     end
-    column :title do |test|
-      link_to(test.title, admin_chapter_test_path(chapter, test))
+    column :subject_area do |test|
+      link_to(test.subject_area, admin_chapter_test_path(chapter, test))
     end
     column :failure_step do |test|
       if test.failure_step.present?
@@ -31,7 +31,6 @@ ActiveAdmin.register Test do
 
   form do |f|
     f.translated_inputs do |t|
-      t.input :title, as: :html_editor
       t.input :subject_area
     end
     f.has_many :question_rounds, allow_destroy: true do |ff|
@@ -46,7 +45,6 @@ ActiveAdmin.register Test do
 
   show title: :page_id do |test|
     attributes_table do
-      row :title
       row :subject_area
       row :failure_step do |test|
         if test.failure_step.present?
