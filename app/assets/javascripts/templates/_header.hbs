@@ -1,7 +1,11 @@
 <nav role='nav'>
 	<div class='row'>
 		<ul class='inline-list'>
-			<li>{{#link-to 'locale.menu'}}{{i18n layouts.application.course_menu}}{{/link-to}}</li>
+			{{#if currentChapter.visible}}
+				<li>{{#link-to 'locale.menu'}}{{i18n layouts.application.course_menu}}{{/link-to}}</li>
+			{{else}}
+				<li><a>{{i18n layouts.application.course_menu}}</a></li>
+			{{/if}}
 			<li><a href='/{{unbound currentLocale}}/users/edit'}}>{{i18n layouts.application.my_account}}</a></li>
 			<li><a href='/{{unbound currentLocale}}/prescribing-information'>{{i18n layouts.application.prescribing_information}}</a></li>
 			<li><a href='/{{unbound currentLocale}}/references'>{{i18n layouts.application.references}}</a></li>

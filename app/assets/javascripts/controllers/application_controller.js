@@ -8,6 +8,10 @@ Course.ApplicationController = Ember.Controller.extend({
     return this.get('currentPage.step');
   }.property('currentPage'),
 
+  currentChapter: function() {
+    return this.get('currentPage.chapter');
+  }.property('currentPage'),
+
   currentUser: function() {
     return Course.get('user');
   }.property('Course.user'),
