@@ -62,7 +62,13 @@ ActiveAdmin.register Question do
   show do |question|
     attributes_table do
       row :title
-      row :explanation_source
+      row :explanation do |question|
+        video_tag([
+          '//vizamyl-live.s3.amazonaws.com/videos/' + question.explanation_source + '/playlist.m3u8',
+          '//vizamyl-live.s3.amazonaws.com/videos/' + question.explanation_source + '/web.mp4',
+          '//vizamyl-live.s3.amazonaws.com/videos/' + question.explanation_source + '/web.webm'
+          ], controls: true, autobuffer: true, size: '550x413')
+        end
       row(:test_case) { |model| model['test_case'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     end
     panel 'Interactive Sources' do
