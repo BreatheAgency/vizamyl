@@ -62,6 +62,7 @@ ActiveAdmin.register Question do
   show do |question|
     attributes_table do
       row :title
+      row :explanation_source
       row :explanation do |question|
         video_tag([
           '//vizamyl-live.s3.amazonaws.com/videos/' + question.explanation_source + '/playlist.m3u8',
