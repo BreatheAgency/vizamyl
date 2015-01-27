@@ -21,7 +21,6 @@ Rails.application.routes.draw do
     devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'enrole' }, controllers: { registrations: 'users/registrations' }
     namespace :users do
       get '/course-complete' => 'course_completion#success'
-      get '/course-incomplete' => 'course_completion#failure'
     end
     get '/*id' => 'static#show', id: 'home', as: :static
     get '/' => 'static#show', id: 'home'
