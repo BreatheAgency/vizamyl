@@ -1,9 +1,9 @@
 <div {{bind-attr class=':row :test-page :four-b-page isSuperUser:super-user'}}>
   <div class='small-5 large-5 columns with-content with-minimum'>
     {{#if isInAnswered}}
-      <h1>Self-assessment question results</h1>
+      <h1>Assessment Summary</h1>
       {{#if testCorrect}}
-        <p>Test cases - Assessment summary<br>Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.</p>
+        <p>Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.</p>
       {{else}}
         {{#if testFailedOnce}}
           <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.</p>
