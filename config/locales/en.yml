@@ -82,7 +82,7 @@ en:
           <p><strong>MARKETING AUTHORISATION NUMBERS</strong> EU/1/14/941/001, EU/1/14/941/002</p>
           <p><strong>DATE OF REVISION</strong> August 2014</p>
           <p><strong>Cost</strong> Not applicable. Product not currently available in the UK.</p>
-          <p class="bordered">Adverse events should be reported. Reporting forms and information can be found at <a href="http://www.yellowcard.mhra.gov.uk" target="_blank">http://www.yellowcard.mhra.gov.uk</a>. Adverse events should also be reported GE Healthcare Ltd, email: <a href="mailto:UKpharmacovigilance@ge.com">UKpharmacovigilance@ge.com</a>.</p>
+          <p class="bordered">Adverse events should be reported. Reporting forms and information can be found at <a href="http://www.yellowcard.mhra.gov.uk" target="_blank">www.yellowcard.mhra.gov.uk</a>. Adverse events should also be reported GE Healthcare Ltd, email: <a href="mailto:UKpharmacovigilance@ge.com">UKpharmacovigilance@ge.com</a>.</p>
     references:
       left:
         title: |
@@ -95,7 +95,7 @@ en:
           <p>Mirra SS, Heyman A, McKeel D et al. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
           <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G et al. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-1725.</p>
           <p>Vandenberghe R, Van Laere K, Ivanoiu A et al. <sup>18</sup>F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. Ann Neurol 2010; 68: 319-29.</p>
-          <p>Vizamyl, European Summary of Product Characteristics, Date: August 2014.</p>
+          <p>Vizamyl, European Summary of Product Characteristics, August 2014.</p>
       right:
         body_html: |
     resources:
@@ -134,7 +134,7 @@ en:
         <p><b>b. </b><b>Privacy and storage</b></p>
         <p>This data will be stored on a server based in the Republic of Ireland. The data will only be used for administrative purposes unless you have consented to other uses such as your data being used for marketing purposes. You can update your contact preferences at any time in the "My account" section. Data will only be accessed by GE Healthcare employees, unless in case of breakdown of the system or website where administrators based at <a href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> may be able to access data for administrative or maintenance purposes. Furthermore, our server platform at <a href="http://www.heroku.com">www.heroku.com</a> is hosted and managed by Amazon Web Services (<a href="http://aws.amazon.com/">http://aws.amazon.com/</a>) and therefore Amazon employees may have access to the data if there is a legitimate business need for such privileges. This privilege terminates at the moment this need ceases. If the problem lies in the starting up or running of an application or software, providing solutions to known problems, answering general questions then the issue will be resolved by administrators based at <a href="http://www.heroku.com">www.heroku.com</a>.</p>
         <p>Your data will be stored for a reasonable period of time. This is in order to assess whether the Product should be supplied to you for clinical use based on whether you have passed the test relating to the safe usage of the Product in accordance with the Product's Summary of Product Characteristics (the "Exam"). Should you have failed the Exam, we will need to use your data for administrative purposes in order to arrange face-to-face training in your country. Therefore, your data will only be used for administrative and training purposes. If you feel as though your data has been used inappropriately, contact us at <a href="mailto:contactus@ge.com">contactus@ge.com</a>. </p>
-        <p><b>c. </b><b></b></p>
+        <p><b>c. Transfer</b><b></b></p>
         <p>Your information supplied to GE Healthcare will be used in the United Kingdom apart from information stored on servers in the Republic of Ireland. Your information will only be accessed by internal staff of GE Healthcare unless in case of breakdown or necessary legal process as described above. Your information will not leave the European Union.</p>
         <p><b>3. </b><b>Protection of Personal Information</b></p>
         <p>At GE Healthcare, our goal is to protect your personal information submitted to us through our sites. We and our data processors maintain administrative, technical and physical safeguards to protect against unauthorized disclosure, use, alteration or destruction of the personal information that you provide on this and other GE websites. We also employ reasonable technologies to keep the personal information you provide on the site secure.</p>
