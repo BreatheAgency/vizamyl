@@ -1,7 +1,7 @@
 <div {{bind-attr class=':row :test-page :four-b-page isSuperUser:super-user'}}>
   <div class='small-5 large-5 columns with-content with-minimum'>
     {{#if isInAnswered}}
-      <h1>Self-assessment question results</h1>
+      <h1>Assessment Summary</h1>
       {{#if testCorrect}}
         <p>Test cases - Assessment summary<br>Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the “next” button to finish the programme.</p>
       {{else}}
@@ -20,7 +20,7 @@
     {{#if isInUnanswered}}
       {{#if question.test_case}}
         <h1>{{question.title}}</h1>
-        <p>Navigate the three views with the slider.<br> Assess the five regions and then make an overall assessment.</p>
+        <p>Navigate the three views with the sliders.<br> Assess the five regions and then make an overall assessment.</p>
         <div class='test-case'>
           <div class='question'>
             <h2>Frontal pole and lobe</h2>
@@ -29,7 +29,7 @@
             {{/each}}
           </div>
           <div class='question'>
-            <h2>Posterior cingulate precuneus</h2>
+            <h2>Posterior cingulate and precuneus</h2>
             {{#each answer in questionSetTwo}}
               <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
             {{/each}}

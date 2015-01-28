@@ -56,7 +56,7 @@ en:
     home:
       title: Home
       body_html: |
-        <h1>Welcome to the <br><strong>Vizamyl e-learning</strong> programme</h1>
+        <h1>Welcome to the <br><strong>Vizamyl electronic training</strong> programme</h1>
         <p>If you are returning to the course, <br><strong>welcome back and please login.</strong></p>
         <p>If you would like to begin the course, <br><strong>welcome, and please enrol.</strong></p>
     course:
@@ -219,7 +219,7 @@ en:
     passwords:
       new:
         send: "Send"
-        forgot_your_password: "Forgot your password?"
+        forgot_your_password: "Forgotten your password?"
         send_me_reset_password_instructions: "Send me reset password instructions"
       edit:
         submit: "Submit"
@@ -266,7 +266,7 @@ en:
     sessions:
       new:
         sign_in: "Sign in"
-        forgot_your_password: "Forgot your password?"
+        forgot_your_password: "Forgotten your password?"
         intro: |
           Please enter your email address
           and password to login.
@@ -277,7 +277,7 @@ en:
         back: "Back"
         didn_t_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
         didn_t_receive_unlock_instructions: "Didn't receive unlock instructions?"
-        forgot_your_password: "Forgot your password?"
+        forgot_your_password: "Forgotten your password?"
         sign_in: "Sign in"
         sign_in_with_provider: "Sign in with %{provider}"
         sign_up: "Sign up"
