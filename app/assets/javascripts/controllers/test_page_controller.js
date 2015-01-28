@@ -1,5 +1,6 @@
 Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
+  currentPage: Ember.computed.alias('controllers.application.currentPage'),
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: false,
   selectedAnswer: null,
@@ -36,7 +37,6 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     knownStates: ['failed', 'incorrect', 'correct'],
     unanswered: {
       didEnter: function() {
-        console.log('unanswered didEnter');
 
         this.get('questions').forEach(function(question) {
           question.setProperties({
@@ -48,12 +48,16 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
 
         this.setProperties({
           selectedAnswer: null
+          questionSetOneSelection: null,
+          questionSetTwoSelection: null,
+          questionSetThreeSelection: null,
+          questionSetFourSelection: null,
+          questionSetFiveSelection: null,
         });
       }
     },
     correct: {
       didEnter: function() {
-        console.log('correct didEnter');
         this.setProperties({
           complete: true
         });
@@ -77,7 +81,6 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   },
 
   modelDidChange: function() {
-    console.log('modelDidChange');
     if (this.get('unansweredQuestionRoundIndices.length') === 0) {
       this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
     }
@@ -138,6 +141,10 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   actions: {
     next: function(step) {
       this.get('controllers.localeMenu').send('nextStep', step);
+      this.sendStateEvent('reset');
+    },
+    select: function(step) {
+      this.get('controllers.localeMenu').send('selectStep', step);
       this.sendStateEvent('reset');
     },
     submit: function() {

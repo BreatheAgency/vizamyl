@@ -1,11 +1,15 @@
 <div {{bind-attr class=':row :test-page :four-b-page isSuperUser:super-user'}}>
   <div class='small-5 large-5 columns with-content with-minimum'>
     {{#if isInAnswered}}
-      <h1>Assessment Summary</h1>
+      <h1>Self-assessment question results</h1>
       {{#if testCorrect}}
-        <p>Test cases - Assessment summary<br>Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the “next” button to finish the programme.</p>
+        <p>Test cases - Assessment summary<br>Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.</p>
       {{else}}
-        <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases. If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the Vizamyl website [insert link to Vizamyl website] to schedule an in-person training session.</p>
+        {{#if testFailedOnce}}
+          <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.</p>
+        {{else}}
+          <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases. If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the <a href='/{{unbound currentLocale}}/contact'>Vizamyl website</a> to schedule an in-person training session.</p>
+        {{/if}}
       {{/if}}
       <div class='explanation-question-results'>
         <ul>
@@ -20,7 +24,7 @@
     {{#if isInUnanswered}}
       {{#if question.test_case}}
         <h1>{{question.title}}</h1>
-        <p>Navigate the three views with the sliders.<br> Assess the five regions and then make an overall assessment.</p>
+        <p>Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.</p>
         <div class='test-case'>
           <div class='question'>
             <h2>Frontal pole and lobe</h2>
@@ -90,7 +94,7 @@
     <div class='row button-container'>
       <div class='small-12 medium-12 large-12 columns'>
         {{#if isInAnswered}}
-          <a {{bind-attr class=':right'}} {{action 'next'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+          <a {{bind-attr class=':right testFailedOnce:enabled:disabled'}} {{action 'next'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInUnanswered}}
           <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>Submit<i class='fi-arrow-right'></i></a>

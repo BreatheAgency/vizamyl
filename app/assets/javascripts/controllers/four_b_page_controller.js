@@ -1,6 +1,6 @@
 Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
-  locale: Ember.computed.alias('controllers.application.currentLocale'),
+  currentLocale: Ember.computed.alias('controllers.application.currentLocale'),
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   complete: false,
   selectedAnswer: null,
@@ -38,7 +38,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     knownStates: ['failed', 'answered'],
     unanswered: {
       didEnter: function() {
-        console.log('unanswered didEnter');
+        this.set('unansweredQuestionRoundIndex', this.get('unansweredQuestionRoundIndices').shiftObject());
 
         this.get('questions').forEach(function(question) {
           question.setProperties({
@@ -50,12 +50,16 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
 
         this.setProperties({
           selectedAnswer: null
+          questionSetOneSelection: null,
+          questionSetTwoSelection: null,
+          questionSetThreeSelection: null,
+          questionSetFourSelection: null,
+          questionSetFiveSelection: null,
         });
       }
     },
     answered: {
       didEnter: function() {
-        console.log('correct didEnter');
         this.setProperties({
           complete: true
         });
@@ -78,11 +82,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   },
 
   modelDidChange: function() {
-    console.log('modelDidChange');
-    if (this.get('unansweredQuestionRoundIndices.length') === 0) {
-      this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
-    }
-    this.set('unansweredQuestionRoundIndex', this.get('unansweredQuestionRoundIndices').popObject());
+    this.set('unansweredQuestionRoundIndices', _.range(this.get('question_rounds.length')));
     this.sendStateEvent('reset');
   }.observes('model'),
 
@@ -132,6 +132,10 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     return (correct_questions_length >= 14);
   }.property('answeredQuestions'),
 
+  testFailedOnce: function() {
+    return (this.get('unansweredQuestionRoundIndices.length') === 1);
+  }.property('unansweredQuestionRoundIndices.length'),
+
   columns: function(){
     switch(this.get('question.interactive_sources.length')) {
       case 1:
@@ -151,10 +155,8 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     },
     next: function() {
       if(this.get('testCorrect')) {
-        window.location.replace('/' + this.get('locale') + '/users/course-complete');
-      } else if(this.get('unansweredQuestionRoundIndices.length') === 0) {
-        window.location.replace('/' + this.get('locale') + '/users/course-incomplete');
-      } else {
+        window.location.replace('/' + this.get('currentLocale') + '/users/course-complete');
+      } else if(this.get('testFailedOnce')) {
         this.sendStateEvent('reset');
       }
     },
