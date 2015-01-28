@@ -47,7 +47,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
         });
 
         this.setProperties({
-          selectedAnswer: null
+          selectedAnswer: null,
           questionSetOneSelection: null,
           questionSetTwoSelection: null,
           questionSetThreeSelection: null,
