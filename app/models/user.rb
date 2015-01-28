@@ -12,7 +12,11 @@ class User < ActiveRecord::Base
 
   def latest_step
     latest_progression = progressions.where(amount: 0.5..1).last
-    latest_progression.step
+    if latest_progression.nil?
+      steps.first
+    else
+      return latest_progression.step
+    end
   end
 
   def progress

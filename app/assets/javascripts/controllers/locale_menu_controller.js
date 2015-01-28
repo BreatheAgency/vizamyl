@@ -7,7 +7,6 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   hiddenChapters: Ember.computed.filterBy('arrangedContent', 'hidden', true),
 
   actions: {
-
     toggle: function(chapter){
       if (!chapter.get('available')) { return; }
       var originalSelectedState = chapter.get('selected');
@@ -66,125 +65,7 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
       this.send('selectStep', nextStep);
 
     },
-
-    // next: function(step) {
-    //   var chapter = step.get('chapter');
-    //   this.completeStep(step);
-    //
-    //   // objectAt becuase the position on the step is not zero based but the steps array on the chapter is
-    //   var next_step = chapter.get('steps').objectAt(step.get('position'));
-    //   if (!next_step) {
-    //     console.log('next_step not found (eg, get the next chapters step)');
-    //     console.log(chapter.get('position'));
-    //     var next_chapter = this.store.all('chapter').objectAt(chapter.get('position'));
-    //     if (next_chapter.get('available')) {
-    //       chapter = next_chapter;
-    //       next_step = next_chapter.get('steps.firstObject');
-    //     } else {
-    //       console.log('next chapter unavailable');
-    //     }
-    //
-    //   }
-    //
-    //   this.send('select', chapter, next_step);
-    // },
-    //
-    // select: function(chapter, step) {
-    //
-    //   if (this.checkStep(chapter, step)) {
-    //     console.log(step.get('page.id'));
-    //     console.log(step.get('page.type'));
-    //     this.transitionToRoute('pages.index', step.get('page.type').dasherize(), step.get('page.id'));
-    //   } else {
-    //     console.log('check failed?');
-    //   }
-    //
-    //   if (!chapter.get('selected')) {
-    //     this.send('toggle', chapter);
-    //   }
-    // }
   },
-
-  // checkStep: function(chapter, step) {
-  //   var procceed = false,
-  //       progression = step.get('progression');
-  //
-  //   if (this.get('isSuperUser')) { return true; };
-  //
-  //   if (chapter.get('available')) {
-  //     console.log('chapter available');
-  //
-  //     if (step.get('available')) {
-  //       console.log('step available');
-  //       procceed = true;
-  //     } else {
-  //       console.log('step unavailable');
-  //
-  //       var previous_step = chapter.get('steps').objectAt(step.get('position') - 2)
-  //       if (previous_step) {
-  //         console.log('previous_step found');
-  //
-  //         if (previous_step.get('completed')) {
-  //             console.log('previous step completed');
-  //             procceed = true;
-  //         } else {
-  //             console.log('previous step not completed');
-  //         }
-  //
-  //       } else {
-  //         console.log('previous_step not found');
-  //       }
-  //
-  //     }
-  //
-  //   } else {
-  //     console.log('chapter unavailable');
-  //
-  //     var previous_chapter = this.store.all('chapter').objectAt(chapter.get('position') - 2);
-  //     if (previous_chapter) {
-  //       console.log('previous_chapter found');
-  //
-  //       if (previous_chapter.get('completed')) {
-  //           console.log('previous chapter completed');
-  //           procceed = true;
-  //       } else {
-  //           console.log('previous chapter not completed');
-  //       }
-  //
-  //     } else {
-  //       console.log('previous_chapter not found');
-  //     }
-  //
-  //   }
-  //
-  //   // Only if we're allowed to proceed,
-  //   if (procceed && progression.get('amount') >= 0.5) {
-  //     progression.set('amount', 0.5);
-  //   }
-  //
-  //   // only save the progression when its changed
-  //   if (progression.get('isDirty')) {
-  //     progression.save();
-  //   }
-  //
-  //   return procceed;
-  // },
-
-  visibleChapters:function(){
-    return this.get('arrangedContent').filter(function(chapter, index, self) {
-      return (chapter.get('visibleSteps.length') !== 0 && !chapter.get('hidden'));
-    }.bind(this));
-  }.property('arrangedContent.@each.visibleSteps.length', 'isSuperUser'),
-
-  // completeStep: function(step) {
-  //   var progression = step.get('progression');
-  //   progression.set('amount', 1);
-  //
-  //   // only save the progression when its changed
-  //   if (progression.get('isDirty')) {
-  //     progression.save();
-  //   }
-  // },
 
   updateProgression: function(progression, amount) {
     if (progression.get('amount') > amount) { return; }
@@ -192,7 +73,13 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
     if (progression.get('isDirty')) {
       progression.save();
     }
-  }
+  },
+
+  visibleChapters:function(){
+    return this.get('arrangedContent').filter(function(chapter, index, self) {
+      return (chapter.get('visibleSteps.length') !== 0 && !chapter.get('hidden'));
+    }.bind(this));
+  }.property('arrangedContent.@each.visibleSteps.length')
 
 
 });
