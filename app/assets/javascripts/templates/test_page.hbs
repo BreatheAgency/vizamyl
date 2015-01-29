@@ -9,8 +9,8 @@
           {{/each}}
         </ul>
       </div>
-      <p>Well done!<br>Your self assessment for {{currentPage.chapter.title}} - {{currentPage.subject_area}}</p>
-      <p>has been sucessfully completed, and you may now proceed.</p>
+      <p>Well done!</p>
+      <p>Your self-assessment for {{currentPage.chapter.title}} - {{currentPage.subject_area}} has been sucessfully completed, and you may now proceed.</p>
     {{/if}}
     {{#if isInIncorrect}}
     <h1>Self-assessment question results</h1>
@@ -26,7 +26,7 @@
     {{/if}}
     {{#if isInUnanswered}}
       <div class='test-progress'>
-        <p>Self assessment question</p>
+        <p>Self-assessment question</p>
         <ul>
           {{#each question in answeredQuestions}}
             <li class='answered'></li>
