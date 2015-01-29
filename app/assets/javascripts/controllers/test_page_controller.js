@@ -140,7 +140,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   }.property('question.interactive_sources.[]'),
 
   interactiveWidth: function() {
-    switch(this.get('interactive_sources.length')) {
+    switch(this.get('question.interactive_sources.length')) {
       case 1:
         return 521;
         break;
@@ -150,7 +150,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
       default:
         return 163;
     }
-  }.property('interactive_sources.[]'),
+  }.property('question.interactive_sources.[]'),
 
   actions: {
     next: function(step) {
