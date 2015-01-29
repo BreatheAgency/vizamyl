@@ -5,7 +5,7 @@
       <div class='question-results'>
         <ul>
           {{#each question in questionsWithIndex}}
-            <li>Question {{question.index}}: {{question.value.correct}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
+            <li>Question {{question.index}}: {{#if question.value.correct}}Correct{{else}}Incorrect{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
           {{/each}}
         </ul>
       </div>
