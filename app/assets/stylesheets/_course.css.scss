@@ -167,7 +167,7 @@
   .progression {
     margin-top: rem-calc(20);
     margin-bottom: rem-calc(4);
-    padding-top: rem-calc(12);
+    padding-top: rem-calc(15);
     border-top: solid 1px $primary-highlight;
     height: 55px;
 
@@ -178,7 +178,7 @@
 
     h4 {
       padding-left: rem-calc(2);
-      font-size: $h5-font-size;
+      font-size: rem-calc(16);
       color: $primary-color;
     }
 
