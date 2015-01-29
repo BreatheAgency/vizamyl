@@ -9,24 +9,24 @@
           {{/each}}
         </ul>
       </div>
-      <p>Well done!<br>Your self assessment for {{currentPage.chapter.title}} - {{currentPage.subject_area}}</p>
-      <p>has been sucessfully completed, and you may now proceed.</p>
+      <p>Well done!</p>
+      <p>Your self-assessment for {{currentPage.chapter.title}} - {{currentPage.subject_area}} has been sucessfully completed, and you may now proceed.</p>
     {{/if}}
     {{#if isInIncorrect}}
     <h1>Self-assessment question results</h1>
     <div class='question-results'>
       <ul>
         {{#each question in questionsWithIndex}}
-          <li>Question {{question.index}}: {{question.value.correct}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
+          <li>Question {{question.index}}: {{#if question.value.correct}}Correct{{else}}Incorrect{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
         {{/each}}
       </ul>
     </div>
-    <p>Please review the training for {{currentPage.chapter.title}} - {{currentPage.subject_area}}</p>
+    <p>Please review the training for {{currentPage.chapter.title}} - {{currentPage.subject_area}}.</p>
     <p>You will then be re-challenged with more questions on this topic.</p>
     {{/if}}
     {{#if isInUnanswered}}
       <div class='test-progress'>
-        <p>Self assessment question</p>
+        <p>Self-assessment question</p>
         <ul>
           {{#each question in answeredQuestions}}
             <li class='answered'></li>
@@ -106,10 +106,10 @@
           <a {{bind-attr class=':right'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInIncorrect}}
-          <a {{bind-attr class=':right'}} {{action 'select' failure_step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+          <a {{bind-attr class=':right'}} {{action 'failure'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInUnanswered}}
-          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>Next<i class='fi-arrow-right'></i></a>
+          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
       </div>
     </div>
