@@ -52,7 +52,7 @@
   background: #898989;
 }
 
-.img_wrapper {
+.image_wrapper {
   float: left;
   position: relative;
   height: 500px;
@@ -78,7 +78,7 @@
 
 }
 
-.img_wrapper.loaded {
+.image_wrapper.loaded {
 
   img {
     opacity: 1;
@@ -91,32 +91,9 @@
 }
 
 .image-scrollers {
-
   .small-4, .large-4 {
     padding-right: 0;
     padding-left: 0;
     width: 194px;
-
-    .img_wrapper {
-
-      img {
-        width: 163px;
-      }
-
-    }
-
   }
-
-  .small-12, .large-12 {
-
-    .img_wrapper {
-
-      img {
-        width: 521px;
-      }
-
-    }
-
-  }
-
 }

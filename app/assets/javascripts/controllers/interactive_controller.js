@@ -24,6 +24,19 @@ Course.InteractivePageController = Ember.ObjectController.extend({
       }
   }.property('model.interactive_sources.[]'),
 
+  interactiveWidth: function() {
+    switch(this.get('interactive_sources.length')) {
+      case 1:
+        return 521;
+        break;
+      case 2:
+        return 230
+        break;
+      default:
+        return 163;
+    }
+  }.property('interactive_sources.[]'),
+
   actions: {
     next: function(step) {
       this.get('controllers.localeMenu').send('nextStep', step);

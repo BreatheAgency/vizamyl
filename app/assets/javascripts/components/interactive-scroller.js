@@ -2,6 +2,7 @@ Course.InteractiveScrollerComponent = Ember.Component.extend({
   src: '',
   loaded: false,
   imageStep: 0,
+  imageWidth: 0,
   imageHeight: 500,
   imageHeightMax: 0,
 
@@ -19,13 +20,8 @@ Course.InteractiveScrollerComponent = Ember.Component.extend({
         that.set('imageStep', that.get('drag').getStep()[1] - 1);
       },
     })
-
     this.set('drag', drag);
-
-    this.$('.img_wrapper').children('img').one('load', function() {
-      this.set('loaded', true);
-    }.bind(this));
-
+    this.get('drag').enable();
   }.on('didInsertElement'),
 
   imageStepMax: function() {
@@ -33,21 +29,16 @@ Course.InteractiveScrollerComponent = Ember.Component.extend({
   }.property('imageHeight', 'imageHeightMax'),
 
   style: function() {
-    return 'height:' + this.get('imageHeightMax') + 'px;';
-  }.property('imageHeightMax'),
-
-  onLoaded: function() {
-    this.sendAction('finished', true);
-    if (this.get('loaded')) {
-      this.get('drag').enable();
-    } else {
-      this.get('drag').disable();
-    }
-  }.observes('loaded'),
+    return "background-color: black; height:" + this.get('imageHeight') + "px;width:" + this.get('imageWidth') + "px;background-height:" + this.get('imageHeight') + ";background-width:" + this.get('imageWidth') + ";background-image:" + "url('" + this.get('source') + "');" + "background-position:" + "0px 0px;";
+  }.property('imageHeight', 'imageWidth', 'source'),
 
   onScroll: function() {
+    var currentHeight;
     Ember.run.scheduleOnce('afterRender', this, function(){
-      this.$('.img_wrapper').scrollTo(Math.round((this.get('imageStep')) * this.get('imageHeight')));
+      currentHeight = Math.round((this.get('imageStep')) * this.get('imageHeight'));
+      this.$('.image_holder').css({
+        "background-position": "0px " + parseInt(this.get('imageHeightMax') - currentHeight) + "px"
+      })
     });
   }.observes('imageStep'),
 });

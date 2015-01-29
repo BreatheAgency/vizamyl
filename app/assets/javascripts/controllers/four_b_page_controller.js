@@ -149,6 +149,19 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     }
   }.property('question.interactive_sources.[]'),
 
+  interactiveWidth: function() {
+    switch(this.get('interactive_sources.length')) {
+      case 1:
+        return 521;
+        break;
+      case 2:
+        return 230
+        break;
+      default:
+        return 163;
+    }
+  }.property('interactive_sources.[]'),
+
   actions: {
     selectExplanation: function(explanation_source){
       this.set('selectedExplanationSource', explanation_source);

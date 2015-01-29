@@ -43,37 +43,37 @@
           <div class='question'>
             <h2>Frontal pole and lobe</h2>
             {{#each answer in questionSetOne}}
-            <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<div class='body'>{{{answer.body}}}</div></label>
             {{/each}}
           </div>
           <div class='question'>
             <h2>Posterior cingulate and precuneus</h2>
             {{#each answer in questionSetTwo}}
-            <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
             {{/each}}
           </div>
           <div class='question'>
             <h2>Temporal lobe</h2>
             {{#each answer in questionSetThree}}
-            <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<div class='body'>{{{answer.body}}}</div></label>
             {{/each}}
           </div>
           <div class='question'>
             <h2>Parietal lobe</h2>
             {{#each answer in questionSetFour}}
-            <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<div class='body'>{{{answer.body}}}</div></label>
             {{/each}}
           </div>
           <div class='question'>
             <h2>Striatum</h2>
             {{#each answer in questionSetFive}}
-            <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<div class='body'>{{{answer.body}}}</div></label>
             {{/each}}
           </div>
           <div class='question'>
             <h2>Overall classification</h2>
             {{#each answer in question.answers}}
-            <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
+              <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
             {{/each}}
           </div>
         </div>
@@ -95,7 +95,7 @@
       <div class='image-scrollers'>
         {{#each interactive_source in question.interactive_sources}}
           <div {{bind-attr class=":columns columns"}}>
-            {{interactive-scroller imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+            {{interactive-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
           </div>
         {{/each}}
       </div>

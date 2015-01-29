@@ -1,6 +1,5 @@
-<div {{bind-attr class=':img_wrapper :left loaded:loaded:loading'}}>
-  <img {{bind-attr src=source style="style" height=imageHeightMax}} draggable=false/>
-  <div class='spinner'></div>
+<div {{bind-attr class=':image_wrapper :left' width=imageWidth height=imageHeight}}>
+  <div {{bind-attr class=':image_holder' style=style}}></div>
 </div>
 <div class='dragdealer'>
   <div class='handle'>
