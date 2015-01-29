@@ -106,7 +106,7 @@
           <a {{bind-attr class=':right'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInIncorrect}}
-          <a {{bind-attr class=':right'}} {{action 'select' failure_step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+          <a {{bind-attr class=':right'}} {{action 'failure'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInUnanswered}}
           <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>Next<i class='fi-arrow-right'></i></a>

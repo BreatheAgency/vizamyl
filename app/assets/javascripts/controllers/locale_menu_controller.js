@@ -16,14 +16,13 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
 
     selectStep: function(step) {
       // check the step's availabilty
-      if(!step.get('available')) { return; }
+      if (!step.get('available')) { return; }
 
       var page_id = step.get('page.id');
       var page_type = step.get('page.type');
-      if (page_id == undefined){ page_id = step._data.page.id; }
-      if (page_type == undefined){ page_type = step._data.page.type; }
 
-      console.log(page_id, page_type);
+      if (page_id == undefined) { page_id = step._data.page.id; }
+      if (page_type == undefined) { page_type = step._data.page.type; }
 
       // go to the step's page
       this.transitionToRoute('pages.index', Ember.String.dasherize(page_type), page_id);
