@@ -58,11 +58,9 @@
     background: rgba(255, 255, 255, 0.75);
     border-top: 1px #eee solid;
     border-bottom: 1px #eee solid;
-    margin-top: rem-calc(60);
-    margin-bottom: rem-calc(15);
-    margin-left: rem-calc(40);
     text-align: left;
     list-style: none;
+    margin: rem-calc(60) 0 rem-calc(15) 0;
     padding: rem-calc(30) 0 rem-calc(30) 0;
 
     li {
@@ -88,7 +86,7 @@
     }
 
     li:first-child {
-      margin-left: 0;
+      margin-left: rem-calc(40);
     }
 
   }
