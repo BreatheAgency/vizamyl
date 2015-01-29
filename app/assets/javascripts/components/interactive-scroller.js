@@ -19,7 +19,7 @@ Course.InteractiveScrollerComponent = Ember.Component.extend({
         if (!that.get('drag')) { return; } // in case `drag` isn't yet initialized
         that.set('imageStep', that.get('drag').getStep()[1] - 1);
       },
-    })
+    });
     this.set('drag', drag);
     this.get('drag').enable();
   }.on('didInsertElement'),
