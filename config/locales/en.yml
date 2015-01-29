@@ -56,7 +56,7 @@ en:
     home:
       title: Home
       body_html: |
-        <h1>Welcome to the <br><strong>Vizamyl electronic training</strong> programme</h1>
+        <h1>Welcome to the <br><strong>Vizamyl electronic training programme</h1></strong>
         <p>If you are returning to the course, <br><strong>welcome back and please login.</strong></p>
         <p>If you would like to begin the course, <br><strong>welcome, and please enrol.</strong></p>
     course:
@@ -67,7 +67,7 @@ en:
           <p><strong>PRESCRIBING INFORMATION VIZAMYL&#0153; 400 MBq/mL solution for injection<span class="black-triangle">&#9660;</span> Flutemetamol (<span class="tt">18</span>F)</strong></p>
           <p><i>Please refer to full Summary of Product Characteristics (SPC) before prescribing. Further information available on request.</i></p>
           <p><strong>PRESENTATION</strong> Solution for injection. Each mL of solution for injection contains 400 MBq of flutemetamol (<span class="tt">18</span>F) at reference date and time.</p>
-          <p><strong>INDICATIONS</strong> For diagnostic use only. Indicated for Positron Emission Tomography (PET) imaging of βß-amyloid neuritic plaque density in the brains of adult patients with cognitive impairment who are being evaluated for Alzheimer’s disease (AD) and other causes of cognitive impairment. VIZAMYL should be used in conjunction with a clinical evaluation.</p>
+          <p><strong>INDICATIONS</strong> For diagnostic use only. Indicated for Positron Emission Tomography (PET) imaging of β-amyloid neuritic plaque density in the brains of adult patients with cognitive impairment who are being evaluated for Alzheimer’s disease (AD) and other causes of cognitive impairment. VIZAMYL should be used in conjunction with a clinical evaluation.</p>
           <p><strong>DOSAGE AND METHOD OF ADMINISTRATION</strong> Recommended activity for adults including elderly is 185 MBq of flutemetamol (<span class="tt">18</span>F), administered intravenously (as a bolus within approximately 40 seconds). The volume of the injection should be between 1-10mL.</p>
           <p><strong>CONTRAINDICATIONS</strong> Hypersensitivity to the active substance or to any of the excipients.</p>
           <p><strong>WARNINGS AND PRECAUTIONS</strong> Discontinue use if hypersensitivity or anaphylactic reactions occurs. VIZAMYL images should only be interpreted by trained readers using a Sokoloff, Rainbow or Spectrum colour scale. A positive scan does not independently establish a diagnosis of AD or other cognitive disorder. Close contact with infants and pregnant women should be restricted for 24 hours after injection. Consideration should be taken before use in patients which have renal or hepatic impairment, are on a low sodium diet or suffer from alcoholism.</p>
@@ -89,12 +89,12 @@ en:
          References
         body_html: |
           <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. Acta Neuropathol 1991; 82: 239-59.</p>
-          <p>Hyman BT, Phelps CH, Beach TG et al. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. Alzheimers Dement 2012; 8: 1-13.</p>
-          <p>McKhann G, Drachman D, Folstein M et al. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. Neurology 1984; 34: 939-44.</p>
-          <p>McKhann G, Knopman D, Chertkow H et al. The diagnosis of dementia due to Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 263-9.</p>
-          <p>Mirra SS, Heyman A, McKeel D et al. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
-          <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G et al. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-1725.</p>
-          <p>Vandenberghe R, Van Laere K, Ivanoiu A et al. <sup>18</sup>F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. Ann Neurol 2010; 68: 319-29.</p>
+          <p>Hyman BT, Phelps CH, Beach TG <i>et al</i>. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. Alzheimers Dement 2012; 8: 1-13.</p>
+          <p>McKhann G, Drachman D, Folstein M <i>et al</i>. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. Neurology 1984; 34: 939-44.</p>
+          <p>McKhann G, Knopman D, Chertkow H <i>et al</i>. The diagnosis of dementia due to Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 263-9.</p>
+          <p>Mirra SS, Heyman A, McKeel D <i>et al</i>. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
+          <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G <i>et al</i>. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-25.</p>
+          <p>Vandenberghe R, Van Laere K, Ivanoiu A <i>et al</i>. <sup>18</sup>F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. Ann Neurol 2010; 68: 319-29.</p>
           <p>Vizamyl, European Summary of Product Characteristics, August 2014.</p>
       right:
         body_html: |
