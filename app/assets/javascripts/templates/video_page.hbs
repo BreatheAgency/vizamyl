@@ -7,7 +7,7 @@
     </div>
   </div>
   <div class='small-7 large-7 columns with-media with-minimum'>
-    {{video-player finished='finished' mandatory=mandatory source=source}}
+    {{video-player finished='finished' mandatory=false source=source}}
     <div class='row button-container'>
       <div class='small-12 medium-12 large-12 columns'>
         <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
