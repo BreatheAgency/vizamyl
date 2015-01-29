@@ -82,7 +82,8 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
 
   modelDidChange: function() {
     if (this.get('unansweredQuestionRoundIndices.length') === 0) {
-      this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
+      // _.shuffle()
+      this.set('unansweredQuestionRoundIndices', _.range(this.get('question_rounds.length')));
     }
     this.set('unansweredQuestionRoundIndex', this.get('unansweredQuestionRoundIndices').popObject());
     this.sendStateEvent('reset');
