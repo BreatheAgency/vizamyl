@@ -8,7 +8,7 @@
         {{#if testFailedOnce}}
           <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.</p>
         {{else}}
-          <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases. If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the <a href='/{{unbound currentLocale}}/contact'>Vizamyl website</a> to schedule an in-person training session.</p>
+          <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the <a href='/{{unbound currentLocale}}/contact'>Vizamyl website</a> to schedule an in-person training session.</p>
         {{/if}}
       {{/if}}
       <div class='explanation-question-results'>
@@ -97,7 +97,7 @@
           <a {{bind-attr class=':right testFailedOnce:enabled:disabled'}} {{action 'next'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInUnanswered}}
-          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>Next<i class='fi-arrow-right'></i></a>
+          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
       </div>
     </div>

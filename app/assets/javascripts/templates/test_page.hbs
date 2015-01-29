@@ -21,7 +21,7 @@
         {{/each}}
       </ul>
     </div>
-    <p>Please review the training for {{currentPage.chapter.title}} - {{currentPage.subject_area}}</p>
+    <p>Please review the training for {{currentPage.chapter.title}} - {{currentPage.subject_area}}.</p>
     <p>You will then be re-challenged with more questions on this topic.</p>
     {{/if}}
     {{#if isInUnanswered}}
@@ -109,7 +109,7 @@
           <a {{bind-attr class=':right'}} {{action 'failure'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
         {{#if isInUnanswered}}
-          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>Next<i class='fi-arrow-right'></i></a>
+          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
         {{/if}}
       </div>
     </div>
