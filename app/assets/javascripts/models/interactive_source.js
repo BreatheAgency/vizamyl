@@ -4,6 +4,6 @@ Course.InteractiveSource = DS.Model.extend({
   height: DS.attr('number'),
 
   sourceWithUrl:function() {
-    return '//vizamyl-live.s3.amazonaws.com/interactives/' + this.get('source') + '.jpg';
+    return '//dki1hrtf104z9.cloudfront.net/interactives/' + this.get('source') + '.jpg';
   }.property('source')
 });

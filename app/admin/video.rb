@@ -47,9 +47,9 @@ ActiveAdmin.register Video do
       row(:mandatory) { |model| model['mandatory'] ? status_tag('yes',:ok)  : status_tag('no',:ok) }
       row :source do |video|
         video_tag([
-          "//vizamyl-live.s3.amazonaws.com/videos/#{video.source}/playlist.m3u8",
-          "//vizamyl-live.s3.amazonaws.com/videos/#{video.source}/web.mp4",
-          "//vizamyl-live.s3.amazonaws.com/videos/#{video.source}/web.webm"
+          "//dki1hrtf104z9.cloudfront.net/videos/#{video.source}/playlist.m3u8",
+          "//dki1hrtf104z9.cloudfront.net/videos/#{video.source}/web.mp4",
+          "//dki1hrtf104z9.cloudfront.net/videos/#{video.source}/web.webm"
         ], controls: true, autobuffer: true, size: '550x413')
       end
       row :abbreviations
