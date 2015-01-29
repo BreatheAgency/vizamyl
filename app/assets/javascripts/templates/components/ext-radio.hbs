@@ -1,5 +1,5 @@
 {{#each question in content}}
   <div class='question'>
-    <label>{{radio-button value=question name=view.name selection=view.value}}<div class='body'>{{{question.body}}}</div></label>
+    <label>{{radio-button value=question name=view.name selection=view.value}}<div class='body'>{{{question.body}}} ({{{question.correct}}})</div></label>
   </div>
 {{/each}}
