@@ -25,7 +25,7 @@ Course.InteractivePageController = Ember.ObjectController.extend({
   }.property('model.interactive_sources.[]'),
 
   interactiveWidth: function() {
-    switch(this.get('interactive_sources.length')) {
+    switch(this.get('model.interactive_sources.length')) {
       case 1:
         return 521;
         break;
@@ -35,7 +35,7 @@ Course.InteractivePageController = Ember.ObjectController.extend({
       default:
         return 163;
     }
-  }.property('interactive_sources.[]'),
+  }.property('model.interactive_sources.[]'),
 
   actions: {
     next: function(step) {
