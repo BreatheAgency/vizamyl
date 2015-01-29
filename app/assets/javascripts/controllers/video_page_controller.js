@@ -3,7 +3,7 @@ Course.VideoPageController = Ember.ObjectController.extend({
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   finished: Ember.computed.alias('controllers.application.currentStep.completed'),
 
-  complete: function(){
+  complete: function() {
     return true;
     if (this.get('isSuperUser')) { return true; };
 
@@ -16,6 +16,7 @@ Course.VideoPageController = Ember.ObjectController.extend({
 
   actions: {
     next: function(step) {
+      if (!this.get('complete')) { return; }
       this.get('controllers.localeMenu').send('nextStep', step);
     },
 

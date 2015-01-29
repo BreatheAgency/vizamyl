@@ -174,6 +174,8 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
       }
     },
     submit: function() {
+      if (!this.get('answered')) { return; }
+
       this.get('question').setProperties({
         answered: true,
         active: false,
