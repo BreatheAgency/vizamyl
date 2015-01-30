@@ -1,11 +1,4 @@
 .course {
-  .columns.with-content {
-    padding-top: 25px;
-  }
-
-  .columns.with-media {
-    margin-top: 25px;
-  }
 
   nav {
     li {
@@ -14,13 +7,30 @@
   }
 
   main {
-    min-height: 580px;
+    $page-height: 675px;
+    min-height: $page-height;
 
     h1 {
       line-height: rem-calc(30);
       font-family: $global-font;
       font-size: $h3-font-size;
       color: $primary-color;
+    }
+
+    .columns.with-content {
+      padding-top: 25px;
+    }
+
+    .columns.with-media {
+      margin-top: 25px;
+    }
+
+    .columns.with-minumum {
+      min-height: $page-height;
+    }
+
+    .page {
+      min-height: $page-height;
     }
 
     .menu {
