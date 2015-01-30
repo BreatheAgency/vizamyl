@@ -39,8 +39,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
       didEnter: function() {
 
         if (this.get('unansweredQuestionRoundIndices.length') === 0) {
-          // _.shuffle()
-          this.set('unansweredQuestionRoundIndices', _.range(this.get('question_rounds.length')));
+          this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
         }
 
         this.set('unansweredQuestionRoundIndex', this.get('unansweredQuestionRoundIndices').popObject());
@@ -97,8 +96,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   }.property('question_rounds', 'unansweredQuestionRoundIndex'),
 
   unansweredQuestions: function() {
-    // _.shuffle()
-    return this.get('questions').filterBy('answered', false);
+    return _.shuffle(this.get('questions').filterBy('answered', false));
   }.property('questions.@each.answered'),
 
   answeredQuestions: function() {

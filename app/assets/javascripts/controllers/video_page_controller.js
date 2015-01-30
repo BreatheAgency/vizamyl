@@ -4,7 +4,6 @@ Course.VideoPageController = Ember.ObjectController.extend({
   finished: Ember.computed.alias('controllers.application.currentStep.completed'),
 
   complete: function() {
-    return true;
     if (this.get('isSuperUser')) { return true; };
 
     if (this.get('mandatory')) {
