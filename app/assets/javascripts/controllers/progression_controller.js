@@ -12,7 +12,7 @@ Course.ProgressionController = Ember.Controller.extend({
   }.property('progressions.@each.amount'),
 
   total: function() {
-    var total = Math.round(this.get('completeProgressions.length') / (this.get('progressions.length') - this.get('hiddenChapters.lastObject.steps.length'))) * 100 || 0;
+    var total = Math.round(this.get('completeProgressions.length') / (this.get('progressions.length') - this.get('hiddenChapters.lastObject.steps.length')) * 100) || 0;
     return total;
-  }.property('progressions.[]','completeProgressions.[]', 'hiddenChapters.lastObject.steps.length')
+  }.property('progressions.length','completeProgressions.length', 'hiddenChapters.lastObject.steps.length')
 });
