@@ -25,15 +25,11 @@ button {
   -webkit-font-smoothing: antialiased;
 }
 
-h1 {
+h1,h2,h3,h4,h5 {
   font-family: $global-font;
   color: $primary-color;
 }
 
-h2 {
-  font-family: $global-font;
-  color: $primary-color;
-}
 
 .black-triangle {
   vertical-align: super;
