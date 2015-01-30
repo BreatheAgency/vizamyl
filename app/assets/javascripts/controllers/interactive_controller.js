@@ -1,15 +1,7 @@
 Course.InteractivePageController = Ember.ObjectController.extend({
   needs: ['application', 'localeMenu'],
   isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
-  finished: false,
-
-  complete: function(){
-    if (this.get('isSuperUser')) {
-      return true;
-    } else {
-      return this.get('finished');
-    };
-  }.property('finished', 'isSuperUser'),
+  complete: true,
 
   columns: function(){
     switch(this.get('model.interactive_sources.length')) {
@@ -41,10 +33,6 @@ Course.InteractivePageController = Ember.ObjectController.extend({
     next: function(step) {
       if (!this.get('complete')) { return; }
       this.get('controllers.localeMenu').send('nextStep', step);
-    },
-
-    finished: function(bool) {
-      this.set('finished', bool);
     }
   }
 });

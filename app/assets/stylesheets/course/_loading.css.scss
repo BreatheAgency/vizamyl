@@ -1,18 +1,17 @@
 .loading-page {
 
   .spinner {
-    width: 200px;
-    height: 200px;
+    width: 400px;
+    height: 400px;
     margin: auto;
     position: absolute;
     top: 0;
     right: -10px;
     left: 0;
     bottom: 0;
-    animation: ge-spinner-rotation 2s infinite linear;
     background-repeat: no-repeat;
     background-position: center;
-    @include retina-background-image('loading', 200px, 200px);
+    @include retina-background-image('loading', 400px, 400px, 'gif');
   }
 
 }
