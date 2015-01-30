@@ -21,13 +21,15 @@ class User < ActiveRecord::Base
 
   def progress
     return 100 if super_user
-    progress = progressions.where(amount: 1).count.to_f / progressions.count.to_f * 100.0
+    # Count all progressions which are either in progress or complete
+    # Subtract all the progressions available aside from the last Chapter (eg extra test case vidoes)
+    progress = progressions.where(amount: 0.5..1).count.to_f / (progressions.count - Chapter.last.steps.count) * 100.0
     progress.round || 0
   end
 
   def completed
     return true if super_user
-    Step.count == progressions.where(amount: 1).count
+    Step.count == progressions.where(amount: 0.5..1).count
   end
 
   def reset_progress
