@@ -97,7 +97,8 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   }.property('question_rounds', 'unansweredQuestionRoundIndex'),
 
   unansweredQuestions: function() {
-    return _.shuffle(this.get('questions').filterBy('answered', false));
+    // _.shuffle()
+    return this.get('questions').filterBy('answered', false);
   }.property('questions.@each.answered'),
 
   answeredQuestions: function() {
