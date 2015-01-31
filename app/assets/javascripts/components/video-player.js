@@ -18,6 +18,11 @@ Course.VideoPlayerComponent = Ember.Component.extend({
     this.player.one('ended', function(e){
       that.sendAction('finished', true);
     });
+    this.player.on('ended', function(e){
+      if (that.player.isFullscreen()){
+        that.player.exitFullscreen();
+      }
+    });
   },
 
   willDestroyElement: function() {
