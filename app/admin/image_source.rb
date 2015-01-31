@@ -29,7 +29,7 @@ ActiveAdmin.register ImageSource do
   show do
     attributes_table do
       row :source do |image|
-        image_tag('//dki1hrtf104z9.cloudfront.net/images/' + image.source + '.jpg')
+        image_tag("//#{Rails.application.secrets.content_host}/images/#{image.source}.jpg")
       end
     end
   end

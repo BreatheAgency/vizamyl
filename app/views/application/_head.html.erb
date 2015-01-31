@@ -5,7 +5,8 @@
   <meta name='apple-mobile-web-app-capable' content='yes'>
   <title>VIZAMYL&#8482; Flutemetamol 18F Injection Electronic training programme</title>
   <%= csrf_meta_tags %>
-  <link rel='dns-prefetch' href='//dki1hrtf104z9.cloudfront.net'/>
+  <link rel='dns-prefetch' href='//<%= Rails.application.secrets.asset_host %>'/>
+  <link rel='dns-prefetch' href='//<%= Rails.application.secrets.content_host %>'/>
   <link rel='dns-prefetch' href='//cdn.jsdelivr.net'/>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <link href='//cdn.jsdelivr.net/videojs/4.11/video-js.min.css' rel='stylesheet'/>

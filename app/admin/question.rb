@@ -65,9 +65,9 @@ ActiveAdmin.register Question do
       row :explanation_source
       row :explanation do |question|
         video_tag([
-          "//dki1hrtf104z9.cloudfront.net/videos/#{question.explanation_source}/playlist.m3u8",
-          "//dki1hrtf104z9.cloudfront.net/videos/#{question.explanation_source}/web.mp4",
-          "//dki1hrtf104z9.cloudfront.net/videos/#{question.explanation_source}/web.webm"
+          "//#{Rails.application.secrets.content_host}/videos/#{question.explanation_source}/playlist.m3u8",
+          "//#{Rails.application.secrets.content_host}/videos/#{question.explanation_source}/web.mp4",
+          "//#{Rails.application.secrets.content_host}/videos/#{question.explanation_source}/web.webm"
           ], controls: true, autobuffer: true, size: '550x413')
         end
       row(:test_case) { |model| model['test_case'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }

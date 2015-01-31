@@ -36,7 +36,7 @@ ActiveAdmin.register InteractiveSource do
     attributes_table do
       row :label
       row :source do |image|
-        image_tag('//dki1hrtf104z9.cloudfront.net/interactives/' + image.source + '.jpg')
+        image_tag("//#{Rails.application.secrets.content_host}/interactives/#{image.source}.jpg")
       end
       row :height
     end
