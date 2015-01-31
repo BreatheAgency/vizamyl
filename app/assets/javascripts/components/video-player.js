@@ -39,9 +39,9 @@ Course.VideoPlayerComponent = Ember.Component.extend({
   updateSource: function() {
     if (!this.player) { return; } // in case `player` isn't yet initialized
     this.player.src([
-      { type: 'application/vnd.apple.mpegurl', src: '//dki1hrtf104z9.cloudfront.net/videos/' + this.get('source') + '/playlist.m3u8' },
-      { type: 'video/mp4', src: '//dki1hrtf104z9.cloudfront.net/videos/' + this.get('source') + '/web.mp4' },
-      { type: 'video/webm', src: '//dki1hrtf104z9.cloudfront.net/videos/' + this.get('source') + '/web.webm' }
+      { type: 'application/vnd.apple.mpegurl', src: '//' + Course.get('env.content-host') + '/videos/' + this.get('source') + '/playlist.m3u8' },
+      { type: 'video/mp4', src: '//' + Course.get('env.content-host') + '/videos/' + this.get('source') + '/web.mp4' },
+      { type: 'video/webm', src: '//' + Course.get('env.content-host') + '/videos/' + this.get('source') + '/web.webm' }
     ]);
     this.player.ga({
       'eventsToTrack': ['percentsPlayed', 'start', 'end', 'seek', 'play', 'pause'],

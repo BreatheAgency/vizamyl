@@ -59,7 +59,7 @@
           <div class='question'>
             <h2>Overall classification</h2>
             {{#each answer in question.answers}}
-              <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}} ({{{answer.correct}}})</div></label>
+              <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
             {{/each}}
           </div>
         </div>
