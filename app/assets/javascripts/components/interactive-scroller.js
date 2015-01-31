@@ -29,8 +29,8 @@ Course.InteractiveScrollerComponent = Ember.Component.extend({
   }.property('imageHeight', 'imageHeightMax'),
 
   style: function() {
-    return "background-color: black; height:" + this.get('imageHeight') + "px;width:" + this.get('imageWidth') + "px;background-height:" + this.get('imageHeight') + ";background-width:" + this.get('imageWidth') + ";background-image:" + "url('" + this.get('source') + "');" + "background-position:" + "0px 0px;";
-  }.property('imageHeight', 'imageWidth', 'source'),
+    return "background-color: black; height:" + this.get('imageHeight') + "px;width:" + this.get('imageWidth') + "px;background-size:" + this.get('imageWidth') + "px " + this.get('imageHeightMax') + "px;background-image:" + "url('" + this.get('source') + "');" + "background-position:" + "0px 0px;";
+  }.property('imageHeight', 'imageHeightMax', 'imageWidth', 'source'),
 
   onScroll: function() {
     var currentHeight;
