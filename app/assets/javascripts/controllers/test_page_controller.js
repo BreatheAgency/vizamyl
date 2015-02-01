@@ -1,7 +1,7 @@
 Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
-  currentPage: Ember.computed.alias('controllers.application.currentPage'),
   complete: false,
+  currentPage: Ember.computed.alias('controllers.application.currentPage'),
   selectedAnswer: null,
   answered: Ember.computed.bool('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),

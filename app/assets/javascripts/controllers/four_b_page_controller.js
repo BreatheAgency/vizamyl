@@ -1,7 +1,7 @@
 Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
-  currentLocale: Ember.computed.alias('controllers.application.currentLocale'),
   complete: false,
+  currentLocale: Ember.computed.alias('controllers.application.currentLocale'),
   selectedAnswer: null,
   selectedExplanationSource: null,
   answered: Ember.computed.alias('selectedAnswer'),

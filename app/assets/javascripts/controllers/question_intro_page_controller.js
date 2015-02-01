@@ -4,6 +4,7 @@ Course.QuestionIntroPageController = Ember.ObjectController.extend({
 
   actions: {
     next: function(step) {
+      if (!this.get('complete')) { return; }
       this.get('controllers.localeMenu').send('nextStep', step);
     },
   }
