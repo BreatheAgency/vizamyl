@@ -1,5 +1,4 @@
 .course {
-
   nav {
     li {
       color: #fff
@@ -7,7 +6,7 @@
   }
 
   main {
-    $page-height: 675px;
+    $page-height: 615px;
     min-height: $page-height;
 
     h1 {
@@ -31,6 +30,71 @@
 
     .page {
       min-height: $page-height;
+    }
+
+    .page-footer {
+      min-height: 50px;
+
+      .page-actions {
+        a, i, .btn, button {
+          font-family: $global-font;
+          font-size: rem-calc(32);
+          line-height: rem-calc(44);
+          color: $primary-color;
+        }
+
+        i {
+          display:inline-block;
+          width: 44px;
+          height: 44px;
+          margin-left: 12px;
+          padding-left: 8px;
+          border: solid 2px $primary-color;
+          border-radius: 22px;
+        }
+
+        button {
+          line-height: rem-calc(44);
+
+          i {
+            padding-left: 0;
+          }
+
+        }
+
+        .btn {
+          border:none;
+          background:transparent;
+          margin:0;
+          padding:0;
+          cursor:pointer;
+        }
+
+        a:hover, a:hover i {
+          color: $primary-highlight;
+          border-color: $primary-highlight;
+        }
+
+        button:hover, button:hover i {
+          color: $primary-highlight;
+          border-color: $primary-highlight;
+        }
+
+        .disabled {
+          color: #bbb;
+          i {
+            color: #bbb;
+            border-color: #bbb;
+          }
+        }
+      }
+
+      .page-abbreviations {
+        p {
+          font-size: rem-calc(14);
+          margin-bottom: 0;
+        }
+      }
     }
 
     .menu {

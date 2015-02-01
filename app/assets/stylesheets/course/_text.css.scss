@@ -5,28 +5,16 @@
     margin-bottom: rem-calc(20);
   }
 
-  h3{
-      font-size:18px;
-      font-weight:bold;
-      color: #666;
-
+  h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #666;
   }
-
 
   ul {
     list-style-position: inside;
     margin-top: rem-calc(10);
     margin-bottom: rem-calc(10);
-  }
-
-  .abbreviations {
-    position: absolute;
-    bottom: 0px;
-
-    p {
-      font-size: rem-calc(14);
-      margin-bottom: 0;
-    }
   }
 
 }

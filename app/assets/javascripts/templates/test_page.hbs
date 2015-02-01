@@ -100,18 +100,25 @@
         {{/each}}
       </div>
     </div>
-    <div class='row button-container'>
-      <div class='small-12 medium-12 large-12 columns'>
-        {{#if isInCorrect}}
-          <a {{bind-attr class=':right'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
-        {{/if}}
-        {{#if isInIncorrect}}
-          <a {{bind-attr class=':right'}} {{action 'failure'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
-        {{/if}}
-        {{#if isInUnanswered}}
-          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
-        {{/if}}
-      </div>
+  </div>
+</div>
+<div class='row page-footer'>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-abbreviations'>
+      <p>{{{abbreviations}}}</p>
+    </div>
+  </div>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-actions'>
+      {{#if isInCorrect}}
+        <a {{bind-attr class=':right'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+      {{/if}}
+      {{#if isInIncorrect}}
+        <a {{bind-attr class=':right'}} {{action 'failure'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+      {{/if}}
+      {{#if isInUnanswered}}
+        <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+      {{/if}}
     </div>
   </div>
 </div>
