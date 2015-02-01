@@ -17,6 +17,6 @@ Course.Page = DS.Model.extend({
   }.property('progress'),
 
   completed: function() {
-    return this.get('progression') === 1;
+    return this.get('progress') === 1;
   }.property('progress'),
 });
