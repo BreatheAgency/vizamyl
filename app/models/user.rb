@@ -32,14 +32,13 @@ class User < ActiveRecord::Base
     Step.count == progressions.where(amount: 0.5..1).count
   end
 
+  def passed
+    super_user || self.passed_round_one || self.passed_round_two
+  end
+
   def reset_progress
     self.progressions.update_all(amount: 0)
     self.progressions.where(step: Chapter.first.steps.first).first.update_attribute(:amount, 0.5)
-
-    # (Chapter.first.steps | Chapter.second.steps).each do |step|
-    #   self.progressions.where(step: step).first.update_attribute(:amount, 1)
-    # end
-    # self.progressions.where(step: Chapter.third.steps.first).first.update_attribute(:amount, 0.5)
   end
 
   private

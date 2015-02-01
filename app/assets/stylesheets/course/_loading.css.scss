@@ -1,6 +1,6 @@
 .loading-page {
 
-  .spinner {
+  .loader {
     width: 400px;
     height: 400px;
     margin: auto;
@@ -11,7 +11,7 @@
     bottom: 0;
     background-repeat: no-repeat;
     background-position: center;
-    @include retina-background-image('loading', 400px, 400px, 'gif');
+    @include retina-background-image('loader', 400px, 400px, 'gif');
   }
 
 }

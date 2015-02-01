@@ -3,7 +3,6 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   sortProperties: ['position'],
   sortAscending: true,
   isComplete: Ember.computed.alias('controllers.application.isComplete'),
-  isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
   hiddenChapters: Ember.computed.filterBy('arrangedContent', 'hidden', true),
 
   actions: {

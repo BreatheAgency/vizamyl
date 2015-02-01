@@ -3,6 +3,7 @@ Course.ApplicationController = Ember.Controller.extend({
   currentPage: null,
   signedIn: Ember.computed.notEmpty('currentUser'),
   isComplete: Ember.computed.bool('currentUser.completed'),
+  isSuperUser: Ember.computed.bool('currentUser.super_user'),
 
   currentStep: function() {
     return this.get('currentPage.step');
@@ -15,9 +16,5 @@ Course.ApplicationController = Ember.Controller.extend({
   currentUser: function() {
     return Course.get('user');
   }.property('Course.user'),
-
-  isSuperUser:function(){
-    return this.get('currentUser.super_user') || false;
-  }.property('currentUser'),
 
 });
