@@ -38,6 +38,23 @@ class User < ActiveRecord::Base
   end
   alias_method :passed?, :passed
 
+  def failed
+    self.failed_round_one || self.failed_round_two
+  end
+  alias_method :failed?, :failed
+
+  def final_assessment_status
+    if passed?
+      return 'Passed'
+    elsif failed_round_one?
+      return 'Failed first round'
+    elsif failed_round_two?
+      return 'Failed second round'
+    elsif completed?
+      return 'Not Taken'
+    end
+  end
+
   def reset_progress
     self.progressions.update_all(amount: 0)
     self.progressions.where(step: Chapter.first.steps.first).first.update_attribute(:amount, 0.5)
