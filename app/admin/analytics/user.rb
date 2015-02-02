@@ -1,5 +1,5 @@
 ActiveAdmin.register User, as: 'Users' do
-  actions :all, except: [:new, :destroy]
+  actions :all, except: [:new, :destroy, :edit]
   config.filters = false
 
   controller do
@@ -17,9 +17,13 @@ ActiveAdmin.register User, as: 'Users' do
 
   index do
     selectable_column
-    column :id
+    column :id do |user|
+      link_to(user.id, admin_user_path(user))
+    end
     column :locale
-    column :email
+    column :email do |user|
+      link_to(user.email, admin_user_path(user))
+    end
     column(:progress) {|model| "#{model.progress}%" }
     column :final_assessment_status
     actions
