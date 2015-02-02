@@ -1,17 +1,13 @@
 <div class='row progression'>
-  <div class='large-12 columns'>
-    <div class='row'>
-      <div class='large-6 columns'>
-        <h4>
-          {{currentPage.chapter.title}}
-          {{#if currentPage.subject_area}}
-           - {{currentPage.subject_area}}
-          {{/if}}
-        </h4>
-      </div>
-      <div class='large-6 columns'>
-        {{visual-progression total=total chapters=visibleChapters}}
-      </div>
-    </div>
+  <div class='small-6 medium-6 large-6 columns progression-title'>
+    <h4>
+      {{currentPage.chapter.title}}
+      {{#if currentPage.subject_area}}
+       - {{currentPage.subject_area}}
+      {{/if}}
+    </h4>
+  </div>
+  <div class='small-6 medium-6 large-6 columns progression-visual'>
+    {{visual-progression total=total chapters=visibleChapters}}
   </div>
 </div>

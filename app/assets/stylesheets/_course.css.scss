@@ -249,7 +249,7 @@
     border-top: solid 1px $primary-highlight;
     height: 55px;
 
-    .large-12 .columns {
+    .progression-title, .progression-visual {
       padding-left: 0px;
       padding-right: 0px;
     }
@@ -260,40 +260,39 @@
       color: $primary-color;
     }
 
-  }
+    .visual-progression {
+      padding-right: rem-calc(8);
 
-  .visual-progression {
-    padding-right: rem-calc(8);
+      .progression-amount {
+        padding-left: rem-calc(10);
+      }
 
-    .progression-amount {
-      padding-left: rem-calc(10);
-    }
+      .progression-blocks {
+        @extend .inline-list;
+        margin-top: rem-calc(3);
 
-    .progression-blocks {
-      @extend .inline-list;
-      margin-top: rem-calc(3);
+        li {
+          margin-left: rem-calc(5);
+          height: 100%;
+          background-color: tint(#005DBA, 50%);
+          padding: 0 10px 0 10px;
+          color: white;
+          text-align: center;
+          font-size: $h6-font-size;
+          font-weight: normal;
 
-      li {
-        margin-left: rem-calc(5);
-        height: 100%;
-        background-color: tint(#005DBA, 50%);
-        padding: 0 10px 0 10px;
-        color: white;
-        text-align: center;
-        font-size: $h6-font-size;
-        font-weight: normal;
-
-        a, a:hover {
-          color:white
+          a, a:hover {
+            color:white
+          }
         }
-      }
 
-      li:first-child {
-        margin-left: 0;
-      }
+        li:first-child {
+          margin-left: 0;
+        }
 
-      .available {
-        background-color: $primary-color;
+        .available {
+          background-color: $primary-color;
+        }
       }
     }
   }
