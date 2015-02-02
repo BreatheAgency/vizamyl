@@ -1,4 +1,4 @@
-ActiveAdmin.register Answer do
+ActiveAdmin.register Answer, namespace: :content do
   config.paginate = false
   config.filters = false
 

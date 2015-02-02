@@ -1,4 +1,4 @@
-ActiveAdmin.register QuestionRound do
+ActiveAdmin.register QuestionRound, namespace: :content do
   actions :all, except: [:new]
   config.paginate = false
   config.filters = false
@@ -14,10 +14,10 @@ ActiveAdmin.register QuestionRound do
 
   index do
     column :id do |question_round|
-      link_to(question_round.id, admin_question_round_path(question_round))
+      link_to(question_round.id, content_question_round_path(question_round))
     end
     column :subject do |question_round|
-      link_to(question_round.subject.title, polymorphic_url([:admin, question_round.subject.chapter, question_round.subject]))
+      link_to(question_round.subject.title, polymorphic_url([:content, question_round.subject.chapter, question_round.subject]))
     end
     column :questions_count do |question_round|
       question_round.questions.count
@@ -39,10 +39,10 @@ ActiveAdmin.register QuestionRound do
       question_round.questions.each do |question|
         attributes_table_for question do
           row :id do |question|
-            link_to(question.id, admin_question_round_question_path(question_round, question))
+            link_to(question.id, content_question_round_question_path(question_round, question))
           end
           row :title do |question|
-            link_to(question.title, admin_question_round_question_path(question_round, question))
+            link_to(question.title, content_question_round_question_path(question_round, question))
           end
         end
       end

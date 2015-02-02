@@ -1,5 +1,4 @@
-ActiveAdmin.register Text do
-  config.sort_order = 'id_asc'
+ActiveAdmin.register QuestionIntro, namespace: :content do
   actions :all, except: [:new, :destroy]
   config.paginate = false
   config.filters = false
@@ -14,11 +13,11 @@ ActiveAdmin.register Text do
   end
 
   index do
-    column :page_id do |text|
-      link_to(text.page_id, admin_chapter_text_path(chapter, text))
+    column :page_id do |video|
+      link_to(video.page_id, content_chapter_video_path(chapter, video))
     end
-    column :title do |text|
-      link_to(text.title, admin_chapter_text_path(chapter, text))
+    column :title do |video|
+      link_to(video.title, content_chapter_video_path(chapter, video))
     end
     # translation_status_flags
     actions
@@ -29,7 +28,6 @@ ActiveAdmin.register Text do
       t.input :title
       t.input :body, as: :html_editor
       t.input :subject_area
-      t.input :abbreviations, as: :html_editor
     end
     f.actions
   end
@@ -39,7 +37,6 @@ ActiveAdmin.register Text do
       row :title
       row :body
       row :subject_area
-      row :abbreviations
     end
   end
 end

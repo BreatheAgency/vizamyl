@@ -1,4 +1,4 @@
-ActiveAdmin.register InteractiveSource do
+ActiveAdmin.register InteractiveSource, namespace: :content do
   config.sort_order = 'id_asc'
   actions :all, except: [:new, :destroy]
   config.paginate = false

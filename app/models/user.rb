@@ -31,10 +31,12 @@ class User < ActiveRecord::Base
     return true if super_user
     Step.count == progressions.where(amount: 0.5..1).count
   end
+  alias_method :completed?, :completed
 
   def passed
     super_user || self.passed_round_one || self.passed_round_two
   end
+  alias_method :passed?, :passed
 
   def reset_progress
     self.progressions.update_all(amount: 0)

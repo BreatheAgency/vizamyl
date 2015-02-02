@@ -1,4 +1,4 @@
-ActiveAdmin.register Question do
+ActiveAdmin.register Question, namespace: :content do
   config.paginate = false
   config.filters = false
   # menu false
@@ -13,10 +13,10 @@ ActiveAdmin.register Question do
 
   index do
     column :id do |question|
-      link_to(question.id, admin_question_round_question_path(question_round, question))
+      link_to(question.id, content_question_round_question_path(question_round, question))
     end
     column :title do |question|
-      link_to(question.title, admin_question_round_question_path(question_round, question))
+      link_to(question.title, content_question_round_question_path(question_round, question))
     end
     column(:test_case) { |model| model['test_case'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     column :answers_count do |question|
@@ -76,7 +76,7 @@ ActiveAdmin.register Question do
       question.interactive_sources.each do |interactive_source|
         attributes_table_for interactive_source do
           row :id do |interactive_source|
-            link_to(interactive_source.id, admin_interactive_source_path(interactive_source))
+            link_to(interactive_source.id, content_interactive_source_path(interactive_source))
           end
           row :label
           row :source
@@ -88,7 +88,7 @@ ActiveAdmin.register Question do
       question.image_sources.each do |image_source|
         attributes_table_for image_source do
           row :id do |image_source|
-            link_to(image_source.id, admin_image_source_path(image_source))
+            link_to(image_source.id, content_image_source_path(image_source))
           end
           row :source
         end
@@ -98,7 +98,7 @@ ActiveAdmin.register Question do
       question.answers.each do |answer|
         attributes_table_for answer do
           row :id do |answer|
-            link_to(answer.id, admin_question_answer_path(question, answer))
+            link_to(answer.id, content_question_answer_path(question, answer))
           end
           row :body
           row(:correct) { |model| model['correct'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }

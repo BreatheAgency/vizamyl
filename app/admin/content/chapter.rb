@@ -1,4 +1,4 @@
-ActiveAdmin.register Chapter do
+ActiveAdmin.register Chapter, namespace: :content do
   actions :all, except: [:new, :destroy]
   config.sort_order = 'position_asc'
   config.filters = false
@@ -20,7 +20,7 @@ ActiveAdmin.register Chapter do
   index do
     sortable_handle_column
     column :title do |chapter|
-      link_to(chapter.title, admin_chapter_path(chapter))
+      link_to(chapter.title, content_chapter_path(chapter))
     end
     # translation_status_flags
     actions
@@ -29,7 +29,7 @@ ActiveAdmin.register Chapter do
   sidebar 'Pages', only: [:show] do
     ul do
       %i(videos texts images interactives question_intros tests four_bs).each do |page_type|
-        li(link_to(page_type.to_s.titleize, polymorphic_url([:admin, chapter, page_type.to_s.tableize])))
+        li(link_to(page_type.to_s.titleize, polymorphic_url([:content, chapter, page_type.to_s.tableize])))
       end
     end
   end
@@ -50,14 +50,14 @@ ActiveAdmin.register Chapter do
     panel 'Pages' do
       table_for chapter.steps do
         column :id do |step|
-          link_to(step.page.page_id, polymorphic_url([:admin, chapter, step.page]))
+          link_to(step.page.page_id, polymorphic_url([:content, chapter, step.page]))
         end
         column :title do |step|
-          link_to(step.page.title, polymorphic_url([:admin, chapter, step.page]))
+          link_to(step.page.title, polymorphic_url([:content, chapter, step.page]))
         end
         column :page_type
       end
-      h5(link_to('Adjust steps (eg page order)', admin_chapter_steps_path(chapter)))
+      h5(link_to('Adjust steps (eg page order)', content_chapter_steps_path(chapter)))
     end
   end
 end

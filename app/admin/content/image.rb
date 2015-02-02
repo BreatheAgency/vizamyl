@@ -1,10 +1,11 @@
-ActiveAdmin.register ImageSource do
+ActiveAdmin.register Image, namespace: :content do
   config.sort_order = 'id_asc'
   actions :all, except: [:new, :destroy]
   config.paginate = false
   config.filters = false
 
-  # belongs_to :subject, polymorphic: true
+  belongs_to :chapter, polymorphic: true
+  sortable
 
   controller do
     def permitted_params
@@ -13,21 +14,29 @@ ActiveAdmin.register ImageSource do
   end
 
   index do
-    column :id
-    column :source
+    column :page_id do |video|
+      link_to(video.page_id, content_chapter_video_path(chapter, video))
+    end
+    column :title do |video|
+      link_to(video.title, content_chapter_video_path(chapter, video))
+    end
     # translation_status_flags
     actions
   end
 
   form do |f|
     f.translated_inputs do |t|
+      t.input :title
+      t.input :subject_area
       t.input :source
     end
     f.actions
   end
 
-  show do
+  show title: :page_id do
     attributes_table do
+      row :title
+      row :subject_area
       row :source do |image|
         image_tag("//#{Rails.application.secrets.content_host}/images/#{image.source}.jpg")
       end

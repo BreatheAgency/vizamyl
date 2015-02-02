@@ -1,4 +1,4 @@
-ActiveAdmin.register FourB do
+ActiveAdmin.register FourB, namespace: :content do
   config.sort_order = 'id_asc'
   actions :all, except: [:new, :destroy]
   config.paginate = false
@@ -15,10 +15,10 @@ ActiveAdmin.register FourB do
 
   index do
     column :page_id do |test|
-      link_to(test.page_id, admin_chapter_test_path(chapter, test))
+      link_to(test.page_id, content_chapter_test_path(chapter, test))
     end
     column :title do |test|
-      link_to(test.title, admin_chapter_test_path(chapter, test))
+      link_to(test.title, content_chapter_test_path(chapter, test))
     end
     # translation_status_flags
     actions
@@ -44,7 +44,7 @@ ActiveAdmin.register FourB do
       test.question_rounds.each do |question_round|
         attributes_table_for question_round do
           row :id do |question_round|
-            link_to(question_round.id, admin_question_round_path(question_round))
+            link_to(question_round.id, content_question_round_path(question_round))
           end
           row :questions_count do |question_round|
             question_round.questions.count

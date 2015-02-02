@@ -1,11 +1,22 @@
-ActiveAdmin.setup do |config|
+class ContentAuthorization < ActiveAdmin::AuthorizationAdapter
+  def authorized?(action, subject = nil)
+    true
+    # case subject
+    # when ActiveAdmin::Page
+    #   action == :read && subject.name == "Dashboard"
+    # else
+    #   false
+    # end
+  end
+end
 
+ActiveAdmin.setup do |config|
   # == Site Title
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.
   #
-  config.site_title = 'Vizamyl'
+  config.site_title = 'Vizamyl Admin'
 
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
@@ -34,7 +45,7 @@ ActiveAdmin.setup do |config|
   #   config.default_namespace = false
   #
   # Default:
-  # config.default_namespace = :admin
+  config.default_namespace = :admin
   #
   # You can customize the settings for each namespace by using
   # a namespace block. For example, to change the site title
@@ -110,7 +121,7 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  config.root_to = 'chapters#index'
+  config.root_to = 'dashboard#index'
 
 
   # == Admin Comments
@@ -200,6 +211,13 @@ ActiveAdmin.setup do |config|
   #       menu.add label: 'My Great Website', url: 'http://www.mygreatwebsite.com', html_options: { target: :blank }
   #     end
   #   end
+
+  config.namespace :content do |admin|
+    admin.site_title = 'Vizamyl Content'
+    admin.site_title_link = '/content'
+    admin.authorization_adapter = 'ContentAuthorization'
+    admin.root_to = 'chapters#index'
+  end
 
 
   # == Download Links

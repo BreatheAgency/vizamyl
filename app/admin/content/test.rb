@@ -1,4 +1,4 @@
-ActiveAdmin.register Test do
+ActiveAdmin.register Test, namespace: :content do
   config.sort_order = 'id_asc'
   actions :all, except: [:new, :destroy]
   config.paginate = false
@@ -15,14 +15,14 @@ ActiveAdmin.register Test do
 
   index do
     column :page_id do |test|
-      link_to(test.page_id, admin_chapter_test_path(chapter, test))
+      link_to(test.page_id, content_chapter_test_path(chapter, test))
     end
     column :subject_area do |test|
-      link_to(test.subject_area, admin_chapter_test_path(chapter, test))
+      link_to(test.subject_area, content_chapter_test_path(chapter, test))
     end
     column :failure_step do |test|
       if test.failure_step.present?
-        link_to(test.failure_step.page.page_id, polymorphic_url([:admin, test.failure_step.page.chapter, test.failure_step.page]))
+        link_to(test.failure_step.page.page_id, polymorphic_url([:content, test.failure_step.page.chapter, test.failure_step.page]))
       end
     end
     # translation_status_flags
@@ -48,7 +48,7 @@ ActiveAdmin.register Test do
       row :subject_area
       row :failure_step do |test|
         if test.failure_step.present?
-          link_to(test.failure_step.page.page_id, polymorphic_url([:admin, test.failure_step.page.chapter, test.failure_step.page]))
+          link_to(test.failure_step.page.page_id, polymorphic_url([:content, test.failure_step.page.chapter, test.failure_step.page]))
         end
       end
     end
@@ -56,7 +56,7 @@ ActiveAdmin.register Test do
       test.question_rounds.each do |question_round|
         attributes_table_for question_round do
           row :id do |question_round|
-            link_to(question_round.id, admin_question_round_path(question_round))
+            link_to(question_round.id, content_question_round_path(question_round))
           end
           row :questions_count do |question_round|
             question_round.questions.count

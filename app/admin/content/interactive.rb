@@ -1,4 +1,4 @@
-ActiveAdmin.register Interactive do
+ActiveAdmin.register Interactive, namespace: :content do
   config.sort_order = 'id_asc'
   actions :all, except: [:new, :destroy]
   config.paginate = false
@@ -15,10 +15,10 @@ ActiveAdmin.register Interactive do
 
   index do
     column :page_id do |interactive|
-      link_to(interactive.page_id, admin_chapter_interactive_path(chapter, interactive))
+      link_to(interactive.page_id, content_chapter_interactive_path(chapter, interactive))
     end
     column :title do |interactive|
-      link_to(interactive.title, admin_chapter_interactive_path(chapter, interactive))
+      link_to(interactive.title, content_chapter_interactive_path(chapter, interactive))
     end
     # translation_status_flags
     actions
@@ -52,7 +52,7 @@ ActiveAdmin.register Interactive do
       interactive.interactive_sources.each do |interactive_source|
         attributes_table_for interactive_source do
           row :id do |interactive_source|
-            link_to(interactive_source.id, admin_interactive_source_path(interactive_source))
+            link_to(interactive_source.id, content_interactive_source_path(interactive_source))
           end
           row :label
           row :source

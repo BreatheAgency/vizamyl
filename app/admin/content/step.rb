@@ -1,4 +1,4 @@
-ActiveAdmin.register Step do
+ActiveAdmin.register Step, namespace: :content do
   actions :all, except: [:new, :destroy]
   config.sort_order = 'position_asc'
   config.paginate = false
@@ -18,7 +18,7 @@ ActiveAdmin.register Step do
     column :position
     column :id
     column :page do |step|
-      link_to(step.page.title, polymorphic_url([:admin, chapter, step.page]))
+      link_to(step.page.title, polymorphic_url([:content, chapter, step.page]))
     end
     column(:visible) { |model| model['visible'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     column :page_type

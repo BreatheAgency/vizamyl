@@ -1,4 +1,4 @@
-ActiveAdmin.register User do
+ActiveAdmin.register User, as: 'Users' do
   actions :all, except: [:new, :destroy]
   config.filters = false
 
@@ -21,7 +21,8 @@ ActiveAdmin.register User do
     column :locale
     column :email
     column(:progress) {|model| "#{model.progress}%" }
-    column(:completed) { |model| model['completed'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+    column(:passed) { |model| model.passed? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+    column(:completed) { |model| model.completed? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     actions
   end
 
@@ -39,7 +40,7 @@ ActiveAdmin.register User do
       row :id
       row :email
       row(:progress) {|model| "#{model.progress}%" }
-      row(:completed) { |model| model['completed'] ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+      row(:completed) { |model| model.completed? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
     end
   end
 end

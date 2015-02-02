@@ -1,4 +1,4 @@
-ActiveAdmin.register Video do
+ActiveAdmin.register Video, namespace: :content do
   config.sort_order = 'id_asc'
   actions :all, except: [:new, :destroy]
   config.paginate = false
@@ -15,10 +15,10 @@ ActiveAdmin.register Video do
 
   index do
     column :page_id do |video|
-      link_to(video.page_id, admin_chapter_video_path(chapter, video))
+      link_to(video.page_id, content_chapter_video_path(chapter, video))
     end
     column :title do |video|
-      link_to(video.title, admin_chapter_video_path(chapter, video))
+      link_to(video.title, content_chapter_video_path(chapter, video))
     end
     column(:mandatory) { |model| model['mandatory'] ? status_tag('yes', :ok)  : status_tag('no',:ok) }
     # translation_status_flags
