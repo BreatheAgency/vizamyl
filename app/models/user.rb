@@ -50,7 +50,7 @@ class User < ActiveRecord::Base
       return 'Failed first round'
     elsif failed_round_two?
       return 'Failed second round'
-    elsif completed?
+    else
       return 'Not Taken'
     end
   end
