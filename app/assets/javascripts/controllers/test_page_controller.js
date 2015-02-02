@@ -172,7 +172,14 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
         correct: this.get('selectedAnswer.correct')
       });
 
-      this.set('selectedAnswer', null);
+      this.setProperties({
+        selectedAnswer: null,
+        questionSetOneSelection: null,
+        questionSetTwoSelection: null,
+        questionSetThreeSelection: null,
+        questionSetFourSelection: null,
+        questionSetFiveSelection: null,
+      });
 
       if (this.get('testComplete')) {
         this.sendStateEvent('answer');
