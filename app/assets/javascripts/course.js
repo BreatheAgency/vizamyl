@@ -27,6 +27,7 @@ window.Course = Ember.Application.create({
 
 Ember.onerror = function(error){
   Rollbar.error(error);
+  window.location.replace('/404');
 };
 
 Ember.RSVP.on('error', function(error) {
