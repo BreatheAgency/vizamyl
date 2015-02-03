@@ -342,7 +342,7 @@ DEPENDENCIES
   rails (~> 4.1)
   rails_12factor
   rake (~> 10.3)
-  rollbar (~> 1.2.7)
+  rollbar
   sass-rails (~> 4.0)
   simple_form
   skylight
