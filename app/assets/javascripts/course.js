@@ -25,11 +25,18 @@ window.Course = Ember.Application.create({
   // LOG_TRANSITIONS_INTERNAL: true,
 });
 
-Ember.onerror = function(error){
+// Safety net to report any untrapped exceptions on browsers
+// that respect window.onerror.  Currently, failures from within
+// Backburner callbacks will end up here. This is inferior to the
+// other handlers because the stack trace is missing by the
+// time the exception gets here.
+window.onerror = function report_error(error) {
   Rollbar.error(error);
-  window.location.replace('/404');
+  // window.location.replace('/404');
 };
 
-Ember.RSVP.on('error', function(error) {
-  Rollbar.error(error);
-});
+// Trap exceptions from within Ember run loop
+Ember.onerror = window.onerror;
+
+// Trap unhandled RSVP promise failures
+Ember.RSVP.configure('onerror', window.onerror);
