@@ -12,6 +12,13 @@ run Rack::Builder.new {
       end
   end
 
+  use Rack::Cors do
+    allow do
+      origins 'vizamyl-staging.herokuapp.com', 'vizamyl.herokuapp.com'
+      resource '*', :headers => :any, :methods => [:get, :post, :delete, :put, :options]
+    end
+  end
+
   map '/ping' do
     run proc { |_env| Rack::Response.new('PING', 200) }
   end
