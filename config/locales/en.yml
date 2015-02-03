@@ -37,12 +37,12 @@ en:
       contact: Contact
       accessibility: Accessibility
       copyright_html: |
-        <p>&copy; 2014 General Electric Company - All rights reserved.</p>
+        <p>&copy; 2015 General Electric Company - All rights reserved.</p>
         <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
         <p>Vizamyl is a trademark of General Electric Company or one of its subsidiaries.</p>
         <p><a href="/en/terms-and-conditions">Terms and conditions</a></p>
       reference_html: |
-        <p class="right">01-2014 JB6231 INT’L ENG</p>
+        <p class="right">01-2015 JB6231 INT’L ENG</p>
   course:
     actions:
       next: Next
