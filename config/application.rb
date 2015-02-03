@@ -38,6 +38,7 @@ module Vizamyl
 
     #
     config.assets.precompile += %w(active_admin/active_admin_globalize.css active_admin/active_admin_globalize.js)
+    config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
     config.assets.precompile += %w(course.js)
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.assets.initialize_on_precompile = true

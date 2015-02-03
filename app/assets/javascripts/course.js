@@ -1,4 +1,5 @@
 //= require ./deps
+//= require video
 //= require ./videojs.ga
 //= require ./dragdealer
 //= require handlebars
