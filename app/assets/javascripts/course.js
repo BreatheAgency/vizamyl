@@ -24,3 +24,11 @@ window.Course = Ember.Application.create({
   // LOG_TRANSITIONS: true,
   // LOG_TRANSITIONS_INTERNAL: true,
 });
+
+Ember.onerror = function(error){
+  Rollbar.error(error);
+};
+
+Ember.RSVP.on('error', function(error) {
+  Rollbar.error(error);
+});
