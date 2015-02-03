@@ -34,4 +34,6 @@ Ember.RSVP.configure('onerror',function(error) {
 
 window.onerror = function(error) {
   Rollbar.error(error);
+  console.error(error.message);
+  console.error(error.stack);
 };

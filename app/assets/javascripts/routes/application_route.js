@@ -5,6 +5,8 @@ Course.ApplicationRoute = Ember.Route.extend({
   actions: {
     error: function(error) {
       Rollbar.error(error);
+      console.error(error.message);
+      console.error(error.stack);
       // window.location.replace('/404');
     }
   }
