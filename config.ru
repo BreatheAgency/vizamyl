@@ -11,11 +11,10 @@ run Rack::Builder.new {
         r302 %r{.*}, 'https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/'
       end
   end
-
   use Rack::Cors do
     allow do
-      origins 'vizamyl-staging.herokuapp.com', 'vizamyl.herokuapp.com'
-      resource '*', :headers => :any, :methods => [:get, :post, :delete, :put, :options]
+      origins %w(https://vizamyl-staging.herokuapp.com http://vizamyl-staging.herokuapp.com https://vizamyl.herokuapp.com http://vizamyl.herokuapp.com http://0.0.0.0:5000 http://0.0.0.0:3000)
+      resource '*', headers: :any, credentials: true, methods: [:get, :post, :put, :patch, :delete, :options], max_age: (ENV['RACK_ENV'] == 'production' ? 86_400 : 0)
     end
   end
 
