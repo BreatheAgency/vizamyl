@@ -14,7 +14,7 @@ class CourseCompletionPDF < Prawn::Document
     height = 32
     margin = 3.5
     fill_color '005cb9'
-    text_box("Salutation: " + user.title, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
+    text_box("Salutation: " + user.salutation, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
     text_box("First name: " + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box("Last name: " + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
     text_box("Date: " + Time.now.strftime("#{Time.now.day.ordinalize} %B %Y"), at: [left, top + margin + height], style: :normal, size: 14)

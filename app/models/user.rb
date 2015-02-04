@@ -10,10 +10,12 @@ class User < ActiveRecord::Base
 
   before_create :create_progressions
 
-
   def full_name
     "#{self.title} #{self.first_name} #{self.last_name}"
   end
+
+  # TODO deprecate
+  alias_attribute :title, :salutation
 
   def latest_step
     latest_progression = progressions.where(amount: 0.5..1).last
