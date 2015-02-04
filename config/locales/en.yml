@@ -234,7 +234,7 @@ en:
       updated_not_active: "Your password was changed successfully."
     registrations:
       edit:
-        titles:
+        salutations:
           - Dr
           - Mr
           - Mrs
@@ -250,7 +250,7 @@ en:
         unhappy: "Unhappy"
       new:
         sign_up: "Sign up"
-        titles:
+        salutations:
           - Dr
           - Mr
           - Mrs
