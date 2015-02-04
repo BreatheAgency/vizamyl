@@ -42,7 +42,7 @@ en:
         <p>Vizamyl is a trademark of General Electric Company or one of its subsidiaries.</p>
         <p><a href="/en/terms-and-conditions">Terms and conditions</a></p>
       reference_html: |
-        <p class="right">01-2015 JB6231 INT’L ENG</p>
+        <p class="right"></p>
   course:
     actions:
       next: Next
