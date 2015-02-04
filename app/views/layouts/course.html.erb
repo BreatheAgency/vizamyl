@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class=""> <!--<![endif]-->
   <%= render partial: 'head' %>
   <body class='course'>
-    <%= tag(:meta, content: UserSerializer.new(current_user).to_json, name: 'bootstrap') %>
+    <%= tag(:meta, content: UserSerializer.new(current_user, scope: current_user).to_json, name: 'bootstrap') %>
     <%= tag(:meta, content: Rails.application.secrets.asset_host, name: 'env-asset-host') %>
     <%= tag(:meta, content: Rails.application.secrets.content_host, name: 'env-content-host') %>
     <%= render partial: 'ga' %>
