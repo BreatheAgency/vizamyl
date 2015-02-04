@@ -6,7 +6,7 @@
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form', method: :put }) do |f| %>
       <div class='form-inputs'>
         <label><abbr title='required'>*</abbr> Salutation</label>
-        <%= f.collection_radio_buttons(:title, t('.titles'), :to_s, :to_s, checked: resource.title, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
+        <%= f.collection_radio_buttons(:salutation, t('.salutations'), :to_s, :to_s, checked: resource.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
             b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
           end
         %>

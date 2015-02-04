@@ -8,19 +8,11 @@ ActiveAdmin.register User, as: 'Users' do
     end
   end
 
-  scope :all, default: true
-  I18n.available_locales.map.each do |locale|
-    scope locale do |user|
-      user.where(locale: locale)
-    end
-  end
-
   index do
     selectable_column
     column :id do |user|
       link_to(user.id, admin_user_path(user))
     end
-    column :locale
     column :email do |user|
       link_to(user.email, admin_user_path(user))
     end
@@ -32,15 +24,15 @@ ActiveAdmin.register User, as: 'Users' do
   form do |f|
     f.inputs 'Details' do
       f.input :email
-      f.input :locale, collection: I18n.available_locales
       f.input :created_at, disabled: true, as: :date_select
     end
     f.actions
   end
 
-  show title: :email do |user|
+  show title: :full_name do |user|
     attributes_table do
       row :id
+      row :full_name
       row :email
       row(:progress) {|model| "#{model.progress}%" }
       row(:completed) { |model| model.completed? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }

@@ -5,10 +5,15 @@ class User < ActiveRecord::Base
   attr_accessor :invite_code
   validates :invite_code, inclusion: {in: %w[vzmyl100], message: 'is invalid'}, on: :create
 
-  has_many :progressions
+  has_many :progressions, dependent: :destroy
   has_many :steps, through: :progressions
 
   before_create :create_progressions
+
+
+  def full_name
+    "#{self.title} #{self.first_name} #{self.last_name}"
+  end
 
   def latest_step
     latest_progression = progressions.where(amount: 0.5..1).last
