@@ -19,6 +19,9 @@ Course.PagesRoute = Ember.Route.extend({
   },
 
   deactivate: function() {
+    if (!this.controllerFor('test_page').get('isInUnanswered')) {
+      this.controllerFor('test_page').sendStateEvent('reset');
+    }
     this.controllerFor('application').set('currentPage', null);
   },
 });
