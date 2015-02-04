@@ -9,10 +9,7 @@ class User < ActiveRecord::Base
   has_many :steps, through: :progressions
 
   before_create :create_progressions
-
-  def full_name
-    "#{self.title} #{self.first_name} #{self.last_name}"
-  end
+  before_save :capitalize_names
 
   alias_attribute :title, :salutation # TODO deprecate
 
@@ -20,6 +17,11 @@ class User < ActiveRecord::Base
   alias_attribute :failed_round_two, :failed_round_two_at
   alias_attribute :passed_round_one, :passed_round_one_at
   alias_attribute :passed_round_two, :passed_round_two_at
+
+  def full_name
+    "#{self.title} #{self.first_name} #{self.last_name}"
+  end
+
 
   def latest_step
     latest_progression = progressions.where(amount: 0.5..1).last
@@ -72,6 +74,11 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def capitalize_names
+    self.first_name = first_name.capitalize
+    self.last_name = last_name.capitalize
+  end
 
   def create_progressions
     Step.all.each_with_index do |step, i|
