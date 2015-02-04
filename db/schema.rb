@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150204140852) do
+ActiveRecord::Schema.define(version: 20150204152207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -285,12 +285,12 @@ ActiveRecord::Schema.define(version: 20150204140852) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "email",                  default: "",    null: false
-    t.string   "encrypted_password",     default: "",    null: false
+    t.string   "email",                           default: "",    null: false
+    t.string   "encrypted_password",              default: "",    null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,     null: false
+    t.integer  "sign_in_count",                   default: 0,     null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
@@ -299,18 +299,23 @@ ActiveRecord::Schema.define(version: 20150204140852) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string   "unconfirmed_email"
-    t.string   "locale",                 default: "en",  null: false
+    t.string   "locale",                          default: "en",  null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "salutation",                             null: false
-    t.string   "first_name",                             null: false
-    t.string   "last_name",                              null: false
-    t.boolean  "super_user",             default: false
-    t.boolean  "in_person",              default: false
+    t.string   "salutation",                                      null: false
+    t.string   "first_name",                                      null: false
+    t.string   "last_name",                                       null: false
+    t.boolean  "super_user",                      default: false
+    t.boolean  "in_person",                       default: false
     t.datetime "failed_round_one_at"
     t.datetime "failed_round_two_at"
     t.datetime "passed_round_one_at"
     t.datetime "passed_round_two_at"
+    t.boolean  "terms_and_conditions_opt_in",     default: false
+    t.boolean  "marketing_overall_opt_in",        default: false
+    t.boolean  "marketing_email_opt_in",          default: false
+    t.boolean  "marketing_post_opt_in",           default: false
+    t.boolean  "marketing_representative_opt_in", default: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
