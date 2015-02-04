@@ -22,7 +22,6 @@ class User < ActiveRecord::Base
     "#{self.title} #{self.first_name} #{self.last_name}"
   end
 
-
   def latest_step
     latest_progression = progressions.where(amount: 0.5..1).last
     if latest_progression.nil?
