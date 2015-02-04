@@ -1,4 +1,6 @@
-//= require ./deps
+//= require jquery
+//= require underscore
+//= require es5-shim/es5-shim
 //= require video
 //= require ./videojs.ga
 //= require ./dragdealer
@@ -23,8 +25,8 @@
 //= require_tree ./initializers
 window.Course = Ember.Application.create({
   env: Em.Object.create(),
-  LOG_TRANSITIONS: true,
-  LOG_TRANSITIONS_INTERNAL: true,
+  // LOG_TRANSITIONS: true,
+  // LOG_TRANSITIONS_INTERNAL: true,
 });
 
 Ember.RSVP.configure('onerror',function(error) {

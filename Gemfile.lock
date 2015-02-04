@@ -158,6 +158,9 @@ GEM
     ember-source (1.9.1)
       handlebars-source (~> 2.0)
     erubis (2.7.0)
+    es5-shim-rails (4.0.1)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
     execjs (2.2.2)
     faker (1.4.3)
       i18n (~> 0.5)
@@ -295,6 +298,7 @@ GEM
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.7.0)
     uniform_notifier (1.6.2)
     videojs_rails (4.6.1)
     warden (1.2.3)
@@ -319,6 +323,7 @@ DEPENDENCIES
   email_validator
   ember-data-source
   ember-rails (~> 0.16)
+  es5-shim-rails
   faker
   font_assets
   foreman
@@ -326,6 +331,7 @@ DEPENDENCIES
   globalize (~> 4.0.2)
   high_voltage
   i18n-js!
+  jquery-rails
   normalize-rails
   oj
   pg
@@ -345,4 +351,5 @@ DEPENDENCIES
   sass-rails (~> 4.0)
   simple_form
   uglifier
+  underscore-rails
   videojs_rails
