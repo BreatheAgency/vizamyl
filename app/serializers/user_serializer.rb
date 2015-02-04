@@ -1,5 +1,5 @@
 class UserSerializer < ActiveModel::Serializer
-  attributes :id, :email, :locale, :super_user, :failed_round_one, :failed_round_two, :passed_round_one, :passed_round_two, :completed
+  attributes :id, :email, :locale, :super_user, :failed_round_one_at, :failed_round_two_at, :passed_round_one_at, :passed_round_two_at, :completed
   has_many :progressions
   has_many :steps
 

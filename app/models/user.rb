@@ -14,8 +14,12 @@ class User < ActiveRecord::Base
     "#{self.title} #{self.first_name} #{self.last_name}"
   end
 
-  # TODO deprecate
-  alias_attribute :title, :salutation
+  alias_attribute :title, :salutation # TODO deprecate
+
+  alias_attribute :failed_round_one, :failed_round_one_at
+  alias_attribute :failed_round_two, :failed_round_two_at
+  alias_attribute :passed_round_one, :passed_round_one_at
+  alias_attribute :passed_round_two, :passed_round_two_at
 
   def latest_step
     latest_progression = progressions.where(amount: 0.5..1).last
