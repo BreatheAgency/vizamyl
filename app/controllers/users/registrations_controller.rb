@@ -9,7 +9,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
       account_update_params.delete('password_confirmation')
     end
 
-    #TODO
+    # TODO
     account_update_params.delete('password')
     account_update_params.delete('password_confirmation')
 
