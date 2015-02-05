@@ -35,7 +35,6 @@ class User < ActiveRecord::Base
     step.validates :terms_and_conditions_opt_in, inclusion: { in: [true], message: 'is invalid' }
   end
 
-
   def full_name
     "#{self.title} #{self.first_name} #{self.last_name}"
   end
