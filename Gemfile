@@ -1,27 +1,26 @@
 source 'https://rubygems.org'
 ruby '2.2.0'
 
-gem 'devise', github: 'plataformatec/devise'
-
 gem 'i18n-js', github: 'fnando/i18n-js'
-
+gem 'devise', github: 'plataformatec/devise'
 gem 'activeadmin', github: 'gregbell/active_admin'
-gem 'activeadmin-globalize', github: 'fabn/activeadmin-globalize', branch: 'develop'
 gem 'activeadmin-sortable', github: 'neo/activeadmin-sortable'
+gem 'activeadmin-globalize', github: 'fabn/activeadmin-globalize', branch: 'develop'
 
 gem 'rake', '~> 10.3'
 gem 'rails', '~> 4.1'
-gem 'globalize', '~> 4.0.2'
 gem 'sass-rails', '~> 4.0'
+gem 'globalize', '~> 4.0.2'
 gem 'ember-rails', '~> 0.16'
 
 gem 'oj'
 gem 'pg'
 gem 'puma'
 gem 'faker'
+gem 'wicked'
 gem 'rollbar'
-gem 'rack-cors'
 gem 'uglifier'
+gem 'rack-cors'
 gem 'devise-i18n'
 gem 'font_assets'
 gem 'prawn-rails'
@@ -55,8 +54,8 @@ group :development do
 end
 
 group :test, :development do
-  gem 'pry-rails'
   gem 'foreman'
+  gem 'pry-rails'
 end
 
 group :staging, :production do
