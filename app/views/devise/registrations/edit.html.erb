@@ -1,9 +1,20 @@
 <div class='devise registrations row'>
-  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
-  </div>
-  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
-    <h1 class='vh'><%= t('.sign_up') %></h1>
-    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form', method: :put }) do |f| %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form', method: :put }) do |f| %>
+    <div class='small-6 medium-6 large-6 columns with-content with-minimum my-account'>
+      <h2>My account</h2>
+      <p>You can update your contact preferences and personal details using the boxes below</p>
+      <h4>Contact preferences</h4>
+      <p>If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you. If you do want to receive such information, please tick the box below.</p>
+      <%= f.input :marketing_overall_opt_in, label: 'YES, I would like to be contacted for marketing purposes' %>
+      <p>(Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.<p>
+      <p>If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:</p>
+      <%= f.input :marketing_email_opt_in, label: 'E-mail' %>
+      <%= f.input :marketing_post_opt_in, label: 'Post' %>
+      <%= f.input :marketing_representative_opt_in, label: 'Visit from a GE Healthcare representative (There is no obligation to see a representative).' %>
+      <p>(Please tick one or more options.)</p>
+    </div>
+    <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+      <h2>My details</h2>
       <div class='form-inputs'>
         <label><abbr title='required'>*</abbr> Salutation</label>
         <%= f.collection_radio_buttons(:salutation, t('.salutations'), :to_s, :to_s, checked: resource.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
@@ -12,7 +23,7 @@
         %>
         <%= f.input :first_name, required: true %>
         <%= f.input :last_name, required: true %>
-        <%= f.input :email, required: true %>
+        <%= f.input :email, required: false, disabled: true %>
         <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank_if_you_don_t_want_to_change_it'), required: false %>
         <%= f.input :password_confirmation, required: false %>
       </div>
@@ -21,6 +32,6 @@
           <%= t('.update') %><i class='fi-arrow-right'></i>
         <% end %>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>

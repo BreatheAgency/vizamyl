@@ -1,11 +1,50 @@
 .registrations {
 
-  div:first-of-type {
-    @extend .motion;
+  .columns {
+    padding-top: rem-calc(20);
+    padding-left: rem-calc(50);
+    padding-right: rem-calc(50);
   }
 
-  .columns.with-content {
-    padding-top: rem-calc(30);
+  h1 {
+    font-weight: bold;
+    font-size: $h3-font-size;
+    padding-bottom: rem-calc(16);
+    line-height: rem-calc(30);
+  }
+
+  .my-account {
+    p {
+      margin-bottom: rem-calc(16);
+    }
+
+    .radio_buttons label {
+      display: inline-block;
+      margin: 0 10px 16px 0;
+      padding: 0;
+    }
+
+    input[type='checkbox'] + span {
+      position: relative;
+      display: inline-block;
+      margin: 0 6px 0 0;
+      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+      border: solid 1px $primary-color;
+      border-radius: 8px;
+    }
+
+    input[type='checkbox']:checked + span > span {
+      position: absolute;
+      display: inline-block;
+      left: 5px;
+      top: 5px;
+      width: 4px;
+      height: 4px;
+      background: $primary-color;
+      border-radius:2px;
+    }
   }
 
   .button-container {

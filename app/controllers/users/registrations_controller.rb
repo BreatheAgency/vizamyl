@@ -24,10 +24,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) do |u|
-      u.permit(:salutation, :first_name, :last_name, :locale, :email, :password, :password_confirmation, :invite_code)
+      u.permit(:salutation, :first_name, :last_name, :locale, :email, :password, :password_confirmation, :marketing_overall_opt_in, :marketing_email_opt_in, :marketing_post_opt_in, :marketing_representative_opt_in, :invite_code)
     end
     devise_parameter_sanitizer.for(:account_update) do |u|
-      u.permit(:salutation, :first_name, :last_name, :locale, :email, :password, :password_confirmation)
+      u.permit(:salutation, :first_name, :last_name, :password, :password_confirmation, :marketing_overall_opt_in, :marketing_email_opt_in, :marketing_post_opt_in, :marketing_representative_opt_in)
     end
   end
 
