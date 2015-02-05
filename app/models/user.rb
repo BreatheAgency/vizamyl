@@ -1,9 +1,11 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
-  validates :email, email: true
 
   attr_accessor :invite_code
-  validates :invite_code, inclusion: {in: %w[vzmylinvite349], message: 'is invalid'}, on: :create
+  attr_accessor :form_step
+  cattr_accessor :form_steps do
+    %w(details institution terms marketing)
+  end
 
   has_many :progressions, dependent: :destroy
   has_many :steps, through: :progressions
@@ -17,6 +19,22 @@ class User < ActiveRecord::Base
   alias_attribute :failed_round_two, :failed_round_two_at
   alias_attribute :passed_round_one, :passed_round_one_at
   alias_attribute :passed_round_two, :passed_round_two_at
+
+  with_options :if => -> { required_for_step?(:details) } do |step|
+    step.validates :first_name, presence: true
+    step.validates :last_name, presence: true
+    step.validates :email, email: true
+    step.validates :invite_code, inclusion: { in: %w[vzmylinvite349], message: 'is invalid' }, if: Proc.new { form_step == 'details' }
+  end
+
+  with_options :if => -> { required_for_step?(:institution) } do |step|
+    step.validates :institution, :presence => true
+  end
+
+  with_options :if => -> { required_for_step?(:terms) } do |step|
+    step.validates :terms_and_conditions_opt_in, inclusion: { in: [true], message: 'is invalid' }
+  end
+
 
   def full_name
     "#{self.title} #{self.first_name} #{self.last_name}"
@@ -73,6 +91,15 @@ class User < ActiveRecord::Base
   end
 
   private
+
+  def required_for_step?(step)
+    # All fields are required if no form step is present
+    return true if form_step.nil?
+
+    # All fields from previous steps are required if the
+    # step parameter appears before or we are on the current step
+    self.form_steps.index(step.to_s) <= self.form_steps.index(form_step)
+  end
 
   def capitalize_names
     self.first_name = first_name.capitalize

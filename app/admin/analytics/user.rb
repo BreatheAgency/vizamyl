@@ -16,6 +16,9 @@ ActiveAdmin.register User, as: 'Users' do
     column :email do |user|
       link_to(user.email, admin_user_path(user))
     end
+    column :institution do |user|
+      link_to(user.institution, admin_user_path(user))
+    end
     column :progress do |user|
       link_to("#{user.progress}%", admin_user_path(user))
     end
@@ -37,6 +40,7 @@ ActiveAdmin.register User, as: 'Users' do
     attributes_table do
       row :full_name
       row :email
+      row :institution
       row(:progress) {|model| "#{model.progress}%" }
       # row(:completed) { |model| model.completed? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       # row(:passed) { |model| model.passed? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }

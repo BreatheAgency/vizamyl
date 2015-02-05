@@ -7,6 +7,7 @@ run Rack::Builder.new {
     when :staging
       use Rack::CanonicalHost, 'stg-www.readvizamyl.com', ignore: ['vizamyl-staging.herokuapp.com']
     when :production
+      # use Rack::CanonicalHost, 'www.readvizamyl.com', ignore: ['vizamyl.herokuapp.com']
       use Rack::Rewrite do
         r302 %r{.*}, 'https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/'
       end
@@ -14,7 +15,7 @@ run Rack::Builder.new {
 
   use Rack::Cors do
     allow do
-      origins %w(https://vizamyl-staging.herokuapp.com http://vizamyl-staging.herokuapp.com https://vizamyl.herokuapp.com http://vizamyl.herokuapp.com http://0.0.0.0:5000 http://0.0.0.0:3000)
+      origins %w(https://stg-www.readvizamyl.com http://stg-www.readvizamyl.com https://www.readvizamyl.com http://www.readvizamyl.com https://vizamyl-staging.herokuapp.com http://vizamyl-staging.herokuapp.com https://vizamyl.herokuapp.com http://vizamyl.herokuapp.com http://0.0.0.0:5000 http://0.0.0.0:3000)
       resource '*', headers: :any, credentials: true, methods: [:get, :post, :put, :patch, :delete, :options], max_age: (ENV['RACK_ENV'] == 'production' ? 86_400 : 0)
     end
   end

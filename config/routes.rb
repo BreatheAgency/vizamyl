@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     namespace :users do
       get '/course-complete' => 'course_completion#success'
     end
+    resources :wicked_using_get, only: [:new, :create, :show, :update]
     get '/*id' => 'static#show', id: 'home', as: :static
     get '/' => 'static#show', id: 'home'
   end
