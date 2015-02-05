@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
 
   before_create :create_progressions
   before_save :capitalize_names
+  before_save :capitalize_institution
 
   alias_attribute :title, :salutation # TODO deprecate
 
@@ -98,6 +99,10 @@ class User < ActiveRecord::Base
     # All fields from previous steps are required if the
     # step parameter appears before or we are on the current step
     self.form_steps.index(step.to_s) <= self.form_steps.index(form_step)
+  end
+
+  def capitalize_institution
+    self.institution = institution.capitalize
   end
 
   def capitalize_names
