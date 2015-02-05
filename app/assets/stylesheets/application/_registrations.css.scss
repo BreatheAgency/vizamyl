@@ -1,5 +1,9 @@
 .registrations {
 
+  div:first-of-type {
+    @extend .motion;
+  }
+
   .columns {
     padding-top: rem-calc(20);
     padding-left: rem-calc(50);
@@ -13,52 +17,73 @@
     line-height: rem-calc(30);
   }
 
+  p {
+    line-height: 1.25;
+  }
+
+  .input {
+    padding: rem-calc(10) 0 rem-calc(10) 0;
+  }
+
+  .input + .input {
+    padding: rem-calc(5) 0 rem-calc(10) 0;
+  }
+
+  input[type='checkbox'] {
+    margin-bottom: 0;
+  }
+
+  .marketing-purposes {
+    line-height: 1.25;
+  }
+
+  .obligation {
+    font-weight: normal;
+    font-size: rem-calc(14);
+    margin-left: rem-calc(24);
+  }
+
+  .small {
+    color: #999;
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(5);
+    font-size: rem-calc(14);
+  }
+
+  .small-right {
+    padding-left: rem-calc(22);
+  }
+
+  .progress {
+    @extend .inline-list;
+    background: white;
+    height: 36px;
+    margin-bottom: rem-calc(16);
+
+    li {
+      width: 28px;
+      height: 28px;
+      border: solid 1px $primary-color;
+      border-radius: 14px;
+      margin-left: rem-calc(16);
+    }
+
+    li:first-child {
+      margin-left: 0;
+    }
+
+    .selected {
+      background: $primary-color;
+    }
+  }
+
   .my-account {
     padding-bottom: rem-calc(10);
-
-    .input {
-      padding: rem-calc(10) 0 rem-calc(10) 0;
-    }
-
-    .input + .input {
-      padding: rem-calc(5) 0 rem-calc(10) 0;
-    }
-
-    input[type='checkbox'] {
-      margin-bottom: 0;
-    }
 
     p {
       margin-bottom: rem-calc(10);
     }
 
-    label {
-      font-weight: bold;
-      font-size: rem-calc(18);
-      line-height: 1;
-    }
-
-    .marketing-purposes {
-      padding-top: rem-calc(20);
-      line-height: 1.25;
-    }
-
-    .obligation {
-      font-weight: normal;
-      font-size: rem-calc(14);
-      margin-left: rem-calc(24);
-    }
-
-    .small {
-      color: #999;
-      padding-top: rem-calc(10);
-      padding-bottom: rem-calc(5);
-      font-size: rem-calc(14);
-    }
-
-    .small-right {
-      padding-left: rem-calc(22);
-    }
   }
 
   .button-container {
@@ -66,4 +91,40 @@
     padding-bottom: rem-calc(30);
   }
 
+}
+
+.details {
+  h1 {
+    padding-bottom: rem-calc(12);
+  }
+}
+
+.institution {
+  p {
+    color: $primary-color;
+  }
+}
+
+.terms {
+  p {
+    font-size: rem-calc(14);
+  }
+
+  .terms-accept {
+    line-height: 1.25;
+  }
+
+  .please-tick {
+    font-weight: normal;
+    font-size: rem-calc(14);
+    color: #999;
+  }
+}
+
+.instituion, .terms, .marketing {
+  label {
+    font-weight: bold;
+    font-size: rem-calc(18);
+    line-height: 1;
+  }
 }

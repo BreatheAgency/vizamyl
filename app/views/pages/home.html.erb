@@ -8,7 +8,7 @@
         <a href='<%= new_user_session_path %>'><%= t('layouts.application.login') %><i class='fi-arrow-right'></i></a>
       </div>
       <div class='small-7 medium-7 large-8 columns'>
-        <a href='<%= new_user_registration_path %>'><%= t('layouts.application.enrole') %><i class='fi-arrow-right'></i></a>
+        <a href='<%= users_enrole_path(id: User.form_steps.first, locale: I18n.locale) %>'><%= t('layouts.application.enrole') %><i class='fi-arrow-right'></i></a>
       </div>
     </div>
   </div>

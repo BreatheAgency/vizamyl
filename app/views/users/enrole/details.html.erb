@@ -1,9 +1,15 @@
-<div class='devise registrations row'>
+<div class='devise registrations details row'>
   <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
   </div>
   <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
-    <h1 class='vh'><%= t('.sign_up') %></h1>
-    <%= simple_form_for(@user, url: wicked_using_get_path, html: { method: :put, class: 'form' }) do |f| %>
+    <ul class='progress'>
+      <li class='selected'></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+    <h1>Please enter your details.</h1>
+    <%= simple_form_for(@user, url: users_enrole_path, html: { method: :put, class: 'form' }) do |f| %>
       <%= render 'tmp_storage_fields', f: f %>
       <div class='form-inputs'>
         <label>Salutation</label>

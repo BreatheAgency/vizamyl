@@ -18,11 +18,11 @@ Rails.application.routes.draw do
   get '/course/:locale/*other' => 'static#show', id: 'course'
 
   scope ':locale', locale: /#{I18n.available_locales.join("|")}/ do
-    devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'enrole' }, controllers: { registrations: 'users/registrations' }
+    devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }, controllers: { registrations: 'users/registrations' }
     namespace :users do
+      resources :enrole, only: [:new, :create, :show, :update]
       get '/course-complete' => 'course_completion#success'
     end
-    resources :wicked_using_get, only: [:new, :create, :show, :update]
     get '/*id' => 'static#show', id: 'home', as: :static
     get '/' => 'static#show', id: 'home'
   end

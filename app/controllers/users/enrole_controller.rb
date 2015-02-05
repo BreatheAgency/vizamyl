@@ -1,9 +1,9 @@
-class WickedUsingGetController < ApplicationController
+class Users::EnroleController < ApplicationController
   include Wicked::Wizard
   steps *User.form_steps
 
   def new
-    redirect_to wicked_using_get_path(steps.first)
+    redirect_to users_enrole_path(steps.first)
   end
 
   def create
@@ -26,7 +26,7 @@ class WickedUsingGetController < ApplicationController
   def update
     @user = User.new(filter_params(step))
     if @user.valid?
-      redirect_to wicked_using_get_path(next_step, filter_params(step).merge(id: next_step))
+      redirect_to users_enrole_path(next_step, filter_params(step).merge(id: next_step))
     else
       render_wizard @user
     end

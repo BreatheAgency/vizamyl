@@ -13,7 +13,7 @@
             <li><%= link_to t('layouts.application.my_account'), edit_user_registration_path(locale: I18n.locale) %></li>
           <% else %>
             <li><%= link_to t('layouts.application.login'), new_user_session_path(locale: I18n.locale) %></li>
-            <li><%= link_to t('layouts.application.enrole'), new_user_registration_path(locale: I18n.locale) %></li>
+            <li><%= link_to t('layouts.application.enrole'), users_enrole_path(id: User.form_steps.first, locale: I18n.locale) %></li>
           <% end %>
 					<li><%= link_to t('layouts.application.prescribing_information'), static_path(id: 'prescribing-information', locale: I18n.locale) %></li>
 					<li><%= link_to t('layouts.application.references'), static_path(id: 'references', locale: I18n.locale) %></li>
