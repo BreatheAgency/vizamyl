@@ -9,41 +9,55 @@
   h1 {
     font-weight: bold;
     font-size: $h3-font-size;
-    padding-bottom: rem-calc(16);
+    padding-bottom: rem-calc(18);
     line-height: rem-calc(30);
   }
 
   .my-account {
+    padding-bottom: rem-calc(10);
+
+    .input {
+      padding: rem-calc(10) 0 rem-calc(10) 0;
+    }
+
+    .input + .input {
+      padding: rem-calc(5) 0 rem-calc(10) 0;
+    }
+
+    input[type='checkbox'] {
+      margin-bottom: 0;
+    }
+
     p {
-      margin-bottom: rem-calc(16);
+      margin-bottom: rem-calc(10);
     }
 
-    .radio_buttons label {
-      display: inline-block;
-      margin: 0 10px 16px 0;
-      padding: 0;
+    label {
+      font-weight: bold;
+      font-size: rem-calc(20);
+      line-height: 1;
     }
 
-    input[type='checkbox'] + span {
-      position: relative;
-      display: inline-block;
-      margin: 0 6px 0 0;
-      vertical-align: middle;
-      width: 16px;
-      height: 16px;
-      border: solid 1px $primary-color;
-      border-radius: 8px;
+    .marketing-purposes {
+      padding-top: rem-calc(20);
+      line-height: 1.25;
     }
 
-    input[type='checkbox']:checked + span > span {
-      position: absolute;
-      display: inline-block;
-      left: 5px;
-      top: 5px;
-      width: 4px;
-      height: 4px;
-      background: $primary-color;
-      border-radius:2px;
+    .obligation {
+      font-weight: normal;
+      font-size: rem-calc(14);
+      margin-left: rem-calc(24);
+    }
+
+    .small {
+      color: #999;
+      padding-top: rem-calc(10);
+      padding-bottom: rem-calc(5);
+      font-size: rem-calc(14);
+    }
+
+    .small-right {
+      padding-left: rem-calc(22);
     }
   }
 
