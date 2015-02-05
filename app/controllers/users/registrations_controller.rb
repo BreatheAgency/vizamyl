@@ -9,6 +9,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
       account_update_params.delete('password_confirmation')
     end
 
+    #TODO
+    account_update_params.delete('password')
+    account_update_params.delete('password_confirmation')
+
     @user = User.find(current_user.id)
     if @user.update_attributes(account_update_params)
       set_flash_message :notice, :updated
