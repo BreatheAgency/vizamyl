@@ -93,19 +93,19 @@
 
 }
 
-.details {
+.registrations.details {
   h1 {
     padding-bottom: rem-calc(12);
   }
 }
 
-.institution {
+.registrations.institution {
   p {
     color: $primary-color;
   }
 }
 
-.terms {
+.registrations.terms {
   p {
     font-size: rem-calc(14);
   }
@@ -121,7 +121,7 @@
   }
 }
 
-.instituion, .terms, .marketing {
+.registrations.instituion, .registrations.terms, .registrations.marketing {
   label {
     font-weight: bold;
     font-size: rem-calc(18);
