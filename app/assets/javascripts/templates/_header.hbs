@@ -1,11 +1,7 @@
 <nav role='nav'>
 	<div class='row'>
 		<ul class='inline-list'>
-			{{#if currentChapter.invisible}}
-				<li><a>{{i18n layouts.application.course_menu}}<a></li>
-			{{else}}
-				<li>{{#link-to 'locale.menu'}}{{i18n layouts.application.course_menu}}{{/link-to}}</li>
-			{{/if}}
+			<li><a>{{i18n layouts.application.course_menu}}<a></li>
 			<li><a href='/{{unbound currentLocale}}/users/edit'>{{i18n layouts.application.my_account}}</a></li>
 			<li><a href='/{{unbound currentLocale}}/prescribing-information'>{{i18n layouts.application.prescribing_information}}</a></li>
 			<li><a href='/{{unbound currentLocale}}/references'>{{i18n layouts.application.references}}</a></li>
