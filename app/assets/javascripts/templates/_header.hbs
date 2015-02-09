@@ -1,7 +1,7 @@
 <nav role='nav'>
 	<div class='row'>
 		<ul class='inline-list'>
-			<li><a>{{i18n layouts.application.course_menu}}<a></li>
+			<li>{{#link-to 'locale.menu'}}{{i18n layouts.application.course_menu}}{{/link-to}}</li>
 			<li><a href='/{{unbound currentLocale}}/users/edit'>{{i18n layouts.application.my_account}}</a></li>
 			<li><a href='/{{unbound currentLocale}}/prescribing-information'>{{i18n layouts.application.prescribing_information}}</a></li>
 			<li><a href='/{{unbound currentLocale}}/references'>{{i18n layouts.application.references}}</a></li>
@@ -10,7 +10,9 @@
 			<li><a href='/{{unbound currentLocale}}/users/logout'>{{i18n layouts.application.logout}}</a></li>
 			<li class='right'>
 				<p class='global-brand'>
-					{{{i18n layouts.application.brand_html}}}
+					<a href='/{{unbound currentLocale}}'>Vizamyl</a>
+					<span>Flutemetamol F18</span>
+					<span>Injection</span>
 				</p>
 			</li>
 		</ul>
