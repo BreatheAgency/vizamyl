@@ -18,8 +18,8 @@
       <p>If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:</p>
       <%= f.input :marketing_email_opt_in, label: 'E-mail' %>
       <%= f.input :marketing_post_opt_in, label: 'Post' %>
-      <%= f.input :marketing_representative_opt_in, label: 'Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative).</span>'.html_safe %>
-      <p class='small small-right'>(Please tick one or more options.)</p>
+      <%= f.input :marketing_representative_opt_in, label: 'Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>'.html_safe %>
+      <p class='small small-right'>(Please tick one or more options)</p>
       <div class='form-actions button-container'>
         <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
           <%= t('layouts.application.enrole') %><i class='fi-arrow-right'></i>
