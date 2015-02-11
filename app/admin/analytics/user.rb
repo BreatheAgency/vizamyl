@@ -6,6 +6,9 @@ ActiveAdmin.register User, as: 'Users' do
     def permitted_params
       params.permit!
     end
+    def scoped_collection
+      super.where(locale: I18n.locale)
+    end
   end
 
   index do
