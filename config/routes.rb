@@ -31,6 +31,8 @@ Rails.application.routes.draw do
   match '/422', to: 'errors#unprocessable', via: [:get, :post]
   match '/500', to: 'errors#internal_server_error', via: [:get, :post]
 
+  get 'sitemap.xml', to: 'sitemap#index', defaults: { format: 'xml' }
+
   get '/*id' => 'static#show', id: 'gatekeeper'
   root to: 'static#show', id: 'gatekeeper'
 end

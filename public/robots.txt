@@ -1,4 +1,4 @@
 # www.robotstxt.org
 User-agent: *
 Allow: /
-Sitemap: https://www.readvizamyl.com/sitemap.xml.gz
+Sitemap: https://www.readvizamyl.com/sitemap.xml
