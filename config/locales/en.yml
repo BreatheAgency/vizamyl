@@ -22,10 +22,6 @@ en:
         it: Italian
   layouts:
     application:
-      brand_html: |
-        <a href="/">Vizamyl</a>
-        <span>Flutemetamol F18</span>
-        <span>Injection</span>
       course_menu: Course menu
       my_account: My account
       login: Login
@@ -45,6 +41,7 @@ en:
         <p class="right"></p>
   course:
     actions:
+      back: Back
       next: Next
   pages:
     gatekeeper:
