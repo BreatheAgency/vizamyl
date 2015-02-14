@@ -212,7 +212,7 @@ ActiveAdmin.setup do |config|
   #     end
   #   end
 
-  if Rails.env.production?
+  if Rails.env.staging?
     config.namespace :content do |admin|
       admin.site_title = 'Vizamyl Content'
       admin.site_title_link = '/content'
