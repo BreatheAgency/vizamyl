@@ -212,13 +212,14 @@ ActiveAdmin.setup do |config|
   #     end
   #   end
 
-  config.namespace :content do |admin|
-    admin.site_title = 'Vizamyl Content'
-    admin.site_title_link = '/content'
-    admin.authorization_adapter = 'ContentAuthorization'
-    admin.root_to = 'chapters#index'
+  if Rails.env.production?
+    config.namespace :content do |admin|
+      admin.site_title = 'Vizamyl Content'
+      admin.site_title_link = '/content'
+      admin.authorization_adapter = 'ContentAuthorization'
+      admin.root_to = 'chapters#index'
+    end
   end
-
 
   # == Download Links
   #
