@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
     step.validates :first_name, presence: true
     step.validates :last_name, presence: true
     step.validates :email, email: true
-    step.validates :invite_code, inclusion: { in: %w[vzmylinvite349], message: 'is invalid' }, if: Proc.new { form_step == 'details' }
+    step.validates :invite_code, inclusion: { in: %w[Rails.application.secrets.invite_code], message: 'is invalid' }, if: Proc.new { form_step == 'details' }
   end
 
   with_options :if => -> { required_for_step?(:institution) } do |step|
