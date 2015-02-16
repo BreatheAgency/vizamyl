@@ -34,9 +34,10 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
 
   fsmStates: {
     initialState: 'unanswered',
-    knownStates: ['failed', 'answered'],
+    knownStates: ['expanded', 'failed', 'answered'],
     unanswered: {
       didEnter: function() {
+        Ember.Logger.info('unanswerd didEnter');
         this.set('unansweredQuestionRoundIndex', this.get('unansweredQuestionRoundIndices').shiftObject());
 
         this.get('questions').forEach(function(question) {
@@ -70,6 +71,16 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     answer: {
       transitions: [
         { unanswered: 'answered' },
+      ]
+    },
+    expand: {
+      transitions: [
+        { unanswered: 'expanded' }
+      ]
+    },
+    contract: {
+      transitions: [
+        { expanded: 'unanswered' }
       ]
     },
     reset: {
@@ -194,5 +205,11 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
         this.sendStateEvent('answer');
       }
     },
+    expand: function() {
+      this.sendStateEvent('expand');
+    },
+    contract: function() {
+      this.sendStateEvent('contract');
+    }
   }
 });

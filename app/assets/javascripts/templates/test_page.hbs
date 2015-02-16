@@ -1,6 +1,34 @@
 <div {{bind-attr class=':row :page :test-page'}}>
-  <div class='small-5 large-5 columns with-content with-minimum'>
-    {{#if isInCorrect}}
+  {{#if isInExpanded}}
+    <div class='small-12 large-12 columns with-content'>
+      <div class='row'>
+        <div class='expanded-image-scrollers'>
+          <div class='small-1 small-offset-1 large-1 large-offset-1 columns'>
+            <div class='rainbow-reference'></div>
+          </div>
+          {{#each interactive_source in question.interactive_sources}}
+            <div class='small-3 large-3 columns left'>
+              {{interactive-scroller imageWidth=219 imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  {{else}}
+    <div class='small-5 large-5 columns with-content with-minimum'>
+      {{#if isInCorrect}}
+        <h1>Self-assessment question results</h1>
+        <div class='question-results'>
+          <ul>
+            {{#each question in questionsWithIndex}}
+              <li>Question {{question.index}}: {{#if question.value.correct}}Correct{{else}}Incorrect{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
+            {{/each}}
+          </ul>
+        </div>
+        <p>Well done!</p>
+        <p>Your self-assessment for {{currentPage.chapter.title}} - {{currentPage.subject_area}} has been sucessfully completed, and you may now proceed.</p>
+      {{/if}}
+      {{#if isInIncorrect}}
       <h1>Self-assessment question results</h1>
       <div class='question-results'>
         <ul>
@@ -9,98 +37,110 @@
           {{/each}}
         </ul>
       </div>
-      <p>Well done!</p>
-      <p>Your self-assessment for {{currentPage.chapter.title}} - {{currentPage.subject_area}} has been sucessfully completed, and you may now proceed.</p>
-    {{/if}}
-    {{#if isInIncorrect}}
-    <h1>Self-assessment question results</h1>
-    <div class='question-results'>
-      <ul>
-        {{#each question in questionsWithIndex}}
-          <li>Question {{question.index}}: {{#if question.value.correct}}Correct{{else}}Incorrect{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
-        {{/each}}
-      </ul>
-    </div>
-    <p>Please review the training for {{currentPage.chapter.title}} - {{currentPage.subject_area}}.</p>
-    <p>You will then be re-challenged with more questions on this topic.</p>
-    {{/if}}
-    {{#if isInUnanswered}}
-      <div class='test-progress'>
-        <p>Self-assessment question</p>
-        <ul>
-          {{#each question in answeredQuestions}}
-            <li class='answered'></li>
-          {{/each}}
-          {{#each question in unansweredQuestions}}
-            <li {{bind-attr class='question.active'}}></li>
-          {{/each}}
-        </ul>
-      </div>
-      {{#if question.test_case}}
-        <h1>{{question.title}}</h1>
-        <p>Navigate the three views with the slider.<br> Assess the five regions and then make an overall assessment.</p>
-        <div class='test-case'>
-          <div class='question'>
-            <h2>Frontal pole and lobe</h2>
-            {{#each answer in questionSetOne}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
+      <p>Please review the training for {{currentPage.chapter.title}} - {{currentPage.subject_area}}.</p>
+      <p>You will then be re-challenged with more questions on this topic.</p>
+      {{/if}}
+      {{#if isInExpanded}}
+        <div class='small-7 large-7 columns with-media'>
+          <div class='row'>
+            <div class='image-scrollers'>
+              {{#each interactive_source in question.interactive_sources}}
+                <div {{bind-attr class=":columns columns"}}>
+                  {{interactive-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+                </div>
+              {{/each}}
+            </div>
           </div>
-          <div class='question'>
-            <h2>Posterior cingulate and precuneus</h2>
-            {{#each answer in questionSetTwo}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-          <div class='question'>
-            <h2>Temporal lobe</h2>
-            {{#each answer in questionSetThree}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-          <div class='question'>
-            <h2>Parietal lobe</h2>
-            {{#each answer in questionSetFour}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-          <div class='question'>
-            <h2>Striatum</h2>
-            {{#each answer in questionSetFive}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-          <div class='question'>
-            <h2>Overall classification</h2>
-            {{#each answer in question.answers}}
-              <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-        </div>
-      {{else}}
-        <h1>{{{question.title}}}</h1>
-        <div class='test'>
-          {{ext-radio content=question.answers value=selectedAnswer}}
         </div>
       {{/if}}
-    {{/if}}
-  </div>
-  <div class='small-7 large-7 columns with-media'>
-    <div class='row'>
-      {{#each image_source in question.image_sources}}
-        <div class="small-12 large-12 columns">
-          {{image-loader source=image_source.sourceWithUrl}}
+      {{#if isInUnanswered}}
+        <div class='test-progress'>
+          <p>Self-assessment question</p>
+          <ul>
+            {{#each question in answeredQuestions}}
+              <li class='answered'></li>
+            {{/each}}
+            {{#each question in unansweredQuestions}}
+              <li {{bind-attr class='question.active'}}></li>
+            {{/each}}
+          </ul>
         </div>
-      {{/each}}
-      <div class='image-scrollers'>
-        {{#each interactive_source in question.interactive_sources}}
-          <div {{bind-attr class=":columns columns"}}>
-            {{interactive-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+        {{#if question.test_case}}
+          <h1>{{question.title}}</h1>
+          <p>Navigate the three views with the slider.<br> Assess the five regions and then make an overall assessment.</p>
+          <div class='test-case'>
+            <div class='question'>
+              <h2>Frontal pole and lobe</h2>
+              {{#each answer in questionSetOne}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Posterior cingulate and precuneus</h2>
+              {{#each answer in questionSetTwo}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Temporal lobe</h2>
+              {{#each answer in questionSetThree}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Parietal lobe</h2>
+              {{#each answer in questionSetFour}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Striatum</h2>
+              {{#each answer in questionSetFive}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Overall classification</h2>
+              {{#each answer in question.answers}}
+                <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
           </div>
-        {{/each}}
+        {{else}}
+          <h1>{{{question.title}}}</h1>
+          <div class='test'>
+            {{ext-radio content=question.answers value=selectedAnswer}}
+          </div>
+        {{/if}}
+      {{/if}}
+    </div>
+    <div class='small-7 large-7 columns with-media with-minimum'>
+      <div class='row'>
+        {{#if question.hasImages}}
+          {{#each image_source in question.image_sources}}
+            <div class="small-12 large-12 columns">
+              {{image-loader source=image_source.sourceWithUrl}}
+            </div>
+          {{/each}}
+        {{/if}}
+        {{#if question.hasInteractives}}
+          {{#if question.hasInteractiveTriplet}}
+            <div class='small-12 large-12 columns'>
+              <div class='image-scroller-zoom' {{action 'expand'}}></div>
+            </div>
+          {{else}}
+            <div class='image-scrollers'>
+              {{#each interactive_source in question.interactive_sources}}
+                <div {{bind-attr class=":columns columns"}}>
+                  {{interactive-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+                </div>
+              {{/each}}
+            </div>
+          {{/if}}
+        {{/if}}
       </div>
     </div>
-  </div>
+  {{/if}}
 </div>
 <div class='row page-footer'>
   <div class='small-6 medium-6 large-6 columns'>
@@ -118,6 +158,9 @@
       {{/if}}
       {{#if isInUnanswered}}
         <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+      {{/if}}
+      {{#if isInExpanded}}
+        <a {{bind-attr class=':right'}} {{action 'contract'}}>{{i18n course.actions.back}}<i class='fi-arrow-right'></i></a>
       {{/if}}
     </div>
   </div>

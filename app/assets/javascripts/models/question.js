@@ -7,5 +7,8 @@ Course.Question = DS.Model.extend({
   image_sources: DS.hasMany('image_source'),
   answered: false,
   correct: false,
-  active: false
+  active: false,
+  hasInteractives: Ember.computed.notEmpty('interactive_sources'),
+  hasInteractiveTriplet: Ember.computed.equal('interactive_sources.length', 3),
+  hasImages: Ember.computed.notEmpty('image_sources'),
 });

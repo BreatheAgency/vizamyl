@@ -33,7 +33,7 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
 
   fsmStates: {
     initialState: 'unanswered',
-    knownStates: ['failed', 'incorrect', 'correct'],
+    knownStates: ['expanded', 'failed', 'incorrect', 'correct'],
     unanswered: {
       didEnter: function() {
 
@@ -75,6 +75,16 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
       transitions: [
         { unanswered: 'correct', doIf: 'testCorrect' },
         { unanswered: 'incorrect', doUnless: 'testCorrect' }
+      ]
+    },
+    expand: {
+      transitions: [
+        { unanswered: 'expanded' }
+      ]
+    },
+    contract: {
+      transitions: [
+        { expanded: 'unanswered' }
       ]
     },
     reset: {
@@ -185,5 +195,11 @@ Course.TestPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
         this.sendStateEvent('answer');
       }
     },
+    expand: function() {
+      this.sendStateEvent('expand');
+    },
+    contract: function() {
+      this.sendStateEvent('contract');
+    }
   }
 });

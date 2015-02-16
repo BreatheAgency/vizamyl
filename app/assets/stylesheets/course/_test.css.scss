@@ -153,6 +153,20 @@
       }
 
     }
-
   }
+
+  .rainbow-reference {
+    width: 53px;
+    height: 500px;
+    @include retina-background-image('rainbow-reference', 53px, 500px);
+  }
+
+  .image-scroller-zoom {
+    width: 550px;
+    height: 500px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    @include retina-background-image('image-scroller-zoom', 550px, 500px);
+  }
+
 }

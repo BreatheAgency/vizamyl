@@ -1,92 +1,110 @@
 <div {{bind-attr class=':row :page :test-page :four-b-page'}}>
-  <div class='small-5 large-5 columns with-content with-minimum'>
-    {{#if isInAnswered}}
-      <h1>Assessment Summary</h1>
-      {{#if testCorrect}}
-        <p>Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.</p>
-      {{else}}
-        {{#if testFailedOnce}}
-          <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.</p>
-        {{else}}
-          <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the <a href='/{{unbound currentLocale}}/contact'>Vizamyl website</a> to schedule an in-person training session.</p>
-        {{/if}}
-      {{/if}}
-      <div class='explanation-question-results'>
-        <ul>
-          {{#each question in questionsWithIndex}}
-            <a {{action 'selectExplanation' question.value.explanation_source}}>
-              <li {{bind-attr class='question.value.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>Review explanation video <span class="index">{{question.index}}</span></li>
-            </a>
+  {{#if isInExpanded}}
+    <div class='small-12 large-12 columns with-content'>
+      <div class='row'>
+        <div class='expanded-image-scrollers'>
+          <div class='small-1 small-offset-1 large-1 large-offset-1 columns'>
+            <div class='rainbow-reference'></div>
+          </div>
+          {{#each interactive_source in question.interactive_sources}}
+            <div class='small-3 large-3 columns left'>
+              {{interactive-scroller imageWidth=219 imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+            </div>
           {{/each}}
-        </ul>
-      </div>
-    {{/if}}
-    {{#if isInUnanswered}}
-      {{#if question.test_case}}
-        <h1>{{{question.title}}}</h1>
-        <p>Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.</p>
-        <div class='test-case'>
-          <div class='question'>
-            <h2>Frontal pole and lobe</h2>
-            {{#each answer in questionSetOne}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-          <div class='question'>
-            <h2>Posterior cingulate and precuneus</h2>
-            {{#each answer in questionSetTwo}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-          <div class='question'>
-            <h2>Temporal lobe</h2>
-            {{#each answer in questionSetThree}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-          <div class='question'>
-            <h2>Parietal lobe</h2>
-            {{#each answer in questionSetFour}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-          <div class='question'>
-            <h2>Striatum</h2>
-            {{#each answer in questionSetFive}}
-              <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
-          <div class='question'>
-            <h2>Overall classification</h2>
-            {{#each answer in question.answers}}
-              <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
-            {{/each}}
-          </div>
         </div>
-      {{else}}
-        <h1>{{{question.title}}}</h1>
-        <div class='test'>
-          {{ext-radio content=question.answers value=selectedAnswer}}
-        </div>
-      {{/if}}
-    {{/if}}
-  </div>
-  <div class='small-7 large-7 columns with-media with-minimum'>
-    {{#if isInUnanswered}}
-    <div class='row'>
-      {{#each image_source in question.image_sources}}
-      <div class="small-12 large-12 columns">
-        {{image-loader source=image_source.sourceWithUrl}}
-      </div>
-      {{/each}}
-      <div class='image-scrollers'>
-        {{#each interactive_source in question.interactive_sources}}
-          <div {{bind-attr class=":columns columns"}}>
-            {{interactive-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
-          </div>
-        {{/each}}
       </div>
     </div>
+  {{else}}
+    <div class='small-5 large-5 columns with-content with-minimum'>
+      {{#if isInAnswered}}
+        <h1>Assessment Summary</h1>
+        {{#if testCorrect}}
+          <p>Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.</p>
+        {{else}}
+          {{#if testFailedOnce}}
+            <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.</p>
+          {{else}}
+            <p>Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the <a href='/{{unbound currentLocale}}/contact'>Vizamyl website</a> to schedule an in-person training session.</p>
+          {{/if}}
+        {{/if}}
+        <div class='explanation-question-results'>
+          <ul>
+            {{#each question in questionsWithIndex}}
+              <a {{action 'selectExplanation' question.value.explanation_source}}>
+                <li {{bind-attr class='question.value.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>Review explanation video <span class="index">{{question.index}}</span></li>
+              </a>
+            {{/each}}
+          </ul>
+        </div>
+      {{/if}}
+      {{#if isInUnanswered}}
+        {{#if question.test_case}}
+          <h1>{{{question.title}}}</h1>
+          <p>Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.</p>
+          <div class='test-case'>
+            <div class='question'>
+              <h2>Frontal pole and lobe</h2>
+              {{#each answer in questionSetOne}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Posterior cingulate and precuneus</h2>
+              {{#each answer in questionSetTwo}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Temporal lobe</h2>
+              {{#each answer in questionSetThree}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Parietal lobe</h2>
+              {{#each answer in questionSetFour}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Striatum</h2>
+              {{#each answer in questionSetFive}}
+                <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+            <div class='question'>
+              <h2>Overall classification</h2>
+              {{#each answer in question.answers}}
+                <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
+              {{/each}}
+            </div>
+          </div>
+        {{else}}
+          <h1>{{{question.title}}}</h1>
+          <div class='test'>
+            {{ext-radio content=question.answers value=selectedAnswer}}
+          </div>
+        {{/if}}
+      {{/if}}
+    </div>
+  {{/if}}
+  <div class='small-7 large-7 columns with-media'>
+    {{#if isInUnanswered}}
+      <div class='row'>
+        {{#if question.hasInteractiveTriplet}}
+          <div class='small-12 large-12 columns'>
+            <div class='image-scroller-zoom' {{action 'expand'}}></div>
+          </div>
+        {{else}}
+          <div class='image-scrollers'>
+            {{#each interactive_source in question.interactive_sources}}
+              <div {{bind-attr class=":columns columns"}}>
+                {{interactive-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+              </div>
+            {{/each}}
+          </div>
+        {{/if}}
+      </div>
     {{/if}}
     {{#if isInAnswered}}
       {{video-player finished='finished' mandatory=false source=explanationSource}}
@@ -106,6 +124,9 @@
       {{/if}}
       {{#if isInUnanswered}}
         <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+      {{/if}}
+      {{#if isInExpanded}}
+        <a {{bind-attr class=':right'}} {{action 'contract'}}>{{i18n course.actions.back}}<i class='fi-arrow-right'></i></a>
       {{/if}}
     </div>
   </div>
