@@ -31,12 +31,8 @@ window.Course = Ember.Application.create({
 
 Ember.RSVP.configure('onerror',function(error) {
   Rollbar.error(error);
-  console.error(error.message);
-  console.error(error.stack);
 });
 
 window.onerror = function(error) {
   Rollbar.error(error);
-  console.error(error.message);
-  console.error(error.stack);
 };
