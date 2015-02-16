@@ -837,3 +837,14 @@ qr = QuestionRound.find(96)
   q.answers.create!(body: 'Positive', correct: true)
   q.answers.create!(body: 'Negative', correct: false)
 end
+
+
+# en-admin@readvizamyl.com
+# en-super-user@readvizamyl.com
+# en-content-admin@readvizamyl.com
+#
+# User.new(locale: 'en', invite_code: 'amyloid', title: 'Dr', first_name: 'Example', last_name: 'Example', email: 'en-super-user@readvizamyl.com', password: 'vZPJpak7rjYLSCV', password_confirmation: 'vZPJpak7rjYLSCV', institution: 'example', super_user: true, terms_and_conditions_opt_in: true).save!
+#
+# AdminUser.new(locale: 'en', email: 'en-amin@readvizamyl.com', password: 'xQZ2XvmXnrtb8Ut', password_confirmation: 'xQZ2XvmXnrtb8Ut').save!
+#
+# AdminUser.new(locale: 'en', email: 'en-content-admin@readvizamyl.com', password: 'xQZ2XvmXnrtb8Ut', password_confirmation: 'xQZ2XvmXnrtb8Ut').save!
