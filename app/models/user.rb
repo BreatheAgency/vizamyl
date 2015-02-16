@@ -111,7 +111,7 @@ class User < ActiveRecord::Base
   end
 
   def create_progressions
-    Step.all.each_with_index do |step, i|
+    Chapter.all.map(&:steps).flatten.each_with_index do |step, i|
       # Ensure the first progression is 0.5
       self.progressions.build(step: step, amount: (i === 0) ? 0.5 : 0)
     end
