@@ -35,29 +35,6 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   fsmStates: {
     initialState: 'unanswered',
     knownStates: ['expanded', 'failed', 'answered'],
-    unanswered: {
-      didEnter: function() {
-        Ember.Logger.info('unanswerd didEnter');
-        this.set('unansweredQuestionRoundIndex', this.get('unansweredQuestionRoundIndices').shiftObject());
-
-        this.get('questions').forEach(function(question) {
-          question.setProperties({
-            answered: false,
-            active: false,
-            correct: false
-          });
-        });
-
-        this.setProperties({
-          selectedAnswer: null,
-          questionSetOneSelection: null,
-          questionSetTwoSelection: null,
-          questionSetThreeSelection: null,
-          questionSetFourSelection: null,
-          questionSetFiveSelection: null,
-        });
-      }
-    },
     answered: {
       didEnter: function() {
         this.setProperties({
@@ -86,9 +63,31 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
     reset: {
       transitions: {
         from: '$all',
+        didEnter: 'unansweredEnter',
         to: 'unanswered'
       }
     }
+  },
+
+  unansweredEnter: function() {
+    this.set('unansweredQuestionRoundIndex', this.get('unansweredQuestionRoundIndices').shiftObject());
+
+    this.get('questions').forEach(function(question) {
+      question.setProperties({
+        answered: false,
+        active: false,
+        correct: false
+      });
+    });
+
+    this.setProperties({
+      selectedAnswer: null,
+      questionSetOneSelection: null,
+      questionSetTwoSelection: null,
+      questionSetThreeSelection: null,
+      questionSetFourSelection: null,
+      questionSetFiveSelection: null,
+    });
   },
 
   modelDidChange: function() {
