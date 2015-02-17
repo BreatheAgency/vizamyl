@@ -1,12 +1,7 @@
 class ContentAuthorization < ActiveAdmin::AuthorizationAdapter
   def authorized?(action, subject = nil)
+    # return user.content_admin?
     true
-    # case subject
-    # when ActiveAdmin::Page
-    #   action == :read && subject.name == "Dashboard"
-    # else
-    #   false
-    # end
   end
 end
 
@@ -84,7 +79,7 @@ ActiveAdmin.setup do |config|
   # because, by default, user gets redirected to Dashboard. If user
   # doesn't have access to Dashboard, he'll end up in a redirect loop.
   # Method provided here should be defined in application_controller.rb.
-  # config.on_unauthorized_access = :access_denied
+  # config.on_unauthorized_access = :active_admin_access_denied
 
   # == Current User
   #
@@ -212,7 +207,7 @@ ActiveAdmin.setup do |config|
   #     end
   #   end
 
-  if Rails.env.staging?
+  if !Rails.env.production?
     config.namespace :content do |admin|
       admin.site_title = 'Vizamyl Content'
       admin.site_title_link = '/content'

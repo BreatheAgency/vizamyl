@@ -14,6 +14,11 @@ class ApplicationController < ActionController::Base
     I18n.locale = current_admin_user && current_admin_user.locale || I18n.default_locale
   end
 
+  # def active_admin_access_denied(exception)
+  #   sign_out(:user)
+  #   redirect_to(new_admin_user_session_path, alert: exception.message)
+  # end
+
   private
 
   def set_locale
