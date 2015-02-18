@@ -1,9 +1,5 @@
 .registrations {
 
-  div:first-of-type {
-    @extend .motion;
-  }
-
   .columns {
     padding-top: rem-calc(20);
     padding-left: rem-calc(50);
@@ -118,6 +114,12 @@
     font-weight: normal;
     font-size: rem-calc(14);
     color: #999;
+  }
+}
+
+.registrations.instituion, .registrations.terms, .registrations.marketing, .registrations.details {
+  div:first-of-type {
+    @extend .motion;
   }
 }
 
