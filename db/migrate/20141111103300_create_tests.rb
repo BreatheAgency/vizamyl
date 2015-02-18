@@ -1,4 +1,8 @@
 class CreateTests < ActiveRecord::Migration
+  class Test < ActiveRecord::Base
+    translates :title, :subject_area
+  end
+
   def up
     create_table :tests do |t|
       t.string :page_id
