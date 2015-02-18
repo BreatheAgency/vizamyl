@@ -843,7 +843,7 @@ end
 # en-super-user@readvizamyl.com
 # en-content-admin@readvizamyl.com
 #
-# User.new(locale: 'en', invite_code: 'flutemetamol-f18', title: 'Dr', first_name: 'Example', last_name: 'Example', email: 'en-super-user@readvizamyl.com', password: '3nUaB8B3HUbHyPg', password_confirmation: '3nUaB8B3HUbHyPg', institution: 'example', super_user: true, terms_and_conditions_opt_in: true).save!
+# User.new(locale: 'en', invite_code: 'amyloid', title: 'Dr', first_name: 'Example', last_name: 'Example', email: 'en-super-user@readvizamyl.com', password: 'vZPJpak7rjYLSCV', password_confirmation: 'vZPJpak7rjYLSCV', institution: 'Example', super_user: true, terms_and_conditions_opt_in: true).save!
 #
 # AdminUser.new(locale: 'en', email: 'en-admin@readvizamyl.com', password: 'zgFnCYkUEHP8EW6', password_confirmation: 'zgFnCYkUEHP8EW6').save!
 #
