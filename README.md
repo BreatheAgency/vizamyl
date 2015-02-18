@@ -5,24 +5,27 @@ http://vizamyl.herokuapp.com
 
 # Deployment
 
-`psql -d vizamyl_predeploy -c "DROP TABLE users, active_admin_comments, admin_users, progressions; CASCADE"`
+- Backup
+- Pull latest dbs
+- Dump only the users
+- Pull latest staging
+- Grab all users from production as inserts
+- Remove all users from staging
+- "Restore" all users from production to staging
+- Maintenance mode
+- Restore
+- Live!
 
-`PGUSER=postgres PGPASSWORD=password heroku pg:pull DATABASE vizamyl_predeploy --app vizamyl-staging`
-`pg_dump vizamyl_predeploy -O -T users -T users_id_seq -T active_admin_comments -T active_admin_comments_id_seq -T admin_users -T admin_users_id_seq -T progressions -T progressions_id_seq -Fc -f dump.sql`
-
-`psql -d vizamyl_predeploy_tune -c "TRUNCATE TABLE answer_translations, answers, chapter_translations, chapters, four_b_translations, four_bs, image_source_translations, image_sources, image_translations, images, interactive_source_translations, interactive_sources, interactive_translations, interactives, question_intro_translations, question_intros, question_rounds, question_translations, questions, steps, test_translations, tests, text_translations, texts, video_translations, videos, schema_migrations RESTART IDENTITY;"`
-`heroku pg:psql --app vizamyl-production`
-
-`createdb vizamyl_predeploy_tune`
-`pg_restore dump.sql -d vizamyl_predeploy_tune --single-transaction`
-`dropdb vizamyl_predeploy`
-
-
-`TRUNCATE TABLE answer_translations, answers, chapter_translations, chapters,
-four_b_translations, four_bs, image_source_translations, image_sources,
-image_translations, images, interactive_source_translations,
-interactive_sources, interactive_translations, interactives,
-question_intro_translations, question_intros, question_rounds,
-question_translations, questions, steps, test_translations, tests,
-text_translations, texts, video_translations, videos, schema_migrations; RESTART
-IDENTITY;`
+`heroku pgbackups:capture --expire --app vizamyl-staging`
+`heroku pgbackups:capture --expire --app vizamyl`
+`dropdb vizamyl_staging_dump`
+`dropdb vizamyl_production_dump`
+`heroku pg:pull DATABASE vizamyl_staging_dump --app vizamyl-staging`
+`heroku pg:pull DATABASE vizamyl_production_dump --app vizamyl`
+`pg_dump vizamyl_production_dump -O -t users -t users_id_seq -t admin_users -t admin_users_id_seq -t progressions -t progressions_id_seq -Fc -f production_users.sql --column-inserts --data-only`
+`psql -d vizamyl_staging_dump -c "TRUNCATE TABLE users, admin_users, progressions RESTART IDENTITY;"`
+`pg_restore production_users.sql -d vizamyl_staging_dump --single-transaction`
+`heroku maintenance:on --app vizamyl`
+`heroku pg:reset DATABASE --app vizamyl`
+`heroku pg:push vizamyl_staging_dump DATABASE --app vizamyl`
+`heroku maintenance:off --app vizamyl`
