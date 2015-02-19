@@ -9,12 +9,9 @@ run Rack::Builder.new {
 
   case ENV['RACK_ENV'].to_sym
     when :staging
-      use Rack::CanonicalHost, 'stg-www.readvizamyl.com', ignore: ['vizamyl-staging.herokuapp.com']
+      use Rack::CanonicalHost, 'stg-www.readvizamyl.com'
     when :production
-      use Rack::CanonicalHost, 'www.readvizamyl.com', ignore: ['vizamyl.herokuapp.com']
-      # use Rack::Rewrite do
-      #  r302 %r{.*}, 'https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/'
-      # end
+      use Rack::CanonicalHost, 'www.readvizamyl.com'
   end
 
   use Rack::Cors do
