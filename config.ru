@@ -6,7 +6,7 @@ run Rack::Builder.new {
   map '/ping' do
     run proc { |_env| Rack::Response.new('PING', 200) }
   end
-  
+
   case ENV['RACK_ENV'].to_sym
     when :staging
       use Rack::CanonicalHost, 'stg-www.readvizamyl.com', ignore: ['vizamyl-staging.herokuapp.com']
@@ -22,10 +22,6 @@ run Rack::Builder.new {
       origins %w(https://stg-www.readvizamyl.com http://stg-www.readvizamyl.com https://www.readvizamyl.com http://www.readvizamyl.com https://vizamyl-staging.herokuapp.com http://vizamyl-staging.herokuapp.com https://vizamyl.herokuapp.com http://vizamyl.herokuapp.com http://0.0.0.0:5000 http://0.0.0.0:3000)
       resource '*', headers: :any, credentials: true, methods: [:get, :post, :put, :patch, :delete, :options], max_age: (ENV['RACK_ENV'] == 'production' ? 86_400 : 0)
     end
-  end
-
-  map '/robots.txt' do
-    run proc { |_env| Rack::Response.new('User-agent: *\nDisallow: /', 200, 'Content-Type' => 'text/plain') }
   end
 
   use Rack::Noindex, -> (_env) { true }
