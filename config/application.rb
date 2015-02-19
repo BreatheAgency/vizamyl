@@ -48,5 +48,8 @@ module Vizamyl
 
     #
     config.exceptions_app = self.routes
+  
+    #
+    config.handlebars.ember_template = 'Handlebars'
   end
 end
