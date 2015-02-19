@@ -155,7 +155,8 @@ GEM
       handlebars-source (> 1.0.0, < 3)
       jquery-rails (>= 1.0.17)
       railties (>= 3.1)
-    ember-source (1.10.0)
+    ember-source (1.9.0)
+      handlebars-source (~> 2.0)
     erubis (2.7.0)
     es5-shim-rails (4.0.1)
       actionpack (>= 3.1)
@@ -326,7 +327,8 @@ DEPENDENCIES
   devise-i18n
   email_validator
   ember-data-source
-  ember-rails (~> 0.16.4)
+  ember-rails (= 0.16.4)
+  ember-source (= 1.9.0)
   es5-shim-rails
   faker
   font_assets
