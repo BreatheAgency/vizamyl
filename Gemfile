@@ -11,7 +11,7 @@ gem 'rake', '~> 10.3'
 gem 'rails', '~> 4.1'
 gem 'sass-rails', '~> 4.0'
 gem 'globalize', '~> 4.0.2'
-gem 'ember-rails', '~> 0.16'
+gem 'ember-rails', '~> 0.16.4'
 
 gem 'oj'
 gem 'pg'
