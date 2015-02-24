@@ -1,13 +1,5 @@
 @import 'normalize-rails';
-
-$legacy-support-for-ie8: true;
-
-$experimental-support-for-microsoft: true;
-$experimental-support-for-pie: false;
-$experimental-support-for-svg: true;
-
 @import 'video-js';
-
 @import 'compass';
 @import 'compass/support';
 
