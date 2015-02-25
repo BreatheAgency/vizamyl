@@ -7,7 +7,7 @@ class Test < ActiveRecord::Base
 
   %i(subject_area).each do |translated_field|
     translates translated_field
-    active_admin_translates translated_field
+    
   end
 
   alias_attribute :title, :subject_area

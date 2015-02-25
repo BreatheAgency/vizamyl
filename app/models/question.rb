@@ -10,6 +10,6 @@ class Question < ActiveRecord::Base
 
   %i(title body explanation_source).each do |translated_field|
     translates translated_field
-    active_admin_translates translated_field
+    
   end
 end

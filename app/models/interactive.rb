@@ -6,7 +6,7 @@ class Interactive < ActiveRecord::Base
 
   %i(title body subject_area).each do |translated_field|
     translates translated_field
-    active_admin_translates translated_field
+    
   end
 
 end

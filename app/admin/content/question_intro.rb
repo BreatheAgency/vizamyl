@@ -19,15 +19,14 @@ ActiveAdmin.register QuestionIntro, namespace: :content do
     column :title do |video|
       link_to(video.title, content_chapter_video_path(chapter, video))
     end
-    # translation_status_flags
     actions
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :title
-      t.input :body, as: :html_editor
-      t.input :subject_area
+    f.inputs do
+      f.input :title
+      f.input :body, as: :html_editor
+      f.input :subject_area
     end
     f.actions
   end

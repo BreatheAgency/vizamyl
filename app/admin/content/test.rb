@@ -25,20 +25,16 @@ ActiveAdmin.register Test, namespace: :content do
         link_to(test.failure_step.page.page_id, polymorphic_url([:content, test.failure_step.page.chapter, test.failure_step.page]))
       end
     end
-    # translation_status_flags
     actions
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :subject_area
-    end
     f.has_many :question_rounds, allow_destroy: true do |ff|
       ff.inputs
     end
     f.inputs do
+      f.input :subject_area
       f.input :failure_step, as: :select, collection: Step.includes(:page).all.map{|step| [step.page.page_id, step.id]}.sort_by { |step| step[0] }
-      # f.input :failure_step, as: :select, collection: Step.select(:id).uniq
     end
     f.actions
   end

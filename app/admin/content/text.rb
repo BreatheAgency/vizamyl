@@ -20,16 +20,15 @@ ActiveAdmin.register Text, namespace: :content do
     column :title do |text|
       link_to(text.title, content_chapter_text_path(chapter, text))
     end
-    # translation_status_flags
     actions
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :title
-      t.input :body, as: :html_editor
-      t.input :subject_area
-      t.input :abbreviations, as: :html_editor
+    f.inputs do
+      f.input :title
+      f.input :body, as: :html_editor
+      f.input :subject_area
+      f.input :abbreviations, as: :html_editor
     end
     f.actions
   end

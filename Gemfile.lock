@@ -8,15 +8,6 @@ GIT
       rails (>= 3.0.0)
 
 GIT
-  remote: git://github.com/fabn/activeadmin-globalize.git
-  revision: fd38348a35aa2372c2979dba939969534e10efa2
-  branch: develop
-  specs:
-    activeadmin-globalize (1.0.0.pre)
-      activeadmin (~> 1.0.0.pre)
-      globalize (~> 4.0)
-
-GIT
   remote: git://github.com/fnando/i18n-js.git
   revision: b7e7d52fbc93d4ed5682124ca00d12e464e203dc
   specs:
@@ -25,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 97bf84a405077364dc89bf3ec5ee368f226fe9c2
+  revision: a0bf8da21b7a6f37e1ad28790187e0244a0d5466
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -47,18 +38,6 @@ GIT
   specs:
     activeadmin-sortable (0.0.3)
       activeadmin (>= 0.4)
-
-GIT
-  remote: git://github.com/plataformatec/devise.git
-  revision: 61ec44b76edb7f4f0df9683ebb515beb80196fe9
-  specs:
-    devise (3.4.1)
-      bcrypt (~> 3.0)
-      orm_adapter (~> 0.1)
-      railties (>= 3.2.6, < 5)
-      responders
-      thread_safe (~> 0.1)
-      warden (~> 1.2.3)
 
 GEM
   remote: https://rubygems.org/
@@ -149,6 +128,13 @@ GEM
       sass-rails (<= 5.0.1)
       sprockets (< 2.13)
     debug_inspector (0.0.2)
+    devise (3.4.1)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     devise-i18n (0.11.3)
     dotenv (1.0.2)
     ejs (1.1.1)
@@ -188,9 +174,9 @@ GEM
       sass (>= 3.3.0, < 3.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
-    globalize (4.0.3)
-      activemodel (>= 4.0.0, < 5)
-      activerecord (>= 4.0.0, < 5)
+    globalize (5.0.1)
+      activemodel (>= 4.2.0, < 4.3)
+      activerecord (>= 4.2.0, < 4.3)
     handlebars-source (2.0.0)
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
@@ -350,14 +336,13 @@ DEPENDENCIES
   active_admin_editor!
   active_model_serializers
   activeadmin!
-  activeadmin-globalize!
   activeadmin-sortable!
   acts_as_list
   autoprefixer-rails
   binding_of_caller
   bullet
   compass-rails
-  devise!
+  devise (~> 3.4)
   devise-i18n
   email_validator
   ember-data-source
@@ -368,7 +353,7 @@ DEPENDENCIES
   font_assets
   foreman
   foundation-rails
-  globalize (~> 4.0.2)
+  globalize
   high_voltage
   i18n-js!
   jquery-rails

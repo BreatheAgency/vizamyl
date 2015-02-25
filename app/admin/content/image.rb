@@ -20,15 +20,14 @@ ActiveAdmin.register Image, namespace: :content do
     column :title do |video|
       link_to(video.title, content_chapter_video_path(chapter, video))
     end
-    # translation_status_flags
     actions
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :title
-      t.input :subject_area
-      t.input :source
+    f.inputs do
+      f.input :title
+      f.input :subject_area
+      f.input :source
     end
     f.actions
   end

@@ -4,7 +4,7 @@ class Text < ActiveRecord::Base
 
   %i(title body abbreviations subject_area).each do |translated_field|
     translates translated_field
-    active_admin_translates translated_field
+    
   end
 
 end

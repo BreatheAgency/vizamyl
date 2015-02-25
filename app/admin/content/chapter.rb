@@ -22,7 +22,6 @@ ActiveAdmin.register Chapter, namespace: :content do
     column :title do |chapter|
       link_to(chapter.title, content_chapter_path(chapter))
     end
-    # translation_status_flags
     actions
   end
 
@@ -35,9 +34,9 @@ ActiveAdmin.register Chapter, namespace: :content do
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :title
-      t.input :short_title
+    f.inputs do
+      f.input :title
+      f.input :short_title
     end
     f.actions
   end

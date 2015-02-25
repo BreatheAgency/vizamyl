@@ -11,11 +11,9 @@ ActiveAdmin.register Answer, namespace: :content do
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :body, as: :html_editor
-    end
     f.inputs do
       f.input :correct
+      f.input :body, as: :html_editor
     end
     f.actions
   end

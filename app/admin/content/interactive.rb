@@ -20,21 +20,18 @@ ActiveAdmin.register Interactive, namespace: :content do
     column :title do |interactive|
       link_to(interactive.title, content_chapter_interactive_path(chapter, interactive))
     end
-    # translation_status_flags
     actions
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :title
-      t.input :body, as: :html_editor
-      t.input :subject_area
+    f.inputs do
+      f.input :title
+      f.input :body, as: :html_editor
+      f.input :subject_area
     end
     f.has_many :interactive_sources, allow_destroy: true do |ff|
-      ff.translated_inputs do |tt|
-        tt.input :label
-      end
       ff.inputs do
+        ff.input :label
         ff.input :source
         ff.input :height
       end

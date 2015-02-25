@@ -4,7 +4,7 @@ class Image < ActiveRecord::Base
 
   %i(title subject_area source).each do |translated_field|
     translates translated_field
-    active_admin_translates translated_field
+    
   end
 
 end

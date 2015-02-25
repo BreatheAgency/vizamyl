@@ -21,19 +21,16 @@ ActiveAdmin.register Video, namespace: :content do
       link_to(video.title, content_chapter_video_path(chapter, video))
     end
     column(:mandatory) { |model| model['mandatory'] ? status_tag('yes', :ok)  : status_tag('no',:ok) }
-    # translation_status_flags
     actions
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :title
-      t.input :body, as: :html_editor
-      t.input :subject_area
-      t.input :source
-      t.input :abbreviations, as: :html_editor
-    end
     f.inputs do
+      f.input :title
+      f.input :body, as: :html_editor
+      f.input :subject_area
+      f.input :source
+      f.input :abbreviations, as: :html_editor
       f.input :mandatory
     end
     f.actions

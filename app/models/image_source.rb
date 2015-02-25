@@ -3,6 +3,6 @@ class ImageSource < ActiveRecord::Base
 
   %i(source).each do |translated_field|
     translates translated_field
-    active_admin_translates translated_field
+    
   end
 end

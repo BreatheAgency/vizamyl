@@ -20,8 +20,8 @@ ActiveAdmin.register ImageSource, namespace: :content do
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :source
+    f.inputs do
+      f.input :source
     end
     f.actions
   end

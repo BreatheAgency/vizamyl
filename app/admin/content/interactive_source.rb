@@ -17,7 +17,6 @@ ActiveAdmin.register InteractiveSource, namespace: :content do
     column :source
     column :label
     column :height
-    # translation_status_flags
     actions
   end
 

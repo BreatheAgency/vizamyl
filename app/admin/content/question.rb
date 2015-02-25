@@ -22,37 +22,30 @@ ActiveAdmin.register Question, namespace: :content do
     column :answers_count do |question|
       question.answers.count
     end
-    # translation_status_flags
     actions
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :title, as: :html_editor
-      t.input :explanation_source
-    end
     f.inputs do
+      f.input :title, as: :html_editor
+      f.input :explanation_source
       f.input :test_case
     end
     f.has_many :interactive_sources, allow_destroy: true do |ff|
-      ff.translated_inputs do |tt|
-        tt.input :label
-      end
       ff.inputs do
+        ff.input :label
         ff.input :source
         ff.input :height
       end
     end
     f.has_many :image_sources, allow_destroy: true do |ff|
-      ff.translated_inputs do |tt|
-        tt.input :source
+      ff.inputs do
+        ff.input :source
       end
     end
     f.has_many :answers, allow_destroy: true do |ff|
-      ff.translated_inputs do |tt|
-        tt.input :body, as: :html_editor
-      end
       ff.inputs do
+        ff.input :body, as: :html_editor
         ff.input :correct
       end
     end

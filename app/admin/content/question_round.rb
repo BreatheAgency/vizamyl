@@ -27,8 +27,8 @@ ActiveAdmin.register QuestionRound, namespace: :content do
 
   form do |f|
     f.has_many :questions, allow_destroy: true do |ff|
-      ff.translated_inputs do |tt|
-        tt.input :title, as: :html_editor
+      ff.inputs do
+        ff.input :title, as: :html_editor
       end
     end
     f.actions

@@ -3,6 +3,6 @@ class Answer < ActiveRecord::Base
 
   %i(body).each do |translated_field|
     translates translated_field
-    active_admin_translates translated_field
+    
   end
 end

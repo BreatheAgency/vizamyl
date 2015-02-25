@@ -25,9 +25,9 @@ ActiveAdmin.register FourB, namespace: :content do
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :title, as: :html_editor
-      t.input :subject_area
+    f.inputs do
+      f.input :title, as: :html_editor
+      f.input :subject_area
     end
     f.has_many :question_rounds, allow_destroy: true do |ff|
       ff.inputs
