@@ -1,4 +1,5 @@
 class ProgressionsController < ApplicationController
+  skip_before_action :set_locale
 
   def index
     progressions = current_user.progressions.all

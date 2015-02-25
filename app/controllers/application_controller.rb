@@ -23,17 +23,16 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     desired_locale = I18n.default_locale
-    locale_in_url = request.params.fetch(:locale, I18n.default_locale).to_sym
+    locale_in_url = request.params.fetch(:locale, I18n.default_locale).to_s
 
     if user_signed_in?
       desired_locale = current_user.locale
-      # the current_user has logged in, but they are visiting the incorrect locale.
-      # lets point them in the right direction
-      if desired_locale.to_sym != locale_in_url
-        redirect_to(request.fullpath.sub(locale_in_url.to_s, current_user.locale.to_s))
-      end
-    elsif I18n.available_locales.include?(locale_in_url)
+    elsif I18n.available_locales.include?(locale_in_url.to_sym)
       desired_locale = locale_in_url
+    end
+    
+    if locale_in_url.to_s != desired_locale.to_s && request.fullpath != '/'
+      redirect_to(request.fullpath.sub(locale_in_url.to_s, desired_locale.to_s))
     end
 
     if params[:force_locale] && I18n.available_locales.include?(params[:force_locale])

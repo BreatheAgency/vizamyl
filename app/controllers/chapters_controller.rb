@@ -1,4 +1,5 @@
 class ChaptersController < ApplicationController
+  skip_before_action :set_locale
   def index
     @chapters = Chapter.includes(:translations, steps: [page: [:translations]]).all
     render json: @chapters
