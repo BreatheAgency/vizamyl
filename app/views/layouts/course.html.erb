@@ -10,6 +10,7 @@
     <%= tag(:meta, content: Rails.application.secrets.content_host, name: 'env-content-host') %>
     <%= render partial: 'ga' %>
     <%= render partial: 'rollbar' %>
+    <%= render partial: 'pingdom' %>
     <%= javascript_include_tag :course %>
   </body>
 </html>
