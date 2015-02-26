@@ -118,7 +118,7 @@
 }
 
 .registrations.instituion, .registrations.terms, .registrations.marketing, .registrations.details {
-  div:first-of-type {
+  > div:first-of-type {
     @extend .motion;
   }
 }
