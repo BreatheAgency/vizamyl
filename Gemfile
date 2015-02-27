@@ -58,6 +58,6 @@ group :test, :development do
   gem 'pry-rails'
 end
 
-group :staging, :production do
+group :sandbox, :staging, :production do
   gem 'rails_12factor'
 end
