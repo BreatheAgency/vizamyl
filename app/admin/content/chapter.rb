@@ -10,13 +10,6 @@ ActiveAdmin.register Chapter, namespace: :content do
     end
   end
 
-  scope :all, default: true
-  I18n.available_locales.map.each do |locale|
-    scope locale do |chapter|
-      chapter.with_translations(locale.to_s)
-    end
-  end
-
   index do
     sortable_handle_column
     column :title do |chapter|
