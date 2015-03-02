@@ -34,7 +34,7 @@ module Vizamyl
     end
 
     #
-    config.i18n.available_locales = [:en, :de]
+    config.i18n.available_locales = [:en, :gb, :pt, :it, :fr, :es, :de, :at, :nl] 
 
     #
     config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
