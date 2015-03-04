@@ -23,12 +23,11 @@ ActiveAdmin.register User, as: 'Users' do
       link_to(user.institution, admin_user_path(user))
     end
     column :invite_code do |user|
-      if user.invite_code.empty?
-        link_to('Empty', admin_user_path(user))
+      if user.invite_code.nil?
+        return link_to('Empty', admin_user_path(user))
       else
-        link_to(user.invite_code, admin_user_path(user))
+        return link_to(user.invite_code, admin_user_path(user))
       end
-
     end
     column :progress do |user|
       link_to("#{user.progress}%", admin_user_path(user))
