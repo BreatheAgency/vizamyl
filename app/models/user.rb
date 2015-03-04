@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
-  attr_accessor :invite_code
   attr_accessor :form_step
   cattr_accessor :form_steps do
     %w(details institution terms marketing)
