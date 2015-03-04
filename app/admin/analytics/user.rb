@@ -22,6 +22,9 @@ ActiveAdmin.register User, as: 'Users' do
     column :institution do |user|
       link_to(user.institution, admin_user_path(user))
     end
+    column :invite_code do |user|
+      link_to(user.invite_code, admin_user_path(user))
+    end
     column :progress do |user|
       link_to("#{user.progress}%", admin_user_path(user))
     end
@@ -48,6 +51,7 @@ ActiveAdmin.register User, as: 'Users' do
       # row(:completed) { |model| model.completed? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       # row(:passed) { |model| model.passed? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row :final_assessment_status
+      row :invite_code
       row('Overall Marketing') { |model| model.marketing_overall_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row('Email Marketing') { |model| model.marketing_email_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row('Post Marketing') { |model| model.marketing_post_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
