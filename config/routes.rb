@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   scope ':locale', locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }, controllers: { registrations: 'users/registrations' }
     namespace :users do
-      resources :enrole, only: [:new, :create, :show, :update]
+      resources :enrol, only: [:new, :create, :show, :update]
       get '/course-complete' => 'course_completion#success'
     end
     get '/*id' => 'static#show', id: 'home', as: :static

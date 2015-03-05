@@ -11,7 +11,7 @@
     <h1>VIZAMYL&#8482; Training</h1>
     <p>GE Healthcare will collect your data in order to assess whether you have understood how to use VIZAMYL&#8482; in accordance with VIZAMYL&#8482;’s Summary of Product Characteristics and whether VIZAMYL&#8482; should be supplied to you for use in the event that you have passed an exam in relation to this. In the event that: (i) you pass the exam, we will use your data in order to supply VIZAMYL&#8482; to you, or your institution; OR (ii) you fail the exam, we will use your data in order to provide you with face-to-face training in your country. For this purpose, we may share personal data relating to you with other companies in the GE Healthcare group. We may also hold your data for a reasonable amount of time. You can exercise your right of access and rectification and your right to object to data processing by sending a request to us at contactus@ge.com.</p>
     <p>Due to the international dimension of our group, the data may be transferred to countries outside the EU which do not grant the same level of protection to personal data.</p>
-    <%= simple_form_for(@user, url: users_enrole_path, html: { method: :put, class: 'form' }) do |f| %>
+    <%= simple_form_for(@user, url: users_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
       <%= render 'tmp_storage_fields', f: f %>
       <div class='form-inputs'>
         <%= f.input :terms_and_conditions_opt_in, required: true, label: '<span class="terms-accept">I accept and understand the above and the Terms and Conditions</span><br><span class="please-tick">(Please tick)</span>'.html_safe %>

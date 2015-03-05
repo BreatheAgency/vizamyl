@@ -1,32 +1,11 @@
 en:
-  activerecord:
-    models:
-      user: User
-    attributes:
-      user:
-        current_sign_in_at: Signed in at
-        current_password: Current password
-        email: Email address
-        last_sign_in_at: Last signed in at
-        password: Password
-        password_confirmation: Password confirmation
-        remember_me: Remember me
-  active_admin:
-    globalize:
-      translations: Translations
-      language:
-        en: English
-        de: German
-        es: Spanish
-        fr: French
-        it: Italian
   layouts:
     application:
       course_menu: Course menu
       my_account: My account
       login: Login
       logout: Logout
-      enrole: Enrol
+      enrol: Enrol
       prescribing_information: Prescribing information
       references: References
       resources: Resources

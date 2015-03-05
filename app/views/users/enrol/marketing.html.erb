@@ -10,7 +10,7 @@
     </ul>
     <h1>VIZAMYL&#8482; Training<br>Marketing and promotional use of data</h1>
     <p>If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.</p>
-    <%= simple_form_for(@user, url: users_enrole_index_path, html: { class: 'form' }) do |f| %>
+    <%= simple_form_for(@user, url: users_enrol_index_path, html: { class: 'form' }) do |f| %>
       <%= render 'tmp_storage_fields', f: f %>
       <p>If you do want to receive such information, please tick the box below.</p>
       <%= f.input :marketing_overall_opt_in, label: '<span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<span>'.html_safe %>
@@ -22,7 +22,7 @@
       <p class='small small-right'>(Please tick one or more options)</p>
       <div class='form-actions button-container'>
         <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
-          <%= t('layouts.application.enrole') %><i class='fi-arrow-right'></i>
+          <%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i>
         <% end %>
       </div>
     <% end %>
