@@ -24,9 +24,9 @@ ActiveAdmin.register User, as: 'Users' do
     end
     column :invite_code do |user|
       if user.invite_code.nil?
-        return link_to('Empty', admin_user_path(user))
+        link_to('Empty', admin_user_path(user))
       else
-        return link_to(user.invite_code, admin_user_path(user))
+        link_to(user.invite_code, admin_user_path(user))
       end
     end
     column :progress do |user|
