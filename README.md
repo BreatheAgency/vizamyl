@@ -1,5 +1,6 @@
 # Vizamyl
 
+http://vizamyl-sandbox.herokuapp.com
 http://vizamyl-staging.herokuapp.com
 http://vizamyl.herokuapp.com
 
