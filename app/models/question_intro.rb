@@ -4,7 +4,6 @@ class QuestionIntro < ActiveRecord::Base
 
   %i(title body subject_area).each do |translated_field|
     translates translated_field
-    
   end
 
 end

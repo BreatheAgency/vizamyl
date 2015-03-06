@@ -843,8 +843,8 @@ end
 # en-super-user@readvizamyl.com
 # en-content-admin@readvizamyl.com
 #
-# User.new(locale: 'en', invite_code: 'amyloid', title: 'Dr', first_name: 'Example', last_name: 'Example', email: 'en-super-user@readvizamyl.com', password: 'vZPJpak7rjYLSCV', password_confirmation: 'vZPJpak7rjYLSCV', institution: 'Example', super_user: true, terms_and_conditions_opt_in: true).save!
+# User.new(locale: 'de', invite_code: 'amyloid', title: 'Dr', first_name: 'Example', last_name: 'Example', email: 'de-external@readvizamyl.com', password: 'XGByt8m3zy', password_confirmation: 'XGByt8m3zy', institution: 'Example', super_user: true, terms_and_conditions_opt_in: true).save!
 #
-# AdminUser.new(locale: 'en', email: 'en-admin@readvizamyl.com', password: 'zgFnCYkUEHP8EW6', password_confirmation: 'zgFnCYkUEHP8EW6').save!
+# AdminUser.new(locale: 'de', email: 'de-admin@readvizamyl.com', password: 'zGJrjaxcjTfm2dz', password_confirmation: 'zGJrjaxcjTfm2dz').save!
 #
-# AdminUser.new(locale: 'en', email: 'en-content-admin@readvizamyl.com', password: 'L3B5d8Jmm5xMUgC', password_confirmation: 'L3B5d8Jmm5xMUgC').save!
+# AdminUser.new(locale: 'de', email: 'de-content-admin@readvizamyl.com', password: '2dxHR3SjeMyHFwE', password_confirmation: '2dxHR3SjeMyHFwE').save!

@@ -4,7 +4,6 @@ class Video < ActiveRecord::Base
 
   %i(title body subject_area source abbreviations).each do |translated_field|
     translates translated_field
-    
   end
 
 end

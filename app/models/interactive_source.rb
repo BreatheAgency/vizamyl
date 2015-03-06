@@ -3,6 +3,5 @@ class InteractiveSource < ActiveRecord::Base
 
   %i(label).each do |translated_field|
     translates translated_field
-    
   end
 end

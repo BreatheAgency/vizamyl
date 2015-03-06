@@ -27,6 +27,8 @@ class Users::CourseCompletionController < ApplicationController
   before_action :authenticate_user!
 
   def success
+    current_user.passed_round_two_at = Time.now
+    current_user.save
     respond_to do |format|
       format.html
       format.pdf do
