@@ -165,8 +165,6 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
     execjs (2.4.0)
-    faker (1.4.3)
-      i18n (~> 0.5)
     ffi (1.9.6)
     font_assets (0.1.11)
       rack
@@ -355,7 +353,6 @@ DEPENDENCIES
   ember-rails (= 0.16.4)
   ember-source (= 1.9.0)
   es5-shim-rails
-  faker
   font_assets
   foreman
   foundation-rails
