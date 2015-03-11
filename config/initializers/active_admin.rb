@@ -6,6 +6,7 @@ class ContentAuthorization < ActiveAdmin::AuthorizationAdapter
 end
 
 ActiveAdmin.setup do |config|
+
   # == Site Title
   #
   # Set the title that is displayed on the main layout
@@ -146,6 +147,7 @@ ActiveAdmin.setup do |config|
   # Active Admin resources and pages from here.
   #
   config.before_filter :set_admin_locale
+  config.skip_before_filter :set_locale
 
 
   # == Setting a Favicon
