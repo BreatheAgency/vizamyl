@@ -1,23 +1,4 @@
 en:
-  layouts:
-    application:
-      course_menu: Course menu
-      my_account: My account
-      login: Login
-      logout: Logout
-      enrol: Enrol
-      prescribing_information: Prescribing information
-      references: References
-      resources: Resources
-      contact: Contact
-      accessibility: Accessibility
-      copyright_html: |
-        <p>&copy;2015 General Electric Company - All rights reserved.</p>
-        <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
-        <p>Vizamyl is a trademark of General Electric Company or one of its subsidiaries.</p>
-        <p><a href="/en/terms-and-conditions">Terms and conditions</a></p>
-      reference_html: |
-        <p class="right"></p>
   pages:
     gatekeeper:
       locale_titles:
@@ -25,12 +6,6 @@ en:
         fr_html: <p>France</p>
         de_html: <p>Germany</p>
         us_html: <p>US</p>
-    home:
-      title: Home
-      body_html: |
-        <h1>Welcome to the <br><strong>Vizamyl electronic training programme</h1></strong>
-        <p>If you are returning to the course, <br><strong>welcome back and please login.</strong></p>
-        <p>If you would like to begin the course, <br><strong>welcome, and please enrol.</strong></p>
     course:
       title: Course
     prescribing-information:
