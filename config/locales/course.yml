@@ -1,0 +1,10 @@
+en:
+  course:
+    actions:
+      back: Back
+      next: Next
+de:
+  course:
+    actions:
+      back: [Back]
+      next: [Next]
