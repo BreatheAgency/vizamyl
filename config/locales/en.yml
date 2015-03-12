@@ -19,20 +19,11 @@ en:
       reference_html: |
         <p class="right"></p>
   pages:
-    gatekeeper:
-      locale_titles:
-        en_html: <p style='text-align:left'>Int English<br>GE representatives<br>use only</p>
-        fr_html: <p>France</p>
-        de_html: <p>Germany</p>
-        us_html: <p>US</p>
     home:
-      title: Home
       body_html: |
         <h1>Welcome to the <br><strong>Vizamyl electronic training programme</h1></strong>
         <p>If you are returning to the course, <br><strong>welcome back and please login.</strong></p>
         <p>If you would like to begin the course, <br><strong>welcome, and please enrol.</strong></p>
-    course:
-      title: Course
     prescribing-information:
       left:
         body_html: |
@@ -148,46 +139,7 @@ en:
         <p>If you have any queries about these Terms, please contact us at <a href="mailto:contactus@ge.com">contactus@ge.com</a></p>
         <p><b>12. </b><b>Changes to this Privacy Policy</b></p>
         <p>These Terms and Conditions may be updated by GE Healthcare periodically and without prior notice to you to reflect changes in our online information practices. Updates to this policy will be posted to the website. We also encourage users to periodically check this document to understand how GE Healthcare protects and uses your information.</p>
-
   devise:
-    confirmations:
-      new:
-        resend_confirmation_instructions: "Resend confirmation instructions"
-      confirmed: "Your account was successfully confirmed."
-      send_instructions: "You will receive an email with instructions about how to confirm your account in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions about how to confirm your account in a few minutes."
-    failure:
-      already_authenticated: "You are already signed in."
-      inactive: "Your account is not activated yet."
-      invalid: "Invalid email or password."
-      invalid_token: "Invalid authentication token."
-      locked: "Your account is locked."
-      not_found_in_database: "Invalid email or password."
-      timeout: "Your session expired. Please sign in again to continue."
-      unauthenticated: "You need to sign in or sign up before continuing."
-      unconfirmed: "You have to confirm your account before continuing."
-    mailer:
-      confirmation_instructions:
-        action: "Confirm my account"
-        greeting: "Welcome %{recipient}!"
-        instruction: "You can confirm your account email through the link below:"
-        subject: "Confirmation instructions"
-      reset_password_instructions:
-        action: "Change my password"
-        greeting: "Hello %{recipient}!"
-        instruction: "Someone has requested a link to change your password, and you can do this through the link below."
-        instruction_2: "If you didn't request this, please ignore this email."
-        instruction_3: "Your password won't change until you access the link above and create a new one."
-        subject: "Reset password instructions"
-      unlock_instructions:
-        action: "Unlock my account"
-        greeting: "Hello %{recipient}!"
-        instruction: "Click the link below to unlock your account:"
-        message: "Your account has been locked due to an excessive amount of unsuccessful sign in attempts."
-        subject: "Unlock Instructions"
-    omniauth_callbacks:
-      failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
-      success: "Successfully authenticated from %{kind} account."
     passwords:
       new:
         send: "Send"
@@ -242,30 +194,3 @@ en:
         intro: |
           Please enter your email address
           and password to login.
-      signed_in: "Signed in successfully."
-      signed_out: "Signed out successfully."
-    shared:
-      links:
-        back: "Back"
-        didn_t_receive_confirmation_instructions: "Didn't receive confirmation instructions?"
-        didn_t_receive_unlock_instructions: "Didn't receive unlock instructions?"
-        forgot_your_password: "Forgotten your password?"
-        sign_in: "Sign in"
-        sign_in_with_provider: "Sign in with %{provider}"
-        sign_up: "Sign up"
-    unlocks:
-      new:
-        resend_unlock_instructions: "Resend unlock instructions"
-      send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
-      send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
-      unlocked: "Your account has been unlocked successfully. Please sign in to continue."
-  errors:
-    messages:
-      already_confirmed: "was already confirmed, please try signing in"
-      confirmation_period_expired: "needs to be confirmed within %{period}, please request a new one"
-      expired: "has expired, please request a new one"
-      not_found: "not found"
-      not_locked: "was not locked"
-      not_saved:
-        one: "1 error prohibited this %{resource} from being saved:"
-        other: "%{count} errors prohibited this %{resource} from being saved:"

@@ -5,7 +5,6 @@ gem 'i18n-js', github: 'lenage/i18n-js'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'activeadmin-sortable', github: 'neo/activeadmin-sortable'
 gem 'active_admin_editor', github: 'bazuka/active_admin_editor'
-gem 'i18n-active_record', github: 'svenfuchs/i18n-active_record'
 
 gem 'rake', '~> 10.3'
 gem 'rails', '~> 4.1'

@@ -16,15 +16,25 @@
       </li>
     </ul>
     <ul class='locale-label'>
-      <% I18n.available_locales.each do |locale| %>
+      <% I18n.available_locales.reject{|lang| lang == :en }.each do |locale| %>
         <li>
           <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-            <%= t(".locale_titles.#{locale}_html") %>
+            <%= {
+              'gb': 'English',
+              'pt': 'Portuguese',
+              'it': 'Italien',
+              'fr': 'French',
+              'es': 'Spanish',
+              'de': 'Germany',
+              'at': 'Austrian',
+              'nl': 'Dutch'
+            }.fetch(locale, locale) %>
+          </a>
           </a>
         </li>
       <% end %>
       <li>
-        <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button'>  <%= t(".locale_titles.us_html") %> </a>
+      <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button'><p style='text-align:left'>Int English<br>GE representatives<br>use only</br></p></a>
       </li>
     </ul>
   </div>
