@@ -77,11 +77,11 @@
 
       @each $locale in $available-locales {
         .#{$locale}-button {
-          @include retina-background-image(locales/#{$locale}, 60px, 60px);
+          @include retina-background-image("flags/#{$locale}", 60px, 60px);
         }
       }
       .us-button{
-        @include retina-background-image(locales/us, 60px, 60px);
+        @include retina-background-image("flags/us", 60px, 60px);
       }
     }
 
