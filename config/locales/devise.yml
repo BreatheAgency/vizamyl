@@ -1,0 +1,44 @@
+en:
+  devise:
+    registrations:
+      edit:
+        salutations:
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
+      new:
+        salutations:
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
+    sessions:
+      new:
+        intro: |
+          Please enter your email address
+          and password to login.
+de:
+  devise:
+    registrations:
+      edit:
+        salutations:
+          - [Dr]
+          - [Mr]
+          - [Mrs]
+          - [Miss]
+          - [Ms]
+      new:
+        salutations:
+          - [Dr]
+          - [Mr]
+          - [Mrs]
+          - [Miss]
+          - [Ms]
+    sessions:
+      new:
+        intro: |
+          [Please enter your email address
+          and password to login.]

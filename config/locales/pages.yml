@@ -1,23 +1,4 @@
 en:
-  layouts:
-    application:
-      course_menu: Course menu
-      my_account: My account
-      login: Login
-      logout: Logout
-      enrol: Enrol
-      prescribing_information: Prescribing information
-      references: References
-      resources: Resources
-      contact: Contact
-      accessibility: Accessibility
-      copyright_html: |
-        <p>&copy;2015 General Electric Company - All rights reserved.</p>
-        <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
-        <p>Vizamyl is a trademark of General Electric Company or one of its subsidiaries.</p>
-        <p><a href="/en/terms-and-conditions">Terms and conditions</a></p>
-      reference_html: |
-        <p class="right"></p>
   pages:
     home:
       body_html: |
@@ -62,7 +43,6 @@ en:
       right:
         body_html: |
     resources:
-      title: Resources
       download_title: Vizamyl SmPC EU
     contact:
       left:
@@ -131,66 +111,13 @@ en:
         <p>The failure of GE Healthcare to enforce any provision of these Terms of Use shall not be deemed a waiver of such provision nor the right to enforce such provision. Furthermore, any waiver of any provision of these Terms by any party will be effective only if in writing and signed by a party</p>
         <p><b>11. </b><b>Notices and Contact</b></p>
         <p>GE Healthcare's address for notices relating to this website is as follows:</p>
-        <p>GE Healthcare<br>
-        White Lion Road,<br>
-        Amersham,<br>
-        Buckinghamshire,<br>
-        HP7 9LL<br>
+        <p>
+          GE Healthcare<br>
+          White Lion Road,<br>
+          Amersham,<br>
+          Buckinghamshire,<br>
+          HP7 9LL<br>
+        </p>
         <p>If you have any queries about these Terms, please contact us at <a href="mailto:contactus@ge.com">contactus@ge.com</a></p>
         <p><b>12. </b><b>Changes to this Privacy Policy</b></p>
         <p>These Terms and Conditions may be updated by GE Healthcare periodically and without prior notice to you to reflect changes in our online information practices. Updates to this policy will be posted to the website. We also encourage users to periodically check this document to understand how GE Healthcare protects and uses your information.</p>
-  devise:
-    passwords:
-      new:
-        send: "Send"
-        forgot_your_password: "Forgotten your password?"
-        send_me_reset_password_instructions: "Send me reset password instructions"
-      edit:
-        submit: "Submit"
-        change_my_password: "Change my password"
-        change_your_password: "Change your password"
-        confirm_new_password: "Confirm new password"
-        new_password: "New password"
-      no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
-      send_instructions: "You will receive an email with instructions about how to reset your password in a few minutes."
-      send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
-      updated: "Your password was changed successfully. You are now signed in."
-      updated_not_active: "Your password was changed successfully."
-    registrations:
-      edit:
-        salutations:
-          - Dr
-          - Mr
-          - Mrs
-          - Miss
-          - Ms
-        are_you_sure: "Are you sure?"
-        cancel_my_account: "Cancel my account"
-        leave_blank_if_you_don_t_want_to_change_it: "leave blank if you dont want to change it"
-        currently_waiting_confirmation_for_email: "Currently waiting confirmation for: %{email}"
-        title: "Edit %{resource}"
-        we_need_your_current_password_to_confirm_your_changes: "we need your current password to confirm your changes"
-        update: "Update"
-        unhappy: "Unhappy"
-      new:
-        sign_up: "Sign up"
-        salutations:
-          - Dr
-          - Mr
-          - Mrs
-          - Miss
-          - Ms
-      destroyed: "Bye! Your account was successfully cancelled. We hope to see you again soon."
-      signed_up: "Welcome! You have signed up successfully."
-      signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
-      signed_up_but_locked: "You have signed up successfully. However, we could not sign you in because your account is locked."
-      signed_up_but_unconfirmed: "A message with a confirmation link has been sent to your email address. Please open the link to activate your account."
-      update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and click on the confirm link to finalize confirming your new email address."
-      updated: "You updated your account successfully."
-    sessions:
-      new:
-        sign_in: "Sign in"
-        forgot_your_password: "Forgotten your password?"
-        intro: |
-          Please enter your email address
-          and password to login.

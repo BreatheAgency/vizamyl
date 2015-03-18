@@ -14,10 +14,10 @@ class CourseCompletionPDF < Prawn::Document
     height = 32
     margin = 3.5
     fill_color '005cb9'
-    text_box("Salutation: " + user.salutation, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
-    text_box("First name: " + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
-    text_box("Last name: " + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
-    text_box("Date: " + Time.now.strftime("#{Time.now.day.ordinalize} %B %Y"), at: [left, top + margin + height], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.salutation') + ': ' + user.salutation, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.date') + ': ' + Time.now.strftime("#{Time.now.day.ordinalize} %B %Y"), at: [left, top + margin + height], style: :normal, size: 14)
     start_new_page
     image(Rails.root.join("app/assets/images/#{I18n.locale}/course-completion-2.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
   end
