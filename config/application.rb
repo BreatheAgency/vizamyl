@@ -38,14 +38,7 @@ module Vizamyl
 
     #
     config.i18n.fallbacks = {
-      'gb' => 'en',
-      'pt' => 'en',
-      'it' => 'en',
-      'fr' => 'en',
-      'es' => 'en',
-      'de' => 'en',
       'at' => 'de',
-      'nl' => 'en'
     }
 
     #
