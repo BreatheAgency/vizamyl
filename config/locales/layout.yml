@@ -21,7 +21,7 @@ en:
 de:
   layouts:
     application:
-      course_menu: Course menu :)
+      course_menu: Course menu (German)
       my_account: My account
       login: Login
       logout: Logout
@@ -38,3 +38,7 @@ de:
         <p><a href="/en/terms-and-conditions">Terms and conditions</a></p>
       reference_html: |
         <p class="right"></p>
+at:
+  layouts:
+    application:
+      my_account: My account (Austrian)
