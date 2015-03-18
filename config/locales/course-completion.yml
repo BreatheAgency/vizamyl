@@ -6,7 +6,7 @@ en:
     date: Date
 de:
   course_completion:
-    salutation: "[Salutation]"
-    first_name: "[First name]"
-    last_name: "[Last name]"
-    date: "[Date]"
+    salutation: Salutation
+    first_name: First name
+    last_name: Last name
+    date: Date

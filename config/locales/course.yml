@@ -6,5 +6,5 @@ en:
 de:
   course:
     actions:
-      back: [Back]
-      next: [Next]
+      back: Back
+      next: Next

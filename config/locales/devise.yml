@@ -25,20 +25,20 @@ de:
     registrations:
       edit:
         salutations:
-          - [Dr]
-          - [Mr]
-          - [Mrs]
-          - [Miss]
-          - [Ms]
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
       new:
         salutations:
-          - [Dr]
-          - [Mr]
-          - [Mrs]
-          - [Miss]
-          - [Ms]
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
     sessions:
       new:
         intro: |
-          [Please enter your email address
-          and password to login.]
+          Please enter your email address
+          and password to login.
