@@ -25,7 +25,7 @@
 //= require_tree ./initializers
 
 I18n.fallbacks = true;
-I18n.locales.at = ["de", "en"];
+// I18n.locales.at = ["de", "en"];
 I18n.missingTranslationPrefix = '?: '
 
 window.Course = Ember.Application.create({
