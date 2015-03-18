@@ -23,6 +23,10 @@
 //= require_tree ./components
 //= require_tree ./templates
 //= require_tree ./initializers
+
+I18n.fallbacks = true;
+I18n.locales.at = ['de', 'en'];
+
 window.Course = Ember.Application.create({
   env: Em.Object.create(),
   // LOG_TRANSITIONS: true,

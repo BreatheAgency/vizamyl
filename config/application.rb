@@ -37,6 +37,18 @@ module Vizamyl
     config.i18n.available_locales = [:en, :gb, :pt, :it, :fr, :es, :de, :at, :nl]
 
     #
+    config.i18n.fallbacks = {
+      'gb' => 'en',
+      'pt' => 'en',
+      'it' => 'en',
+      'fr' => 'en',
+      'es' => 'en',
+      'de' => 'en',
+      'at' => 'de',
+      'nl' => 'en'
+    }
+
+    #
     config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
     config.assets.precompile += %w(course.js)
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
