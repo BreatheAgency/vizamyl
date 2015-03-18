@@ -1,4 +1,4 @@
 Globalize.fallbacks = {
   :at => [:de, :en],
-  :de => :en
+  :de => [:en]
 }
