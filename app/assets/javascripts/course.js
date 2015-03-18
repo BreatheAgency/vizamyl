@@ -25,7 +25,7 @@
 //= require_tree ./initializers
 
 I18n.fallbacks = true;
-I18n.locales.at = ['de', 'en'];
+I18n.locales.at = 'de';
 
 window.Course = Ember.Application.create({
   env: Em.Object.create(),
