@@ -16,6 +16,9 @@
       </li>
     </ul>
     <ul class='locale-label'>
+      <li>
+        <a href='/en' class='en-button'><p style='text-align:left'>Int English<br>GE representatives<br>use only</br></p></a>
+      </li>
       <% I18n.available_locales.reject{|lang| lang == :en }.each do |locale| %>
         <li>
           <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
@@ -34,7 +37,7 @@
         </li>
       <% end %>
       <li>
-      <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button'><p style='text-align:left'>Int English<br>GE representatives<br>use only</br></p></a>
+        <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button'>US</a>
       </li>
     </ul>
   </div>
