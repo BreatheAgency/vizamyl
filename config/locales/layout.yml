@@ -26,7 +26,7 @@ de:
   layouts:
     application:
       logo:
-        1_html: Vizamyl<sup class="trade-mark">™</sup>
+        1_html: Vizamyl<sup class='trade-mark'>™</sup>
         2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
         3_html: <span>Injection</span>
       course_menu: Course menu (German)
