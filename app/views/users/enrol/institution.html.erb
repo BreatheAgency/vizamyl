@@ -8,8 +8,8 @@
       <li></li>
       <li></li>
     </ul>
-    <h1>Please enter your institution.</h1>
-    <p>Please enter the institution to which you refer patients in the box below.</p>
+    <h1><%= t('.title') %></h1>
+    <p><%= t('.description') %></p>
     <%= simple_form_for(@user, url: users_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
       <%= render 'tmp_storage_fields', f: f %>
       <div class='form-inputs'>
@@ -17,7 +17,7 @@
       </div>
       <div class='form-actions button-container'>
         <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
-          Next<i class='fi-arrow-right'></i>
+          <%= t('course.actions.next') %><i class='fi-arrow-right'></i>
         <% end %>
       </div>
     <% end %>

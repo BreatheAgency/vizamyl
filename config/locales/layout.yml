@@ -46,7 +46,3 @@ de:
         <p><a href="/en/terms-and-conditions">Terms and conditions</a></p>
       reference_html: |
         <p class="right"></p>
-de-at:
-  layouts:
-    application:
-      references: References (Austrian)
