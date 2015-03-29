@@ -27,8 +27,7 @@ class Users::CourseCompletionController < ApplicationController
   before_action :authenticate_user!
 
   def success
-    current_user.passed_round_two_at = Time.now
-    current_user.save
+    current_user.pass!
     respond_to do |format|
       format.html
       format.pdf do
@@ -36,8 +35,5 @@ class Users::CourseCompletionController < ApplicationController
         send_data pdf.render, filename: 'course_completion.pdf', type: 'application/pdf'
       end
     end
-  end
-
-  def failure
   end
 end

@@ -48,6 +48,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  def pass!
+    u.transaction do
+      u.progressions.update_all(amount: 1)
+      u.passed_round_two = Time.now
+      u.save
+    end
+  end
+
   def progress
     return 100 if super_user
     # Count all progressions which are either in progress or complete
@@ -63,12 +71,12 @@ class User < ActiveRecord::Base
   alias_method :completed?, :completed
 
   def passed
-    super_user || self.passed_round_one || self.passed_round_two
+    !!(super_user || self.passed_round_one || self.passed_round_two)
   end
   alias_method :passed?, :passed
 
   def failed
-    self.failed_round_one || self.failed_round_two
+    !!(self.failed_round_one || self.failed_round_two)
   end
   alias_method :failed?, :failed
 

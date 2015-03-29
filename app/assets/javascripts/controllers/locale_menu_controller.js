@@ -34,7 +34,6 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
     },
 
     nextStep: function(previousStep) {
-
       var previousChapter = previousStep.get('chapter');
       var previousStepIndex = previousChapter.get('steps').indexOf(previousStep);
       var nextStep = null;
@@ -78,6 +77,5 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
       return (chapter.get('visibleSteps.length') !== 0 && !chapter.get('hidden'));
     }.bind(this));
   }.property('arrangedContent.@each.visibleSteps.length')
-
 
 });
