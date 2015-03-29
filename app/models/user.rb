@@ -59,7 +59,7 @@ class User < ActiveRecord::Base
   def progress
     return 100 if super_user
     # Count all progressions which are either in progress or complete
-    progress = (progressions.where(amount: 0.5..1).count.to_f / progressions.count).round * 100.0
+    progress = ((progressions.where(amount: 0.5..1).count.to_f - Chapter.last.steps.count) / (progressions.count - Chapter.last.steps.count)) * 100.0
     progress.round || 0
   end
 
