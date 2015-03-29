@@ -50,17 +50,16 @@ class User < ActiveRecord::Base
 
   def pass!
     self.transaction do
-      progressions.update_all(amount: 1)
-      passed_round_two = Time.now
-      save!
+      self.progressions.update_all(amount: 1)
+      self.passed_round_two = Time.now
+      self.save!
     end
   end
 
   def progress
     return 100 if super_user
     # Count all progressions which are either in progress or complete
-    # Subtract all the progressions available aside from the last Chapter (eg extra test case vidoes)
-    progress = progressions.where(amount: 0.5..1).count.to_f / (progressions.count - Chapter.last.steps.count) * 100.0
+    progress = (progressions.where(amount: 0.5..1).count.to_f / progressions.count).round * 100.0
     progress.round || 0
   end
 

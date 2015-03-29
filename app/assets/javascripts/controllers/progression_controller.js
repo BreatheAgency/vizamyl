@@ -14,7 +14,7 @@ Course.ProgressionController = Ember.Controller.extend({
 
   total: function() {
     if (this.get('isSuperUser')) { return 100 };
-    var total = Math.round(this.get('completeProgressions.length') / (this.get('progressions.length') - this.get('hiddenChapters.lastObject.steps.length')) * 100) || 0;
+    var total = Math.round(this.get('completeProgressions.length') / (this.get('progressions.length')) * 100) || 0;
     return total;
   }.property('isSuperUser', 'progressions.length','completeProgressions.length', 'hiddenChapters.lastObject.steps.length')
 });
