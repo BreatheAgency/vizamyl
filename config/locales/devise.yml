@@ -23,3 +23,7 @@ en:
           and password to login.
         forgot_your_password: Forgotten your password?
         login: Login
+    passwords:
+      new:
+        forgot_your_password: Forgotten your password?
+        send: Send
