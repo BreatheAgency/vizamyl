@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
   end
 
   def pass!
-    u.transaction do
+    self.transaction do
       u.progressions.update_all(amount: 1)
       u.passed_round_two = Time.now
       u.save
