@@ -29,6 +29,6 @@ en:
         send: Send
       edit:
         change_your_password: Change your password
-        password: New password
-        password_confirmation: Confirm new password
+        password_label: New password
+        password_confirmation_label: Confirm new password
         submit: Submit
