@@ -27,3 +27,8 @@ en:
       new:
         forgot_your_password: Forgotten your password?
         send: Send
+      edit:
+        change_your_password: Change your password
+        password: New password
+        password_confirmation: Confirm new password
+        submit: Submit
