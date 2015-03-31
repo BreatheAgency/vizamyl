@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   #   sign_out(:user)
   #   redirect_to(new_admin_user_session_path, alert: exception.message)
   # end
-
+  
   private
 
   def set_locale
