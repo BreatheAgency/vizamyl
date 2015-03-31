@@ -26,6 +26,15 @@ GIT
       rails (>= 3.0.0)
 
 GIT
+  remote: git://github.com/globalize/globalize.git
+  revision: f1d7b06d53a5820a9e6421ae6f4357906d98292b
+  specs:
+    globalize (5.1.0)
+      activemodel (>= 4.2.0, < 4.3)
+      activerecord (>= 4.2.0, < 4.3)
+      request_store (~> 1.0)
+
+GIT
   remote: git://github.com/lenage/i18n-js.git
   revision: abe1c039f5e71732648b67fd8228eea87828a1f0
   specs:
@@ -169,9 +178,6 @@ GEM
       sass (>= 3.3.0, < 3.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
-    globalize (5.0.1)
-      activemodel (>= 4.2.0, < 4.3)
-      activerecord (>= 4.2.0, < 4.3)
     handlebars-source (2.0.0)
     has_scope (0.6.0)
       actionpack (>= 3.2, < 5)
@@ -279,6 +285,7 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
+    request_store (1.1.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     roboto (0.2.0)
@@ -346,7 +353,7 @@ DEPENDENCIES
   font_assets
   foreman
   foundation-rails
-  globalize
+  globalize!
   high_voltage
   i18n-js!
   jquery-rails
@@ -364,6 +371,7 @@ DEPENDENCIES
   rails (~> 4.1)
   rails_12factor
   rake (~> 10.3)
+  request_store
   roboto
   rollbar
   sass-rails (~> 5.0)
