@@ -3,6 +3,23 @@ en:
     actions:
       back: Back
       next: Next
+    pages:
+      test:
+        question:
+          title: Self-assessment question
+        question_results:
+          title: Self-assessment question results
+          question: Question
+          correct: Correct
+          incorrect: Incorrect
+        self_assesment:
+          correct:
+            one: Well done!
+            two: Your self-assessment for
+            three: has been sucessfully completed, and you may now proceed.
+          incorrect:
+            one: Please review the training for
+            two: You will then be re-challenged with more questions on this topic.
 de:
   course:
     actions:

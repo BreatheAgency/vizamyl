@@ -17,28 +17,28 @@
   {{else}}
     <div class='small-5 large-5 columns with-content with-minimum'>
       {{#if isInCorrect}}
-        <h1>Self-assessment question results</h1>
+        <h1>{{i18n course.pages.test.question_results.title}}</h1>
         <div class='question-results'>
           <ul>
             {{#each question in questionsWithIndex}}
-              <li>Question {{question.index}}: {{#if question.value.correct}}Correct{{else}}Incorrect{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
+            <li>{{i18n course.pages.test.question_results.question}} {{question.index}}: {{#if question.value.correct}}{{i18n course.pages.test.question_results.correct}}{{else}}{{i18n course.pages.test.question_results.incorrect}}{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
             {{/each}}
           </ul>
         </div>
-        <p>Well done!</p>
-        <p>Your self-assessment for {{currentPage.chapter.title}} - {{currentPage.subject_area}} has been sucessfully completed, and you may now proceed.</p>
+        <p>{{i18n course.pages.test.self_assesment.correct.one}}</p>
+        <p>{{i18n course.pages.test.self_assesment.correct.two}} {{currentPage.chapter.title}} - {{currentPage.subject_area}} {{i18n course.pages.test.self_assesment.correct.three}}</p>
       {{/if}}
       {{#if isInIncorrect}}
-      <h1>Self-assessment question results</h1>
+      <h1>{{i18n course.pages.test.question_results.title}}</h1>
       <div class='question-results'>
         <ul>
           {{#each question in questionsWithIndex}}
-            <li>Question {{question.index}}: {{#if question.value.correct}}Correct{{else}}Incorrect{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
+          <li>{{i18n course.pages.test.question_results.question}} {{question.index}}: {{#if question.value.correct}}{{i18n course.pages.test.question_results.correct}}{{else}}{{i18n course.pages.test.question_results.incorrect}}{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
           {{/each}}
         </ul>
       </div>
-      <p>Please review the training for {{currentPage.chapter.title}} - {{currentPage.subject_area}}.</p>
-      <p>You will then be re-challenged with more questions on this topic.</p>
+      <p>{{i18n course.pages.test.self_assesment.incorrect.one}} {{currentPage.chapter.title}} - {{currentPage.subject_area}}.</p>
+      <p>{{i18n course.pages.test.self_assesment.incorrect.two}}</p>
       {{/if}}
       {{#if isInExpanded}}
         <div class='small-7 large-7 columns with-media'>
@@ -55,7 +55,7 @@
       {{/if}}
       {{#if isInUnanswered}}
         <div class='test-progress'>
-          <p>Self-assessment question</p>
+          <p>{{i18n course.pages.test.question.title}}</p>
           <ul>
             {{#each question in answeredQuestions}}
               <li class='answered'></li>
