@@ -1,5 +1,14 @@
 en:
   devise:
+    mailer:
+      reset_password_instructions:
+        one: Hello 
+        two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
+        three: Please click here to reset your password.
+        four_html: |
+          <p>If you didn’t request this reminder, please ignore this email. Your password will not be changed until you access the link above and create a new one.</p>
+          <p>Thank you,</p>
+          <p>GE Healthcare</p>
     registrations:
       edit:
         salutations:
