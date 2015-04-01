@@ -8,15 +8,15 @@ en:
         title: Please enter your institution.
         description: Please enter the institution to which you refer patients in the box below.
       terms:
-        title_html: VIZAMYL&#8482; Training
+        title_html: Vizamyl&#8482; Training
         description_html: |
-          <p>GE Healthcare will collect your data in order to assess whether you have understood how to use VIZAMYL&#8482; in accordance with VIZAMYL&#8482;’s Summary of Product Characteristics and whether VIZAMYL&#8482; should be supplied to you for use in the event that you have passed an exam in relation to this. In the event that: (i) you pass the exam, we will use your data in order to supply VIZAMYL&#8482; to you, or your institution; OR (ii) you fail the exam, we will use your data in order to provide you with face-to-face training in your country. For this purpose, we may share personal data relating to you with other companies in the GE Healthcare group. We may also hold your data for a reasonable amount of time. You can exercise your right of access and rectification and your right to object to data processing by sending a request to us at contactus@ge.com.</p>
+          <p>GE Healthcare will collect your data in order to assess whether you have understood how to use Vizamyl&#8482; in accordance with Vizamyl&#8482;’s Summary of Product Characteristics and whether Vizamyl&#8482; should be supplied to you for use in the event that you have passed an exam in relation to this. In the event that: (i) you pass the exam, we will use your data in order to supply Vizamyl&#8482; to you, or your institution; OR (ii) you fail the exam, we will use your data in order to provide you with face-to-face training in your country. For this purpose, we may share personal data relating to you with other companies in the GE Healthcare group. We may also hold your data for a reasonable amount of time. You can exercise your right of access and rectification and your right to object to data processing by sending a request to us at contactus@ge.com.</p>
           <p>Due to the international dimension of our group, the data may be transferred to countries outside the EU which do not grant the same level of protection to personal data.</p>
         terms_accept_html: |
-          <span class="terms-accept">I accept and understand the above and the Terms and Conditions</span><3br><span class="please-tick">(Please tick)</span>
+          <span class="terms-accept">I accept and understand the above and the Terms and Conditions</span><br><span class="please-tick">(Please tick)</span>
       marketing:
         title_html: |
-          VIZAMYL&#8482; Training<br>Marketing and promotional use of data
+          Vizamyl&#8482; Training<br>Marketing and promotional use of data
         description_html: |
           If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
         marketing_overall_opt_in_description_html: |
@@ -43,7 +43,7 @@ de:
         salutation: Anrede
       institution:
         title: Bitte geben Sie die Einrichtung an, in der Sie tätig sind.
-        description: Bitte geben Sie im Feld unten die Einrichtung an, an die Sie Patienten überweisen. 
+        description: Bitte geben Sie im Feld unten die Einrichtung an, an die Sie Patienten überweisen.
       terms:
         title_html: Vizamyl&#8482; Schulung
         description_html: |
