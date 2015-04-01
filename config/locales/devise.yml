@@ -17,7 +17,7 @@ en:
           - Ms
     sessions:
       new:
-        sign_in: Sign in
+        sign_in: Login 
         intro: |
           Please enter your email address
           and password to login.
@@ -32,3 +32,34 @@ en:
         password_label: New password
         password_confirmation_label: Confirm new password
         submit: Submit
+de:
+  devise:
+    registrations:
+      edit:
+        salutations:
+          - Dr
+          - Frau
+          - Herr
+      new:
+        salutations:
+          - Dr
+          - Frau
+          - Herr
+    sessions:
+      new:
+        sign_in: Login
+        intro: |
+          Bitte geben Sie Ihre E-Mail-Adresse
+          und Ihr Passwort ein, um sich anzumelden.
+        forgot_your_password: Passwort vergessen?
+        login: Login
+    passwords:
+      new:
+        forgot_your_password: Passwort vergessen?
+        send: Senden
+      edit:
+        change_your_password: Passwort ändern
+        password_label: Neues Passwort
+        password_confirmation_label: Neues Passwort bestätigen
+        submit: Senden
+d
