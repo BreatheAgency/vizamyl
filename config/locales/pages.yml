@@ -136,26 +136,19 @@ de:
     references:
       left:
         title: Literaturangaben
-      right:
-        body_html: |
     resources:
       download_title: Vizamyl SmPC EU
     contact:
       left:
         title: |
-         Medical Support
-         and other enquiries:
+         Medizinische Unterstützung
+         und sonstige Anfragen:
         body_html: |
-          <p>If you would like further <strong>medical information</strong> about Vizamyl, please contact us at:</p>
+          <p>Sollten Sie weitere <strong>medizinische Informationen</strong> zu Vizamyl wünschen, kontaktieren Sie uns bitte unter:</p>
           <p><a href="mailto:vizamyl.medinfo@ge.com">vizamyl.medinfo@ge.com</a></p>
-          <p>For other enquiries, including requests for <strong>image reader training</strong>, please contact us at:</p>
+          <p>Für sonstige Anfragen, einschließlich Anfragen hinsichtlich des Schulungsprogramms zur <strong>Auswertung von Aufnahmen</strong>, kontaktieren Sie uns bitte unter:</p>
           <p><a href="mailto:gevizamyl.general@ge.com">gevizamyl.general@ge.com</a></p>
-          <p>If you are interested in finding out more about <strong>SPECT imaging and DaTSCAN&#0153;</strong> visit:</p>
-          <p><a href="http://www.gehealthcare.co.uk/datscan" target="_blank">www.gehealthcare.co.uk/datscan</a></p>
-          <p><small>Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.</small></p>
-        terms: |
-          Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.
-          or one of its subsidiaries.
+        terms: "" 
     terms-and-conditions:
       title: Terms and conditions
       body_html: |
