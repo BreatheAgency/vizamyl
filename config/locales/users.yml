@@ -13,7 +13,7 @@ en:
           <p>GE Healthcare will collect your data in order to assess whether you have understood how to use VIZAMYL&#8482; in accordance with VIZAMYL&#8482;’s Summary of Product Characteristics and whether VIZAMYL&#8482; should be supplied to you for use in the event that you have passed an exam in relation to this. In the event that: (i) you pass the exam, we will use your data in order to supply VIZAMYL&#8482; to you, or your institution; OR (ii) you fail the exam, we will use your data in order to provide you with face-to-face training in your country. For this purpose, we may share personal data relating to you with other companies in the GE Healthcare group. We may also hold your data for a reasonable amount of time. You can exercise your right of access and rectification and your right to object to data processing by sending a request to us at contactus@ge.com.</p>
           <p>Due to the international dimension of our group, the data may be transferred to countries outside the EU which do not grant the same level of protection to personal data.</p>
         terms_accept_html: |
-          <span class="terms-accept">I accept and understand the above and the Terms and Conditions</span><br><span class="please-tick">(Please tick)</span>
+          <span class="terms-accept">I accept and understand the above and the Terms and Conditions</span><3br><span class="please-tick">(Please tick)</span>
       marketing:
         title_html: |
           VIZAMYL&#8482; Training<br>Marketing and promotional use of data
@@ -28,7 +28,7 @@ en:
         marketing_overall_description_html: |
           If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:
         marketing_email_opt_in_label_html: |
-          Email
+          E-Mail
         marketing_post_opt_in_label_html: |
           Post
         marketing_representative_opt_in_label_html: |
@@ -45,30 +45,30 @@ de:
         title: Bitte geben Sie die Einrichtung an, in der Sie tätig sind.
         description: Bitte geben Sie im Feld unten die Einrichtung an, an die Sie Patienten überweisen. 
       terms:
-        title_html: VIZAMYL&#8482; Training
+        title_html: Vizamyl&#8482; Schulung
         description_html: |
-          <p>GE Healthcare will collect your data in order to assess whether you have understood how to use VIZAMYL&#8482; in accordance with VIZAMYL&#8482;’s Summary of Product Characteristics and whether VIZAMYL&#8482; should be supplied to you for use in the event that you have passed an exam in relation to this. In the event that: (i) you pass the exam, we will use your data in order to supply VIZAMYL&#8482; to you, or your institution; OR (ii) you fail the exam, we will use your data in order to provide you with face-to-face training in your country. For this purpose, we may share personal data relating to you with other companies in the GE Healthcare group. We may also hold your data for a reasonable amount of time. You can exercise your right of access and rectification and your right to object to data processing by sending a request to us at contactus@ge.com.</p>
-          <p>Due to the international dimension of our group, the data may be transferred to countries outside the EU which do not grant the same level of protection to personal data.</p>
+          <p>GE Healthcare erhebt Ihre Daten, um zu bewerten, ob Sie über ausreichende Kenntnisse zur Anwendung von Vizamyl&#8482; gemäß Produktspezifikationsdatenblatt zu Vizamyl&#8482; verfügen und ob Vizamyl&#8482; an Sie geliefert werden soll, nachdem Sie eine diesbezügliche Prüfung bestanden haben. Falls Sie (i) die Prüfung bestehen, verwenden wir Ihre Daten, um Vizamyl&#8482; an Sie oder Ihre Organisation zu liefern. (ii) Falls Sie die Prüfung nicht bestehen, verwenden wir Ihre Daten, um Ihnen eine Präsenzschulung in Ihrem Land anzubieten. Zu diesem Zweck können wir Ihre persönlichen Daten an andere Unternehmen innerhalb der GE Healthcare-Gruppe weitergeben. Wir sind berechtigt, Ihre Daten während eines angemessenen Zeitraums zu speichern. Sie sind berechtigt, auf Ihre bei GE Healthcare gespeicherten Daten zuzugreifen, diese Daten zu ändern und Einwände gegen die Datenverarbeitung zu erheben. Sie können von diesem Recht Gebrauch machen, indem Sie eine entsprechende Anfrage an contactus@ge.com senden.</p>
+          <p>Aufgrund der internationalen Ausrichtung von GE Healthcare kann es zur Übertragung Ihrer Daten in Länder außerhalb der EU kommen, in denen keine der EU vergleichbaren Datenschutzbestimmungen gelten.</p>
         terms_accept_html: |
-          <span class="terms-accept">I accept and understand the above and the Terms and Conditions</span><br><span class="please-tick">(Please tick)</span>
+          <span class="terms-accept">Ich erkläre mich mit diesen Teilnahmebedingungen einverstanden</span><br><span class="please-tick">(Bitte markieren)</span>
       marketing:
         title_html: |
-          VIZAMYL&#8482; Training<br>Marketing and promotional use of data
+          Vizamyl&#8482; Schulung<br>Nutzung von Daten für Marketing- und Promotion-Zwecke
         description_html: |
-          If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
+          Falls Sie den Kurs bestehen, möchte GE Healthcare Ihnen Informationen über unsere Produkte, Dienstleistungen und weitere für Sie interessante Schulungsangebote zukommen lassen.
         marketing_overall_opt_in_description_html: |
-          If you do want to receive such information, please tick the box below
+          Bitte markieren Sie das Kästchen unten, falls Sie solche Informationen erhalten möchten.
         marketing_overall_opt_in_html: |
-          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<span>
+          <span class="marketing-purposes">JA, ich möchte zu Marketingzwecken kontaktiert werden.<span>
         marketing_overall_opt_in_note_html: |
-          (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
+          (Bitte markieren) Bitte beachten: Falls Sie die JA-Option nicht markieren, erhalten Sie zukünftig keine Marketing-Materialien.
         marketing_overall_description_html: |
-          If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:
+          Wenn Sie zu Marketingzwecken kontaktiert werden möchten, wählen Sie eine der folgenden Optionen und geben Sie Ihre bevorzugte Kontaktart an:
         marketing_email_opt_in_label_html: |
-          Email
+          E-Mail
         marketing_post_opt_in_label_html: |
           Post
         marketing_representative_opt_in_label_html: |
-          Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>
+          Besuch eines Vertreters von GE Healthcare<br><span class="obligation">(Es besteht keinerlei Verpflichtung zu Treffen mit GE-Vertretern)</span>
         marketing_overall_opt_in_tick_html: |
-          (Please tick one or more options)
+          (Bitte markieren Sie mindestens eine Option)
