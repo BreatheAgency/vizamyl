@@ -43,6 +43,15 @@ en:
         submit: Submit
 de:
   devise:
+    mailer:
+      reset_password_instructions:
+        one: Sehr geehrte(r) 
+        two: Sie haben um eine Erinnerung an die Bearbeitung Ihrer Anmeldedaten für das elektronische Schulungsprogramm zu Vizamyl gebeten. 
+        three: Bitte klicken Sie hier, um Ihr Passwort zurückzusetzen. 
+        four_html: |
+          <p>Falls Sie die Erinnerung nicht angefordert haben, ignorieren Sie bitte diese Nachricht. Die Änderung Ihres Passworts erfolgt nur, wenn Sie auf den Link oben klicken und ein neues Passwort erstellen.</p>
+          <p>Vielen Dank,</p>
+          <p>GE Healthcare</p>
     registrations:
       edit:
         salutations:
