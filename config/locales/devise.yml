@@ -26,7 +26,6 @@ en:
           - Ms
     sessions:
       new:
-        sign_in: Login 
         intro: |
           Please enter your email address
           and password to login.
@@ -65,7 +64,6 @@ de:
           - Herr
     sessions:
       new:
-        sign_in: Login
         intro: |
           Bitte geben Sie Ihre E-Mail-Adresse
           und Ihr Passwort ein, um sich anzumelden.
