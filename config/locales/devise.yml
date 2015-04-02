@@ -12,6 +12,7 @@ en:
     registrations:
       edit:
         title: My account
+        my_details: My details
         registrations_description: You can update your contact preferences and personal details using the boxes below
         contact_preferences: Contact preferences
         salutations:
@@ -77,6 +78,7 @@ de:
     registrations:
       edit:
         title: Mein Konto
+        my_details: Meine persönlichen Daten
         registrations_description: In den Feldern unten können Sie Ihre Kontaktpräferenzen und persönlichen Daten bearbeiten
         contact_preferences: Kontaktpräferenzen
         salutations:
