@@ -117,13 +117,13 @@
   }
 }
 
-.registrations.instituion, .registrations.terms, .registrations.marketing, .registrations.details {
+.registrations.institution, .registrations.terms, .registrations.marketing, .registrations.details {
   > div:first-of-type {
     @extend .motion;
   }
 }
 
-.registrations.instituion, .registrations.terms, .registrations.marketing {
+.registrations.institution, .registrations.terms, .registrations.marketing {
   label {
     font-weight: bold;
     font-size: rem-calc(18);
