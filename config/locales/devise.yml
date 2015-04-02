@@ -2,7 +2,7 @@ en:
   devise:
     mailer:
       reset_password_instructions:
-        one: Hello 
+        one: Hello
         two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
         three: Please click here to reset your password.
         four_html: |
@@ -44,19 +44,41 @@ de:
   devise:
     mailer:
       reset_password_instructions:
-        one: Sehr geehrte(r) 
-        two: Sie haben um eine Erinnerung an die Bearbeitung Ihrer Anmeldedaten für das elektronische Schulungsprogramm zu Vizamyl gebeten. 
-        three: Bitte klicken Sie hier, um Ihr Passwort zurückzusetzen. 
+        one: Sehr geehrte(r)
+        two: Sie haben um eine Erinnerung an die Bearbeitung Ihrer Anmeldedaten für das elektronische Schulungsprogramm zu Vizamyl gebeten.
+        three: Bitte klicken Sie hier, um Ihr Passwort zurückzusetzen.
         four_html: |
           <p>Falls Sie die Erinnerung nicht angefordert haben, ignorieren Sie bitte diese Nachricht. Die Änderung Ihres Passworts erfolgt nur, wenn Sie auf den Link oben klicken und ein neues Passwort erstellen.</p>
           <p>Vielen Dank,</p>
           <p>GE Healthcare</p>
     registrations:
       edit:
+        title: My account
+        registrations_description: You can update your contact preferences and personal details using the boxes below
+        contact_preferences: Contact preferences
         salutations:
           - Dr
           - Frau
           - Herr
+        description_html: |
+          Falls Sie den Kurs bestehen, möchte GE Healthcare Ihnen Informationen über unsere Produkte, Dienstleistungen und weitere für Sie interessante Schulungsangebote zukommen lassen.
+        marketing_overall_opt_in_description_html: |
+          Bitte markieren Sie das Kästchen unten, falls Sie solche Informationen erhalten möchten.
+        marketing_overall_opt_in_html: |
+          <span class="marketing-purposes">JA, ich möchte zu Marketingzwecken kontaktiert werden.<span>
+        marketing_overall_opt_in_note_html: |
+          (Bitte markieren) Bitte beachten: Falls Sie die JA-Option nicht markieren, erhalten Sie zukünftig keine Marketing-Materialien.
+        marketing_overall_description_html: |
+          Wenn Sie zu Marketingzwecken kontaktiert werden möchten, wählen Sie eine der folgenden Optionen und geben Sie Ihre bevorzugte Kontaktart an:
+        marketing_email_opt_in_label_html: |
+          E-Mail
+        marketing_post_opt_in_label_html: |
+          Post
+        marketing_representative_opt_in_label_html: |
+          Besuch eines Vertreters von GE Healthcare<br><span class="obligation">(Es besteht keinerlei Verpflichtung zu Treffen mit GE-Vertretern)</span>
+        marketing_overall_opt_in_tick_html: |
+          (Bitte markieren Sie mindestens eine Option)
+        update: |
       new:
         salutations:
           - Dr

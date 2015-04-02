@@ -43,7 +43,8 @@ en:
       right:
         body_html: |
     resources:
-      download_title: Vizamyl SmPC EU
+      smpc_title: Vizamyl SmPC EU
+      rainbow_title: Rainbow colour scale RGB values
     contact:
       left:
         title: |
@@ -137,7 +138,8 @@ de:
       left:
         title: Literaturangaben
     resources:
-      download_title: Vizamyl SmPC EU
+      smpc_title: Vizamyl SmPC EU
+      rainbow_title: Rainbow colour scale RGB values
     contact:
       left:
         title: |
