@@ -106,6 +106,10 @@ main {
       @extend .visuallyhidden;
     }
 
+    .radio_buttons {
+      height: 35px;
+    }
+
     .radio_buttons label {
       display: inline-block;
       margin: 0 10px 16px 0;
