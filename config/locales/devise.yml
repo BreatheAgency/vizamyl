@@ -76,9 +76,9 @@ de:
           <p>GE Healthcare</p>
     registrations:
       edit:
-        title: My account
-        registrations_description: You can update your contact preferences and personal details using the boxes below
-        contact_preferences: Contact preferences
+        title: Mein Konto
+        registrations_description: In den Feldern unten können Sie Ihre Kontaktpräferenzen und persönlichen Daten bearbeiten
+        contact_preferences: Kontaktpräferenzen
         salutations:
           - Dr
           - Frau
@@ -102,7 +102,7 @@ de:
         marketing_overall_opt_in_tick_html: |
           (Bitte markieren Sie mindestens eine Option)
         update: |
-          Update
+          Aktualisieren
       new:
         salutations:
           - Dr
