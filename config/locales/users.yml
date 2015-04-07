@@ -35,6 +35,10 @@ en:
           Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>
         marketing_overall_opt_in_tick_html: |
           (Please tick one or more options)
+    course_completion:
+      success:
+        description_html: Thank you for participating in the Vizamyl electronic training programme.<br>Please download the PDF of your results and keep for your records.
+        download_results: Download results
 de:
   users:
     enrol:

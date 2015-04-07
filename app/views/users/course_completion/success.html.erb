@@ -1,7 +1,7 @@
 <div class='course-completion row'>
   <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
-    <p>Thank you for participating in the Vizamyl electronic training programme.<br>Please download the PDF of your results and keep for your records.</p>
-    <p><%= link_to 'Download results', users_course_complete_path(format: :pdf) %></p>
+    <p><%= t('.description_html') %></p>
+    <p><%= link_to t('.download_results'), users_course_complete_path(format: :pdf) %></p>
     <meta http-equiv='refresh' content="3;<%= users_course_complete_path(format: :pdf) %>">
   </div>
 </div>
