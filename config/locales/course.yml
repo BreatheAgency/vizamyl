@@ -41,19 +41,19 @@ en:
 de:
   course:
     actions:
-      back: Back
+      back: Zurück
       next: Weiter
     pages:
       test:
         positive: Positiv
         negative: Negativ
         question:
-          title: Self-assessment question
+          title: Selbstbewertung bei der Bildauswertung
         question_results:
-          title: Self-assessment question results
-          question: Question
-          correct: Correct
-          incorrect: Incorrect
+          title: Selbstbewertung bei der Bildauswertung
+          question: Frage
+          correct: Gesamtbeurteilung richtig
+          incorrect: Gesamtbeurteilung falsch
         test_case:
           description_html: Navigieren Sie mit dem Slider durch die drei Ansichten.<br>Beurteilen Sie die fünf Bereiche und nehmen Sie dann eine Gesamtbewertung vor.
           question_one: Frontalpol und -lappen

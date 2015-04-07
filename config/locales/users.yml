@@ -76,3 +76,7 @@ de:
           Besuch eines Vertreters von GE Healthcare<br><span class="obligation">(Es besteht keinerlei Verpflichtung zu Treffen mit GE-Vertretern)</span>
         marketing_overall_opt_in_tick_html: |
           (Bitte markieren Sie mindestens eine Option)
+    course_completion:
+      success:
+        description_html: Vielen Dank für Ihre Teilnahme am elektronischen Schulungsprogramm zu Vizamyl.<br>Bitte laden Sie die PDF-Datei mit Ihren Ergebnissen herunter und heben Sie diese für Ihre Unterlagen auf.
+        download_results: Ergebnisse herunterladen
