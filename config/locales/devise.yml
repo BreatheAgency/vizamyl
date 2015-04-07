@@ -84,6 +84,7 @@ de:
         registrations_description: In den Feldern unten können Sie Ihre Kontaktpräferenzen und persönlichen Daten bearbeiten
         contact_preferences: Kontaktpräferenzen
         salutations:
+          - Prof
           - Dr
           - Frau
           - Herr
