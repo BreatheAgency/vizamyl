@@ -20,6 +20,14 @@ en:
           question_four: Parietal lobe
           question_five: Striatum
           question_six: Overall classification
+        four_b:
+          title: Assessment Summary
+          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
+          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
+          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the
+          incorrect_two_link: Vizamyl website
+          incorrect_two_two_html: to schedule an in-person training session.
+          review_explanation_video: Review explanation video
         self_assesment:
           correct:
             one: Well done!
