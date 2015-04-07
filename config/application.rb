@@ -38,7 +38,7 @@ module Vizamyl
 
     #
     # config.i18n.available_locales = [:en, :gb, :pt, :it, :fr, :es, :'de-at', :de, :nl]
-    config.i18n.available_locales = [:en, :de]
+    config.i18n.available_locales = [:en, :'de-at', :de]
 
     #
     config.i18n.fallbacks = [:'de-at', :de, :en, :gb, :pt, :it, :fr, :es, :nl]
