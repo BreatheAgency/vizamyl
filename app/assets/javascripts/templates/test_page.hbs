@@ -67,40 +67,40 @@
         </div>
         {{#if question.test_case}}
           <h1>{{question.title}}</h1>
-          <p>Navigate the three views with the slider.<br> Assess the five regions and then make an overall assessment.</p>
+          <p>{{{i18n course.pages.test.test_case.description_html}}}</p>
           <div class='test-case'>
             <div class='question'>
-              <h2>Frontal pole and lobe</h2>
+              <h2>{{i18n course.pages.test.test_case.question_one}}</h2>
               {{#each answer in questionSetOne}}
                 <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<div class='body'>{{{answer.body}}}</div></label>
               {{/each}}
             </div>
             <div class='question'>
-              <h2>Posterior cingulate and precuneus</h2>
+              <h2>{{i18n course.pages.test.test_case.question_two}}</h2>
               {{#each answer in questionSetTwo}}
                 <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
               {{/each}}
             </div>
             <div class='question'>
-              <h2>Temporal lobe</h2>
+              <h2>{{i18n course.pages.test.test_case.question_three}}</h2>
               {{#each answer in questionSetThree}}
                 <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<div class='body'>{{{answer.body}}}</div></label>
               {{/each}}
             </div>
             <div class='question'>
-              <h2>Parietal lobe</h2>
+              <h2>{{i18n course.pages.test.test_case.question_four}}</h2>
               {{#each answer in questionSetFour}}
                 <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<div class='body'>{{{answer.body}}}</div></label>
               {{/each}}
             </div>
             <div class='question'>
-              <h2>Striatum</h2>
+              <h2>{{i18n course.pages.test.test_case.question_five}}</h2>
               {{#each answer in questionSetFive}}
                 <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<div class='body'>{{{answer.body}}}</div></label>
               {{/each}}
             </div>
             <div class='question'>
-              <h2>Overall classification</h2>
+              <h2>{{i18n course.pages.test.test_case.question_six}}</h2>
               {{#each answer in question.answers}}
                 <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
               {{/each}}

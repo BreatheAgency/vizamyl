@@ -12,6 +12,14 @@ en:
           question: Question
           correct: Correct
           incorrect: Incorrect
+        test_case:
+          description_html: Navigate the three views with the slider.<br> Assess the five regions and then make an overall assessment.
+          question_one: Frontal pole and lobe
+          question_two: Posterior cingulate and precuneus
+          question_three: Temporal lobe
+          question_four: Parietal lobe
+          question_five: Striatum
+          question_six: Overall classification
         self_assesment:
           correct:
             one: Well done!
