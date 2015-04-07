@@ -5,6 +5,8 @@ en:
       next: Next
     pages:
       test:
+        positive: Positive
+        negative: Negative
         question:
           title: Self-assessment question
         question_results:
