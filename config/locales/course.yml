@@ -72,9 +72,9 @@ de:
           review_explanation_video_html: Lehrvideo %{count} anschauen
         self_assesment:
           correct:
-            one: Well done!
-            two: Your self-assessment for
-            three: has been sucessfully completed, and you may now proceed.
+            one: Gut gemacht!
+            two: Ihre Selbstbewertung für
+            three: wurde erfolgreich abgeschlossen und Sie können nun fortfahren.
           incorrect:
-            one: Please review the training for
-            two: You will then be re-challenged with more questions on this topic.
+            one: Bitte wiederholen Sie die Schulung in
+            two: Anschließend werden Ihnen weitere Fragen zu diesem Thema gestellt.
