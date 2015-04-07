@@ -16,6 +16,7 @@ en:
         registrations_description: You can update your contact preferences and personal details using the boxes below
         contact_preferences: Contact preferences
         salutations:
+          - Prof
           - Dr
           - Mr
           - Mrs
@@ -43,6 +44,7 @@ en:
           Update
       new:
         salutations:
+          - Prof
           - Dr
           - Mr
           - Mrs
@@ -107,6 +109,7 @@ de:
           Aktualisieren
       new:
         salutations:
+          - Prof
           - Dr
           - Frau
           - Herr
