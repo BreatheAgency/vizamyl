@@ -4,6 +4,7 @@ Course.ApplicationController = Ember.Controller.extend({
   signedIn: Ember.computed.notEmpty('currentUser'),
   isComplete: Ember.computed.bool('currentUser.completed'),
   isSuperUser: Ember.computed.bool('currentUser.super_user'),
+  showBlackTriangle: Ember.computed.empty('currentUser.black_triangle_viewed_at'),
 
   currentStep: function() {
     return this.get('currentPage.step');

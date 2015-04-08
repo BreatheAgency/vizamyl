@@ -80,6 +80,9 @@ nav {
     padding: 4px 20px 0 0;
     background-repeat: no-repeat;
     background-position: right top;
+  }
+
+  .global-brand.with-triangle {
     @include retina-background-image('indicator', 16px, 16px);
   }
 
