@@ -3,42 +3,6 @@
     <h1>Vizamyl<sup class='trade-mark'>&trade;</sup> Flutemetamol <sup class='one-eight'>18</sup>F Injection</h1>
     <h2>Electronic training programme</h2>
     <p><span class='blue'>This site is intended for medical professionals only</span><br> To proceed, please select which country you are from.</p>
-    <ul class='locale-select'>
-      <% I18n.available_locales.each do |locale| %>
-        <li>
-          <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-            <%= locale %>
-          </a>
-        </li>
-      <% end %>
-      <li>
-        <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button'>US</a>
-      </li>
-    </ul>
-    <ul class='locale-label'>
-      <li>
-        <a href='/en' class='en-button'><p style='text-align:left'>Int English<br>GE representatives<br>use only</br></p></a>
-      </li>
-      <% I18n.available_locales.reject{|lang| lang == :en }.each do |locale| %>
-        <li>
-          <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-            <%= {
-              'gb': 'English',
-              'pt': 'Portuguese',
-              'it': 'Italien',
-              'fr': 'French',
-              'es': 'Spanish',
-              'de': 'Germany',
-              'de-at': 'Austrian',
-              'nl': 'Dutch'
-            }.fetch(locale, locale) %>
-          </a>
-          </a>
-        </li>
-      <% end %>
-      <li>
-        <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button' style='padding-left:20px;'>US</a>
-      </li>
-    </ul>
+    <%= render partial: 'errors/locale_links' %>
   </div>
 </div>

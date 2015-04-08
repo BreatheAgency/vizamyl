@@ -1,24 +1,38 @@
 <ul class='locale-select'>
   <% I18n.available_locales.each do |locale| %>
-  <li>
-    <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-      <%= locale %>
-    </a>
-  </li>
+    <li>
+      <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
+        <%= locale %>
+      </a>
+    </li>
   <% end %>
   <li>
     <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button'>US</a>
   </li>
 </ul>
+
 <ul class='locale-label'>
-  <% I18n.available_locales.each do |locale| %>
   <li>
-    <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-      <%= t("pages.gatekeeper.locale_titles.#{locale}_html") %>
-    </a>
+    <a href='/en' class='en-button'><p style='text-align:left'>Int English<br>GE representatives<br>use only</br></p></a>
   </li>
+  <% I18n.available_locales.reject{|lang| lang == :en }.each do |locale| %>
+    <li>
+      <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
+        <%= {
+          'gb': 'English',
+          'pt': 'Portuguese',
+          'it': 'Italien',
+          'fr': 'French',
+          'es': 'Spanish',
+          'de': 'Germany',
+          'de-at': 'Austrian',
+          'nl': 'Dutch'
+        }.fetch(locale, locale) %>
+      </a>
+      </a>
+    </li>
   <% end %>
   <li>
-    <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button'>  <%= t("pages.gatekeeper.locale_titles.us_html") %> </a>
+    <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button' style='padding-left:20px;'>US</a>
   </li>
 </ul>
