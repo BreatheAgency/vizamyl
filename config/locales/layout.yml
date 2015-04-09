@@ -10,7 +10,6 @@ en:
       login: Login
       logout: Logout
       enrol: Enrol
-      prescribing_information: Prescribing information
       references: References
       resources: Resources
       contact: Contact
@@ -33,7 +32,6 @@ de:
       login: Login
       logout: Logout
       enrol: Registrierung
-      prescribing_information: Fachkurzinformation
       references: Literaturangaben
       resources: Ressourcen
       contact: Kontakt
