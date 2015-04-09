@@ -15,9 +15,6 @@
             <li><%= link_to t('layouts.application.login'), new_user_session_path(locale: I18n.locale) %></li>
             <li><%= link_to t('layouts.application.enrol'), users_enrol_path(id: User.form_steps.first, locale: I18n.locale) %></li>
           <% end %>
-          <% if !(I18n.locale =~ /de|de-at/) %>
-            <li><%= link_to t('layouts.application.prescribing_information'), static_path(id: 'prescribing-information', locale: I18n.locale) %></li>
-          <% end %>
 					<li><%= link_to t('layouts.application.references'), static_path(id: 'references', locale: I18n.locale) %></li>
 					<li><%= link_to t('layouts.application.contact'), static_path(id: 'contact', locale: I18n.locale) %></li>
           <li><%= link_to t('layouts.application.resources'), static_path(id: 'resources', locale: I18n.locale) %></li>

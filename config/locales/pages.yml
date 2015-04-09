@@ -5,28 +5,6 @@ en:
         <h1>Welcome to the <br><strong>Vizamyl electronic training programme</strong></h1>
         <p>If you are returning to the course, <br><strong>welcome back and please login.</strong></p>
         <p>If you would like to begin the course, <br><strong>welcome, and please enrol.</strong></p>
-    prescribing-information:
-      left:
-        body_html: |
-          <p><strong>PRESCRIBING INFORMATION VIZAMYL&#0153; 400 MBq/mL solution for injection<span class="black-triangle">&#9660;</span> Flutemetamol (<span class="tt">18</span>F)</strong></p>
-          <p><i>Please refer to full Summary of Product Characteristics (SPC) before prescribing. Further information available on request.</i></p>
-          <p><strong>PRESENTATION</strong> Solution for injection. Each mL of solution for injection contains 400 MBq of flutemetamol (<span class="tt">18</span>F) at reference date and time.</p>
-          <p><strong>INDICATIONS</strong> For diagnostic use only. Indicated for Positron Emission Tomography (PET) imaging of β-amyloid neuritic plaque density in the brains of adult patients with cognitive impairment who are being evaluated for Alzheimer’s disease (AD) and other causes of cognitive impairment. VIZAMYL should be used in conjunction with a clinical evaluation.</p>
-          <p><strong>DOSAGE AND METHOD OF ADMINISTRATION</strong> Recommended activity for adults including elderly is 185 MBq of flutemetamol (<span class="tt">18</span>F), administered intravenously (as a bolus within approximately 40 seconds). The volume of the injection should be between 1-10mL.</p>
-          <p><strong>CONTRAINDICATIONS</strong> Hypersensitivity to the active substance or to any of the excipients.</p>
-          <p><strong>WARNINGS AND PRECAUTIONS</strong> Discontinue use if hypersensitivity or anaphylactic reactions occurs. VIZAMYL images should only be interpreted by trained readers using a Sokoloff, Rainbow or Spectrum colour scale. A positive scan does not independently establish a diagnosis of AD or other cognitive disorder. Close contact with infants and pregnant women should be restricted for 24 hours after injection. Consideration should be taken before use in patients which have renal or hepatic impairment, are on a low sodium diet or suffer from alcoholism.</p>
-          <p><strong>INTERACTIONS</strong> In vivo drug interaction studies have not been performed.</p>
-          <p><strong>PREGNANCY AND LACTATION</strong> VIZAMYL should only be used in pregnancy if benefit outweighs the risks to mother and foetus. Breastfeeding should be suspended and close contact with infants should be restricted for 24 hours following injection.</p>
-      right:
-        body_html: |
-          <p><strong>UNDESIRABLE EFFECTS</strong> <strong>Common</strong> (≥1/100 to <1/10): flushing, nausea, chest discomfort, increased blood pressure. <strong>Uncommon</strong> (≥1/1,000 to <1/100) : anaphylactoid reaction, anxiety, dizziness, headache, hypoaesthesia, hypotonia, dysgeusia, tremor, eye swelling, vertigo, palpitations, pallor, dyspnoea, hyperventilation, throat irritation, dyspepsia, abdominal discomfort, oral discomfort, vomiting, facial hypoaesthesia, pruritus, rash, skin tightness, swelling face, back pain, muscle tightness, musculoskeletal pain, erectile dysfunction, feeling hot, asthenia, fatigue, feeling abnormal, feeling cold, infusion site pain, oedema, pyrexia, blood glucose decreased, blood lactate dehydrogenase increased, neutrophil count increased, respiratory rate increased. <strong>Unknown</strong>: cancer induction.</p>
-          <p><strong>DOSIMETRY</strong> The adult effective dose resulting from the administration of a maximal recommended activity of 185 MBq dose for an adult weighing 70 kg is approximately 5.9 mSv.</p>
-          <p><strong>MARKETING AUTHORISATION HOLDER</strong> GE Healthcare Limited, Amersham Place, Little Chalfont, Buckinghamshire HP7 9NA, United Kingdom</p>
-          <p><strong>CLASSIFICATION FOR SUPPLY</strong> Subject to restricted medical prescription</p>
-          <p><strong>MARKETING AUTHORISATION NUMBERS</strong> EU/1/14/941/001, EU/1/14/941/002</p>
-          <p><strong>DATE OF REVISION</strong> August 2014</p>
-          <p><strong>Cost</strong> Not applicable. Product not currently available in the UK.</p>
-          <p class="bordered">Adverse events should be reported. Reporting forms and information can be found at <a href="http://www.yellowcard.mhra.gov.uk" target="_blank">www.yellowcard.mhra.gov.uk</a>. Adverse events should also be reported GE Healthcare Ltd, email: <a href="mailto:UKpharmacovigilance@ge.com">UKpharmacovigilance@ge.com</a>.</p>
     references:
       left:
         title: |
@@ -129,11 +107,6 @@ de:
         <h1>Willkommen beim <br><strong>elektronischen Schulungsprogramm zu Vizamyl</strong></h1>
         <p>Bitte melden Sie sich an, <br><strong>wenn Sie die Kursbearbeitung nach einer Unterbrechung fortsetzen möchten.</strong></p>
         <p>Wenn Sie erstmalig mit dem Kurs arbeiten möchten, <br><strong>registrieren Sie sich bitte zunächst.</strong></p>
-    prescribing-information:
-      left:
-        body_html: ""
-      right:
-        body_html: ""
     references:
       left:
         title: Literaturangaben

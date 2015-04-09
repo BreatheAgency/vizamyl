@@ -18,8 +18,4 @@ Course.ApplicationController = Ember.Controller.extend({
     return Course.get('user');
   }.property('Course.user'),
 
-  showPrescribingInformation: function() {
-    return !(_.contains(['de', 'de-at'], this.get('currentLocale')));
-  }.property('currentLocale')
-
 });
