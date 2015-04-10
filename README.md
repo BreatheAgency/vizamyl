@@ -30,3 +30,4 @@
 `heroku pg:reset DATABASE --app vizamyl`
 `heroku pg:push vizamyl_staging_dump DATABASE --app vizamyl`
 `heroku maintenance:off --app vizamyl`
+`heroku ps:restart --app vizamyl`
