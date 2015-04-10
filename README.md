@@ -1,8 +1,8 @@
 # Vizamyl
 
 - http://vizamyl-sandbox.herokuapp.com
-- http://vizamyl-staging.herokuapp.com
-- http://vizamyl.herokuapp.com
+- http://stg-www.readvizamyl.com
+- https://www.readvizamyl.com
 
 # Deployment
 
@@ -27,7 +27,7 @@
 `psql -d vizamyl_staging_dump -c "TRUNCATE TABLE users, admin_users, progressions RESTART IDENTITY;"`
 `pg_restore production_users.sql -d vizamyl_staging_dump --single-transaction`
 `heroku maintenance:on --app vizamyl`
-`heroku pg:reset DATABASE --app vizamyl`
+`heroku pg:reset DATABASE --app vizamyl --confirm vizamyl`
 `heroku pg:push vizamyl_staging_dump DATABASE --app vizamyl`
 `heroku maintenance:off --app vizamyl`
 `heroku ps:restart --app vizamyl`
