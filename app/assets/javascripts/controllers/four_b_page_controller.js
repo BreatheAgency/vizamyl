@@ -1,4 +1,4 @@
-Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
+Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions, Em.FSM.Stateful, {
   needs: ['application', 'localeMenu'],
   complete: false,
   currentLocale: Ember.computed.alias('controllers.application.currentLocale'),
@@ -6,31 +6,6 @@ Course.FourBPageController = Ember.ObjectController.extend(Em.FSM.Stateful, {
   selectedExplanationSource: null,
   answered: Ember.computed.alias('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
-  questionSetOne: [
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}),
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')}),
-  ],
-  questionSetOneSelection: null,
-  questionSetTwo: [
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}),
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')}),
-  ],
-  questionSetTwoSelection: null,
-  questionSetThree: [
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}),
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')}),
-  ],
-  questionSetThreeSelection: null,
-  questionSetFour: [
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}),
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')}),
-  ],
-  questionSetFourSelection: null,
-  questionSetFive: [
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}),
-    Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')}),
-  ],
-  questionSetFiveSelection: null,
 
   fsmStates: {
     initialState: 'unanswered',
