@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150408084710) do
+ActiveRecord::Schema.define(version: 20150414092244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -260,6 +260,7 @@ ActiveRecord::Schema.define(version: 20150408084710) do
     t.string  "page_id",         limit: 255
     t.string  "subject_area",    limit: 255
     t.integer "failure_step_id"
+    t.boolean "optional",                    default: false
   end
 
   create_table "text_translations", force: :cascade do |t|
