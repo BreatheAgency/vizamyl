@@ -48,12 +48,12 @@ de:
         positive: Positiv
         negative: Negativ
         question:
-          title: Selbstbewertung bei der Bildauswertung
+          title: Ergebnis der Frage zur Selbsbewertung
         question_results:
-          title: Selbstbewertung bei der Bildauswertung
+          title: Ergebnis der Frage zur Selbsbewertung
           question: Frage
-          correct: Gesamtbeurteilung richtig
-          incorrect: Gesamtbeurteilung falsch
+          correct: Richtig
+          incorrect: Falsch
         test_case:
           description_html: Navigieren Sie mit dem Slider durch die drei Ansichten.<br>Beurteilen Sie die fünf Bereiche und nehmen Sie dann eine Gesamtbewertung vor.
           question_one: Frontalpol und -lappen
