@@ -21,10 +21,8 @@ ActiveAdmin.register InteractiveSource, namespace: :content do
   end
 
   form do |f|
-    f.translated_inputs do |t|
-      t.input :label
-    end
     f.inputs do
+      f.input :label
       f.input :source
       f.input :height
     end
