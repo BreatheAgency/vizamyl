@@ -17,7 +17,7 @@
     <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
       <h2><%= t('.my_details') %></h2>
       <div class='form-inputs'>
-        <label>Salutation</label>
+        <label><%= t('activerecord.attributes.user.salutation') %></label>
         <%= f.collection_radio_buttons(:salutation, t('.salutations'), :to_s, :to_s, checked: resource.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
             b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
           end
