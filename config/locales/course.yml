@@ -30,14 +30,6 @@ en:
           incorrect_two_link: Vizamyl website
           incorrect_two_two_html: to schedule an in-person training session.
           review_explanation_video: Review explanation video <span class="index">%{count}</span>
-        self_assesment:
-          correct:
-            one: Well done!
-            two: Your self-assessment for
-            three: has been sucessfully completed, and you may now proceed.
-          incorrect:
-            one: Please review the training for
-            two: You will then be re-challenged with more questions on this topic.
 de:
   course:
     actions:
@@ -70,11 +62,3 @@ de:
           incorrect_two_link: Vizamyl-Website
           incorrect_two_two_html: an Ihren örtlichen GE-Vertreter.
           review_explanation_video_html: Lehrvideo %{count} anschauen
-        self_assesment:
-          correct:
-            one: Gut gemacht!
-            two: Ihre Selbstbewertung für
-            three: wurde erfolgreich abgeschlossen und Sie können nun fortfahren.
-          incorrect:
-            one: Bitte wiederholen Sie die Schulung in
-            two: Anschließend werden Ihnen weitere Fragen zu diesem Thema gestellt.
