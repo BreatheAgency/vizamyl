@@ -1,6 +1,10 @@
 class TestSerializer < PageSerializer
-  attributes :failure_step_id, :results_incorrect, :results_correct
+  attributes :failure_step_id, :results_incorrect, :results_correct, :optional
   has_many :question_rounds
+
+  def optional
+    false
+  end
 
   def controller_name
     'test_page'
