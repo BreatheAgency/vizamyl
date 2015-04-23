@@ -88,16 +88,6 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
     return q;
   }.property('unansweredQuestions'),
 
-  questionsWithIndex: function() {
-    var index = 1;
-    return this.get('questions').map(function(item) {
-      return Em.Object.create({
-        value: item,
-        index: index++
-      });
-    })
-  }.property('questions.length'),
-
   explanationSource:function(){
     var source = this.get('selectedExplanationSource')
     if (source == null){

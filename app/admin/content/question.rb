@@ -28,6 +28,8 @@ ActiveAdmin.register Question, namespace: :content do
   form do |f|
     f.inputs do
       f.input :title, as: :html_editor
+      f.input :correct_title
+      f.input :incorrect_title
       f.input :explanation_source
       f.input :test_case
     end
@@ -55,6 +57,8 @@ ActiveAdmin.register Question, namespace: :content do
   show do |question|
     attributes_table do
       row :title
+      row :correct_title
+      row :incorrect_title
       row :explanation_source
       row :explanation do |question|
         video_tag([

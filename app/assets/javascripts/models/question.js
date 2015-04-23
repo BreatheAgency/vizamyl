@@ -11,4 +11,6 @@ Course.Question = DS.Model.extend({
   hasInteractives: Ember.computed.notEmpty('interactive_sources'),
   hasInteractiveTriplet: Ember.computed.equal('interactive_sources.length', 3),
   hasImages: Ember.computed.notEmpty('image_sources'),
+  incorrect_title: DS.attr('string'),
+  correct_title: DS.attr('string')
 });

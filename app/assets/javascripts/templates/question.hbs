@@ -1,1 +1,1 @@
-<li>{{i18n course.pages.test.question_results.question}} {{question.index}}: {{#if question.value.correct}}{{i18n course.pages.test.question_results.correct}}{{else}}{{i18n course.pages.test.question_results.incorrect}}{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
+<li>{{#if question.object.correct}}{{question.correct_title_int}}{{else}}{{question.incorrect_title_int}}{{/if}} <div {{bind-attr class=':circle question.object.correct:correct:incorrect'}}></div></li>
