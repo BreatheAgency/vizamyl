@@ -22,7 +22,7 @@ Course.TestQuestions = Ember.Mixin.create({
     return this.get('questions').map(function(item) {
       return question.create({
         object: item,
-        index: index,
+        index: index++,
         correct_title: item.get('correct_title'),
         incorrect_title: item.get('incorrect_title')
       })
