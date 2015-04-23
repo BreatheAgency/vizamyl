@@ -32,6 +32,7 @@ ActiveAdmin.register Test, namespace: :content do
     f.inputs do
       f.input :subject_area
       f.input :failure_step, as: :select, collection: Step.includes(:page).all.map{|step| [step.page.page_id, step.id]}.sort_by { |step| step[0] }
+      f.input :results_title
       f.input :results_correct, as: :html_editor
       f.input :results_incorrect, as: :html_editor
     end
@@ -44,6 +45,7 @@ ActiveAdmin.register Test, namespace: :content do
   show title: :page_id do |test|
     attributes_table do
       row :subject_area
+      row :results_title
       row :results_correct
       row :results_incorrect
       row :failure_step do |test|

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420135311) do
+ActiveRecord::Schema.define(version: 20150423105100) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -253,6 +253,7 @@ ActiveRecord::Schema.define(version: 20150420135311) do
     t.string   "subject_area",      limit: 255
     t.text     "results_incorrect"
     t.text     "results_correct"
+    t.string   "results_title"
   end
 
   add_index "test_translations", ["locale"], name: "index_test_translations_on_locale", using: :btree
@@ -264,6 +265,7 @@ ActiveRecord::Schema.define(version: 20150420135311) do
     t.integer "failure_step_id"
     t.text    "results_correct"
     t.text    "results_incorrect"
+    t.string  "results_title"
   end
 
   create_table "text_translations", force: :cascade do |t|

@@ -9,11 +9,6 @@ en:
         negative: Negative
         question:
           title: Self-assessment question
-        question_results:
-          title: Self-assessment question results
-          question: Question
-          correct: Correct
-          incorrect: Incorrect
         test_case:
           description_html: Navigate the three views with the slider.<br> Assess the five regions and then make an overall assessment.
           question_one: Frontal pole and lobe
@@ -41,11 +36,6 @@ de:
         negative: Negativ
         question:
           title: Ergebnis der Frage zur Selbsbewertung
-        question_results:
-          title: Ergebnis der Frage zur Selbsbewertung
-          question: Frage
-          correct: Richtig
-          incorrect: Falsch
         test_case:
           description_html: Navigieren Sie mit dem Slider durch die drei Ansichten.<br>Beurteilen Sie die fünf Bereiche und nehmen Sie dann eine Gesamtbewertung vor.
           question_one: Frontalpol und -lappen

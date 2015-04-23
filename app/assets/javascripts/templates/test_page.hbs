@@ -17,7 +17,7 @@
   {{else}}
     <div class='small-5 large-5 columns with-content with-minimum'>
       {{#if isInCorrect}}
-        <h1>{{i18n course.pages.test.question_results.title}}</h1>
+        <h1>{{{results_title}}}</h1>
         <div class='question-results'>
           <ul>
             {{#each question in questionsWithIndex}}
@@ -28,7 +28,7 @@
         <p>{{{results_correct}}}</p>
       {{/if}}
       {{#if isInIncorrect}}
-        <h1>{{i18n course.pages.test.question_results.title}}</h1>
+        <h1>{{{results_title}}}</h1>
         <div class='question-results'>
           <ul>
             {{#each question in questionsWithIndex}}
