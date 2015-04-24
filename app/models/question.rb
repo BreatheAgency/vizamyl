@@ -1,4 +1,6 @@
 class Question < ActiveRecord::Base
+  belongs_to :question_round
+
   has_many :answers, -> { order('id ASC') }
   accepts_nested_attributes_for :answers, allow_destroy: true
 
