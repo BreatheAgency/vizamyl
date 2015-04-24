@@ -1,6 +1,11 @@
-I18n.locale = :en
-c = Chapter.find(7)
+c = Chapter.find(8)
 t = c.tests
-t.update_all(results_title: 'Self-assessment questions results')
 qr = QuestionRound.where(subject: t)
-Question.where(question_round: qr).update_all(correct_title: 'Question ${index}: Correct', incorrect_title: 'Question ${index}: Incorrect')
+qs = Question.where(question_round: qr)
+
+I18n.locale = :en
+t.each { |n| n.update_attributes(results_title: 'Self-assessment questions results') }
+qs.each { |n| n.update_attributes(correct_title: 'Question ${index}: Correct', incorrect_title: 'Question ${index}: Incorrect') }
+I18n.locale = :de
+t.each { |n| n.update_attribute(:results_title, 'Ergebnis der Fragen zur Selbstbewertung') }
+qs.each { |n| n.update_attributes(correct_title: 'Frage ${index}: Richtig', incorrect_title: 'Frage ${index}: Falsch') }
