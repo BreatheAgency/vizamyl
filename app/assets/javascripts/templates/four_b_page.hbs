@@ -31,7 +31,7 @@
           <ul>
             {{#each question in questionsWithIndex}}
               <a {{action 'selectExplanation' question.value.explanation_source}}>
-                <li {{bind-attr class='question.value.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>{{{i18n course.pages.test.four_b.review_explanation_video_html count=question.index}}}</li>
+                <li {{bind-attr class='question.value.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>{{{i18n course.pages.test.four_b.review_explanation_video count=question.index}}}</li>
               </a>
             {{/each}}
           </ul>
