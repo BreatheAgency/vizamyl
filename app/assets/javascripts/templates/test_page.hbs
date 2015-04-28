@@ -52,17 +52,19 @@
         </div>
       {{/if}}
       {{#if isInUnanswered}}
-        <div class='test-progress'>
-          <p>{{i18n course.pages.test.question.title}}</p>
-          <ul>
-            {{#each question in answeredQuestions}}
-              <li class='answered'></li>
-            {{/each}}
-            {{#each question in unansweredQuestions}}
-              <li {{bind-attr class='question.active'}}></li>
-            {{/each}}
-          </ul>
-        </div>
+        {{#unless test_case}}
+          <div class='test-progress'>
+            <p>{{i18n course.pages.test.question.title}}</p>
+            <ul>
+              {{#each question in answeredQuestions}}
+                <li class='answered'></li>
+              {{/each}}
+              {{#each question in unansweredQuestions}}
+                <li {{bind-attr class='question.active'}}></li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/unless}}
         {{#if question.test_case}}
           <h1>{{question.title}}</h1>
           <p>{{{i18n course.pages.test.test_case.description_html}}}</p>

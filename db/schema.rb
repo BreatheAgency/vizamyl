@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150423154057) do
+ActiveRecord::Schema.define(version: 20150428153132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -270,6 +270,7 @@ ActiveRecord::Schema.define(version: 20150423154057) do
     t.text    "results_correct"
     t.text    "results_incorrect"
     t.string  "results_title"
+    t.boolean "test_case",                     default: false
   end
 
   create_table "text_translations", force: :cascade do |t|
@@ -328,7 +329,6 @@ ActiveRecord::Schema.define(version: 20150423154057) do
     t.boolean  "marketing_representative_opt_in",             default: false
     t.text     "institution",                                 default: ""
     t.string   "invite_code"
-    t.datetime "black_triangle_viewed_at"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
