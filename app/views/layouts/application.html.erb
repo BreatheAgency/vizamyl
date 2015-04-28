@@ -22,7 +22,7 @@
 						<li><%= link_to t('layouts.application.logout'), destroy_user_session_path(locale: I18n.locale) %></li>
 					<% end %>
 					<li class='right'>
-            <p class="global-brand <%= 'with-triangle' if current_page?(users_enrol_index_path) || current_page?(new_user_session_path) || current_page?(users_enrol_path(id:'details')) || current_page?(users_enrol_path(id:'marketing')) || current_page?(users_enrol_path(id:'terms')) || current_page?(users_enrol_path(id:'institution')) %>">
+            <p class="global-brand <%= 'with-triangle' if current_page?(users_enrol_index_path) || current_page?(new_user_session_path) || current_page?(users_enrol_path(id: 'details')) || current_page?(users_enrol_path(id: 'marketing')) || current_page?(users_enrol_path(id: 'terms')) || current_page?(users_enrol_path(id: 'institution')) || current_page?("/#{I18n.locale}") %>">
               <%= link_to t('layouts.application.logo.1_html'), "/#{I18n.locale}" %>
               <%= t('layouts.application.logo.2_html') %>
               <%= t('layouts.application.logo.3_html') %>
