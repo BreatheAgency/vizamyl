@@ -17,7 +17,7 @@ class CourseCompletionPDF < Prawn::Document
     text_box(I18n.t('course_completion.salutation') + ': ' + user.salutation, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
-    text_box(I18n.t('course_completion.date') + ': ' + I18n.l(Time.now, locale: user.locale, format:"#{Time.now.day.ordinalize} %B %Y"), at: [left, top + margin + height], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.date') + ': ' + I18n.l(Time.now, locale: user.locale, format:"%m/%d/%Y"), at: [left, top + margin + height], style: :normal, size: 14)
   end
 end
 
