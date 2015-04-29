@@ -36,8 +36,8 @@ de:
         positive: Positiv
         negative: Negativ
         question:
-          single_title: Ergebnis der Frage zur Selbsbewertung
-          plural_title: Ergebnis der Frage zur Selbsbewertung
+          single_title: Frage zur Selbsbewertung
+          plural_title: Fragen zur Selbstbewertung
         test_case:
           description_html: Navigieren Sie mit dem Slider durch die drei Ansichten.<br>Beurteilen Sie die fünf Bereiche und nehmen Sie dann eine Gesamtbewertung vor.
           question_one: Frontalpol und -lappen
