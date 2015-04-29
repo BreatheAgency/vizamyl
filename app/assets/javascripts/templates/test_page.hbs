@@ -54,7 +54,7 @@
       {{#if isInUnanswered}}
         {{#unless test_case}}
           <div class='test-progress'>
-            <p>{{i18n course.pages.test.question.title}}</p>
+            <p>{{#if singleQuestion}}{{i18n course.pages.test.question.single_title}}{{else}}{{i18n course.pages.test.question.plural_title}}{{/if}}</p>
             <ul>
               {{#each question in answeredQuestions}}
                 <li class='answered'></li>

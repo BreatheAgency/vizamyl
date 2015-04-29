@@ -5,6 +5,7 @@ Course.TestPageController = Ember.ObjectController.extend(Course.TestQuestions, 
   selectedAnswer: null,
   answered: Ember.computed.bool('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
+  singleQuestion: Ember.computed.equal('questions.length', 1),
 
   fsmStates: {
     initialState: 'unanswered',
