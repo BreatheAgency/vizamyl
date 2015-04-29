@@ -49,7 +49,7 @@ de:
         four_b:
           title: Zusammenfassung der Bewertung
           correct: Herzlichen Glückwunsch! Mit der richtigen Beurteilung von mindestens 14 der 15 Fälle haben Sie das elektronische Schulungsprogramm zu Vizamyl erfolgreich abgeschlossen. Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall. Klicken Sie andernfalls zum Beenden des Programms auf die Taste "Weiter".
-          incorrect_one_html: Herzlichen Glückwunsch! Mit der richtigen Beurteilung von mindestens 14 der 15 Fälle haben Sie das elektronische Schulungsprogramm zu Vizamyl erfolgreich abgeschlossen.Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall. Klicken Sie andernfalls zum Beenden des Programms auf die Taste "Weiter".
+          incorrect_one_html: Leider hätten Sie mindestens 14 der 15 Fälle richtig beurteilen müssen, um das elektronische Schulungsprogramm zu Vizamyl abzuschließen.<br>Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall. Wenn Sie bereit sind, können Sie die Taste "Weiter" drücken, um anhand von 15 weiteren Fällen erneut geprüft zu werden.
           incorrect_two_one_html: Leider hätten Sie mindestens 14 der 15 Fälle richtig beurteilen müssen, um das elektronische Schulungsprogramm zu Vizamyl abzuschließen. Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall.<br>Bitte wenden Sie sich für eine persönliche Schulung über die
           incorrect_two_link: Vizamyl-Website
           incorrect_two_two_html: an Ihren örtlichen GE-Vertreter.
