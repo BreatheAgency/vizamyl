@@ -107,8 +107,12 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
   }.property('answeredQuestions'),
 
   testFailedOnce: function() {
-    return (this.get('unansweredQuestionRoundIndices.length') === 1);
-  }.property('unansweredQuestionRoundIndices.length'),
+    return (this.get('unansweredQuestionRoundIndex') === 0);
+  }.property('unansweredQuestionRoundIndex'),
+
+  testFailed: function() {
+    return !this.get('testCorrect') && !this.get('testFailedOnce');
+  }.property('testCorrect', 'testFailedOnce'),
 
   columns: function(){
     switch(this.get('question.interactive_sources.length')) {
@@ -143,7 +147,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
     next: function() {
       if(this.get('testCorrect')) {
         window.location.replace('/' + this.get('currentLocale') + '/users/course-complete');
-      } else if(this.get('testFailedOnce')) {
+      } else {
         this.sendStateEvent('reset');
       }
     },
