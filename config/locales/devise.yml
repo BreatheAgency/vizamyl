@@ -130,3 +130,71 @@ de:
         password_label: Neues Passwort
         password_confirmation_label: Neues Passwort bestätigen
         submit: Senden
+fr:
+  devise:
+    mailer:
+      reset_password_instructions:
+        one: Hello
+        two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
+        three: Please click here to reset your password.
+        four_html: |
+          <p>If you didn’t request this reminder, please ignore this email. Your password will not be changed until you access the link above and create a new one.</p>
+          <p>Thank you,</p>
+          <p>GE Healthcare</p>
+    registrations:
+      edit:
+        title: My account
+        my_details: My details
+        registrations_description: You can update your contact preferences and personal details using the boxes below
+        contact_preferences: Contact preferences
+        salutations:
+          - Prof
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
+        description_html: |
+          If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
+        marketing_overall_opt_in_description_html: |
+          If you do want to receive such information, please tick the box below
+        marketing_overall_opt_in_html: |
+          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<span>
+        marketing_overall_opt_in_note_html: |
+          (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
+        marketing_overall_description_html: |
+          If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:
+        marketing_email_opt_in_label_html: |
+          E-Mail
+        marketing_post_opt_in_label_html: |
+          Post
+        marketing_representative_opt_in_label_html: |
+          Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>
+        marketing_overall_opt_in_tick_html: |
+          (Please tick one or more options)
+        update: |
+          Update
+      new:
+        salutations:
+          - Prof
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
+    sessions:
+      new:
+        intro: |
+          Please enter your email address
+          and password to login.
+        forgot_your_password: Forgotten your password?
+        login: Login
+    passwords:
+      new:
+        forgot_your_password: Forgotten your password?
+        send: Send
+      edit:
+        change_your_password: Change your password
+        password_label: New password
+        password_confirmation_label: Confirm new password
+        submit: Submit
