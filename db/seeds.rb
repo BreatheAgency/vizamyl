@@ -838,13 +838,8 @@ qr = QuestionRound.find(96)
   q.answers.create!(body: 'Negative', correct: false)
 end
 
+# User.new(locale: 'fr', invite_code: 'resonance', salutation: 'Dr', first_name: 'Example', last_name: 'Example', email: 'fr-super-user@readvizamyl.com', password: 'w9aMyMm2Fd', password_confirmation: 'w9aMyMm2Fd', institution: 'Example', super_user: true, terms_and_conditions_opt_in: true).save!
 
-# en-admin@readvizamyl.com
-# en-super-user@readvizamyl.com
-# en-content-admin@readvizamyl.com
-#
-# User.new(locale: 'de', invite_code: 'amyloid', title: 'Dr', first_name: 'Example', last_name: 'Example', email: 'de-external@readvizamyl.com', password: 'XGByt8m3zy', password_confirmation: 'XGByt8m3zy', institution: 'Example', super_user: true, terms_and_conditions_opt_in: true).save!
-#
-# AdminUser.new(locale: 'de', email: 'de-admin@readvizamyl.com', password: 'zGJrjaxcjTfm2dz', password_confirmation: 'zGJrjaxcjTfm2dz').save!
-#
-# AdminUser.new(locale: 'de', email: 'de-content-admin@readvizamyl.com', password: '2dxHR3SjeMyHFwE', password_confirmation: '2dxHR3SjeMyHFwE').save!
+# AdminUser.new(locale: 'fr', email: 'fr-admin@readvizamyl.com', password: 'jGsHZes5dCeWR6a', password_confirmation: 'jGsHZes5dCeWR6a').save!
+
+# AdminUser.new(locale: 'fr', email: 'fr-content-admin@readvizamyl.com', password: 'si8Enf939Q9I6mQ', password_confirmation: 'si8Enf939Q9I6mQ').save!
