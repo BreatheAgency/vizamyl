@@ -58,7 +58,7 @@ fr:
   course:
     actions:
       back: Back
-      next: Next
+      next: Suivant
     pages:
       test:
         positive: Positive
