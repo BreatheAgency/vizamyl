@@ -143,11 +143,13 @@
   {{/if}}
 </div>
 <div class='row page-footer'>
-  <div class='small-12 medium-12 large-12 columns'>
-    <div class='page-abbreviations small-6 medium-6 large-6 columns'>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-abbreviations'>
       <p>{{{abbreviations}}}</p>
     </div>
-    <div class='page-actions small-6 medium-6 large-6 columns'>
+  </div>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-actions'>
       {{#if isInCorrect}}
         <a {{bind-attr class=':right'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
       {{/if}}

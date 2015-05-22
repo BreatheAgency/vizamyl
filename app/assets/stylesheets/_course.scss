@@ -40,11 +40,6 @@
       min-height: 50px;
 
       .page-actions {
-        display: inline-block;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-
         a, i, .btn, button {
           font-family: $global-font;
           font-size: rem-calc(32);
@@ -100,10 +95,6 @@
 
       .page-abbreviations {
         background: white;
-        width: 500px;
-        display: block;
-        border: 1px solid white;
-        
         p {
           font-size: rem-calc(14);
           margin-bottom: 0;
