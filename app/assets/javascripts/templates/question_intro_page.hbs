@@ -9,14 +9,14 @@
   </div>
 </div>
 <div class='row page-footer'>
-  <div class='small-6 medium-6 large-6 columns'>
-    <div class='page-abbreviations'>
+  <div class='small-12 medium-12 large-12 columns'>
+    <div class='page-abbreviations small-6 medium-6 large-6 columns'>
       <p>{{{abbreviations}}}</p>
     </div>
-  </div>
-  <div class='small-6 medium-6 large-6 columns'>
-    <div class='page-actions'>
-      <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+    <div class='page-actions small-6 medium-6 large-6 columns'>
+      <div class='page-actions'>
+        <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+      </div>
     </div>
   </div>
 </div>
