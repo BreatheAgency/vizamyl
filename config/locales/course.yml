@@ -20,9 +20,9 @@ en:
           question_six: Overall classification
         four_b:
           title: Assessment Summary
-          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
-          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
-          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative via the
+          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
+          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
+          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br><br>Please contact your local GE representative via the
           incorrect_two_link: Contact section
           incorrect_two_two_html: to schedule an in-person training session.
           review_explanation_video: Review explanation video <span class="index">%{count}</span>
@@ -49,8 +49,8 @@ de:
         four_b:
           title: Zusammenfassung der Bewertung
           correct: Herzlichen Glückwunsch! Mit der richtigen Beurteilung von mindestens 14 der 15 Fälle haben Sie das elektronische Schulungsprogramm zu Vizamyl erfolgreich abgeschlossen. Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall. Klicken Sie andernfalls zum Beenden des Programms auf die Taste "Weiter".
-          incorrect_one_html: Leider hätten Sie mindestens 14 der 15 Fälle richtig beurteilen müssen, um das elektronische Schulungsprogramm zu Vizamyl abzuschließen.<br>Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall. Wenn Sie bereit sind, können Sie die Taste "Weiter" drücken, um anhand von 15 weiteren Fällen erneut geprüft zu werden.
-          incorrect_two_one_html: Leider hätten Sie mindestens 14 der 15 Fälle richtig beurteilen müssen, um das elektronische Schulungsprogramm zu Vizamyl abzuschließen. Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall.<br>Bitte wenden Sie sich für eine persönliche Schulung über die
+          incorrect_one_html: Leider hätten Sie mindestens 14 der 15 Fälle richtig beurteilen müssen, um das elektronische Schulungsprogramm zu Vizamyl abzuschließen.<br><br>Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall. Wenn Sie bereit sind, können Sie die Taste "Weiter" drücken, um anhand von 15 weiteren Fällen erneut geprüft zu werden.
+          incorrect_two_one_html: Leider hätten Sie mindestens 14 der 15 Fälle richtig beurteilen müssen, um das elektronische Schulungsprogramm zu Vizamyl abzuschließen. Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall.<br><br>Bitte wenden Sie sich für eine persönliche Schulung über die
           incorrect_two_link: Vizamyl-Website
           incorrect_two_two_html: an Ihren örtlichen GE-Vertreter.
           review_explanation_video: Lehrvideo %{count} anschauen
@@ -76,9 +76,9 @@ fr:
           question_six: Overall classification
         four_b:
           title: Assessment Summary
-          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
-          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
-          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the
+          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
+          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
+          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the
           incorrect_two_link: Vizamyl website
           incorrect_two_two_html: to schedule an in-person training session.
           review_explanation_video: Review explanation video <span class="index">%{count}</span>
