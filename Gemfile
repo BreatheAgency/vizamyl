@@ -46,9 +46,6 @@ gem 'autoprefixer-rails'
 gem 'rack-canonical-host'
 gem 'active_model_serializers'
 
-group :test do
-end
-
 group :development do
   gem 'bullet'
   gem 'quiet_assets'
