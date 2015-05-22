@@ -1,11 +1,9 @@
 # Vizamyl
-
 - http://vizamyl-sandbox.herokuapp.com
 - http://stg-www.readvizamyl.com
 - https://www.readvizamyl.com
 
 # Deployment
-
 - Backup
 - Pull latest dbs
 - Dump only the users
