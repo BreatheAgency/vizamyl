@@ -150,7 +150,7 @@ fr:
         salutations:
           - Pr
           - Dr
-          - M
+          - M.
           - Mne
           - Mlle
         description_html: |
@@ -175,12 +175,11 @@ fr:
           Update
       new:
         salutations:
-          - Prof
+          - Pr
           - Dr
-          - Mr
-          - Mrs
-          - Miss
-          - Ms
+          - M.
+          - Mne
+          - Mlle
     sessions:
       new:
         intro: |
