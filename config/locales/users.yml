@@ -90,8 +90,8 @@ fr:
   users:
     enrol:
       details:
-        title: Please enter your details.
-        salutation: Salutation
+        title: Veuillez saisir vos données.
+        salutation: Civilité
       institution:
         title: Please enter your institution.
         description: Please enter the institution to which you refer patients in the box below.
