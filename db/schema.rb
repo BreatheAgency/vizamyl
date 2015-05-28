@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150414092244) do
+ActiveRecord::Schema.define(version: 20150501110635) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -225,6 +225,8 @@ ActiveRecord::Schema.define(version: 20150414092244) do
     t.datetime "updated_at"
     t.text     "title"
     t.text     "explanation_source"
+    t.string   "correct_title"
+    t.string   "incorrect_title"
   end
 
   add_index "question_translations", ["locale"], name: "index_question_translations_on_locale", using: :btree
@@ -235,6 +237,8 @@ ActiveRecord::Schema.define(version: 20150414092244) do
     t.integer "question_round_id"
     t.text    "explanation_source"
     t.boolean "test_case",          default: false
+    t.string  "correct_title"
+    t.string  "incorrect_title"
   end
 
   create_table "steps", force: :cascade do |t|
@@ -246,21 +250,27 @@ ActiveRecord::Schema.define(version: 20150414092244) do
   end
 
   create_table "test_translations", force: :cascade do |t|
-    t.integer  "test_id",                  null: false
-    t.string   "locale",       limit: 255, null: false
+    t.integer  "test_id",                       null: false
+    t.string   "locale",            limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "subject_area", limit: 255
+    t.string   "subject_area",      limit: 255
+    t.text     "results_incorrect"
+    t.text     "results_correct"
+    t.string   "results_title"
   end
 
   add_index "test_translations", ["locale"], name: "index_test_translations_on_locale", using: :btree
   add_index "test_translations", ["test_id"], name: "index_test_translations_on_test_id", using: :btree
 
   create_table "tests", force: :cascade do |t|
-    t.string  "page_id",         limit: 255
-    t.string  "subject_area",    limit: 255
+    t.string  "page_id",           limit: 255
+    t.string  "subject_area",      limit: 255
     t.integer "failure_step_id"
-    t.boolean "optional",                    default: false
+    t.text    "results_correct"
+    t.text    "results_incorrect"
+    t.string  "results_title"
+    t.boolean "test_case",                     default: false
   end
 
   create_table "text_translations", force: :cascade do |t|
@@ -319,7 +329,7 @@ ActiveRecord::Schema.define(version: 20150414092244) do
     t.boolean  "marketing_representative_opt_in",             default: false
     t.text     "institution",                                 default: ""
     t.string   "invite_code"
-    t.datetime "black_triangle_viewed_at"
+    t.boolean  "cookies_opt_in",                              default: false
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

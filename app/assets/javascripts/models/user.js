@@ -5,7 +5,6 @@ Course.User = DS.Model.extend({
   progressions: DS.hasMany('progression'),
   steps: DS.hasMany('steps'),
   completed: DS.attr('boolean'),
-  black_triangle_viewed_at: DS.attr('date'),
   failed_round_one_at: DS.attr('date'),
   failed_round_two_at: DS.attr('date'),
   passed_round_one_at: DS.attr('date'),

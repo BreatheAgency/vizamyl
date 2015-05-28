@@ -56,6 +56,7 @@ ActiveAdmin.register User, as: 'Users' do
       # row(:passed) { |model| model.passed? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row :final_assessment_status
       row :invite_code
+      row('Cookies') { |model| model.cookies_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row('Overall Marketing') { |model| model.marketing_overall_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row('Email Marketing') { |model| model.marketing_email_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row('Post Marketing') { |model| model.marketing_post_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }

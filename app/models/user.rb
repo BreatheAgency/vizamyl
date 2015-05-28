@@ -13,8 +13,6 @@ class User < ActiveRecord::Base
   before_save :capitalize_names
   before_save :capitalize_institution
 
-  alias_attribute :title, :salutation # TODO deprecate
-
   alias_attribute :failed_round_one, :failed_round_one_at
   alias_attribute :failed_round_two, :failed_round_two_at
   alias_attribute :passed_round_one, :passed_round_one_at
@@ -24,7 +22,7 @@ class User < ActiveRecord::Base
     step.validates :first_name, presence: true
     step.validates :last_name, presence: true
     step.validates :email, email: true
-    step.validates :invite_code, inclusion: { in: proc { Rails.application.secrets.invite_codes[I18n.locale.to_s].split(',') }, message: 'is invalid' }, if: Proc.new { form_step == 'details' }
+    step.validates :invite_code, inclusion: { in: proc { Rails.application.secrets.invite_codes[I18n.locale.to_s].split(',') } }, if: Proc.new { form_step == 'details' }
   end
 
   with_options :if => -> { required_for_step?(:institution) } do |step|
@@ -32,11 +30,15 @@ class User < ActiveRecord::Base
   end
 
   with_options :if => -> { required_for_step?(:terms) } do |step|
-    step.validates :terms_and_conditions_opt_in, inclusion: { in: [true], message: 'is invalid' }
+    step.validates :terms_and_conditions_opt_in, inclusion: { in: [true] }
+  end
+
+  with_options :if => -> { required_for_step?(:terms) && (I18n.locale == :de || I18n.locale == :'de-at') } do |step|
+    step.validates :cookies_opt_in, inclusion: { in: [true] }
   end
 
   def full_name
-    "#{self.title} #{self.first_name} #{self.last_name}"
+    "#{self.salutation} #{self.first_name} #{self.last_name}"
   end
 
   def latest_step

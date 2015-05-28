@@ -5,6 +5,7 @@ Course.TestPageController = Ember.ObjectController.extend(Course.TestQuestions, 
   selectedAnswer: null,
   answered: Ember.computed.bool('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
+  singleQuestion: Ember.computed.equal('questions.length', 1),
 
   fsmStates: {
     initialState: 'unanswered',
@@ -92,16 +93,6 @@ Course.TestPageController = Ember.ObjectController.extend(Course.TestQuestions, 
     if (q) { q.set('active', true); }
     return q;
   }.property('unansweredQuestions'),
-
-  questionsWithIndex: function() {
-    var index = 1;
-    return this.get('questions').map(function(item) {
-      return Em.Object.create({
-        value: item,
-        index: index++
-      });
-    })
-  }.property('questions.[]'),
 
   testComplete: function() {
     return this.get('questions.length') === this.get('answeredQuestions.length')

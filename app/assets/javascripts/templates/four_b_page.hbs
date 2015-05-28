@@ -19,7 +19,7 @@
       {{#if isInAnswered}}
         <h1>{{i18n course.pages.test.four_b.title}}</h1>
         {{#if testCorrect}}
-          <p>{{i18n course.pages.test.four_b.correct}}</p>
+         <p>{{{i18n course.pages.test.four_b.correct}}}</p>
         {{else}}
           {{#if testFailedOnce}}
             <p>{{{i18n course.pages.test.four_b.incorrect_one_html}}}</p>
@@ -30,8 +30,8 @@
         <div class='explanation-question-results'>
           <ul>
             {{#each question in questionsWithIndex}}
-              <a {{action 'selectExplanation' question.value.explanation_source}}>
-                <li {{bind-attr class='question.value.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>{{{i18n course.pages.test.four_b.review_explanation_video_html count=question.index}}}</li>
+              <a {{action 'selectExplanation' question.object.explanation_source}}>
+                <li {{bind-attr class='question.object.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>{{{i18n course.pages.test.four_b.review_explanation_video count=question.index}}}</li>
               </a>
             {{/each}}
           </ul>
@@ -120,7 +120,7 @@
   <div class='small-6 medium-6 large-6 columns'>
     <div class='page-actions'>
       {{#if isInAnswered}}
-        <a {{bind-attr class=':right testFailedOnce:enabled:disabled'}} {{action 'next'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+        <a {{bind-attr class=':right testFailed:disabled:enabled'}} {{action 'next'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
       {{/if}}
       {{#if isInUnanswered}}
         <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>

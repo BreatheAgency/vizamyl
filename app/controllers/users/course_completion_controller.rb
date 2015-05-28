@@ -17,9 +17,7 @@ class CourseCompletionPDF < Prawn::Document
     text_box(I18n.t('course_completion.salutation') + ': ' + user.salutation, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
-    text_box(I18n.t('course_completion.date') + ': ' + I18n.l(Time.now, locale: user.locale, format:"#{Time.now.day.ordinalize} %B %Y"), at: [left, top + margin + height], style: :normal, size: 14)
-    start_new_page
-    image(Rails.root.join("app/assets/images/#{I18n.locale}/course-completion-2.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
+    text_box(I18n.t('course_completion.date') + ': ' + I18n.l(Time.now, locale: user.locale, format:"%d/%m/%Y"), at: [left, top + margin + height], style: :normal, size: 14)
   end
 end
 

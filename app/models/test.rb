@@ -5,7 +5,7 @@ class Test < ActiveRecord::Base
   accepts_nested_attributes_for :question_rounds, allow_destroy: true
   belongs_to :failure_step, class_name: 'Step'
 
-  %i(subject_area).each do |translated_field|
+  %i(subject_area results_title results_correct results_incorrect).each do |translated_field|
     translates translated_field
   end
 

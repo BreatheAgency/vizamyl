@@ -2,8 +2,8 @@ en:
   layouts:
     application:
       logo:
-        1_html: Vizamyl
-        2_html: <span>Flutemetamol F18</span>
+        1_html: Vizamyl<sup class='trade-mark'>™</sup>
+        2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
         3_html: <span>Injection</span>
       course_menu: Course menu
       my_account: My account
@@ -40,5 +40,27 @@ de:
         <p>GE und GE Monogram sind Handelsmarken der General Electric Company</p>
         <p>Vizamyl ist eine Marke der General Electric Company oder eines ihrer Tochterunternehmen</p>
         <p><a href="/de/terms-and-conditions">Nutzungsbedingungen</a></p>
+      reference_html: |
+        <p class="right"></p>
+fr:
+  layouts:
+    application:
+      logo:
+        1_html: Vizamyl<sup class='trade-mark'>™</sup>
+        2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
+        3_html: <span>Injectable</span>
+      course_menu: Menu du cours
+      my_account: Mon compte
+      login: Se connecter
+      logout: Se déconnecter
+      enrol: S’inscrire
+      references: Références
+      resources: Ressources
+      contact: Contact
+      copyright_html: |
+        <p>&copy;2015 General Electric Company – Tous droits réservés.</p>
+        <p>GE et le monogramme GE sont des marques commerciales de General Electric Company.</p>
+        <p>Vizamyl est une marque commerciale de General Electric Company ou de l’une de ses filiales.</p>
+        <p><a href="/fr/terms-and-conditions">Conditions générales</a></p>
       reference_html: |
         <p class="right"></p>

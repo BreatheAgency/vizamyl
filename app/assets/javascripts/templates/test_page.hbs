@@ -17,28 +17,26 @@
   {{else}}
     <div class='small-5 large-5 columns with-content with-minimum'>
       {{#if isInCorrect}}
-        <h1>{{i18n course.pages.test.question_results.title}}</h1>
+        <h1>{{{results_title}}}</h1>
         <div class='question-results'>
           <ul>
             {{#each question in questionsWithIndex}}
-            <li>{{i18n course.pages.test.question_results.question}} {{question.index}}: {{#if question.value.correct}}{{i18n course.pages.test.question_results.correct}}{{else}}{{i18n course.pages.test.question_results.incorrect}}{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
+              {{render 'question' question}}
             {{/each}}
           </ul>
         </div>
-        <p>{{i18n course.pages.test.self_assesment.correct.one}}</p>
-        <p>{{i18n course.pages.test.self_assesment.correct.two}} {{currentPage.chapter.title}} - {{currentPage.subject_area}} {{i18n course.pages.test.self_assesment.correct.three}}</p>
+        <p>{{{results_correct}}}</p>
       {{/if}}
       {{#if isInIncorrect}}
-      <h1>{{i18n course.pages.test.question_results.title}}</h1>
-      <div class='question-results'>
-        <ul>
-          {{#each question in questionsWithIndex}}
-          <li>{{i18n course.pages.test.question_results.question}} {{question.index}}: {{#if question.value.correct}}{{i18n course.pages.test.question_results.correct}}{{else}}{{i18n course.pages.test.question_results.incorrect}}{{/if}} <div {{bind-attr class=':circle question.value.correct:correct:incorrect'}}></div></li>
-          {{/each}}
-        </ul>
-      </div>
-      <p>{{i18n course.pages.test.self_assesment.incorrect.one}} {{currentPage.chapter.title}} - {{currentPage.subject_area}}.</p>
-      <p>{{i18n course.pages.test.self_assesment.incorrect.two}}</p>
+        <h1>{{{results_title}}}</h1>
+        <div class='question-results'>
+          <ul>
+            {{#each question in questionsWithIndex}}
+              {{render 'question' question}}
+            {{/each}}
+          </ul>
+        </div>
+        <p>{{{results_incorrect}}}</p>
       {{/if}}
       {{#if isInExpanded}}
         <div class='small-7 large-7 columns with-media'>
@@ -54,17 +52,19 @@
         </div>
       {{/if}}
       {{#if isInUnanswered}}
-        <div class='test-progress'>
-          <p>{{i18n course.pages.test.question.title}}</p>
-          <ul>
-            {{#each question in answeredQuestions}}
-              <li class='answered'></li>
-            {{/each}}
-            {{#each question in unansweredQuestions}}
-              <li {{bind-attr class='question.active'}}></li>
-            {{/each}}
-          </ul>
-        </div>
+        {{#unless test_case}}
+          <div class='test-progress'>
+            <p>{{#if singleQuestion}}{{i18n course.pages.test.question.single_title}}{{else}}{{i18n course.pages.test.question.plural_title}}{{/if}}</p>
+            <ul>
+              {{#each question in answeredQuestions}}
+                <li class='answered'></li>
+              {{/each}}
+              {{#each question in unansweredQuestions}}
+                <li {{bind-attr class='question.active'}}></li>
+              {{/each}}
+            </ul>
+          </div>
+        {{/unless}}
         {{#if question.test_case}}
           <h1>{{question.title}}</h1>
           <p>{{{i18n course.pages.test.test_case.description_html}}}</p>
