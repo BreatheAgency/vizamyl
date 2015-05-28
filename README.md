@@ -32,3 +32,6 @@
 `heroku pg:push vizamyl_staging_dump DATABASE --app vizamyl`
 `heroku maintenance:off --app vizamyl`
 `heroku ps:restart --app vizamyl`
+
+
+https://gist.github.com/alistaircolling/ec632f279bf21a953262
