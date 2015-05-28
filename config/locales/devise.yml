@@ -148,12 +148,11 @@ fr:
         registrations_description: You can update your contact preferences and personal details using the boxes below
         contact_preferences: Contact preferences
         salutations:
-          - Prof
+          - Pr
           - Dr
-          - Mr
-          - Mrs
-          - Miss
-          - Ms
+          - M
+          - Mne
+          - Mlle
         description_html: |
           If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
         marketing_overall_opt_in_description_html: |
@@ -185,10 +184,10 @@ fr:
     sessions:
       new:
         intro: |
-          Please enter your email address
-          and password to login.
-        forgot_your_password: Forgotten your password?
-        login: Login
+          Veuillez saisir votre adresse électronique
+          et votre mot de passe pour vous connecter.
+        forgot_your_password: Mot de passe oublié?
+        login: Se connecter
     passwords:
       new:
         forgot_your_password: Forgotten your password?
