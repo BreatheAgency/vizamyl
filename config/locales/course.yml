@@ -62,18 +62,18 @@ fr:
     pages:
       test:
         positive: Positive
-        negative: Negative
+        negative: Négative
         question:
-          single_title: Self-assessment question
-          plural_title: Self-assessment questions
+          single_title: Question d’auto-évaluation
+          plural_title: Questions d’auto-évaluation
         test_case:
-          description_html: Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.
-          question_one: Frontal pole and lobe
-          question_two: Posterior cingulate and precuneus
-          question_three: Temporal lobe
-          question_four: Parietal lobe
+          description_html: Explorez les trois vues à l’aide du curseur. Évaluez les cinq régions et procédez à une évaluation générale.
+          question_one: Région frontale
+          question_two: Cortex cingulaire postérieur et précuneus
+          question_three: Région temporale
+          question_four: Région pariétale
           question_five: Striatum
-          question_six: Overall classification
+          question_six: Classification générale
         four_b:
           title: Assessment Summary
           correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
