@@ -189,10 +189,10 @@ fr:
         login: Se connecter
     passwords:
       new:
-        forgot_your_password: Forgotten your password?
-        send: Send
+        forgot_your_password: Mot de passe oublié?
+        send: Envoi
       edit:
-        change_your_password: Change your password
-        password_label: New password
-        password_confirmation_label: Confirm new password
-        submit: Submit
+        change_your_password: Changer votre mot de passe
+        password_label: Nouveau mot de passe
+        password_confirmation_label: Confirmer le nouveau mot de passe
+        submit: Envoyer

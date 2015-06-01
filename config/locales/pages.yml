@@ -35,9 +35,6 @@ en:
           <p>If you are interested in finding out more about <strong>SPECT imaging and DaTSCAN&#0153;</strong> visit:</p>
           <p><a href="http://www.gehealthcare.co.uk/datscan" target="_blank">www.gehealthcare.co.uk/datscan</a></p>
           <p><small>Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.</small></p>
-        terms: |
-          Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.
-          or one of its subsidiaries.
     terms-and-conditions:
       title: Terms and conditions
       body_html: |
@@ -194,7 +191,7 @@ fr:
     references:
       left:
         title: |
-         References
+         Références
         body_html: |
           <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. Acta Neuropathol 1991; 82: 239-59.</p>
           <p>Hyman BT, Phelps CH, Beach TG <i>et al</i>. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. Alzheimers Dement 2012; 8: 1-13.</p>
@@ -207,26 +204,23 @@ fr:
       right:
         body_html: |
     resources:
-      smpc_title: Vizamyl SmPC EU
-      rainbow_title: Rainbow colour scale RGB values
+      smpc_title: Vizamyl RCP UE
+      rainbow_title: Valeurs RVB de l’échelle de couleurs Rainbow
     contact:
       left:
         title: |
-         Medical Support
-         and other enquiries:
+         Encadrement médical
+         et autres demandes de renseignements:
         body_html: |
-          <p>If you would like further <strong>medical information</strong> about Vizamyl, please contact us at:</p>
+          <p>Si vous souhaitez obtenir d’autres <strong>informations médicales</strong> sur Vizamyl, veuillez nous contacter à:</p>
           <p><a href="mailto:vizamyl.medinfo@ge.com">vizamyl.medinfo@ge.com</a></p>
-          <p>For other enquiries, including requests for <strong>image reader training</strong>, please contact us at:</p>
+          <p>Pour les autres demandes, y compris les demandes de formation <strong>au lecteur d’images</strong>, veuillez nous contacter à:</p>
           <p><a href="mailto:gevizamyl.general@ge.com">gevizamyl.general@ge.com</a></p>
-          <p>If you are interested in finding out more about <strong>SPECT imaging and DaTSCAN&#0153;</strong> visit:</p>
+          <p>Si vous souhaitez obtenir d’autres informations sur <strong>l’imagerie SPECT et DaTSCAN&#0153;</strong> veuillez consulter:</p>
           <p><a href="http://www.gehealthcare.co.uk/datscan" target="_blank">www.gehealthcare.co.uk/datscan</a></p>
-          <p><small>Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.</small></p>
-        terms: |
-          Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.
-          or one of its subsidiaries.
+          <p><small>Vizamyl et DaTSCAN sont des marques commerciales de GE Healthcare Limited.</small></p>
     terms-and-conditions:
-      title: Terms and conditions
+      title: Conditions générales
       body_html: |
         <p><b>1.</b><b>Terms of Use</b></p>
         <p>The Vizamyl&#0153; E-Training website is where users can access training material relating to GE Healthcare's Vizamyl&#0153; product (the "Product") and eventually take an exam in order to assess whether the user has understood how to safely use the Product in accordance with the Product's summary of Product Characteristics. The website is hosted on behalf of GE Healthcare by <a href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> of Olympic House, 317-321 Latimer Road, London, W10 6RA. The following terms and conditions apply to anyone who uses the website. </p>
