@@ -127,5 +127,5 @@ fr:
           (Veuillez cocher une ou plusieurs options)
     course_completion:
       success:
-        description_html: Thank you for participating in the Vizamyl electronic training programme.<br>Please download the PDF of your results and keep for your records.
-        download_results: Download results
+        description_html: Nous vous remercions d’avoir participé au programme de formation électronique Vizamyl (flutémétamol (<sup>18</sup>F)).<br>Veuillez télécharger la version PDF de vos résultats et la garder pour référence.
+        download_results: Télécharger les résultats
