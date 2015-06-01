@@ -134,12 +134,12 @@ fr:
   devise:
     mailer:
       reset_password_instructions:
-        one: Hello
-        two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
-        three: Please click here to reset your password.
+        one: Bonjour
+        two: Nous avons reçu une demande pour vous rappeler vos données de connexion liées au programme de formation électronique Vizamyl.
+        three: Veuillez cliquer ici pour réinitialiser votre mot de passe.
         four_html: |
-          <p>If you didn’t request this reminder, please ignore this email. Your password will not be changed until you access the link above and create a new one.</p>
-          <p>Thank you,</p>
+          <p>Si vous n’avez pas demandé de recevoir ce rappel, veuillez ignorer ce courriel. Votre mot de passe sera uniquement changé lorsque vous aurez accédé au lien ci-dessus et que vous aurez créé un nouveau mot de passe.</p>
+          <p>Merci de votre attention,</p>
           <p>GE Healthcare</p>
     registrations:
       edit:
