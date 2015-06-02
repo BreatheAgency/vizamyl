@@ -69,7 +69,7 @@ fr:
         test_case:
           description_html: Explorez les trois vues à l’aide du curseur. Évaluez les cinq régions et procédez à une évaluation générale.
           question_one: Région frontale
-          question_two: Cortex cingulaire postérieur et précuneus
+          question_two: Cortex cingulaire postérieur et précunéus
           question_three: Région temporale
           question_four: Région pariétale
           question_five: Striatum
