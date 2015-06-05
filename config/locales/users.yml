@@ -39,7 +39,7 @@ en:
           (Please tick one or more options)
     course_completion:
       success:
-        description_html: Thank you for participating in the Vizamyl electronic training programme.<br>Please download the PDF of your results and keep for your records.
+        description_html: Thank you for participating in the Vizamyl electronic training programme.<br><br>Please download the PDF of your results and keep for your records.
         download_results: Download results
 de:
   users:
@@ -84,7 +84,7 @@ de:
           (Bitte markieren Sie mindestens eine Option)
     course_completion:
       success:
-        description_html: Vielen Dank für Ihre Teilnahme am elektronischen Schulungsprogramm zu Vizamyl.<br>Bitte laden Sie die PDF-Datei mit Ihren Ergebnissen herunter und heben Sie diese für Ihre Unterlagen auf.
+        description_html: Vielen Dank für Ihre Teilnahme am elektronischen Schulungsprogramm zu Vizamyl.<br><br>Bitte laden Sie die PDF-Datei mit Ihren Ergebnissen herunter und heben Sie diese für Ihre Unterlagen auf.
         download_results: Ergebnisse herunterladen
 fr:
   users:
@@ -127,5 +127,5 @@ fr:
           (Veuillez cocher une ou plusieurs options)
     course_completion:
       success:
-        description_html: Nous vous remercions d’avoir participé au programme de formation électronique Vizamyl (flutémétamol (<sup>18</sup>F)).<br>Veuillez télécharger la version PDF de vos résultats et la garder pour référence.
+        description_html: Nous vous remercions d’avoir participé au programme de formation électronique Vizamyl (flutémétamol (<sup>18</sup>F)).<br><br>Veuillez télécharger la version PDF de vos résultats et la garder pour référence.
         download_results: Télécharger les résultats
