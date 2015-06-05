@@ -106,7 +106,7 @@ fr:
           <span class="terms-accept">J’accepte et je comprends ce qui précède et les conditions générales</span><br><span class="please-tick">(Veuillez cocher)</span>
       marketing:
         title_html: |
-          Formation Vizamyl&#8482;<br>Commercialisation et utilisation promotionnelle des données
+          Formation Vizamyl&#8482;<br><br>Commercialisation et utilisation promotionnelle des données
         description_html: |
           Si vous réussissez le cours, GE Healthcare souhaiterait vous contacter pour vous fournir des informations sur ses produits, ses services ou une formation supplémentaire susceptibles de vous intéresser.
         marketing_overall_opt_in_description_html: |
