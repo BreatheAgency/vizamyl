@@ -58,6 +58,7 @@ fr:
       resources: Ressources
       contact: Contact
       copyright_html: |
+        <p>VIZA/FR @ /001 /06/2015</p>
         <p>&copy;2015 General Electric Company – Tous droits réservés.</p>
         <p>GE et le monogramme GE sont des marques commerciales de General Electric Company.</p>
         <p>Vizamyl est une marque commerciale de General Electric Company ou de l’une de ses filiales.</p>

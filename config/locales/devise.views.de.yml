@@ -11,6 +11,7 @@ de:
         password: Passwort
         password_confirmation: Passwortbestätigung
         remember_me: Angemeldet bleiben
+        institution: Einrichtung
     models:
       user: Benutzer
   devise:
