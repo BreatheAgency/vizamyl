@@ -17,7 +17,6 @@ gem 'ember-source', '1.9.0'
 
 gem 'oj'
 gem 'pg'
-gem 'puma'
 gem 'wicked'
 gem 'roboto'
 gem 'rollbar'

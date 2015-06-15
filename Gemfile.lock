@@ -236,8 +236,6 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.3)
       pry (>= 0.9.10)
-    puma (2.11.1)
-      rack (>= 1.1, < 2.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.0)
@@ -370,7 +368,6 @@ DEPENDENCIES
   pg
   prawn-rails
   pry-rails
-  puma
   quiet_assets
   rack-canonical-host
   rack-noindex
