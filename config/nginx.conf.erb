@@ -184,6 +184,29 @@ http {
                 return 491;
             }
         }
+        # Fonts in assets that don't contain digest in file name.
+        location ~ "^/assets/.+\.(eot|svg|ttf|otf|woff)" {
+            error_page 490 = @static_asset_fonts;
+            error_page 491 = @dynamic_request;
+            recursive_error_pages on;
+
+            if (-f $request_filename) {
+                return 490;
+            }
+            if (!-f $request_filename) {
+                return 491;
+            }
+        }
+        location @static_asset_fonts {
+            gzip_static on;
+            expires max;
+            add_header Cache-Control public;
+            add_header ETag "";
+            add_header 'Access-Control-Allow-Origin' '*';
+            add_header 'Access-Control-Allow-Methods' 'GET, HEAD, OPTIONS';
+            add_header 'Access-Control-Allow-Headers' '*';
+            add_header 'Access-Control-Max-Age' 3628800;
+        }
         location @static_asset {
             gzip_static on;
             expires max;
