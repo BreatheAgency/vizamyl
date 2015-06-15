@@ -1,1 +1,1 @@
-web: bundle exec puma -C config/puma.rb
+web: ./passenger-status-service-agent & bundle exec passenger start -p $PORT --max-pool-size 3
