@@ -215,6 +215,9 @@ GEM
     normalize-rails (3.0.1)
     oj (2.12.1)
     orm_adapter (0.5.0)
+    passenger (5.0.10)
+      rack
+      rake (>= 0.8.1)
     pdf-core (0.5.1)
     pg (0.18.1)
     polyamorous (1.1.0)
@@ -364,6 +367,7 @@ DEPENDENCIES
   jquery-rails
   normalize-rails
   oj
+  passenger (>= 5.0.8)
   pg
   prawn-rails
   pry-rails
