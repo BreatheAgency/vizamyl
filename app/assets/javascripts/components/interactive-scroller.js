@@ -25,7 +25,7 @@ Course.InteractiveScrollerComponent = Ember.Component.extend({
     this.$('<img>').attr('src', this.get('source')).one('load', function() {
       this.set('loaded', true);
       var image_holder = this.$('.image_holder').detach();
-      this.$('.image_wrapper').empty().append(save);
+      this.$('.image_wrapper').empty().append(image_holder);
       this.$('.image_holder').css('background-image', "url(" + this.get('source') + ")");
     }.bind(this));
 
