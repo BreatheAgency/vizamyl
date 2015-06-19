@@ -4,6 +4,10 @@
   padding-left: 0;
 }
 
+@keyframes spinner-rotation {
+  to {transform: rotate(360deg);}
+}
+
 .spinner {
   width: rem-calc(50);
   height: rem-calc(50);
