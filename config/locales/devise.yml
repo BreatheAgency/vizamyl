@@ -151,7 +151,7 @@ fr:
           - Pr
           - Dr
           - M.
-          - Mne
+          - Mme
           - Mlle
         description_html: |
           Si vous réussissez le cours, GE Healthcare souhaiterait vous contacter pour vous fournir des informations sur ses produits, ses services ou une formation supplémentaire susceptibles de vous intéresser.
@@ -178,7 +178,7 @@ fr:
           - Pr
           - Dr
           - M.
-          - Mne
+          - Mme
           - Mlle
     sessions:
       new:
