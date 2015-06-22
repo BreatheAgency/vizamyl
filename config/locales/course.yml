@@ -91,7 +91,7 @@ fr:
           answer_one: Négative
           answer_two: Positive
         question_two:
-          answer_one: Négatif
+          answer_one: Négatif&nbsp;&nbsp;
           answer_two: Positif
         question_three:
           answer_one: Négative
@@ -100,7 +100,7 @@ fr:
           answer_one: Négative
           answer_two: Positive
         question_five:
-          answer_one: Négatif
+          answer_one: Négatif&nbsp;&nbsp;
           answer_two: Positif
         question:
           single_title: Question d’auto-évaluation
