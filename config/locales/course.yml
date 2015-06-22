@@ -5,8 +5,21 @@ en:
       next: Next
     pages:
       test:
-        positive: Positive
-        negative: Negative
+        question_one:
+          answer_one: Negative
+          answer_two: Positive
+        question_two:
+          answer_one: Negative
+          answer_two: Positive
+        question_three:
+          answer_one: Negative
+          answer_two: Positive
+        question_four:
+          answer_one: Negative
+          answer_two: Positive
+        question_five:
+          answer_one: Negative
+          answer_two: Positive
         question:
           single_title: Self-assessment question
           plural_title: Self-assessment questions
@@ -33,8 +46,21 @@ de:
       next: Weiter
     pages:
       test:
-        positive: Positiv
-        negative: Negativ
+        question_one:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_two:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_three:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_four:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_five:
+          answer_one: Negativ
+          answer_two: Positiv
         question:
           single_title: Frage zur Selbsbewertung
           plural_title: Fragen zur Selbstbewertung
@@ -61,8 +87,21 @@ fr:
       next: Suivant
     pages:
       test:
-        positive: Positive
-        negative: Négative
+        question_one:
+          answer_one: Négative
+          answer_two: Positive
+        question_two:
+          answer_one: Négatif
+          answer_two: Positif
+        question_three:
+          answer_one: Négative
+          answer_two: Positive
+        question_four:
+          answer_one: Négative
+          answer_two: Positive
+        question_five:
+          answer_one: Négatif
+          answer_two: Positif
         question:
           single_title: Question d’auto-évaluation
           plural_title: Questions d’auto-évaluation
