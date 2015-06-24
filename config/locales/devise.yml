@@ -146,7 +146,7 @@ fr:
         title: Mon compte
         my_details: Mes données
         registrations_description: Vous pouvez mettre à jour vos préférences en matière de contact et vos données personnelles en utilisant les cases ci-dessous
-        contact_preferences: Préférences en matière de contact
+        contact_preferences: Préférences de contact
         salutations:
           - Pr
           - Dr
@@ -160,7 +160,7 @@ fr:
         marketing_overall_opt_in_html: |
           <span class="marketing-purposes">OUI, je souhaiterais être contacté(e)<br>à des fins commerciales.<span>
         marketing_overall_opt_in_note_html: |
-          (Veuillez cocher) VEUILLEZ REMARQUER que si vous ne cochez pas l’option OUI, vous ne recevrez pas d’informations commerciales.
+          (Veuillez cocher) Si vous ne cochez pas l’option OUI, vous ne recevrez pas d’informations commerciales.
         marketing_overall_description_html: |
           Si vous souhaitez être contacté(e) à des fins commerciales, veuillez choisir l’une des options suivantes pour nous faire connaître votre méthode de contact préférée:
         marketing_email_opt_in_label_html: |
