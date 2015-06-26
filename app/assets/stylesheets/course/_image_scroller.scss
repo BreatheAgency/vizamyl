@@ -4,6 +4,10 @@
   padding-left: 0;
 }
 
+@keyframes spinner-rotation {
+  to {transform: rotate(360deg);}
+}
+
 .spinner {
   width: rem-calc(50);
   height: rem-calc(50);
@@ -55,7 +59,7 @@
 .image_wrapper {
   float: left;
   position: relative;
-  min-height: 500px;
+  height: 500px;
   background: black;
   text-align: center;
   white-space: nowrap;

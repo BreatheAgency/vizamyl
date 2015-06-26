@@ -30,22 +30,22 @@ Course.TestQuestions = Ember.Mixin.create({
   }.property('questions.[]'),
 
   questionSetOne: function() {
-    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')})]
+    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_one.answer_one')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_one.answer_two')})]
   }.property(),
 
   questionSetTwo: function() {
-    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')})]
+    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_two.answer_one')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_two.answer_two')})]
   }.property(),
 
   questionSetThree: function() {
-    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')})]
+    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_three.answer_one')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_three.answer_two')})]
   }.property(),
 
   questionSetFour: function() {
-    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')})]
+    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_four.answer_one')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_four.answer_two')})]
   }.property(),
 
   questionSetFive: function() {
-    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.negative')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.positive')})]
+    return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_five.answer_one')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_five.answer_two')})]
   }.property()
 });

@@ -5,8 +5,21 @@ en:
       next: Next
     pages:
       test:
-        positive: Positive
-        negative: Negative
+        question_one:
+          answer_one: Negative
+          answer_two: Positive
+        question_two:
+          answer_one: Negative
+          answer_two: Positive
+        question_three:
+          answer_one: Negative
+          answer_two: Positive
+        question_four:
+          answer_one: Negative
+          answer_two: Positive
+        question_five:
+          answer_one: Negative
+          answer_two: Positive
         question:
           single_title: Self-assessment question
           plural_title: Self-assessment questions
@@ -33,8 +46,21 @@ de:
       next: Weiter
     pages:
       test:
-        positive: Positiv
-        negative: Negativ
+        question_one:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_two:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_three:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_four:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_five:
+          answer_one: Negativ
+          answer_two: Positiv
         question:
           single_title: Frage zur Selbsbewertung
           plural_title: Fragen zur Selbstbewertung
@@ -57,28 +83,41 @@ de:
 fr:
   course:
     actions:
-      back: Back
+      back: Retour
       next: Suivant
     pages:
       test:
-        positive: Positive
-        negative: Negative
+        question_one:
+          answer_one: Négative
+          answer_two: Positive
+        question_two:
+          answer_one: Négatif&nbsp;&nbsp;
+          answer_two: Positif
+        question_three:
+          answer_one: Négative
+          answer_two: Positive
+        question_four:
+          answer_one: Négative
+          answer_two: Positive
+        question_five:
+          answer_one: Négatif&nbsp;&nbsp;
+          answer_two: Positif
         question:
-          single_title: Self-assessment question
-          plural_title: Self-assessment questions
+          single_title: Question d’auto-évaluation
+          plural_title: Questions d’auto-évaluation
         test_case:
-          description_html: Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.
-          question_one: Frontal pole and lobe
-          question_two: Posterior cingulate and precuneus
-          question_three: Temporal lobe
-          question_four: Parietal lobe
+          description_html: Explorez les trois vues à l’aide du curseur. Évaluez les cinq régions et procédez à une évaluation générale.
+          question_one: Région frontale
+          question_two: Cortex cingulaire postérieur et précunéus
+          question_three: Région temporale
+          question_four: Région pariétale
           question_five: Striatum
-          question_six: Overall classification
+          question_six: Classification générale
         four_b:
-          title: Assessment Summary
-          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
-          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
-          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case.<br>Please contact your local GE representative through the
-          incorrect_two_link: Vizamyl website
-          incorrect_two_two_html: to schedule an in-person training session.
-          review_explanation_video: Review explanation video <span class="index">%{count}</span>
+          title: Résumé de l’évaluation
+          correct: Félicitations! Vous avez réussi la formation Vizamyl programme électronique en interprétant correctement au moins 14 tests sur 15.<br><br>Si vous souhaitez consulter les explications pour chacun des tests, il vous suffit de cliquer sur le test. Sinon, cliquez sur le bouton « Suivant » pour terminer le programme.
+          incorrect_one_html: Malheureusement, pour réussir la formation Vizamyl programme électronique, vous deviez interpréter correctement au moins 14 cas sur 15.<br><br>Si vous souhaitez consulter les explications pour chacun des tests, il vous suffit de cliquer sur le test. Dès que vous êtes prêt, cliquez sur « Suivant » pour tester à nouveau vos connaissances sur 15 autres tests.
+          incorrect_two_one_html: Malheureusement, pour réussir la formation Vizamyl programme électronique, vous deviez interpréter correctement au moins 14 cas sur 15.<br><br>Si vous souhaitez consulter les explications pour chacun des tests, il vous suffit de cliquer sur le test.<br><br>Veuillez contacter votre représentant GE local via le site
+          incorrect_two_link: Web VIZAMYL
+          incorrect_two_two_html: afin de planifier votre séance de formation en personne.
+          review_explanation_video: Voir la vidéo d’explication <span class="index">%{count}</span>

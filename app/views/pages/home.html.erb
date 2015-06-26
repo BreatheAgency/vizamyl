@@ -4,10 +4,8 @@
   <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
     <%= t('.body_html') %>
     <div class='button-container row'>
-      <div class='small-5 medium-5 large-4 columns'>
+      <div class='small-12 medium-12 large-12 columns'>
         <a href='<%= new_user_session_path %>'><%= t('layouts.application.login') %><i class='fi-arrow-right'></i></a>
-      </div>
-      <div class='small-7 medium-7 large-8 columns'>
         <a href='<%= users_enrol_path(id: User.form_steps.first, locale: I18n.locale) %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
       </div>
     </div>
