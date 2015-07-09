@@ -38,10 +38,10 @@ module Vizamyl
 
     #
     # config.i18n.available_locales = [:en, :gb, :pt, :it, :fr, :es, :'de-at', :de, :nl]
-    config.i18n.available_locales = [:en, :'de-at', :de, :fr]
+    config.i18n.available_locales = [:en, :'en-gb', :'de-at', :de, :fr]
 
     #
-    config.i18n.fallbacks = [:'de-at', :de, :en, :gb, :pt, :it, :fr, :es, :nl]
+    config.i18n.fallbacks = [:'en-gb', :en, :'de-at', :de, :pt, :it, :fr, :es, :nl]
 
     #
     config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
