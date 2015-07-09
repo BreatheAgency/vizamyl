@@ -59,20 +59,20 @@ class User < ActiveRecord::Base
   end
 
   def progress
-    return 100 if super_user
+    return 100 if skippable
     # Count all progressions which are either in progress or complete
     progress = (progressions.where(amount: 0.5..1).count.to_f / progressions.count) * 100.0
     progress.round || 0
   end
 
   def completed
-    return true if super_user
+    return true if skippable
     Step.count == progressions.where(amount: 0.5..1).count
   end
   alias_method :completed?, :completed
 
   def passed
-    !!(super_user || self.passed_round_one || self.passed_round_two)
+    !!(skippable || self.passed_round_one || self.passed_round_two)
   end
   alias_method :passed?, :passed
 
@@ -80,6 +80,11 @@ class User < ActiveRecord::Base
     !!(self.failed_round_one || self.failed_round_two)
   end
   alias_method :failed?, :failed
+
+  def skippable
+    super_user || in_person
+  end
+  alias_method :skippable?, :skippable
 
   def final_assessment_status
     if passed?

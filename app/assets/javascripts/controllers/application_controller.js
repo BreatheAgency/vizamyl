@@ -3,7 +3,7 @@ Course.ApplicationController = Ember.Controller.extend({
   currentPage: null,
   signedIn: Ember.computed.notEmpty('currentUser'),
   isComplete: Ember.computed.bool('currentUser.completed'),
-  isSuperUser: Ember.computed.bool('currentUser.super_user'),
+  isSkippable: Ember.computed.bool('currentUser.skippable'),
 
   currentStep: function() {
     return this.get('currentPage.step');

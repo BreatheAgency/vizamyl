@@ -1,6 +1,7 @@
 Course.User = DS.Model.extend({
   email: DS.attr('string'),
   super_user: DS.attr('boolean'),
+  in_person: DS.attr('boolean'),
   locale: DS.attr('string'),
   progressions: DS.hasMany('progression'),
   steps: DS.hasMany('steps'),
@@ -16,5 +17,9 @@ Course.User = DS.Model.extend({
 
   passed: function() {
     return this.get('super_user') || this.get('passedRoundOne') || this.get('passedRoundTwo')
-  }.property('super_user', 'passedRoundOne', 'passedRoundTwo')
+  }.property('super_user', 'passedRoundOne', 'passedRoundTwo'),
+
+  skippable: function(){
+    return this.get('super_user') || this.get('in_person')
+  }.property('super_user', 'in_person')
 });

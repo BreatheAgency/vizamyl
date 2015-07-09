@@ -1,7 +1,7 @@
 Course.ProgressionController = Ember.Controller.extend({
   needs: ['application', 'localeMenu'],
   currentPage: Ember.computed.alias('controllers.application.currentPage'),
-  isSuperUser: Ember.computed.alias('controllers.application.isSuperUser'),
+  isSkippable: Ember.computed.alias('controllers.application.isSkippable'),
   progressions: Ember.computed.alias('controllers.application.currentUser.progressions'),
   hiddenChapters: Ember.computed.alias('controllers.localeMenu.hiddenChapters'),
   visibleChapters: Ember.computed.alias('controllers.localeMenu.visibleChapters'),
@@ -13,8 +13,8 @@ Course.ProgressionController = Ember.Controller.extend({
   }.property('progressions.@each.amount'),
 
   total: function() {
-    if (this.get('isSuperUser')) { return 100 };
+    if (this.get('isSkippable')) { return 100 };
     var total = Math.round((this.get('completeProgressions.length') / this.get('progressions.length')) * 100) || 0;
     return total;
-  }.property('isSuperUser', 'progressions.length','completeProgressions.length', 'hiddenChapters.lastObject.steps.length')
+  }.property('isSkippable', 'progressions.length','completeProgressions.length', 'hiddenChapters.lastObject.steps.length')
 });
