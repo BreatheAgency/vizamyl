@@ -98,7 +98,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #
-  config.i18n.available_locales = [:en]
+  config.i18n.available_locales = [:en, :fr]
 
   #
   config.action_mailer.default_url_options = { host: 'www.readvizamyl.com' }

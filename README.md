@@ -15,8 +15,8 @@
 - Restore
 - Live!
 
-`heroku pgbackups:capture --expire --app vizamyl-staging`
-`heroku pgbackups:capture --expire --app vizamyl`
+`heroku pg:backups capture --app vizamyl-staging`
+`heroku pg:backups capture --app vizamyl`
 `dropdb vizamyl_staging_dump`
 `dropdb vizamyl_production_dump`
 `heroku pg:pull DATABASE vizamyl_staging_dump --app vizamyl-staging`
@@ -33,4 +33,5 @@
 `heroku maintenance:off --app vizamyl`
 `heroku ps:restart --app vizamyl`
 
+# Image magick
 https://gist.github.com/alistaircolling/ec632f279bf21a953262
