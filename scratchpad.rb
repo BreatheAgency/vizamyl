@@ -11,8 +11,8 @@ t.each { |n| n.update_attribute(:results_title, 'Ergebnis der Fragen zur Selbstb
 qs.each { |n| n.update_attributes(correct_title: 'Frage ${index}: Richtig', incorrect_title: 'Frage ${index}: Falsch') }
 
 
-# User.new(locale: 'fr', invite_code: 'resonance', salutation: 'Dr', first_name: 'Example', last_name: 'Example', email: 'fr-super-user@readvizamyl.com', password: 'w9aMyMm2Fd', password_confirmation: 'w9aMyMm2Fd', institution: 'Example', super_user: true, terms_and_conditions_opt_in: true).save!
+User.new(locale: 'it', invite_code: 'plaque', salutation: 'Dr', first_name: 'Example', last_name: 'Example', email: 'it-super-user@readvizamyl.com', password: 'Ko94Pj1Yd4tXh2i', password_confirmation: 'Ko94Pj1Yd4tXh2i', institution: 'Example', super_user: true, terms_and_conditions_opt_in: true).save!
 
-# AdminUser.new(locale: 'fr', email: 'fr-admin@readvizamyl.com', password: 'jGsHZes5dCeWR6a', password_confirmation: 'jGsHZes5dCeWR6a').save!
+AdminUser.new(locale: 'it', email: 'it-admin@readvizamyl.com', password: 'phS4NT12JtGWAnY', password_confirmation: 'phS4NT12JtGWAnY').save!
 
-# AdminUser.new(locale: 'fr', email: 'fr-content-admin@readvizamyl.com', password: 'si8Enf939Q9I6mQ', password_confirmation: 'si8Enf939Q9I6mQ').save!
+AdminUser.new(locale: 'it', email: 'it-content-admin@readvizamyl.com', password: 'ZCa2gZIC883OJXQ', password_confirmation: 'ZCa2gZIC883OJXQ').save!
