@@ -12,6 +12,7 @@ class User < ActiveRecord::Base
   before_create :create_progressions
   before_save :capitalize_names
   before_save :capitalize_institution
+  before_save :check_in_person
 
   alias_attribute :failed_round_one, :failed_round_one_at
   alias_attribute :failed_round_two, :failed_round_two_at
@@ -19,10 +20,11 @@ class User < ActiveRecord::Base
   alias_attribute :passed_round_two, :passed_round_two_at
 
   with_options :if => -> { required_for_step?(:details) } do |step|
+    step.validates :salutation, presence: true
     step.validates :first_name, presence: true
     step.validates :last_name, presence: true
     step.validates :email, email: true
-    step.validates :invite_code, inclusion: { in: proc { Rails.application.secrets.invite_codes[I18n.locale.to_s].split(',') } }, if: Proc.new { form_step == 'details' }
+    step.validates :invite_code, inclusion: { in: proc { (Rails.application.secrets.invite_codes[I18n.locale.to_s] + ',' + Rails.application.secrets.in_person_codes[I18n.locale.to_s]).split(',') } }, if: Proc.new { form_step == 'details' }
   end
 
   with_options :if => -> { required_for_step?(:institution) } do |step|
@@ -121,6 +123,10 @@ class User < ActiveRecord::Base
   def capitalize_names
     self.first_name = first_name.capitalize
     self.last_name = last_name.capitalize
+  end
+
+  def check_in_person
+    self.in_person = Rails.application.secrets.in_person_codes[I18n.locale.to_s].include?(self.invite_code)
   end
 
   def create_progressions
