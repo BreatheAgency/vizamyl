@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   before_create :create_progressions
   before_save :capitalize_names
   before_save :capitalize_institution
-  before_save :check_in_person
+  before_create :check_in_person
 
   alias_attribute :failed_round_one, :failed_round_one_at
   alias_attribute :failed_round_two, :failed_round_two_at
