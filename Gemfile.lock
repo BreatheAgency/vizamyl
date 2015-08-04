@@ -148,8 +148,8 @@ GEM
     ejs (1.1.1)
     email_validator (1.6.0)
       activemodel
-    ember-data-source (1.13.7)
-      ember-source (>= 1.8, < 3.0)
+    ember-data-source (1.0.0.beta.19.2)
+      ember-source (~> 1.8)
     ember-rails (0.16.4)
       active_model_serializers
       barber (>= 0.6.0)
@@ -351,7 +351,7 @@ DEPENDENCIES
   devise-i18n
   devise-i18n-views
   email_validator
-  ember-data-source
+  ember-data-source (= 1.0.0.beta.19.2)
   ember-rails (= 0.16.4)
   ember-source (= 1.9.0)
   es5-shim-rails
