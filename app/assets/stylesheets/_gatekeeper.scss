@@ -83,6 +83,9 @@
       .us-button{
         @include retina-background-image("flags/us", 60px, 60px);
       }
+      .jp-button{
+        @include retina-background-image("flags/jp", 60px, 60px);
+      }
     }
 
     li:first-child {
