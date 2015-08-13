@@ -148,8 +148,8 @@ it:
           plural_title: Self-assessment questions
         test_case:
           description_html: Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.
-          question_one: Lobo frontale 
-          question_two: Cingolato posteriore e precuneo 
+          question_one: Lobo frontale
+          question_two: Cingolato posteriore e precuneo
           question_three: Lobo temporale
           question_four: Lobo parietale
           question_five: Corpo striato
