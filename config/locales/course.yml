@@ -125,7 +125,7 @@ it:
   course:
     actions:
       back: Back
-      next: Next
+      next: Avanti
     pages:
       test:
         question_one:
@@ -147,7 +147,7 @@ it:
           single_title: Self-assessment question
           plural_title: Self-assessment questions
         test_case:
-          description_html: Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.
+          description_html: Spostarsi nelle tre proiezioni con il cursore. Valutare le cinque regioni e successivamente effettuare una valutazione complessiva.
           question_one: Lobo frontale
           question_two: Cingolato posteriore e precuneo
           question_three: Lobo temporale
