@@ -124,7 +124,7 @@ fr:
 it:
   course:
     actions:
-      back: Back
+      back: Indietro
       next: Avanti
     pages:
       test:
