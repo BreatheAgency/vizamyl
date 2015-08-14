@@ -258,9 +258,9 @@ it:
     passwords:
       new:
         forgot_your_password: Password dimenticata?
-        send: Send
+        send: Inviare
       edit:
         change_your_password: Change your password
         password_label: New password
         password_confirmation_label: Confirm new password
-        submit: Submit
+        submit: Inviare 
