@@ -127,6 +127,7 @@ class User < ActiveRecord::Base
 
   def check_in_person
     self.in_person = Rails.application.secrets.in_person_codes[I18n.locale.to_s].include?(self.invite_code)
+    true
   end
 
   def create_progressions
