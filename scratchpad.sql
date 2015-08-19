@@ -22,7 +22,7 @@ UPDATE question_translations SET explanation_source = replace(explanation_source
 UPDATE text_translations set body = replace(body, '"Weiter"', '„Weiter“') where locale = 'de';
 UPDATE interactive_translations set body = replace(body, '"Weiter"', '„Weiter“') where locale = 'de';
 
-UPDATE answer_translations SET body = replace(body,'(18F)','(<sup>18</sup>F)');
+UPDATE question_translations SET title = replace(title,'(18F)','(<sup>18</sup>F)');
 SELECT * FROM question_translations WHERE question_translations.title ILIKE '%(18F)%';
 
 
