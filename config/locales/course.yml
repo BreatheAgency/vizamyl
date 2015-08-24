@@ -148,7 +148,7 @@ it:
           plural_title: Self-assessment questions
         test_case:
           description_html: Spostarsi nelle tre proiezioni con il cursore. Valutare le cinque regioni e successivamente effettuare una valutazione complessiva.
-          question_one: Lobo frontale
+          question_one: Polo e lobo frontale
           question_two: Cingolato posteriore e precuneo
           question_three: Lobo temporale
           question_four: Lobo parietale
