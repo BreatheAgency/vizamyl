@@ -302,7 +302,7 @@ it:
     references:
       left:
         title: |
-         References
+         Riferimenti
         body_html: |
           <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. Acta Neuropathol 1991; 82: 239-59.</p>
           <p>Hyman BT, Phelps CH, Beach TG <i>et al</i>. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. Alzheimers Dement 2012; 8: 1-13.</p>
@@ -310,6 +310,8 @@ it:
           <p>McKhann G, Knopman D, Chertkow H <i>et al</i>. The diagnosis of dementia due to Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 263-9.</p>
           <p>Mirra SS, Heyman A, McKeel D <i>et al</i>. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
           <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G <i>et al</i>. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-25.</p>
+          <p>Vandenberghe R, Van Laere K, Ivaniou A et al.18F-Flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. Ann Neurol 2010; 68: 319-29.</p>
+          <p>Vizamyl European Summary of Product Characteristics, August 2014.</p>
       right:
         body_html: |
     resources:
