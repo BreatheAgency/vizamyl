@@ -16,3 +16,9 @@ fr:
     first_name: Prénom
     last_name: Nom
     date: Date
+it:
+  course_completion:
+    salutation: Saluti
+    first_name: Nome
+    last_name: Cognome
+    date: Data
