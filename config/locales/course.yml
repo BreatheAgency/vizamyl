@@ -144,8 +144,8 @@ it:
           answer_one: Negativa
           answer_two: Positiva
         question:
-          single_title: Self-assessment question
-          plural_title: Self-assessment questions
+          single_title: Autovalutazione domanda
+          plural_title: Domande di autovalutazione
         test_case:
           description_html: Spostarsi nelle tre proiezioni con il cursore. Valutare le cinque regioni e successivamente effettuare una valutazione complessiva.
           question_one: Polo e lobo frontale
