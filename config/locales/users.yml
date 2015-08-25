@@ -133,10 +133,10 @@ it:
   users:
     enrol:
       details:
-        title: Inserire i propri dati.
+        title: Inserire i propri dati
         salutation: Saluto
       institution:
-        title: Inserire la propria istituzione.
+        title: Inserire la propria istituzione
         description: Inserire l’istituzione alla quale si indirizzano i pazienti nella casella di seguito.
       terms:
         title_html: Formazione Vizamyl&#8482;
