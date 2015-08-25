@@ -41,7 +41,7 @@ Rails.application.configure do
   config.assets.digest = true
 
   # Version of your assets, change this if you want to expire all your assets.
-  config.assets.version = "3.6.#{(Random.rand(5) + 1)}"
+  config.assets.version = "3.7.#{(Random.rand(6) + 1)}.#{Time.now.hour}"
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for apache

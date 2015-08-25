@@ -144,21 +144,21 @@ it:
           answer_one: Negativa
           answer_two: Positiva
         question:
-          single_title: Self-assessment question
-          plural_title: Self-assessment questions
+          single_title: Autovalutazione domanda
+          plural_title: Domande di autovalutazione
         test_case:
           description_html: Spostarsi nelle tre proiezioni con il cursore. Valutare le cinque regioni e successivamente effettuare una valutazione complessiva.
-          question_one: Lobo frontale
+          question_one: Polo e lobo frontale
           question_two: Cingolato posteriore e precuneo
           question_three: Lobo temporale
           question_four: Lobo parietale
           question_five: Corpo striato
           question_six: Classificazione complessiva
         four_b:
-          title: Assessment Summary
-          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
-          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
-          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br><br>Please contact your local GE representative via the
-          incorrect_two_link: Contact section
-          incorrect_two_two_html: to schedule an in-person training session.
-          review_explanation_video: Review explanation video <span class="index">%{count}</span>
+          title: Riepilogo della valutazione
+          correct: Congratulazioni! Il programma formativo on-line di Vizamyl è stato completato correttamente classificando in modo accurato almeno 14 dei 15 casi.<br><br>Per rivedere la spiegazione di un caso, fare clic sul caso. Altrimenti, fare clic sul pulsante "avanti" per concludere il programma.
+          incorrect_one_html: Siamo spiacenti, ma per completare il programma di formazione om-line di Vizamyl è necessario classificare in modo accurato almeno 14 dei 15 casi.<br><br>Per rivedere la spiegazione di un caso, fare clic sul caso. Altrimenti, fare clic sul pulsante "avanti" per concludere il programma.
+          incorrect_two_one_html: Siamo spiacenti, ma per completare il programma di formazione om-line di Vizamyl è necessario classificare in modo accurato almeno 14 dei 15 casi.<br>Per rivedere la spiegazione di un caso, fare clic sul caso.<br><br>È possibile contattare il proprio rappresentante GE attraverso
+          incorrect_two_link: il sito web Vizamyl
+          incorrect_two_two_html: per programmare una sessione formativa presenziale. 
+          review_explanation_video: Rivedere video esplicativo <span class="index">%{count}</span>

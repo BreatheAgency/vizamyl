@@ -24,7 +24,6 @@ Rails.application.routes.draw do
     namespace :users do
       resources :enrol, only: [:new, :create, :show, :update]
       get '/course-complete' => 'course_completion#success'
-      # resources :heartbeat, only: [:update]
     end
     get '/*id' => 'static#show', id: 'home', as: :static
     get '/' => 'static#show', id: 'home'

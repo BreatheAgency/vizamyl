@@ -71,7 +71,7 @@ it:
       logo:
         1_html: Vizamyl<sup class='trade-mark'>™</sup>
         2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
-        3_html: <span>Iniettabile</span>
+        3_html: <span>Injection</span>
       course_menu: Menu del corso
       my_account: Il mio account
       login: Login
@@ -82,7 +82,7 @@ it:
       contact: Contatto
       copyright_html: |
         <p>&copy;2015 Società General Electric - Tutti i diritti riservati</p>
-        <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
+        <p>GE e il monogramma GE sono marchi depositati della società General Electric.</p>
         <p>Vizamyl è un marchio depositato della società General Electric una delle sue filiali.</p>
         <p><a href="/en/terms-and-conditions">Termini e condizioni</a></p>
       reference_html: |
