@@ -235,7 +235,7 @@ it:
         marketing_representative_opt_in_label_html: |
           Visita di un rappresentante GE Healthcare<br><span class="obligation">(Non esiste l’obbligo di incontrare un rappresentante)</span>
         marketing_overall_opt_in_tick_html: |
-          (Spuntare una o più opzioni.)
+          (Spuntare una o più opzioni)
         update: |
           Aggiornamento
       new:
