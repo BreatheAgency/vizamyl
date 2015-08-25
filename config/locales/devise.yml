@@ -200,12 +200,12 @@ it:
   devise:
     mailer:
       reset_password_instructions:
-        one: Hello
-        two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
-        three: Please click here to reset your password.
+        one: Salve
+        two: Abbiamo ricevuto una richiesta di ricordarle i suoi dati di login per il programma di formazione online Vizamyl.
+        three: Cliccare qui per resettare la propria password.
         four_html: |
-          <p>If you didn’t request this reminder, please ignore this email. Your password will not be changed until you access the link above and create a new one.</p>
-          <p>Thank you,</p>
+          <p>Nel caso non si sia effettuata questa richiesta, ignorare questa email. La sua password non sarà cambiata fino a che lei non acceda al link qui sopra e se ne abbia creato una nuova.</p>
+          <p>Grazie,</p>
           <p>GE Healthcare</p>
     registrations:
       edit:
@@ -256,7 +256,7 @@ it:
         forgot_your_password: Password dimenticata?
         send: Inviare
       edit:
-        change_your_password: Change your password
-        password_label: New password
-        password_confirmation_label: Confirm new password
+        change_your_password: Cambiare la propria password
+        password_label: Nuova password
+        password_confirmation_label: Confermare la nuova password
         submit: Inviare 
