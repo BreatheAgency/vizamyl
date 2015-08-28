@@ -46,12 +46,10 @@ convert white/*.jpg -crop 550x464+0+0 -bordercolor White -border 0x18 -set filen
 # Cache
 
 ```
-aws s3 cp s3://vizamyl-staging/videos s3://vizamyl-staging/videos --recursive --metadata-directive REPLACE \
---expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
-aws s3 cp s3://vizamyl-staging/images s3://vizamyl-staging/images --recursive --metadata-directive REPLACE \
---expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
-aws s3 cp s3://vizamyl-production/videos s3://vizamyl-production/videos --recursive --metadata-directive REPLACE \
---expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
-aws s3 cp s3://vizamyl-production/images s3://vizamyl-production/images --recursive --metadata-directive REPLACE \
---expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
+aws s3 cp s3://vizamyl-staging/videos s3://vizamyl-staging/videos --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
+aws s3 cp s3://vizamyl-staging/images s3://vizamyl-staging/images --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
+aws s3 cp s3://vizamyl-staging/interactives s3://vizamyl-staging/interactives --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
+aws s3 cp s3://vizamyl-production/videos s3://vizamyl-production/videos --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
+aws s3 cp s3://vizamyl-production/images s3://vizamyl-production/images --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
+aws s3 cp s3://vizamyl-production/interactives s3://vizamyl-production/interactives --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
 ```
