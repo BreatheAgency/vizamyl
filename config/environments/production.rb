@@ -1,9 +1,6 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  #
-  config.i18n.available_locales = [:en]
-
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -98,7 +95,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #
-  config.i18n.available_locales = [:en, :fr]
+  config.i18n.available_locales = [:en, :'en-gb', :fr]
 
   #
   config.action_mailer.default_url_options = { host: 'www.readvizamyl.com' }
