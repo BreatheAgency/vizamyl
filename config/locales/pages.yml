@@ -316,7 +316,7 @@ it:
         body_html: |
     resources:
       smpc_title: Vizamyl SmPC EU
-      rainbow_title: Scala di colori arcobaleno valori RGB
+      rainbow_title: Scala di colori arcobaleno valori RVB
     contact:
       left:
         title: |
