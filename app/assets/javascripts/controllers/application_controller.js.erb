@@ -1,4 +1,6 @@
 Course.ApplicationController = Ember.Controller.extend({
+  environment: "<%= Rails.env %>",
+  isSandbox: Ember.computed.equal('environment', 'sandbox'),
   currentLocale: null,
   currentPage: null,
   signedIn: Ember.computed.notEmpty('currentUser'),
