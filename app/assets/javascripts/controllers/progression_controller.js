@@ -1,5 +1,6 @@
 Course.ProgressionController = Ember.Controller.extend({
   needs: ['application', 'localeMenu'],
+  isSandbox: Ember.computed.alias('controllers.application.isSandbox'),
   currentPage: Ember.computed.alias('controllers.application.currentPage'),
   isSkippable: Ember.computed.alias('controllers.application.isSkippable'),
   progressions: Ember.computed.alias('controllers.application.currentUser.progressions'),
