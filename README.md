@@ -38,7 +38,7 @@ heroku ps:restart --app vizamyl
 # Image magick
 
 ```
-mkdir _new
+mkdir _new && cd _new
 convert black/*.jpg -crop 550x464+0+0 -bordercolor Black -border 0x18 -set filename:f '%t' ../_new/'%[filename:f].jpg'
 convert white/*.jpg -crop 550x464+0+0 -bordercolor White -border 0x18 -set filename:f '%t' ../_new/'%[filename:f].jpg'
 ```
