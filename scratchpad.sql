@@ -31,3 +31,19 @@ SELECT sum(
   array_length(regexp_split_to_array(abbreviations, '\s'),1)
 )
 AS total FROM text_translations;
+
+
+
+SELECT * FROM answer_translations WHERE locale='it';
+
+SELECT * FROM answer_translations WHERE locale='it' AND body LIKE '%<p> </p>%';
+
+UPDATE answer_translations SET body = REPLACE(body, '<p> </p>', '') WHERE locale='it';
+
+UPDATE question_translations SET title = REPLACE(title, '18F;', '<sup>18</sup>F') WHERE locale='it';
+
+UPDATE question_translations SET title = regexp_replace(title, '[\n\r]+', ' ', 'g' ) WHERE locale='it';
+
+COUNT(DISTINCT(users));
+
+SELECT COUNT(DISTINCT id) FROM users;
