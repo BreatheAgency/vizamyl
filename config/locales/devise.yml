@@ -215,7 +215,7 @@ it:
         contact_preferences: Preferenze di contatto
         salutations:
           - Prof
-          - Dot
+          - Dott
           - Sig
           - Sig.ra
         description_html: |
@@ -241,7 +241,7 @@ it:
       new:
         salutations:
           - Prof
-          - Dot
+          - Dott
           - Sig
           - Sig.ra
     sessions:
@@ -259,4 +259,4 @@ it:
         change_your_password: Cambiare la propria password
         password_label: Nuova password
         password_confirmation_label: Confermare la nuova password
-        submit: Inviare 
+        submit: Inviare
