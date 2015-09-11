@@ -1,4 +1,7 @@
 Course.ApplicationController = Ember.Controller.extend({
+  isDevelopment: Ember.computed.equal('currentEnvironment', 'development'),
+  isSandbox: Ember.computed.equal('currentEnvironment', 'sandbox'),
+  isProduction: Ember.computed.equal('currentEnvironment', 'production'),
   currentLocale: null,
   currentPage: null,
   signedIn: Ember.computed.notEmpty('currentUser'),
@@ -16,5 +19,9 @@ Course.ApplicationController = Ember.Controller.extend({
   currentUser: function() {
     return Course.get('user');
   }.property('Course.user'),
+
+  currentEnvironment: function() {
+    return Course.get('env.environment')
+  }.property('Course.env.environment')
 
 });

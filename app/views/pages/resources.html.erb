@@ -2,7 +2,9 @@
   <div class='large-12 columns with-content with-minimum'>
   <h2><%= t('.smpc_title')%></h2>
   <a href='<%= asset_url("/pdfs/#{I18n.locale}/smpc.pdf")%>' target="_blank"><div class='download-pdf-button'></div></a>
-  <h2><%= t('.rainbow_title')%></h2>
-  <a href='<%= asset_url("/pdfs/#{I18n.locale}/rainbow_colour_scale_rgb_values.pdf")%>' target="_blank"><div class='download-pdf-button'></div></a>
+  <% if I18n.locale != :it %>
+    <h2><%= t('.rainbow_title')%></h2>
+    <a href='<%= asset_url("/pdfs/#{I18n.locale}/rainbow_colour_scale_rgb_values.pdf")%>' target="_blank"><div class='download-pdf-button'></div></a>
+  <% end %>
   <div class="blue-bar"></div>
 </div>

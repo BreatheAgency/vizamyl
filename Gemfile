@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.2.3'
 
 gem 'i18n-js', github: 'lenage/i18n-js'
 gem 'globalize', github: 'globalize/globalize'
