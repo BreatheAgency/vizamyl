@@ -215,7 +215,7 @@ it:
         contact_preferences: Preferenze di contatto
         salutations:
           - Prof
-          - Dot
+          - Dott
           - Sig
           - Sig.ra
         description_html: |
@@ -223,7 +223,7 @@ it:
         marketing_overall_opt_in_description_html: |
           Se si desiderano ricevere tali informazioni, spuntare la casella in basso.
         marketing_overall_opt_in_html: |
-          <span class="marketing-purposes">SÌ, desidero essere contattato <br>ma fini commerciali.<span>
+          <span class="marketing-purposes">SÌ, desidero essere contattato <br>per fini commerciali.<span>
         marketing_overall_opt_in_note_html: |
           (Spuntare) NOTA BENE se non si seleziona l’opzione SÌ non si riceveranno informazioni a carattere commerciale.
         marketing_overall_description_html: |
@@ -241,7 +241,7 @@ it:
       new:
         salutations:
           - Prof
-          - Dot
+          - Dott
           - Sig
           - Sig.ra
     sessions:
@@ -259,4 +259,4 @@ it:
         change_your_password: Cambiare la propria password
         password_label: Nuova password
         password_confirmation_label: Confermare la nuova password
-        submit: Inviare 
+        submit: Inviare

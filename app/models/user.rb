@@ -9,8 +9,9 @@ class User < ActiveRecord::Base
   has_many :progressions, dependent: :destroy
   has_many :steps, through: :progressions
 
-  before_create :create_progressions
   before_create :check_in_person
+  before_create :check_fast_forward
+  before_create :create_progressions
   before_save :capitalize_names
   before_save :capitalize_institution
 
@@ -24,7 +25,9 @@ class User < ActiveRecord::Base
     step.validates :first_name, presence: true
     step.validates :last_name, presence: true
     step.validates :email, email: true
-    step.validates :invite_code, inclusion: { in: proc { (Rails.application.secrets.invite_codes[I18n.locale.to_s] + ',' + Rails.application.secrets.in_person_codes[I18n.locale.to_s]).split(',') } }, if: Proc.new { form_step == 'details' }
+    step.validates :invite_code, inclusion: {
+      in: proc { (Rails.application.secrets.invite_codes[I18n.locale.to_s] + ',' + Rails.application.secrets.fast_forward_codes[I18n.locale.to_s] + ',' + Rails.application.secrets.in_person_codes[I18n.locale.to_s]).split(',') } },
+      if: Proc.new { form_step == 'details' }
   end
 
   with_options :if => -> { required_for_step?(:institution) } do |step|
@@ -44,9 +47,12 @@ class User < ActiveRecord::Base
   end
 
   def latest_step
+    # Send fast_forward User's to first section page to pre-test cases
     latest_progression = progressions.where(amount: 0.5..1).last
     if passed? || latest_progression.nil?
       steps.first
+    elsif fast_forward?
+      Step.where(chapter: 9).first
     else
       latest_progression.step
     end
@@ -130,11 +136,27 @@ class User < ActiveRecord::Base
     true
   end
 
+  def check_fast_forward
+    self.fast_forward = Rails.application.secrets.fast_forward_codes[I18n.locale.to_s].include?(self.invite_code)
+    true
+  end
+
   def create_progressions
-    Chapter.all.map(&:steps).flatten.each_with_index do |step, i|
-      # Ensure the first progression is 0.5
-      self.progressions.build(step: step, amount: (i === 0) ? 0.5 : 0)
+    Chapter.includes(:steps).order(:position).all.each_with_index do |chapter, c_i|
+      chapter.steps.flatten.each_with_index do |step, s_i|
+        if self.fast_forward && c_i <= 8
+          # Ensure that when fast_forward is true that the amount of 1
+          self.progressions.build(step: step, amount: 1)
+        elsif c_i == 0 && s_i == 0
+          # Ensure the first progression is 0.5
+          self.progressions.build(step: step, amount: 0.5)
+        else
+          # Else
+          self.progressions.build(step: step, amount: 0)
+        end
+      end
     end
+
     true
   end
 

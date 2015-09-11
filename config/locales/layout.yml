@@ -2,7 +2,7 @@ en:
   layouts:
     application:
       logo:
-        1_html: Vizamyl<sup class='trade-mark'>™</sup>
+        1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
         2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
         3_html: <span>Injection</span>
       course_menu: Course menu
@@ -24,7 +24,7 @@ de:
   layouts:
     application:
       logo:
-        1_html: Vizamyl<sup class='trade-mark'>™</sup>
+        1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
         2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
         3_html: <span>Injektion</span>
       course_menu: Kursmenü
@@ -46,7 +46,7 @@ fr:
   layouts:
     application:
       logo:
-        1_html: Vizamyl<sup class='trade-mark'>™</sup>
+        1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
         2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
         3_html: <span>Injectable</span>
       course_menu: Menu du cours
@@ -69,9 +69,9 @@ it:
   layouts:
     application:
       logo:
-        1_html: Vizamyl<sup class='trade-mark'>™</sup>
-        2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
-        3_html: <span>Injection</span>
+        1_html: Vizamyl<sup class='trade-mark'>&reg;</sup>
+        2_html: <span>Flutemetamolo (<sup>18</sup>F)</span>
+        3_html: <span>Soluzione Iniettabile</span>
       course_menu: Menu del corso
       my_account: Il mio account
       login: Login
