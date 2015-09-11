@@ -157,8 +157,8 @@ it:
         four_b:
           title: Riepilogo della valutazione
           correct: Congratulazioni! Il programma formativo on-line di Vizamyl è stato completato correttamente classificando in modo accurato almeno 14 dei 15 casi.<br><br>Per rivedere la spiegazione di un caso, fare clic sul caso. Altrimenti, fare clic sul pulsante "avanti" per concludere il programma.
-          incorrect_one_html: Siamo spiacenti, ma per completare il programma di formazione om-line di Vizamyl è necessario classificare in modo accurato almeno 14 dei 15 casi.<br><br>Per rivedere la spiegazione di un caso, fare clic sul caso. Altrimenti, fare clic sul pulsante "avanti" per concludere il programma.
-          incorrect_two_one_html: Siamo spiacenti, ma per completare il programma di formazione om-line di Vizamyl è necessario classificare in modo accurato almeno 14 dei 15 casi.<br>Per rivedere la spiegazione di un caso, fare clic sul caso.<br><br>È possibile contattare il proprio rappresentante GE attraverso
+          incorrect_one_html: Siamo spiacenti, ma per completare il programma di formazione on-line di Vizamyl è necessario classificare in modo accurato almeno 14 dei 15 casi.<br><br>Per rivedere la spiegazione di un caso, fare clic sul caso. Altrimenti, fare clic sul pulsante "avanti" per concludere il programma.
+          incorrect_two_one_html: Siamo spiacenti, ma per completare il programma di formazione on-line di Vizamyl è necessario classificare in modo accurato almeno 14 dei 15 casi.<br>Per rivedere la spiegazione di un caso, fare clic sul caso.<br><br>È possibile contattare il proprio rappresentante GE attraverso
           incorrect_two_link: il sito web Vizamyl
-          incorrect_two_two_html: per programmare una sessione formativa presenziale. 
+          incorrect_two_two_html: per programmare una sessione formativa presenziale.
           review_explanation_video: Rivedere video esplicativo <span class="index">%{count}</span>
