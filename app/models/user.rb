@@ -132,12 +132,12 @@ class User < ActiveRecord::Base
   end
 
   def check_in_person
-    self.in_person = Rails.application.secrets.in_person_codes[I18n.locale.to_s].include?(self.invite_code)
+    self.in_person = Rails.application.secrets.in_person_codes[I18n.locale.to_s].eql?(self.invite_code)
     true
   end
 
   def check_fast_forward
-    self.fast_forward = Rails.application.secrets.fast_forward_codes[I18n.locale.to_s].include?(self.invite_code)
+    self.fast_forward = Rails.application.secrets.fast_forward_codes[I18n.locale.to_s].eql?(self.invite_code)
     true
   end
 
