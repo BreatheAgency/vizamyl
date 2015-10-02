@@ -1,4 +1,25 @@
-<ul class='locale-select'>
+<div class='locale-select'>
+  <hr>
+  <% I18n.available_locales.each do |locale| %>
+    <a href='<%= "/#{locale}" %>' class="locale">
+      <p class="country">Lorem ipsum (<%= locale %>)</p>
+      <p class="language">Dolar sit amet (<%= locale %>)</p>
+    </a>
+    <hr>
+  <% end %>
+  <a href="http://readvizamyl.jp/" target="_blank" class="locale">
+    <p class="country">us</p>
+    <p class="language">us</p>
+  </a>
+  <hr>
+  <a href="http://readvizamyl.jp/" target="_blank" class="locale">
+    <p class="country">jp</p>
+    <p class="language">jp</p>
+  </a>
+  <hr>
+</div>
+
+<!-- <ul class='locale-select'>
   <% I18n.available_locales.each do |locale| %>
     <li>
       <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
@@ -41,4 +62,4 @@
   <li>
     <a href="http://readvizamyl.jp/" target="_blank" class='jp-button' style='padding-left:10px;'>Japan</a>
   </li>
-</ul>
+</ul> -->
