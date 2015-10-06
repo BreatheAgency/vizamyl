@@ -84,7 +84,29 @@ it:
         <p>&copy;2015 Società General Electric - Tutti i diritti riservati</p>
         <p>GE e il monogramma GE sono marchi depositati della società General Electric.</p>
         <p>Vizamyl è un marchio depositato della società General Electric una delle sue filiali.</p>
-        <p><a href="/en/terms-and-conditions">Termini e condizioni</a></p>
+        <p><a href="/it/terms-and-conditions">Termini e condizioni</a></p>
       reference_html: |
         <p class="right"></p>
-
+es:
+  layouts:
+    application:
+      logo:
+        1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
+        2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
+        3_html: <span>Injection</span>
+      course_menu: Menú del curso
+      my_account: Mi cuenta
+      login: Login
+      logout: Cerrar sesión
+      enrol: Enrol
+      references: Referencias
+      resources: Recursos
+      contact: Contacto
+      copyright_html: |
+        <p>&copy;2015 General Electric Company. Todos los derechos reservados.</p>
+        <p>GE y el monograma de GE son marcas comerciales de la General Electric Company.</p>
+        <p>Vizamyl es una marca comercial de la General Electric Company o de una de sus subsidiarias.</p>
+        <p><a href="/es/terms-and-conditions">Términos y condiciones</a></p>
+      reference_html: |
+        <p class="right"></p>
+d
