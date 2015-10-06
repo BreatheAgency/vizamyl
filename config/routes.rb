@@ -19,6 +19,10 @@ Rails.application.routes.draw do
 
   get '/course/:locale/*other' => 'static#show', id: 'course'
 
+  scope 'admin' do
+    get 'become', to: 'admin/become#become'
+  end
+
   scope ':locale', locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }, controllers: { registrations: 'users/registrations' }
     namespace :users do
