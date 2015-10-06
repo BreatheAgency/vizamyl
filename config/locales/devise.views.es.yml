@@ -6,7 +6,7 @@ es:
         first_name: Nombre
         last_name: Apellido
         current_password: Contraseña actual
-        email: Correo electrónico
+        email: Dirección de correo electrónico
         invite_code: Código de invitación
         password: Contraseña
         password_confirmation: Confirmación de la contraseña
