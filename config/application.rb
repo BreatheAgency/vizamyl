@@ -45,7 +45,7 @@ module Vizamyl
 
     #
     config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
-    config.assets.precompile += %w(course.js)
+    config.assets.precompile += %w(course.js libs.css)
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.assets.initialize_on_precompile = true
 
