@@ -1,3 +1,34 @@
+<!-- <div class='locale-select'>
+  <div class='large-6 left'>
+    <hr>
+    <%= render partial: 'errors/locale_block', locals: {locales: I18n.available_locales[0...5]} %>
+  </div>
+  <div class="large-6 right">
+    <hr>
+    <%= render partial: 'errors/locale_block', locals: {locales: I18n.available_locales.drop(5)} %>
+    <a href="http://readvizamyl.jp/" target="_blank" class="locale">
+      <p class="country">Japan</p>
+      <p class="language">Japanese</p>
+    </a>
+    <hr>
+    <a href="http://readvizamyl.jp/" target="_blank" class="locale">
+      <p class="country">United States</p>
+      <p class="language">English</p>
+    </a>
+    <hr>
+  </div>
+  <div class="row">
+    <div class='large-12 columns' style="margin-top:4em;">
+      <hr>
+      <a href="/en" class="locale">
+        <p class="country">International English</p>
+        <p class="language">GE representatives use only</p>
+      </a>
+      <hr>
+    </div>
+  </div>
+</div> -->
+
 <ul class='locale-select'>
   <% I18n.available_locales.each do |locale| %>
     <li>
