@@ -7,7 +7,7 @@
     <div class='image-scrollers row'>
       {{#each interactive_source in interactive_sources}}
         <div {{bind-attr class=":columns columns"}}>
-          {{interactive-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+          {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
         </div>
       {{/each}}
     </div>
