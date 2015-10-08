@@ -9,12 +9,14 @@ Ember.Application.initializer({
     store.pushMany('progression', store.normalize('progression', data['progressions']));
     Course.set('user', user);
     I18n.locale = user.get('locale');
-    Rollbar.configure({
-      payload: {
-        person: {
-          email: Course.get('user.email')
+    try {
+      Rollbar.configure({
+        payload: {
+          person: {
+            email: Course.get('user.email')
+          }
         }
-      }
-    });
+      });
+    } catch(err) {}
   }
 });

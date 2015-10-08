@@ -1,12 +1,10 @@
 Course.MultiScrollerComponent = Ember.Component.extend({
-  src: '',
   loaded: false,
   imageStep: 0,
   imageWidth: 0,
   imageHeight: 500,
   imageHeightMax: 0,
   images: [],
-  imagesLoaded: 0,
 
   didInsertElement: function() {
     var that = this;
@@ -23,39 +21,43 @@ Course.MultiScrollerComponent = Ember.Component.extend({
       },
     });
     this.set('drag', drag);
-    this.get('drag').enable();
-    this.get('images').forEach(function(image) {
-      console.log(image);
-      this.$('<img>').attr('src', image).one('load', function() {
-        this.incrementProperty('imagesLoaded');
-        // console.log(this.get('imagesLoaded') + " | " + this.get('images.length'));
-      }.bind(that));
-    });
-    // this.$('<img>').attr('src', this.get('source')).one('load', function() {
-    //   this.incrementProperty('imagesLoaded');
-    //   console.log(this.get('imagesLoaded') + " | " + this.get('images.length'));
-    //   this.set('loaded', true);
-    //   var image_holder = this.$('.image_holder').detach();
-    //   this.$('.image_wrapper').empty().append(image_holder);
-    //   this.$('.image_holder').css('background-image', "url(" + this.get('source') + ")");
-    // }.bind(this));
+    this.$('<img>').attr('src', this.get('firstImage')).one('load', function() {
+      this.set('loaded', true);
+      var image_holder = this.$('.image_holder').detach();
+      this.$('.image_wrapper').empty().append(image_holder);
+      this.$('.image_holder').css('background-image', "url(" + this.get('firstImage') + ")");
+      this.get('drag').enable();
+    }.bind(this));
   }.on('didInsertElement'),
+
+  firstImage: function() {
+    return this.get('images.firstObject');
+  }.property('images.firstObject'),
 
   imageStepMax: function() {
     return Math.round(this.get('imageHeightMax') / this.get('imageHeight'));
   }.property('imageHeight', 'imageHeightMax'),
 
   style: function() {
-    return "background-color: black; height:" + this.get('imageHeight') + "px;width:" + this.get('imageWidth') + "px;background-size:" + this.get('imageWidth') + "px " + this.get('imageHeightMax') + "px;" + "background-position:" + "0px 0px;";
+    return "background-color: black; height:" + this.get('imageHeight') + "px;width:" + this.get('imageWidth') + "px;background-size:" + this.get('imageWidth') + "px " + this.get('imageHeight') + "px;";
   }.property('imageHeight', 'imageHeightMax', 'imageWidth', 'source'),
 
   onScroll: function() {
     var currentHeight;
     Ember.run.scheduleOnce('afterRender', this, function(){
-      currentHeight = Math.round((this.get('imageStep')) * this.get('imageHeight'));
       this.$('.image_holder').css({
-        "background-position": "0px " + parseInt(this.get('imageHeightMax') - currentHeight) + "px"
+        "background-image": "url(" + this.get('images')[Math.round(this.get('imageStep'))] + ")"
       })
     });
   }.observes('imageStep'),
+
+  preloadImages: function() {
+    console.log('preloadImages');
+    var unloadedImages = this.get('images');
+    var loadedImages = [];
+    for (i = 0; i < unloadedImages.length; i++) {
+      loadedImages[i] = new Image();
+      loadedImages[i].src = unloadedImages[i];
+    }
+  }.observes('images').on('init')
 });

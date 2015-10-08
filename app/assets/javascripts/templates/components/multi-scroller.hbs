@@ -1,10 +1,7 @@
 <div {{bind-attr class=':image_wrapper :left loaded:loaded:loading' width=imageWidth height=imageHeight}}>
+  <img>
   <div class='spinner'></div>
-  <div {{bind-attr class=':image_holder' style=style}}>
-    {{#each image in images}}
-      <img {{bind-attr src=image}}/>
-    {{/each}}
-  </div>
+  <div {{bind-attr class=':image_holder' style=style}}></div>
 </div>
 <div class='dragdealer'>
   <div class='handle'>
