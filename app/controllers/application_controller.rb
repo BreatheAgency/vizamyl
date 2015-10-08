@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   before_action :redirect_locale
 
   def after_sign_in_path_for(resource)
-    request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}/#{resource.latest_step.page_type.dasherize.downcase}/#{resource.latest_step.page_id}"
+    request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
   end
 
   def after_sign_up_path_for(resource)
-    "/course/#{I18n.locale}/#{resource.latest_step.page_type.dasherize.downcase}/#{resource.latest_step.page_id}"
+    "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
   end
 
   def set_admin_locale
@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   #   sign_out(:user)
   #   redirect_to(new_admin_user_session_path, alert: exception.message)
   # end
-  
+
   private
 
   def redirect_locale
@@ -37,7 +37,7 @@ class ApplicationController < ActionController::Base
     elsif I18n.available_locales.include?(RequestStore.store[:locale_in_url].to_sym)
       RequestStore.store[:desired_locale] = RequestStore.store[:locale_in_url]
     end
-    
+
     if params[:force_locale] && I18n.available_locales.include?(params[:force_locale])
       RequestStore.store[:desired_locale] = params[:force_locale]
     end
