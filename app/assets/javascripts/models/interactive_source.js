@@ -5,5 +5,14 @@ Course.InteractiveSource = DS.Model.extend({
 
   sourceWithUrl:function() {
     return '//' + Course.get('env.content-host') + '/interactives/' + this.get('source') + '.jpg';
-  }.property('source')
+  }.property('source'),
+
+  images:function () {
+    var amount = this.get('height') / 500;
+    var images = [];
+    for(var i=0; i < amount; i++) {
+      images.push('//' + Course.get('env.content-host') + '/sliders/multi/' + this.get('source') + '_' + i + '.jpg');
+    }
+    return images;
+  }.property('source', 'height')
 });
