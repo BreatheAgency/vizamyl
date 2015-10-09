@@ -1,7 +1,10 @@
 <div {{bind-attr class=':image_wrapper :left loaded:loaded:loading' width=imageWidth height=imageHeight}}>
-  <img>
   <div class='spinner'></div>
-  <div {{bind-attr class=':image_holder' style=style}}></div>
+  <div {{bind-attr class=':image_holder' style=style}}>
+    {{#each image in images}}
+      {{image-toggler source=image selectedImage=selectedImage}}
+    {{/each}}
+  </div>
 </div>
 <div class='dragdealer'>
   <div class='handle'>
@@ -9,5 +12,6 @@
   </div>
 </div>
 <div class='label'>
+  <p>{{selectedImage}}</p>
   <p>{{label}}</p>
 </div>

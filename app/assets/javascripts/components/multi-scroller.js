@@ -21,43 +21,27 @@ Course.MultiScrollerComponent = Ember.Component.extend({
       },
     });
     this.set('drag', drag);
-    this.$('<img>').attr('src', this.get('firstImage')).one('load', function() {
-      this.set('loaded', true);
+    this.$('<img>').attr('src', this.get('lastImage')).one('load', function() {
       var image_holder = this.$('.image_holder').detach();
       this.$('.image_wrapper').empty().append(image_holder);
-      this.$('.image_holder').css('background-image', "url(" + this.get('firstImage') + ")");
+      this.set('loaded', true);
       this.get('drag').enable();
     }.bind(this));
   }.on('didInsertElement'),
 
-  firstImage: function() {
-    return this.get('images.firstObject');
-  }.property('images.firstObject'),
+  lastImage: function() {
+    return this.get('images.lastObject');
+  }.property('images.lastObject'),
 
   imageStepMax: function() {
     return Math.round(this.get('imageHeightMax') / this.get('imageHeight'));
   }.property('imageHeight', 'imageHeightMax'),
 
   style: function() {
-    return "background-color: black; height:" + this.get('imageHeight') + "px;width:" + this.get('imageWidth') + "px;background-size:" + this.get('imageWidth') + "px " + this.get('imageHeight') + "px;";
+    return "background-color: black; height:" + this.get('imageHeight') + "px;width:" + this.get('imageWidth') + "px;" + this.get('imageHeight') + "px;";
   }.property('imageHeight', 'imageHeightMax', 'imageWidth', 'source'),
 
-  onScroll: function() {
-    var currentHeight;
-    Ember.run.scheduleOnce('afterRender', this, function(){
-      this.$('.image_holder').css({
-        "background-image": "url(" + this.get('images')[Math.round(this.get('imageStep'))] + ")"
-      })
-    });
-  }.observes('imageStep'),
-
-  preloadImages: function() {
-    console.log('preloadImages');
-    var unloadedImages = this.get('images');
-    var loadedImages = [];
-    for (i = 0; i < unloadedImages.length; i++) {
-      loadedImages[i] = new Image();
-      loadedImages[i].src = unloadedImages[i];
-    }
-  }.observes('images').on('init')
+  selectedImage: function(){
+    return this.get('images')[Math.round(this.get('imageStep'))];
+  }.property('images', 'imageStep')
 });
