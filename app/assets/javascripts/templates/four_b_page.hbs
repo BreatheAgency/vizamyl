@@ -8,7 +8,11 @@
           </div>
           {{#each interactive_source in question.interactive_sources}}
             <div class='small-3 large-3 columns left'>
-              {{interactive-scroller imageWidth=219 imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl label=interactive_source.label}}
+              {{#if interactive_source.hasUnsafeHeight}}
+                {{multi-scroller imageWidth=219 imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+              {{else}}
+                {{single-scroller imageWidth=219 imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+              {{/if}}
             </div>
           {{/each}}
         </div>
@@ -99,7 +103,11 @@
           <div class='image-scrollers'>
             {{#each interactive_source in question.interactive_sources}}
               <div {{bind-attr class=":columns columns"}}>
-                {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                {{#if interactive_source.hasUnsafeHeight}}
+                  {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                {{else}}
+                  {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                {{/if}}
               </div>
             {{/each}}
           </div>
