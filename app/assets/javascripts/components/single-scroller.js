@@ -1,4 +1,4 @@
-Course.InteractiveScrollerComponent = Ember.Component.extend({
+Course.SingleScrollerComponent = Ember.Component.extend({
   loaded: false,
   imageStep: 0,
   imageWidth: 0,
