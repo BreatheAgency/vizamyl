@@ -417,16 +417,16 @@ es:
     contact:
       left:
         title: |
-         Medical Support
-         and other enquiries:
+         Apoyo médico
+         y otras consultas:
         body_html: |
-          <p>If you would like further <strong>medical information</strong> about Vizamyl, please contact us at:</p>
+          <p>Si desea más <strong>información médica</strong> sobre Vizamyl, póngase en contacto con nosotros en:</p>
           <p><a href="mailto:vizamyl.medinfo@ge.com">vizamyl.medinfo@ge.com</a></p>
-          <p>For other enquiries, including requests for <strong>image reader training</strong>, please contact us at:</p>
+          <p>Para otras consultas, incluyendo solicitudes de formación <strong>en lectura de imágenes</strong>, póngase en contacto con nosotros en:</p>
           <p><a href="mailto:gevizamyl.general@ge.com">gevizamyl.general@ge.com</a></p>
-          <p>If you are interested in finding out more about <strong>SPECT imaging and DaTSCAN&#0153;</strong> visit:</p>
+          <p>Si está interesado en saber más sobre imágenes <strong>SPECT y DaTSCAN&#0153; visite</strong>:</p>
           <p><a href="http://www.gehealthcare.co.uk/datscan" target="_blank">www.gehealthcare.co.uk/datscan</a></p>
-          <p><small>Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.</small></p>
+          <p><small>Vizamyl y DaTSCAN son marcas comerciales de GE Healthcare Limited.</small></p>
     terms-and-conditions:
       title: Terms and conditions
       body_html: |
