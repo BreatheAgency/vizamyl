@@ -22,3 +22,9 @@ it:
     first_name: Nome
     last_name: Cognome
     date: Data
+es:
+  course_completion:
+    salutation: Saludo
+    first_name: Nombre
+    last_name: Apellido
+    date: Fecha
