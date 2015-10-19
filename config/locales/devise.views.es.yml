@@ -10,7 +10,7 @@ es:
         invite_code: Código de invitación
         password: Contraseña
         password_confirmation: Confirmación de la contraseña
-        remember_me: Recordarme
+        remember_me: Acuérdate de mí
         institution: "Institution"
     models:
       user: Usuario
