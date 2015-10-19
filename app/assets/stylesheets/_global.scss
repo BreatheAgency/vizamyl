@@ -75,15 +75,27 @@ nav {
     border: none;
   }
 
-  .global-brand {
-    margin: 15px 0 0 0;
-    padding: 4px 20px 0 0;
-    background-repeat: no-repeat;
-    background-position: right top;
+  @each $locale in $available-locales {
+    .#{$locale} {
+      .global-brand {
+        margin: 15px 0 0 0;
+        padding: 4px 20px 0 0;
+        background-repeat: no-repeat;
+        background-position: right top;
+      }
+      .global-brand.with-triangle {
+        @include retina-background-image('indicator', 16px, 16px);
+      }
+    }
   }
 
-  .global-brand.with-triangle {
-    @include retina-background-image('indicator', 16px, 16px);
+  .es {
+    .global-brand {
+      margin: 18px 0 0 0;
+      padding: 4px 0 0 20px;
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
   }
 
   .global-brand a {
