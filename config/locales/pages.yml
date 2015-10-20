@@ -413,7 +413,7 @@ es:
         body_html: |
     resources:
       smpc_title: Vizamyl SmPC UE
-      rainbow_title: Escala de color "Rainbow" valores RGB
+      rainbow_title: Escala de color "Rainbow" valores RVA
     contact:
       left:
         title: |
