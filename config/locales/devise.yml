@@ -265,11 +265,11 @@ es:
     mailer:
       reset_password_instructions:
         one: Hello
-        two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
-        three: Please click here to reset your password.
+        two: Hemos recibido una solicitud para recordarle su información de inicio de sesión para el programa de formación electrónica de Vizamyl.
+        three: Haga clic aquí para resetear su contraseña.
         four_html: |
-          <p>If you didn’t request this reminder, please ignore this email. Your password will not be changed until you access the link above and create a new one.</p>
-          <p>Thank you,</p>
+          <p>Si no ha solicitado este recordatorio, ignore este correo electrónico. Su contraseña no se modificará hasta que acceda al hipervínculo incluido anteriormente y cree una nueva.</p>
+          <p>Le agradecemos su colaboración,</p>
           <p>GE Healthcare</p>
     registrations:
       edit:
@@ -321,10 +321,10 @@ es:
         login: Inicio de sesión
     passwords:
       new:
-        forgot_your_password: Forgotten your password?
-        send: Send
+        forgot_your_password: ¿Ha olvidado su contraseña?
+        send: Enviar
       edit:
-        change_your_password: Change your password
-        password_label: New password
-        password_confirmation_label: Confirm new password
-        submit: Submit
+        change_your_password: Cambiar su contraseña
+        password_label: Nueva contraseña
+        password_confirmation_label: Confirme la nueva contraseña
+        submit: Enviar
