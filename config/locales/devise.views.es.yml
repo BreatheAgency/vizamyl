@@ -11,7 +11,7 @@ es:
         password: Contraseña
         password_confirmation: Confirmación de la contraseña
         remember_me: Acuérdate de mí
-        institution: "Institution"
+        institution: Institución
     models:
       user: Usuario
   devise:

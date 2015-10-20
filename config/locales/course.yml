@@ -162,3 +162,44 @@ it:
           incorrect_two_link: il sito web Vizamyl
           incorrect_two_two_html: per programmare una sessione formativa presenziale.
           review_explanation_video: Rivedere video esplicativo <span class="index">%{count}</span>
+es:
+  course:
+    actions:
+      back: Atrás
+      next: Siguiente
+    pages:
+      test:
+        question_one:
+          answer_one: Negative
+          answer_two: Positive
+        question_two:
+          answer_one: Negative
+          answer_two: Positive
+        question_three:
+          answer_one: Negative
+          answer_two: Positive
+        question_four:
+          answer_one: Negative
+          answer_two: Positive
+        question_five:
+          answer_one: Negative
+          answer_two: Positive
+        question:
+          single_title: Self-assessment question
+          plural_title: Self-assessment questions
+        test_case:
+          description_html: Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.
+          question_one: Frontal pole and lobe
+          question_two: Posterior cingulate and precuneus
+          question_three: Temporal lobe
+          question_four: Parietal lobe
+          question_five: Striatum
+          question_six: Overall classification
+        four_b:
+          title: Assessment Summary
+          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
+          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
+          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br><br>Please contact your local GE representative via the
+          incorrect_two_link: Contact section
+          incorrect_two_two_html: to schedule an in-person training session.
+          review_explanation_video: Review explanation video <span class="index">%{count}</span>

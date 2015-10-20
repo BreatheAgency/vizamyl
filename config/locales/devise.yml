@@ -264,7 +264,7 @@ es:
   devise:
     mailer:
       reset_password_instructions:
-        one: Hello
+        one: Hola
         two: Hemos recibido una solicitud para recordarle su información de inicio de sesión para el programa de formación electrónica de Vizamyl.
         three: Haga clic aquí para resetear su contraseña.
         four_html: |
@@ -278,12 +278,10 @@ es:
         registrations_description: You can update your contact preferences and personal details using the boxes below
         contact_preferences: Contact preferences
         salutations:
-          - Prof
-          - Dr
-          - Mr
-          - Mrs
-          - Miss
-          - Ms
+          - Prof.
+          - Dtr.
+          - D.
+          - Dña.
         description_html: |
           If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
         marketing_overall_opt_in_description_html: |
@@ -306,12 +304,10 @@ es:
           Update
       new:
         salutations:
-          - Prof
-          - Dr
-          - Mr
-          - Mrs
-          - Miss
-          - Ms
+          - Prof.
+          - Dtr.
+          - D.
+          - Dña.
     sessions:
       new:
         intro: |
