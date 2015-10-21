@@ -213,5 +213,5 @@ es:
           (Marque una o más opciones)
     course_completion:
       success:
-        description_html: Thank you for participating in the Vizamyl electronic training programme.<br><br>Please download the PDF of your results and keep for your records.
-        download_results: Download results
+        description_html: Gracias por participar en el programa electrónico de formación de Vizamyl.<br><br>Descargue el PDF con sus resultados y guárdelo para posteriores consultas.
+        download_results: Descargar resultados
