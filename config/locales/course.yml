@@ -170,36 +170,36 @@ es:
     pages:
       test:
         question_one:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: Negativo
+          answer_two: Positivo
         question_two:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: Negativo
+          answer_two: Positivo
         question_three:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: Negativo
+          answer_two: Positivo
         question_four:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: Negativo
+          answer_two: Positivo
         question_five:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: Negativo
+          answer_two: Positivo
         question:
-          single_title: Self-assessment question
-          plural_title: Self-assessment questions
+          single_title: Pregunta Autoevaluación
+          plural_title: Preguntas de autoevaluación
         test_case:
-          description_html: Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.
-          question_one: Frontal pole and lobe
-          question_two: Posterior cingulate and precuneus
-          question_three: Temporal lobe
-          question_four: Parietal lobe
-          question_five: Striatum
-          question_six: Overall classification
+          description_html: Explore las tres vistas con los controles.<br>Evalúe las cinco regiones y luego haga una evaluación general.
+          question_one: Lóbulo frontal
+          question_two: Cíngulo posterior y precúneo
+          question_three: Lóbulo temporal
+          question_four: Lóbulo parietal
+          question_five: Estriado
+          question_six: Evaluación general
         four_b:
-          title: Assessment Summary
-          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
-          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
-          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br><br>Please contact your local GE representative via the
-          incorrect_two_link: Contact section
-          incorrect_two_two_html: to schedule an in-person training session.
-          review_explanation_video: Review explanation video <span class="index">%{count}</span>
+          title: Resumen de la evaluación
+          correct: ¡Enhorabuena! Ha completado con éxito el programa de formación electrónica de Vizamyl clasificando de forma precisa al menos 14 de los 15 casos.<br><br>Si desea revisar la explicación de cualquiera de los casos, simplemente haga clic sobre dicho caso. De lo contrario, haga clic en el botón “siguiente” para terminar el programa.
+          incorrect_one_html: Lamentablemente, para completar el programa de formación electrónico de Vizamyl es necesario que clasifique correctamente al menos 14 de los 15 casos.<br><br>Si desea revisar la explicación de cualquiera de los casos, simplemente haga clic sobre dicho caso. Cuando esté listo, puede hacer clic en el botón "siguiente" para volver a realizar otros 15 casos.
+          incorrect_two_one_html: Lamentablemente, para completar el programa de formación electrónica de Vizamyl es necesario que clasifique correctamente al menos 14 de los 15 casos. Si desea revisar la explicación de cualquiera de los casos, simplemente haga clic sobre dicho caso.<br><br>Comuníquese con el representante local de GE a través de
+          incorrect_two_link: la página web de Vizamyl
+          incorrect_two_two_html: para fijar una fecha para una sesión de formación presencial.
+          review_explanation_video: Revisión de la explicación del vídeo <span class="index">%{count}</span>
