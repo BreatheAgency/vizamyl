@@ -91,14 +91,14 @@ es:
   layouts:
     application:
       logo:
-        1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
+        1_html: Vizamyl<sup class='trade-mark'>&reg;</sup>
         2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
-        3_html: <span>En inyección</span>
+        3_html: <span></span>
       course_menu: Menú del curso
       my_account: Mi cuenta
       login: Inicio de sesión
       logout: Cerrar sesión
-      enrol: Enrol
+      enrol: Registrarse
       references: Referencias
       resources: Recursos
       contact: Contacto

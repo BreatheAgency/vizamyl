@@ -162,3 +162,44 @@ it:
           incorrect_two_link: il sito web Vizamyl
           incorrect_two_two_html: per programmare una sessione formativa presenziale.
           review_explanation_video: Rivedere video esplicativo <span class="index">%{count}</span>
+es:
+  course:
+    actions:
+      back: Atrás
+      next: Siguiente
+    pages:
+      test:
+        question_one:
+          answer_one: Negativo
+          answer_two: Positivo
+        question_two:
+          answer_one: Negativo
+          answer_two: Positivo
+        question_three:
+          answer_one: Negativo
+          answer_two: Positivo
+        question_four:
+          answer_one: Negativo
+          answer_two: Positivo
+        question_five:
+          answer_one: Negativo
+          answer_two: Positivo
+        question:
+          single_title: Pregunta Autoevaluación
+          plural_title: Preguntas de autoevaluación
+        test_case:
+          description_html: Explore las tres vistas con los controles.<br>Evalúe las cinco regiones y luego haga una evaluación general.
+          question_one: Lóbulo frontal
+          question_two: Cíngulo posterior y precúneo
+          question_three: Lóbulo temporal
+          question_four: Lóbulo parietal
+          question_five: Estriado
+          question_six: Clasificatión general
+        four_b:
+          title: Resumen de la evaluación
+          correct: ¡Enhorabuena! Ha completado con éxito el programa de formación electrónica de Vizamyl clasificando de forma precisa al menos 14 de los 15 casos.<br><br>Si desea revisar la explicación de cualquiera de los casos, simplemente haga clic sobre dicho caso. De lo contrario, haga clic en el botón “siguiente” para terminar el programa.
+          incorrect_one_html: Lamentablemente, para completar el programa de formación electrónico de Vizamyl es necesario que clasifique correctamente al menos 14 de los 15 casos.<br><br>Si desea revisar la explicación de cualquiera de los casos, simplemente haga clic sobre dicho caso. Cuando esté listo, puede hacer clic en el botón "siguiente" para volver a realizar otros 15 casos.
+          incorrect_two_one_html: Lamentablemente, para completar el programa de formación electrónica de Vizamyl es necesario que clasifique correctamente al menos 14 de los 15 casos. Si desea revisar la explicación de cualquiera de los casos, simplemente haga clic sobre dicho caso.<br><br>Comuníquese con el representante local de GE a través de
+          incorrect_two_link: la página web de Vizamyl
+          incorrect_two_two_html: para fijar una fecha para una sesión de formación presencial.
+          review_explanation_video: Revisión de la explicación del vídeo <span class="index">%{count}</span>
