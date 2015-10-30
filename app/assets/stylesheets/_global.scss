@@ -46,6 +46,13 @@ h1,h2,h3,h4,h5 {
   min-height: 580px;
 }
 
+span.triangle {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  @include retina-background-image('indicator', 16px, 16px);
+}
+
 nav {
   @include background-image(linear-gradient(to right, $primary-highlight, $primary-color));
   padding:0;
