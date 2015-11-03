@@ -264,54 +264,50 @@ es:
   devise:
     mailer:
       reset_password_instructions:
-        one: Hello
-        two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
-        three: Please click here to reset your password.
+        one: Hola
+        two: Hemos recibido una solicitud para recordarle su información de inicio de sesión para el programa de formación electrónica de Vizamyl.
+        three: Haga clic aquí para resetear su contraseña.
         four_html: |
-          <p>If you didn’t request this reminder, please ignore this email. Your password will not be changed until you access the link above and create a new one.</p>
-          <p>Thank you,</p>
+          <p>Si no ha solicitado este recordatorio, ignore este correo electrónico. Su contraseña no se modificará hasta que acceda al hipervínculo incluido anteriormente y cree una nueva.</p>
+          <p>Le agradecemos su colaboración,</p>
           <p>GE Healthcare</p>
     registrations:
       edit:
-        title: My account
-        my_details: My details
-        registrations_description: You can update your contact preferences and personal details using the boxes below
-        contact_preferences: Contact preferences
+        title: Mi cuenta
+        my_details: Mi información
+        registrations_description: Puede actualizar sus preferencias de contacto y su información personal empleando las casillas que encontrará a continuación
+        contact_preferences: Preferencias de contacto
         salutations:
-          - Prof
-          - Dr
-          - Mr
-          - Mrs
-          - Miss
-          - Ms
+          - Prof.
+          - Dtr.
+          - D.
+          - Dña.
         description_html: |
-          If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
+          Si supera el curso, a GE Healthcare le gustaría ponerse en contacto con usted para proporcionarle detalles de nuestros productos, servicios o más formación que creemos que pueden resultarle interesantes.
         marketing_overall_opt_in_description_html: |
-          If you do want to receive such information, please tick the box below.
+          Si no desea recibir dicha información, marque la casilla que encontrará a continuación.
         marketing_overall_opt_in_html: |
-          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<span>
+          <span class="marketing-purposes">SÍ, me gustaría que se pusieran en contacto conmigo con fines de marketing.<span>
         marketing_overall_opt_in_note_html: |
-          (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
+          (Marque la casilla) TENGA EN CUENTA que si no marca la opción "SÍ", no recibirá ninguna información de marketing.
         marketing_overall_description_html: |
-          If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:
+          Si desea que nos pongamos en contacto con usted con fines de marketing, seleccione una de las siguientes opciones para hacernos saber su método preferido de contacto:
         marketing_email_opt_in_label_html: |
-          E-Mail
+          Correo electrónico
         marketing_post_opt_in_label_html: |
-          Post
+          Correo ordinario
         marketing_representative_opt_in_label_html: |
-          Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>
+          Visita de un representante de GE Healthcare<br><span class="obligation">(No hay obligación de ver a un representante)</span>
         marketing_overall_opt_in_tick_html: |
-          (Please tick one or more options)
+          (Marque una o más opciones)
         update: |
-          Update
+          Actualizar
       new:
         salutations:
-          - Prof
-          - Dr
-          - Mr
-          - Mrs
-          - Miss
-          - Ms
+          - Prof.
+          - Dtr.
+          - D.
+          - Dña.
     sessions:
       new:
         intro: |
@@ -321,10 +317,10 @@ es:
         login: Inicio de sesión
     passwords:
       new:
-        forgot_your_password: Forgotten your password?
-        send: Send
+        forgot_your_password: ¿Ha olvidado su contraseña?
+        send: Enviar
       edit:
-        change_your_password: Change your password
-        password_label: New password
-        password_confirmation_label: Confirm new password
-        submit: Submit
+        change_your_password: Cambiar su contraseña
+        password_label: Nueva contraseña
+        password_confirmation_label: Confirme la nueva contraseña
+        submit: Enviar

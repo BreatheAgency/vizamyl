@@ -43,6 +43,10 @@ convert black/*.jpg -crop 550x464+0+0 -bordercolor Black -border 0x18 -set filen
 convert white/*.jpg -crop 550x464+0+0 -bordercolor White -border 0x18 -set filename:f '%t' ../_new/'%[filename:f].jpg'
 ```
 
+# One off sync
+
+`aws s3 sync s3://vizamyl-staging/videos s3://vizamyl-production/videos --dryrun --exclude "*" --include "EN_GB*"`
+
 # Cache
 
 ```

@@ -7,7 +7,7 @@
       <li><a href='/{{unbound currentLocale}}/contact'>{{i18n layouts.application.contact}}</a></li>
 			<li><a href='/{{unbound currentLocale}}/resources'>{{i18n layouts.application.resources}}</a></li>
 			<li><a href='/{{unbound currentLocale}}/users/logout'>{{i18n layouts.application.logout}}</a></li>
-			<li class='right'>
+			<li {{bind-attr class=':right currentLocale'}}>
         <p class='global-brand'>
           <a href='/{{unbound currentLocale}}'>{{{i18n layouts.application.logo.1_html}}}</a>
           {{{i18n layouts.application.logo.2_html}}}

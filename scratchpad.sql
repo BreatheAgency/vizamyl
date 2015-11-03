@@ -5,7 +5,6 @@ UPDATE tmptable SET locale = 'de';
 INSERT INTO interactive_source_translations (SELECT * FROM tmptable);
 DROP TABLE IF EXISTS tmptable;
 
-
 UPDATE interactive_source_translations SET label = 'Negativ | Positiv' WHERE label = 'Coronal review' AND locale = 'de';
 
 UPDATE interactive_source_translations SET label = 'Axiale Ansicht' WHERE label = 'Axial review' AND locale = 'de';
@@ -18,13 +17,14 @@ UPDATE interactive_source_translations SET label = 'Koronare Ansicht' WHERE labe
 
 UPDATE question_translations SET explanation_source = replace(explanation_source, 'EN_','DE_') WHERE locale = 'de';
 
-
 UPDATE text_translations set body = replace(body, '"Weiter"', '„Weiter“') where locale = 'de';
 UPDATE interactive_translations set body = replace(body, '"Weiter"', '„Weiter“') where locale = 'de';
 
 UPDATE question_translations SET title = replace(title,'(18F)','(<sup>18</sup>F)');
 SELECT * FROM question_translations WHERE question_translations.title ILIKE '%(18F)%';
 
+UPDATE text_translations SET body = replace(body,'(18F)','(<sup>18</sup>F)');
+SELECT * FROM text_translations WHERE text_translations.body ILIKE '%(18F)%';
 
 SELECT sum(
   array_length(regexp_split_to_array(body, '\s'),1) +
