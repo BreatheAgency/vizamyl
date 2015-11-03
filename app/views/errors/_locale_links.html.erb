@@ -1,29 +1,37 @@
 <div class='locale-select'>
-  <div class='large-3 left'>
-    <hr>
-    <%= render partial: 'errors/locale_block', locals: {locales: I18n.available_locales[0...5]} %>
+  <div class="row" style="margin:0 0 0 0;">
+    <div class='large-3 left'>
+      <hr>
+      <%= render partial: 'errors/locale_block', locals: {locales: I18n.available_locales[0...5]} %>
+    </div>
+    <div class="large-9 left">
+      <hr>
+      <%= render partial: 'errors/locale_block', locals: {locales: I18n.available_locales.drop(5)} %>
+      <a href="http://readvizamyl.jp/" target="_blank" class="locale">
+        <p class="country">Japan</p>
+      </a>
+      <hr>
+      <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class="locale">
+        <p class="country">United States</p>
+      </a>
+      <hr>
+      <% if (I18n.available_locales.length == 4)  %>
+        <a href="/en" class="locale">
+          &nbsp;
+        </a>
+        <hr>
+      <% end %>
+    </div>
   </div>
-  <div class="large-9 left">
-    <hr>
-    <%= render partial: 'errors/locale_block', locals: {locales: I18n.available_locales.drop(5)} %>
-    <a href="http://readvizamyl.jp/" target="_blank" class="locale">
-      <p class="country">Japan</p>
-    </a>
-    <hr>
-    <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class="locale">
-      <p class="country">United States</p>
-    </a>
-    <hr>
-  </div>
-  <div class="row">
-    <div class='large-3 left' style="margin-top:4em;">
+  <div class="row" style="margin:4em 0 0 0;">
+    <div class='large-3 left'>
       <hr>
       <a href="/en" class="locale">
         <p class="country">International English</p>
       </a>
       <hr>
     </div>
-    <div class='large-9 left' style="margin-top:4em;">
+    <div class='large-9 left'>
       <hr>
       <a href="/en" class="locale">
         <p class="language">GE representatives use only</p>
@@ -32,48 +40,3 @@
     </div>
   </div>
 </div>
-
-<!-- <ul class='locale-select'>
-  <% I18n.available_locales.each do |locale| %>
-    <li>
-      <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-        <%= locale %>
-      </a>
-    </li>
-  <% end %>
-  <li>
-    <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button'>US</a>
-  </li>
-  <li>
-    <a href="http://readvizamyl.jp/" target="_blank" class='jp-button'>Japan</a>
-  </li>
-</ul>
-
-<ul class='locale-label'>
-  <li>
-    <a href='/en' class='en-button'><p style='text-align:left'>Int English<br>GE representatives<br>use only</br></p></a>
-  </li>
-  <% I18n.available_locales.reject{|lang| lang == :en }.each do |locale| %>
-    <li>
-      <a href='<%= "/#{locale}" %>' class='<%= "#{locale}-button" %>'>
-        <%= {
-          'en-gb': 'United Kingdom',
-          'pt': 'Portugal',
-          'it': 'Italy',
-          'fr': 'France',
-          'es': 'Spain',
-          'de': 'Germany',
-          'de-at': 'Austria',
-          'nl': 'Netherlands'
-        }.fetch(locale, locale) %>
-      </a>
-      </a>
-    </li>
-  <% end %>
-  <li>
-    <a href="https://hls2.gehealthcare.com/content/unfiltered/LIFE-VIZAMYL-NONSCORM/" target="_blank" class='us-button' style='padding-left:20px;'>US</a>
-  </li>
-  <li>
-    <a href="http://readvizamyl.jp/" target="_blank" class='jp-button' style='padding-left:10px;'>Japan</a>
-  </li>
-</ul> -->
