@@ -104,8 +104,8 @@ es:
       contact: Contacto
       copyright_html: |
         <p>&copy;2015 General Electric Company. Todos los derechos reservados.</p>
-        <p>GE y el monograma de GE son marcas comerciales de la General Electric Company.</p>
-        <p>Vizamyl es una marca comercial de la General Electric Company o de una de sus subsidiarias.</p>
+        <p>GE y GE monogram son marcas comerciales de General Electric Company.</p>
+        <p>Vizamyl es una marca comercial de General Electric Company o de una de sus subsidiarias.</p>
         <p><a href="/es/terms-and-conditions">Términos y condiciones</a></p>
       reference_html: |
         <p class="right"></p>

@@ -278,20 +278,17 @@ es:
         registrations_description: Puede actualizar sus preferencias de contacto y su información personal empleando las casillas que encontrará a continuación
         contact_preferences: Preferencias de contacto
         salutations:
-          - Prof.
-          - Dtr.
-          - D.
-          - Dña.
+          - Dra.
         description_html: |
           Si supera el curso, a GE Healthcare le gustaría ponerse en contacto con usted para proporcionarle detalles de nuestros productos, servicios o más formación que creemos que pueden resultarle interesantes.
         marketing_overall_opt_in_description_html: |
-          Si no desea recibir dicha información, marque la casilla que encontrará a continuación.
+          Si desea recibir dicha información, marque la casilla que encontrará a continuación.
         marketing_overall_opt_in_html: |
           <span class="marketing-purposes">SÍ, me gustaría que se pusieran en contacto conmigo con fines de marketing.<span>
         marketing_overall_opt_in_note_html: |
           (Marque la casilla) TENGA EN CUENTA que si no marca la opción "SÍ", no recibirá ninguna información de marketing.
         marketing_overall_description_html: |
-          Si desea que nos pongamos en contacto con usted con fines de marketing, seleccione una de las siguientes opciones para hacernos saber su método preferido de contacto:
+          Si desea que nos pongamos en contacto con usted con fines de marketing, seleccione su método preferido de contacto:
         marketing_email_opt_in_label_html: |
           Correo electrónico
         marketing_post_opt_in_label_html: |
@@ -304,10 +301,7 @@ es:
           Actualizar
       new:
         salutations:
-          - Prof.
-          - Dtr.
-          - D.
-          - Dña.
+          - Dra.
     sessions:
       new:
         intro: |
