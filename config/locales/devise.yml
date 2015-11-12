@@ -278,10 +278,7 @@ es:
         registrations_description: Puede actualizar sus preferencias de contacto y su información personal empleando las casillas que encontrará a continuación
         contact_preferences: Preferencias de contacto
         salutations:
-          - Prof.
-          - Dtr.
-          - D.
-          - Dña.
+          - Dra.
         description_html: |
           Si supera el curso, a GE Healthcare le gustaría ponerse en contacto con usted para proporcionarle detalles de nuestros productos, servicios o más formación que creemos que pueden resultarle interesantes.
         marketing_overall_opt_in_description_html: |
@@ -304,10 +301,7 @@ es:
           Actualizar
       new:
         salutations:
-          - Prof.
-          - Dtr.
-          - D.
-          - Dña.
+          - Dra.
     sessions:
       new:
         intro: |

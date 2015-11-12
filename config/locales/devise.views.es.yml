@@ -10,8 +10,8 @@ es:
         invite_code: Código de invitación
         password: Contraseña
         password_confirmation: Confirmación de la contraseña
-        remember_me: Acuérdate de mí
-        institution: Institución
+        remember_me: Recordar contraseña
+        institution: Centro de trabajo
     models:
       user: Usuario
   devise:
