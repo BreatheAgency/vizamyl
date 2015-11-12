@@ -2,7 +2,7 @@ es:
   activerecord:
     attributes:
       user:
-        salutation: Saludo
+        salutation: Título
         first_name: Nombre
         last_name: Apellido
         current_password: Contraseña actual

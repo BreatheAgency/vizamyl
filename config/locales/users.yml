@@ -177,10 +177,10 @@ es:
     enrol:
       details:
         title: Introduzca su información personal.
-        salutation: Saludo
+        salutation: Título
       institution:
-        title: Introduzca su institución.
-        description: Introduzca la institución a la que refiere a sus pacientes en el cuadro que encontrará a continuación.
+        title: Introduzca
+        description: ""
       terms:
         title_html: Formación en Vizamyl&#174;
         description_one_html: |
