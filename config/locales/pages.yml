@@ -414,7 +414,7 @@ es:
       right:
         body_html: |
     resources:
-      smpc_title: Vizamyl SmPC UE
+      smpc_title: Ficha Técnica Vizamyl
       rainbow_title: Escala de color "Rainbow" valores RVA
     contact:
       left:
