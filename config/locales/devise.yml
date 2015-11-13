@@ -279,6 +279,7 @@ es:
         contact_preferences: Preferencias de contacto
         salutations:
           - Dra.
+          - Dr.
         description_html: |
           Si supera el curso, a GE Healthcare le gustaría ponerse en contacto con usted para proporcionarle detalles de nuestros productos, servicios o más formación que creemos que pueden resultarle interesantes.
         marketing_overall_opt_in_description_html: |
@@ -302,6 +303,7 @@ es:
       new:
         salutations:
           - Dra.
+          - Dr.
     sessions:
       new:
         intro: |
