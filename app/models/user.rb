@@ -9,7 +9,7 @@ class User < ActiveRecord::Base
   has_many :progressions, dependent: :destroy
   has_many :steps, through: :progressions
 
-  before_create :inherit_invite_code
+  before_create :inherit_invitation
   before_create :create_progressions
   before_save :capitalize_names
   before_save :capitalize_institution
@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
     step.validates :last_name, presence: true
     step.validates :email, email: true
     step.validates :invite_code, inclusion: {
-      in: proc { Rails.application.secrets.codes },
+      in: proc { Rails.application.secrets.invite_codes },
       if: Proc.new { form_step == 'details' }
     }
   end
@@ -131,18 +131,18 @@ class User < ActiveRecord::Base
     self.last_name = last_name.capitalize
   end
 
-  def inherit_invite_code
-    invite_code = Rails.application.secrets.codes[self.invite_code]
-    
-    case invite_code.fetch('type')
+  def inherit_invitation
+    invitation = Rails.application.secrets.invite_codes[self.invite_code]
+
+    case invitation.fetch('type')
     when 'in_person'
       self.in_person = true
     when 'fast_forward'
-      self.fast_forward = true 
+      self.fast_forward = true
     end
 
-    self.origin = invite_code.fetch('origin')
-    self.locale = invite_code.fetch('locale')
+    self.origin = invitation.fetch('origin')
+    self.locale = invitation.fetch('locale')
 
     true
   end
