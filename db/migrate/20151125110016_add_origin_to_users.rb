@@ -1,6 +1,6 @@
 class AddOriginToUsers < ActiveRecord::Migration
   def self.up
-    add_column :users, :origin, :string, default: 'en', null: false
+    add_column :users, :origin, :string, default: 'EN', null: false
     User.update_all('locale=origin')
   end
 
