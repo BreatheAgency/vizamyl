@@ -6,7 +6,6 @@ gem 'globalize', github: 'globalize/globalize'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
 gem 'activeadmin-sortable', github: 'neo/activeadmin-sortable'
 gem 'active_admin_editor', github: 'bazuka/active_admin_editor'
-gem 'iso_country_codes', github: 'alexrabarts/iso_country_codes'
 
 gem 'rake', '~> 10.3'
 gem 'rails', '~> 4.1'

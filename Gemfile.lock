@@ -17,12 +17,6 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/alexrabarts/iso_country_codes.git
-  revision: 5d56e2c036d953500dee88facc64da403e60463e
-  specs:
-    iso_country_codes (0.7.2)
-
-GIT
   remote: git://github.com/bazuka/active_admin_editor.git
   revision: 222ea008c09002a68b556bbde2ffe8ec8c470365
   specs:
@@ -372,7 +366,6 @@ DEPENDENCIES
   globalize!
   high_voltage
   i18n-js!
-  iso_country_codes!
   jquery-rails
   normalize-rails
   oj
