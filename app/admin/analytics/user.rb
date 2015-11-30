@@ -1,7 +1,23 @@
 ActiveAdmin.register User, as: 'Users' do
   actions :all, except: [:new, :destroy, :edit]
-  filter :locale, as: :select, collection: proc { I18n.available_locales }
-  filter :origin, as: :select, collection: proc { IsoCountryCodes::Code.for_select }
+  filter :locale, as: :select, collection: [
+    ['English', 'en-gb'],
+    ['German', 'de'],
+    ['Austrian', 'de-at'],
+    ['Spanish', 'es'],
+    ['French', 'fr'],
+    ['Italian', 'it'],
+    ['International English', 'en']
+  ]
+  filter :origin, as: :select, collection: [
+    ['United Kingdom', 'gb'],
+    ['Germany', 'de'],
+    ['Austria', 'at'],
+    ['Spain', 'es'],
+    ['France', 'fr'],
+    ['Italy', 'it'],
+    ['International', 'en']
+  ]
   filter :institution, as: :string
 
   controller do
