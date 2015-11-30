@@ -1,6 +1,6 @@
 ActiveAdmin.register User, as: 'Users' do
   actions :all, except: [:new, :destroy, :edit]
-  filter :locale, as: :select, collection: [
+  filter :locale, as: :select, label: 'Language', collection: [
     ['English', 'en-gb'],
     ['German', 'de'],
     ['Austrian', 'de-at'],
@@ -9,7 +9,7 @@ ActiveAdmin.register User, as: 'Users' do
     ['Italian', 'it'],
     ['International English', 'en']
   ]
-  filter :origin, as: :select, collection: [
+  filter :origin, as: :select, label: 'Country', collection: [
     ['United Kingdom', 'gb'],
     ['Germany', 'de'],
     ['Austria', 'at'],
@@ -28,10 +28,10 @@ ActiveAdmin.register User, as: 'Users' do
 
   index do
     selectable_column
-    column :locale do |user|
+    column 'Language' do |user|
       link_to(user.locale, admin_user_path(user))
     end
-    column :origin do |user|
+    column 'Country' do |user|
       link_to(user.origin, admin_user_path(user))
     end
     column :full_name do |user|
@@ -69,12 +69,12 @@ ActiveAdmin.register User, as: 'Users' do
 
   show title: :full_name do |user|
     attributes_table do
-      row :locale
-      row :origin
+      row ('Language') { |model| model.locale }
+      row ('Country') { |model| model.origin }
       row :full_name
       row :email
       row :institution
-      row(:progress) {|model| "#{model.progress}%" }
+      row(:progress) { |model| "#{model.progress}%" }
       row :final_assessment_status
       row :invite_code
       row('Overall Marketing') { |model| model.marketing_overall_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
@@ -86,8 +86,8 @@ ActiveAdmin.register User, as: 'Users' do
 
   csv do
     column :created_at
-    column :locale
-    column :origin
+    column('Language') { |model| model.locale }
+    column('Country') { |model| model.origin }
     column :salutation
     column :first_name
     column :last_name
