@@ -117,7 +117,7 @@ ActiveAdmin.setup do |config|
   # roots for each namespace.
   #
   # Default:
-  config.root_to = 'dashboard#index'
+  config.root_to = 'users#index'
 
 
   # == Admin Comments
@@ -152,7 +152,7 @@ ActiveAdmin.setup do |config|
 
   # == Setting a Favicon
   #
-  # config.favicon = '/assets/favicon.ico'
+  config.favicon = "//#{Rails.application.secrets.asset_host}/favicon-128.png"
 
 
   # == Removing Breadcrumbs
@@ -228,10 +228,10 @@ ActiveAdmin.setup do |config|
     config.namespace :admin do |admin|
 
       # Disable the links entirely
-      admin.download_links = false
+      admin.download_links = true
 
       # Only show XML & PDF options
-      # admin.download_links = [:xml, :pdf]
+      admin.download_links = [:csv]
 
       # Enable/disable the links based on block
       #   (for example, with cancan)

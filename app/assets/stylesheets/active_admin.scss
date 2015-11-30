@@ -17,34 +17,3 @@
 // For example, to change the default status-tag color:
 //
 //   .status_tag { background: #6090DB; }
-
-.admin_dashboard {
-  color: #5E6469;
-
-  .stat {
-    padding: 30px 20px 10px 20px;
-
-    .stat-title {
-      font-size: 3.4em;
-      margin: 0 0 0 0;
-    }
-
-    .stat-context {
-      font-size: 1.2em;
-      margin: 0 0 0 0;
-      padding-top: 0.75em;
-    }
-  }
-
-  .viz {
-    padding-top: 1.5em;
-
-    .viz-title {
-      font-size: 2.4em;
-      margin: 0
-    }
-    hr {
-      margin: 1em 0 1.25em 0;
-    }
-  }
-}
