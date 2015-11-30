@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get 'errors/unprocessable'
   get 'errors/internal_server_error'
 
+  get '/upgrade' => 'errors#upgrade'
+  get '/upgrade-example' => 'errors#upgrade'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
