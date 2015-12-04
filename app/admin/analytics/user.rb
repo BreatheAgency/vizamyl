@@ -27,6 +27,9 @@ ActiveAdmin.register User, as: 'Users' do
   end
 
   index do
+    panel "Download options" do
+      link_to "Export to Excel", params.merge(format: :csv)
+    end
     selectable_column
     column 'Language' do |user|
       link_to(user.locale, admin_user_path(user))
