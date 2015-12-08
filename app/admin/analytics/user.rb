@@ -10,13 +10,25 @@ ActiveAdmin.register User, as: 'Users' do
     ['International English', 'en']
   ]
   filter :origin, as: :select, label: 'Country', collection: [
+    ['International', 'en'],
     ['United Kingdom', 'gb'],
     ['Germany', 'de'],
     ['Austria', 'at'],
     ['Spain', 'es'],
     ['France', 'fr'],
     ['Italy', 'it'],
-    ['International', 'en']
+    ['Slovakia', 'sk'],
+    ['Slovenia', 'si'],
+    ['Czech Republic', 'cz'],
+    ['Croatia', 'hr'],
+    ['Hungary', 'hu'],
+    ['Denmark', 'dk'],
+    ['Finland', 'fi'],
+    ['Norway', 'no'],
+    ['Estonia', 'ee'],
+    ['Netherlands', 'nl'],
+    ['Sweden', 'se'],
+    ['South Korea', 'se']
   ]
   filter :institution, as: :string
 
