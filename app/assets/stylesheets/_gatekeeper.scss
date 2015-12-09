@@ -8,7 +8,7 @@
     @include retina-background-image('map', 1000px, 800px);
   }
 
-  h1, h2, p {
+  h1, h2, h3, ul, p {
     padding-left: rem-calc(40);
   }
 
@@ -47,6 +47,31 @@
   .error {
     h1, h2 {
       color: transparentize($primary-color, 0.8);
+    }
+
+    .blue {
+      font-weight: bold;
+    }
+  }
+
+  .upgrade {
+    h1,h2 {
+      color: transparentize($primary-color, 0.8);
+    }
+
+    h3 {
+      font-size: rem-calc(20);
+      color: #444;
+    }
+
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+    }
+
+    ul li {
+      font-size: rem-calc(18);
+      color: #444;
     }
 
     .blue {
