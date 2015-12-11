@@ -50,6 +50,7 @@ group :development do
   gem 'bullet'
   gem 'quiet_assets'
   gem 'binding_of_caller'
+  gem 'brakeman', require: false
 end
 
 group :test, :development do
