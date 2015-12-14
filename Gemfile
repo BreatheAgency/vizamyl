@@ -49,7 +49,9 @@ gem 'active_model_serializers'
 group :development do
   gem 'bullet'
   gem 'quiet_assets'
+  gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman', require: false
 end
 
 group :test, :development do
