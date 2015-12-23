@@ -1,4 +1,5 @@
 <div class='locale-select'>
+  <% if Rails.env.production?  %>
   <div class="row" style="margin:0 0 0 0;">
     <div class='large-3 left'>
       <hr>
@@ -15,7 +16,7 @@
         <p class="country">United States</p>
       </a>
       <hr>
-      <% if (I18n.available_locales.length == 4)  %>
+      <% if (I18n.available_locales.length == 6)  %>
         <a href="/en" class="locale">
           &nbsp;
         </a>
@@ -23,6 +24,28 @@
       <% end %>
     </div>
   </div>
+  <% else %>
+  <div class="row" style="margin:0 0 0 0;">
+    <div class='large-3 left'>
+      <hr>
+      <%= render partial: 'errors/locale_block', locals: {locales: I18n.available_locales[0...5]} %>
+    </div>
+    <div class="large-9 left">
+      <hr>
+      <%= render partial: 'errors/locale_block', locals: {locales: I18n.available_locales.drop(5)} %>
+      <a href="http://readvizamyl.jp/" target="_blank" class="locale">
+        <p class="country">Japan</p>
+      </a>
+      <hr>
+      <% if (I18n.available_locales.length == 6)  %>
+        <a href="/en" class="locale">
+          &nbsp;
+        </a>
+        <hr>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
   <div class="row" style="margin:4em 0 0 0;">
     <div class='large-3 left'>
       <hr>
