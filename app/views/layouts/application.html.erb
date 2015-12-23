@@ -14,10 +14,10 @@
             <li><%= link_to t('layouts.application.enrol'), users_enrol_path(id: User.form_steps.first, locale: I18n.locale) %></li>
           <% end %>
 					<li><%= link_to t('layouts.application.references'), static_path(id: 'references', locale: I18n.locale) %></li>
-          <% if user_signed_in? %>
-					     <li><%= link_to t('layouts.application.contact'), static_path(id: 'contact', locale: I18n.locale) %></li>
+          <% if I18n.locale == :'en-us' %>
+					  <li><%= link_to t('layouts.application.important_risk_and_safety_information'), static_path(id: 'important-risk-and-safety-information', locale: I18n.locale) %></li>
           <% else %>
-            <li><%= link_to t('layouts.application.important_risk_and_safety_information'), static_path(id: 'important-risk-and-safety-information', locale: I18n.locale) %></li>
+            <li><%= link_to t('layouts.application.contact'), static_path(id: 'contact', locale: I18n.locale) %></li>
           <% end %>
           <li><%= link_to t('layouts.application.resources'), static_path(id: 'resources', locale: I18n.locale) %></li>
 					<% if user_signed_in? %>
