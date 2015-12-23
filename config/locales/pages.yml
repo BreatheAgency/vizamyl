@@ -111,6 +111,12 @@ en:
           <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G <i>et al</i>. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-25.</p>
       right:
         body_html: |
+'en-us':
+  pages:
+    important-risk-and-safety-information:
+      title: Important Risk & Safety Information
+      body_html: |
+        <p></p>
 de:
   pages:
     home:

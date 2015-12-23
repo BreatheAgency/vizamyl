@@ -27,6 +27,7 @@ en:
         1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
         2_html: <span>Flutemetamol F18</span>
         3_html: <span>Injection</span>
+      important_risk_and_safety_information: 'Important Risk & Safety Information'
 de:
   layouts:
     application:
