@@ -20,6 +20,13 @@ en:
         <p><a href="/en/terms-and-conditions">Terms and conditions</a></p>
       reference_html: |
         <p class="right"></p>
+'en-us':
+  layouts:
+    application:
+      logo:
+        1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
+        2_html: <span>Flutemetamol F18</span>
+        3_html: <span>Injection</span>
 de:
   layouts:
     application:
