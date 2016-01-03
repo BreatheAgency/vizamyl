@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   mount_roboto
 
+  get '/upgrade' => 'errors#upgrade'
+
   get 'errors/file_not_found'
   get 'errors/unprocessable'
   get 'errors/internal_server_error'

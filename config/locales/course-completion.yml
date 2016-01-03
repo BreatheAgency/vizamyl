@@ -24,7 +24,7 @@ it:
     date: Data
 es:
   course_completion:
-    salutation: Saludo
+    salutation: Título
     first_name: Nombre
     last_name: Apellido
     date: Fecha

@@ -27,6 +27,7 @@ gem 'devise-i18n'
 gem 'font_assets'
 gem 'prawn-rails'
 gem 'simple_form'
+gem 'browsernizer'
 gem 'rack-noindex'
 gem 'acts_as_list'
 gem 'high_voltage'
@@ -48,7 +49,9 @@ gem 'active_model_serializers'
 group :development do
   gem 'bullet'
   gem 'quiet_assets'
+  gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'brakeman', require: false
 end
 
 group :test, :development do

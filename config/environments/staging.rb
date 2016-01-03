@@ -9,7 +9,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   #
-  config.i18n.available_locales = [:en, :'en-gb', :'de-at', :de, :fr, :it, :es]
+  config.i18n.available_locales = [:en, :'en-us', :'en-gb', :'de-at', :de, :fr, :it, :es]
 
   # Code is not reloaded between requests.
   config.cache_classes = true
@@ -44,7 +44,7 @@ Rails.application.configure do
   config.assets.digest = true
 
   # Version of your assets, change this if you want to expire all your assets.
-  config.assets.version = "4.2.#{Time.now.day}"
+  config.assets.version = "4.3.#{Time.now.day}"
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for apache

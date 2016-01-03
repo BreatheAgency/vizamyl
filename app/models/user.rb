@@ -9,8 +9,7 @@ class User < ActiveRecord::Base
   has_many :progressions, dependent: :destroy
   has_many :steps, through: :progressions
 
-  before_create :check_in_person
-  before_create :check_fast_forward
+  before_create :inherit_invitation
   before_create :create_progressions
   before_save :capitalize_names
   before_save :capitalize_institution
@@ -26,8 +25,9 @@ class User < ActiveRecord::Base
     step.validates :last_name, presence: true
     step.validates :email, email: true
     step.validates :invite_code, inclusion: {
-      in: proc { (Rails.application.secrets.invite_codes[I18n.locale.to_s] + ',' + Rails.application.secrets.fast_forward_codes[I18n.locale.to_s] + ',' + Rails.application.secrets.in_person_codes[I18n.locale.to_s]).split(',') } },
+      in: proc { Rails.application.secrets.invite_codes },
       if: Proc.new { form_step == 'details' }
+    }
   end
 
   with_options :if => -> { required_for_step?(:institution) } do |step|
@@ -131,13 +131,19 @@ class User < ActiveRecord::Base
     self.last_name = last_name.capitalize
   end
 
-  def check_in_person
-    self.in_person = Rails.application.secrets.in_person_codes[I18n.locale.to_s].eql?(self.invite_code)
-    true
-  end
+  def inherit_invitation
+    invitation = Rails.application.secrets.invite_codes[self.invite_code]
 
-  def check_fast_forward
-    self.fast_forward = Rails.application.secrets.fast_forward_codes[I18n.locale.to_s].eql?(self.invite_code)
+    case invitation.fetch('type')
+    when 'in_person'
+      self.in_person = true
+    when 'fast_forward'
+      self.fast_forward = true
+    end
+
+    self.origin = invitation.fetch('origin')
+    self.locale = invitation.fetch('locale')
+
     true
   end
 

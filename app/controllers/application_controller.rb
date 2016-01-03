@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
-  protect_from_forgery with: :exception
+  protect_from_forgery
   before_action :set_locale
   before_action :redirect_locale
+  helper_method :needs_black_triangle
 
   def after_sign_in_path_for(resource)
     request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
@@ -13,6 +14,11 @@ class ApplicationController < ActionController::Base
 
   def set_admin_locale
     I18n.locale = current_admin_user && current_admin_user.locale || I18n.default_locale
+  end
+
+  def needs_black_triangle
+    return false if I18n.locale == :'en-us'
+    request.original_fullpath == users_enrol_index_path || new_user_session_path || users_enrol_path(id: 'details') || users_enrol_path(id: 'marketing') || users_enrol_path(id: 'terms') || users_enrol_path(id: 'institution') || "/#{I18n.locale}"
   end
 
   # def active_admin_access_denied(exception)
