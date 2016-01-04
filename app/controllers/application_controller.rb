@@ -5,11 +5,19 @@ class ApplicationController < ActionController::Base
   helper_method :needs_black_triangle
 
   def after_sign_in_path_for(resource)
-    request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
+   if resource.is_a?(AdminUser)
+     return "/admin"
+   else
+     return request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
+   end
   end
 
   def after_sign_up_path_for(resource)
-    "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
+    if resource.is_a?(AdminUser)
+      return "/admin"
+    else
+      return "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
+    end
   end
 
   def set_admin_locale
