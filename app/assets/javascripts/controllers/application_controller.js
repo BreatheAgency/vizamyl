@@ -7,6 +7,7 @@ Course.ApplicationController = Ember.Controller.extend({
   signedIn: Ember.computed.notEmpty('currentUser'),
   isComplete: Ember.computed.bool('currentUser.completed'),
   isSkippable: Ember.computed.bool('currentUser.skippable'),
+  isUS: Ember.computed.equal('currentLocale', 'en-us'),
 
   currentStep: function() {
     return this.get('currentPage.step');
