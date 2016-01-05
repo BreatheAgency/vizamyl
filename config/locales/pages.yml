@@ -117,6 +117,9 @@ en:
       title: Important Risk & Safety Information
       body_html: |
         <p></p>
+    resources:
+      smpc_title: Vizamyl SmPC US
+      rainbow_title: Rainbow colour scale RGB values
 de:
   pages:
     home:
