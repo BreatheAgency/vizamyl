@@ -148,6 +148,8 @@ ActiveAdmin.setup do |config|
   #
   config.before_filter :set_admin_locale
   config.skip_before_filter :set_locale
+  config.skip_before_filter :redirect_locale
+
 
 
   # == Setting a Favicon
