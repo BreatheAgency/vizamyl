@@ -401,6 +401,7 @@ DEPENDENCIES
   high_voltage
   i18n-js!
   jquery-rails
+  mime-types (~> 2.6)
   normalize-rails
   oj
   passenger (>= 5.0.8)
