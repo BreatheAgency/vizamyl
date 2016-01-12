@@ -15,6 +15,7 @@ gem 'sass-rails', '~> 5.0'
 gem 'ember-rails', '0.16.4'
 gem 'ember-source', '1.9.0'
 gem 'ember-data-source', '1.0.0.beta.19.2'
+gem 'mime-types', '~> 2.6', require: 'mime/types/columnar'
 
 gem 'oj'
 gem 'pg'
