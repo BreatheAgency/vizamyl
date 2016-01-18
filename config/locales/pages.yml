@@ -113,6 +113,11 @@ en:
         body_html: |
 'en-us':
   pages:
+    home:
+      body_html: |
+        <h1>Welcome to the <br><strong>Electronic training programme for Vizamyl</strong></h1>
+        <p>If you are returning to the course,<br><strong>welcome back and please login.</strong></p>
+        <p>If you would like to begin the course,<br><strong>welcome, and please enrol.</strong></p>
     important-risk-and-safety-information:
       title_html: Important Risk and Safety Information<br>About Vizamyl&#0153; (Flutemetamol F 18 Injection)
       body_html: |
