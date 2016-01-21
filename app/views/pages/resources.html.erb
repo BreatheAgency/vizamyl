@@ -1,7 +1,12 @@
 <div class='resources row'>
   <div class='large-12 columns with-content with-minimum'>
-  <h2><%= t('.smpc_title')%></h2>
-  <a href='<%= asset_url("/pdfs/#{I18n.locale}/smpc.pdf")%>' target="_blank"><div class='download-pdf-button'></div></a>
+  <% if I18n.locale == :'en-us' %>
+    <h2><%= t('.package_insert_title')%></h2>
+    <a href='<%= asset_url("/pdfs/#{I18n.locale}/package_insert_from_smpc.pdf")%>' target="_blank"><div class='download-pdf-button'></div></a>
+  <% else %>
+    <h2><%= t('.smpc_title')%></h2>
+    <a href='<%= asset_url("/pdfs/#{I18n.locale}/smpc.pdf")%>' target="_blank"><div class='download-pdf-button'></div></a>
+  <% end %>
   <% if I18n.locale != :it %>
     <h2><%= t('.rainbow_title')%></h2>
     <a href='<%= asset_url("/pdfs/#{I18n.locale}/rainbow_colour_scale_rgb_values.pdf")%>' target="_blank"><div class='download-pdf-button'></div></a>
