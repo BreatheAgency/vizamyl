@@ -118,7 +118,7 @@ fr:
           correct: Félicitations! Vous avez réussi la formation Vizamyl programme électronique en interprétant correctement au moins 14 tests sur 15.<br><br>Si vous souhaitez consulter les explications pour chacun des tests, il vous suffit de cliquer sur le test. Sinon, cliquez sur le bouton « Suivant » pour terminer le programme.
           incorrect_one_html: Malheureusement, pour réussir la formation Vizamyl programme électronique, vous deviez interpréter correctement au moins 14 cas sur 15.<br><br>Si vous souhaitez consulter les explications pour chacun des tests, il vous suffit de cliquer sur le test. Dès que vous êtes prêt, cliquez sur « Suivant » pour tester à nouveau vos connaissances sur 15 autres tests.
           incorrect_two_one_html: Malheureusement, pour réussir la formation Vizamyl programme électronique, vous deviez interpréter correctement au moins 14 cas sur 15.<br><br>Si vous souhaitez consulter les explications pour chacun des tests, il vous suffit de cliquer sur le test.<br><br>Veuillez contacter votre représentant GE local via le site
-          incorrect_two_link: Web VIZAMYL
+          incorrect_two_link: Web Vizamyl
           incorrect_two_two_html: afin de planifier votre séance de formation en personne.
           review_explanation_video: Voir la vidéo d’explication <span class="index">%{count}</span>
 it:
