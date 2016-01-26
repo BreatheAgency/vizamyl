@@ -8,6 +8,5 @@ class Chapter < ActiveRecord::Base
 
   %i(title short_title).each do |translated_field|
     translates translated_field
-    
   end
 end
