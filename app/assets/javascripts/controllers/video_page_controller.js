@@ -1,6 +1,7 @@
 Course.VideoPageController = Ember.ObjectController.extend({
   needs: ['application', 'localeMenu'],
-  isSkippable: Ember.computed.alias('controllers.application.isSkippable'),
+  isSkippable: true,
+  // Ember.computed.alias('controllers.application.isSkippable'),
   finished: Ember.computed.alias('controllers.application.currentStep.completed'),
 
   complete: function() {
@@ -14,9 +15,8 @@ Course.VideoPageController = Ember.ObjectController.extend({
   }.property('isSkippable', 'finished', 'mandatory'),
 
   super_mandatory: function() {
-    // if (this.get('isSkippable')) { return false; };
-    // return this.get('mandatory');
-    return false;
+    if (this.get('isSkippable')) { return false; };
+    return this.get('mandatory');
   }.property('mandatory'),
 
   actions: {
