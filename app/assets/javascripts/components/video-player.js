@@ -5,7 +5,7 @@ Course.VideoPlayerComponent = Ember.Component.extend({
   didInsertElement: function() {
     this.player = window.videojs('player', { nativeControlsForTouch: false, customControlsOnMobile: true, controls: true, preload: true, autoplay: false });
     var that = this;
-    if (this.mandatory) {
+    if (this.get('mandatory')) {
       this.player.on('timeupdate', function(e){
         if (Math.floor(this.currentTime()) > that.get('maxSecondsSeek')) {
           that.player.currentTime(that.get('maxSecondsSeek') - 2);
