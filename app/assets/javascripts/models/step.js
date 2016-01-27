@@ -1,6 +1,6 @@
 Course.Step = DS.Model.extend({
   chapter: DS.belongsTo('chapter'),
-  progression: DS.belongsTo('progression'),
+  progression: DS.belongsTo('progression', { async: true }),
   position: DS.attr('number'),
   page: DS.belongsTo('page', { polymorphic: true, async: true }),
   title: DS.attr('string'),

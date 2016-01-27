@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125110016) do
+ActiveRecord::Schema.define(version: 20160126144435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -247,7 +247,10 @@ ActiveRecord::Schema.define(version: 20151125110016) do
     t.integer "page_id"
     t.string  "page_type",  limit: 255
     t.boolean "visible",                default: true
+    t.text    "locales",                default: [],   null: false, array: true
   end
+
+  add_index "steps", ["locales"], name: "index_steps_on_locales", using: :gin
 
   create_table "test_translations", force: :cascade do |t|
     t.integer  "test_id",                       null: false
