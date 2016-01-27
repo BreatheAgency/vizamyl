@@ -14,8 +14,9 @@ Course.VideoPageController = Ember.ObjectController.extend({
   }.property('isSkippable', 'finished', 'mandatory'),
 
   super_mandatory: function() {
-    if (this.get('isSkippable')) { return false; };
-    return this.get('mandatory');
+    // if (this.get('isSkippable')) { return false; };
+    // return this.get('mandatory');
+    return false;
   }.property('mandatory'),
 
   actions: {
