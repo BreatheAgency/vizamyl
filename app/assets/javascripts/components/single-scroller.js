@@ -5,6 +5,10 @@ Course.SingleScrollerComponent = Ember.Component.extend({
   imageHeight: 500,
   imageHeightMax: 0,
 
+  labelStyle: function(){
+    return 'min-width:' + this.get('imageWidth') + 'px;'
+  }.property('imageWidth'),
+
   didInsertElement: function() {
     var that = this;
     var drag = new Dragdealer(this.$('.dragdealer').get(0), {
