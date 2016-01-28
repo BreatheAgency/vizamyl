@@ -1,7 +1,6 @@
 Course.VideoPageController = Ember.ObjectController.extend({
   needs: ['application', 'localeMenu'],
-  isSkippable: true,
-  // Ember.computed.alias('controllers.application.isSkippable'),
+  isSkippable: Ember.computed.alias('controllers.application.isSkippable'),
   finished: Ember.computed.alias('controllers.application.currentStep.completed'),
 
   complete: function() {
