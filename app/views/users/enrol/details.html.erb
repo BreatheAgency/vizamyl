@@ -12,7 +12,7 @@
     <%= simple_form_for(@user, url: users_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
       <%= render 'tmp_storage_fields', f: f %>
       <div class='form-inputs'>
-        <label><%= t('activerecord.attributes.user.salutation') %></label>
+        <label><abbr title="required">*</abbr> <%= t('activerecord.attributes.user.salutation') %></label>
         <%= f.collection_radio_buttons(:salutation, t('devise.registrations.edit.salutations'), :to_s, :to_s, checked: @user.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
             b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
           end

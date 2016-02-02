@@ -13,7 +13,7 @@
     <%= simple_form_for(@user, url: users_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
       <%= render 'tmp_storage_fields', f: f %>
       <div class='form-inputs'>
-        <%= f.input :institution, as: :string, required: false %>
+        <%= f.input :institution, as: :string, required: true %>
       </div>
       <div class='form-actions button-container'>
         <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>

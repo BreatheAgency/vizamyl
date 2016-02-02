@@ -26,7 +26,8 @@ class User < ActiveRecord::Base
     step.validates :email, email: true
     step.validates :invite_code, inclusion: {
       in: proc { Rails.application.secrets.invite_codes },
-      if: Proc.new { form_step == 'details' }
+      if: Proc.new { form_step == 'details' },
+      message: "%{value} is not a valid invite code"
     }
   end
 
