@@ -34,14 +34,14 @@ Rails.application.routes.draw do
   # European
   scope ':locale', locale: /#{I18n.available_locales.reject {|x| x == :"en-us"}.join("|")}/ do
     scope module: 'european' do
-      resources :enrol, only: [:new, :create, :show, :update]
+      resources :enrol, only: [:new, :create, :show, :update], as: 'european_enrol'
     end
   end
 
   # American
   scope ':locale', locale: /en-us/ do
     scope module: 'american' do
-      resources :enrol, only: [:new, :create, :show, :update]
+      resources :enrol, only: [:new, :create, :show, :update], as: 'american_enrol'
     end
   end
 

@@ -8,8 +8,8 @@
       <li></li>
       <li></li>
     </ul>
-    <h1><%= t('.title') %></h1>
-    <%= simple_form_for(@user, url: users_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
+    <h1><%= t('.title') %> US</h1>
+    <%= simple_form_for(@user, url: users_locale_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
       <%= render 'tmp_storage_fields', f: f %>
       <div class='form-inputs'>
         <label><abbr title="required">*</abbr> <%= t('activerecord.attributes.user.salutation') %></label>

@@ -1,5 +1,5 @@
 en:
-  users:
+  european:
     enrol:
       details:
         title: Please enter your details.
@@ -37,12 +37,13 @@ en:
           Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>
         marketing_overall_opt_in_tick_html: |
           (Please tick one or more options)
+  users:
     course_completion:
       success:
         description_html: Thank you for participating in the Vizamyl electronic training programme.<br><br>Please download the PDF of your results and keep for your records.
         download_results: Download results
 de:
-  users:
+  european:
     enrol:
       details:
         title: Bitte geben Sie Ihre persönlichen Daten ein.
@@ -82,12 +83,13 @@ de:
           Besuch eines Vertreters von GE Healthcare<br><span class="obligation">(Es besteht keinerlei Verpflichtung zu Treffen mit GE-Vertretern)</span>
         marketing_overall_opt_in_tick_html: |
           (Bitte markieren Sie mindestens eine Option)
+  users:
     course_completion:
       success:
         description_html: Vielen Dank für Ihre Teilnahme am elektronischen Schulungsprogramm zu Vizamyl.<br><br>Bitte laden Sie die PDF-Datei mit Ihren Ergebnissen herunter und heben Sie diese für Ihre Unterlagen auf.
         download_results: Ergebnisse herunterladen
 fr:
-  users:
+  european:
     enrol:
       details:
         title: Veuillez saisir vos données.
@@ -125,12 +127,13 @@ fr:
           Visite d’un représentant de GE Healthcare<br><span class="obligation">(La visite d’un représentant n’est pas obligatoire)</span>
         marketing_overall_opt_in_tick_html: |
           (Veuillez cocher une ou plusieurs options)
+  users:
     course_completion:
       success:
         description_html: Nous vous remercions d’avoir participé au programme de formation électronique Vizamyl (flutémétamol (<sup>18</sup>F)).<br><br>Veuillez télécharger la version PDF de vos résultats et la garder pour référence.
         download_results: Télécharger les résultats
 it:
-  users:
+  european:
     enrol:
       details:
         title: Inserire i propri dati
@@ -168,12 +171,13 @@ it:
           Visita di un rappresentante GE Healthcare<br><span class="obligation">(Non esiste l’obbligo di incontrare un rappresentante).</span>
         marketing_overall_opt_in_tick_html: |
           (Spuntare una o più opzioni)
+  users:
     course_completion:
       success:
         description_html: Grazie per aver partecipato al programma di formazion on-line di Vizamyl<br><br>Si prega di scaricare e conservare il PDF con i risultati.
         download_results: Scaricare i risultati
 es:
-  users:
+  european:
     enrol:
       details:
         title: Introduzca su información personal.
@@ -211,6 +215,7 @@ es:
           Visita de un representante de GE Healthcare<br><span class="obligation">(No hay obligación de ver a un representante)</span>
         marketing_overall_opt_in_tick_html: |
           (Marque una o más opciones)
+  users:
     course_completion:
       success:
         description_html: Gracias por participar en el programa electrónico de formación de Vizamyl.<br><br>Descargue el PDF con sus resultados y guárdelo para posteriores consultas.

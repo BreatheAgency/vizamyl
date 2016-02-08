@@ -10,7 +10,7 @@
     </ul>
     <h1><%= t('.title_html') %></h1>
     <p><%= t('.description_html') %></p>
-    <%= simple_form_for(@user, url: users_enrol_index_path, html: { class: 'form' }) do |f| %>
+    <%= simple_form_for(@user, url: users_locale_enrol_index_path, html: { class: 'form' }) do |f| %>
       <%= render 'tmp_storage_fields', f: f %>
       <p><%= t('.marketing_overall_opt_in_description_html') %></p>
       <%= f.input :marketing_overall_opt_in, label: t('.marketing_overall_opt_in_html') %>

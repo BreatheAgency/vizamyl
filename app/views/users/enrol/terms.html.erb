@@ -10,7 +10,7 @@
     </ul>
     <h1><%= t('.title_html') %></h1>
     <%= t('.description_one_html') %>
-    <%= simple_form_for(@user, url: users_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
+    <%= simple_form_for(@user, url: users_locale_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
       <%= render 'tmp_storage_fields', f: f %>
       <div class='form-inputs'>
         <%= f.input :terms_and_conditions_opt_in, required: true, label: t('.terms_accept_html') %>
