@@ -47,7 +47,7 @@ class ApplicationController < ActionController::Base
     if european_locale
       return european_enrol_path(*args, &block)
     else
-      return american_enrol_path(*args, &block)
+      return new_american_enrol_path
     end
   end
 
