@@ -26,14 +26,6 @@ SELECT * FROM question_translations WHERE question_translations.title ILIKE '%(1
 UPDATE text_translations SET body = replace(body,'(18F)','(<sup>18</sup>F)');
 SELECT * FROM text_translations WHERE text_translations.body ILIKE '%(18F)%';
 
-SELECT sum(
-  array_length(regexp_split_to_array(body, '\s'),1) +
-  array_length(regexp_split_to_array(abbreviations, '\s'),1)
-)
-AS total FROM text_translations;
-
-
-
 SELECT * FROM answer_translations WHERE locale='it';
 
 SELECT * FROM answer_translations WHERE locale='it' AND body LIKE '%<p> </p>%';
@@ -47,3 +39,61 @@ UPDATE question_translations SET title = regexp_replace(title, '[\n\r]+', ' ', '
 COUNT(DISTINCT(users));
 
 SELECT COUNT(DISTINCT id) FROM users;
+
+
+
+
+
+
+
+
+
+####################################################################
+
+
+
+
+
+
+
+SELECT sum(
+  array_length(regexp_split_to_array(title, '\s'),1) +
+  array_length(regexp_split_to_array(body, '\s'),1) +
+  array_length(regexp_split_to_array(abbreviations, '\s'),1)
+)
+AS text_total FROM text_translations;
+
+SELECT sum(
+  array_length(regexp_split_to_array(title, '\s'),1) +
+  array_length(regexp_split_to_array(body, '\s'),1) +
+  array_length(regexp_split_to_array(abbreviations, '\s'),1)
+)
+AS video_title FROM video_translations;
+
+SELECT sum(
+  array_length(regexp_split_to_array(title, '\s'),1) +
+  array_length(regexp_split_to_array(correct_title, '\s'),1) +
+  array_length(regexp_split_to_array(incorrect_title, '\s'),1)
+)
+AS question_total FROM question_translations;
+
+SELECT sum(
+  array_length(regexp_split_to_array(title, '\s'),1) +
+  array_length(regexp_split_to_array(body, '\s'),1)
+)
+AS interactive_total FROM interactive_translations;
+
+SELECT sum(
+  array_length(regexp_split_to_array(body, '\s'),1)
+)
+AS answer_total FROM answer_translations;
+
+SELECT sum(
+  array_length(regexp_split_to_array(body, '\s'),1)
+)
+AS question_intro_total FROM question_intro_translations;
+
+SELECT sum(
+  array_length(regexp_split_to_array(title, '\s'),1)
+)
+AS chapter_total FROM chapter_translations;

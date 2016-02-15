@@ -6,7 +6,11 @@
     <div class='button-container row'>
       <div class='small-12 medium-12 large-12 columns'>
         <a href='<%= new_user_session_path %>'><%= t('layouts.application.login') %><i class='fi-arrow-right'></i></a>
-        <a href='<%= users_enrol_path(id: User.form_steps.first, locale: I18n.locale) %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+        <% if european_locale? %>
+          <a href='<%= european_enrol_path(id: User.form_steps.first, locale: I18n.locale) %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+        <% else %>
+          <a href='<%= new_american_enrol_path(locale: I18n.locale) %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+        <% end %>
       </div>
     </div>
   </div>

@@ -26,7 +26,8 @@ class User < ActiveRecord::Base
     step.validates :email, email: true
     step.validates :invite_code, inclusion: {
       in: proc { Rails.application.secrets.invite_codes },
-      if: Proc.new { form_step == 'details' }
+      if: Proc.new { form_step == 'details' || form_step == nil },
+      message: "%{value} is not a valid invite code"
     }
   end
 
@@ -40,6 +41,11 @@ class User < ActiveRecord::Base
 
   with_options :if => -> { required_for_step?(:terms) && (I18n.locale == :de || I18n.locale == :'de-at') } do |step|
     step.validates :cookies_opt_in, inclusion: { in: [true] }
+  end
+
+  with_options :if => -> { I18n.locale == :'en-us' } do |step|
+    attr_accessor :marketing_overall_opt_in_other
+    step.validates :privacy_opt_in, inclusion: { in: [true], message: "Please review the privacy statement" }
   end
 
   def full_name

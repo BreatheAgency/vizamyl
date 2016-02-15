@@ -3,6 +3,10 @@ class ApplicationController < ActionController::Base
   before_action :set_locale
   before_action :redirect_locale
   helper_method :needs_black_triangle
+  helper_method :european_locale?
+  helper_method :american_locale?
+  helper_method :users_locale_enrol_path
+  helper_method :users_locale_enrol_index_path
 
   def after_sign_in_path_for(resource)
    if resource.is_a?(AdminUser)
@@ -26,13 +30,34 @@ class ApplicationController < ActionController::Base
 
   def needs_black_triangle
     return false if I18n.locale == :'en-us'
-    request.original_fullpath == users_enrol_index_path || new_user_session_path || users_enrol_path(id: 'details') || users_enrol_path(id: 'marketing') || users_enrol_path(id: 'terms') || users_enrol_path(id: 'institution') || "/#{I18n.locale}"
+    request.original_fullpath == users_locale_enrol_index_path || new_user_session_path || users_locale_enrol_path(id: 'details') || users_locale_enrol_path(id: 'marketing') || users_locale_enrol_path(id: 'terms') || users_locale_enrol_path(id: 'institution') || "/#{I18n.locale}"
   end
 
-  # def active_admin_access_denied(exception)
-  #   sign_out(:user)
-  #   redirect_to(new_admin_user_session_path, alert: exception.message)
-  # end
+  def european_locale
+    !american_locale
+  end
+  alias_method :european_locale?, :european_locale
+
+  def american_locale
+    I18n.locale == :'en-us'
+  end
+  alias_method :american_locale?, :american_locale
+
+  def users_locale_enrol_path(*args, &block)
+    if european_locale
+      return european_enrol_path(*args, &block)
+    else
+      return new_american_enrol_path
+    end
+  end
+
+  def users_locale_enrol_index_path(*args, &block)
+    if european_locale
+      return european_enrol_index_path(*args, &block)
+    else
+      return american_enrol_index_path(*args, &block)
+    end
+  end
 
   private
 
