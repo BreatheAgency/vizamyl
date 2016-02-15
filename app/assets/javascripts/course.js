@@ -1,4 +1,3 @@
-//= require jquery
 //= require underscore
 //= require es5-shim/es5-shim
 //= require video

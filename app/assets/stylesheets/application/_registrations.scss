@@ -123,10 +123,25 @@
   }
 }
 
-.registrations.institution, .registrations.terms, .registrations.marketing {
-  // label {
-  //   font-weight: bold;
-  //   font-size: rem-calc(18);
-  //   line-height: 1;
-  // }
+.registrations.us {
+  a {
+    text-decoration: underline;
+    font-weight: normal;
+  }
+
+  .privacy {
+    p {
+      margin-top: 1.5em;
+      margin-bottom: 0.4em;
+    }
+    .user_privacy_opt_in {
+      padding-top: 0;
+    }
+  }
+
+  .row-input {
+    .columns {
+      padding-top: 0;
+    }
+  }
 }
