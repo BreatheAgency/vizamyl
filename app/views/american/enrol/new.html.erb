@@ -65,6 +65,7 @@
       <div class="row row-input">
         <div class="small-6 columns">
           <%= f.input :password, required: true %>
+          <p>Password must be at least eight charcters long</p>
         </div>
         <div class="small-6 columns">
           <%= f.input :password_confirmation, required: true %>
@@ -74,7 +75,7 @@
       <div class="row row-input">
         <div class="small-12 columns">
           <%= f.input :marketing_overall_opt_in, required: true, label: 'I would like to opt-in to receive other materials or information from GE Healthcare about Vizamyl.' %>
-          <div class="input boolean required user_marketing_overall_opt_in_other"><input value="0" type="hidden" name="user[user_marketing_overall_opt_in_other]"><label class="boolean required control-label checkbox" for="user_marketing_overall_opt_in_other"><input class="boolean required" type="checkbox" value="1" name="user[user_marketing_overall_opt_in_other]" id="user_marketing_overall_opt_in_other"><abbr title="required">*</abbr> I opt-out to receive any information regarding Vizamyl. By opting-out you are not prohibited from taking this training.</label></div>
+          <%= f.input :marketing_overall_opt_in_other, required: true, label: 'I opt-out to receive any information regarding Vizamyl. By opting-out you are not prohibited from taking this training.', as: :boolean %>
         </div>
       </div>
 

@@ -18,6 +18,8 @@ class American::EnrolController < ApplicationController
       sign_in @user, bypass: true
       redirect_to after_sign_up_path_for(@user)
     else
+      @user.errors[:marketing_overall_opt_in] << ""
+      @user.errors[:marketing_overall_opt_in_other] << ""
       @user.clean_up_passwords
       render 'new'
     end

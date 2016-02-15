@@ -44,6 +44,7 @@ class User < ActiveRecord::Base
   end
 
   with_options :if => -> { I18n.locale == :'en-us' } do |step|
+    attr_accessor :marketing_overall_opt_in_other
     step.validates :privacy_opt_in, inclusion: { in: [true], message: "Please review the privacy statement" }
   end
 

@@ -129,6 +129,13 @@
     font-weight: normal;
   }
 
+  label+small {
+    margin-top: 1.5em;
+    font-size: rem-calc(14);
+    font-weight: normal;
+    color: #f04124;
+  }
+
   .privacy {
     p {
       margin-top: 1.5em;
