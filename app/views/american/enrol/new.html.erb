@@ -3,7 +3,7 @@
     <div class="row">
       <div class="small-12 columns">
         <h1>Registration</h1>
-        <p><a href="#">Privacy Statement for Vizamyl (flutemetamol F 18 injection) Electronic Read Training Program</a></p>
+        <p><a href="http://www.ge.com/privacy" target="_blank">Privacy Statement for Vizamyl (flutemetamol F 18 injection) Electronic Read Training Program</a></p>
         <p>Information we collect and how we use it:<br><br>Personal Information<br><br>You will be asked to provide personal information (your first name, last name, and salutation) on this training program. Unless you choose otherwise below, this information will be used solely for the purpose of identifying you on the test results section. You then will be given the opportunity to print or save this information at the completion of the training program.<br><br>Please complete the registration information below to continue.</p>
         <p><small>* Required Feild</small></p>
       </div>
@@ -81,7 +81,7 @@
       <div class="row row-input privacy">
         <div class="small-12 columns">
           <p>Privacy Statement:</p>
-          <%= f.input :privacy_opt_in, required: true, label: 'I have reviewed the Privacy statement please click here to view.' %>
+          <%= f.input :privacy_opt_in, required: true, label: 'I have reviewed the Privacy statement please <a href="http://www.ge.com/privacy" target="_blank">click here</a> to view.'.html_safe %>
         </div>
       </div>
 
