@@ -23,6 +23,10 @@ en:
 'en-us':
   layouts:
     application:
+      course_menu: Course Menu
+      my_account: My Account
+      logout: Log Out
+      contact: Contact Us
       logo:
         1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
         2_html: <span>(Flutemetamol F18</span>
