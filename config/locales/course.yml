@@ -43,6 +43,9 @@ en:
   course:
     pages:
       test:
+        question:
+          single_title: Self-Assessment Question
+          plural_title: Self-Assessment Questions
         test_case:
           description_html: First to access the views, please click on the image at the right. You can navigate through the views by clicking on the scroll bar at the right and dragging with your mouse.<br><br>Assess the five regions and then make an overall assessment.
 de:
