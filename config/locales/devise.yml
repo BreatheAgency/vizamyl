@@ -66,6 +66,14 @@ en:
         password_label: New password
         password_confirmation_label: Confirm new password
         submit: Submit
+'en-us':
+  devise:
+    sessions:
+      new:
+        intro: |
+          Please enter your email address
+          and password to log in.
+        login: Log in
 de:
   devise:
     mailer:
