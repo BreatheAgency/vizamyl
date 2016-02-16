@@ -25,6 +25,7 @@ en:
     application:
       course_menu: Course Menu
       my_account: My Account
+      login: Log In
       logout: Log Out
       contact: Contact Us
       logo:
