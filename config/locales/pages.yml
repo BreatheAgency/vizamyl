@@ -115,9 +115,9 @@ en:
   pages:
     home:
       body_html: |
-        <h1>Welcome to the <br><strong>Electronic training programme for Vizamyl</strong></h1>
-        <p>If you are returning to the course,<br><strong>welcome back and please login.</strong></p>
-        <p>If you would like to begin the course,<br><strong>welcome, and please enrol.</strong></p>
+        <h1>Welcome to the <br><strong>Vizamyl Electronic Reader Training Program</strong></h1>
+        <p>If you are returning to the course,<br><strong>welcome back and please log in.</strong></p>
+        <p>If you would like to begin the course,<br><strong>welcome, and please enroll.</strong></p>
     references:
       left:
         title: |
