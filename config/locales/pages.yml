@@ -123,21 +123,21 @@ en:
         title: |
          References
         body_html: |
-          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. <i>Acta Neuropathol 1991; 82: 239-59.</i></p>
-          <p>Curtis C. et al. Phase 3 Trial of Flutemetamol Labeled With Radioactive Fluorine 18 Imaging and Neuritic Plaque Density. <i>JAMA Neurol. 2015 Mar; 72(3): 287-94.</i></p>
-          <p>Jack CR Jr, Knopman DS, Jagust WJ, et al. Hypothetical Model of Dynamic Biomarkers of the Alzheimer’s pathological cascade. <i>Lancet Neurol 2010; 9 (1) 119-128.</i></p>
-          <p>Hyman BT, Phelps CH, Beach TG <i>et al</i>. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. <i>Alzheimers Dement 2012; 8: 1-13.</i></p>
-          <p>Mathis CA, Lopresti BJ, Klunk WE. Impact of Amyloid imaging on drug development in Alzheimer’s disease. Nuc Med Biol 2007; 34 (7): 809-822</p>
-          <p>McKhann G, Drachman D, Folstein M <i>et al</i>. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. Neurology 1984; 34: 939-44.</p>
-          <p>McKhann G, Knopman D, Chertkow H <i>et al</i>. The diagnosis of dementia due to Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 263-9.</p>
+          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. <i>Acta Neuropathol.</i>1991;82(4):239-259.</p>
+          <p>Curtis C, Gamez JE, Singh U, et al. Phase 3 trial of flutemetamol labeled with radioactive fluorine 18 imaging and neuritic plaque density. <i>JAMA Neurol</i>. 2015;72(3):287-294.</p>
+          <p><u>Jack CR Jr</u>, <u>Knopman DS</u>, <u>Jagust WJ</u>, et al. Hypothetical model of dynamic biomarkers of the Alzheimer’s pathological cascade. <i>Lancet Neurol.</i> 2010;9(1):119-128.</p>
+          <p><u>Hyman BT</u>, <u>Phelps CH</u>, <u>Beach TG</u>, et al. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. <i>Alzheimers Dement</i>. 2012;8(1):1-13.</i></p>
+          <p><u>Mathis CA</u>, <u>Lopresti BJ</u>, <u>Klunk WE</u>. Impact of amyloid imaging on drug development in Alzheimer’s disease. <i>Nuc Med Biol</i>. 2007;34(7):809-822.</p>
+          <p><u>McKhann G</u>, <u>Drachman D</u>, <u>Folstein M</u>, <u>Katzman R</u>, <u>Price D</u>, <u>Stadlan EM</u>. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. <i>Neurology</i>. 1984;34(7):939-944.</p>
+          <p>McKhann GM, Knopman DS, Chertkow H, et al. The diagnosis of dementia due to Alzheimer’s disease: recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. <i>Alzheimers Dement</i>. 2011;7(3):263-269.</p>
       right:
         body_html: |
-          <p>Mirra SS, Heyman A, McKeel D <i>et al</i>. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
-          <p>Nelissen N, Van Laere K, Thurfjell L, Owenius R, et al. Phase I study of the Pittsburgh Compound B derivative 18F-flutemetamol in healthy volunteers and patients with probable Alzheimer disease. J Nucl Medicine 2009; 50: 1251-1259.</p>
-          <p>Querfurth HW, LaFerla FM. Alzheimer’s Disease. N Engl J Med 2010; 362 (4): 329-344.</p>
-          <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G <i>et al</i>. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-25.</p>
-          <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. Ann Neurol 2010; 68: 319-29.</p>
-          <p>Vizamyl (Flutemetamol F 18 injection) Full Prescribing Information, GE Healthcare Inc. October 2014.</p>
+          <p>Mirra SS, Heyman A, McKeel D, et al. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. <i>Neurology</i> 1991;41(4):479-486.</p>
+          <p>Nelissen N, Van Laere K, Thurfjell L, et al. Phase I study of the Pittsburgh Compound B derivative 18F-flutemetamol in healthy volunteers and patients with probable Alzheimer disease. <i>J Nucl Medicine</i> 2009;50(8):1251-1259.</p>
+          <p>Querfurth HW, LaFerla FM. Alzheimer’s disease. <i>N Engl J Med</i>. 2010;362(4):329-344.</p>
+          <p>Rowe CC, Ng S, Ackermann U, et al. Imaging beta-amyloid burden in aging and dementia. <i>Neurology</i>. 2007;68(20):1718-1725.</p>
+          <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. <i>Ann Neurol</i>. 2010;68(3):319-329.</p>
+          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE Healthcare 2014.</p>
     important-risk-and-safety-information:
       title_html: Important Risk and Safety Information<br>About Vizamyl&#0153; (Flutemetamol F 18 Injection)
       body_html: |
