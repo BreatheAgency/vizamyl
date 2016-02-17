@@ -151,15 +151,10 @@ en:
          For Medical Affairs Support
          and Other Enquiries:
         body_html: |
-          <p>If you would like additional <strong>medical information</strong> about Vizamyl, please contact us at:</p>
-          <p><a href="mailto:professionalservices.medical@ge.com">professionalservices.medical@ge.com</a></p>
-          <p>For other enquiries, including requests related to <strong>image reader training</strong>, please contact us at:</p>
-          <p><a href="mailto:us.vizamyl@ge.com">us.vizamyl@ge.com</a></p>
-          <p><strong>Adverse events</strong> or complaints should be immediately reported</p>
-          <p>to the Pharmacovigliance Safety group at <a href="tel:800-654-0118">800 654 0118</a> or</p>
-          <p><a href="mailto:DrugSafetyPrinceton@ge.com">DrugSafetyPrinceton@ge.com</a></p>
-          <p>Adverse events can also be reported directly to the FDA at <a href="tel:800-FDA-1088">800 FDA 1088</a></p>
-          <p>(or <a href="www.fda.gov/medwatch" target="_blank">www.fda.gov/medwatch</a>) should the reporter not wish to contact GE Healthcare.</p>
+          <p>If you would like additional <strong>medical information</strong> about Vizamyl, please contact us by email at; <a href="mailto:professionalservices.medical@ge.com">professionalservices.medical@ge.com</a></p>
+          <p>For other enquiries, including requests related to <strong>image reader training</strong>, please contact us by email at; <a href="mailto:us.vizamyl@ge.com">us.vizamyl@ge.com</a></p>
+          <p><strong>Adverse events</strong> or complaints should be immediately reported to the Pharmacovigliance Safety Group at <a href="tel:800-654-0118">800 654 0118</a> or by email at Drug Safety <a href="mailto:DrugSafetyPrinceton@ge.com">DrugSafetyPrinceton@ge.com</a></p>
+          <p>Should the reporter not wish to contact GE Healthcare, adverse can also be reported to the U.S Food & Drug Administration at <a href="tel:800-FDA-1088">800 FDA 1088</a> or at <a href="www.fda.gov/medwatch" target="_blank">www.fda.gov/medwatch</a></p>
 de:
   pages:
     home:
