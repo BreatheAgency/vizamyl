@@ -148,10 +148,10 @@ en:
     contact:
       left:
         title: |
-         Medical Support
-         and other enquiries:
+         For Medical Affairs Support
+         and Other Enquiries:
         body_html: |
-          <p>If you would like further <strong>medical information</strong> about Vizamyl, please contact us at:</p>
+          <p>If you would like additional <strong>medical information</strong> about Vizamyl, please contact us at:</p>
           <p><a href="mailto:professionalservices.medical@ge.com">professionalservices.medical@ge.com</a></p>
           <p>For other enquiries, including requests related to <strong>image reader training</strong>, please contact us at:</p>
           <p><a href="mailto:us.vizamyl@ge.com">us.vizamyl@ge.com</a></p>
