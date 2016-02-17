@@ -123,7 +123,7 @@ en:
         title: |
          References
         body_html: |
-          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. <i>Acta Neuropathol.</i>1991;82(4):239-259.</p>
+          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. <i>Acta Neuropathol</i>. 1991;82(4):239-259.</p>
           <p>Curtis C, Gamez JE, Singh U, et al. Phase 3 trial of flutemetamol labeled with radioactive fluorine 18 imaging and neuritic plaque density. <i>JAMA Neurol</i>. 2015;72(3):287-294.</p>
           <p><u>Jack CR Jr</u>, <u>Knopman DS</u>, <u>Jagust WJ</u>, et al. Hypothetical model of dynamic biomarkers of the Alzheimer’s pathological cascade. <i>Lancet Neurol.</i> 2010;9(1):119-128.</p>
           <p><u>Hyman BT</u>, <u>Phelps CH</u>, <u>Beach TG</u>, et al. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. <i>Alzheimers Dement</i>. 2012;8(1):1-13.</i></p>
@@ -132,8 +132,8 @@ en:
           <p>McKhann GM, Knopman DS, Chertkow H, et al. The diagnosis of dementia due to Alzheimer’s disease: recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. <i>Alzheimers Dement</i>. 2011;7(3):263-269.</p>
       right:
         body_html: |
-          <p>Mirra SS, Heyman A, McKeel D, et al. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. <i>Neurology</i> 1991;41(4):479-486.</p>
-          <p>Nelissen N, Van Laere K, Thurfjell L, et al. Phase I study of the Pittsburgh Compound B derivative 18F-flutemetamol in healthy volunteers and patients with probable Alzheimer disease. <i>J Nucl Medicine</i> 2009;50(8):1251-1259.</p>
+          <p>Mirra SS, Heyman A, McKeel D, et al. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. <i>Neurology</i>. 1991;41(4):479-486.</p>
+          <p>Nelissen N, Van Laere K, Thurfjell L, et al. Phase I study of the Pittsburgh Compound B derivative 18F-flutemetamol in healthy volunteers and patients with probable Alzheimer disease. <i>J Nucl Med</i>. 2009;50(8):1251-1259.</p>
           <p>Querfurth HW, LaFerla FM. Alzheimer’s disease. <i>N Engl J Med</i>. 2010;362(4):329-344.</p>
           <p>Rowe CC, Ng S, Ackermann U, et al. Imaging beta-amyloid burden in aging and dementia. <i>Neurology</i>. 2007;68(20):1718-1725.</p>
           <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. <i>Ann Neurol</i>. 2010;68(3):319-329.</p>
@@ -151,9 +151,9 @@ en:
          For Medical Affairs Support
          and Other Enquiries:
         body_html: |
-          <p>If you would like additional <strong>medical information</strong> about Vizamyl, please contact us by email at; <a href="mailto:professionalservices.medical@ge.com">professionalservices.medical@ge.com</a></p>
-          <p>For other enquiries, including requests related to <strong>image reader training</strong>, please contact us by email at; <a href="mailto:us.vizamyl@ge.com">us.vizamyl@ge.com</a></p>
-          <p><strong>Adverse events</strong> or complaints should be immediately reported to the Pharmacovigliance Safety Group at <a href="tel:800-654-0118">800 654 0118</a> or by email at Drug Safety <a href="mailto:DrugSafetyPrinceton@ge.com">DrugSafetyPrinceton@ge.com</a></p>
+          <p>If you would like additional <strong>medical information</strong> about Vizamyl, please contact us by email at <a href="mailto:professionalservices.medical@ge.com">professionalservices.medical@ge.com</a></p>
+          <p>For other enquiries, including requests related to <strong>image reader training</strong>, please contact us by email at <a href="mailto:us.vizamyl@ge.com">us.vizamyl@ge.com</a></p>
+          <p><strong>Adverse events</strong> or complaints should be immediately reported to the Pharmacovigliance Safety Group at <a href="tel:800-654-0118">800 654 0118</a> or by email at <a href="mailto:DrugSafetyPrinceton@ge.com">DrugSafetyPrinceton@ge.com</a></p>
           <p>Should the reporter not wish to contact GE Healthcare, adverse can also be reported to the U.S Food & Drug Administration at <a href="tel:800-FDA-1088">800 FDA 1088</a> or at <a href="www.fda.gov/medwatch" target="_blank">www.fda.gov/medwatch</a></p>
 de:
   pages:
