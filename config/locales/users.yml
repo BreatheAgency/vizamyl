@@ -42,6 +42,12 @@ en:
       success:
         description_html: Thank you for participating in the Vizamyl electronic training programme.<br><br>Please download the PDF of your results and keep for your records.
         download_results: Download results
+'en-us':
+  users:
+    course_completion:
+      success:
+        description_html: Thank you for participating in the Electronic Reader Training Program.<br><br>Please download the PDF of your results and keep it for your records.
+        download_results: Download results
 de:
   european:
     enrol:
