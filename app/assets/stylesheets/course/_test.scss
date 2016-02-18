@@ -94,6 +94,10 @@
     .question {
       display: inline-block;
 
+      ol {
+        margin-left: 0.9em;
+      }
+
       label {
         margin-right: 0;
       }
