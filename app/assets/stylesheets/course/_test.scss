@@ -10,6 +10,10 @@
 
   @import 'image_scroller';
 
+  ol {
+    margin-left: 0.9em;
+  }
+
   .test-progress {
     margin-bottom: rem-calc(20);
 
@@ -93,10 +97,6 @@
 
     .question {
       display: inline-block;
-
-      ol {
-        margin-left: 0.9em;
-      }
 
       label {
         margin-right: 0;
