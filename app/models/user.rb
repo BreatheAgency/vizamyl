@@ -68,7 +68,7 @@ class User < ActiveRecord::Base
     self.transaction do
       self.progressions.update_all(amount: 1)
       self.passed_round_two = Time.now
-      self.save!
+      self.save
     end
   end
 
