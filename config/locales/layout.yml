@@ -14,7 +14,7 @@ en:
       resources: Resources
       contact: Contact
       copyright_html: |
-        <p>&copy;2015 General Electric Company - All rights reserved.</p>
+        <p>&copy;2016 General Electric Company - All rights reserved.</p>
         <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
         <p>Vizamyl is a trademark of General Electric Company or one of its subsidiaries.</p>
         <p><a href="/en/terms-and-conditions">Terms and conditions</a></p>
@@ -25,14 +25,20 @@ en:
     application:
       logo:
         1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
-        2_html: <span>Flutemetamol F18</span>
-        3_html: <span>Injection</span>
+        2_html: <span>(Flutemetamol F 18</span>
+        3_html: <span>Injection)</span>
+      course_menu: Course Menu
+      my_account: My Account
+      login: Log In
+      logout: Log Out
+      enrol: Enroll
+      contact: Contact Us
       important_risk_and_safety_information: 'Important Risk & Safety Information'
       copyright_html: |
-        <p>&copy;2015 General Electric Company - All rights reserved.</p>
-        <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
-        <p>Vizamyl is a trademark of General Electric Company or one of its subsidiaries.</p>
-        <p><a href="/en-us/terms-and-conditions">Terms and conditions</a></p>
+        <p>&copy;2016 General Electric Company</p>
+        <p>GE, the GE Monogram, and Vizamyl are trademarks of General Electric Company.</p>
+        <p>February 2016 JB37321US version 4.1</p>
+        <p><a href="http://www3.gehealthcare.com/en/footer/terms_and_conditions" target="_blank">Terms and conditions</a></p>
 de:
   layouts:
     application:
@@ -50,7 +56,7 @@ de:
       contact: Kontakt
       copyright_html: |
         <p>VIZAMYL DE Version 1.0 – Oktober 2015</p>
-        <p>&copy;2015 General Electric Company - Alle Rechte vorbehalten.</p>
+        <p>&copy;2016 General Electric Company - Alle Rechte vorbehalten.</p>
         <p>GE und GE Monogram sind Handelsmarken der General Electric Company</p>
         <p>Vizamyl ist eine Marke der General Electric Company oder eines ihrer Tochterunternehmen</p>
         <p><a href="/de/terms-and-conditions">Nutzungsbedingungen</a></p>
@@ -61,7 +67,7 @@ de:
     application:
       copyright_html: |
         <p>VIZAMYL AT Version 1.0 – Oktober 2015</p>
-        <p>&copy;2015 General Electric Company - Alle Rechte vorbehalten.</p>
+        <p>&copy;2016 General Electric Company - Alle Rechte vorbehalten.</p>
         <p>GE und GE Monogram sind Handelsmarken der General Electric Company</p>
         <p>Vizamyl ist eine Marke der General Electric Company oder eines ihrer Tochterunternehmen</p>
         <p><a href="/de-at/terms-and-conditions">Nutzungsbedingungen</a></p>
@@ -82,7 +88,7 @@ fr:
       contact: Contact
       copyright_html: |
         <p>VIZA/FR @/002/11/2015</p>
-        <p>&copy;2015 General Electric Company – Tous droits réservés.</p>
+        <p>&copy;2016 General Electric Company – Tous droits réservés.</p>
         <p>GE et le monogramme GE sont des marques commerciales de General Electric Company.</p>
         <p>Vizamyl est une marque commerciale de General Electric Company ou de l’une de ses filiales.</p>
         <p><a href="/fr/terms-and-conditions">Conditions générales</a></p>
@@ -104,7 +110,7 @@ it:
       resources: Risorse
       contact: Contatto
       copyright_html: |
-        <p>&copy;2015 Società General Electric - Tutti i diritti riservati</p>
+        <p>&copy;2016 Società General Electric - Tutti i diritti riservati</p>
         <p>GE e il monogramma GE sono marchi depositati della società General Electric.</p>
         <p>Vizamyl è un marchio depositato della società General Electric una delle sue filiali.</p>
         <p><a href="/it/terms-and-conditions">Termini e condizioni</a></p>
@@ -126,7 +132,7 @@ es:
       resources: Recursos
       contact: Contacto
       copyright_html: |
-        <p>&copy;2015 General Electric Company. Todos los derechos reservados.</p>
+        <p>&copy;2016 General Electric Company. Todos los derechos reservados.</p>
         <p>GE y GE monogram son marcas comerciales de General Electric Company.</p>
         <p>Vizamyl es una marca comercial de General Electric Company o de una de sus subsidiarias.</p>
         <p><a href="/es/terms-and-conditions">Términos y condiciones</a></p>

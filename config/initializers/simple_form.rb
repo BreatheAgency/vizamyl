@@ -67,9 +67,9 @@ SimpleForm.setup do |config|
 
   # CSS class to add for error notification helper.
   config.error_notification_class = 'alert alert-error'
-  
+
   #
-  config.label_text = lambda { |label, required, explicit_label| "#{} #{label}" }
+  # config.label_text = lambda { |label, required, explicit_label| "#{} #{label}" }
 
   # ID to add for error notification helper.
   # config.error_notification_id = nil

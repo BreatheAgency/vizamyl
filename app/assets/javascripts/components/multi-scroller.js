@@ -6,6 +6,10 @@ Course.MultiScrollerComponent = Ember.Component.extend({
   imageHeightMax: 0,
   images: [],
 
+  labelStyle: function(){
+    return 'min-width:' + this.get('imageWidth') + 'px;'
+  }.property('imageWidth'),
+
   didInsertElement: function() {
     var that = this;
     var drag = new Dragdealer(this.$('.dragdealer').get(0), {
