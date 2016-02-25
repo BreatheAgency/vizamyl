@@ -2,6 +2,7 @@ ActiveAdmin.register User, as: 'Users' do
   actions :all, except: [:new, :destroy, :edit]
   filter :locale, as: :select, label: 'Language', collection: [
     ['English', 'en-gb'],
+    ['American', 'en-us'],
     ['German', 'de'],
     ['Austrian', 'de-at'],
     ['Spanish', 'es'],
@@ -12,6 +13,7 @@ ActiveAdmin.register User, as: 'Users' do
   filter :origin, as: :select, label: 'Country', collection: [
     ['International', 'en'],
     ['United Kingdom', 'gb'],
+    ['United States', 'us'],
     ['Germany', 'de'],
     ['Austria', 'at'],
     ['Spain', 'es'],
