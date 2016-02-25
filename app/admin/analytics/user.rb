@@ -13,7 +13,7 @@ ActiveAdmin.register User, as: 'Users' do
   filter :origin, as: :select, label: 'Country', collection: [
     ['International', 'en'],
     ['United Kingdom', 'gb'],
-    ['United States', 'en-us'],
+    ['United States', 'us'],
     ['Germany', 'de'],
     ['Austria', 'at'],
     ['Spain', 'es'],
