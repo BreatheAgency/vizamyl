@@ -16,6 +16,7 @@ ActiveAdmin.register User, as: 'Users' do
     ['United States', 'us'],
     ['Germany', 'de'],
     ['Austria', 'at'],
+    ['Belgium', 'be'],
     ['Spain', 'es'],
     ['France', 'fr'],
     ['Italy', 'it'],
