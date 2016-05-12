@@ -1,6 +1,6 @@
-class USCourseCompletionPDF < Prawn::Document
+class CourseCompletionLetter < Prawn::Document
   def initialize(user)
-    super(page_size: 'A4', page_layout: :portrait, left_margin: 0, right_margin: 0, top_margin: 0, bottom_margin: 0)
+    super(page_size: 'LETTER', page_layout: :portrait, left_margin: 0, right_margin: 0, top_margin: 0, bottom_margin: 0)
     font_families.update({
       'geinspira' => {
         normal: Rails.root.join('app/assets/fonts/geinsprg-webfont.ttf'),
@@ -8,21 +8,21 @@ class USCourseCompletionPDF < Prawn::Document
       }
     })
     font('geinspira')
-    image(Rails.root.join("app/assets/images/#{I18n.locale}/course-completion-1.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
-    left = 243
-    top = 408
-    height = 32
-    margin = 3.5
+    image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['LETTER'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['LETTER'])
+    left = 68
+    top = 382
+    height = 31.5
+    margin = 2
     fill_color '005cb9'
     text_box(I18n.t('course_completion.salutation') + ': ' + user.salutation, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
-    date_format = (user.locale == 'en-us') ? "%m/%d/%Y" : "%d/%m/%Y"
+    date_format = "%m/%d/%Y"
     text_box(I18n.t('course_completion.date') + ': ' + I18n.l(Time.now, locale: user.locale, format: date_format), at: [left, top + margin + height], style: :normal, size: 14)
   end
 end
 
-class EUCourseCompletionPDF < Prawn::Document
+class CourseCompletionA4 < Prawn::Document
   def initialize(user)
     super(page_size: 'A4', page_layout: :portrait, left_margin: 0, right_margin: 0, top_margin: 0, bottom_margin: 0)
     font_families.update({
@@ -32,7 +32,7 @@ class EUCourseCompletionPDF < Prawn::Document
       }
     })
     font('geinspira')
-    image(Rails.root.join("app/assets/images/#{I18n.locale}/course-completion-1.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
+    image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
     left = 243
     top = 408
     height = 32
@@ -51,10 +51,16 @@ class Users::CourseCompletionController < ApplicationController
 
   def success
     current_user.pass!
+
+    if european_locale?
+      pdf = CourseCompletionA4.new(current_user)
+    else
+      pdf = CourseCompletionLetter.new(current_user)
+    end
+
     respond_to do |format|
       format.html
       format.pdf do
-        pdf = EUCourseCompletionPDF.new(current_user)
         send_data pdf.render, filename: 'course_completion.pdf', type: 'application/pdf'
       end
     end
