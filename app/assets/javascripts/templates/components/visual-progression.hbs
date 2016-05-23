@@ -1,3 +1,10 @@
+{{#each chapter in chapters}}
+  <p>{{chapter.short_title}} ({{chapter.completedSteps.length}}/{{chapter.progressedSteps.length}}) {{chapter.available}}</p>
+  {{#each step in chapter.steps}}
+    <p>{{step.id}} {{step.progression.amount}}</p>
+  {{/each}}
+{{/each}}
+
 <div class='progression-amount right'>
   <h4>{{totalPercent}}</h4>
 </div>

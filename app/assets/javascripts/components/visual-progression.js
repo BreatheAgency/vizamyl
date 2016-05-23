@@ -4,5 +4,5 @@ Course.VisualProgressionComponent = Ember.Component.extend({
 
   totalPercent:function(){
     return this.get('total') + '%';
-  }.property('total'),
+  }.property('total')
 });

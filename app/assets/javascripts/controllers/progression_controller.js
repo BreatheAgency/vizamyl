@@ -10,12 +10,12 @@ Course.ProgressionController = Ember.Controller.extend({
   completeProgressions:function(){
     return this.get('progressions').filter(function(progression, index, self) {
       return progression.get('amount') >= 0.5;
-    }.bind(this));
+    });
   }.property('progressions.@each.amount'),
 
   total: function() {
     if (this.get('isSkippable')) { return 100 };
     var total = Math.round((this.get('completeProgressions.length') / this.get('progressions.length')) * 100) || 0;
     return total;
-  }.property('isSkippable', 'progressions.length','completeProgressions.length', 'hiddenChapters.lastObject.steps.length')
+  }.property('isSkippable', 'progressions.length','completeProgressions.length')
 });

@@ -76,6 +76,6 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
     return this.get('arrangedContent').filter(function(chapter, index, self) {
       return (chapter.get('visibleSteps.length') !== 0 && !chapter.get('hidden'));
     }.bind(this));
-  }.property('arrangedContent.@each.visibleSteps.length')
+  }.property('arrangedContent.@each.hidden', 'arrangedContent.@each.visibleSteps.length')
 
 });

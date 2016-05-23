@@ -6,23 +6,33 @@ Course.Chapter = DS.Model.extend({
   hidden: DS.attr('boolean'),
   visibleSteps: Ember.computed.filterBy('steps', 'visible', true),
 
-  progressedSteps: function() {
-    return this.get('steps').filter(function(step, index, self) {
-      if (step.get('progression').get('amount') > 0) { return true; }
+  progressedSteps: Ember.computed('steps.@each.progression.amount', function() {
+    var steps = this.get('steps');
+    return steps.filter(function(step, index, self) {
+      if (step.get('progression.amount') > 0) {
+         return true;
+       } else {
+         return false;
+       }
     });
-  }.property('steps.@each.progression.amount'),
+  }),
 
-  completedSteps: function() {
-    return this.get('steps').filter(function(step, index, self) {
-      if (step.get('progression').get('amount') === 1) { return true; }
+  completedSteps: Ember.computed('steps.@each.progression.amount', function() {
+    var steps = this.get('steps');
+    return steps.filter(function(step, index, self) {
+      if (step.get('progression.amount') === 1) {
+         return true;
+       } else {
+         return false;
+       }
     });
-  }.property('steps.@each.progression.amount'),
+  }),
 
-  available: function() {
-    return this.get('progressedSteps').get('length') !== 0;
-  }.property('progressedSteps'),
+  available: Ember.computed('progressedSteps.length', function() {
+    return this.get('progressedSteps.length') !== 0;
+  }),
 
-  completed: function() {
-    return this.get('completedSteps').get('length') === this.get('steps').get('length');
-  }.property('completedSteps'),
+  completed: Ember.computed('completedSteps.length', 'steps.length', function() {
+    return this.get('completedSteps.length') === this.get('steps.length');
+  })
 });
