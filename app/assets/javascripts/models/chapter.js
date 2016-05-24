@@ -5,24 +5,14 @@ Course.Chapter = DS.Model.extend({
   steps: DS.hasMany('step'),
   hidden: DS.attr('boolean'),
   visibleSteps: Ember.computed.filterBy('steps', 'visible', true),
+  availableSteps: Ember.computed.filterBy('steps', 'available', true),
+  completedSteps: Ember.computed.filterBy('steps', 'completed', true),
 
-  progressedSteps: function() {
-    return this.get('steps').filter(function(step, index, self) {
-      if (step.get('progression').get('amount') > 0) { return true; }
-    });
-  }.property('steps.@each.progression.amount'),
+  available: Ember.computed('availableSteps.length', function() {
+    return this.get('availableSteps.length') !== 0;
+  }),
 
-  completedSteps: function() {
-    return this.get('steps').filter(function(step, index, self) {
-      if (step.get('progression').get('amount') === 1) { return true; }
-    });
-  }.property('steps.@each.progression.amount'),
-
-  available: function() {
-    return this.get('progressedSteps').get('length') !== 0;
-  }.property('progressedSteps'),
-
-  completed: function() {
-    return this.get('completedSteps').get('length') === this.get('steps').get('length');
-  }.property('completedSteps'),
+  completed: Ember.computed('completedSteps.length', 'steps.length', function() {
+    return this.get('completedSteps.length') === this.get('steps.length');
+  })
 });
