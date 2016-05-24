@@ -7,7 +7,7 @@ Course.ProgressionController = Ember.Controller.extend({
   hiddenChapters: Ember.computed.alias('controllers.localeMenu.hiddenChapters'),
   visibleChapters: Ember.computed.alias('controllers.localeMenu.visibleChapters'),
 
-  completeProgressions:function(){
+  completeProgressions: function(){
     return this.get('progressions').filter(function(progression, index, self) {
       return progression.get('amount') >= 0.5;
     });
