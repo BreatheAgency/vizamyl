@@ -4,26 +4,11 @@
       <div class="small-12 columns">
         <h1>Registration</h1>
         <p><a href="http://www.ge.com/privacy" target="_blank">Privacy Statement for Vizamyl (flutemetamol F 18 injection) Electronic Reader Training Program</a></p>
-        <p>Information we collect and how we use it:<br><br>Personal Information<br><br>You will be asked to provide personal information (your first name, last name, and salutation) in this training program. Unless you choose otherwise below, this information will be used solely for the purpose of identifying you in the test results section. You will then be given the opportunity to print or save this information at the completion of the training program.<br><br>Please complete the registration information below to continue.</p>
+        <p>Information we collect and how we use it:<br><br>Personal Information<br><br>You will be asked to provide personal information (your first name, last name, and title) in this training program. Unless you choose otherwise below, this information will be used solely for the purpose of identifying you in the test results section. You will then be given the opportunity to print or save this information at the completion of the training program.<br><br>Please complete the registration information below to continue.</p>
         <p><small>* Required Feild</small></p>
       </div>
     </div>
     <%= simple_form_for(@user, url: american_enrol_index_path) do |f| %>
-
-    <!-- <div class="row">
-      <div class="small-12 columns">
-      <% if @user.errors.any? %>
-        <div class="error_explanation">
-          <p><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</p>
-          <ul>
-          <% @user.errors.full_messages.each do |msg| %>
-            <li><%= msg %></li>
-          <% end %>
-          </ul>
-        </div>
-      <% end %>
-      </div>
-    </div> -->
 
       <div class="row">
         <div class="small-12 columns">

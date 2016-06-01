@@ -6,17 +6,26 @@ Course.VideoPageController = Ember.ObjectController.extend({
   complete: function() {
     if (this.get('isSkippable')) { return true; };
 
-    if (this.get('mandatory')) {
+    if (this.get('mandatoryOverride')) {
       return this.get('finished');
     } else {
       return true;
     }
-  }.property('isSkippable', 'finished', 'mandatory'),
+  }.property('isSkippable', 'finished', 'mandatoryOverride'),
 
-  super_mandatory: function() {
+  mandatoryOverride: function() {
     if (this.get('isSkippable')) { return false; };
-    return this.get('mandatory');
-  }.property('mandatory'),
+
+    if (this.get('mandatory')) {
+      if (this.get('finished')) {
+        return false;
+      } else {
+        return true;
+      }
+    } else {
+      return false;
+    }
+  }.property('isSkippable', 'finished', 'mandatory'),
 
   actions: {
     next: function(step) {
