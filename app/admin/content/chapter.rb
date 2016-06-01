@@ -2,7 +2,6 @@ ActiveAdmin.register Chapter, namespace: :content do
   actions :all, except: [:new, :destroy]
   config.sort_order = 'position_asc'
   config.filters = false
-  sortable
 
   controller do
     def permitted_params
@@ -11,7 +10,6 @@ ActiveAdmin.register Chapter, namespace: :content do
   end
 
   index do
-    sortable_handle_column
     column :title do |chapter|
       link_to(chapter.title, content_chapter_path(chapter))
     end

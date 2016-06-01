@@ -41,13 +41,6 @@ GIT
     i18n-js (3.0.0.rc6)
       i18n (~> 0.6)
 
-GIT
-  remote: git://github.com/neo/activeadmin-sortable.git
-  revision: fcde0a4cb1c99847656ef1927961bf5713804e2d
-  specs:
-    activeadmin-sortable (0.0.3)
-      activeadmin (>= 0.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -377,7 +370,6 @@ DEPENDENCIES
   active_admin_editor!
   active_model_serializers
   activeadmin!
-  activeadmin-sortable!
   acts_as_list
   autoprefixer-rails
   better_errors
@@ -426,5 +418,8 @@ DEPENDENCIES
   videojs_rails
   wicked
 
+RUBY VERSION
+   ruby 2.3.1p112
+
 BUNDLED WITH
-   1.10.6
+   1.12.3

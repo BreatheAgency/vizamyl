@@ -5,7 +5,6 @@ ActiveAdmin.register Interactive, namespace: :content do
   config.filters = false
 
   belongs_to :chapter, polymorphic: true
-  sortable
 
   controller do
     def permitted_params

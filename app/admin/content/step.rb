@@ -5,7 +5,6 @@ ActiveAdmin.register Step, namespace: :content do
   config.filters = false
 
   belongs_to :chapter, polymorphic: true
-  sortable
 
   controller do
     def permitted_params
@@ -14,7 +13,6 @@ ActiveAdmin.register Step, namespace: :content do
   end
 
   index do
-    sortable_handle_column
     column :position
     column :id
     column :page do |step|

@@ -4,7 +4,6 @@ ruby '2.3.1'
 gem 'i18n-js', github: 'lenage/i18n-js'
 gem 'globalize', github: 'globalize/globalize'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
-gem 'activeadmin-sortable', github: 'neo/activeadmin-sortable'
 gem 'active_admin_editor', github: 'bazuka/active_admin_editor'
 
 gem 'rake', '~> 10.3'
