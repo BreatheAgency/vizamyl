@@ -4,8 +4,7 @@ ActiveAdmin.register Video, namespace: :content do
   config.paginate = false
   config.filters = false
 
-  belongs_to :chapter, polymorphic: true
-  sortable
+  belongs_to :chapter, polymorphic: true  
 
   controller do
     def permitted_params
