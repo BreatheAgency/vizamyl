@@ -32,7 +32,8 @@ ActiveAdmin.register User, as: 'Users' do
     ['Netherlands', 'nl'],
     ['Sweden', 'se'],
     ['South Korea', 'kr'],
-    ['Hong Kong', 'hk']
+    ['Hong Kong', 'hk'],
+    ['Australia', 'au']
   ]
   filter :institution, as: :string
 
