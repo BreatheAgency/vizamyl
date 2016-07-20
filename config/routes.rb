@@ -25,11 +25,11 @@ Rails.application.routes.draw do
 
   get '/course/:locale/*other' => 'static#show', id: 'course'
 
-  if !Rails.env.production?
+  # if !Rails.env.production?
     scope 'admin' do
       get 'become', to: 'admin/become#become'
     end
-  end
+  # end
 
   # European
   scope ':locale', locale: /#{I18n.available_locales.reject {|x| x == :"en-us"}.join("|")}/ do
