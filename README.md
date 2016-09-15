@@ -34,26 +34,3 @@ heroku pg:push vizamyl_staging_dump DATABASE --app vizamyl
 heroku maintenance:off --app vizamyl
 heroku ps:restart --app vizamyl
 ```
-
-# Image magick
-
-```
-mkdir _new && cd _new
-convert black/*.jpg -crop 550x464+0+0 -bordercolor Black -border 0x18 -set filename:f '%t' ../_new/'%[filename:f].jpg'
-convert white/*.jpg -crop 550x464+0+0 -bordercolor White -border 0x18 -set filename:f '%t' ../_new/'%[filename:f].jpg'
-```
-
-# One off sync
-
-`aws s3 sync s3://vizamyl-staging/videos s3://vizamyl-production/videos --dryrun --exclude "*" --include "EN_GB*"`
-
-# Cache
-
-```
-aws s3 cp s3://vizamyl-staging/videos s3://vizamyl-staging/videos --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
-aws s3 cp s3://vizamyl-staging/images s3://vizamyl-staging/images --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
-aws s3 cp s3://vizamyl-staging/interactives s3://vizamyl-staging/interactives --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
-aws s3 cp s3://vizamyl-production/videos s3://vizamyl-production/videos --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
-aws s3 cp s3://vizamyl-production/images s3://vizamyl-production/images --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
-aws s3 cp s3://vizamyl-production/interactives s3://vizamyl-production/interactives --recursive --metadata-directive REPLACE --expires 2100-01-01T00:00:00Z --acl public-read --cache-control max-age=2592000,public
-```
