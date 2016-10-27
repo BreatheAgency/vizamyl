@@ -34,13 +34,6 @@ GIT
       activerecord (>= 4.2.0, < 4.3)
       request_store (~> 1.0)
 
-GIT
-  remote: git://github.com/lenage/i18n-js.git
-  revision: abe1c039f5e71732648b67fd8228eea87828a1f0
-  specs:
-    i18n-js (3.0.0.rc6)
-      i18n (~> 0.6)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -202,6 +195,8 @@ GEM
     highline (1.7.8)
     hike (1.2.3)
     i18n (0.7.0)
+    i18n-js (3.0.0.rc6)
+      i18n (~> 0.6)
     inherited_resources (1.6.0)
       actionpack (>= 3.2, < 5)
       has_scope (~> 0.6.0.rc)
@@ -391,7 +386,7 @@ DEPENDENCIES
   foundation-rails
   globalize!
   high_voltage
-  i18n-js!
+  i18n-js (= 3.0.0.rc6)
   jquery-rails
   mime-types (~> 2.6)
   normalize-rails
