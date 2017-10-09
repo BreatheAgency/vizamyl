@@ -9,6 +9,7 @@ ActiveAdmin.register User, as: 'Users' do
     ['French', 'fr'],
     ['Italian', 'it'],
     ['International English', 'en']
+    ['Japanese', 'jp'],
   ]
   filter :origin, as: :select, label: 'Country', collection: [
     ['International', 'en'],
@@ -35,6 +36,7 @@ ActiveAdmin.register User, as: 'Users' do
     ['Hong Kong', 'hk'],
     ['Singapore', 'sg'],
     ['Australia', 'au']
+    ['Japan', 'jp'],
   ]
   filter :institution, as: :string
 

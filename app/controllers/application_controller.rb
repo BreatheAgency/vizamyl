@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :redirect_locale
   helper_method :needs_black_triangle
   helper_method :european_locale?
-  helper_method :american_locale?
+  helper_method :non_european_locale?
   helper_method :users_locale_enrol_path
   helper_method :users_locale_enrol_index_path
 
@@ -34,20 +34,20 @@ class ApplicationController < ActionController::Base
   end
 
   def european_locale
-    !american_locale
+    !non_european_locale
   end
   alias_method :european_locale?, :european_locale
 
-  def american_locale
-    I18n.locale == :'en-us'
+  def non_european_locale
+    I18n.locale == :'en-us' || I18n.locale == :'jp'
   end
-  alias_method :american_locale?, :american_locale
+  alias_method :non_european_locale?, :non_european_locale
 
   def users_locale_enrol_path(*args, &block)
     if european_locale
       return european_enrol_path(*args, &block)
     else
-      return new_american_enrol_path
+      return new_non_european_enrol_path
     end
   end
 
@@ -55,7 +55,7 @@ class ApplicationController < ActionController::Base
     if european_locale
       return european_enrol_index_path(*args, &block)
     else
-      return american_enrol_index_path(*args, &block)
+      return non_european_enrol_index_path(*args, &block)
     end
   end
 
