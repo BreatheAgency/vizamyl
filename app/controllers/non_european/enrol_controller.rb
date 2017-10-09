@@ -1,4 +1,4 @@
-class American::EnrolController < ApplicationController
+class NonEuropean::EnrolController < ApplicationController
 
   def new
     @user = User.new_with_session({}, session)

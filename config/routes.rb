@@ -32,16 +32,16 @@ Rails.application.routes.draw do
   # end
 
   # European
-  scope ':locale', locale: /#{I18n.available_locales.reject {|x| x == :"en-us"}.join("|")}/ do
+  scope ':locale', locale: /#{I18n.available_locales.reject {|x| x == :"en-us" || x == :"jp"}.join("|")}/ do
     scope module: 'european' do
       resources :enrol, only: [:new, :create, :show, :update], as: 'european_enrol'
     end
   end
 
-  # American
-  scope ':locale', locale: /en-us/ do
-    scope module: 'american' do
-      resources :enrol, only: [:new, :create, :show, :update], as: 'american_enrol'
+  # Non European
+  scope ':locale', locale: /en-us|jp/ do
+    scope module: 'non_european' do
+      resources :enrol, only: [:new, :create, :show, :update], as: 'non_european_enrol'
     end
   end
 

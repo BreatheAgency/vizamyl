@@ -1,4 +1,16 @@
+# Development
+
+### Updating development with production data
+
+```
+heroku pg:pull meditating-truly-2816 vizamyl_production_dump --app vizamyl
+psql
+DROP DATABASE vizamyl_development;
+CREATE DATABASE vizamyl_development WITH TEMPLATE vizamyl_production_dump;
+```
+
 # Deployment
+
 - Backup
 - Pull latest dbs
 - Dump only the users
@@ -15,8 +27,8 @@ heroku pg:backups capture --app vizamyl-staging
 heroku pg:backups capture --app vizamyl
 dropdb vizamyl_staging_dump
 dropdb vizamyl_production_dump
-heroku pg:pull DATABASE vizamyl_staging_dump --app vizamyl-staging
-heroku pg:pull DATABASE vizamyl_production_dump --app vizamyl
+heroku pg:pull looking-fleetingly-4758 vizamyl_staging_dump --app vizamyl-staging
+heroku pg:pull meditating-truly-2816 vizamyl_production_dump --app vizamyl
 pg_dump vizamyl_production_dump -O -t users -t users_id_seq -t admin_users -t admin_users_id_seq -t progressions -t progressions_id_seq -Fc -f production_users.sql --column-inserts --data-only
 psql -d vizamyl_staging_dump -c "TRUNCATE TABLE users, admin_users, progressions RESTART IDENTITY;"
 pg_restore production_users.sql -d vizamyl_staging_dump --single-transaction

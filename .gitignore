@@ -13,3 +13,5 @@
 /tags
 /tmp/*
 /vendor/*
+# Lets avoid changing ruby version on production for now
+.ruby-version
