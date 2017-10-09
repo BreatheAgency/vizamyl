@@ -8,7 +8,7 @@ ActiveAdmin.register User, as: 'Users' do
     ['Spanish', 'es'],
     ['French', 'fr'],
     ['Italian', 'it'],
-    ['International English', 'en']
+    ['International English', 'en'],
     ['Japanese', 'jp'],
   ]
   filter :origin, as: :select, label: 'Country', collection: [
@@ -35,7 +35,7 @@ ActiveAdmin.register User, as: 'Users' do
     ['South Korea', 'kr'],
     ['Hong Kong', 'hk'],
     ['Singapore', 'sg'],
-    ['Australia', 'au']
+    ['Australia', 'au'],
     ['Japan', 'jp'],
   ]
   filter :institution, as: :string
