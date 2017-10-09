@@ -1,3 +1,14 @@
+# Development
+
+### Updating development with production data
+
+```
+heroku pg:pull meditating-truly-2816 vizamyl_production_dump --app vizamyl
+psql
+DROP DATABASE vizamyl_development;
+CREATE DATABASE vizamyl_development WITH TEMPLATE vizamyl_production_dump;
+```
+
 # Deployment
 
 - Backup
