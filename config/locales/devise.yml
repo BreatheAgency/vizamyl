@@ -333,12 +333,12 @@ jp:
     mailer:
       reset_password_instructions:
         one: Hello
-        two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
-        three: Please click here to reset your password.
+        two: このメールは、パスワード変更をご希望の方に送らせていただいております。
+        three: パスワードを変更するにはこちらをクリックしてください。
         four_html: |
-          <p>If you didn’t request this reminder, please ignore this email. Your password will not be changed until you access the link above and create a new one.</p>
-          <p>Thank you,</p>
-          <p>GE Healthcare</p>
+          <p>このメールに 心当たりがない場合は、お手数ですが削除して下さい。上記リンクにアクセスして新しいパスワードを設定するまで、パスワードは変更されません。</p>
+          <p>よろしくお願いいたします。</p>
+          <p>GEヘルスケア・ジャパン株式会社</p>
     registrations:
       edit:
         title: アカウント情報
@@ -383,14 +383,13 @@ jp:
     sessions:
       new:
         intro: |
-          Please enter your email address
-          and password to login.
-        forgot_your_password: Forgotten your password?
-        login: LLogin
+          メールアドレスとパスワードを入力してログインしてください。
+        forgot_your_password: パスワードをお忘れですか？
+        login: ログイン
     passwords:
       new:
-        forgot_your_password: Forgotten your password?
-        send: Send
+        forgot_your_password: パスワードをお忘れですか？
+        send: 送信
       edit:
         change_your_password: Change your password
         password_label: New password

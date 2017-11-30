@@ -10,7 +10,7 @@ jp:
         invite_code: Invite code
         password: パスワード
         password_confirmation: パスワードの確認
-        remember_me: "Remember me"
+        remember_me: ログイン状態を保存する
         institution: "Institution"
     models:
       user: User
