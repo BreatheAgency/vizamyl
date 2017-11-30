@@ -116,25 +116,25 @@ it:
         <p><a href="/it/terms-and-conditions">Termini e condizioni</a></p>
       reference_html: |
         <p class="right"></p>
-es:
+jp:
   layouts:
     application:
       logo:
-        1_html: Vizamyl<sup class='trade-mark'>&reg;</sup>
+        1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
         2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
-        3_html: <span></span>
-      course_menu: Menú del curso
-      my_account: Mi cuenta
-      login: Inicio de sesión
-      logout: Cerrar sesión
-      enrol: Registrarse
-      references: Referencias
-      resources: Recursos
-      contact: Contacto
+        3_html: <span>Injection</span>
+      course_menu: コースメニュー
+      my_account: アカウント
+      login: ログイン
+      logout: ログアウト
+      enrol: l登録
+      references: 参考文献
+      resources: 関連資料
+      contact: 連絡先 
       copyright_html: |
-        <p>&copy;2016 General Electric Company. Todos los derechos reservados.</p>
-        <p>GE y GE monogram son marcas comerciales de General Electric Company.</p>
-        <p>Vizamyl es una marca comercial de General Electric Company o de una de sus subsidiarias.</p>
-        <p><a href="/es/terms-and-conditions">Términos y condiciones</a></p>
+        <p>&copy;2016 General Electric Company - All rights reserved.</p>
+        <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
+        <p>Vizamyl is a trademark of General Electric Company or one of its subsidiaries.</p>
+        <p><a href="/jp/terms-and-conditions">ウェブサイトの利用約款</a></p>
       reference_html: |
         <p class="right"></p>

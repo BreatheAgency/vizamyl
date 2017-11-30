@@ -52,6 +52,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
+  gem 'meta_request'
 end
 
 group :test, :development do
