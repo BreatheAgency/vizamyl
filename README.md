@@ -9,6 +9,14 @@ DROP DATABASE vizamyl_development;
 CREATE DATABASE vizamyl_development WITH TEMPLATE vizamyl_production_dump;
 ```
 
+### Adding a language
+
+* Get access to the password spreadsheet from Lily
+* Add new content admin; be sure to set the locale
+* Add new superuser by `dup`ing another superuser; be sure to set the locale
+* Add the locale to each step; `Step.all.each { |s| s.locales << 'jp' ; s.save! }`
+* Add the relevant locale to `layout.yml` & `pages.yml`, then translate them
+
 # Deployment
 
 - Backup
