@@ -224,7 +224,7 @@ jp:
   course:
     actions:
       back: Back
-      next: Next
+      next: 次へ
     pages:
       test:
         question_one:

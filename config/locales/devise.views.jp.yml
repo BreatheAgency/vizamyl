@@ -7,11 +7,11 @@ jp:
         last_name: 姓
         current_password: "Current password"
         email: メールアドレス
-        invite_code: Invite code
+        invite_code: 招待コード
         password: パスワード
         password_confirmation: パスワードの確認
         remember_me: ログイン状態を保存する
-        institution: "Institution"
+        institution: ご施設名
     models:
       user: User
   devise:
@@ -55,6 +55,19 @@ jp:
         we_need_your_current_password_to_confirm_your_changes: "we need your current password to confirm your changes"
       new:
         sign_up: "Sign up"
+        registration: 登録
+        privacy_link: ビザミル読影トレーニングプログラムに関する個人情報の取り扱い
+        privacy_statement: |
+          <p>トレーニングプログラムの登録にあたって、個人情報（敬称、氏名、所属先、メールアドレス）をご提供いただきます。以下で製品に関する情報提供を希望されない限り、ご提供いただいた個人情報はトレーニングの実施、実施状況の確認及び修了証発行の目的でのみ使用いたします。なお、トレーニングプログラムに合格すると発行される修了証は印刷又はPDFで保存いただけます。</p>
+          <p>ご登録いただきます、以下項目の個人データは、当社及び関連会社である日本メジフィジックス株式会社（ビザミルⓇ静注：2017年9月27日製造販売承認取得）で、上記の目的のために共有し、共同利用いたします。当該個人データの管理責任を有する者の名称は、GEヘルスケア・ジャパン株式会社となります。</p>
+          <p>以下の個人データの項目をご入力ください。</p>
+        required_field: 必須
+        password_length: パスワードは最低8文字必要です。
+        marketing_privacy: 個人情報の保護について
+        marketing_overall_opt_in: 製品に関する情報提供を希望します。
+        marketing_overall_opt_in_other: 製品に関する情報提供を希望しません。（希望されない場合でもトレーニングは受講いただけます。）
+        acknowledge_privacy: 個人情報保護方針に同意する。
+        submit: 送信
     sessions:
       new:
         sign_in: "Sign in"

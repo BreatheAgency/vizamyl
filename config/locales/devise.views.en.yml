@@ -55,6 +55,20 @@ en:
         we_need_your_current_password_to_confirm_your_changes: "we need your current password to confirm your changes"
       new:
         sign_up: "Sign up"
+        registration: Registration
+        privacy_link: Privacy Statement for Vizamyl (flutemetamol F 18 injection) Electronic Reader Training Program
+        privacy_statement: |
+          <p>Information we collect and how we use it:<br>
+            <br>Personal Information<br>
+            <br>You will be asked to provide personal information (your first name, last name, and title) in this training program. Unless you choose otherwise below, this information will be used solely for the purpose of identifying you in the test results section. You will then be given the opportunity to print or save this information at the completion of the training program.<br><br>Please complete the registration information below to continue.
+          </p>
+        required_field: Required Feild
+        password_length: Password must be at least eight characters long
+        marketing_privacy: 'Privacy Statement:'
+        marketing_overall_opt_in: 'I would like to opt-in to receive other materials or information from GE Healthcare about Vizamyl.' 
+        marketing_overall_opt_in_other: 'I would like to opt-in to receive other materials or information from GE Healthcare about Vizamyl.' 
+        acknowledge_privacy: 'I have reviewed the Privacy statement please <a href="http://www.ge.com/privacy" target="_blank">click here</a> to view.'
+        submit: 'Submit'
     sessions:
       new:
         sign_in: "Sign in"

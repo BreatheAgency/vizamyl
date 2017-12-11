@@ -2,10 +2,12 @@
   <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
     <div class="row">
       <div class="small-12 columns">
-        <h1><%= t('devise.registrations.new.registration') %></h1>
-        <p><a href="http://www.ge.com/privacy" target="_blank"><%= t('devise.registrations.new.privacy_link') %></a></p>
-        <%= raw t('devise.registrations.new.privacy_statement') %>
-        <p><small> * <%= raw t('devise.registrations.new.required_field') %></small></p>
+        <h1>t('registration')</h1>
+        <p><a href="http://www.ge.com/privacy" target="_blank">Privacy Statement for Vizamyl (flutemetamol F 18 injection) Electronic Reader Training Program</a></p>
+        <p>Information we collect and how we use it:<br>
+          <br>Personal Information<br>
+          <br>You will be asked to provide personal information (your first name, last name, and title) in this training program. Unless you choose otherwise below, this information will be used solely for the purpose of identifying you in the test results section. You will then be given the opportunity to print or save this information at the completion of the training program.<br><br>Please complete the registration information below to continue.</p>
+        <p><small>* Required Feild</small></p>
       </div>
     </div>
     <%= simple_form_for(@user, url: non_european_enrol_index_path) do |f| %>
@@ -50,7 +52,7 @@
       <div class="row row-input">
         <div class="small-6 columns">
           <%= f.input :password, required: true %>
-          <p><%= t('devise.registrations.new.password_length') %></p>
+          <p>Password must be at least eight characters long</p>
         </div>
         <div class="small-6 columns">
           <%= f.input :password_confirmation, required: true %>
@@ -59,15 +61,15 @@
 
       <div class="row row-input">
         <div class="small-12 columns">
-          <%= f.input :marketing_overall_opt_in, required: true, label: t('devise.registrations.new.marketing_overall_opt_in') %>
-          <%= f.input :marketing_overall_opt_in_other, required: true, label: t('devise.registrations.new.marketing_overall_opt_in_other'), as: :boolean %>
+          <%= f.input :marketing_overall_opt_in, required: true, label: 'I would like to opt-in to receive other materials or information from GE Healthcare about Vizamyl.' %>
+          <%= f.input :marketing_overall_opt_in_other, required: true, label: 'I opt-out to receive any information regarding Vizamyl. By opting-out you are not prohibited from taking this training.', as: :boolean %>
         </div>
       </div>
 
       <div class="row row-input privacy">
         <div class="small-12 columns">
-          <p><%= t('devise.registrations.new.marketing_privacy') %></p>
-          <%= f.input :privacy_opt_in, required: true, label: (raw t('devise.registrations.new.acknowledge_privacy')) %>
+          <p>Privacy Statement:</p>
+          <%= f.input :privacy_opt_in, required: true, label: 'I have reviewed the Privacy statement please <a href="http://www.ge.com/privacy" target="_blank">click here</a> to view.'.html_safe %>
         </div>
       </div>
 
@@ -75,7 +77,7 @@
         <div class="small-12 columns">
           <div class='form-actions button-container'>
             <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
-              <%= t('devise.registrations.new.submit') %> <i class='fi-arrow-right'></i>
+              Submit <i class='fi-arrow-right'></i>
             <% end %>
           </div>
         </div>

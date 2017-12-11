@@ -1,5 +1,12 @@
 en:
   pages:
+    error:
+      heading: |
+        <h1>Vizamyl<sup class='trade-mark'>&trade;</sup> Flutemetamol F <sup class='one-eight'>18</sup> Injection</h1>
+      tagline: |
+        <h2>Electronic Reader Training Program</h2>
+      message: |
+        <p><span class='blue'>We’re sorry, the page you were looking for could not be found</span><br> To proceed, please select which country you are from.</p>
     home:
       body_html: |
         <h1>Welcome to the <br><strong>Vizamyl electronic training programme</strong></h1>
@@ -536,6 +543,12 @@ es:
         <p>Estos términos y disposiciones pueden ser actualizados por GE Healthcare de forma periódica y sin emitirle previo aviso para reflejar cambios en nuestras prácticas de información en línea. Las actualizaciones a esta política se publicarán en la página web. También animamos a los usuarios a comprobar de forma periódica este documento para comprender cómo GE Healthcare protege y utiliza su información.</p>
 jp:
   pages:
+    error:
+      heading: |
+        <h1>ビザミル読影トレーニングプログラム</h1>
+      tagline: ''
+      message: |
+        <p><span class='blue'>申し訳ございません。お探しのページが見つかりませんでした。</span><br>以下のリストからご希望の国名をクリックしてください。</p>
     home:
       body_html: |
         <h1>ビザミル読影トレーニングプログラムへようこそ</h1>
