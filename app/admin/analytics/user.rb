@@ -66,6 +66,13 @@ ActiveAdmin.register User, as: 'Users' do
     column :institution do |user|
       link_to(user.institution, admin_user_path(user))
     end
+    column :department do |user|
+      if user.locale == 'jp'
+        user.department
+      else
+        '<p class="na"><small>Japan only</small></p>'.html_safe
+      end
+    end
     column :invite_code do |user|
       if user.invite_code.nil?
         link_to('Empty', admin_user_path(user))
@@ -97,6 +104,7 @@ ActiveAdmin.register User, as: 'Users' do
       row :full_name
       row :email
       row :institution
+      row :department
       row(:progress) { |model| "#{model.progress}%" }
       row :final_assessment_status
       row :invite_code
@@ -116,6 +124,7 @@ ActiveAdmin.register User, as: 'Users' do
     column :last_name
     column :email
     column :institution
+    column :department
     column :invite_code
     column :passed
     column :progress

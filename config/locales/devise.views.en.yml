@@ -8,6 +8,7 @@ en:
         current_password: "Current password"
         email: "Email"
         invite_code: Invite code
+        department: Department
         password: "Password"
         password_confirmation: "Password confirmation"
         remember_me: "Remember me"

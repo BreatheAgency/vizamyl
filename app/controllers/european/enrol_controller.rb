@@ -35,12 +35,12 @@ class European::EnrolController < ApplicationController
   private
 
   def basic_params(step=nil)
-    permitted_attributes = [:id, :form_step, :salutation, :first_name, :last_name, :locale, :email, :password, :password_confirmation, :cookies_opt_in, :marketing_overall_opt_in, :marketing_email_opt_in, :marketing_post_opt_in, :marketing_representative_opt_in, :terms_and_conditions_opt_in, :institution, :invite_code]
+    permitted_attributes = [:id, :form_step, :salutation, :first_name, :last_name, :locale, :email, :password, :password_confirmation, :cookies_opt_in, :marketing_overall_opt_in, :marketing_email_opt_in, :marketing_post_opt_in, :marketing_representative_opt_in, :terms_and_conditions_opt_in, :institution, :department, :invite_code]
     params.permit(permitted_attributes).merge(form_step: step)
   end
 
   def filter_params(step=nil)
-    permitted_attributes = [:id, :form_step, :salutation, :first_name, :last_name, :locale, :email, :password, :password_confirmation, :cookies_opt_in, :marketing_overall_opt_in, :marketing_email_opt_in, :marketing_post_opt_in, :marketing_representative_opt_in, :terms_and_conditions_opt_in, :institution, :invite_code]
+    permitted_attributes = [:id, :form_step, :salutation, :first_name, :last_name, :locale, :email, :password, :password_confirmation, :cookies_opt_in, :marketing_overall_opt_in, :marketing_email_opt_in, :marketing_post_opt_in, :marketing_representative_opt_in, :terms_and_conditions_opt_in, :institution, :department, :invite_code]
     params.require(:user).permit(permitted_attributes).merge(form_step: step)
   end
 
