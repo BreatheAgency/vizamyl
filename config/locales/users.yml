@@ -1,4 +1,21 @@
 en:
+  non_european:
+    enrol:
+      new:
+        registration: Registration
+        privacy_link: Privacy Statement for Vizamyl (flutemetamol F 18 injection) Electronic Reader Training Program
+        privacy_statement: |
+          <p>Information we collect and how we use it:<br>
+            <br>Personal Information<br>
+            <br>You will be asked to provide personal information (your first name, last name, and title) in this training program. Unless you choose otherwise below, this information will be used solely for the purpose of identifying you in the test results section. You will then be given the opportunity to print or save this information at the completion of the training program.<br><br>Please complete the registration information below to continue.
+          </p>
+        required_field: Required Feild
+        password_length: Password must be at least eight characters long
+        marketing_privacy: 'Privacy Statement:'
+        marketing_overall_opt_in: 'I would like to opt-in to receive other materials or information from GE Healthcare about Vizamyl.' 
+        marketing_overall_opt_in_other: 'I would like to opt-in to receive other materials or information from GE Healthcare about Vizamyl.' 
+        acknowledge_privacy: 'I have reviewed the Privacy statement please <a href="http://www.ge.com/privacy" target="_blank">click here</a> to view.'
+        submit: 'Submit'
   european:
     enrol:
       details:
@@ -226,3 +243,20 @@ es:
       success:
         description_html: Gracias por participar en el programa electrónico de formación de Vizamyl.<br><br>Descargue el PDF con sus resultados y guárdelo para posteriores consultas.
         download_results: Descargar resultados
+jp:
+  non_european:
+    enrol:
+      new:
+        registration: 登録
+        privacy_link: ビザミル読影トレーニングプログラムに関する個人情報の取り扱い
+        privacy_statement: |
+          <p>トレーニングプログラムの登録にあたって、個人情報（敬称、氏名、所属先、メールアドレス）をご提供いただきます。以下で製品に関する情報提供を希望されない限り、ご提供いただいた個人情報はトレーニングの実施、実施状況の確認及び修了証発行の目的でのみ使用いたします。なお、トレーニングプログラムに合格すると発行される修了証は印刷又はPDFで保存いただけます。</p>
+          <p>ご登録いただきます、以下項目の個人データは、当社及び関連会社である日本メジフィジックス株式会社（ビザミルⓇ静注：2017年9月27日製造販売承認取得）で、上記の目的のために共有し、共同利用いたします。当該個人データの管理責任を有する者の名称は、GEヘルスケア・ジャパン株式会社となります。</p>
+          <p>以下の個人データの項目をご入力ください。</p>
+        required_field: 必須
+        password_length: パスワードは最低8文字必要です。
+        marketing_privacy: 個人情報の保護について
+        marketing_overall_opt_in: 製品に関する情報提供を希望します。
+        marketing_overall_opt_in_other: 製品に関する情報提供を希望しません。（希望されない場合でもトレーニングは受講いただけます。）
+        acknowledge_privacy: 個人情報保護方針に同意する。
+        submit: 送信

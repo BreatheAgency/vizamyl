@@ -8,6 +8,7 @@ jp:
         current_password: "Current password"
         email: メールアドレス
         invite_code: 招待コード
+        department: ご所属
         password: パスワード
         password_confirmation: パスワードの確認
         remember_me: ログイン状態を保存する

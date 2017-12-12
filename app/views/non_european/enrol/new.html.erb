@@ -2,10 +2,10 @@
   <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
     <div class="row">
       <div class="small-12 columns">
-        <h1><%= t('devise.registrations.new.registration') %></h1>
-        <p><a href="http://www.ge.com/privacy" target="_blank"><%= t('devise.registrations.new.privacy_link') %></a></p>
-        <%= raw t('devise.registrations.new.privacy_statement') %>
-        <p><small> * <%= raw t('devise.registrations.new.required_field') %></small></p>
+        <h1><%= t('.registration') %></h1>
+        <p><a href="http://www.ge.com/privacy" target="_blank"><%= t('.privacy_link') %></a></p>
+        <%= raw t('.privacy_statement') %>
+        <p><small> * <%= raw t('.required_field') %></small></p>
       </div>
     </div>
     <%= simple_form_for(@user, url: non_european_enrol_index_path) do |f| %>
@@ -50,7 +50,7 @@
       <div class="row row-input">
         <div class="small-6 columns">
           <%= f.input :password, required: true %>
-          <p><%= t('devise.registrations.new.password_length') %></p>
+          <p><%= t('.password_length') %></p>
         </div>
         <div class="small-6 columns">
           <%= f.input :password_confirmation, required: true %>
@@ -59,15 +59,15 @@
 
       <div class="row row-input">
         <div class="small-12 columns">
-          <%= f.input :marketing_overall_opt_in, required: true, label: t('devise.registrations.new.marketing_overall_opt_in') %>
-          <%= f.input :marketing_overall_opt_in_other, required: true, label: t('devise.registrations.new.marketing_overall_opt_in_other'), as: :boolean %>
+          <%= f.input :marketing_overall_opt_in, required: true, label: t('.marketing_overall_opt_in') %>
+          <%= f.input :marketing_overall_opt_in_other, required: true, label: t('.marketing_overall_opt_in_other'), as: :boolean %>
         </div>
       </div>
 
       <div class="row row-input privacy">
         <div class="small-12 columns">
-          <p><%= t('devise.registrations.new.marketing_privacy') %></p>
-          <%= f.input :privacy_opt_in, required: true, label: (raw t('devise.registrations.new.acknowledge_privacy')) %>
+          <p><%= t('.marketing_privacy') %></p>
+          <%= f.input :privacy_opt_in, required: true, label: (raw t('.acknowledge_privacy')) %>
         </div>
       </div>
 
@@ -75,7 +75,7 @@
         <div class="small-12 columns">
           <div class='form-actions button-container'>
             <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
-              <%= t('devise.registrations.new.submit') %> <i class='fi-arrow-right'></i>
+              <%= t('.submit') %> <i class='fi-arrow-right'></i>
             <% end %>
           </div>
         </div>
