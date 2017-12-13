@@ -127,7 +127,7 @@ jp:
       my_account: アカウント
       login: ログイン
       logout: ログアウト
-      enrol: l登録
+      enrol: 登録
       references: 参考文献
       resources: 関連資料
       contact: 連絡先 
@@ -135,6 +135,6 @@ jp:
         <p>&copy;2018 General Electric Company - All rights reserved.</p>
         <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
         <p>Vizamyl is a trademark of General Electric Company or one of its subsidiaries.</p>
-        <p><a href="/jp/terms-and-conditions">ウェブサイトの利用約款</a></p>
+        <p><a href="http://www3.gehealthcare.co.jp/ja-jp/footer/terms_of_use">ウェブサイトの利用約款</a></p>
       reference_html: |
         <p class="right"></p>

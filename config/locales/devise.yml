@@ -383,7 +383,7 @@ jp:
     sessions:
       new:
         intro: |
-          メールアドレスとパスワードを入力してログインしてください。
+          メールアドレスとパスワードを入力して<br>ログインしてください。
         forgot_your_password: パスワードをお忘れですか？
         login: ログイン
     passwords:
