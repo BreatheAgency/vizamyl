@@ -21,7 +21,7 @@
   {{else}}
     <div class='small-5 large-5 columns with-content with-minimum'>
       {{#if isInAnswered}}
-        <h1>{{i18n course.pages.test.four_b.title}}</h1>
+        <h1>{{{i18n course.pages.test.four_b.title}}}</h1>
         {{#if testCorrect}}
          <p>{{{i18n course.pages.test.four_b.correct}}}</p>
         {{else}}
@@ -43,7 +43,7 @@
       {{/if}}
       {{#if isInUnanswered}}
         {{#if question.test_case}}
-          <h1>{{question.title}}</h1>
+          <h1>{{{question.title}}}</h1>
           <p>{{{i18n course.pages.test.test_case.description_html}}}</p>
           <div class='test-case'>
             <div class='question'>

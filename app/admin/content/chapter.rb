@@ -26,7 +26,7 @@ ActiveAdmin.register Chapter, namespace: :content do
 
   form do |f|
     f.inputs do
-      f.input :title
+      f.input :title, as: :html_editor
       f.input :short_title
     end
     f.actions
