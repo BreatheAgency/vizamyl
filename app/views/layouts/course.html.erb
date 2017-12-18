@@ -1,6 +1,6 @@
 <!doctype html>
 <!--[if IE 9]><html class="no-js lt-ie10" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js <%= locale %>" lang="en"><!--<![endif]-->
   <%= render partial: 'head' %>
   <body class='course'>
     <%= tag(:meta, content: UserSerializer.new(current_user, scope: current_user).to_json, name: 'bootstrap') %>

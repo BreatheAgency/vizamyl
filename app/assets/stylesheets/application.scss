@@ -17,3 +17,5 @@ $browser-minimum-versions: (
 @import '_application';
 @import '_course';
 @import '_gatekeeper';
+
+@import 'language_specific_overrides';
