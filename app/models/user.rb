@@ -1,4 +1,10 @@
 class User < ActiveRecord::Base
+  JAPANESE_DEFAULT_INVITE_CODE = Rails
+                                  .application
+                                  .secrets
+                                  .invite_codes
+                                  .key({"locale"=>"jp", "origin"=>"jp", "type"=>"default"})
+
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   attr_accessor :form_step
