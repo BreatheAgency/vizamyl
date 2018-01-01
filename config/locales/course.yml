@@ -228,36 +228,36 @@ jp:
     pages:
       test:
         question_one:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: 陰性
+          answer_two: 陽性
         question_two:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: 陰性
+          answer_two: 陽性
         question_three:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: 陰性
+          answer_two: 陽性
         question_four:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: 陰性
+          answer_two: 陽性
         question_five:
-          answer_one: Negative
-          answer_two: Positive
+          answer_one: 陰性
+          answer_two: 陽性
         question:
           single_title: Self-assessment question
           plural_title: Self-assessment questions
         test_case:
-          description_html: Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.
-          question_one: Frontal pole and lobe
-          question_two: Posterior cingulate and precuneus
-          question_three: Temporal lobe
-          question_four: Parietal lobe
-          question_five: Striatum
-          question_six: Overall classification
+          description_html: 3つの断面画像をスライダーを使って観察してください。5つの領域を評価した後、総合評価をしてください。
+          question_one: 前頭極と前頭葉
+          question_two: 後帯状回と楔前部
+          question_three: 側頭葉
+          question_four: 頭頂葉
+          question_five: 線条体
+          question_six: 総合評価
         four_b:
-          title: Assessment Summary
-          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
-          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
-          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br><br>Please contact your local GE representative via the
-          incorrect_two_link: Contact section
-          incorrect_two_two_html: to schedule an in-person training session.
-          review_explanation_video: Review explanation video <span class="index">%{count}</span>
+          title: テスト症例 - 評価のまとめ
+          correct: おめでとうございます！ あなたは15症例中14症例以上を正確に読影し、ビザミル読影トレーニングプログラムを修了されました。<br><br>症例の解説をご覧になりたい場合は、各症例をクリックしてください。解説が不要な場合、「次へ」をクリックしてプログラムを終了してください。
+          incorrect_one_html: 残念ながら、ビザミル読影トレーニングプログラムを修了するためには15症例中14症例以上を正確に読影しなければなりません。<br><br>症例の解説をご覧になりたい場合は、各症例をクリックしてください。確認できたら、「次へ」をクリックして別の15症例に関する再テストを受けてください。
+          incorrect_two_one_html: 残念ながら、ビザミル読影トレーニングプログラムを修了するためには15症例中14症例以上を正確に読影しなければなりません。<br><br>症例の解説をご覧になりたい場合は、各症例をクリックしてください。確認できたら、「次へ」をクリックして別の15症例に関する再テストを受けてください。
+          incorrect_two_link:
+          incorrect_two_two_html:
+          review_explanation_video: 症例の解説<span class="index">%{count}</span>

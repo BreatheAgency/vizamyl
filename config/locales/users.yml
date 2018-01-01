@@ -260,3 +260,8 @@ jp:
         marketing_overall_opt_in_other: 製品に関する情報提供を希望しません。（希望されない場合でもトレーニングは受講いただけます。）
         acknowledge_privacy: 個人情報保護方針に同意する。
         submit: 送信
+  users:
+    course_completion:
+      success:
+        description_html: ビザミル読影トレーニングプログラムにご参加いただきありがとうございます。<br><br>修了証をダウンロードし、PDFを保管してください。
+        download_results: ダウンロード
