@@ -1,3 +1,10 @@
-html.jp .course .progression .visual-progression .progression-blocks li {
-  font-size: 0.8rem;
+html.jp {
+  // progression bar
+  .course .progression .visual-progression .progression-blocks li {
+    font-size: 0.8rem;
+  }
+  // Homepage text
+  .care-of {
+    font-size: 0.7rem;
+  }
 }
