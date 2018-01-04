@@ -1,0 +1,34 @@
+<%
+puts 'Add translations for a new language using raw SQL'
+puts 'Warning - Globalize may provide a much better mechanism to do this. \
+I had to do it this way as all the japanses translations ended up in the en-us rows.'
+raise 'Dont forget to change the jp part depending on your new language'
+%>
+
+<%
+  %w{
+    answer_translations
+    chapter_translations
+    four_b_translations
+    image_source_translations
+    image_translations
+    interactive_source_translations
+    interactive_translations
+    question_intro_translations
+    question_translations
+    test_translations
+    text_translations
+    video_translations
+  }.each do |original_table|
+  temporary_table = "#{original_table}_temp"
+%>
+
+-- Processing <%= original_table %>
+CREATE table <%= temporary_table %> AS SELECT * FROM <%= original_table %> WHERE locale = 'en-us';
+UPDATE <%= temporary_table %> SET locale = 'jp';
+UPDATE <%= temporary_table %> SET id = NULL;
+INSERT INTO <%= original_table %> SELECT * FROM <%= temporary_table %>;
+DROP TABLE <%= temporary_table %>;
+
+<% end %>
+

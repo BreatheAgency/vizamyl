@@ -13,9 +13,23 @@ CREATE DATABASE vizamyl_development WITH TEMPLATE vizamyl_production_dump;
 
 * Get access to the password spreadsheet from Lily
 * Add new content admin; be sure to set the locale
-* Add new superuser by `dup`ing another superuser; be sure to set the locale
+* Add new superuser by `dup`ing another superuser; be sure to currect the locale!
 * Add the locale to each step; `Step.all.each { |s| s.locales << 'jp' ; s.save! }`
+* Consider running `scripts/add_translations_for_new_language.sql.erb`. Note the comments.
 * Add the relevant locale to `layout.yml` & `pages.yml`, then translate them
+* Rename videos as per the conventions. At the time of writing there are 95 videos.
+* Fix up `videos.source` for the new videos
+``` ruby
+I18n.locale = 'jp'
+Video.all.each { |v| v.source = v.source.gsub(/^EN/, 'JP') ; v.save! }
+Question
+  .all
+  .select { |q| q.explanation_source.present? }
+  .each { |v| v.explanation_source = v.explanation_source.gsub(/^EN/, 'JP') ; v.save! }
+  
+* Fix up `questions.explanation_source` for the new videos
+* Add vidoes to the vizamyl-staging S3 bucket's 'videos-in', then schedule transcoding via scripts/transcode
+
 
 # Deployment
 
