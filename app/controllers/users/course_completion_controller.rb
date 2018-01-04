@@ -45,6 +45,30 @@ class CourseCompletionA4 < Prawn::Document
   end
 end
 
+class CourseCompletionA4WithDepartment < Prawn::Document
+  def initialize(user)
+    super(page_size: 'A4', page_layout: :portrait, left_margin: 0, right_margin: 0, top_margin: 0, bottom_margin: 0)
+    font_families.update({
+                           'arial-ms' => {
+                             normal: Rails.root.join('app/assets/fonts/ArialUnicodeMS.ttf'),
+                           }
+                         })
+    font('arial-ms')
+    image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
+    left = 38
+    top = 375
+    height = 36
+    margin = 3.5
+    fill_color '3d3d3d'
+    text_box(I18n.t('course_completion.institution') + ': ' + user.institution, at: [left, top + (margin*5) + (height*5)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.department') + ': ' + user.department, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
+    date_format = (user.locale == 'en-us') ? "%m/%d/%Y" : "%d/%m/%Y"
+    text_box(I18n.t('course_completion.date') + ': ' + I18n.l(Time.now, locale: user.locale, format: date_format), at: [left, top + margin + height], style: :normal, size: 14)
+  end
+end
+
 class Users::CourseCompletionController < ApplicationController
   before_action :authenticate_user!
 
@@ -53,6 +77,8 @@ class Users::CourseCompletionController < ApplicationController
 
     if european_locale?
       pdf = CourseCompletionA4.new(current_user)
+    elsif japanese_locale?
+      pdf = CourseCompletionA4WithDepartment.new(current_user)
     else
       pdf = CourseCompletionLetter.new(current_user)
     end

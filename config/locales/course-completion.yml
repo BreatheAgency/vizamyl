@@ -28,3 +28,10 @@ es:
     first_name: Nombre
     last_name: Apellido
     date: Fecha
+jp:
+  course_completion:
+    institution: ご所属
+    department: ご所属
+    last_name: 姓
+    first_name: 名
+    date: 日付

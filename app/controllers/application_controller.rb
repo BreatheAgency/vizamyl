@@ -39,9 +39,13 @@ class ApplicationController < ActionController::Base
   alias_method :european_locale?, :european_locale
 
   def non_european_locale
-    I18n.locale == :'en-us' || I18n.locale == :'jp'
+    I18n.locale == :'en-us' || I18n.locale == :jp
   end
   alias_method :non_european_locale?, :non_european_locale
+
+  def japanese_locale?
+    I18n.locale == :jp
+  end
 
   def users_locale_enrol_path(*args, &block)
     if european_locale
