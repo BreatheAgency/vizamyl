@@ -243,8 +243,8 @@ jp:
           answer_one: 陰性
           answer_two: 陽性
         question:
-          single_title: Self-assessment question
-          plural_title: Self-assessment questions
+          single_title: 練習問題
+          plural_title: 練習問題
         test_case:
           description_html: 3つの断面画像をスライダーを使って観察してください。5つの領域を評価した後、総合評価をしてください。
           question_one: 前頭極と前頭葉
