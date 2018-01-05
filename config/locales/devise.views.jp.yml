@@ -37,10 +37,10 @@ jp:
         message: "Your account has been locked due to an excessive amount of unsuccessful sign in attempts."
     passwords:
       edit:
-        change_my_password: "Change my password"
-        change_your_password: "Change your password"
-        confirm_new_password: "Confirm new password"
-        new_password: "New password"
+        change_my_password: パスワードを変更してください。
+        change_your_password: パスワードを変更してください。
+        confirm_new_password: -新しいパスワード
+        new_password: -新しいパスワード
       new:
         forgot_your_password: "Forgot your password?"
         send_me_reset_password_instructions: "Send me reset password instructions"

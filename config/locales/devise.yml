@@ -2,7 +2,7 @@ en:
   devise:
     mailer:
       reset_password_instructions:
-        one: Hello
+        one: "Hello %{name}"
         two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
         three: Please click here to reset your password.
         four_html: |
@@ -78,7 +78,7 @@ de:
   devise:
     mailer:
       reset_password_instructions:
-        one: Sehr geehrte(r)
+        one: "Sehr geehrte(r) %{name}"
         two: Sie haben um eine Erinnerung an die Bearbeitung Ihrer Anmeldedaten für das elektronische Schulungsprogramm zu Vizamyl gebeten.
         three: Bitte klicken Sie hier, um Ihr Passwort zurückzusetzen.
         four_html: |
@@ -142,7 +142,7 @@ fr:
   devise:
     mailer:
       reset_password_instructions:
-        one: Bonjour
+        one: "Bonjour %{name}"
         two: Nous avons reçu une demande pour vous rappeler vos données de connexion liées au programme de formation électronique Vizamyl.
         three: Veuillez cliquer ici pour réinitialiser votre mot de passe.
         four_html: |
@@ -208,7 +208,7 @@ it:
   devise:
     mailer:
       reset_password_instructions:
-        one: Salve
+        one: "Salve %{name}"
         two: Abbiamo ricevuto una richiesta di ricordarle i suoi dati di login per il programma di formazione online Vizamyl.
         three: Cliccare qui per resettare la propria password.
         four_html: |
@@ -272,7 +272,7 @@ es:
   devise:
     mailer:
       reset_password_instructions:
-        one: Hola
+        one: "Hola %{name}"
         two: Hemos recibido una solicitud para recordarle su información de inicio de sesión para el programa de formación electrónica de Vizamyl.
         three: Haga clic aquí para resetear su contraseña.
         four_html: |
@@ -332,7 +332,7 @@ jp:
   devise:
     mailer:
       reset_password_instructions:
-        one: Hello
+        one: "%{name}様"
         two: このメールは、パスワード変更をご希望の方に送らせていただいております。
         three: パスワードを変更するにはこちらをクリックしてください。
         four_html: |
