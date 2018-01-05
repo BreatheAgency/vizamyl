@@ -53,6 +53,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'brakeman', require: false
   gem 'meta_request'
+  gem "letter_opener"
 end
 
 group :test, :development do
