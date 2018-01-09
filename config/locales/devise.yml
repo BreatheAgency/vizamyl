@@ -332,7 +332,7 @@ jp:
   devise:
     mailer:
       reset_password_instructions:
-        one: "%{name}様"
+        one: "%{name} 様"
         two: このメールは、パスワード変更をご希望の方に送らせていただいております。
         three: パスワードを変更するにはこちらをクリックしてください。
         four_html: |
@@ -391,7 +391,7 @@ jp:
         forgot_your_password: パスワードをお忘れですか？
         send: 送信
       edit:
-        change_your_password: Change your password
-        password_label: New password
-        password_confirmation_label: Confirm new password
-        submit: Submit
+        change_your_password: パスワードを変更してください。
+        password_label: 新しいパスワード
+        password_confirmation_label: 新しいパスワードの確認
+        submit: 送信
