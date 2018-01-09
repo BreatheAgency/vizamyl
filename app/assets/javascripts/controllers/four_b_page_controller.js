@@ -2,6 +2,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
   needs: ['application', 'localeMenu'],
   complete: false,
   currentLocale: Ember.computed.alias('controllers.application.currentLocale'),
+  currentChapter: Ember.computed.alias('controllers.application.currentChapter'),
   selectedAnswer: null,
   selectedExplanationSource: null,
   answered: Ember.computed.alias('selectedAnswer'),
@@ -98,7 +99,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
   }.property('selectedExplanationSource'),
 
   testComplete: function() {
-    return this.get('questions.length') == this.get('answeredQuestions.length')
+    return this.get('questions.length') == this.get('answeredQuestions.length');
   }.property('questions.[]', 'answeredQuestions'),
 
   testCorrect: function() {
@@ -110,9 +111,18 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
     return (this.get('unansweredQuestionRoundIndex') === 0);
   }.property('unansweredQuestionRoundIndex'),
 
-  testFailed: function() {
+  testFailedTwice: function() {
     return !this.get('testCorrect') && !this.get('testFailedOnce');
   }.property('testCorrect', 'testFailedOnce'),
+
+  // Japanese don't provide an in-person training course
+  shouldHaveInfiniteRetries: function() {
+    return this.get('currentLocale') == 'jp';
+  }.property('currentLocale'),
+
+  showRetakeButton: function() {
+    return this.get('shouldHaveInfiniteRetries') && this.get('isInAnswered') && !this.get('testCorrect');
+  }.property('shouldHaveInfiniteRetries', 'isInAnswered', 'testCorrect'),
 
   columns: function(){
     switch(this.get('question.interactive_sources.length')) {
@@ -150,6 +160,18 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
       } else {
         this.sendStateEvent('reset');
       }
+    },
+    retakeTest: function(){
+      // Don't go on to question round two, as anyone seeing the `retake` button
+      // should have infinite retries. Instead, we take them back to the first step of
+      // this chapter to have another crack.
+      this.set('unansweredQuestionRoundIndices', _.range(this.get('question_rounds.length')));
+
+      first_step_id = this.get('currentChapter').get('steps').objectAt(0).id;
+      this.store.find('step', first_step_id).then(function (step) {
+        this.get('controllers.localeMenu').send('selectStep', step);
+        this.sendStateEvent('reset');
+      }.bind(this));
     },
     submit: function() {
       if (!this.get('answered')) { return; }

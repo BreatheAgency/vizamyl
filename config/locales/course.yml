@@ -3,6 +3,7 @@ en:
     actions:
       back: Back
       next: Next
+      retake_test: Retake
     pages:
       test:
         question_one:
@@ -223,8 +224,9 @@ es:
 jp:
   course:
     actions:
-      back: Back
+      back: 戻る
       next: 次へ
+      retake_test: 再テスト
     pages:
       test:
         question_one:
