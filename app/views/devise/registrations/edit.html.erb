@@ -46,6 +46,10 @@
           %>
           <%= f.input :first_name, required: true %>
           <%= f.input :last_name, required: true %>
+          <%= f.input :institution, required: true %>
+          <% if has_department? %>
+          <%= f.input :department, required: false %>
+          <% end %>
           <%= f.input :email, required: false, disabled: true %>
           <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank_if_you_don_t_want_to_change_it'), required: false %>
           <%= f.input :password_confirmation, required: false %>

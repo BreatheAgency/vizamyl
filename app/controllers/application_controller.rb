@@ -7,6 +7,8 @@ class ApplicationController < ActionController::Base
   helper_method :non_european_locale?
   helper_method :users_locale_enrol_path
   helper_method :users_locale_enrol_index_path
+  helper_method :has_department?
+  helper_method :was_sent_invite_code?
 
   def after_sign_in_path_for(resource)
    if resource.is_a?(AdminUser)
@@ -53,6 +55,16 @@ class ApplicationController < ActionController::Base
     else
       return new_non_european_enrol_path
     end
+  end
+
+  # Only Japanses want / need to collect this field
+  def has_department?
+    japanese_locale?
+  end
+
+  # Japanese only have one input code in use, and they don't send it out to the users.
+  def was_sent_invite_code?
+    !japanese_locale?
   end
 
   def users_locale_enrol_index_path(*args, &block)

@@ -61,7 +61,7 @@ class CourseCompletionA4WithDepartment < Prawn::Document
     margin = 3.5
     fill_color '3d3d3d'
     text_box(I18n.t('course_completion.institution') + ': ' + user.institution, at: [left, top + (margin*5) + (height*5)], style: :normal, size: 14)
-    text_box(I18n.t('course_completion.department') + ': ' + user.department, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.department') + ': ' + user.department.to_s, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
     date_format = (user.locale == 'en-us') ? "%m/%d/%Y" : "%d/%m/%Y"
