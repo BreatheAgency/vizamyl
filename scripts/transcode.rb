@@ -118,6 +118,28 @@ VIDS.each do |v|
   pipeline = '1406736256921-3z5mxc'
   input = "Key=videos-in/#{folder}.mp4"
   output_key_prefix = "videos/#{folder}/"
+  # This actually needs to be JSON array of multiple outputs with a JSON array including HLS presets for 2m, 1.5m, 1m, 600k and 400k:
+  # [
+  #   {
+  #     "Key": "hls2m",
+  #     "PresetId": "1351620000001-200010",
+  #     "SegmentDuration": "10"
+  #   },
+  #   {
+  #     "Key": "hls15m",
+  #     "PresetId": "1351620000001-200010",
+  #     "SegmentDuration": "10"
+  #   },
+  #
+  #   ... with a playlist ...
+  #
+  # [
+  #   {
+  #     "Name": "playlist",
+  #     "Format": "HLSv3",
+  #     "OutputKeys": ["hls2m", "hls15m", "hls1m", "hls600k", "hls400k" ]
+  #   }
+  # ]
   output = "Key=web.mp4,PresetId=1351620000001-100070"
   cmd = "aws elastictranscoder create-job --pipeline-id #{pipeline} --input #{input} --output-key-prefix #{output_key_prefix} --job-output #{output}"
   `#{cmd}`
