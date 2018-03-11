@@ -18,7 +18,7 @@ CREATE DATABASE vizamyl_development WITH TEMPLATE vizamyl_production_dump;
 * Consider running `scripts/add_translations_for_new_language.sql.erb`. Note the comments.
 * Add the relevant locale to `layout.yml` & `pages.yml`, then translate them
 * Rename videos as per the conventions. At the time of writing there are 95 videos.
-* Fix up `videos.source` for the new videos
+* Fix `videos.source` for the new videos:
 ``` ruby
 I18n.locale = 'jp'
 Video.all.each { |v| v.source = v.source.gsub(/^EN/, 'JP') ; v.save! }
@@ -26,23 +26,11 @@ Question
   .all
   .select { |q| q.explanation_source.present? }
   .each { |v| v.explanation_source = v.explanation_source.gsub(/^EN/, 'JP') ; v.save! }
-  
-* Fix up `questions.explanation_source` for the new videos
+```
 * Add vidoes to the vizamyl-staging S3 bucket's 'videos-in', then schedule transcoding via scripts/transcode
+* Deploy, then add new admin users on the production db via the console
 
-
-# Deployment
-
-- Backup
-- Pull latest dbs
-- Dump only the users
-- Pull latest staging
-- Grab all users from production as inserts
-- Remove all users from staging
-- "Restore" all users from production to staging
-- Maintenance mode
-- Restore
-- Live!
+### Deployment
 
 ```
 heroku pg:backups capture --app vizamyl-staging
