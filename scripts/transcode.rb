@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 require 'json'
-
-raise 'Adjust for your new language, then run.'
 # Get this list for your language with `aws s3 ls s3://vizamyl-staging/videos-in/`
+raise 'Adjust for your new language, then delete this line.'
+
 VIDS = %w{
 JP_M0_P2_VIDEO
 JP_M1A_P2_VIDEO
@@ -118,30 +118,59 @@ VIDS.each do |v|
   pipeline = '1406736256921-3z5mxc'
   input = "Key=videos-in/#{folder}.mp4"
   output_key_prefix = "videos/#{folder}/"
-  # This actually needs to be JSON array of multiple outputs with a JSON array including HLS presets for 2m, 1.5m, 1m, 600k and 400k:
-  # [
-  #   {
-  #     "Key": "hls2m",
-  #     "PresetId": "1351620000001-200010",
-  #     "SegmentDuration": "10"
-  #   },
-  #   {
-  #     "Key": "hls15m",
-  #     "PresetId": "1351620000001-200010",
-  #     "SegmentDuration": "10"
-  #   },
-  #
-  #   ... with a playlist ...
-  #
-  # [
-  #   {
-  #     "Name": "playlist",
-  #     "Format": "HLSv3",
-  #     "OutputKeys": ["hls2m", "hls15m", "hls1m", "hls600k", "hls400k" ]
-  #   }
-  # ]
-  output = "Key=web.mp4,PresetId=1351620000001-100070"
-  cmd = "aws elastictranscoder create-job --pipeline-id #{pipeline} --input #{input} --output-key-prefix #{output_key_prefix} --job-output #{output}"
+
+  outputs = <<-JSON.delete(" \t\r\n")
+  [
+    {
+      "Key": "hls2m",
+      "PresetId": "1351620000001-200010",
+      "SegmentDuration": "10"
+    },
+    {
+      "Key": "hls15m",
+      "PresetId": "1351620000001-200020",
+      "SegmentDuration": "10"
+    },
+    {
+      "Key": "hls1m",
+      "PresetId": "1351620000001-200030",
+      "SegmentDuration": "10"
+    },
+    {
+      "Key": "hls600k",
+      "PresetId": "1351620000001-200040",
+      "SegmentDuration": "10"
+    },
+    {
+      "Key": "hls400k",
+      "PresetId": "1351620000001-200050",
+      "SegmentDuration": "10"
+    },
+    {
+      "Key": "web.mp4",
+      "PresetId": "1351620000001-100070"
+    },
+    {
+      "Key": "web.webm",
+      "PresetId": "1406736363841-rmod19"
+    }
+  ]
+  JSON
+
+  playlists = <<-JSON.delete(" \t\r\n")
+  [
+    {
+      "Name": "playlist",
+      "Format": "HLSv3",
+      "OutputKeys": ["hls2m", "hls15m", "hls1m", "hls600k", "hls400k" ]
+    }
+  ]
+  JSON
+
+  # Catch JSON problems early
+  JSON.parse(outputs)
+  JSON.parse(playlists)
+
+  cmd = "aws elastictranscoder create-job --pipeline-id #{pipeline} --input #{input} --output-key-prefix #{output_key_prefix} --outputs '#{outputs}' --playlists '#{playlists}'"
   `#{cmd}`
 end
-
