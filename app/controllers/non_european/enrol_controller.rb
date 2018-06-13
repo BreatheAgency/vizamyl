@@ -18,10 +18,6 @@ class NonEuropean::EnrolController < ApplicationController
       sign_in @user, bypass: true
       redirect_to after_sign_up_path_for(@user)
     else
-      unless @user.marketing_overall_opt_in
-        @user.errors[:marketing_overall_opt_in] << ""
-        @user.errors[:marketing_overall_opt_out] << ""
-      end
       @user.clean_up_passwords
       render 'new'
     end

@@ -7,6 +7,12 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
+  # For non-european
+  attr_reader :marketing_overall_opt_out
+  def marketing_overall_opt_out=(param)
+    @marketing_overall_opt_out = (param == "1")
+  end
+
   attr_accessor :form_step
   cattr_accessor :form_steps do
     %w(details institution terms marketing)
@@ -49,9 +55,16 @@ class User < ActiveRecord::Base
     step.validates :cookies_opt_in, inclusion: { in: [true] }
   end
 
-  with_options :if => -> { I18n.locale == :'en-us' } do |step|
-    attr_accessor :marketing_overall_opt_out
+  with_options :if => -> { I18n.locale == :'en-us' || I18n.locale == :jp } do |step|
+    step.validate :pick_a_marketing_option
     step.validates :privacy_opt_in, inclusion: { in: [true], message: "Please review the privacy statement" }
+  end
+
+  def pick_a_marketing_option
+    unless marketing_overall_opt_in ^ marketing_overall_opt_out
+      errors[:marketing_overall_opt_in] << ""
+      errors[:marketing_overall_opt_out] << ""
+    end
   end
 
   def full_name
