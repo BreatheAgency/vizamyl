@@ -66,7 +66,7 @@ jp:
         password_length: パスワードは最低8文字必要です。
         marketing_privacy: 個人情報の保護について
         marketing_overall_opt_in: 製品に関する情報提供を希望します。
-        marketing_overall_opt_in_other: 製品に関する情報提供を希望しません。（希望されない場合でもトレーニングは受講いただけます。）
+        marketing_overall_opt_out: 製品に関する情報提供を希望しません。（希望されない場合でもトレーニングは受講いただけます。）
         acknowledge_privacy: 個人情報保護方針に同意する。
         submit: 送信
     sessions:

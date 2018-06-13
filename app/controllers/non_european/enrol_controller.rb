@@ -20,7 +20,7 @@ class NonEuropean::EnrolController < ApplicationController
     else
       unless @user.marketing_overall_opt_in
         @user.errors[:marketing_overall_opt_in] << ""
-        @user.errors[:marketing_overall_opt_in_other] << ""
+        @user.errors[:marketing_overall_opt_out] << ""
       end
       @user.clean_up_passwords
       render 'new'
@@ -30,7 +30,7 @@ class NonEuropean::EnrolController < ApplicationController
   private
 
   def user_params
-    permitted_attributes = [:salutation, :first_name, :last_name, :locale, :email, :password, :password_confirmation, :cookies_opt_in, :privacy_opt_in, :marketing_overall_opt_in, :marketing_overall_opt_in_other, :marketing_email_opt_in, :marketing_post_opt_in, :marketing_representative_opt_in, :terms_and_conditions_opt_in, :institution, :department, :invite_code]
+    permitted_attributes = [:salutation, :first_name, :last_name, :locale, :email, :password, :password_confirmation, :cookies_opt_in, :privacy_opt_in, :marketing_overall_opt_in, :marketing_overall_opt_out, :marketing_email_opt_in, :marketing_post_opt_in, :marketing_representative_opt_in, :terms_and_conditions_opt_in, :institution, :department, :invite_code]
     params.require(:user).permit(permitted_attributes)
   end
 

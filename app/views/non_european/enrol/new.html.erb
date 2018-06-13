@@ -78,7 +78,7 @@
       <div class="row row-input">
         <div class="small-12 columns">
           <%= f.input :marketing_overall_opt_in, required: true, label: t('.marketing_overall_opt_in') %>
-          <%= f.input :marketing_overall_opt_in_other, required: true, label: t('.marketing_overall_opt_in_other'), as: :boolean %>
+          <%= f.input :marketing_overall_opt_out, required: true, label: t('.marketing_overall_opt_out'), as: :boolean %>
         </div>
       </div>
 
@@ -106,10 +106,10 @@
     <script>
       $(document).ready(function() {
         $('#user_marketing_overall_opt_in').click(function(e){
-          $('#user_marketing_overall_opt_in_other').prop('checked', false).prop('required', false);
+          $('#user_marketing_overall_opt_out').prop('checked', false).prop('required', false);
           $(this).prop('checked', true).prop('required', true);
         });
-        $('#user_marketing_overall_opt_in_other').click(funct)ion(e){
+        $('#user_marketing_overall_opt_out').click(funct)ion(e){
           $('#user_marketing_overall_opt_in').prop('checked', false).prop('required', false);
           $(this).prop('checked', true).prop('required', true);
         });
