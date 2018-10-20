@@ -47,6 +47,7 @@ gem 'rack-canonical-host'
 gem 'active_model_serializers'
 
 group :development do
+  gem 'awesome_print'
   gem 'bullet'
   gem 'quiet_assets'
   gem 'better_errors'

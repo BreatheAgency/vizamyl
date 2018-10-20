@@ -83,6 +83,7 @@ GEM
     autoprefixer-rails (6.1.1)
       execjs
       json
+    awesome_print (1.8.0)
     barber (0.9.2)
       ember-source (>= 1.0, < 3)
       execjs (>= 1.2, < 3)
@@ -378,6 +379,7 @@ DEPENDENCIES
   activeadmin!
   acts_as_list
   autoprefixer-rails
+  awesome_print
   better_errors
   binding_of_caller
   brakeman
@@ -430,4 +432,4 @@ RUBY VERSION
    ruby 2.3.1p112
 
 BUNDLED WITH
-   1.16.0
+   1.16.5
