@@ -30,6 +30,13 @@ class ApplicationController < ActionController::Base
     I18n.locale = current_admin_user && current_admin_user.locale || I18n.default_locale
   end
 
+  def reject_admin
+    if current_admin_user
+      flash[:error] = "Logout of the admin area first"
+      redirect_to(admin_root_path) && return
+    end
+  end
+
   def needs_black_triangle
     return false if I18n.locale == :'en-us'
     request.original_fullpath == users_locale_enrol_index_path || new_user_session_path || users_locale_enrol_path(id: 'details') || users_locale_enrol_path(id: 'marketing') || users_locale_enrol_path(id: 'terms') || users_locale_enrol_path(id: 'institution') || "/#{I18n.locale}"

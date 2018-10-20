@@ -1,4 +1,5 @@
 class NonEuropean::EnrolController < ApplicationController
+  before_action :reject_admin
 
   def new
     @user = User.new_with_session({}, session)

@@ -1,5 +1,7 @@
 class European::EnrolController < ApplicationController
   include Wicked::Wizard
+  before_action :reject_admin
+
   steps *User.form_steps
 
   def new

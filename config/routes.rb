@@ -11,7 +11,8 @@ Rails.application.routes.draw do
   match '/422', to: 'errors#unprocessable', via: [:get, :post]
   match '/500', to: 'errors#internal_server_error', via: [:get, :post]
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
+  devise_for :admin_users, ActiveAdmin::Devise.config.merge(controllers: {sessions: 'admin_users/sessions'})
+
   ActiveAdmin.routes(self)
 
   scope ':type', type: /#{%w(videos texts images interactives question_intros).join("|")}/ do
@@ -47,7 +48,10 @@ Rails.application.routes.draw do
 
   # All locales
   scope ':locale', locale: /#{I18n.available_locales.join("|")}/ do
-    devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }, controllers: { registrations: 'users/registrations' }
+    devise_for :users,
+               path_names: { sign_in: 'login', sign_out: 'logout' },
+               controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
+
     namespace :users do
       get '/course-complete' => 'course_completion#success'
     end
