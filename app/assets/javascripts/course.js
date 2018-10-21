@@ -38,13 +38,21 @@ window.Course = Ember.Application.create({
 Ember.RSVP.configure('onerror',function(error) {
   try {
     Rollbar.error(error);
-    // console.log(error);
   } catch(err) {}
 });
 
 window.onerror = function(error) {
   try {
     Rollbar.error(error);
-    // console.log(error);
   } catch(err) {}
 };
+
+// Deleteing this empty function declaration breaks error bubbling
+Ember.onerror = function (error) {};
+
+Ember.RSVP.on('error', function (error) {
+  if(error && error.status && error.status == 401) {
+    // User is not logged in
+    window.location = '/';
+  }
+});
