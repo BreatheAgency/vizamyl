@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
    if resource.is_a?(AdminUser)
-     return "/admin"
+     return admin_root_path
    else
      return request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
    end
@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_up_path_for(resource)
     if resource.is_a?(AdminUser)
-      return "/admin"
+      return admin_root_path
     else
       return "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
     end
@@ -32,8 +32,8 @@ class ApplicationController < ActionController::Base
 
   def reject_admin
     if current_admin_user
-      flash[:error] = "Logout of the admin area first"
-      redirect_to(admin_root_path) && return
+      flash[:error] = "You must logout of this Admin area before you can sign in as a regular user."
+      redirect_to(admin_root_path)
     end
   end
 
