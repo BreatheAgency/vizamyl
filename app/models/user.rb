@@ -51,11 +51,11 @@ class User < ActiveRecord::Base
     step.validates :terms_and_conditions_opt_in, inclusion: { in: [true] }
   end
 
-  with_options :if => -> { required_for_step?(:terms) && (I18n.locale == :de || I18n.locale == :'de-at') } do |step|
+  with_options :if => -> { new_record? && required_for_step?(:terms) && (I18n.locale == :de || I18n.locale == :'de-at') } do |step|
     step.validates :cookies_opt_in, inclusion: { in: [true] }
   end
 
-  with_options :if => -> { I18n.locale == :'en-us' || I18n.locale == :jp } do |step|
+  with_options :if => -> { new_record? && (I18n.locale == :'en-us' || I18n.locale == :jp) } do |step|
     step.validate :pick_a_marketing_option
     step.validates :privacy_opt_in, inclusion: { in: [true], message: "Please review the privacy statement" }
   end
