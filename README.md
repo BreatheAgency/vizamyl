@@ -29,6 +29,7 @@ Question
 ```
 * Add vidoes to the vizamyl-staging S3 bucket's 'videos-in', then schedule transcoding via scripts/transcode
 * Deploy, then add new admin users on the production db via the console
+* Add to locales / origins list for the filters on the active admin page
 
 ### Deployment
 
