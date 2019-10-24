@@ -2,7 +2,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_action :set_locale
   before_action :redirect_locale
-  helper_method :needs_black_triangle
   helper_method :european_locale?
   helper_method :non_european_locale?
   helper_method :users_locale_enrol_path
@@ -35,11 +34,6 @@ class ApplicationController < ActionController::Base
       flash[:error] = "You must logout of this Admin area before you can sign in as a regular user."
       redirect_to(admin_root_path)
     end
-  end
-
-  def needs_black_triangle
-    return false if I18n.locale == :'en-us'
-    request.original_fullpath == users_locale_enrol_index_path || new_user_session_path || users_locale_enrol_path(id: 'details') || users_locale_enrol_path(id: 'marketing') || users_locale_enrol_path(id: 'terms') || users_locale_enrol_path(id: 'institution') || "/#{I18n.locale}"
   end
 
   def european_locale
