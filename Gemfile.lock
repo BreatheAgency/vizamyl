@@ -35,7 +35,7 @@ GIT
       request_store (~> 1.0)
 
 GIT
-  remote: git@github.com:totalhealth/devise.git
+  remote: git://github.com/totalhealth/devise.git
   revision: 239d8a59633c941d1d483816adaa22985050893e
   branch: backport-fix
   tag: v3.5.11
