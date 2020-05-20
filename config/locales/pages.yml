@@ -169,6 +169,22 @@ de:
         <h1>Willkommen beim <br><strong>elektronischen Schulungsprogramm zu Vizamyl</strong></h1>
         <p>Bitte melden Sie sich an,<br><strong>wenn Sie die Kursbearbeitung nach einer Unterbrechung fortsetzen möchten.</strong></p>
         <p>Wenn Sie erstmalig mit dem Kurs arbeiten möchten,<br><strong>registrieren Sie sich bitte zunächst.</strong></p>
+      # Only German speaking German natives should see this (i.e not German speaking Swiss or Austrians)
+      blue_hand_body_html: |
+        <div class="blue-hand"/>
+        <p class="disclaimer"> Dieses Schulungsmaterial ist verpflichtender
+        Teil der Zulassung von Flutemetamol ( 18 F) und wurde als zusätzliche
+        risikominimierende Maßnahme beauflagt, um das Risiko des Auftretens
+        einer falschen Interpretation von PET-Bildern mit Vizamyl zu
+        minimieren und das Nutzen-Risiko-Verhältnis von Flutemetamol ( 18 F)
+        zu erhöhen. Dieses Schulungsmaterial soll dazu dienen, das Risiko für
+        Vizamyl weiter zu minimieren und Ärzten Hilfestellung zu geben, mit
+        diesem Risiko umzugehen. </p>
+        <h3>Elektronisches</h3>
+        <h2>Schulungsprogramm zu Vizamyl</h2>
+        <p> Bitte melden Sie sich an, <strong>wenn Sie die Kursbearbeitung nach einer
+        Unterbrechung fortsetzen möchten</strong>. Wenn Sie erstmalig mit dem Kurs
+        arbeiten möchten, <strong>registrieren Sie sich bitte zunächst</strong>. </p>
     references:
       left:
         title: Literaturangaben
