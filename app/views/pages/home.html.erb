@@ -1,4 +1,7 @@
-<div class='home row'>
+<div class='home row <%= display_blue_hand_logo? ? 'blue_hand' : 'regular' %>'>
+  <% if display_blue_hand_logo? %>
+    <%= render 'pages/with_blue_hand' %>
+  <% else  %>
   <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
   </div>
   <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
@@ -25,4 +28,5 @@
       </p>
     <% end %>
   </div>
+  <% end  %>
 </div>

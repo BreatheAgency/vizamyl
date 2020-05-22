@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :redirect_locale
   helper_method :european_locale?
   helper_method :non_european_locale?
+  helper_method :display_blue_hand_logo?
   helper_method :users_locale_enrol_path
   helper_method :users_locale_enrol_index_path
   helper_method :has_department?
@@ -48,6 +49,18 @@ class ApplicationController < ActionController::Base
 
   def japanese_locale?
     I18n.locale == :jp
+  end
+
+  def via_swiss_gatekeeper?
+    params['probably_swiss'].present?
+  end
+
+  # Germans need to see a logo which reads "Official G.E. Training Material".
+  # This doesn't display for Swiss or Austrian user's who speak German.
+  def display_blue_hand_logo?
+    return current_user.origin == 'de' if current_user
+    return false if via_swiss_gatekeeper? # probably Swiss
+    locale == :de
   end
 
   def users_locale_enrol_path(*args, &block)
