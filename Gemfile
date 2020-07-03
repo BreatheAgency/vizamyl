@@ -60,7 +60,6 @@ end
 
 group :test, :development do
   gem 'foreman'
-  gem 'pry-rails'
 end
 
 group :sandbox, :staging, :production do
