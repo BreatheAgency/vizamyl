@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :redirect_locale
   helper_method :european_locale?
   helper_method :non_european_locale?
+  helper_method :us_locale?
   helper_method :display_blue_hand_logo?
   helper_method :users_locale_enrol_path
   helper_method :users_locale_enrol_index_path
@@ -49,6 +50,10 @@ class ApplicationController < ActionController::Base
 
   def japanese_locale?
     I18n.locale == :jp
+  end
+
+  def us_locale?
+    I18n.locale == :"en-us"
   end
 
   def via_swiss_gatekeeper?

@@ -3,6 +3,13 @@ class NonEuropean::EnrolController < ApplicationController
 
   def new
     @user = User.new_with_session({}, session)
+
+    if params['origin'] == 'us_native'
+      # US Native Healthcare Professionals
+      render :new_us_native
+    else # Japan, Singapore, Honk Kong, Australia etc
+      render :new_other_country
+    end
   end
 
   def create
