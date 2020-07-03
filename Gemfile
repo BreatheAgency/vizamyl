@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.7'
+ruby '2.5.8'
 
 gem 'globalize', github: 'globalize/globalize'
 gem 'activeadmin', github: 'activeadmin/activeadmin'
