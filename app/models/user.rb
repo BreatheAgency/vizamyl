@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   has_many :progressions, dependent: :destroy
   has_many :steps, through: :progressions
 
-  before_create :inherit_invitation
+  before_validation :inherit_invitation
   before_create :create_progressions
   before_save :capitalize_names
   before_save :capitalize_institution
@@ -36,6 +36,7 @@ class User < ActiveRecord::Base
   alias_attribute :passed_round_one, :passed_round_one_at
   alias_attribute :passed_round_two, :passed_round_two_at
 
+  validates :department, presence: true, if: Proc.new { self.origin == 'jp' }
   validates :city_or_state, presence: true, if: Proc.new { @works_in_us }
   validates :primary_specialty, presence: true, if: Proc.new { @works_in_us }
 

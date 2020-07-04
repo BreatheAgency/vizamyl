@@ -259,7 +259,7 @@ es:
 jp:
   non_european:
     enrol:
-      new:
+      new: &new
         registration: 登録
         privacy_link: 個人情報の利用目的：
         privacy_statement: |
@@ -273,6 +273,8 @@ jp:
         marketing_overall_opt_out: 製品に関する情報提供を希望しません。（希望されない場合でもトレーニングは受講いただけます。）
         acknowledge_privacy: 個人情報保護方針に同意する。
         submit: 送信
+      new_other_country:
+        <<: *new
   users:
     course_completion:
       success:
