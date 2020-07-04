@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171211233332) do
+ActiveRecord::Schema.define(version: 20200703142334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
   enable_extension "postgres_fdw"
 
   create_table "active_admin_comments", force: :cascade do |t|
@@ -338,6 +339,8 @@ ActiveRecord::Schema.define(version: 20171211233332) do
     t.string   "origin",                                      default: "en",  null: false
     t.boolean  "privacy_opt_in",                              default: false
     t.string   "department"
+    t.string   "city_or_state"
+    t.string   "primary_specialty"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree

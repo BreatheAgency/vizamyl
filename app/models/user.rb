@@ -7,7 +7,12 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
-  # For non-european
+  # Singapore & Australian users also share US login screens as they don't have a regional office.
+  attr_reader :works_in_us
+  def works_in_us=(param)
+    @works_in_is = (param == "true")
+  end
+  # For non-Europeans, who click 1 marketing consent box instead of 3
   attr_reader :marketing_overall_opt_out
   def marketing_overall_opt_out=(param)
     @marketing_overall_opt_out = (param == "1")
@@ -30,6 +35,9 @@ class User < ActiveRecord::Base
   alias_attribute :failed_round_two, :failed_round_two_at
   alias_attribute :passed_round_one, :passed_round_one_at
   alias_attribute :passed_round_two, :passed_round_two_at
+
+  validates :city_or_state, presence: true, if: Proc.new { @works_in_us }
+  validates :primary_specialty, presence: true, if: Proc.new { @works_in_us }
 
   with_options :if => -> { required_for_step?(:details) } do |step|
     step.validates :salutation, presence: true

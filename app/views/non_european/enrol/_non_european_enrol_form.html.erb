@@ -1,0 +1,115 @@
+<%= simple_form_for(@user, url: non_european_enrol_index_path) do |f| %>
+  <%= f.hidden_field :works_in_us, value: @user.works_in_us %>
+  <div class="row">
+    <div class="small-12 columns">
+      <label><abbr title="required">*</abbr> <%= t('activerecord.attributes.user.salutation') %></label>
+      <%= f.collection_radio_buttons(:salutation, t('devise.registrations.edit.salutations'), :to_s, :to_s, checked: @user.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
+          b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
+        end
+      %>
+    </div>
+  </div>
+
+  <div class="row row-input">
+    <div class="small-6 columns">
+      <%= f.input :first_name, required: true %>
+    </div>
+    <div class="small-6 columns">
+      <%= f.input :last_name, required: true %>
+    </div>
+  </div>
+
+  <div class="row row-input">
+    <div class="small-6 columns">
+      <%= f.input :email, required: true %>
+    </div>
+  </div>
+
+  <div class="row row-input">
+    <div class="small-8 columns">
+      <%= f.input :institution, as: :string, required: true %>
+    </div>
+  </div>
+
+  <% if has_department? %>
+  <div class="row row-input">
+    <div class="small-8 columns">
+      <%= f.input :department, as: :string, required: true %>
+    </div>
+  </div>
+  <% end %>
+
+  <% if was_sent_invite_code? %>
+  <div class="row row-input">
+    <div class="small-8 columns">
+      <%= f.input :invite_code, required: true %>
+    </div>
+  </div>
+  <% else %>
+  <%# Japanese only have one input code in use, so we enter it for them. %>
+  <%= f.hidden_field :invite_code, value: User::JAPANESE_DEFAULT_INVITE_CODE %>
+  <% end %>
+
+  <% if @user.works_in_us %>
+    <div class="row row-input">
+      <div class="small-8 columns">
+        <%= f.input :city_or_state, as: :string, required: true %>
+      </div>
+    </div>
+    <div class="row row-input">
+      <div class="small-8 columns">
+        <%= f.input :primary_specialty, as: :string, required: true %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="row row-input">
+    <div class="small-6 columns">
+      <%= f.input :password, required: true %>
+      <p><%= t('.password_length') %></p>
+    </div>
+    <div class="small-6 columns">
+      <%= f.input :password_confirmation, required: true %>
+    </div>
+  </div>
+
+  <div class="row row-input">
+    <div class="small-12 columns">
+      <%= f.input :marketing_overall_opt_in, required: true, label: t('.marketing_overall_opt_in') %>
+      <%= f.input :marketing_overall_opt_out, required: true, label: t('.marketing_overall_opt_out'), as: :boolean %>
+    </div>
+  </div>
+
+  <div class="row row-input privacy">
+    <div class="small-12 columns">
+      <p><%= t('.marketing_privacy') %></p>
+      <% if locale.to_sym == :jp %>
+        <p>こちらの<a href="http://www3.gehealthcare.co.jp/ja-jp/footer/privacy_policy">個人情報保護に対する基本方針</a>をご確認ください。ご同意いただける場合は「個人情報保護方針に同意する」にチェックしてください。</p>
+      <% end %>
+      <%= f.input :privacy_opt_in, required: true, label: (raw t('.acknowledge_privacy')) %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <div class='form-actions button-container'>
+        <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+          <%= t('.submit') %> <i class='fi-arrow-right'></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<script>
+ $(document).ready(function() {
+   $('#user_marketing_overall_opt_in').click(function(e){
+     $('#user_marketing_overall_opt_out').prop('checked', false).prop('required', false);
+     $(this).prop('checked', true).prop('required', true);
+   });
+   $('#user_marketing_overall_opt_out').click(function(e){
+     $('#user_marketing_overall_opt_in').prop('checked', false).prop('required', false);
+     $(this).prop('checked', true).prop('required', true);
+   });
+ });
+</script>
