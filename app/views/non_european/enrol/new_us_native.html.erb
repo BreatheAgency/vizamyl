@@ -9,7 +9,7 @@
         <% else %>
           <p><a href="http://www.ge.com/privacy" target="_blank"><%= t('.privacy_link') %></a></p>
         <% end %>
-        <%= raw t('.institutions') %>
+        <%= raw t('.instructions') %>
         <p><small> * <%= raw t('.required_field') %></small></p>
       </div>
     </div>
@@ -19,12 +19,8 @@
     <script>
       $(document).ready(function() {
         $('#user_marketing_overall_opt_in').click(function(e){
-          $('#user_marketing_overall_opt_out').prop('checked', false).prop('required', false);
-          $(this).prop('checked', true).prop('required', true);
-        });
-        $('#user_marketing_overall_opt_out').click(function(e){
-          $('#user_marketing_overall_opt_in').prop('checked', false).prop('required', false);
-          $(this).prop('checked', true).prop('required', true);
+          let opt_in = $('#user_marketing_overall_opt_out').prop('checked');
+          $('#user_marketing_overall_opt_out').prop('checked', !opt_in);
         });
       });
     </script>

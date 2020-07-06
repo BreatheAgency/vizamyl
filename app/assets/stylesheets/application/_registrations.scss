@@ -29,6 +29,16 @@
     margin-bottom: 0;
   }
 
+  ::placeholder {
+    color: #777;
+    font-weight: normal;
+    font-size: 1.1em;
+  }
+
+  .hidden_input {
+    display: none;
+  }
+
   .marketing-purposes {
     line-height: 1.25;
   }

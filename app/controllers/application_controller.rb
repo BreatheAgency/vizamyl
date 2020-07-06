@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   helper_method :users_locale_enrol_path
   helper_method :users_locale_enrol_index_path
   helper_method :has_department?
-  helper_method :was_sent_invite_code?
+  helper_method :not_sent_invite_code?
 
   def after_sign_in_path_for(resource)
    if resource.is_a?(AdminUser)
@@ -66,8 +66,8 @@ class ApplicationController < ActionController::Base
   end
 
   # Japanese only have one input code in use, and they don't send it out to the users.
-  def was_sent_invite_code?
-    !japanese_locale?
+  def not_sent_invite_code?
+    japanese_locale?
   end
 
   # Germans need to see a logo which reads "Official G.E. Training Material".

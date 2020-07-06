@@ -11,6 +11,8 @@ class NonEuropean::EnrolController < ApplicationController
     @user = User.new_with_session(user_params, session)
     @user.terms_and_conditions_opt_in = true
 
+    set_invite_code if @user.works_in_us && @user.invite_code.blank?
+
     if @user.marketing_overall_opt_in
       @user.marketing_email_opt_in = true
       @user.marketing_post_opt_in = true
@@ -21,12 +23,22 @@ class NonEuropean::EnrolController < ApplicationController
       sign_in @user, bypass: true
       redirect_to after_sign_up_path_for(@user)
     else
+      unset_invite_code
       @user.clean_up_passwords
       render_based_on_location
     end
   end
 
   private
+
+  def set_invite_code
+    @user.invite_code = User::US_NATIVE_DEFAULT_INVITE_CODE
+    @set_by_set_invite_code = true
+  end
+
+  def unset_invite_code
+    @user.invite_code = nil if @set_by_set_invite_code
+  end
 
   def render_based_on_location
     if @user.works_in_us

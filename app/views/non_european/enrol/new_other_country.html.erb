@@ -15,5 +15,18 @@
     </div>
 
     <%= render partial: 'non_european_enrol_form' %>
+
+    <script>
+     $(document).ready(function() {
+       $('#user_marketing_overall_opt_in').click(function(e){
+         $('#user_marketing_overall_opt_out').prop('checked', false).prop('required', false);
+         $(this).prop('checked', true).prop('required', true);
+       });
+       $('#user_marketing_overall_opt_out').click(function(e){
+         $('#user_marketing_overall_opt_in').prop('checked', false).prop('required', false);
+         $(this).prop('checked', true).prop('required', true);
+       });
+     });
+    </script>
   </div>
 </div>
