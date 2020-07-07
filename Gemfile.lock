@@ -356,7 +356,7 @@ GEM
       sprockets (>= 2.8, < 4.0)
     temple (0.7.6)
     terminal-table (1.5.2)
-    thor (0.19.4)
+    thor (0.19.1)
     thread_safe (0.3.6)
     tilt (1.4.1)
     ttfunk (1.4.0)
