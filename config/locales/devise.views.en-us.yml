@@ -1,5 +1,0 @@
-"en-us":
-  activerecord:
-    attributes:
-      user:
-        salutation: Title

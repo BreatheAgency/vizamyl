@@ -1,4 +1,4 @@
-<% locales.reject{|l| l == :en }.each do |locale| %>
+<% locales.each do |locale| %>
   <a href='<%= "/#{locale}" %>' class="locale">
     <p class="country"><%= {
       'en-us': 'United States',

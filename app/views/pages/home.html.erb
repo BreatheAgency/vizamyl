@@ -12,7 +12,11 @@
         <% if european_locale? %>
           <a href='<%= european_enrol_path(id: User.form_steps.first, locale: I18n.locale) %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
         <% else %>
-          <a href='<%= new_non_european_enrol_path(locale: I18n.locale) %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+          <% if us_locale? %>
+            <a href='<%= us_path %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+          <% else #Japanese %>
+            <a href='<%= new_non_european_enrol_path(locale: I18n.locale) %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+          <% end %>
         <% end %>
       </div>
     </div>

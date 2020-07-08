@@ -1,21 +1,12 @@
 .important-risk-and-safety-information {
-  margin-bottom: rem-calc(30);
+  padding: 43px 110px;
 
-  .columns {
-    padding-top: rem-calc(20);
-    padding-left: rem-calc(50);
-    padding-right: rem-calc(50);
-  }
-
-  h1 {
-    font-weight: bold;
-    font-size: $h3-font-size;
-    padding-bottom: rem-calc(16);
-    line-height: rem-calc(30);
+  h3 {
+    margin-bottom: 22px;
   }
 
   p {
-    font-size: rem-calc(14);
-    line-height: rem-calc(16);
+    color: #333;
+    line-height: 1.5rem;
   }
 }

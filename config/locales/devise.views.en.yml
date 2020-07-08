@@ -54,7 +54,7 @@ en:
         unhappy: "Unhappy"
         update: "Update"
         we_need_your_current_password_to_confirm_your_changes: "we need your current password to confirm your changes"
-      new:
+      new: &new_en
         sign_up: "Sign up"
         registration: Registration
         privacy_link: Privacy Statement for Vizamyl (flutemetamol F 18 injection) Electronic Reader Training Program
@@ -70,6 +70,8 @@ en:
         marketing_overall_opt_out: I opt-out to receive any information regarding Vizamyl. By opting-out you are not prohibited from taking this training.
         acknowledge_privacy: 'I have reviewed the Privacy statement please <a href="http://www.ge.com/privacy" target="_blank">click here</a> to view.'
         submit: 'Submit'
+      new_us_native:
+        <<: *new_en
     sessions:
       new:
         sign_in: "Sign in"

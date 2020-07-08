@@ -4,11 +4,12 @@ class ApplicationController < ActionController::Base
   before_action :redirect_locale
   helper_method :european_locale?
   helper_method :non_european_locale?
+  helper_method :us_locale?
   helper_method :display_blue_hand_logo?
   helper_method :users_locale_enrol_path
   helper_method :users_locale_enrol_index_path
   helper_method :has_department?
-  helper_method :was_sent_invite_code?
+  helper_method :not_sent_invite_code?
 
   def after_sign_in_path_for(resource)
    if resource.is_a?(AdminUser)
@@ -47,12 +48,26 @@ class ApplicationController < ActionController::Base
   end
   alias_method :non_european_locale?, :non_european_locale
 
-  def japanese_locale?
-    I18n.locale == :jp
+  def us_locale?
+    I18n.locale == :"en-us"
   end
 
   def via_swiss_gatekeeper?
     params['probably_swiss'].present?
+  end
+
+  def japanese_locale?
+    I18n.locale == :jp
+  end
+
+  # Only Japanses want / need to collect this field
+  def has_department?
+    japanese_locale?
+  end
+
+  # Japanese only have one input code in use, and they don't send it out to the users.
+  def not_sent_invite_code?
+    japanese_locale?
   end
 
   # Germans need to see a logo which reads "Official G.E. Training Material".
@@ -69,16 +84,6 @@ class ApplicationController < ActionController::Base
     else
       return new_non_european_enrol_path
     end
-  end
-
-  # Only Japanses want / need to collect this field
-  def has_department?
-    japanese_locale?
-  end
-
-  # Japanese only have one input code in use, and they don't send it out to the users.
-  def was_sent_invite_code?
-    !japanese_locale?
   end
 
   def users_locale_enrol_index_path(*args, &block)
