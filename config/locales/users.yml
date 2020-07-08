@@ -15,10 +15,12 @@ en:
         invite_code_placeholder: "OPTIONAL INVITE CODE HERE"
       new_us_native:
         <<: *new_en
+        preamble: "<p>This course is intended for US Health Care Professionals only for the purpose of educating and aiding HCP’s interpretation of Vizamyl scans. By registering, you certify that you are a licensed US Health Care Professional. The Personal Information collected below will, unless designated otherwise, be used solely to identify you in the test results section of this training program. For more information regarding our privacy policy, please view our Privacy Statement.</p>"
         instructions: |
           <p>To get started, please fill in all required fields below and click the Submit button.<p/>
           <p>Once your account has been successfully created, you will have the opportunity to save your progress, review information, or print results upon completion of the course. Following completion of this course, you will be able to return and view/print course content at any time via the name & email address provided on your account.</p>
         marketing_overall_opt_in: Yes, please send me occasional email communications containing relevant product updates and upcoming events from GE Healthcare
+        required_field: Indicates a required field
       new_other_country:
         <<: *new_en
         privacy_statement: |

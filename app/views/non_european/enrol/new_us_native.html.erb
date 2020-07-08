@@ -3,14 +3,10 @@
     <div class="row">
       <div class="small-12 columns">
         <h1><%= t('.registration') %></h1>
-
-        <% if locale.to_sym == :jp %>
-          <h5><%= t('.privacy_link') %></h5>
-        <% else %>
-          <p><a href="http://www.ge.com/privacy" target="_blank"><%= t('.privacy_link') %></a></p>
-        <% end %>
+        <%= raw t('.preamble') %>
+        <p><a href="http://www.ge.com/privacy" target="_blank"><%= t('.privacy_link') %></a></p>
         <%= raw t('.instructions') %>
-        <p><small> * <%= raw t('.required_field') %></small></p>
+        <p>* <%= raw t('.required_field') %></p>
       </div>
     </div>
 
