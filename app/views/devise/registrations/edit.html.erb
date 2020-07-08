@@ -50,6 +50,10 @@
           <% if has_department? %>
           <%= f.input :department, required: false %>
           <% end %>
+          <% if us_locale? && @user.origin == 'us' %>
+            <%= f.input :city_or_state, required: false %>
+            <%= f.input :primary_specialty, required: false %>
+          <% end %>
           <%= f.input :email, required: false, disabled: true %>
           <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank_if_you_don_t_want_to_change_it'), required: false %>
           <%= f.input :password_confirmation, required: false %>
