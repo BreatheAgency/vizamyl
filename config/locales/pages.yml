@@ -144,7 +144,7 @@ en:
           <p>Querfurth HW, LaFerla FM. Alzheimer’s disease. <i>N Engl J Med</i>. 2010;362(4):329-344.</p>
           <p>Rowe CC, Ng S, Ackermann U, et al. Imaging beta-amyloid burden in aging and dementia. <i>Neurology</i>. 2007;68(20):1718-1725.</p>
           <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. <i>Ann Neurol</i>. 2010;68(3):319-329.</p>
-          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE Healthcare 2014.</p>
+          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE Healthcare 2020.</p>
     important-risk-and-safety-information:
       title_html: Important Risk and Safety Information<br>About Vizamyl&#0153; (Flutemetamol F 18 Injection)
       body_html: |
@@ -155,13 +155,22 @@ en:
     contact:
       left:
         title: |
-         For Medical Affairs Support
-         and Other Enquiries:
+          For additional support and other inquiries:
         body_html: |
-          <p>If you would like additional <strong>medical information</strong> about Vizamyl, please contact us by email at <a href="mailto:professionalservices.medical@ge.com">professionalservices.medical@ge.com</a></p>
-          <p>For other enquiries, including requests related to <strong>image reader training</strong>, please contact us by email at <a href="mailto:us.vizamyl@ge.com">us.vizamyl@ge.com</a></p>
-          <p><strong>Adverse events</strong> or complaints should be immediately reported to the Pharmacovigliance Safety Group at<br><a href="tel:800-654-0118">800 654 0118</a> or by email at <a href="mailto:DrugSafetyPrinceton@ge.com">DrugSafetyPrinceton@ge.com</a></p>
-          <p>Should the reporter not wish to contact GE Healthcare, adverse can also be reported to the U.S Food & Drug Administration at <a href="tel:800-FDA-1088">800 FDA 1088</a> or at <a href="https://www.fda.gov/medwatch" target="_blank">www.fda.gov/medwatch</a></p>
+          <p>
+          <span>Medical Affairs:</span> 800 654 0118 (option 2, then option 3) or <a href="mailto:medical.affairs@ge.com">medical.affairs@ge.com</a>
+          </p>
+          <p>
+          <span>Reimbursement Hotline:</span> 800 767 6664
+          </p>
+          <p>
+          <span>Customer Service:</span> 800 292 8514
+          </p>
+          <p>
+          <span>
+          <a href="https://gehealthcare.com">gehealthcare.com</a>
+          </span>
+          </p>
 de:
   pages:
     home:
