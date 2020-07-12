@@ -47,7 +47,6 @@ class User < ActiveRecord::Base
   validates :primary_specialty, presence: true, if: Proc.new { new_record? && @works_in_us }
 
   with_options :if => -> { required_for_step?(:details) } do |step|
-    step.validates :salutation, presence: true
     step.validates :first_name, presence: true
     step.validates :last_name, presence: true
     step.validates :email, email: true

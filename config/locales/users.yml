@@ -9,13 +9,13 @@ en:
         marketing_privacy: 'Privacy Statement:'
         marketing_overall_opt_in: 'I would like to opt-in to receive other materials or information from GE Healthcare about Vizamyl.' 
         marketing_overall_opt_out: I opt-out to receive any information regarding Vizamyl. By opting-out you are not prohibited from taking this training.
-        acknowledge_privacy: 'I have reviewed the Privacy statement please <a href="http://www.ge.com/privacy" target="_blank">click here</a> to view.'
+        acknowledge_privacy: 'I have reviewed the Privacy Statement. Please <a href="http://www.ge.com/privacy" target="_blank">click here</a> to view.'
         submit: 'Submit'
         invite_code_hint: "If you have an invite code..."
         invite_code_placeholder: "OPTIONAL INVITE CODE HERE"
       new_us_native:
         <<: *new_en
-        preamble: "<p>This course is intended for US Health Care Professionals only for the purpose of educating and aiding HCP’s interpretation of Vizamyl scans. By registering, you certify that you are a licensed US Health Care Professional. The Personal Information collected below will, unless designated otherwise, be used solely to identify you in the test results section of this training program. For more information regarding our privacy policy, please view our Privacy Statement.</p>"
+        preamble: "<p>This course is intended for US Healthcare Professionals only for the purpose of educating and aiding HCP’s interpretation of Vizamyl scans. By registering, you certify that you are a licensed US Healthcare Professional. The Personal Information collected below will, unless designated otherwise, be used solely to identify you in the test results section of this training program. For more information regarding our privacy policy, please view our Privacy Statement.</p>"
         instructions: |
           <p>To get started, please fill in all required fields below and click the Submit button.<p/>
           <p>Once your account has been successfully created, you will have the opportunity to save your progress, review information, or print results upon completion of the course. Following completion of this course, you will be able to return and view/print course content at any time via the name & email address provided on your account.</p>
