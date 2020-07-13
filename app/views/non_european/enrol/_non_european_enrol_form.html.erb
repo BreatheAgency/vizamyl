@@ -2,7 +2,7 @@
   <%= f.hidden_field :works_in_us, value: @user.works_in_us %>
   <div class="row">
     <div class="small-12 columns">
-      <label><abbr title="required">*</abbr> <%= t('activerecord.attributes.user.salutation') %></label>
+      <label><%= t('activerecord.attributes.user.salutation') %></label>
       <%= f.collection_radio_buttons(:salutation, t('devise.registrations.edit.salutations'), :to_s, :to_s, checked: @user.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
           b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
         end
@@ -60,7 +60,7 @@
       <div class="small-8 columns">
         <%= f.hint t('non_european.enrol.new.invite_code_hint') %>
         <%= f.input :invite_code, required: false, placeholder: t('non_european.enrol.new.invite_code_placeholder')%>
-        <p>If you have previously been provided with an invite code, please input it here. If you do not have an invite code,  please leave this box blank.'</p>
+        <p>If you have previously been provided with an invite code, please input it here. If you do not have an invite code,  please leave this box blank.</p>
       </div>
     </div>
   <% else%>
