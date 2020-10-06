@@ -48,14 +48,15 @@ gem 'rack-canonical-host'
 gem 'active_model_serializers'
 
 group :development do
+  gem "letter_opener"
   gem 'awesome_print'
-  gem 'bullet'
-  gem 'quiet_assets'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
+  gem 'bullet'
   gem 'meta_request'
-  gem "letter_opener"
+  gem 'pry-byebug'
+  gem 'quiet_assets'
 end
 
 group :test, :development do
