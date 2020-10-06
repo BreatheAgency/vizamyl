@@ -6,7 +6,9 @@
       <li class='selected'></li>
       <li></li>
       <li></li>
-      <li></li>
+      <% unless italian_locale? %>
+        <li></li>
+      <% end %>
     </ul>
     <h1><%= t('.title') %></h1>
     <%= simple_form_for(@user, url: users_locale_enrol_path, html: { method: :put, class: 'form' }) do |f| %>

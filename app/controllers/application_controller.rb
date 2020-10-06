@@ -52,6 +52,11 @@ class ApplicationController < ActionController::Base
     I18n.locale == :"en-us"
   end
 
+  def italian_locale?
+    I18n.locale == :it
+  end
+  helper_method :italian_locale?
+
   def via_swiss_gatekeeper?
     params['probably_swiss'].present?
   end

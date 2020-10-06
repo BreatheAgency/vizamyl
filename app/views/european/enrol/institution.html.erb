@@ -5,8 +5,10 @@
     <ul class='progress'>
       <li></li>
       <li class='selected'></li>
-      <li></li>
-      <li></li>
+      <li> </li>
+      <% unless italian_locale? %>
+        <li> </li>
+      <% end %>
     </ul>
     <h1><%= t('.title') %></h1>
     <p><%= t('.description') %></p>

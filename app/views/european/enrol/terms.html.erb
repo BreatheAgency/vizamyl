@@ -6,7 +6,9 @@
       <li></li>
       <li></li>
       <li class='selected'></li>
-      <li></li>
+      <% unless italian_locale? %>
+        <li></li>
+      <% end %>
     </ul>
     <h1><%= t('.title_html') %></h1>
     <%= t('.description_one_html') %>
