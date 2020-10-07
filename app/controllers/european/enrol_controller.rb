@@ -39,7 +39,7 @@ class European::EnrolController < ApplicationController
   private
 
   def user_should_skip_last_step?
-    @user.valid? && @user.form_step == "terms" && @user.origin == "it" && @user.save!
+    italian? && @user.valid? && @user.form_step == "terms" && @user.save!
   end
 
   def sign_in_and_redirect

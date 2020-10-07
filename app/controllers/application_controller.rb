@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   helper_method :non_european_locale?
   helper_method :us_locale?
   helper_method :display_blue_hand_logo?
+  helper_method :italian?
   helper_method :users_locale_enrol_path
   helper_method :users_locale_enrol_index_path
   helper_method :has_department?
@@ -52,13 +53,12 @@ class ApplicationController < ActionController::Base
     I18n.locale == :"en-us"
   end
 
-  def italian_locale?
-    I18n.locale == :it
+  def italian?
+    I18n.locale == :it && !via_swiss_gatekeeper?
   end
-  helper_method :italian_locale?
 
   def via_swiss_gatekeeper?
-    params['probably_swiss'].present?
+    @via_swiss_gatekeeper ||= session['probably_swiss']
   end
 
   def japanese_locale?
