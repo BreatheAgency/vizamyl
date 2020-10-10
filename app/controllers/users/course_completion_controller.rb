@@ -32,10 +32,10 @@ class CourseCompletionA4 < Prawn::Document
     })
     font('geinspira')
     image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
-    left = 243
-    top = 408
+    left = 212
+    top = 422
     height = 32
-    margin = 3.5
+    margin = 2.1
     fill_color '005cb9'
     text_box(I18n.t('course_completion.salutation') + ': ' + user.salutation, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
