@@ -90,4 +90,7 @@ class Users::CourseCompletionController < ApplicationController
       end
     end
   end
+
+  def adjunctive_use_of_quantification
+  end
 end

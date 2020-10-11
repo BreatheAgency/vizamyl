@@ -4,6 +4,12 @@ en:
     first_name: First name
     last_name: Last name
     date: Date
+  users:
+    course_completion:
+      success:
+        adjunctive_use_of_quantification_html: Using Vizamyl&#8482
+      adjunctive_use_of_quantification:
+        title: Adjunctive Use of Quantification
 de:
   course_completion:
     salutation: Anrede
