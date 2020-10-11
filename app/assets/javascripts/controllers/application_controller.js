@@ -8,6 +8,11 @@ Course.ApplicationController = Ember.Controller.extend({
   isComplete: Ember.computed.bool('currentUser.completed'),
   isSkippable: Ember.computed.bool('currentUser.skippable'),
   isUS: Ember.computed.equal('currentLocale', 'en-us'),
+  isJapan: Ember.computed.equal('currentLocale', 'jp'),
+
+  isEuropean: function() {
+    return !(this.get('isUS') || this.get('isJapan'))
+  }.property('isUS', 'isJapan'),
 
   currentStep: function() {
     return this.get('currentPage.step');

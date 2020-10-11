@@ -4,6 +4,12 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   sortAscending: true,
   isComplete: Ember.computed.alias('controllers.application.isComplete'),
   hiddenChapters: Ember.computed.filterBy('arrangedContent', 'hidden', true),
+  isEuropean: Ember.computed.alias('controllers.application.isEuropean'),
+  currentLocale: Ember.computed.alias('controllers.application.currentLocale'),
+
+  useVideoLink: function () {
+    return '/' + this.get('currentLocale') + "/users/use";
+  }.property('currentLocale'),
 
   actions: {
     toggle: function(chapter){
