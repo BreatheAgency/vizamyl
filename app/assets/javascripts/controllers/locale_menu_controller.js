@@ -11,6 +11,24 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
     return '/' + this.get('currentLocale') + "/users/use";
   }.property('currentLocale'),
 
+  videoLinkText: function () {
+    var locale = this.get('currentLocale');
+    switch(locale) {
+    case 'fr':
+      return 'Utilisation complémentaire de la quantification';
+    case 'es':
+      return 'Uso complementario de la cuantificación';
+    case 'it':
+      return 'Modulo supplementare sulla quantificazione';
+    case 'de':
+      return 'Zusatzmodul Quantifizierung';
+    case 'de-at':
+      return 'Zusatzmodul Quantifizierung';
+    default:
+      return "Adjunctive Use of Quantification";
+    }
+  }.property('currentLocale'),
+
   actions: {
     toggle: function(chapter){
       if (!chapter.get('available')) { return; }

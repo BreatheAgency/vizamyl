@@ -1,6 +1,18 @@
-<div class='terms-and-conditions row'>
-  <div class='large-12 columns with-content with-minimum'>
-    <h1><%= link_to t('.title'), request.path %></h1>
-    <iframe width="900" height="630" src="https://www.youtube.com/embed/Ncmg3bxtTB0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
+<div class="course">
+  <main>
+    <div class="row page video-page">
+      <div class="small-5 large-5 columns with-content with-minimum">
+        <h1><%= t('.title_html') %></h1>
+        <p><%= t('.copy') %></p>
+      </div>
+      <div class="small-7 large-7 columns with-media with-minimum">
+        <%- source = 'IT_AUofQ' # TODO: Translate %>
+        <%= video_tag([
+          "//#{Rails.application.secrets.content_host}/videos/#{source}/playlist.m3u8",
+          "//#{Rails.application.secrets.content_host}/videos/#{source}/web.mp4",
+          "//#{Rails.application.secrets.content_host}/videos/#{source}/web.webm"
+        ], controls: true, autobuffer: true, size: '550x413') %>
+      </div>
+    </div>
+  </main>
 </div>
