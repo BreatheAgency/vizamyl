@@ -398,16 +398,13 @@ it:
     contact:
       left:
         title: |
-         Assistenza medica
-         e altri accertamenti
+         Contatti di GE Healthcare Italia
         body_html: |
-          <p>Se si desiderano informazioni <strong>mediche supplementari</strong> su Vizamyl, per favore ci contatti all’indirizzo email:</p>
+          <p>Se si desiderano informazioni mediche supplementari su Vizamyl, ci contatti all’indirizzo email:</p>
           <p><a href="mailto:PDxMA.ITALY@ge.com">PDxMA.ITALY@ge.com</a></p>
-          <p>Per ulteriori richieste, comprese le richieste di formazione per <strong>la lettura delle immagini</strong>, ci contatti al seguente indirizzo email:</p>
+          <p>Per ulteriori richieste, comprese le richieste di formazione per la lettura delle immagini, ci contatti all’indirizzo email:</p>
           <p><a href="mailto:GE_ITA.MarketingPDx@ge.com">GE_ITA.MarketingPDx@ge.com</a></p>
-          <p>Se si è interessati a saperne di più a proposito di <strong>SPECT imaging e DaTSCAN&#0153;</strong> visitare:</p>
-          <p><a href="http://www.gehealthcare.co.uk/datscan" target="_blank">www.gehealthcare.co.uk/datscan</a></p>
-          <p><small>Vizamyl e DaTSCAN sono marchi depositati di GE Healthcare Limited.</small></p>
+          <p><small>Vizamyl è un marchio di GE Healthcare.</small></p>
     terms-and-conditions:
       title: Termini e condizioni
       body_html: |
