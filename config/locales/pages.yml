@@ -393,7 +393,7 @@ it:
       right:
         body_html: |
     resources:
-      smpc_title: Vizamyl SmPC EU
+      smpc_title: Vizamyl SmPC IT
       rainbow_title: Scala di colori arcobaleno valori RVB
     contact:
       left:
