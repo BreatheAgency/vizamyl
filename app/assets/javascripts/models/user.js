@@ -3,6 +3,7 @@ Course.User = DS.Model.extend({
   super_user: DS.attr('boolean'),
   in_person: DS.attr('boolean'),
   locale: DS.attr('string'),
+  origin: DS.attr('string'),
   progressions: DS.hasMany('progression'),
   steps: DS.hasMany('steps'),
   completed: DS.attr('boolean'),

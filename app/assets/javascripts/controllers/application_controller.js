@@ -9,6 +9,8 @@ Course.ApplicationController = Ember.Controller.extend({
   isSkippable: Ember.computed.bool('currentUser.skippable'),
   isUS: Ember.computed.equal('currentLocale', 'en-us'),
   isJapan: Ember.computed.equal('currentLocale', 'jp'),
+  // TODO: Delete after publishing all "Adjunctive use of quantification" videos
+  isItalianOrigin: Ember.computed.equal('currentUserOrigin', 'it'),
 
   isEuropean: function() {
     return !(this.get('isUS') || this.get('isJapan'))
@@ -24,6 +26,10 @@ Course.ApplicationController = Ember.Controller.extend({
 
   currentUser: function() {
     return Course.get('user');
+  }.property('Course.user'),
+
+  currentUserOrigin: function() {
+    return Course.get('user.origin');
   }.property('Course.user'),
 
   currentEnvironment: function() {
