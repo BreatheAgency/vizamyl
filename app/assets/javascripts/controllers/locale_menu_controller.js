@@ -6,7 +6,7 @@ Course.LocaleMenuController = Ember.ArrayController.extend({
   hiddenChapters: Ember.computed.filterBy('arrangedContent', 'hidden', true),
   isEuropean: Ember.computed.alias('controllers.application.isEuropean'),
   // TODO: Delete after publishing all "Adjunctive use of quantification" videos
-  isItalianOrigin: Ember.computed.alias('controllers.application.isItalianOrigin'),
+  hasAUofQVideo: Ember.computed.alias('controllers.application.hasAUofQVideo'),
   currentLocale: Ember.computed.alias('controllers.application.currentLocale'),
 
   useVideoLink: function () {

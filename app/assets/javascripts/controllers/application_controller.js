@@ -10,7 +10,18 @@ Course.ApplicationController = Ember.Controller.extend({
   isUS: Ember.computed.equal('currentLocale', 'en-us'),
   isJapan: Ember.computed.equal('currentLocale', 'jp'),
   // TODO: Delete after publishing all "Adjunctive use of quantification" videos
-  isItalianOrigin: Ember.computed.equal('currentUserOrigin', 'it'),
+  hasAUofQVideo: function() {
+    let locale, has_video;
+
+    locale = this.get('currentLocale');
+    has_video = (locale === 'it' ||
+                 locale === 'de' ||
+                 locale === 'de-at' ||
+                 locale === 'en-gb' ||
+                 locale === 'en');
+
+    return has_video;
+  }.property('currentLocale'),
 
   isEuropean: function() {
     return !(this.get('isUS') || this.get('isJapan'))
