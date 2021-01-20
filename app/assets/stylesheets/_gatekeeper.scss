@@ -1,5 +1,4 @@
 .gatekeeper {
-
   .map {
     padding-top: rem-calc(50);
     min-height: rem-calc(700);
@@ -121,6 +120,10 @@
         margin-bottom: 0;
       }
 
+    }
+
+    hr.last {
+      margin-top: 45px;
     }
   }
 }

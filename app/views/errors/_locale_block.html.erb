@@ -1,17 +1,7 @@
-<% locales.each do |locale| %>
-  <a href='<%= "/#{locale}" %>' class="locale">
-    <p class="country"><%= {
-      'en-us': 'United States',
-      'en-gb': 'United Kingdom',
-      'pt': 'Portugal',
-      'it': 'Italy',
-      'fr': 'France',
-      'es': 'Spain',
-      'de': 'Germany',
-      'de-at': 'Austria',
-      'nl': 'Netherlands',
-      'jp': 'Japan',
-    }.fetch(locale, locale) %></p>
+<% locales.each do |locale, country| %>
+  <a href='<%= locale %>' class="locale">
+    <p class="country"><%= country %></p>
   </a>
   <hr>
 <% end %>
+
