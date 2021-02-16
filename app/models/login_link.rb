@@ -5,7 +5,7 @@ class LoginLink
        'en-us': 'United States',
        'en-gb': 'United Kingdom',
        'de-at': 'Austria',
-       'be': 'Belgium',
+       'be': 'Belgium / Luxembourg',
       }
     end
 

@@ -93,6 +93,19 @@
      }
   }
 
+  .belgian-proceed {
+    margin-top: 4em;
+    padding: 1em 0 1em 0;
+    display: inline;
+    p {
+      display: inline;
+    }
+    i {
+      position: relative;
+      top: 4px;
+    }
+  }
+
   .locale-select {
     margin-top: rem-calc(40);
 
