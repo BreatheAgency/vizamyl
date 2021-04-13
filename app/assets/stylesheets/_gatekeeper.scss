@@ -1,5 +1,4 @@
 .gatekeeper {
-
   .map {
     padding-top: rem-calc(50);
     min-height: rem-calc(700);
@@ -94,6 +93,19 @@
      }
   }
 
+  .belgian-proceed {
+    margin-top: 4em;
+    padding: 1em 0 1em 0;
+    display: inline;
+    p {
+      display: inline;
+    }
+    i {
+      position: relative;
+      top: 4px;
+    }
+  }
+
   .locale-select {
     margin-top: rem-calc(40);
 
@@ -122,5 +134,12 @@
       }
 
     }
+
+    hr.last {
+      margin-top: 45px;
+    }
+  }
+  .belgian p {
+    font-size: 1em;
   }
 }
