@@ -14,8 +14,8 @@ Course.ApplicationController = Ember.Controller.extend({
     var locale, has_video;
 
     locale = this.get('currentLocale');
-    // Videos also approved and published: 'de', 'en', 'en-gb'
-    has_video = (locale === 'it' || locale === 'de-at');
+    // Videos also approved and published: 'en', 'en-gb'
+    has_video = (locale === 'it' || locale === 'de' || locale === 'de-at');
 
     return has_video;
   }.property('currentLocale'),
