@@ -13,8 +13,9 @@ Course.ApplicationController = Ember.Controller.extend({
     var locale, has_video;
 
     locale = this.get('currentLocale');
-    // TODO: French and Spanish to go
+    // TODO: Just French to go
     has_video = (locale === 'it' ||
+                 locale === 'es' ||
                  locale === 'de' ||
                  locale === 'de-at' ||
                  locale === 'en-gb' ||

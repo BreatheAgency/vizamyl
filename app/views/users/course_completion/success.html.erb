@@ -5,10 +5,11 @@
     <meta http-equiv='refresh' content="3;<%= users_course_complete_path(format: :pdf) %>">
 
     <% if (current_user.locale == 'it' ||
+           current_user.locale == 'es' ||
            current_user.locale == 'de' ||
            current_user.locale == 'de-at' ||
            current_user.locale == 'en' ||
-           current_user.locale == 'en-gb') #TODO: French and Spanish to Go. Replace with... if european_origin? ... after publising other videos %>
+           current_user.locale == 'en-gb') #TODO: Just French to Go. Replace with... if european_origin? ... after publising other videos %>
 
       <div class="use button-container">
         <a href='<%= users_use_path %>'><%= t('.adjunctive_use_of_quantification_html') %><i class='fi-arrow-right'></i></a>
