@@ -33,26 +33,19 @@ module Vizamyl
       I18n.reload!
     end
 
-    #
     config.i18n.enforce_available_locales = false
 
-    #
     config.i18n.available_locales = [:en, :'en-us', :'en-gb', :'de-at', :de, :fr, :it, :es, :jp]
-    # config.i18n.available_locales = [:en, :'en-gb', :'de-at', :de, :fr, :it]
 
-    #
     config.i18n.fallbacks = [:'en-us', :'en-gb', :en, :'de-at', :de, :pt, :it, :fr, :es, :nl, :jp]
 
-    #
     config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
     config.assets.precompile += %w(course.js libs.js libs.css)
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.assets.initialize_on_precompile = true
 
-    #
     config.font_assets.origin = '*'
 
-    #
     config.exceptions_app = self.routes
   end
 end
