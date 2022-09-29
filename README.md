@@ -11,7 +11,7 @@ CREATE DATABASE vizamyl_development WITH TEMPLATE vizamyl_production_dump;
 
 ### Adding a language
 
-* Get access to the password spreadsheet from Lily
+* Get access to the password spreadsheet
 * Add new content admin; be sure to set the locale
 * Add new superuser by `dup`ing another superuser; be sure to currect the locale!
 * Add the locale to each step; `Step.all.each { |s| s.locales << 'jp' ; s.save! }`
