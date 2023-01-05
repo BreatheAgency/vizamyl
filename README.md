@@ -3,7 +3,7 @@
 ### Updating development with production data
 
 ```
-heroku pg:pull HEROKU_POSTGRESQL_OLIVE_URL vizamyl_production_dump --app vizamyl
+heroku pg:pull HEROKU_POSTGRESQL_PURPLE_URL vizamyl_production_dump --app vizamyl
 psql
 DROP DATABASE vizamyl_development;
 CREATE DATABASE vizamyl_development WITH TEMPLATE vizamyl_production_dump;
@@ -39,7 +39,7 @@ heroku pg:backups capture --app vizamyl
 dropdb vizamyl_staging_dump
 dropdb vizamyl_production_dump
 heroku pg:pull HEROKU_POSTGRESQL_ONYX_URL vizamyl_staging_dump --app vizamyl-staging
-heroku pg:pull HEROKU_POSTGRESQL_OLIVE_URL vizamyl_production_dump --app vizamyl
+heroku pg:pull HEROKU_POSTGRESQL_PURPLE_URL vizamyl_production_dump --app vizamyl
 pg_dump vizamyl_production_dump -O -t users -t users_id_seq -t admin_users -t admin_users_id_seq -t progressions -t progressions_id_seq -Fc -f production_users.sql --column-inserts --data-only
 psql -d vizamyl_staging_dump -c "TRUNCATE TABLE users, admin_users, progressions RESTART IDENTITY;"
 pg_restore production_users.sql -d vizamyl_staging_dump --single-transaction
