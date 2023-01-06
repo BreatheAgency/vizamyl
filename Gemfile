@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
 ruby '2.5.8'
 
-gem 'globalize', github: 'globalize/globalize'
-gem 'activeadmin', github: 'activeadmin/activeadmin'
-gem 'active_admin_editor', github: 'bazuka/active_admin_editor'
+gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git', ref: 'd787029e5523be2eb2ed99816eb0cecca2b72862'
+gem 'active_admin_editor', git: 'https://github.com/bazuka/active_admin_editor.git', ref: '222ea008c09002a68b556bbde2ffe8ec8c470365'
 
 gem 'rake', '~> 10.3'
 gem 'rails', '~> 4.2'
 gem 'json', '~> 1.8'
-gem 'devise', '3.5.11', github: 'totalhealth/devise', branch: 'backport-fix', tag: 'v3.5.11'
+gem 'devise', '3.5.11', git: 'https://github.com/totalhealth/devise.git', branch: 'backport-fix', tag: 'v3.5.11'
+gem 'globalize', '= 5.1.0'
 gem 'i18n-js', '3.0.0.rc6'
 gem 'passenger', '>= 5.0.8'
 gem 'sass-rails', '~> 5.0'

@@ -1,6 +1,7 @@
 GIT
-  remote: git://github.com/activeadmin/activeadmin.git
+  remote: https://github.com/activeadmin/activeadmin.git
   revision: d787029e5523be2eb2ed99816eb0cecca2b72862
+  ref: d787029e5523be2eb2ed99816eb0cecca2b72862
   specs:
     activeadmin (1.0.0.pre2)
       arbre (~> 1.0, >= 1.0.2)
@@ -17,8 +18,9 @@ GIT
       sass-rails
 
 GIT
-  remote: git://github.com/bazuka/active_admin_editor.git
+  remote: https://github.com/bazuka/active_admin_editor.git
   revision: 222ea008c09002a68b556bbde2ffe8ec8c470365
+  ref: 222ea008c09002a68b556bbde2ffe8ec8c470365
   specs:
     active_admin_editor (1.1.0)
       activeadmin (>= 0.4.0)
@@ -26,16 +28,7 @@ GIT
       rails (>= 3.0.0)
 
 GIT
-  remote: git://github.com/globalize/globalize.git
-  revision: 5db91fc97e5c5ab4ee51742eb6c462bc394c1020
-  specs:
-    globalize (5.1.0)
-      activemodel (>= 4.2.0, < 4.3)
-      activerecord (>= 4.2.0, < 4.3)
-      request_store (~> 1.0)
-
-GIT
-  remote: git://github.com/totalhealth/devise.git
+  remote: https://github.com/totalhealth/devise.git
   revision: 239d8a59633c941d1d483816adaa22985050893e
   branch: backport-fix
   tag: v3.5.11
@@ -197,6 +190,10 @@ GEM
       sass (>= 3.3.0, < 3.5)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    globalize (5.1.0)
+      activemodel (>= 4.2, < 5.2)
+      activerecord (>= 4.2, < 5.2)
+      request_store (~> 1.0)
     haml (4.0.7)
       tilt
     handlebars-source (2.0.0)
@@ -430,7 +427,7 @@ DEPENDENCIES
   font_assets
   foreman
   foundation-rails
-  globalize!
+  globalize (= 5.1.0)
   high_voltage
   i18n-js (= 3.0.0.rc6)
   jquery-rails
