@@ -24,7 +24,7 @@ class StaticController < ApplicationController
     case params[:id]
     when 'course'
       'course'
-    when 'gatekeeper', 'gatekeeper-belgian', 'gatekeeper-swiss', 'gatekeeper-us'
+    when /gatekeeper/
       clear_inferred_nationality
       'gatekeeper'
     else

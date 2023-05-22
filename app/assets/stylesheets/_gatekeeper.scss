@@ -7,7 +7,7 @@
     @include retina-background-image('map', 1000px, 800px);
   }
 
-  h1, h2, h3, ul, p {
+  h1, h2, h3, h5, ul, p {
     padding-left: rem-calc(40);
   }
 
@@ -41,6 +41,17 @@
 
   .blue {
     color: $primary-color;
+  }
+
+  .black-box {
+    border: 1px solid black;
+    padding: 20px;
+    margin-left: rem-calc(40);
+    margin-right: rem-calc(40);
+    p {
+      margin: 0px !important;
+      padding: 0px !important;
+    }
   }
 
   .error {

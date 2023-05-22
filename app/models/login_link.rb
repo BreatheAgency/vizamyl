@@ -20,6 +20,7 @@ class LoginLink
 
     def col_3
       {
+       'si': 'Slovenia',
        'es': 'Spain',
        'http://www.vizamyl.co.kr': 'South Korea',
        'ch': 'Switzerland'
