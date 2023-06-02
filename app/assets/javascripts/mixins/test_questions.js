@@ -11,6 +11,7 @@ Course.TestQuestions = Ember.Mixin.create({
       object: null,
       index: null,
       incorrect_title: null,
+      timeAnswered: 0,
       correct_title: null,
       correct_title_int: function () {
         return Ember.String.interpolate(this.get('correct_title'), this);
@@ -23,10 +24,20 @@ Course.TestQuestions = Ember.Mixin.create({
       return question.create({
         object: item,
         index: index++,
+        timeAnswered: item.get('timeAnswered'),
         correct_title: item.get('correct_title'),
         incorrect_title: item.get('incorrect_title')
       })
     })
+  }.property('questions.[]'),
+
+  questionsInOrder: function() {
+    var newIndex = 1;
+    var questionsWithIndex = this.get('questionsWithIndex');
+    return _.sortBy(questionsWithIndex, 'timeAnswered').map(function(q) {
+      q.index = newIndex++;
+      return q;
+    });
   }.property('questions.[]'),
 
   questionSetOne: function() {

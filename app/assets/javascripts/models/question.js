@@ -8,6 +8,7 @@ Course.Question = DS.Model.extend({
   answered: false,
   correct: false,
   active: false,
+  timeAnswered: 0,
   hasInteractives: Ember.computed.notEmpty('interactive_sources'),
   hasInteractiveTriplet: Ember.computed.equal('interactive_sources.length', 3),
   hasImages: Ember.computed.notEmpty('image_sources'),

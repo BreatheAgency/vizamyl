@@ -12,7 +12,6 @@ Course.TestPageController = Ember.ObjectController.extend(Course.TestQuestions, 
     knownStates: ['expanded', 'failed', 'incorrect', 'correct'],
     unanswered: {
       didEnter: function() {
-
         if (this.get('unansweredQuestionRoundIndices.length') === 0) {
           this.set('unansweredQuestionRoundIndices', _.shuffle(_.range(this.get('question_rounds.length'))));
         }
@@ -145,6 +144,7 @@ Course.TestPageController = Ember.ObjectController.extend(Course.TestQuestions, 
       this.get('question').setProperties({
         answered: true,
         active: false,
+        timeAnswered: Date.now(),
         correct: this.get('selectedAnswer.correct')
       });
 
