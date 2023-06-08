@@ -9,20 +9,7 @@ Course.ApplicationController = Ember.Controller.extend({
   isSkippable: Ember.computed.bool('currentUser.skippable'),
   isUS: Ember.computed.equal('currentLocale', 'en-us'),
   isJapan: Ember.computed.equal('currentLocale', 'jp'),
-  hasAUofQVideo: function() {
-    var locale, has_video;
-
-    locale = this.get('currentLocale');
-    has_video = (locale === 'it' ||
-                 locale === 'es' ||
-                 locale === 'fr' ||
-                 locale === 'de' ||
-                 locale === 'de-at' ||
-                 locale === 'en-gb' ||
-                 locale === 'en');
-
-    return has_video;
-  }.property('currentLocale'),
+  hasItalianOrigin: Ember.computed.equal('currentUserOrigin', 'it'),
 
   isEuropean: function() {
     return !(this.get('isUS') || this.get('isJapan'))

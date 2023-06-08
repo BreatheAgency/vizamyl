@@ -55,6 +55,7 @@ Rails.application.routes.draw do
     namespace :users do
       get '/course-complete' => 'course_completion#success'
       get '/use' => 'course_completion#adjunctive_use_of_quantification'
+      get '/refresher' => 'course_completion#refresher_video'
     end
     get '/*id' => 'static#show', id: 'home', as: :static
     get '/' => 'static#show', id: 'home'

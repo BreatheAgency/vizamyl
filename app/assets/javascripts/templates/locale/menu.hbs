@@ -41,11 +41,22 @@
           </li>
         {{/each}}
       {{/if}}
-      {{#if hasAUofQVideo }}
+      {{! Link to Adjunctive Use of Quantification }}
+      {{#if isEuropean }}
         <li class='panel panel-default available collapsed'>
           <div class='panel-heading'>
             <h2 class='panel-title'>
               <a {{bind-attr href=useVideoLink}}>{{{ videoLinkText }}}</a>
+            </h2>
+          </div>
+        </li>
+      {{/if}}
+      {{! Link to Vizamyl Refresher Video for Italians }}
+      {{#if hasItalianOrigin }}
+        <li class='panel panel-default available collapsed'>
+          <div class='panel-heading'>
+            <h2 class='panel-title'>
+              <a href="/it/users/refresher" >Corso di aggiornamento</a>
             </h2>
           </div>
         </li>

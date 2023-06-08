@@ -93,4 +93,7 @@ class Users::CourseCompletionController < ApplicationController
 
   def adjunctive_use_of_quantification
   end
+
+  def refresher_video
+  end
 end
