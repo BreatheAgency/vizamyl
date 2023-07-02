@@ -27,9 +27,9 @@ Course.TestQuestions = Ember.Mixin.create({
         timeAnswered: item.get('timeAnswered'),
         correct_title: item.get('correct_title'),
         incorrect_title: item.get('incorrect_title')
-      })
-    })
-  }.property('questions.[]'),
+      });
+    });
+  }.property('questions.[]', 'questions.@each.timeAnswered'),
 
   questionsInOrder: function() {
     var newIndex = 1;
@@ -38,7 +38,7 @@ Course.TestQuestions = Ember.Mixin.create({
       q.index = newIndex++;
       return q;
     });
-  }.property('questions.[]'),
+  }.property('questionsWithIndex'),
 
   questionSetOne: function() {
     return [Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_one.answer_one')}), Ember.Object.create({correct: true, body: I18n.t('course.pages.test.question_one.answer_two')})]
