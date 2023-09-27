@@ -42,9 +42,10 @@ GIT
       warden (~> 1.2.3)
 
 PATH
-  remote: vendor/ember-source-1.9.0
+  remote: patched-gems/ember-source-1.9.0
   specs:
     ember-source (1.9.0)
+      handlebars-source (~> 2.0)
 
 GEM
   remote: https://rubygems.org/
