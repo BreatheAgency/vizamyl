@@ -181,7 +181,7 @@ GEM
       railties (>= 3.1)
     execjs (2.6.0)
     fastercsv (1.5.5)
-    ffi (1.9.10)
+    ffi (1.16.3)
     font_assets (0.1.12)
       rack
     foreman (0.78.0)
@@ -464,7 +464,7 @@ DEPENDENCIES
   wicked
 
 RUBY VERSION
-   ruby 2.5.8p224
+   ruby 2.6.10p210
 
 BUNDLED WITH
-   1.16.5
+   1.17.2

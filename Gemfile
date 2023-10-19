@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.5.8'
+ruby '2.6.10'
 
 gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin.git', ref: 'd787029e5523be2eb2ed99816eb0cecca2b72862'
 gem 'active_admin_editor', git: 'https://github.com/bazuka/active_admin_editor.git', ref: '222ea008c09002a68b556bbde2ffe8ec8c470365'
