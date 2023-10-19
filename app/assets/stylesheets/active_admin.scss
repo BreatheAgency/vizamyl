@@ -17,3 +17,14 @@
 //
 //   .status_tag { background: #6090DB; }
 .na { color: grey }
+.admin_users {
+  .delete_link.member_link {
+    color: red;
+    display: none;
+  }
+  &.show {
+    a[data-method="delete"] {
+      color: red !important;
+    }
+  }
+}

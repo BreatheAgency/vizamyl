@@ -1,5 +1,5 @@
 ActiveAdmin.register User, as: 'Users' do
-  actions :all, except: [:new, :destroy, :edit]
+  actions :all, except: [:new, :edit]
   filter :locale, as: :select, label: 'Language', collection: [
     ['American', 'en-us'],
     ['Austrian', 'de-at'],
@@ -39,6 +39,9 @@ ActiveAdmin.register User, as: 'Users' do
     ['United Kingdom', 'gb'],
     ['United States', 'us'],
   ]
+  filter :first_name, as: :string
+  filter :last_name, as: :string
+  filter :email, as: :string
   filter :institution, as: :string
 
   controller do
@@ -108,6 +111,8 @@ ActiveAdmin.register User, as: 'Users' do
       row('Email Marketing') { |model| model.marketing_email_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row('Post Marketing') { |model| model.marketing_post_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row('Representative Marketing') { |model| model.marketing_representative_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+      row :created_at
+      row :last_sign_in_at
     end
   end
 
