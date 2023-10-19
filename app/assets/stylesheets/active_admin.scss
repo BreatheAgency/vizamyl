@@ -20,7 +20,7 @@
 .admin_users {
   .delete_link.member_link {
     color: red;
-    display: none;
+    // display: none;
   }
   &.show {
     a[data-method="delete"] {
