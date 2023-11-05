@@ -3,7 +3,7 @@
 <!--[if gt IE 9]><!--><html class="no-js <%= locale %>" lang="en"><!--<![endif]-->
   <%= render partial: 'head' %>
   <body class='course'>
-    <%= tag(:meta, content: UserSerializer.new(current_user, scope: current_user).to_json, name: 'bootstrap') %>
+    <%= tag(:meta, content: UserSerializer.new(current_user, scope: current_user).to_json, name: 'appData') %>
     <%= tag(:meta, content: Rails.application.secrets.asset_host, name: 'env-asset-host') %>
     <%= tag(:meta, content: Rails.application.secrets.content_host, name: 'env-content-host') %>
     <%= tag(:meta, content: Rails.env, name: 'env-environment') %>
