@@ -164,6 +164,8 @@ GEM
     execjs (2.9.1)
     fastercsv (1.5.5)
     ffi (1.16.3)
+    font-awesome-sass (6.4.2)
+      sassc (~> 2.0)
     font_assets (0.1.12)
       rack
     foreman (0.78.0)
@@ -245,7 +247,6 @@ GEM
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
-    normalize-rails (3.0.3)
     oj (2.18.5)
     orm_adapter (0.5.0)
     passenger (5.0.21)
@@ -412,6 +413,7 @@ DEPENDENCIES
   ember-rails (= 0.16.4)
   ember-source (= 1.9.0)!
   ffi (= 1.16.3)
+  font-awesome-sass (~> 6.4.2)
   font_assets
   foreman
   globalize (= 5.1.0)
@@ -423,7 +425,6 @@ DEPENDENCIES
   meta_request
   mime-types (~> 2.6)
   mini_racer
-  normalize-rails
   oj (~> 2.16)
   passenger (>= 5.0.8)
   pg

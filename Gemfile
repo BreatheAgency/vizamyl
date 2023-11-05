@@ -20,6 +20,7 @@ gem 'bootstrap', '~> 5.3.2'
 gem 'sassc-rails'
 gem 'mini_racer'
 gem 'ffi', '1.16.3'
+gem "font-awesome-sass", "~> 6.4.2"
 
 gem 'oj', '~> 2.16'
 gem 'pg'
