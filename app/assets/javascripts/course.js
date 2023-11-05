@@ -1,5 +1,4 @@
 //= require underscore
-//= require es5-shim/es5-shim
 //= require video
 //= require ./videojs.ga
 //= require ./dragdealer

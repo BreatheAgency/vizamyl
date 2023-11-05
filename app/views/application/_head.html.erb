@@ -9,7 +9,6 @@
   <%= csrf_meta_tags %>
   <link rel='dns-prefetch' href='//<%= Rails.application.secrets.asset_host %>'/>
   <link rel='dns-prefetch' href='//<%= Rails.application.secrets.content_host %>'/>
-  <%= stylesheet_link_tag 'libs', media: 'all' %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag :libs %>
   <%= render partial: 'favicon' %>

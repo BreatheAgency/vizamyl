@@ -40,7 +40,7 @@ module Vizamyl
     config.i18n.fallbacks = [:'en-us', :'en-gb', :en, :'de-at', :de, :pt, :it, :fr, :es, :nl, :jp]
 
     config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
-    config.assets.precompile += %w(course.js libs.js libs.css)
+    config.assets.precompile += %w(course.js libs.js)
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.assets.initialize_on_precompile = true
 
