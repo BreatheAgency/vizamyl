@@ -324,7 +324,7 @@ footer#footer__area {
 
 /*===================== WELCOME-HERO CSS AREA START =====================*/
 
-section#welcome__hero__area {
+.welcome__hero__area {
   padding-top: 140px;
   margin-bottom: 150px;
 }
@@ -379,7 +379,28 @@ section#welcome__hero__area {
   }
 }
 
-.blue_hand {
+section.welcome__hero__area.blue_hand {
+  padding-top: 32px;
+  margin-bottom: 32px;
+}
+
+section.blue_hand {
+  .blue_hand_text {
+    p {
+      color: #000;
+    }
+    margin-bottom: 42px;
+  }
+
+  h2, h3 {
+    color: #6022A6;
+  }
+
+  .disclaimer {
+    width: 60%;
+    font-weight: bold;
+    letter-spacing: 0.0em;
+  }
   .ge_logo {
     img {
       max-width: 120px;
@@ -387,7 +408,7 @@ section#welcome__hero__area {
   }
   .blue_hand_logo {
     img {
-      max-width: 200px;
+      max-width: 150px;
       float: right;
     }
   }

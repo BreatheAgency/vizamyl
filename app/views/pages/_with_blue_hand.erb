@@ -1,25 +1,21 @@
-<div class='container blue_hand'>
+<section class="welcome__hero__area blue_hand">
   <div class='row justify-content-between'>
     <div class='col-4 ge_logo '>
-      <%= image_tag('ge-logo.png', id: 'ge-logo') %>
-    </div>
-    <div class='col-4 blue_hand_logo'>
       <%= image_tag('blue-hand.png', id: 'blue-hand') %>
     </div>
-  </div>
-</div>
-
-<div class='container blue_hand'>
-  <div class='row'>
-    <div class='col-32 blue_hand'>
-      <%= t('pages.home.blue_hand_body_html') %>
+    <div class='col-4 blue_hand_logo'>
+      <%= image_tag('ge-logo.png', id: 'ge-logo') %>
     </div>
   </div>
-</div>
+</section>
 
-<div class='container blue_hand'>
+<section id="welcome__hero__area" class="welcome__hero__area blue_hand">
   <div class="welcome__hero__wrap">
-    <div class="welcome__hero__btns">
+    <div class="welcome__hero__content blue_hand_text">
+      <%= t('pages.home.blue_hand_body_html') %>
+    </div>
+
+    <div class="welcome__hero__btns my-5">
       <a href='<%= new_user_session_path %>'><%= t('layouts.application.login') %>
         <%= image_tag("right_angle_purple.svg") %>
       </a>
@@ -34,4 +30,4 @@
       <% end %>
     </div>
   </div>
-</div>
+</section>
