@@ -520,6 +520,22 @@ section#login__area {
   visibility: hidden;
 }
 
+div.user_remember_me {
+  display: none;
+}
+
+button.login {
+  font-size: 22px;
+  background-color: #fff;
+  color: #6022A6;
+  input {
+    background-color: white;
+    color: #6022A6;
+  }
+  img {
+    width: 11px;
+  }
+}
 /*===================== LOGIN-AREA CSS AREA END =====================*/
 
 /*===================== LANDING CSS AREA START =====================*/

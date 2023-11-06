@@ -14,50 +14,40 @@
             <%= f.error_notification %>
             <%= f.input :email, required: true, autofocus: true %>
             <%= f.input :password, required: true %>
+            <%= f.input :remember_me, as: :boolean, input_html: { checked: true } %>
+
             <div class="remember__forget">
               <div class="remember">
                 <div class="checkbox_wrap">
-                  <%= f.input :remember_me, label: '', as: :boolean, input_html: { checked: true } %>
+                  <input type="checkbox" id="fake_check">
                   <div class="check_field"></div>
-                  <label for="user_remember_me">
-                    <%= t('login.remember_me') %>
-                  </label>
                 </div>
+                <label for="fake_check"><%=I18n.t('login.remember_me') %></label>
               </div>
               <div class="forget">
                 <a href="#" style="color: #000;">Forgot your password?</a>
               </div>
             </div>
-            <div class="welcome__hero__btns justify-content-end">
-              <a href="#">Login <img src="assets/img/right_angle_violate.svg" alt=""></a>
+
+            <div class="submit d-flex justify-content-end">
+              <%= button_tag(type: 'submit', class: 'login') do %>
+                <%= f.submit I18n.t('.login') %>
+                <%= image_tag("right_angle_purple.svg") %>
+              <% end %>
             </div>
           <% end %>
           </form>
+          <script>
+           $("#fake_check").change(function() {
+             if(this.checked) {
+               $("#user_remember_me").prop( "checked", true );
+             } else {
+               $("#user_remember_me").prop( "checked", false );
+             }
+           });
+          </script>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<div class='devise sessions row'>
-  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
-  </div>
-  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
-    <h1 class='vh'><%= t('.login') %></h1>
-    <%= simple_format t('.intro') %>
-    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
-      <%= f.error_notification %>
-      <div class='form-inputs'>
-        <%= f.input :email, required: true, autofocus: true %>
-        <%= f.input :password, required: true %>
-        <%= f.input :remember_me, as: :boolean, input_html: { checked: true } %>
-        <%= link_to t('.forgot_your_password'), new_user_password_path %>
-      </div>
-      <div class='button-container'>
-        <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
-          <%= t('.login') %><i class='fi-arrow-right'></i>
-        <% end %>
-      </div>
-    <% end %>
-  </div>
-</div>
