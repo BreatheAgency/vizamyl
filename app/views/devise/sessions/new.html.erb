@@ -1,3 +1,44 @@
+<section id="login__area" class="login__area">
+  <div class="container">
+    <div class="login__wrap">
+      <div class="login__content">
+        <h2><%= t('.login') %></h2>
+
+        <div class="login__part">
+          <div class="welcome__content">
+            <p>
+              <%= simple_format t('.intro') %>
+            </p>
+          </div>
+          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
+            <%= f.error_notification %>
+            <%= f.input :email, required: true, autofocus: true %>
+            <%= f.input :password, required: true %>
+            <div class="remember__forget">
+              <div class="remember">
+                <div class="checkbox_wrap">
+                  <%= f.input :remember_me, label: '', as: :boolean, input_html: { checked: true } %>
+                  <div class="check_field"></div>
+                  <label for="user_remember_me">
+                    <%= t('login.remember_me') %>
+                  </label>
+                </div>
+              </div>
+              <div class="forget">
+                <a href="#" style="color: #000;">Forgot your password?</a>
+              </div>
+            </div>
+            <div class="welcome__hero__btns justify-content-end">
+              <a href="#">Login <img src="assets/img/right_angle_violate.svg" alt=""></a>
+            </div>
+          <% end %>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class='devise sessions row'>
   <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
   </div>

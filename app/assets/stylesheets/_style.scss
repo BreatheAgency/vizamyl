@@ -430,7 +430,7 @@ section.blue_hand {
   margin-bottom: 123px;
 }
 
-.input_label {
+.input_label, .input {
   display: flex;
   flex-direction: column;
   gap: 11px;
@@ -489,7 +489,7 @@ section#login__area {
   padding-top: 130px;
 }
 
-.checkbox {
+.checkbox_wrap {
   position: relative;
   width: 21px;
   height: 21px;
