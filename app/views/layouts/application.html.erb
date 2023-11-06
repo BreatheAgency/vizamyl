@@ -3,45 +3,68 @@
 <!--[if gt IE 9]><!--><html class="no-js <%= locale %>" lang="en"><!--<![endif]-->
   <%= render partial: 'head' %>
   <body class='application'>
+    <!-- ===================== OFFCANVAS AREA START ===================== -->
+    <div class="offcanvas-area">
+      <div class="menu-close">
+        <i class="far fa-times"></i>
+      </div>
+      <div class="offcanvas-menu">
+        <div class="main-menu">
+          <ul class="d-block">
+            <%= render partial: 'menu_links' %>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas-overlay"></div>
+    <!-- ===================== OFFCANVAS AREA END ===================== -->
+
+    <!-- ===================== HEADER AREA START ===================== -->
+    <header id="header__area" class="header__area">
+      <div class="container">
+        <div class="header__wrap">
+          <a href="#">
+            <%= image_tag('logo.svg') %>
+          </a>
+          <div class="header__nav d-none d-xl-block">
+            <ul>
+              <%= render partial: 'menu_links' %>
+            </ul>
+          </div>
+          <div class="header__logo__bar">
+            <div class="header__logo2">
+              <%= image_tag('logo2.svg') %>
+            </div>
+
+            <div class="header__bar d-xl-none d-block">
+              <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ===================== HEADER AREA END ===================== -->
+
     <nav role='nav'>
-			<div class='row'>
-				<ul class='inline-list'>
-					<li><%= link_to t('layouts.application.course_menu'), "/course/#{I18n.locale}/menu" %></li>
-          <% if user_signed_in? %>
-            <li><%= link_to t('layouts.application.my_account'), edit_user_registration_path(locale: I18n.locale) %></li>
-          <% else %>
-            <li><%= link_to t('layouts.application.login'), new_user_session_path(locale: I18n.locale) %></li>
-            <% if I18n.locale == :'en-us' %>
-              <li><%= link_to t('layouts.application.enrol'), us_path %></li>
-            <% else %>
-              <li><%= link_to t('layouts.application.enrol'), users_locale_enrol_path(id: User.form_steps.first, locale: I18n.locale) %></li>
-            <% end %>
-          <% end %>
-					<li><%= link_to t('layouts.application.references'), static_path(id: 'references', locale: I18n.locale) %></li>
-          <% if I18n.locale == :'en-us' %>
-					  <li><%= link_to t('layouts.application.important_risk_and_safety_information'), static_path(id: 'important-risk-and-safety-information', locale: I18n.locale) %></li>
-          <% end %>
-          <li><%= link_to t('layouts.application.contact'), static_path(id: 'contact', locale: I18n.locale) %></li>
-          <li><%= link_to t('layouts.application.resources'), static_path(id: 'resources', locale: I18n.locale) %></li>
-					<% if user_signed_in? %>
-						<li><%= link_to t('layouts.application.logout'), destroy_user_session_path(locale: I18n.locale) %></li>
-					<% end %>
-					<li class='right <%= I18n.locale %>'>
+      <div class='row'>
+        <ul class='inline-list'>
+          <li class='right <%= I18n.locale %>'>
             <p class="global-brand">
               <%= link_to t('layouts.application.logo.1_html'), "/#{I18n.locale}" %>
               <%= t('layouts.application.logo.2_html') %>
               <%= t('layouts.application.logo.3_html') %>
-						</p>
-					</li>
-				</ul>
-			</div>
-		</nav>
-		<main role='main'>
-			<%= yield %>
-		</main>
-		<%= render partial: 'footer' %>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <main class="overflow-hidden" role='main'>
+      <%= yield %>
+    </main>
+    <%= render partial: 'footer' %>
     <%= render partial: 'ga' %>
     <%= render partial: 'rollbar' %>
     <%= render partial: 'pingdom' %>
-	</body>
+  </body>
 </html>
