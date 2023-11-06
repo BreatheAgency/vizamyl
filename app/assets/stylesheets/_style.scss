@@ -341,11 +341,12 @@ section#welcome__hero__area {
   max-width: 956px;
 }
 
-.welcome__content {
-  p {
+.welcome__hero__content.welcomecontent {
+  > p {
     font-size: 29px;
     line-height: 35px;
     color: #000;
+    font-weight: 400;
   }
 
   max-width: 490px;

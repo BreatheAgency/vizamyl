@@ -1,3 +1,29 @@
+<section id="welcome__hero__area" class="welcome__hero__area">
+  <div class="container">
+    <div class="welcome__hero__wrap">
+      <div class="welcome__hero__content welcomecontent">
+        <%= t('.body_html') %>
+        <h1>Welcome to the
+          Vizamyl<sup>TM</sup> Electronic
+          Reader Training
+          Program</h1>
+
+        <!-- <div class="welcome__content"> -->
+          <p>If you are returning to the course,
+            welcome back, and please login.
+          </p>
+          <p>If you would like to begin the course,
+            welcome, and please enroll.</p>
+          <!-- </div> -->
+      </div>
+      <div class="welcome__hero__btns">
+        <a href="#">Login <img src="assets/img/right_angle_violate.svg" alt=""></a>
+        <a href="#">Enroll <img src="assets/img/right_angle_violate.svg" alt=""></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class='home row <%= display_blue_hand_logo? ? 'blue_hand' : 'regular' %>'>
   <% if display_blue_hand_logo? %>
     <%= render 'pages/with_blue_hand' %>
