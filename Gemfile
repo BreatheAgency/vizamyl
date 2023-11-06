@@ -20,6 +20,7 @@ gem 'bootstrap', '~> 5.3.2'
 gem 'sassc-rails'
 gem 'mini_racer'
 gem 'ffi', '1.16.3'
+gem "simple_form", "~> 4.0"
 gem "font-awesome-sass", "~> 6.4.2"
 
 gem 'oj', '~> 2.16'
@@ -32,7 +33,6 @@ gem 'rails-i18n'
 gem 'devise-i18n'
 gem 'font_assets'
 gem 'prawn-rails'
-gem 'simple_form'
 gem 'browsernizer'
 gem 'rack-noindex'
 gem 'acts_as_list'
@@ -66,3 +66,4 @@ end
 group :sandbox, :staging, :production do
   gem 'rails_12factor'
 end
+
