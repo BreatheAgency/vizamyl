@@ -10,7 +10,8 @@
               <%= simple_format t('.intro') %>
             </p>
           </div>
-          <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
+          <%= simple_form_for(@user, url: users_locale_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
+            <%= render 'tmp_storage_fields', f: f %>
             <%= f.error_notification %>
             <%= f.input :email, required: true, autofocus: true %>
             <%= f.input :password, required: true %>

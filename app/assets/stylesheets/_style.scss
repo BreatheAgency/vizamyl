@@ -550,6 +550,9 @@ button.login {
   }
 }
 /*===================== LOGIN-AREA CSS AREA END =====================*/
+
+/*===================== ENROL CSS AREA START =====================*/
+
 .radio_buttons {
   height: 42px;
 }
@@ -559,6 +562,36 @@ button.login {
   margin: 0 7px 16px 0;
   padding: 0;
 }
+
+.please-tick {
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.enrolment {
+  .form-check {
+    .invalid-feedback, abbr[title="required"] {
+      display: none;
+    }
+  }
+}
+
+.marketing_opt_in {
+  p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.marketing-purposes {
+  br {
+    display: none;
+  }
+}
+
+/*===================== ENROL CSS AREA END =====================*/
+
 /*===================== LANDING CSS AREA START =====================*/
 
 section#landing__area {

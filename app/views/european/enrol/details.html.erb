@@ -6,6 +6,7 @@
 
         <div class="login__part">
           <%= simple_form_for(@user, url: users_locale_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
+            <%= render 'tmp_storage_fields', f: f %>
             <h3>
             <%= f.error_notification %>
             </h3>
@@ -35,7 +36,6 @@
               <% end %>
             </div>
           <% end %>
-          </form>
         </div>
       </div>
     </div>
