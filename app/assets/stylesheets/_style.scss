@@ -891,6 +891,32 @@ section#success__area {
 
 /*===================== SUCCESS CSS AREA END =====================*/
 
+/*===================== QUANT CSS AREA START  =====================*/
+
+section#quant__area {
+  padding-top: 180px;
+}
+
+.quant__content {
+  h2 {
+    color: #6022A6;
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 35px;
+    img {
+      width: 14px;
+    }
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 12px;
+  }
+}
+
+/*===================== QUANT CSS AREA END =====================*/
+
 /*===================== REFERENCE CSS AREA START =====================*/
 
 section#reference__area {
