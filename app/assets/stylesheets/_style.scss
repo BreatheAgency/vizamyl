@@ -747,7 +747,10 @@ section#account__area {
   padding-top: 130px;
 }
 
-.account__content h2, .account__form h2, .reference__content h2 {
+.account__content h2,
+.account__form h2,
+.contact__content h2,
+.reference__content h2 {
   font-size: 62px;
   color: #6022A6;
   font-weight: 600;
@@ -837,6 +840,30 @@ p.accountp4 {
 }
 
 /*===================== MY-ACCOUNT CSS AREA END =====================*/
+
+/*===================== CONTACT CSS AREA START =====================*/
+
+.contact__content {
+  h2 {
+    color: #6022A6;
+    font-weight: 600;
+    font-size: 47px;
+    font-weight: 600;
+    line-height: 48px;
+    margin-bottom: 35px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 12px;
+  }
+}
+
+/*===================== CONTACT CSS AREA END =====================*/
+
+section#contact__area {
+  padding-top: 130px;
+}
 
 /*===================== REFERENCE CSS AREA START =====================*/
 

@@ -1,8 +1,16 @@
-<div class='contact row'>
-  <div class='large-9 columns with-content with-minimum left'>
-    <%= simple_format t('.left.title'), {}, wrapper_tag: 'h1' %>
-    <%= t('.left.body_html') %>
+<section id="contact__area" class="contact__area">
+  <div class="container">
+    <div class="contact__wrap">
+      <div class="contact__content">
+        <div class="row">
+          <%= simple_format t('.left.title'), {}, wrapper_tag: 'h2' %>
+          <div class="col-7">
+          <%= t('.left.body_html') %>
+          </div>
+          <div class="col-5">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="large-3 columns with-content with-minimum right">
-  </div>
-</div>
+</section>
