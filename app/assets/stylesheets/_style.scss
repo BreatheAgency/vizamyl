@@ -577,7 +577,7 @@ button.login {
   }
 }
 
-.marketing_opt_in {
+.marketing_opt_in, .non_euro_enrol {
   p {
     margin-top: 12px;
     margin-bottom: 12px;
@@ -588,6 +588,10 @@ button.login {
   br {
     display: none;
   }
+}
+
+.input_label input[type="radio"] {
+    height: 13px;
 }
 
 /*===================== ENROL CSS AREA END =====================*/
