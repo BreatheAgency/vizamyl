@@ -48,6 +48,15 @@ main {
   overflow: hidden !important;
 }
 
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  max-width: 1445px;
+  margin: 0 auto;
+}
 /*===================== REUSABLE CSS AREA END =====================*/
 
 /*===================== OFFCANVAS CSS AREA START =====================*/
@@ -425,7 +434,7 @@ section.blue_hand {
   margin-bottom: 123px;
 }
 
-.input_label, .input {
+.input_label {
   display: flex;
   flex-direction: column;
   gap: 11px;

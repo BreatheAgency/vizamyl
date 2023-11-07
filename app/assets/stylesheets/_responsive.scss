@@ -1,0 +1,866 @@
+@media (min-width: 1631px) and (max-width: 1800px) {}
+
+/* XXL Device :1200px. */
+@media (min-width: 320px) and (max-width: 1680px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1370px;
+  }
+
+  .header__wrap {
+    > a {
+      width: 140px;
+    }
+
+    gap: 40px;
+  }
+
+  .header__logo2 {
+    width: 101px;
+  }
+
+  .welcome__hero__content h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin-bottom: 32px;
+  }
+
+  .welcomecontent h1 {
+    max-width: 498px;
+  }
+
+  .welcome__content {
+    p {
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    max-width: 368px;
+    gap: 14px;
+  }
+
+  section#welcome__hero__area {
+    margin-bottom: 100px;
+  }
+
+  .welcome__hero__btns a {
+    font-size: 22px;
+
+    img {
+      width: 8px;
+    }
+  }
+
+  .welcome__hero__content {
+    h3 {
+      font-size: 35px;
+      line-height: 42px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .country__names a {
+    font-size: 25px;
+  }
+
+  .login__content h2 {
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 55px;
+  }
+
+  .welcome__hero__content h4 {
+    font-size: 30px;
+    margin-bottom: 6px;
+  }
+
+  .landing__enroll a {
+    font-size: 24px;
+  }
+
+  section#coursemenu__area {
+    padding-top: 115px;
+  }
+
+  .account__content h2, .account__form h2, .reference__content h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+
+  .resource__file span {
+    font-size: 20px;
+  }
+
+  .resource__file__card {
+    margin-top: 6px;
+    width: 245px;
+    height: 110px;
+
+    img {
+      width: 58px;
+    }
+
+    a {
+      font-size: 20px;
+    }
+  }
+
+  .resource__download {
+    gap: 30px;
+    margin-bottom: 100px;
+  }
+
+  section {
+    &#reference__area {
+      padding-top: 100px;
+    }
+
+    &#account__area {
+      padding-top: 110px;
+    }
+  }
+
+  .account__content h6 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .remember.accountcheck {
+    margin: 12px 0px;
+  }
+
+  .account__wrap {
+    margin-bottom: 110px;
+  }
+
+  .input_label {
+    gap: 1px;
+    margin-bottom: 15px;
+  }
+
+  .account__solution span {
+    font-size: 22px;
+  }
+
+  .solution__check {
+    margin-top: 0px;
+  }
+
+  .welcome__hero__btns.account_btn {
+    margin-top: 18px;
+  }
+
+  .account_btn a {
+    font-size: 18px;
+
+    img {
+      width: 7px !important;
+    }
+  }
+
+  .page__select__next__prev {
+    a {
+      font-size: 25px;
+
+      img {
+        width: 9px;
+      }
+    }
+
+    margin-bottom: 10px;
+  }
+
+  .assessment__wrap {
+    margin-top: 15px;
+  }
+
+  .assessment__content {
+    h3 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    padding: 20px 30px;
+    margin-bottom: 50px;
+  }
+
+  h6.assessment_title {
+    max-width: 330px;
+  }
+
+  .assessmentquestion__content {
+    span {
+      font-size: 18px;
+    }
+
+    h6 {
+      font-size: 22px;
+      line-height: 28px;
+      margin-bottom: 22px;
+    }
+  }
+
+  h6.assessment_title {
+    max-width: 290px;
+  }
+
+  .assessment__single__select {
+    gap: 6px;
+  }
+
+  .assessment__select {
+    gap: 27px;
+  }
+
+  .assessmentquestion__content {
+    padding: 20px 30px;
+  }
+
+  .assessment__list p {
+    font-size: 16px;
+  }
+
+  .assessmentquestion__content__img {
+    margin-bottom: 50px;
+  }
+
+  .testcase__all__slider {
+    height: 697px;
+  }
+
+  .questionscroll_img {
+    height: 573px;
+  }
+
+  .coursemenu__cards {
+    margin-bottom: 100px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1399px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1140px;
+  }
+
+  .header__nav {
+    ul {
+      gap: 20px;
+    }
+
+    > ul li a {
+      font-size: 15px;
+    }
+  }
+
+  .header__wrap {
+    gap: 20px;
+  }
+
+  .header__logo2 {
+    width: 80px;
+  }
+
+  header#header__area {
+    padding: 12px 0px;
+  }
+
+  section#welcome__hero__area {
+    padding-top: 98px;
+  }
+
+  .login__content h2 {
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 55px;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 40px;
+  }
+
+  .input_label {
+    gap: 6px;
+
+    label {
+      font-size: 18px;
+    }
+  }
+
+  .remember__forget {
+    margin: 10px 0px 30px;
+  }
+
+  .remember {
+    label {
+      font-size: 18px;
+    }
+
+    gap: 8px;
+  }
+
+  .landing_para {
+    font-size: 20px !important;
+    line-height: 28px !important;
+    margin-bottom: 30px;
+    max-width: 653px !important;
+  }
+
+  section#coursemenu__area {
+    padding-top: 90px;
+  }
+
+  .coursemenu__wrap {
+    margin-bottom: 80px;
+  }
+
+  .account__content h2, .account__form h2, .reference__content h2 {
+    font-size: 40px;
+  }
+
+  section#reference__area {
+    padding-top: 80px;
+  }
+
+  .assessment__content {
+    p {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    margin-bottom: 30px;
+  }
+
+  .page__assessment2 {
+    margin-top: 50px;
+  }
+}
+
+/* LG Device :1200px. */
+@media (min-width: 320px) and (max-width: 1199px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 960px;
+  }
+
+  .welcome__hero__content h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .welcome__content p {
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  .welcome__hero__btns {
+    gap: 50px;
+  }
+
+  .welcome__hero__wrap {
+    flex-direction: column;
+    align-items: start;
+    gap: 30px;
+  }
+
+  .welcome__hero__btns {
+    a {
+      font-size: 18px;
+      gap: 4px;
+
+      img {
+        width: 6px;
+      }
+    }
+
+    gap: 30px;
+  }
+
+  .welcome__hero__content {
+    h3 {
+      font-size: 28px;
+      line-height: 35px;
+    }
+
+    p {
+      font-size: 22px;
+    }
+  }
+
+  .country__names a {
+    font-size: 22px;
+    height: 80px;
+  }
+
+  .landing__enroll a {
+    font-size: 20px;
+    width: 120px;
+    height: 45px;
+
+    img {
+      width: 8px;
+    }
+  }
+
+  .welcome__hero__content h4 {
+    font-size: 25px;
+  }
+
+  section#landing__area {
+    padding-top: 100px;
+    margin-bottom: 108px;
+  }
+
+  .account__content h2, .account__form h2, .reference__content h2 {
+    font-size: 35px;
+  }
+
+  .resource__file span {
+    font-size: 18px;
+  }
+
+  .resource__file__card {
+    width: 220px;
+    height: 98px;
+    gap: 12px;
+
+    img {
+      width: 44px;
+    }
+
+    a {
+      font-size: 18px;
+    }
+  }
+
+  .assessmentquestion__content {
+    h6 {
+      font-size: 18px;
+      line-height: 25px;
+      margin-top: 6px;
+      margin-bottom: 22px;
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .page__assessment2 {
+    margin-top: 30px;
+  }
+
+  .answer__content {
+    p {
+      font-size: 18px;
+      line-height: 24px;
+      max-width: 423px;
+    }
+
+    padding-bottom: 50px;
+  }
+
+  .questionscroll_img {
+    height: 554px;
+  }
+}
+
+/* MD Device :768px. */
+@media (min-width: 320px) and (max-width: 991px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 720px;
+  }
+
+  .welcome__hero__content {
+    h3 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+
+  .country__names a {
+    font-size: 16px;
+    height: 50px;
+    max-width: 100%;
+  }
+
+  section#login__area {
+    padding-top: 100px;
+  }
+
+  .login__content h2 {
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 30px;
+  }
+
+  .checkbox {
+    width: 17px;
+    height: 17px;
+  }
+
+  .account__content {
+    max-width: 100%;
+  }
+
+  .reference__content p:nth-child(2) {
+    margin-top: 10px;
+  }
+
+  .page__select__btns {
+    ul {
+      li a {
+        padding: 2px 8px;
+      }
+
+      gap: 8px;
+    }
+
+    padding: 8px;
+  }
+
+  .page__select__next__prev {
+    margin-bottom: 8px;
+
+    a {
+      font-size: 20px;
+      gap: 4px;
+
+      img {
+        width: 7px;
+      }
+    }
+  }
+
+  .assessment__content {
+    margin-bottom: 60px;
+
+    h3 {
+      font-size: 28px;
+    }
+  }
+
+  .assessmentquestion__content {
+    padding: 15px 20px;
+  }
+
+  .assessment__single__select {
+    gap: 0px;
+  }
+
+  .assessment__list {
+    padding: 6px 12px;
+  }
+
+  .multipart__span img {
+    width: 7px;
+  }
+
+  .answer__content p {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 100%;
+  }
+
+  .assessmentquestion__content h6 {
+    margin-bottom: 8px;
+  }
+
+  .test__report__field {
+    gap: 18px;
+  }
+
+  .testcase__reports {
+    gap: 10px;
+  }
+
+  .testcase__all__slider {
+    height: 450px;
+    margin-top: -50px;
+  }
+
+  .questionscroll_img {
+    height: 494px;
+  }
+
+  .course__content > table tbody tr td p {
+    font-size: 16px;
+    max-width: 60px;
+
+    img {
+      width: 7px;
+    }
+  }
+
+  .coursemenu__cards {
+    margin-bottom: -20px;
+  }
+}
+
+/* SM Small Device :320px. */
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .color__field {
+    display: none;
+  }
+
+  h6.multipart_title {
+    max-width: 100%;
+  }
+
+  .assessmentquestion__content__img {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  h6.assessment_title {
+    max-width: 100%;
+  }
+
+  .assessmentquestion__img {
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  section#account__area {
+    padding-top: 68px;
+  }
+
+  .welcome__hero__content h1 {
+    font-size: 30px;
+    line-height: 38px;
+    margin-bottom: 24px;
+  }
+
+  .welcome__content p {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .header__wrap > a {
+    width: 128px;
+  }
+
+  .header__logo2 {
+    width: 65px;
+  }
+
+  header#header__area {
+    padding: 8px 0px;
+  }
+
+  section#welcome__hero__area {
+    padding-top: 80px;
+  }
+
+  .country__names {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  section {
+    &#country__hero__area {
+      background: #6022A6;
+      padding: 34px 0px;
+      margin-bottom: 26px;
+    }
+
+    &#login__area {
+      padding-top: 74px;
+    }
+  }
+
+  .login__content h2 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 22px;
+  }
+
+  .input_label input {
+    height: 40px;
+  }
+
+  .remember__forget {
+    margin: 8px 0px 12px;
+  }
+
+  .forget a {
+    font-size: 15px;
+  }
+
+  .remember label {
+    font-size: 16px;
+  }
+
+  .welcome__hero__content h4 {
+    font-size: 20px;
+  }
+
+  .landing_para {
+    font-size: 16px !important;
+    line-height: 24px !important;
+    max-width: 653px !important;
+  }
+
+  .landing__enroll a {
+    font-size: 16px;
+    width: 100px;
+    height: 40px;
+    margin: 0px;
+
+    img {
+      width: 6px;
+    }
+  }
+
+  section#landing__area {
+    padding-top: 75px;
+    margin-bottom: 40px;
+  }
+
+  p.landing_para {
+    &.landing_para1 {
+      margin-bottom: 18px;
+
+      br {
+        display: none;
+      }
+    }
+
+    &.landing_para2 br {
+      display: none;
+    }
+  }
+
+  section#coursemenu__area {
+    padding-top: 75px;
+  }
+
+  .account__content h2, .account__form h2, .reference__content h2 {
+    font-size: 30px;
+  }
+
+  section#reference__area {
+    padding-top: 65px;
+  }
+
+  .resource__file span, .resource__file__card a {
+    font-size: 16px;
+  }
+
+  .reference__content {
+    p {
+      font-size: 16px;
+
+      &:nth-child(2) {
+        margin-top: 15px;
+      }
+    }
+
+    margin-bottom: 50px;
+  }
+
+  .account__content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .page__select__btns {
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+
+    ul li {
+      flex-shrink: 0;
+    }
+  }
+
+  .assessment__content {
+    h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    padding: 14px;
+  }
+
+  .assessment__wrap {
+    margin-top: 8px;
+  }
+
+  .testcase__all__slider {
+    height: 340px;
+    gap: 8px;
+  }
+
+  .course__content {
+    > table {
+      width: 580px;
+    }
+
+    overflow-x: scroll;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+  .welcome__hero__content h1 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .welcome__content p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .welcome__hero__btns a {
+    font-size: 16px;
+  }
+
+  .country__names {
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 10px;
+  }
+
+  .welcome__hero__content h3 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .login__content h2 {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 18px;
+  }
+
+  .questionscroll_img {
+    height: 378px;
+  }
+
+  p.landing_para a img {
+    width: 8px;
+    margin-left: 4px;
+    display: none;
+  }
+}
+
+/* SM Small Device :576px. */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 540px;
+  }
+}
