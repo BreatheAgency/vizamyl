@@ -1,13 +1,13 @@
-<section id="quant__area" class="quant__area">
+<section id="video__area" class="video__area">
   <div class="container">
-    <div class="quant__wrap">
-      <div class="quant__content">
+    <div class="video__wrap">
+      <div class="video__content">
         <div class="row">
           <div class="col-md-4">
             <h2><%= t('.title_html') %></h2>
             <p><%= t('.copy') %></p>
           </div>
-          <div id="video-viewport" class="col-md-8">
+          <div id="video-viewport" class="col-md-8 flex-row justify-content-start">
             <%- source = I18n.locale[0..1].upcase + '_AUofQ' %>
             <%= video_tag([
               "//#{Rails.application.secrets.content_host}/videos/#{source}/playlist.m3u8",

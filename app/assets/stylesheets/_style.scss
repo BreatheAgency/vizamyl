@@ -891,18 +891,29 @@ section#success__area {
 
 /*===================== SUCCESS CSS AREA END =====================*/
 
-/*===================== QUANT CSS AREA START  =====================*/
+/*===================== VIDEO CSS AREA START  =====================*/
 
-section#quant__area {
-  padding-top: 180px;
+section#video__area {
+  padding-top: 120px;
+  &.refresher__video {
+    padding-top: 110px;
+    margin-bottom: 80px;
+  }
 }
 
-.quant__content {
+.video_viewpost {
+  width: 100%;
+}
+
+.video__content {
+  video {
+    width: 100%;
+  }
   h2 {
     color: #6022A6;
-    font-size: 37px;
+    font-size: 27px;
     font-weight: 600;
-    line-height: 28px;
+    line-height: 31px;
     margin-bottom: 35px;
     img {
       width: 14px;
@@ -913,9 +924,10 @@ section#quant__area {
     line-height: 28px;
     margin-top: 12px;
   }
+  margin-bottom: 50px;
 }
 
-/*===================== QUANT CSS AREA END =====================*/
+/*===================== VIDEO CSS AREA END =====================*/
 
 /*===================== REFERENCE CSS AREA START =====================*/
 
