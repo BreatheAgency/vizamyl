@@ -550,7 +550,15 @@ button.login {
   }
 }
 /*===================== LOGIN-AREA CSS AREA END =====================*/
+.radio_buttons {
+  height: 42px;
+}
 
+.radio_buttons label {
+  display: inline-block;
+  margin: 0 7px 16px 0;
+  padding: 0;
+}
 /*===================== LANDING CSS AREA START =====================*/
 
 section#landing__area {
