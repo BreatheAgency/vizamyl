@@ -446,6 +446,15 @@ section.blue_hand {
     height: 46px;
     padding: 2px 10px;
   }
+  &.error {
+    small {
+      color: #ea3e3e;
+    }
+    input {
+      border: 2px solid #ea3e3e;
+      background: #ffdcdc;
+    }
+  }
 }
 
 .login__part {
