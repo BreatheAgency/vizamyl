@@ -1,13 +1,27 @@
-<div class='course-completion row'>
-  <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
-    <p><%= t('.description_html') %></p>
-    <p><%= link_to t('.download_results'), users_course_complete_path(format: :pdf) %></p>
-    <meta http-equiv='refresh' content="3;<%= users_course_complete_path(format: :pdf) %>">
+<section id="success__area" class="success__area">
+  <div class="container">
+    <div class="success__wrap">
+      <div class="success__content">
+        <div class="row">
+          <div class="col-md-7">
+            <p><%= t('.description_html') %></p>
+            <p><%= link_to t('.download_results'), users_course_complete_path(format: :pdf) %></p>
+            <meta http-equiv='refresh' content="3;<%= users_course_complete_path(format: :pdf) %>">
+          </div>
 
-    <% if european_locale? %>
-      <div class="use button-container">
-        <a href='<%= users_use_path %>'><%= t('.adjunctive_use_of_quantification_html') %><i class='fi-arrow-right'></i></a>
+          <div class="col-md-5">
+            <% if european_locale? %>
+              <div class="d-flex justify-content-end my-5">
+                <a href='<%= users_use_path %>'>
+                  <h2>
+                    <%= t('.adjunctive_use_of_quantification_html') %>
+                  </h2>
+                </a>
+              </div>
+            <% end %>
+          </div>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
+</section>

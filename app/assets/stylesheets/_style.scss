@@ -843,12 +843,16 @@ p.accountp4 {
 
 /*===================== CONTACT CSS AREA START =====================*/
 
+section#contact__area {
+  padding-top: 130px;
+}
+
 .contact__content {
   h2 {
     color: #6022A6;
     font-weight: 600;
     font-size: 47px;
-    font-weight: 600;
+    font-weight: 400;
     line-height: 48px;
     margin-bottom: 35px;
   }
@@ -861,9 +865,31 @@ p.accountp4 {
 
 /*===================== CONTACT CSS AREA END =====================*/
 
-section#contact__area {
-  padding-top: 130px;
+/*===================== SUCCESS CSS AREA START =====================*/
+
+section#success__area {
+  padding-top: 180px;
 }
+
+.success__content {
+  h2 {
+    color: #6022A6;
+    font-size: 37px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 35px;
+    img {
+      width: 14px;
+    }
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 12px;
+  }
+}
+
+/*===================== SUCCESS CSS AREA END =====================*/
 
 /*===================== REFERENCE CSS AREA START =====================*/
 
