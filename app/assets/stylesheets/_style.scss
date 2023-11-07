@@ -778,8 +778,34 @@ p.accountp2 {
   gap: 13px;
 
   label {
+    color: #6022A6;
     font-size: 17px;
   }
+}
+
+
+.edit_user {
+  .marketing_options {
+    .form-check {
+      margin: 0px;
+    }
+  }
+}
+
+.edit_user {
+  .form-check {
+    margin: 21px 0px;
+    gap: 13px;
+
+    label {
+      color: #6022A6;
+      font-size: 17px;
+    }
+  }
+}
+
+p.accountp3 {
+  color: #A9A9A9;
 }
 
 p.accountp4 {
