@@ -1,6 +1,10 @@
-{{partial 'header'}}
-<main role="main">
-	{{outlet}}
-	{{render 'progression'}}
+<main id="main" role="main">
+
+  {{partial 'header'}}
+  <main id="main" role="main">
+	  {{outlet}}
+	  {{render 'progression'}}
+  </main>
+  {{partial 'footer'}}
+
 </main>
-{{partial 'footer'}}
