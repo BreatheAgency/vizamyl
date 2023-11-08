@@ -1,24 +1,46 @@
-<section id="reference__area" class="reference__area">
+<section id="reference__area" class="reference__area download__area">
   <div class="container">
     <div class="reference__wrap">
-      <div class="reference__content">
-        <h2>Resources</h2>
-
+      <div class="reference__content download__content">
+        <h2><%= t('layouts.application.resources') %></h2>
         <div class="resource__download">
-          <div class="resource__file">
-            <span>Vizamyl US Pl</span>
-            <div class="resource__file__card">
-              <%= image_tag('download_file.svg') %>
-              <a href="#">Download PDF</a>
+          <% if I18n.locale == :'en-us' %>
+            <div class="resource__file">
+              <span><%= t('.prescribing_information_title') %></span>
+              <div class="resource__file__card">
+                <%= image_tag('download_file.svg') %>
+                <a href="<%= asset_url('/pdfs/#{I18n.locale}/prescribing_information.pdf') %>">
+                  <%= t('.download') %>
+                </a>
+              </div>
             </div>
-          </div>
-          <div class="resource__file">
-            <span>Rainbow color scale RGB values</span>
-            <div class="resource__file__card">
-              <%= image_tag('download_file.svg') %>
-              <a href="#">Download PDF</a>
+
+          <% else %>
+
+            <div class="resource__file">
+              <span><%= t('.smpc_title')%></span>
+              <div class="resource__file__card">
+                <%= image_tag('download_file.svg') %>
+                <a href="<%= asset_url('/pdfs/#{I18n.locale}/smpc.pdf') %>">
+                  <%= t('.download') %>
+                </a>
+              </div>
             </div>
-          </div>
+
+          <% end %>
+
+          <% if I18n.locale != :it %>
+
+            <div class="resource__file">
+              <span><%= t('.rainbow_title') %></span>
+              <div class="resource__file__card">
+                <%= image_tag('download_file.svg') %>
+                <a href='<%= asset_url("/pdfs/#{I18n.locale}/rainbow_colour_scale_rgb_values.pdf")%>'>
+                  <%= t('.download') %>
+                </a>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
     </div>

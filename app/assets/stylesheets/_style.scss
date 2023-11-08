@@ -992,6 +992,21 @@ section#reference__area {
   margin-bottom: 200px;
 }
 
+main#main {
+  section.download__area {
+    padding-top: 110px;
+    .download__content {
+      .resource__file span {
+        font-weight: 600;
+        line-height: 78px;
+      }
+      .resource__file {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
 /*===================== REFERENCE CSS AREA END =====================*/
 
 .page__select__next__prev {
