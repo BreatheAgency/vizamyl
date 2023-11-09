@@ -1027,7 +1027,7 @@ main#main {
   justify-content: end;
 }
 
-.page__select__btns {
+.progress_indicator {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1037,7 +1037,7 @@ main#main {
 
   h6 {
     color: #fff;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
   }
 
@@ -1047,23 +1047,30 @@ main#main {
     align-items: center;
     gap: 16px;
 
-    li a {
-      color: #000;
-      font-size: 14px;
-      font-weight: 600;
-      padding: 5px 12px;
-      background: #fff;
+    li {
+      &.available {
+        span {
+          background-color: #6022A6;
+          color: #fff;
+        }
+      }
+      span {
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 5px 12px;
+        background: #fff;
+      }
+    }
+
+    h3 {
+      color: white;
     }
   }
 }
 
 .page__selection {
   margin-bottom: 32px;
-}
-
-.page__select__btns ul li a:hover {
-  background: #6022A6;
-  color: #fff;
 }
 
 .assessment__content {
@@ -1307,4 +1314,3 @@ h6.testcase_title {
   height: 598px;
   overflow-y: scroll !important;
 }
-

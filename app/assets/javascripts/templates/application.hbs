@@ -1,10 +1,10 @@
-<main id="main" role="main">
-
-  {{partial 'header'}}
-  <main id="main" role="main">
-	  {{outlet}}
-	  {{render 'progression'}}
-  </main>
-  {{partial 'footer'}}
-
+{{partial 'header'}}
+<main id="course" role="main">
+  <div id="bumper" class="bumper">
+  <div class="course__wrap"> 
+    {{outlet}}
+    {{render 'progression'}}
+  </div>
 </main>
+{{partial 'footer'}}
+a

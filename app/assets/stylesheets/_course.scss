@@ -1,0 +1,139 @@
+#course {
+  #bumper {
+    margin-top: 130px;
+  }
+
+  h1 {
+    margin-top: 10px;
+    font-size: 35px;
+    margin-bottom: 10px;
+    color: $primary;
+  }
+
+  h2 {
+    font-size: 40px;
+    margin-bottom: 8px;
+    color: $primary;
+  }
+
+  h3 {
+    font-size: 30px;
+    margin-bottom: 6px;
+    color: $primary;
+  }
+
+  h4 {
+    margin-top: 4px;
+    font-size: 20px;
+    margin-bottom: 4px;
+    color: $primary;
+  }
+
+  h5 {
+    font-size: 18px;
+    margin-bottom: 4px;
+    color: $primary;
+  }
+
+  h6 {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: $primary;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .progress_indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #8D8D8D;
+    padding: 15px 17px;
+    border-radius: 9px;
+
+    h4 {
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+
+      li {
+        &.available {
+          span {
+            background-color: #6022A6;
+            color: #fff;
+          }
+        }
+        span {
+          color: #000;
+          font-size: 14px;
+          font-weight: 600;
+          padding: 5px 12px;
+          background: #fff;
+        }
+      }
+
+      h3 {
+        color: white;
+      }
+    }
+  }
+
+  .page__selection {
+    margin-bottom: 32px;
+  }
+
+  // ############# RESPONSIVE ################ //
+  @include media-breakpoint-down(xl) {
+    .progress_indicator {
+      h4 {
+        font-size: 12px;
+        font-weight: 600;
+      }
+
+      ul {
+        gap: 10px;
+      }
+
+      li {
+        span {
+          font-size: 12px;
+          font-weight: 600;
+          padding: 3px 8px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .progress_indicator {
+      h4 {
+        font-size: 10px;
+        font-weight: 600;
+      }
+
+      ul {
+        gap: 3px;
+      }
+
+      li {
+        span {
+          font-size: 10px;
+          font-weight: 600;
+          padding: 3px 4px;
+        }
+      }
+    }
+  }
+}
