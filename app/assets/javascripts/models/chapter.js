@@ -14,5 +14,17 @@ Course.Chapter = DS.Model.extend({
 
   completed: Ember.computed('completedSteps.length', 'steps.length', function() {
     return this.get('completedSteps.length') === this.get('steps.length');
-  })
+  }),
+
+  headingId: function() {
+    return "heading".concat(this.id);
+  }.property('chapter'),
+
+  collapseId: function() {
+    return "collapse".concat(this.id);
+  }.property('chapter'),
+
+  bsTarget: function() {
+    return "#collapse".concat(this.id);
+  }.property('chapter'),
 });

@@ -1,4 +1,6 @@
 //= require jquery
+//= require popper
+//= require bootstrap-sprockets
 
 $(document).ready(function () {
   $(".header__bar , .offcanvas-overlay").click(function () {
