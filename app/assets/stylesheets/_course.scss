@@ -1,4 +1,8 @@
 #course {
+  #player.course {
+    width: 100%;
+  }
+
   #bumper {
     margin-top: 130px;
   }
@@ -95,10 +99,15 @@
   }
 
   // ############# RESPONSIVE ################ //
+  // Extra extra large	xxl	≥1400px
+  @include media-breakpoint-down(xxl) {
+  }
+
+  // Extra large	xl	≥1200px
   @include media-breakpoint-down(xl) {
     .progress_indicator {
       h4 {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 600;
       }
 
@@ -108,7 +117,7 @@
 
       li {
         span {
-          font-size: 12px;
+          font-size: 14px;
           font-weight: 600;
           padding: 3px 8px;
         }
@@ -116,22 +125,33 @@
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  //Large	lg	≥992px
+  @include media-breakpoint-down(lg) {
     .progress_indicator {
-      h4 {
-        font-size: 10px;
-        font-weight: 600;
-      }
-
       ul {
         gap: 3px;
       }
+    }
+  }
 
-      li {
-        span {
-          font-size: 10px;
-          font-weight: 600;
-          padding: 3px 4px;
+  // Medium	md	≥768px
+  @include media-breakpoint-down(md) {
+    .progress_indicator {
+      align-items: center;
+      justify-content: center;
+    }
+    // Small	sm	≥576px
+    @include media-breakpoint-down(sm) {
+      .progress_indicator {
+        ul {
+          gap: 3px;
+          li {
+            span {
+              color: red;
+              font-weight: 600;
+              padding: 5px 4px;
+            }
+          }
         }
       }
     }
