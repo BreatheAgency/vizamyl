@@ -29,6 +29,10 @@ Course.Chapter = DS.Model.extend({
   }.property('chapter'),
 
   bsTarget: function() {
-    return "#collapse".concat(this.id);
+    if(this.get('available')) {
+      return "#collapse".concat(this.id);
+    } else {
+      'noTarget'
+    }
   }.property('chapter'),
 });

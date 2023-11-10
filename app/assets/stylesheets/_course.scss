@@ -200,15 +200,23 @@ section#coursemenu__area {
   padding: 0px 19px;
 }
 
-.course__content a {
-  display: block;
-  color: #000;
-  padding: 11px 0px;
-  border-bottom: 2px solid #D4D4D4;
-  font-size: 15px;
+.accordion-body {
+  background-color: rgb(242, 242, 242);
+}
 
-  &:last-child {
-    border-bottom: none;
+.course__content {
+
+  a {
+
+    display: block;
+    color: #000;
+    padding: 11px 0px;
+    border-bottom: 2px solid #D4D4D4;
+    font-size: 15px;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
 
@@ -219,6 +227,14 @@ section#coursemenu__area {
   h2 {
     margin-bottom: 0px;
     font-size: calc(1.325rem + .9vw)
+  }
+  &.unavailable {
+    .accordion-header {
+      button.collapsed {
+        color: #888888;
+        background-color: #d4d4d4;
+      }
+    }
   }
 }
 
@@ -249,11 +265,17 @@ section#coursemenu__area {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     .step-link {
-      // TODO width
-    }
-    .step-link::after {
-      image: url('/assets/right_angle_black.svg')
+      align-items: center;
+      display: inline-block;
+      width: 20%;
+      &::after {
+        content: url('/assets/right_angle_black.svg');
+        position: relative;
+        top: 4px;
+        left: 4px;
+      }
     }
   }
 }
