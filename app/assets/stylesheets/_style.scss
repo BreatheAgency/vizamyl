@@ -1027,52 +1027,6 @@ main#main {
   justify-content: end;
 }
 
-.progress_indicator {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #8D8D8D;
-  padding: 15px 17px;
-  border-radius: 9px;
-
-  h6 {
-    color: #fff;
-    font-size: 14px;
-    font-weight: 600;
-  }
-
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 16px;
-
-    li {
-      &.available {
-        span {
-          background-color: #6022A6;
-          color: #fff;
-        }
-      }
-      span {
-        color: #000;
-        font-size: 14px;
-        font-weight: 600;
-        padding: 5px 12px;
-        background: #fff;
-      }
-    }
-
-    h3 {
-      color: white;
-    }
-  }
-}
-
-.page__selection {
-  margin-bottom: 32px;
-}
-
 .assessment__content {
   padding: 28px 42px;
   border-radius: 13px;

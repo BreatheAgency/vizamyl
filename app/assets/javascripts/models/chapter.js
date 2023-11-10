@@ -16,6 +16,10 @@ Course.Chapter = DS.Model.extend({
     return this.get('completedSteps.length') === this.get('steps.length');
   }),
 
+  itemId: function() {
+    return "accordion-item-".concat(this.id);
+  }.property('chapter'),
+
   headingId: function() {
     return "heading".concat(this.id);
   }.property('chapter'),

@@ -243,6 +243,19 @@ section#coursemenu__area {
     max-width: 69px;
   }
 }
-
+// With test cases
+#accordion-item-9, #accordion-item-11 {
+  .course__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .step-link {
+      // TODO width
+    }
+    .step-link::after {
+      image: url('/assets/right_angle_black.svg')
+    }
+  }
+}
 /*===================== COURSE-NAME CSS AREA END =====================*/
 }

@@ -4,7 +4,7 @@
       <div class="coursemenu__cards">
         <div class="accordion accordion-flush" id="accordionFlushExample">
           {{#each chapter in visibleChapters}}
-            <div {{bind-attr class=':accordion-item chapter.available:available:unavailable'}}>
+            <div {{bind-attr id='chapter.itemId' class=':accordion-item chapter.available:available:unavailable'}}>
             <h2 class="accordion-header" {{bind-attr id='chapter.headingId'}}>
               <button {{bind-attr data-bs-target='chapter.bsTarget'}}
                       class="accordion-button coursebtn collapsed"
@@ -21,7 +21,7 @@
                 <div class="course__content">
                   {{#each step in chapter.visibleSteps}}
                     <a {{action 'selectStep' step}}
-                      {{bind-attr class='step.available:available:unavailable'}}>
+                      {{bind-attr class=':step-link step.available:available:unavailable'}}>
                       {{{step.title}}}
                     </a>
                   {{/each}}
@@ -33,7 +33,7 @@
 
           {{#if isComplete}}
             {{#each chapter in hiddenChapters}}
-              <div {{bind-attr class=':accordion-item :hidden-item chapter.available:available:unavailable'}}>
+              <div {{bind-attr id='chapter.itemId' class=':accordion-item :hidden-item chapter.available:available:unavailable'}}>
                 <h2 class="accordion-header" {{bind-attr id='chapter.headingId'}}>
                   <button {{bind-attr data-bs-target='chapter.bsTarget'}}
                           class="accordion-button coursebtn collapsed"
@@ -50,8 +50,7 @@
                     <div class="course__content">
                       {{#each step in chapter.visibleSteps}}
                         <a {{action 'selectStep' step}}
-                           {{bind-attr class='step.available:available:unavailable'}}
-                           class='list-group-item'>
+                           {{bind-attr class=':step-link step.available:available:unavailable'}}>
                           {{{step.title}}}
                         </a>
                       {{/each}}
@@ -60,6 +59,50 @@
                 </div>
               </div>
             {{/each}}
+          {{/if}}
+
+          {{#if isEuropean }}
+            <a {{bind-attr href=useVideoLink}}>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                  <button class="accordion-button collapsed coursebtn"
+                          type="button">
+                    {{ videoLinkText }}
+                  </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                     data-bs-parent="#accordionFlushExample">
+                  <div class="accordion-body course_toggle_content">
+                    <div class="course__content">
+                      <a href="#">Navigation</a>
+                      <a href="#">Introduction</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          {{/if}}
+
+          {{#if hasItalianOrigin }}
+          <a href="/it/users/refresher" >
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed coursebtn"
+                        type="button">
+                  Corso di aggiornamento
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                   data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body course_toggle_content">
+                  <div class="course__content">
+                    <a href="#">Navigation</a>
+                    <a href="#">Introduction</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
           {{/if}}
         </div>
       </div>
