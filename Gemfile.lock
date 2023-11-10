@@ -382,7 +382,6 @@ GEM
       json (>= 1.8.0)
     underscore-rails (1.8.3)
     uniform_notifier (1.9.0)
-    videojs_rails (4.12.14)
     warden (1.2.7)
       rack (>= 1.0)
     wicked (1.2.1)
@@ -442,7 +441,6 @@ DEPENDENCIES
   simple_form (~> 4.0)
   uglifier
   underscore-rails
-  videojs_rails
   wicked
 
 RUBY VERSION
