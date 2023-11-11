@@ -3,7 +3,7 @@
   {{#each question in content}}
     <div class="assessment__single__select">
       {{radio-button id=question.id value=question name=view.name selection=view.value}}
-      <label {{bind-attr for=question.id}}>
+      <label class="question_box" {{bind-attr for=question.id}}>
         <div class="assessment__list">
           {{{question.body}}}
         </div>
