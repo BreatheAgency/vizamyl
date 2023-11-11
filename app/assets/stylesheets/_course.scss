@@ -79,6 +79,7 @@
             color: #fff;
           }
         }
+
         span {
           color: #000;
           font-size: 14px;
@@ -100,8 +101,7 @@
 
   // ############# RESPONSIVE ################ //
   // Extra extra large	xxl	≥1400px
-  @include media-breakpoint-down(xxl) {
-  }
+  @include media-breakpoint-down(xxl) {}
 
   // Extra large	xl	≥1200px
   @include media-breakpoint-down(xl) {
@@ -140,11 +140,13 @@
       align-items: center;
       justify-content: center;
     }
+
     // Small	sm	≥576px
     @include media-breakpoint-down(sm) {
       .progress_indicator {
         ul {
           gap: 3px;
+
           li {
             span {
               color: red;
@@ -156,6 +158,7 @@
       }
     }
   }
+
   /*===================== COURSE-NAME CSS AREA START =====================*/
 
   section#coursemenu__area {
@@ -224,10 +227,12 @@
     background: #E4E4E4;
     border-radius: 6px !important;
     margin-bottom: 7px;
+
     h2 {
       margin-bottom: 0px;
       font-size: calc(1.325rem + .9vw)
     }
+
     &.unavailable {
       .accordion-header {
         button.collapsed {
@@ -239,12 +244,14 @@
   }
 
   .accordion-button {
-    &::after, &:not(.collapsed)::after {
+
+    &::after,
+    &:not(.collapsed)::after {
       background-image: none;
     }
   }
 
-  .course__content > table {
+  .course__content>table {
     width: 100%;
 
     tbody tr td p {
@@ -259,17 +266,21 @@
       max-width: 69px;
     }
   }
+
   // With test cases
-  #accordion-item-9, #accordion-item-11 {
+  #accordion-item-9,
+  #accordion-item-11 {
     .course__content {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: center;
+
       .step-link {
         align-items: center;
         display: inline-block;
         width: 20%;
+
         &::after {
           content: url('/assets/right_angle_black.svg');
           position: relative;
@@ -279,5 +290,254 @@
       }
     }
   }
+
   /*===================== COURSE-NAME CSS AREA END =====================*/
+
+
+  /*===================== TEST START ===================================*/
+
+  .assessment__content {
+    padding: 28px 42px;
+    border-radius: 13px;
+    background: #E4E4E4;
+    margin-bottom: 71px;
+
+    h3 {
+      color: #6022A6;
+      font-size: 45px;
+      font-weight: 600;
+      margin-bottom: 34px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 12px;
+      max-width: 824px;
+    }
+  }
+
+  .assessmentquestion__content__img {
+    background: #E4E4E4;
+    border-radius: 13px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 71px;
+  }
+
+  h6.assessment_title {
+    max-width: 330px;
+  }
+
+  .assessmentquestion__img img {
+    height: 100%;
+  }
+
+  .assessmentquestion__content {
+    padding: 35px 51px;
+
+    span {
+      color: #6022A6;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    h6 {
+      color: #6022A6;
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 30px;
+      margin: 13px 0px 35px;
+    }
+  }
+
+  .assessment__single__select {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    width: 90%;
+  }
+
+  .assessment__list {
+    background: #fff;
+    padding: 10px 19px;
+    border-radius: 8px;
+  }
+
+  .assessment__select {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  .assessment__list p {
+    font-size: 18px;
+  }
+
+  .multipart__span {
+    img {
+      width: 10px;
+    }
+
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  h6.multipart_title {
+    max-width: 475px;
+  }
+
+  .assessment__list2 {
+    max-width: 203px;
+    width: 100%;
+    padding: 9px 14px;
+  }
+
+  .assessment__single__select2 {
+    align-items: center;
+  }
+
+  .assessment__select2 {
+    gap: 18px;
+  }
+
+  .assessmentquestion__content__img2 {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 0px !important;
+  }
+
+  h6.assessment2_title {
+    max-width: 388px;
+  }
+
+  .assessmentquestion__img {
+    height: 100%;
+    border-radius: 13px;
+    overflow: hidden;
+  }
+
+  .page__assessment2 {
+    margin-top: 71px;
+  }
+
+  .assessmentquestion__content__img.assessment__answer {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 822px;
+  }
+
+  .answer__content {
+    h6 {
+      background: #45B2C5;
+      max-width: 200px;
+      padding: 5px 15px;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 26px;
+      max-width: 409px;
+    }
+
+    padding-bottom: 200px;
+  }
+
+  .testcase__single__report h6 {
+    font-size: 18px;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 12px;
+  }
+
+  .test__report__field {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    >.remember.solution {
+      background: #fff;
+      border-radius: 8px;
+      padding: 5px 9px;
+    }
+  }
+
+  .testcase__reports {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+  }
+
+  .color__field {
+    position: absolute;
+    right: 0px;
+    width: 49px;
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+
+  h6.testcase_title {
+    max-width: 400px;
+  }
+
+  .testcasecontent {
+    padding-right: 68px !important;
+  }
+
+  .testcase__all__slider {
+    height: 710px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+  }
+
+  .testcase__slide {
+    height: 100%;
+    overflow-y: scroll;
+    border-radius: 13px;
+
+    img {
+      height: 100%;
+    }
+
+    &::-webkit-scrollbar {
+      width: 14px;
+      background: #000;
+    }
+  }
+
+  .questionscroll_img::-webkit-scrollbar {
+    width: 14px;
+    background: #000;
+  }
+
+  .testcase__slide::-webkit-scrollbar-track,
+  .questionscroll_img::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .testcase__slide::-webkit-scrollbar-thumb {
+    background-color: #fff;
+    border-radius: 8px;
+    height: 48px;
+    border: 4px solid #000;
+  }
+
+  .questionscroll_img {
+    &::-webkit-scrollbar-thumb {
+      background-color: #fff;
+      border-radius: 8px;
+      height: 48px;
+      border: 4px solid #000;
+    }
+
+    height: 598px;
+    overflow-y: scroll !important;
+  }
 }

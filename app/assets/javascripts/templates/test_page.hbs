@@ -1,3 +1,70 @@
+<section id="reference__area" class="reference__area">
+  <div class="container">
+    <div class="reference__wrap assessment__wrap">
+      <div class="assessmentquestion__content__img">
+        <div class="assessmentquestion__content">
+          {{#if isInExpanded}}
+            {{ log 'TODO: >>> isInExpanded' }}
+          {{else}}
+            {{#if isInCorrect}}
+              {{ log 'TODO: >> isInCorrect' }}
+            {{/if}}
+            {{#if isInIncorrect}}
+              {{ log 'TODO: >> isInIncorrect' }}
+            {{/if}}
+            {{#if isInExpanded}}
+              {{ log 'TODO: >> isInExpanded' }}
+            {{/if}}
+            {{#if isInUnanswered}}
+              {{ log 'DOING NOW: >> isInUnanswered' }}
+
+              {{#unless test_case}}
+                {{ log '> Not a test_case' }}
+                <div class='test-progress'>
+                  <ul>
+                    {{#if singleQuestion}}
+                      {{ log '> is singleQuestion' }}
+                      <span>{{{i18n course.pages.test.question.single_title}}}<span>
+                    {{else}}
+                        <span>{{i18n course.pages.test.question.plural_title}}</span>
+                    {{/if}}
+                    {{#each question in answeredQuestions}}
+                      {{ log '> answeredQuestion' }}
+                      <li class='answered'></li>
+                    {{/each}}
+                    {{#each question in unansweredQuestions}}
+                      {{ log '> unansweredQuestion' }}
+                      <li {{bind-attr class='question.active'}}></li>
+                    {{/each}}
+                  </ul>
+                </div>
+              {{/unless}}
+              {{#if question.test_case}}
+                {{ log 'TODO >>> OH MY COD!!!!! Exam time! <<<' }}
+              {{else}}
+                <h6 class="assessment_title">{{{question.title}}}</h6>
+
+                <div class="assessment__select">
+                  {{ext-radio content=question.answers value=selectedAnswer dev=isDevelopment}}
+                </div>
+              {{/if}}
+            {{/if}}
+          {{/if}}
+
+      </div>
+      <div class="assessmentquestion__img">
+        {{#if question.hasImages}}
+          {{ log '>> question.hasImages' }}
+          {{#each image_source in question.image_sources}}
+            {{image-loader source=image_source.sourceWithUrl}}
+          {{/each}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <div {{bind-attr class=':row :page :test-page'}}>
   {{#if isInExpanded}}
     {{ log '>>> isInExpanded' }}
