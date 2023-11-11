@@ -1,5 +1,6 @@
 <div {{bind-attr class=':row :page :test-page'}}>
   {{#if isInExpanded}}
+    {{ log '>>> isInExpanded' }}
     <div class='small-12 large-12 columns with-content'>
       <div class='row'>
         <div class='expanded-image-scrollers'>
@@ -7,6 +8,7 @@
             <div class='rainbow-reference'></div>
           </div>
           {{#each interactive_source in question.interactive_sources}}
+            {{ log interactive_source }}
             <div class='small-3 large-3 columns left'>
               {{#if interactive_source.hasUnsafeHeight}}
                 {{multi-scroller imageWidth=219 imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
@@ -21,6 +23,7 @@
   {{else}}
     <div class='small-5 large-5 columns with-content with-minimum'>
       {{#if isInCorrect}}
+        {{ log '>>> isInCorrect' }}
         <h1>{{{results_title}}}</h1>
         <div class='question-results'>
           <ul>
@@ -32,6 +35,7 @@
         <p>{{{results_correct}}}</p>
       {{/if}}
       {{#if isInIncorrect}}
+        {{ log '>>> isInIncorrect' }}
         <h1>{{{results_title}}}</h1>
         <div class='question-results'>
           <ul>
@@ -43,6 +47,7 @@
         <p>{{{results_incorrect}}}</p>
       {{/if}}
       {{#if isInExpanded}}
+        {{ log '>>> isInExpanded' }}
         <div class='small-7 large-7 columns with-media'>
           <div class='row'>
             <div class='image-scrollers'>
@@ -60,20 +65,27 @@
         </div>
       {{/if}}
       {{#if isInUnanswered}}
+        {{ log '>>> isInUnanswered' }}
         {{#unless test_case}}
           <div class='test-progress'>
+            {{ log '>> Not a test_case' }}
             <p>{{#if singleQuestion}}{{{i18n course.pages.test.question.single_title}}}{{else}}{{i18n course.pages.test.question.plural_title}}{{/if}}</p>
+            {{ log '> is singleQuestion' }}
             <ul>
               {{#each question in answeredQuestions}}
+                {{ log '>> answeredQuestion' }}
                 <li class='answered'></li>
               {{/each}}
               {{#each question in unansweredQuestions}}
+                {{ log '>> unansweredQuestion' }}
+                <h3>Above list item</h3>
                 <li {{bind-attr class='question.active'}}></li>
               {{/each}}
             </ul>
           </div>
         {{/unless}}
         {{#if question.test_case}}
+          {{ log '>>> OH MY COD!!!!! Exam time! <<<' }}
           <h1>{{{question.title}}}</h1>
           <p>{{{i18n course.pages.test.test_case.description_html}}}</p>
           <div class='test-case'>
@@ -117,7 +129,7 @@
         {{else}}
           <h1>{{{question.title}}}</h1>
           <div class='test'>
-            {{ext-radio content=question.answers value=selectedAnswer}}
+            {{ext-radio content=question.answers value=selectedAnswer dev=isDevelopment}}
           </div>
         {{/if}}
       {{/if}}
@@ -125,6 +137,7 @@
     <div class='small-7 large-7 columns with-media with-minimum'>
       <div class='row'>
         {{#if question.hasImages}}
+          {{ log '>> question.hasImages' }}
           {{#each image_source in question.image_sources}}
             <div class="small-12 large-12 columns">
               {{image-loader source=image_source.sourceWithUrl}}
@@ -132,11 +145,24 @@
           {{/each}}
         {{/if}}
         {{#if question.hasInteractives}}
+          {{ log '>> question.hasInteractives' }}
           {{#if question.hasInteractiveTriplet}}
+            {{ log '>> question.hasInteractiveTriplet' }}
             <div class='small-12 large-12 columns'>
               <div class='image-scroller-zoom' {{action 'expand'}}></div>
             </div>
           {{else}}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
+            {{ log '>> OH MY COD - Question has no images or interactives' }}
             <div class='image-scrollers'>
               {{#each interactive_source in question.interactive_sources}}
                 <div {{bind-attr class=":columns columns"}}>
@@ -162,6 +188,7 @@
   </div>
   <div class='small-6 medium-6 large-6 columns'>
     <div class='page-actions'>
+      {{ log 'TODO: Log something here' }}
       {{#if isInCorrect}}
         <a {{bind-attr class=':right'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
       {{/if}}
