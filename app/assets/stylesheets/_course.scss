@@ -129,7 +129,7 @@
   .assessmentquestion__content__img {
     background: #E4E4E4;
     border-radius: 13px;
-    overflow: hidden;
+    // overflow: hidden;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 71px;
@@ -235,18 +235,24 @@
     margin-top: 71px;
   }
 
-  .assessmentquestion__content__img.assessment__answer {
+  .results__page {
     grid-template-columns: repeat(1, 1fr);
     max-width: 822px;
   }
 
   .answer__content {
+    grid-template-columns: repeat(1, 1fr);
     h6 {
+      margin-left: -90px;
       background: #45B2C5;
-      max-width: 200px;
+      max-width: 400px;
       padding: 5px 15px;
+      padding-left: 90px;
       color: #fff;
       margin-bottom: 12px;
+      &.incorrect {
+        background-color: #e96969;
+      }
     }
 
     p {
@@ -255,7 +261,6 @@
       max-width: 409px;
     }
 
-    padding-bottom: 200px;
   }
 
   .testcase__single__report h6 {

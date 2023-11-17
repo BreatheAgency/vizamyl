@@ -1,16 +1,39 @@
 <section id="reference__area" class="reference__area test">
   <div class="container">
     <div class="reference__wrap assessment__wrap">
-      <div class="assessmentquestion__content__img">
+      <div
+        {{bind-attr class=':assessmentquestion__content__img
+          isInCorrect:results__page:not__results__page
+          isInIncorrect:results__page:not__results__page
+          '}}>
         <div class="assessmentquestion__content">
           {{#if isInExpanded}}
             {{ log 'TODO: >>> isInExpanded' }}
           {{else}}
             {{#if isInCorrect}}
               {{ log 'TODO: >> isInCorrect' }}
+              <span>{{{results_title}}}</span>
+
+              {{#each question in questionsInOrder}}
+                {{ log question }}
+                {{render 'question' question}}
+              {{/each}}
+
+              <div class="answer__content">
+                <p>{{{results_correct}}}</p>
+              </div>
             {{/if}}
             {{#if isInIncorrect}}
-              {{ log 'TODO: >> isInIncorrect' }}
+              <span>{{{results_title}}}</span>
+
+              {{#each question in questionsInOrder}}
+                {{ log question }}
+                {{render 'question' question}}
+              {{/each}}
+
+              <div class="answer__content">
+                <p>{{{results_incorrect}}}</p>
+              </div>
             {{/if}}
             {{#if isInExpanded}}
               {{ log 'TODO: >> isInExpanded' }}
