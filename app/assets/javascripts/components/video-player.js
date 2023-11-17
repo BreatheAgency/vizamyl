@@ -9,6 +9,7 @@ Course.VideoPlayerComponent = Ember.Component.extend({
       autoplay: false,
       responsive: true,
       fluid: true,
+      aspectRatio: "4:3",
     });
     var that = this;
     if (this.get('mandatory')) {
