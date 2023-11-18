@@ -1,14 +1,16 @@
-<div {{bind-attr class=':image_wrapper :left loaded:loaded:loading' width=imageWidth height=imageHeight}}>
-  <div class='spinner'></div>
-  <div {{bind-attr class=':image_holder' style=style}}>
-    {{#each image in images}}
-      {{image-toggler source=image selectedImage=selectedImage}}
-    {{/each}}
+<div class="d-flex flex-row multi-scroll">
+  <div {{bind-attr class=':image_wrapper :xleft loaded:loaded:loading' width=imageWidth height=imageHeight}}>
+    <div class='spinner'></div>
+    <div {{bind-attr class=':image_holder' style=style}}>
+      {{#each image in images}}
+        {{image-toggler source=image selectedImage=selectedImage}}
+      {{/each}}
+    </div>
+    <p {{bind-attr class=':label' style=labelStyle}}>{{label}}</p>
+  </div>
+
+  <div class='dragdealer'>
+    <div class='handle'>
+    </div>
   </div>
 </div>
-<div class='dragdealer'>
-  <div class='handle'>
-    <i class="fa-solid fa-bars">
-  </div>
-</div>
-<p {{bind-attr class=':label' style=labelStyle}}>{{label}}</p>
