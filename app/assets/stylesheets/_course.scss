@@ -1,4 +1,20 @@
 #course {
+  .loading-page {
+    .loader {
+      width: 400px;
+      height: 400px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: -30px;
+      left: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image:url(loader);
+    }
+  }
+
   #player.course {
     width: 100%;
   }
@@ -263,7 +279,14 @@
 
   }
 
-  .testcase__single__report h6 {
+  .question h6 {
+    font-size: 18px;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 12px;
+  }
+
+  .question h2 {
     font-size: 18px;
     color: #000;
     margin-top: 0px;
@@ -357,68 +380,6 @@
 
     height: 598px;
     overflow-y: scroll !important;
-  }
-}
-// ############# RESPONSIVE ################ //
-// Extra extra large	xxl	≥1400px
-@include media-breakpoint-down(xxl) {}
-
-// Extra large	xl	≥1200px
-@include media-breakpoint-down(xl) {
-  .progress_indicator {
-    h4 {
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    ul {
-      gap: 10px;
-    }
-
-    li {
-      span {
-        font-size: 14px;
-        font-weight: 600;
-        padding: 3px 8px;
-      }
-    }
-  }
-}
-
-//Large	lg	≥992px
-@include media-breakpoint-down(lg) {
-  .progress_indicator {
-    ul {
-      gap: 3px;
-    }
-  }
-
-  .assessmentquestion__content__img {
-    grid-template-columns: repeat(1,1fr) !important;
-  }
-}
-
-// Medium	md	≥768px
-@include media-breakpoint-down(md) {
-  .progress_indicator {
-    align-items: center;
-    justify-content: center;
-  }
-}
-// Small	sm	≥576px
-@include media-breakpoint-down(sm) {
-  .progress_indicator {
-    ul {
-      gap: 3px;
-
-      li {
-        span {
-          color: red;
-          font-weight: 600;
-          padding: 5px 4px;
-        }
-      }
-    }
   }
 }
 
@@ -555,3 +516,95 @@
  }
 
  /*===================== COURSE-NAME CSS AREA END =====================*/
+
+ /*===================== EXAM CSS AREA START =====================*/
+
+ .rainbow-reference {
+   width: 53px;
+   height: 500px;
+   // @include retina-background-image('rainbow-reference', 53px, 500px);
+   background-image: url(rainbow-bar.png);
+ }
+
+ .image-scroller-zoom {
+   width: 550px;
+   height: 500px;
+   border: 1px solid #ccc;
+   cursor: pointer;
+   background-image: url(image-scroller-zoom.png);
+ }
+
+ .three_sliders {
+   grid-template-columns: repeat(1,1fr);
+   max-width: 822px;
+   background: #E4E4E4;
+   border-radius: 13px;
+   overflow: hidden;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   margin-bottom: 71px;
+ }
+
+ /*===================== EXAM CSS AREA END =====================*/
+// ############# RESPONSIVE ################ //
+// Extra extra large	xxl	≥1400px
+@include media-breakpoint-down(xxl) {}
+
+// Extra large	xl	≥1200px
+@include media-breakpoint-down(xl) {
+  .progress_indicator {
+    h4 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    ul {
+      gap: 10px;
+    }
+
+    li {
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        padding: 3px 8px;
+      }
+    }
+  }
+}
+
+//Large	lg	≥992px
+@include media-breakpoint-down(lg) {
+  .progress_indicator {
+    ul {
+      gap: 3px;
+    }
+  }
+
+  .assessmentquestion__content__img {
+    grid-template-columns: repeat(1,1fr) !important;
+  }
+}
+
+// Medium	md	≥768px
+@include media-breakpoint-down(md) {
+  .progress_indicator {
+    align-items: center;
+    justify-content: center;
+  }
+}
+// Small	sm	≥576px
+@include media-breakpoint-down(sm) {
+  .progress_indicator {
+    ul {
+      gap: 3px;
+
+      li {
+        span {
+          color: red;
+          font-weight: 600;
+          padding: 5px 4px;
+        }
+      }
+    }
+  }
+}

@@ -204,12 +204,16 @@
     max-width: 330px;
   }
 
+  h2.assessment_title {
+    max-width: 330px;
+  }
+
   .assessmentquestion__content {
     span {
       font-size: 18px;
     }
 
-    h6 {
+    h6, h2 {
       font-size: 22px;
       line-height: 28px;
       margin-bottom: 22px;

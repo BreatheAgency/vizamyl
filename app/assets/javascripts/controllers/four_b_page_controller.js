@@ -10,7 +10,9 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
 
   fsmStates: {
     initialState: 'unanswered',
-    knownStates: ['expanded', 'failed', 'answered'],
+    // expanded is probably unreachable after removing action to expand:
+    // <div class='image-scroller-zoom' {{action 'expand'}}></div>
+    knownStates: ['expanded', 'failed', 'answered'], 
     answered: {
       didEnter: function() {
         this.setProperties({
@@ -25,7 +27,8 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
       transitions: [
         { unanswered: 'answered' },
       ]
-    },
+    }, // expanded is probably unreachable after removing action to expand:
+       // <div class='image-scroller-zoom' {{action 'expand'}}></div>
     expand: {
       transitions: [
         { unanswered: 'expanded' }
