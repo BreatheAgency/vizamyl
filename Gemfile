@@ -7,7 +7,7 @@ gem 'active_admin_editor', git: 'https://github.com/bazuka/active_admin_editor.g
 gem 'rake', '~> 10.3'
 gem 'rails', '~> 4.2'
 gem 'json', '~> 1.8'
-gem 'devise', '3.5.11', git: 'https://github.com/totalhealth/devise.git', branch: 'backport-fix', tag: 'v3.5.11'
+gem 'devise', '3.5.11', git: 'https://github.com/totalhealth/devise.git', branch: 'backport-fix', ref: '239d8a5'
 gem 'globalize', '= 5.1.0'
 gem 'i18n-js', '3.0.0.rc6'
 gem 'passenger', '>= 5.0.8'

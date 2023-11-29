@@ -30,8 +30,8 @@ GIT
 GIT
   remote: https://github.com/totalhealth/devise.git
   revision: 239d8a59633c941d1d483816adaa22985050893e
+  ref: 239d8a5
   branch: backport-fix
-  tag: v3.5.11
   specs:
     devise (3.5.11)
       bcrypt (~> 3.0)
@@ -451,4 +451,4 @@ RUBY VERSION
    ruby 2.6.10p210
 
 BUNDLED WITH
-   1.17.2
+   2.0.0.pre.3
