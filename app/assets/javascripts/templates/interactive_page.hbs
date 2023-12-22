@@ -27,10 +27,12 @@
             <div {{bind-attr class=":slidy"}}>
               {{#if interactive_source.hasUnsafeHeight}}
                 {{ log "multi-scroller" }}
-                {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                  source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
               {{else}}
                 {{ log "single-scroller" }}
-                {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                  source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
               {{/if}}
             </div>
           {{/each}}
