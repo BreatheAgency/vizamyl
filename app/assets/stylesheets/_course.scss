@@ -447,31 +447,33 @@
    }
  }
 
- .accordion-item {
-   background: #E4E4E4;
-   border-radius: 6px !important;
-   margin-bottom: 7px;
+ #coursemenu__area {
+   .accordion-item {
+     background: #E4E4E4;
+     border-radius: 6px !important;
+     margin-bottom: 7px;
 
-   h2 {
-     margin-bottom: 0px;
-     font-size: calc(1.325rem + .9vw)
-   }
+     h2.accordion-header {
+       margin-bottom: 0px;
+       font-size: calc(1.325rem + .9vw)
+     }
 
-   &.unavailable {
-     .accordion-header {
-       button.collapsed {
-         color: #888888;
-         background-color: #d4d4d4;
+     &.unavailable {
+       .accordion-header {
+         button.collapsed {
+           color: #888888;
+           background-color: #d4d4d4;
+         }
        }
      }
    }
- }
 
- .accordion-button {
+   .accordion-button {
 
-   &::after,
-   &:not(.collapsed)::after {
-     background-image: none;
+     &::after,
+     &:not(.collapsed)::after {
+       background-image: none;
+     }
    }
  }
 

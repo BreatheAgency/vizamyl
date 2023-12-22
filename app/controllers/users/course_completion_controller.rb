@@ -65,7 +65,7 @@ class CourseCompletionA4WithDepartment < Prawn::Document
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
     date_format = (user.locale == 'en-us') ? "%m/%d/%Y" : "%d/%m/%Y"
-    text_box(I18n.t('course_completion.date') + ': ' + I18n.l(Time.now, locale: user.locale, format: date_format), at: [left, top + margin + height], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.date') + ': ' + I18n.l(Date.parse('05/09/2021'), locale: user.locale, format: date_format), at: [left, top + margin + height], style: :normal, size: 14)
   end
 end
 
