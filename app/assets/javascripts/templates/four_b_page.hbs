@@ -98,11 +98,17 @@
             {{else}}
               {{#each interactive_source in question.interactive_sources}}
                 <div {{bind-attr class=":columns columns"}}>
+                  {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                    source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                  {{!-- TODO: Refactor out single-scroller and sourceWithURL function
                   {{#if interactive_source.hasUnsafeHeight}}
-                    {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                    {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                      source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
                   {{else}}
-                    {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                    {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                      source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
                   {{/if}}
+                  --}}
                 </div>
               {{/each}}
             {{/if}}

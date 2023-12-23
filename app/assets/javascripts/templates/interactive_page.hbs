@@ -25,15 +25,17 @@
         <div {{ bind-attr class=':interactive_column :col-xxl-7 :d-flex :justify-content-around' }}>
           {{#each interactive_source in interactive_sources}}
             <div {{bind-attr class=":slidy"}}>
+              {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+              {{!-- TODO: Refactor out single-scroller and sourceWithURL function
               {{#if interactive_source.hasUnsafeHeight}}
-                {{ log "multi-scroller" }}
                 {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
                   source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
               {{else}}
-                {{ log "single-scroller" }}
                 {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
                   source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
               {{/if}}
+              --}}
             </div>
           {{/each}}
         </div>
