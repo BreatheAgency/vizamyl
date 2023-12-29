@@ -1,4 +1,4 @@
-<section id="reference__area" class="reference__area">
+<section id="reference__area" class="reference__area pt-0">
   <div class="container">
     <div class="reference__wrap assessment__wrap">
       <div class="testcase__row">
@@ -31,8 +31,8 @@
                 {{ log 'TODO: >> question.test_case' }}
 
                 <div class="col-lg-5">
-                  <div class="position-relative">
-                    <div class="three_sliders assessmentquestion__content testcasecontent">
+                  <div class="assessmentquestion__content__img assessment__answer position-relative">
+                    <div class="assessmentquestion__content testcasecontent">
                       <span>{{{question.title}}}</span>
 
                       <h6 class="testcase_title">
@@ -40,42 +40,66 @@
                       </h6>
 
 
-                      <div class='test-case'>
-                        <div class='question'>
-                          <h2>{{i18n course.pages.test.test_case.question_one}}</h2>
-                          {{#each answer in questionSetOne}}
-                            <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<div class='body'>{{{answer.body}}}</div></label>
-                          {{/each}}
+                      <div class='testcase__reports'>
+                        <div class='question testcase__single__report'>
+                          <h6>{{i18n course.pages.test.test_case.question_one}}</h6>
+                          <div class="test__report__field">
+                            {{#each answer in questionSetOne}}
+                                <div class="remember solution">
+                                  <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                                </div>
+                            {{/each}}
+                          </div>
                         </div>
-                        <div class='question'>
-                          <h2>{{i18n course.pages.test.test_case.question_two}}</h2>
-                          {{#each answer in questionSetTwo}}
-                            <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
-                          {{/each}}
+                        <div class='question testcase__single__report'>
+                          <h6>{{i18n course.pages.test.test_case.question_two}}</h6>
+                          <div class="test__report__field">
+                            {{#each answer in questionSetTwo}}
+                                <div class="remember solution">
+                                  <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                                </div>
+                            {{/each}}
+                          </div>
                         </div>
-                        <div class='question'>
-                          <h2>{{i18n course.pages.test.test_case.question_three}}</h2>
-                          {{#each answer in questionSetThree}}
-                            <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<div class='body'>{{{answer.body}}}</div></label>
-                          {{/each}}
+                        <div class='question testcase__single__report'>
+                          <h6>{{i18n course.pages.test.test_case.question_three}}</h6>
+                          <div class="test__report__field">
+                            {{#each answer in questionSetThree}}
+                                <div class="remember solution">
+                                  <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                                </div>
+                            {{/each}}
+                          </div>
                         </div>
-                        <div class='question'>
-                          <h2>{{i18n course.pages.test.test_case.question_four}}</h2>
-                          {{#each answer in questionSetFour}}
-                            <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<div class='body'>{{{answer.body}}}</div></label>
-                          {{/each}}
+                        <div class='question testcase__single__report'>
+                          <h6>{{i18n course.pages.test.test_case.question_four}}</h6>
+                          <div class="test__report__field">
+                            {{#each answer in questionSetFour}}
+                                <div class="remember solution">
+                                  <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                                </div>
+                            {{/each}}
+                          </div>
                         </div>
-                        <div class='question'>
-                          <h2>{{i18n course.pages.test.test_case.question_five}}</h2>
-                          {{#each answer in questionSetFive}}
-                            <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<div class='body'>{{{answer.body}}}</div></label>
-                          {{/each}}
+                        <div class='question testcase__single__report'>
+                          <h6>{{i18n course.pages.test.test_case.question_five}}</h6>
+                          <div class="test__report__field">
+                            {{#each answer in questionSetFive}}
+                                <div class="remember solution">
+                                  <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                                </div>
+                            {{/each}}
+                          </div>
                         </div>
-                        <div class='question'>
-                          <h2>{{i18n course.pages.test.test_case.question_six}}</h2>
-                          {{#each answer in question.answers}}
-                            <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
-                          {{/each}}
+                        <div class='question testcase__single__report'>
+                          <h6>{{i18n course.pages.test.test_case.question_six}}</h6>
+                            <div class="test__report__field">
+                            {{#each answer in question.answers}}
+                                <div class="remember solution">
+                                  <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<span class="posneg">{{{answer.body}}}</span></label>
+                                </div>
+                            {{/each}}
+                          </div>
                         </div>
                       </div>
 
