@@ -2,10 +2,9 @@
   <div class="container">
     <div class="reference__wrap assessment__wrap">
       <div
-        {{bind-attr class=':assessmentquestion__content__img
+        {{ bind-attr class=':assessmentquestion__content__img
           isInCorrect:results__page:not__results__page
-          isInIncorrect:results__page:not__results__page
-          '}}>
+          isInIncorrect:results__page:not__results__page '}}>
         <div class="assessmentquestion__content">
           {{#if isInExpanded}}
             {{ log 'TODO: >>> isInExpanded' }}

@@ -149,6 +149,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 71px;
+    &.assessment__answer {
+      grid-template-columns: repeat(1,1fr);
+      max-width: 822px;
+    }
   }
 
   h6.assessment_title {
@@ -352,10 +356,6 @@
   }
 
   .testcase__slide {
-    height: 100%;
-    overflow-y: scroll;
-    border-radius: 13px;
-
     img {
       height: 100%;
     }
@@ -650,10 +650,6 @@
       ul {
         gap: 3px;
       }
-    }
-  
-    .assessmentquestion__content__img {
-      grid-template-columns: repeat(1, 1fr) !important;
     }
   }
   

@@ -116,26 +116,23 @@
           {{/if}}
           {{#if isInUnanswered}}
             {{ log 'TODO: >>> isInUnanswered' }}
-            {{#if question.hasInteractiveTriplet}}
-              {{ log 'TODO: >> hasInteractiveTriplet' }}
+            {{!-- {{#if question.hasInteractiveTriplet}} --}}
+              {{!-- {{ log 'TODO: >> hasInteractiveTriplet' }} --}}
               <!-- <div class='image-scroller-zoom' {{action 'expand'}}></div> ---> 
-            {{else}}
-              {{#each interactive_source in question.interactive_sources}}
-                <div {{bind-attr class=":columns columns"}}>
-                  {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
-                    source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                  {{!-- TODO: Refactor out single-scroller and sourceWithURL function
-                  {{#if interactive_source.hasUnsafeHeight}}
-                    {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
-                      source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                  {{else}}
-                    {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
-                      source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                  {{/if}}
-                  --}}
+            {{!-- {{else}} --}}
+              <div class="col-lg-7">
+                <div class="testcase__all__slider">
+                  {{#each interactive_source in question.interactive_sources}}
+                    <div {{bind-attr class=""}}>
+                      <div class="testcase__slide">
+                          {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                            source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                      </div>
+                    </div>
+                  {{/each}}
                 </div>
-              {{/each}}
-            {{/if}}
+              </div>
+            {{!-- {{/if}} --}}
           {{/if}}
           {{#if isInAnswered}}
             {{ log 'TODO: >> isInAnswered (1)' }}
@@ -171,182 +168,6 @@
                 <img src="/assets/right_angle_purple.svg" alt="Right angle purple">
               </a>
             {{/if}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<section id="reference__area" class="reference__area">
-  <div class="container">
-    <div class="reference__wrap assessment__wrap">
-      <div class="testcase__row">
-        <div class="row g-3">
-          <div class="col-lg-5">
-            <div class="assessmentquestion__content__img assessment__answer position-relative">
-              <div class="assessmentquestion__content testcasecontent">
-
-                <div class="multipart__span">
-                  <span>Case 1</span>
-                </div>
-                <h6 class="testcase_title">Navigate the three views with the slider. Assess the five regions and
-                  then
-                  make an overall assessment.
-                </h6>
-
-                <div class="testcase__reports">
-                  <div class="testcase__single__report">
-                    <h6>Frontal pole and lobe</h6>
-                    <div class="test__report__field">
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check1">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check1" style="color: #000; font-size: 18px;">Negative</label>
-                      </div>
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check2">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check2" style="color: #000; font-size: 18px;">Positive</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="testcase__single__report">
-                    <h6>Posterior cingulate and precuneus</h6>
-                    <div class="test__report__field">
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check3">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check3" style="color: #000; font-size: 18px;">Negative</label>
-                      </div>
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check4">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check4" style="color: #000; font-size: 18px;">Positive</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="testcase__single__report">
-                    <h6>Temporal lobe</h6>
-                    <div class="test__report__field">
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check5">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check5" style="color: #000; font-size: 18px;">Negative</label>
-                      </div>
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check6">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check6" style="color: #000; font-size: 18px;">Positive</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="testcase__single__report">
-                    <h6>Striatum</h6>
-                    <div class="test__report__field">
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check7">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check7" style="color: #000; font-size: 18px;">Negative</label>
-                      </div>
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check8">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check8" style="color: #000; font-size: 18px;">Positive</label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="testcase__single__report">
-                    <h6>Overall classification</h6>
-                    <div class="test__report__field">
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check9">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check9" style="color: #000; font-size: 18px;">Negative</label>
-                      </div>
-                      <div class="remember solution">
-                        <div class="checkbox">
-                          <input type="checkbox" id="check10">
-                          <div class="check_field"></div>
-                        </div>
-                        <label for="check10" style="color: #000; font-size: 18px;">Positive</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="color__field">
-                <img src="assets/img/color_field.png" alt="">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-7">
-            <div class="testcase__all__slider">
-              <div class="testcase__slide">
-                <img src="assets/img/case_img1.png" alt="">
-                <img src="assets/img/case_img1.png" alt="">
-                <img src="assets/img/case_img1.png" alt="">
-                <img src="assets/img/case_img1.png" alt="">
-                <img src="assets/img/case_img1.png" alt="">
-                <img src="assets/img/case_img1.png" alt="">
-                <img src="assets/img/case_img1.png" alt="">
-                <img src="assets/img/case_img1.png" alt="">
-              </div>
-              <div class="testcase__slide">
-                <img src="assets/img/case_img2.png" alt="">
-                <img src="assets/img/case_img2.png" alt="">
-                <img src="assets/img/case_img2.png" alt="">
-                <img src="assets/img/case_img2.png" alt="">
-                <img src="assets/img/case_img2.png" alt="">
-                <img src="assets/img/case_img2.png" alt="">
-                <img src="assets/img/case_img2.png" alt="">
-                <img src="assets/img/case_img2.png" alt="">
-              </div>
-              <div class="testcase__slide">
-                <img src="assets/img/case_img3.png" alt="">
-                <img src="assets/img/case_img3.png" alt="">
-                <img src="assets/img/case_img3.png" alt="">
-                <img src="assets/img/case_img3.png" alt="">
-                <img src="assets/img/case_img3.png" alt="">
-                <img src="assets/img/case_img3.png" alt="">
-                <img src="assets/img/case_img3.png" alt="">
-                <img src="assets/img/case_img3.png" alt="">
-              </div>
-            </div>
           </div>
         </div>
       </div>
