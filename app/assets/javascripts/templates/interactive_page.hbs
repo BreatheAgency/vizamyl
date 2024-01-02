@@ -27,22 +27,13 @@
             <div {{bind-attr class=":slidy"}}>
               {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
                 source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-              {{!-- TODO: Refactor out single-scroller and sourceWithURL function
-              {{#if interactive_source.hasUnsafeHeight}}
-                {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
-                  source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-              {{else}}
-                {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
-                  source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-              {{/if}}
-              --}}
             </div>
           {{/each}}
         </div>
 
       </div>
     </div>
-    <div class="page__select__next__prev">
+    <div class="page__select__next__prev py-5">
       <a {{bind-attr class=':right complete:enabled:disabled'}}
          {{action 'next' step}}>
         {{i18n course.actions.next}}

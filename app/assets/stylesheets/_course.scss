@@ -347,53 +347,6 @@
   .testcasecontent {
     padding-right: 68px !important;
   }
-
-  .testcase__all__slider {
-    height: 710px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 17px;
-  }
-
-  .testcase__slide {
-    img {
-      height: 100%;
-    }
-
-    &::-webkit-scrollbar {
-      width: 14px;
-      background: #000;
-    }
-  }
-
-  .questionscroll_img::-webkit-scrollbar {
-    width: 14px;
-    background: #000;
-  }
-
-  .testcase__slide::-webkit-scrollbar-track,
-  .questionscroll_img::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .testcase__slide::-webkit-scrollbar-thumb {
-    background-color: #fff;
-    border-radius: 8px;
-    height: 48px;
-    border: 4px solid #000;
-  }
-
-  .questionscroll_img {
-    &::-webkit-scrollbar-thumb {
-      background-color: #fff;
-      border-radius: 8px;
-      height: 48px;
-      border: 4px solid #000;
-    }
-
-    height: 598px;
-    overflow-y: scroll !important;
-  }
 }
 
  /*===================== COURSE-NAME CSS AREA START =====================*/

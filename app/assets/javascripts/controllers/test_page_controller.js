@@ -10,7 +10,7 @@ Course.TestPageController = Ember.ObjectController.extend(Course.TestQuestions, 
 
   fsmStates: {
     initialState: 'unanswered',
-    knownStates: ['expanded', 'failed', 'incorrect', 'correct'],
+    knownStates: ['failed', 'incorrect', 'correct'],
     unanswered: {
       didEnter: function() {
         if (this.get('unansweredQuestionRoundIndices.length') === 0) {
@@ -51,16 +51,6 @@ Course.TestPageController = Ember.ObjectController.extend(Course.TestQuestions, 
       transitions: [
         { unanswered: 'correct', doIf: 'testCorrect' },
         { unanswered: 'incorrect', doUnless: 'testCorrect' }
-      ]
-    },
-    expand: {
-      transitions: [
-        { unanswered: 'expanded' }
-      ]
-    },
-    contract: {
-      transitions: [
-        { expanded: 'unanswered' }
       ]
     },
     reset: {

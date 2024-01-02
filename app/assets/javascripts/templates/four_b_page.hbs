@@ -3,143 +3,134 @@
     <div class="reference__wrap assessment__wrap">
       <div class="testcase__row">
         <div {{bind-attr class=':row :g-3 :page :test-page :four-b-page'}}>
-          {{#if isInExpanded}}
-            <!-- // Probably unreachable -->
-          {{else}}
-            {{#if isInAnswered}}
-              {{ log 'TODO: >>> isInAnswered' }}
-              {{#if testCorrect}}
-                {{ log 'TODO: >> testCorrect' }}
+          {{#if isInAnswered}}
+            {{ log 'TODO: >>> isInAnswered' }}
+            {{#if testCorrect}}
+              {{ log 'TODO: >> testCorrect' }}
+            {{else}}
+              {{#if testFailedOnce}}
               {{else}}
-                {{#if testFailedOnce}}
-                {{else}}
-                  <p>{{{i18n course.pages.test.four_b.incorrect_two_one_html}}} <a href='/{{unbound currentLocale}}/contact'>{{i18n course.pages.test.four_b.incorrect_two_link}}</a> {{{i18n course.pages.test.four_b.incorrect_two_two_html}}}</p>
-                {{/if}}
+                <p>{{{i18n course.pages.test.four_b.incorrect_two_one_html}}} <a href='/{{unbound currentLocale}}/contact'>{{i18n course.pages.test.four_b.incorrect_two_link}}</a> {{{i18n course.pages.test.four_b.incorrect_two_two_html}}}</p>
               {{/if}}
-              <ul>
-                {{#each question in questionsWithIndex}}
-                  <a {{action 'selectExplanation' question.object.explanation_source}}>
-                    <li {{bind-attr class='question.object.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>{{{i18n course.pages.test.four_b.review_explanation_video count=question.index}}}</li>
-                  </a>
-                {{/each}}
-              </ul>
             {{/if}}
+            <ul>
+              {{#each question in questionsWithIndex}}
+                <a {{action 'selectExplanation' question.object.explanation_source}}>
+                  <li {{bind-attr class='question.object.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>{{{i18n course.pages.test.four_b.review_explanation_video count=question.index}}}</li>
+                </a>
+              {{/each}}
+            </ul>
+          {{/if}}
 
-            {{#if isInUnanswered}}
-              {{ log 'TODO: >>> isInUnanswered' }}
-              {{#if question.test_case}}
-                {{ log 'TODO: >> question.test_case' }}
+          {{#if isInUnanswered}}
+            {{ log 'TODO: >>> isInUnanswered' }}
+            {{#if question.test_case}}
+              {{ log 'TODO: >> question.test_case' }}
 
-                <div class="col-lg-5">
-                  <div class="assessmentquestion__content__img assessment__answer position-relative">
-                    <div class="assessmentquestion__content testcasecontent">
-                      <span>{{{question.title}}}</span>
+              <div class="col-lg-5">
+                <div class="assessmentquestion__content__img assessment__answer position-relative">
+                  <div class="assessmentquestion__content testcasecontent">
+                    <span>{{{question.title}}}</span>
 
-                      <h6 class="testcase_title">
-                        {{{i18n course.pages.test.test_case.description_html}}}
-                      </h6>
+                    <h6 class="testcase_title">
+                      {{{i18n course.pages.test.test_case.description_html}}}
+                    </h6>
 
 
-                      <div class='testcase__reports'>
-                        <div class='question testcase__single__report'>
-                          <h6>{{i18n course.pages.test.test_case.question_one}}</h6>
-                          <div class="test__report__field">
-                            {{#each answer in questionSetOne}}
-                                <div class="remember solution">
-                                  <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<span class="posneg">{{{answer.body}}}</span></label>
-                                </div>
-                            {{/each}}
-                          </div>
-                        </div>
-                        <div class='question testcase__single__report'>
-                          <h6>{{i18n course.pages.test.test_case.question_two}}</h6>
-                          <div class="test__report__field">
-                            {{#each answer in questionSetTwo}}
-                                <div class="remember solution">
-                                  <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<span class="posneg">{{{answer.body}}}</span></label>
-                                </div>
-                            {{/each}}
-                          </div>
-                        </div>
-                        <div class='question testcase__single__report'>
-                          <h6>{{i18n course.pages.test.test_case.question_three}}</h6>
-                          <div class="test__report__field">
-                            {{#each answer in questionSetThree}}
-                                <div class="remember solution">
-                                  <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<span class="posneg">{{{answer.body}}}</span></label>
-                                </div>
-                            {{/each}}
-                          </div>
-                        </div>
-                        <div class='question testcase__single__report'>
-                          <h6>{{i18n course.pages.test.test_case.question_four}}</h6>
-                          <div class="test__report__field">
-                            {{#each answer in questionSetFour}}
-                                <div class="remember solution">
-                                  <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<span class="posneg">{{{answer.body}}}</span></label>
-                                </div>
-                            {{/each}}
-                          </div>
-                        </div>
-                        <div class='question testcase__single__report'>
-                          <h6>{{i18n course.pages.test.test_case.question_five}}</h6>
-                          <div class="test__report__field">
-                            {{#each answer in questionSetFive}}
-                                <div class="remember solution">
-                                  <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<span class="posneg">{{{answer.body}}}</span></label>
-                                </div>
-                            {{/each}}
-                          </div>
-                        </div>
-                        <div class='question testcase__single__report'>
-                          <h6>{{i18n course.pages.test.test_case.question_six}}</h6>
-                            <div class="test__report__field">
-                            {{#each answer in question.answers}}
-                                <div class="remember solution">
-                                  <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<span class="posneg">{{{answer.body}}}</span></label>
-                                </div>
-                            {{/each}}
-                          </div>
+                    <div class='testcase__reports'>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_one}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetOne}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
                         </div>
                       </div>
-
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_two}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetTwo}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_three}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetThree}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_four}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetFour}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_five}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetFive}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_six}}</h6>
+                          <div class="test__report__field">
+                          {{#each answer in question.answers}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
                     </div>
+
                   </div>
                 </div>
-                {{else}}
-                <h1>{{{question.title}}}</h1>
-                <div class='test'>
-                  {{ext-radio content=question.answers value=selectedAnswer}}
-                </div>
-              {{/if}}
+              </div>
+              {{else}}
+              <h1>{{{question.title}}}</h1>
+              <div class='test'>
+                {{ext-radio content=question.answers value=selectedAnswer}}
+              </div>
             {{/if}}
           {{/if}}
           {{#if isInUnanswered}}
             {{ log 'TODO: >>> isInUnanswered' }}
-            {{!-- {{#if question.hasInteractiveTriplet}} --}}
-              {{!-- {{ log 'TODO: >> hasInteractiveTriplet' }} --}}
-              <!-- <div class='image-scroller-zoom' {{action 'expand'}}></div> ---> 
-            {{!-- {{else}} --}}
-              <div class="col-lg-7">
-                <div class="testcase__all__slider">
-                  {{#each interactive_source in question.interactive_sources}}
-                    <div {{bind-attr class=""}}>
-                      <div class="testcase__slide">
-                          {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
-                            source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                      </div>
+            <div class="col-lg-7">
+              <div class="testcase__all__slider">
+                {{#each interactive_source in question.interactive_sources}}
+                  <div {{bind-attr class=""}}>
+                    <div class="testcase__slide">
+                        {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                          source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
                     </div>
-                  {{/each}}
-                </div>
+                  </div>
+                {{/each}}
               </div>
-            {{!-- {{/if}} --}}
+            </div>
           {{/if}}
           {{#if isInAnswered}}
             {{ log 'TODO: >> isInAnswered (1)' }}
             {{video-player finished='finished' mandatory=false source=explanationSource}}
           {{/if}}
           <p>{{{abbreviations}}}</p>
-          <div class="page__select__next__prev">
+          <div class="page__select__next__prev py-5">
             {{#if isInAnswered}}
               {{ log 'TODO: >> isInAnswered (2)' }}
               {{#if showRetakeButton }}
@@ -158,13 +149,6 @@
               {{ log 'TODO: >> isInUnanswered' }}
               <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>
                 {{i18n course.actions.next}}
-                <img src="/assets/right_angle_purple.svg" alt="Right angle purple">
-              </a>
-            {{/if}}
-            {{#if isInExpanded}}
-              {{ log 'TODO: >> isInExpanded' }}
-              <a {{bind-attr class=':right'}} {{action 'contract'}}>
-                {{i18n course.actions.back}}
                 <img src="/assets/right_angle_purple.svg" alt="Right angle purple">
               </a>
             {{/if}}

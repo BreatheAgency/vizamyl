@@ -1019,7 +1019,11 @@ main#main {
     display: flex;
     align-items: center;
     gap: 9px;
+    &.disabled {
+      color: #707070;
+    }
   }
+
 
   margin-bottom: 24px;
   display: flex;

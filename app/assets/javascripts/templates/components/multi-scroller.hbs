@@ -1,16 +1,17 @@
 {{ log "RENDER: mulity-scroller.hbs" }}
 <div class="d-flex flex-row multi-scroll">
-  <div {{bind-attr class=':image_wrapper :xleft loaded:loaded:loading' width=imageWidth height=imageHeight}}>
+  <div {{bind-attr class=':image_wrapper :xleft loaded:loaded:loading' xwidth=imageWidth xheight=imageHeight}}>
     <div class='spinner'></div>
-    <div {{bind-attr class=':image_holder' style=style}}>
+    <div {{bind-attr class=':image_holder' xstyle=style}}>
       {{#each image in images}}
         {{image-toggler source=image selectedImage=selectedImage}}
       {{/each}}
     </div>
-    <p {{bind-attr class=':label' style=labelStyle}}>{{label}}</p>
+    <p {{bind-attr class=':label' xstyle=labelStyle}}>{{label}}</p>
   </div>
   <div class='dragdealer'>
     <div class='handle'>
     </div>
   </div>
 </div>
+
