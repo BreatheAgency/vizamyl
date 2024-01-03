@@ -103,11 +103,12 @@
                   </div>
                 </div>
               </div>
-              {{else}}
-              <h1>{{{question.title}}}</h1>
-              <div class='test'>
-                {{ext-radio content=question.answers value=selectedAnswer}}
-              </div>
+             {{else}}
+                {{ log " ??? I think it's answered "}}
+                <h1>{{{question.title}}}</h1>
+                <div class='test'>
+                  {{ext-radio content=question.answers value=selectedAnswer dev=isDevelopment}}
+                </div>
             {{/if}}
           {{/if}}
           {{#if isInUnanswered}}

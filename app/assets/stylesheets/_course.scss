@@ -15,8 +15,12 @@
     }
   }
 
-  #player.course {
+  #player {
     width: 100%;
+    border-radius: 9px;
+    .vjs-tech {
+      border-radius: 9px;
+    }
   }
 
   #bumper {
@@ -155,10 +159,6 @@
     }
   }
 
-  h6.assessment_title {
-    max-width: 330px;
-  }
-
   .assessmentquestion__img img {
     height: 100%;
   }
@@ -207,7 +207,7 @@
   .assessment__select {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: 14px;
   }
 
   .assessment__list p {
@@ -434,6 +434,9 @@
      }
    }
 
+   .accordion-body a {
+      cursor: pointer;
+   }
    .accordion-button {
 
      &::after,
@@ -520,7 +523,7 @@
 
 // Extra large	xl	≥1200px
 @include media-breakpoint-down(xl) {
-  .progress_indicator {
+  #course .progress_indicator {
     h4 {
       font-size: 14px;
       font-weight: 600;
@@ -599,6 +602,22 @@
   
   //Large	lg	≥992px
   @include media-breakpoint-down(lg) {
+    .progress_indicator {
+      flex-direction: column;
+      align-items: start;
+      gap: 16px;
+  
+      ul {
+        li a {
+          padding: 2px 8px;
+        }
+  
+        gap: 8px;
+      }
+  
+      padding: 8px;
+    }
+  
     .progress_indicator {
       ul {
         gap: 3px;

@@ -1019,6 +1019,7 @@ main#main {
     display: flex;
     align-items: center;
     gap: 9px;
+    cursor: pointer;
     &.disabled {
       color: #707070;
     }
@@ -1030,3 +1031,4 @@ main#main {
   align-items: center;
   justify-content: end;
 }
+
