@@ -4,7 +4,7 @@
       <div {{ bind-attr class=':assessmentquestion__content__img
               isInCorrect:results__page:not__results__page
               isInIncorrect:results__page:not__results__page '}}>
-        <div class="assessmentquestion__content">
+        <div class="test_question">
           {{#if isInCorrect}}
             {{ log 'TODO: >> isInCorrect' }}
             <span>{{{results_title}}}</span>
@@ -59,8 +59,8 @@
                 {{ log 'TODO >>> OH MY COD!!!!! Exam time! <<<' }}
 
                 <div class="col-lg-5">
-                  <div class="assessmentquestion__content__img assessment__answer position-relative">
-                    <div class="assessmentquestion__content testcasecontent">
+                  <div class="test_wrap assessment__answer position-relative">
+                    <div class="popop">
                       <span>{{{question.title}}}</span>
 
                       <h6 class="testcase_title">
@@ -143,7 +143,7 @@
               {{/if}}
             {{/if}}
         </div>
-        <div class="assessmentquestion__img">
+        <div class="test_material">
           {{#if question.hasImages}}
             {{ log '>> question.hasImages' }}
             {{#each image_source in question.image_sources}}

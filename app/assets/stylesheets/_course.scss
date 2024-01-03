@@ -163,7 +163,7 @@
     height: 100%;
   }
 
-  .assessmentquestion__content {
+  .assessmentquestion__content, .test_question {
     padding: 35px 51px;
 
     span {
@@ -545,7 +545,7 @@
 
 @media (min-width: 320px) and (max-width: 1199px) {
   #course {
-    .assessmentquestion__content h6 {
+    .assessmentquestion__content h6, .test_question h6 {
       font-size: 18px;
       line-height: 25px;
       margin-top: 6px;
@@ -571,7 +571,7 @@
         }
       }
   
-      .assessmentquestion__content {
+      .assessmentquestion__content, .test_question h6 {
         padding: 15px 20px;
       }
   
@@ -593,7 +593,7 @@
         max-width: 100%;
       }
   
-      .assessmentquestion__content h6 {
+      .assessmentquestion__content h6, .test_question h6 {
         margin-bottom: 8px;
       }
   
