@@ -67,7 +67,8 @@
     -webkit-overflow-scrolling: touch;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
-    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
 
     img {
       position: relative;
@@ -79,6 +80,11 @@
       -moz-transition: opacity .5s;
       -ms-transition: opacity .5s;
       transition: opacity .5s;
+    }
+
+    &.interactive {
+      border-top-right-radius: unset;
+      border-bottom-right-radius: unset;
     }
   }
 
@@ -159,10 +165,6 @@
 }
 
 @include media-breakpoint-down(sm) {
-  .testcase__all__slider {
-    justify-items: center;
-    grid-template-columns: repeat(1, 1fr);
-  }
 }
 
 .dragdealer {
@@ -194,32 +196,85 @@
     background: #898989;
 }
 
+/*
+md	≥768px
+lg	≥992px
+xl	≥1200px
+xxl	≥1400px
+*/
+
 @include media-breakpoint-down(xxl) {
-    .dragdealer .handle {
-        left: 22px;
-    }
+  .dragdealer .handle {
+    left: 4px;
+  }
 }
 
 @include media-breakpoint-down(xl) {
-    .dragdealer .handle {
-        left: 22px;
-    }
+  .dragdealer .handle {
+    left: 0px;
+  }
 }
 
 @include media-breakpoint-down(lg) {
-    .dragdealer .handle {
-        left: 22px;
-    }
+  .dragdealer .handle {
+    left: 7px;
+  }
 }
 
 @include media-breakpoint-down(md) {
-    .dragdealer .handle {
-        left: 22px;
-    }
+  .dragdealer .handle {
+    left: 0px;
+  }
 }
 
 @include media-breakpoint-down(sm) {
+  .dragdealer .handle {
+    left: 10px;
+  }
+
+  .testcase__all__slider {
+    justify-items: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.four-b_style_question {
+  .dragdealer .handle {
+    left: 6px;
+  }
+
+  @include media-breakpoint-down(xxl) {
     .dragdealer .handle {
-        left: 22px;
+      left: 0px;
     }
+  }
+
+  @include media-breakpoint-down(xl) {
+    .dragdealer .handle {
+      left: 0px;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .dragdealer .handle {
+      left: 0px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    .dragdealer .handle {
+      left: 0px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .dragdealer .handle {
+      left: 10px;
+    }
+
+    .testcase__all__slider {
+      justify-items: center;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
