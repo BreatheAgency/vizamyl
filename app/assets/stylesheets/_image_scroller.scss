@@ -58,42 +58,6 @@
     border-radius: 100%;
   }
 
-  .dragdealer {
-    position: relative;
-    background: black;
-    width: 31px;
-    height: 500px;
-    border-top-right-radius: 13px;
-    border-bottom-right-radius: 13px;
-  }
-
-  .dragdealer .handle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    cursor: pointer;
-    width: 20px;
-    border-radius: 15px;
-    border: 6px solid black;
-    height: 60px;
-    background: white;
-    color: red;
-    font-size: 14px;
-    line-height: 30px;
-    text-align: center;
-    left: 10px;
-    z-index: 9;
-  }
-
-  .dragdealer .handle i {
-    line-height: 60px;
-    font-size: 16px;
-  }
-
-  .dragdealer .disabled {
-    background: #898989;
-  }
-
   .image_wrapper {
     background: black;
     text-align: center;
@@ -115,13 +79,6 @@
       -moz-transition: opacity .5s;
       -ms-transition: opacity .5s;
       transition: opacity .5s;
-    }
-  }
-
-  .test {
-    .image_wrapper {
-      border-bottom-right-radius: 15px;
-      border-top-right-radius: 15px;
     }
   }
 
@@ -206,4 +163,63 @@
     justify-items: center;
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.dragdealer {
+    position: relative;
+    background: black;
+    width: 31px;
+    height: 500px;
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+}
+
+.dragdealer .handle {
+    position: absolute;
+    cursor: pointer;
+    width: 20px;
+    border-radius: 15px;
+    border: 6px solid black;
+    height: 60px;
+    background: white;
+    color: red;
+    font-size: 14px;
+    line-height: 30px;
+    text-align: center;
+    left: 10px;
+    z-index: 9;
+}
+
+.dragdealer .disabled {
+    background: #898989;
+}
+
+@include media-breakpoint-down(xxl) {
+    .dragdealer .handle {
+        left: 22px;
+    }
+}
+
+@include media-breakpoint-down(xl) {
+    .dragdealer .handle {
+        left: 22px;
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .dragdealer .handle {
+        left: 22px;
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .dragdealer .handle {
+        left: 22px;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .dragdealer .handle {
+        left: 22px;
+    }
 }

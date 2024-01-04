@@ -1,9 +1,10 @@
 <section id="reference__area" class="reference__area test">
   <div class="container">
     <div class="reference__wrap assessment__wrap">
-      <div {{ bind-attr class=':test_wrap :row :xd-flex :xjustify-content-between
-              isInCorrect:results__page:not__results__page
-              isInIncorrect:results__page:not__results__page '}}>
+      <div {{ bind-attr class=':test_wrap :row
+                              question.test_case:four-b_style_question:not_four-b_style_question
+                              isInCorrect:results__page:not__results__page
+                              isInIncorrect:results__page:not__results__page '}}>
         <div class="test_question col-lg-6">
           {{#if isInCorrect}}
             {{ log 'TODO: >> isInCorrect' }}
