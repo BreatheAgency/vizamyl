@@ -348,11 +348,6 @@
     }
   }
 
-
-  h6.testcase_title {
-    max-width: 400px;
-  }
-
   .testcasecontent {
     padding-right: 68px !important;
   }
@@ -554,6 +549,15 @@
 
 @media (min-width: 320px) and (max-width: 1199px) {
   #course {
+    .four-b_style_question {
+      .test_question {
+        padding-right: 10px;
+      }
+      .test_material {
+        padding-left: 10px;
+      }
+    }
+    
     .assessmentquestion__content h6, .test_question h6 {
       font-size: 18px;
       line-height: 25px;
@@ -572,6 +576,13 @@
 
 @media (min-width: 320px) and (max-width: 991px) {
   #course {
+      .four-b_style_question {
+        .test_question {
+        }
+        .test_material {
+          padding-top: 50px;
+        }
+      }
       .assessment__content {
         margin-bottom: 60px;
   

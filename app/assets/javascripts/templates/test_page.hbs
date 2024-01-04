@@ -5,7 +5,8 @@
                               question.test_case:four-b_style_question:not_four-b_style_question
                               isInCorrect:results__page:not__results__page
                               isInIncorrect:results__page:not__results__page '}}>
-        <div class="test_question col-lg-6">
+
+        <div {{ bind-attr class=':test_question question.test_case:col-lg-5:col-lg-6'}}>
           {{#if isInCorrect}}
             {{ log 'TODO: >> isInCorrect' }}
             <span>{{{results_title}}}</span>
@@ -141,7 +142,7 @@
             {{/if}}
           {{/if}}
         </div>
-        <div class="test_material col-lg-6">
+        <div {{ bind-attr class=':test_material question.test_case:col-lg-7:col-lg-6'}}>
           {{#if question.hasImages}}
             {{ log '>> question.hasImages' }}
             {{#each image_source in question.image_sources}}
