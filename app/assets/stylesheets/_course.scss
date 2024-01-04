@@ -163,6 +163,19 @@
     height: 100%;
   }
 
+  .test_wrap {
+    background: #E4E4E4;
+    border-radius: 13px;
+    margin-bottom: 71px;
+  }
+
+  .test_material {
+    padding-top: 13px;
+    padding-bottom: 13px;
+    .image_wrapper {
+    }
+  }
+
   .assessmentquestion__content, .test_question {
     padding: 35px 51px;
 
@@ -271,7 +284,6 @@
     h6 {
       margin-left: -90px;
       background: #45B2C5;
-      max-width: 400px;
       padding: 5px 15px;
       padding-left: 90px;
       color: #fff;
@@ -576,7 +588,7 @@
       }
   
       .assessment__single__select {
-        gap: 0px;
+        // gap: 0px;
       }
   
       .assessment__list {
