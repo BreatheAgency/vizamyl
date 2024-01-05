@@ -24,7 +24,7 @@
   }
 
   #bumper {
-    margin-top: 130px;
+    margin-top: 30px;
   }
 
   h1 {
@@ -395,10 +395,6 @@
 
  /*===================== COURSE-NAME CSS AREA START =====================*/
 
- section#coursemenu__area {
-   padding-top: 130px;
- }
-
  .coursemenu__cards {
    max-width: 1083px;
    margin: 0 auto 210px;
@@ -451,7 +447,7 @@
      font-size: 15px;
 
      &.unavailable {
-      color: #b2adad;
+      color: #000;
      }
 
      &:last-child {

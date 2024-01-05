@@ -43,19 +43,6 @@
       </div>
     </header>
 
-    <nav role='nav'>
-      <div class='row'>
-        <ul class='inline-list'>
-          <li class='right <%= I18n.locale %>'>
-            <p class="global-brand">
-              <%= link_to t('layouts.application.logo.1_html'), "/#{I18n.locale}" %>
-              <%= t('layouts.application.logo.2_html') %>
-              <%= t('layouts.application.logo.3_html') %>
-            </p>
-          </li>
-        </ul>
-      </div>
-    </nav>
     <main id="main" class="overflow-hidden" role='main'>
       <%= yield %>
     </main>
