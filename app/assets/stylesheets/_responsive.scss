@@ -20,7 +20,7 @@
     gap: 40px;
   }
 
-  .header__logo2 {
+  .logo_text {
     width: 120px;
   }
 
@@ -260,7 +260,7 @@
     gap: 20px;
   }
 
-  .header__logo2 {
+  .logo_text {
     width: 115px;
   }
 
@@ -583,16 +583,29 @@
     line-height: 25px;
   }
 
-  .header__wrap > a {
+  .header__wrap > a > svg {
     width: 128px;
   }
 
-  .header__logo2 {
+  .logo_text {
     width: 85px;
+  }
+  
+  .burger_menu {
+    margin-left: 40px;
   }
 
   header#header__area {
     padding: 8px 0px;
+  }
+
+  .global_brand {
+    a {
+      margin-right: 10px;
+    }
+    span {
+      display: none;
+    }
   }
 
   section#welcome__hero__area {

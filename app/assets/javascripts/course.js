@@ -57,7 +57,7 @@ Ember.RSVP.on('error', function (error) {
 });
 
 $(document).ready(function () {
-  $(".header__bar , .offcanvas-overlay").click(function () {
+  $(".burger_menu , .offcanvas-overlay").click(function () {
     if($(".offcanvas-area").hasClass('active')) {
       $(".offcanvas-area , .offcanvas-overlay").removeClass("active");
     } else {

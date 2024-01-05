@@ -6,7 +6,7 @@
 
     <div class="offcanvas-area">
       <div class="menu-close">
-        <i class="far fa-times"></i>
+        <i class="fa fa-times"></i>
       </div>
       <div class="offcanvas-menu">
         <div class="main-menu">
@@ -30,12 +30,16 @@
               <%= render partial: 'menu_links' %>
             </ul>
           </div>
-          <div class="header__logo__bar">
-            <div class="header__logo2">
-              <%= image_tag('logo2.svg') %>
+          <div class="vizamyl_logo">
+            <div class="logo_text">
+              <p class="global_brand">
+                <%= link_to t('layouts.application.logo.1_html'), "/#{I18n.locale}" %>
+                <%= t('layouts.application.logo.2_html') %>
+                <%= t('layouts.application.logo.3_html') %>
+              </p>
             </div>
 
-            <div class="header__bar d-xl-none d-block">
+            <div class="burger_menu d-xl-none d-block">
               <a href="#"><i class="fa-solid fa-bars"></i></a>
             </div>
           </div>

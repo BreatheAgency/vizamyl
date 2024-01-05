@@ -62,14 +62,13 @@ main {
 /*===================== OFFCANVAS CSS AREA START =====================*/
 
 .menu-close {
-  font-size: 18px;
+  font-size: 38px;
   color: #fff;
   position: absolute;
   top: 20px;
   right: 18px;
   cursor: pointer;
   transition: 0.4s;
-  border: 1px solid #fff;
   width: 32px;
   height: 32px;
   display: flex;
@@ -148,7 +147,7 @@ main {
   z-index: 99;
 
   &.active {
-    opacity: 0.4;
+    opacity: 0.6;
     visibility: visible;
   }
 }
@@ -216,17 +215,17 @@ header#header__area {
   }
 }
 
-.header__logo2 {
+.logo_text {
   width: 137px;
   flex-shrink: 0;
 }
 
-.header__logo__bar {
+.vizamyl_logo {
   display: flex;
   align-items: center;
 }
 
-.header__bar {
+.burger_menu {
   margin-left: 30px;
 
   a {
@@ -234,6 +233,27 @@ header#header__area {
     font-size: 26px;
   }
 }
+
+.global_brand {
+  font-family: "geinspira";
+  color: #FFF;
+
+  a {
+    color: #FFF;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 27px;
+    line-height: 20px;
+  }
+
+  span {
+    display: block;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
+
 
 /*===================== HEADER CSS AREA END =====================*/
 
