@@ -197,6 +197,46 @@
     }
   }
 
+  .test_progress {
+    span {
+      margin-right: 20px;
+    } 
+
+    ul {
+      display: block;
+      counter-reset: question;
+
+      li:before {
+        counter-increment: question;
+        content: counter(question);
+      }
+
+      li {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background-color: #555;
+        border-radius: 50%;
+        // padding-top: 4px;
+        margin-right: 15px;
+        text-align: center;
+        line-height: 30px;
+        color: white;
+        font-weight: normal;
+        font-size: 16px;
+      }
+
+      .active {
+        background-color: #555;
+      }
+
+      .answered {
+        background-color: #6022A6;
+      }
+    }
+
+  }
+
   .assessment__single__select {
     display: flex;
     align-items: start;
@@ -591,7 +631,7 @@
         }
       }
   
-      .assessmentquestion__content, .test_question h6 {
+      .assessmentquestion__content {
         padding: 15px 20px;
       }
   

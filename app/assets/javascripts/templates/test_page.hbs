@@ -37,15 +37,15 @@
 
             {{#unless test_case}}
               {{ log '> Not a test_case' }}
-              <div class='test-progress'>
+              {{#if singleQuestion}}
+                {{ log '> is singleQuestion (render `single_title` )' }}
+                <span>{{{i18n course.pages.test.question.single_title}}}<span>
+              {{else}}
+                {{ log '> is NOT singleQuestion (render `pural_title` )' }}
+                  <span>{{i18n course.pages.test.question.plural_title}}</span>
+              {{/if}}
+              <div class='test_progress my-2'>
                 <ul>
-                  {{#if singleQuestion}}
-                    {{ log '> is singleQuestion (render `single_title` )' }}
-                    <span>{{{i18n course.pages.test.question.single_title}}}<span>
-                  {{else}}
-                    {{ log '> is NOT singleQuestion (render `pural_title` )' }}
-                      <span>{{i18n course.pages.test.question.plural_title}}</span>
-                  {{/if}}
                   {{#each question in answeredQuestions}}
                     {{ log '> answeredQuestion' }}
                     <li class='answered'></li>
@@ -134,7 +134,7 @@
               </div>
             {{else}}
               {{ log "> Not four-b, not answered"}}
-              <h6 class="assessment_title pe-5">{{{question.title}}}</h6>
+              <h6 class="assessment_title pe-5 py-3">{{{question.title}}}</h6>
 
               <div class="assessment__select">
                 {{ext-radio content=question.answers value=selectedAnswer dev=isDevelopment}}
