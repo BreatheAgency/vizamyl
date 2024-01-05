@@ -444,12 +444,15 @@
  .course__content {
 
    a {
-
      display: block;
      color: #000;
      padding: 11px 0px;
      border-bottom: 2px solid #D4D4D4;
      font-size: 15px;
+
+     &.unavailable {
+      color: #b2adad;
+     }
 
      &:last-child {
        border-bottom: none;
