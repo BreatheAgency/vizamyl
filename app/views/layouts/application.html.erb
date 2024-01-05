@@ -30,19 +30,7 @@
               <%= render partial: 'menu_links' %>
             </ul>
           </div>
-          <div class="vizamyl_logo">
-            <div class="logo_text">
-              <p class="global_brand">
-                <%= link_to t('layouts.application.logo.1_html'), "/#{I18n.locale}" %>
-                <%= t('layouts.application.logo.2_html') %>
-                <%= t('layouts.application.logo.3_html') %>
-              </p>
-            </div>
-
-            <div class="burger_menu d-xl-none d-block">
-              <a href="#"><i class="fa-solid fa-bars"></i></a>
-            </div>
-          </div>
+          <%= render partial: 'vizamyl_logo' %>
         </div>
       </div>
     </header>
