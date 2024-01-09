@@ -22,4 +22,4 @@ $link-hover-color: shift-color($link-color, $link-shade-percentage);
 @import "course";
 @import "image_scroller";
 
-
+@import "locale-specific-fixes"

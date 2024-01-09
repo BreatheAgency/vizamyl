@@ -57,6 +57,10 @@ main {
   max-width: 1445px;
   margin: 0 auto;
 }
+
+#bumper {
+  margin-top: 30px;
+}
 /*===================== REUSABLE CSS AREA END =====================*/
 
 /*===================== OFFCANVAS CSS AREA START =====================*/
@@ -294,10 +298,6 @@ section#country__hero__area {
 /*===================== COUNTRY-HERO CSS AREA END =====================*/
 
 /*===================== COUNTRY-NAME CSS AREA START =====================*/
-
-section#country__area {
-  margin-bottom: 94px;
-}
 
 .country__names {
   a {
@@ -758,10 +758,6 @@ p.landing_para {
 
 /*===================== MY-ACCOUNT CSS AREA START =====================*/
 
-section#account__area {
-  padding-top: 130px;
-}
-
 .account__content h2,
 .account__form h2,
 .contact__content h2,
@@ -858,10 +854,6 @@ p.accountp4 {
 
 /*===================== CONTACT CSS AREA START =====================*/
 
-section#contact__area {
-  padding-top: 130px;
-}
-
 .contact__content {
   h2 {
     color: #6022A6;
@@ -874,17 +866,13 @@ section#contact__area {
   p {
     font-size: 20px;
     line-height: 28px;
-    margin-top: 12px;
+    margin-top: 18px;
   }
 }
 
 /*===================== CONTACT CSS AREA END =====================*/
 
 /*===================== SUCCESS CSS AREA START =====================*/
-
-section#success__area {
-  padding-top: 180px;
-}
 
 .success__content {
   h2 {
@@ -909,7 +897,6 @@ section#success__area {
 /*===================== VIDEO CSS AREA START  =====================*/
 
 section#video__area {
-  padding-top: 120px;
   &.refresher__video {
     padding-top: 110px;
     margin-bottom: 80px;
@@ -1004,7 +991,6 @@ section#video__area {
 
 main#main {
   section.download__area {
-    padding-top: 110px;
     .download__content {
       .resource__file span {
         font-weight: 600;
@@ -1031,8 +1017,26 @@ main#main {
     align-items: center;
     gap: 9px;
     cursor: pointer;
+
+    .stop {
+      display: none;
+    }
+
+    .go {
+      display: block;
+    }
+
     &.disabled {
       color: #707070;
+      cursor: not-allowed;
+
+      .stop {
+        display: block;
+      }
+
+      .go {
+        display: none;
+      }
     }
   }
 

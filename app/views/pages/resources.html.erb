@@ -9,7 +9,7 @@
               <span><%= t('.prescribing_information_title') %></span>
               <div class="resource__file__card">
                 <%= image_tag('download_file.svg') %>
-                <a href="<%= asset_url('/pdfs/#{I18n.locale}/prescribing_information.pdf') %>">
+                <a href="<%= asset_url("/pdfs/#{I18n.locale}/prescribing_information.pdf") %>">
                   <%= t('.download') %>
                 </a>
               </div>
@@ -21,7 +21,7 @@
               <span><%= t('.smpc_title')%></span>
               <div class="resource__file__card">
                 <%= image_tag('download_file.svg') %>
-                <a href="<%= asset_url('/pdfs/#{I18n.locale}/smpc.pdf') %>">
+                <a href="<%= asset_url("/pdfs/#{I18n.locale}/smpc.pdf") %>">
                   <%= t('.download') %>
                 </a>
               </div>

@@ -1,0 +1,10 @@
+.en-us {
+  @media (min-width: 320px) and (max-width: 1399px) {
+    .header__wrap {
+      justify-content: flex-end;
+      > a {
+        display: none;
+      }
+    }
+  }
+}

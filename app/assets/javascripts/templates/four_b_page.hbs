@@ -142,7 +142,8 @@
               {{else}}
                 <a {{bind-attr class=':right testFailedTwice:disabled:enabled'}} {{action 'next'}}>
                   {{i18n course.actions.next}}
-                  <img src="/assets/right_angle_purple.svg" alt="Right angle purple">
+                  <img class="go" src="/assets/right_angle_purple.svg" alt="Right angle">
+                  <img class="stop" src="/assets/right_angle_gray.svg" alt="Right angle">
                 </a>
               {{/if}}
             {{/if}}
@@ -150,7 +151,8 @@
               {{ log 'TODO: >> isInUnanswered' }}
               <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>
                 {{i18n course.actions.next}}
-                <img src="/assets/right_angle_purple.svg" alt="Right angle purple">
+                <img class="go" src="/assets/right_angle_purple.svg" alt="Right angle">
+                <img class="stop" src="/assets/right_angle_gray.svg" alt="Right angle">
               </a>
             {{/if}}
           </div>
