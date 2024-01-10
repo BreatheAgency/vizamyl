@@ -136,14 +136,13 @@
               {{ log 'TODO: >> isInAnswered (2)' }}
               {{#if showRetakeButton }}
                 <a class='right' {{action 'retakeTest'}}>
-                  <img src="/assets/right_angle_purple.svg" alt="Right angle purple">
                   {{{i18n course.actions.retake_test}}}
+                  <i class="fa-solid fa-angle-right"></i>
                 </a>
               {{else}}
                 <a {{bind-attr class=':right testFailedTwice:disabled:enabled'}} {{action 'next'}}>
                   {{i18n course.actions.next}}
-                  <img class="go" src="/assets/right_angle_purple.svg" alt="Right angle">
-                  <img class="stop" src="/assets/right_angle_gray.svg" alt="Right angle">
+                  <i class="fa-solid fa-angle-right"></i>
                 </a>
               {{/if}}
             {{/if}}
@@ -151,8 +150,7 @@
               {{ log 'TODO: >> isInUnanswered' }}
               <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>
                 {{i18n course.actions.next}}
-                <img class="go" src="/assets/right_angle_purple.svg" alt="Right angle">
-                <img class="stop" src="/assets/right_angle_gray.svg" alt="Right angle">
+                <i class="fa-solid fa-angle-right"></i>
               </a>
             {{/if}}
           </div>

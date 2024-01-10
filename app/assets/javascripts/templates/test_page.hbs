@@ -167,20 +167,19 @@
         {{#if isInCorrect}}
           <a {{bind-attr class=':right'}} {{action 'next' step}}>
             {{i18n course.actions.next}}
-            <img src="/assets/right_angle_purple.svg" alt="Right angle">
+            <i class="fa-solid fa-angle-right"></i>
           </a>
         {{/if}}
         {{#if isInIncorrect}}
           <a {{bind-attr class=':right'}} {{action 'failure'}}>
             {{i18n course.actions.next}}
-            <img src="/assets/right_angle_purple.svg" alt="Right angle">
+            <i class="fa-solid fa-angle-right"></i>
           </a>
         {{/if}}
         {{#if isInUnanswered}}
           <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>
             {{i18n course.actions.next}}
-            <img class="go" src="/assets/right_angle_purple.svg" alt="Right angle">
-            <img class="stop" src="/assets/right_angle_gray.svg" alt="Right angle">
+            <i class="fa-solid fa-angle-right"></i>
           </a>
         {{/if}}
       </div>
