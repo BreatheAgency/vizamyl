@@ -9,7 +9,7 @@
         </div>
       </label>
 
-      {{#if dev }}
+      {{#unless hideCheats }}
         {{#if question.correct }}
           {{ log "          ✅" }}
           {{ log " " }}
@@ -17,7 +17,7 @@
           {{ log "          -" }}
           {{ log " " }}
         {{/if}}
-      {{/if}}
+      {{/unless}}
     </div>
   {{/each}}
 </div>

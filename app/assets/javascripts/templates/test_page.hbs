@@ -137,7 +137,7 @@
               <h6 class="assessment_title pe-5 py-3">{{{question.title}}}</h6>
 
               <div class="assessment__select">
-                {{ext-radio content=question.answers value=selectedAnswer dev=isDevelopment}}
+                {{ext-radio content=question.answers value=selectedAnswer hideCheats=isProduction}}
               </div>
             {{/if}}
           {{/if}}

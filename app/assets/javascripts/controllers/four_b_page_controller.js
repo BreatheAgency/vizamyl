@@ -7,6 +7,7 @@ Course.FourBPageController = Ember.ObjectController.extend(Course.TestQuestions,
   selectedExplanationSource: null,
   answered: Ember.computed.alias('selectedAnswer'),
   unansweredQuestionRoundIndices: Ember.A(),
+  isProduction: Ember.computed.alias('controllers.application.isProduction'),
 
   fsmStates: {
     initialState: 'unanswered',

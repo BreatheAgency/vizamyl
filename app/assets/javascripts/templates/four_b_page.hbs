@@ -1,25 +1,34 @@
 <section id="reference__area" class="reference__area pt-0">
   <div class="container">
     <div class="reference__wrap assessment__wrap">
-      <div class="testcase__row">
-        <div {{bind-attr class=':row :g-3 :page :test-page :four-b-page'}}>
-          {{#if isInAnswered}}
+      <div class="testcase__row row">
+        {{#if isInAnswered}}
+          <div {{bind-attr class=':col-lg-5 :row :g-3 :page :test-page :four-b-page'}}>
             {{ log 'TODO: >>> isInAnswered' }}
-            {{#if testCorrect}}
-              {{ log 'TODO: >> testCorrect' }}
-            {{else}}
-              {{#if testFailedOnce}}
+            <div class="explanation_question_results mb-5">
+              <h1 class="mt-0">{{{i18n course.pages.test.four_b.title}}}</h1>
+              {{#if testCorrect}}
+                {{ log 'TODO: >> testCorrect' }}
+                <p>{{{i18n course.pages.test.four_b.correct}}}</p>
               {{else}}
-                <p>{{{i18n course.pages.test.four_b.incorrect_two_one_html}}} <a href='/{{unbound currentLocale}}/contact'>{{i18n course.pages.test.four_b.incorrect_two_link}}</a> {{{i18n course.pages.test.four_b.incorrect_two_two_html}}}</p>
+                {{#if testFailedOnce}}
+                  <p>{{{i18n course.pages.test.four_b.incorrect_one_html}}}</p>
+                {{else}}
+                  <p>{{{i18n course.pages.test.four_b.incorrect_two_one_html}}} <a href='/{{unbound currentLocale}}/contact'>{{i18n course.pages.test.four_b.incorrect_two_link}}</a> {{{i18n course.pages.test.four_b.incorrect_two_two_html}}}</p>
+                {{/if}}
               {{/if}}
-            {{/if}}
-            <ul>
-              {{#each question in questionsWithIndex}}
-                <a {{action 'selectExplanation' question.object.explanation_source}}>
-                  <li {{bind-attr class='question.object.correct:correct:incorrect'}}><div {{bind-attr class=':circle'}}></div>{{{i18n course.pages.test.four_b.review_explanation_video count=question.index}}}</li>
-                </a>
-              {{/each}}
-            </ul>
+              <ul>
+                {{#each question in questionsWithIndex}}
+                  <a {{action 'selectExplanation' question.object.explanation_source}}>
+                    <li {{bind-attr class='question.object.correct:correct:incorrect'}}>
+                      <div {{bind-attr class=':circle'}}>
+                      </div>
+                      {{{i18n course.pages.test.four_b.review_explanation_video count=question.index}}}
+                    </li>
+                  </a>
+                {{/each}}
+              </ul>
+            </div>
           {{/if}}
 
           {{#if isInUnanswered}}
@@ -27,7 +36,7 @@
             {{#if question.test_case}}
               {{ log 'TODO: >> question.test_case' }}
 
-              <div class="col-lg-5">
+              <div class="col-lg-5 isInUnanswered">
                 <div class="assessmentquestion__content__img assessment__answer position-relative">
                   <div class="assessmentquestion__content testcasecontent">
                     <span>{{{question.title}}}</span>
@@ -91,8 +100,20 @@
                       <div class='question testcase__single__report'>
                         <h6>{{i18n course.pages.test.test_case.question_six}}</h6>
                           <div class="test__report__field">
+                          {{#unless hideCheats }}
+                            {{ log '###################' }}
+                          {{/unless}}
                           {{#each answer in question.answers}}
                               <div class="remember solution">
+                                {{#unless hideCheats }}
+                                  {{#if answer.correct }}
+                                    {{ log "          ✅" }}
+                                    {{ log " " }}
+                                  {{else}}
+                                    {{ log "          -" }}
+                                    {{ log " " }}
+                                  {{/if}}
+                                {{/unless}}
                                 <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<span class="posneg">{{{answer.body}}}</span></label>
                               </div>
                           {{/each}}
@@ -104,10 +125,10 @@
                 </div>
               </div>
              {{else}}
-                {{ log " ??? I think it's answered "}}
+                {{ log " >> ??? Unreachable? "}}
                 <h1>{{{question.title}}}</h1>
                 <div class='test'>
-                  {{ext-radio content=question.answers value=selectedAnswer dev=isDevelopment}}
+                  {{ext-radio content=question.answers value=selectedAnswer hideCheats=isProduction}}
                 </div>
             {{/if}}
           {{/if}}
@@ -128,7 +149,9 @@
           {{/if}}
           {{#if isInAnswered}}
             {{ log 'TODO: >> isInAnswered (1)' }}
-            {{video-player finished='finished' mandatory=false source=explanationSource}}
+            <div class="col-lg-7">
+              {{video-player finished='finished' mandatory=false source=explanationSource}}
+            </div>
           {{/if}}
           <p>{{{abbreviations}}}</p>
           <div class="page__select__next__prev py-5">
