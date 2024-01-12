@@ -1018,25 +1018,9 @@ main#main {
     gap: 9px;
     cursor: pointer;
 
-    .stop {
-      display: none;
-    }
-
-    .go {
-      display: block;
-    }
-
     &.disabled {
       color: #707070;
       cursor: not-allowed;
-
-      .stop {
-        display: block;
-      }
-
-      .go {
-        display: none;
-      }
     }
   }
 
