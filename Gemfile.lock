@@ -352,6 +352,7 @@ GEM
     roboto (0.2.0)
       actionpack (>= 3.0.0)
       rails (>= 3.1.0)
+    rollbar (3.5.1)
     ruby2ruby (2.2.0)
       ruby_parser (~> 3.1)
       sexp_processor (~> 4.0)
@@ -453,6 +454,7 @@ DEPENDENCIES
   rake (~> 10.3)
   request_store
   roboto
+  rollbar
   sass-rails (~> 5.0)
   simple_form
   uglifier
