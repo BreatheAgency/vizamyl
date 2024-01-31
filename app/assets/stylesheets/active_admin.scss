@@ -20,7 +20,7 @@
 .admin_users {
   .delete_link.member_link {
     color: red;
-    // display: none;
+    display: none; // We may need it, but GE doesn't want to see it.
   }
   &.show {
     a[data-method="delete"] {
