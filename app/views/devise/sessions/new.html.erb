@@ -20,7 +20,7 @@
                 <%= f.input :remember_me, as: :boolean, input_html: { checked: true } %>
               </div>
               <div class="forget">
-                <a href="#" style="color: #000;">Forgot your password?</a>
+                <%= link_to t('.forgot_your_password'), new_user_password_path %>
               </div>
             </div>
 
