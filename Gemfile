@@ -18,7 +18,7 @@ gem 'mime-types', require: 'mime/types/full'
 
 gem 'bootstrap', '~> 5.3.2'
 
-gem 'mini_racer'
+# gem 'mini_racer'
 gem 'ffi', '1.16.3'
 gem "simple_form", "~> 4.0"
 gem "font-awesome-sass", "~> 6.4.2"
