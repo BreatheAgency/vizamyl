@@ -128,7 +128,7 @@ ActiveAdmin.setup do |config|
   config.comments = false
   #
   # You can disable the menu item for the comments index page:
-  config.show_comments_in_menu = false
+  config.comments_menu = false
   #
   # You can change the name under which comments are registered:
   # config.comments_registration_name = 'AdminComment'
@@ -146,9 +146,9 @@ ActiveAdmin.setup do |config|
   # You can add before, after and around filters to all of your
   # Active Admin resources and pages from here.
   #
-  config.before_filter :set_admin_locale
-  config.skip_before_filter :set_locale
-  config.skip_before_filter :redirect_locale
+  config.before_action :set_admin_locale
+  config.skip_before_action :set_locale
+  config.skip_before_action :redirect_locale
 
 
 

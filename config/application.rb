@@ -44,8 +44,6 @@ module Vizamyl
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.assets.initialize_on_precompile = true
 
-    config.font_assets.origin = '*'
-
     config.exceptions_app = self.routes
   end
 end
