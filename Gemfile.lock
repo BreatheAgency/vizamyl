@@ -71,8 +71,6 @@ GEM
       erubi (~> 1.11)
       rails-dom-testing (~> 2.2)
       rails-html-sanitizer (~> 1.6)
-    active-model-adapter-source (2.1.1)
-      ember-data-source (>= 1.13, < 3.0)
     active_model_serializers (0.10.14)
       actionpack (>= 4.1)
       activemodel (>= 4.1)
@@ -122,10 +120,6 @@ GEM
     autoprefixer-rails (10.4.16.0)
       execjs (~> 2)
     awesome_print (1.9.2)
-    babel-source (5.8.35)
-    babel-transpiler (0.7.0)
-      babel-source (>= 4.0, < 6)
-      execjs (~> 2.0)
     barber (0.12.2)
       ember-source (>= 1.0, < 3.1)
       execjs (>= 1.2, < 3)
@@ -167,25 +161,18 @@ GEM
     ejs (1.1.1)
     email_validator (2.2.4)
       activemodel
-    ember-cli-assets (0.0.37)
-    ember-data-source (2.2.1)
-      ember-source (>= 1.8, < 3.0)
-    ember-es6_template (0.6.0)
-      babel-transpiler (>= 0.6.0, < 0.8)
-      sprockets (>= 2.2, < 4.1)
+    ember-data-source (1.0.0.beta.19.2)
+      ember-source (~> 1.8)
     ember-handlebars-template (0.8.0)
       barber (>= 0.11.0)
       sprockets (>= 3.3, < 4.1)
-    ember-rails (0.21.0)
-      active-model-adapter-source (>= 1.13.0)
+    ember-rails (0.18.5)
       active_model_serializers
-      ember-cli-assets (~> 0.0.1)
-      ember-data-source (>= 1.13.0)
-      ember-es6_template (>= 0.4.0, < 0.7)
+      ember-data-source (>= 1.0.0.beta.5)
       ember-handlebars-template (>= 0.1.1, < 1.0)
-      ember-source (>= 1.8.0)
+      ember-source (>= 1.1.0)
       jquery-rails (>= 1.0.17)
-      railties (>= 4.2)
+      railties (>= 3.1)
     ember-source (1.9.1)
       handlebars-source (~> 2.0)
     erubi (1.12.0)
@@ -465,8 +452,8 @@ DEPENDENCIES
   devise-i18n
   devise-i18n-views
   email_validator
-  ember-data-source
-  ember-rails
+  ember-data-source (= 1.0.0.beta.19.2)
+  ember-rails (~> 0.16)
   ember-source (~> 1.9.0)
   es5-shim-rails
   ffi (= 1.16.3)
