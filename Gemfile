@@ -60,7 +60,7 @@ group :development do
   gem 'binding_of_caller'
   gem 'brakeman', require: false
   gem 'bullet'
-  gem 'meta_request'
+  # gem 'meta_request' # Not supported with active admin and used only for development purposes.
   gem 'pry-byebug'
   # gem 'quiet_assets'
 end

@@ -107,10 +107,10 @@ ActiveAdmin.register User, as: 'Users' do
       row(:progress) { |model| "#{model.progress}%" }
       row :final_assessment_status
       row :invite_code
-      row('Overall Marketing') { |model| model.marketing_overall_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
-      row('Email Marketing') { |model| model.marketing_email_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
-      row('Post Marketing') { |model| model.marketing_post_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
-      row('Representative Marketing') { |model| model.marketing_representative_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
+      row('Overall Marketing') { |model| model.marketing_overall_opt_in? ? status_tag('yes') : status_tag('no') }
+      row('Email Marketing') { |model| model.marketing_email_opt_in? ? status_tag('yes') : status_tag('no') }
+      row('Post Marketing') { |model| model.marketing_post_opt_in? ? status_tag('yes') : status_tag('no') }
+      row('Representative Marketing') { |model| model.marketing_representative_opt_in? ? status_tag('yes') : status_tag('no') }
       row :created_at
       row :last_sign_in_at
     end

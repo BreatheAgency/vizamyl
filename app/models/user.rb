@@ -15,6 +15,12 @@ class User < ActiveRecord::Base
 
   # Singapore & Australian users also share US login screens as they don't have a regional office.
   attr_reader :works_in_us
+  def self.ransackable_associations(auth_object = nil)
+    ["progressions", "steps"]
+  end
+  def self.ransackable_attributes(auth_object = nil)
+    ["city_or_state", "confirmation_sent_at", "confirmation_token", "confirmed_at", "cookies_opt_in", "created_at", "current_sign_in_at", "current_sign_in_ip", "department", "email", "encrypted_password", "failed_round_one", "failed_round_one_at", "failed_round_two", "failed_round_two_at", "fast_forward", "first_name", "id", "id_value", "in_person", "institution", "invite_code", "last_name", "last_sign_in_at", "last_sign_in_ip", "locale", "marketing_email_opt_in", "marketing_overall_opt_in", "marketing_post_opt_in", "marketing_representative_opt_in", "origin", "passed_round_one", "passed_round_one_at", "passed_round_two", "passed_round_two_at", "primary_specialty", "privacy_opt_in", "remember_created_at", "reset_password_sent_at", "reset_password_token", "salutation", "sign_in_count", "super_user", "terms_and_conditions_opt_in", "unconfirmed_email", "updated_at"]
+  end
   def works_in_us=(param)
     @works_in_us = (param == "true")
   end
