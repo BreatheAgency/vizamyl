@@ -52,7 +52,7 @@ ActiveAdmin.register User, as: 'Users' do
 
   index do
     panel "Download options" do
-      link_to "Export to Excel", params.merge(format: :csv)
+      link_to "Export to Excel", admin_users_path(format: :csv)
     end
     selectable_column
     column 'Language' do |user|
