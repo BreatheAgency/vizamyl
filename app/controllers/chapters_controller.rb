@@ -1,25 +1,26 @@
 class ChaptersController < JsonController
   def index
-    @chapters = Chapter.includes(steps: [page: [:translations]]).all
-    @steps = Step.where(chapter_id: @chapters.map(&:id)).includes(page: [:translations])
+    @chapters = Chapter.includes(:translations, steps: [page: [:translations]]).all
 
-    # Serialize chapters using ChapterSerializer
-    chapters_array = ActiveModel::Serializer::CollectionSerializer.new(
-      @chapters,
-      each_serializer: ChapterSerializer
-    ).as_json
+    chapters_json = @chapters.map do |chapter|
+      {
+        id: chapter.id,
+        title: chapter.title,
+        short_title: chapter.short_title,
+        position: chapter.position,
+        hidden: chapter.hidden,
+        step_ids: chapter.steps.pluck(:id)
+      }
+    end
 
-    # Serialize steps using StepSerializer
-    steps_array = ActiveModel::Serializer::CollectionSerializer.new(
-      @steps,
-      each_serializer: StepSerializer
-    ).as_json
+    steps = @chapters.flat_map(&:steps).uniq
+    steps_json = ActiveModelSerializers::SerializableResource.new(steps, each_serializer: StepSerializer)
 
-    render json: { chapters: chapters_array, steps: steps_array }
+    render json: { chapters: chapters_json, steps: steps_json }, root: false
   end
 
   def show
-    @chapter = Chapter.includes(:translations, steps: [page: [:translations]]).find(params[:id])
-    render json: @chapter
+    chapter = Chapter.find(params[:id])
+    render json: { chapter: ChapterSerializer.new(chapter, include: ['steps']).as_json }, root: false
   end
 end
