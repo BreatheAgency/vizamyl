@@ -1,4 +1,7 @@
 class ChapterSerializer < ActiveModel::Serializer
-  attributes :id, :title, :short_title, :position, :hidden
-  has_many :steps
+  attributes :id, :title, :short_title, :position, :hidden, :step_ids
+  
+  def step_ids
+    object.steps.ids
+  end
 end
