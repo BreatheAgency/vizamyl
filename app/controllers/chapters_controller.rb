@@ -14,10 +14,15 @@ class ChaptersController < JsonController
     end
 
     steps = @chapters.flat_map(&:steps).uniq
-    steps_json = ActiveModelSerializers::SerializableResource.new(steps, each_serializer: StepSerializer)
+    steps_json = ActiveModelSerializers::SerializableResource.new(
+      steps,
+      each_serializer: StepSerializer,
+      scope: current_user  # Pass current_user as scope
+    )
 
     render json: { chapters: chapters_json, steps: steps_json }, root: false
   end
+
 
   def show
     @chapter = Chapter.includes(:translations, steps: [page: [:translations]]).find(params[:id])
