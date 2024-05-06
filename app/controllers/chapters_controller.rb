@@ -20,7 +20,11 @@ class ChaptersController < JsonController
   end
 
   def show
-    chapter = Chapter.find(params[:id])
-    render json: { chapter: ChapterSerializer.new(chapter, include: ['steps']).as_json }, root: false
+    @chapter = Chapter.includes(:translations, steps: [page: [:translations]]).find(params[:id])
+    render json: {
+      chapter: @chapter.attributes.merge(step_ids: @chapter.steps.pluck(:id)),
+      steps: ActiveModelSerializers::SerializableResource.new(@chapter.steps, each_serializer: StepSerializer)
+    }, root: false
   end
+
 end
