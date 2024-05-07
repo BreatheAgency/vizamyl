@@ -1,5 +1,5 @@
 ActiveAdmin.register User, as: 'Users' do
-  actions :all, except: [:new, :edit]
+  actions :all, except: [:new]
   filter :locale, as: :select, label: 'Language', collection: [
     ['American', 'en-us'],
     ['Austrian', 'de-at'],
@@ -89,6 +89,10 @@ ActiveAdmin.register User, as: 'Users' do
   form do |f|
     f.inputs 'Details' do
       f.input :email
+      f.input :salutation
+      f.input :first_name
+      f.input :last_name
+      f.hidden_field :invite_code_required, value: true
       f.input :created_at, disabled: true, as: :date_select
     end
     f.actions
