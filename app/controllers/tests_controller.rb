@@ -19,7 +19,7 @@ def flatten_test(test)
       subject_area: test.subject_area,
       template_name: "test_page",
       controller_name: "test_page",
-      chapter_id: 3,
+      chapter_id: test.chapter.id,
       failure_step_id: test.failure_step_id,
       results_title: test.results_title,
       results_incorrect: test.results_incorrect,
@@ -31,6 +31,7 @@ def flatten_test(test)
     steps: [StepSerializer.new(test.step, scope: current_user).as_json],
     answers: test.question_rounds.flat_map { |round| round.questions.flat_map(&:answers).map { |answer| { id: answer.id, body: answer.body, correct: answer.correct } } },
     image_sources: test.question_rounds.flat_map { |round| round.questions.flat_map { |question| question.image_sources.map { |image| { id: image.id, source: image.source } } } },
+    interactive_sources: test.question_rounds.flat_map { |round| round.questions.flat_map { |question| question.interactive_sources.map { |interactive_source| { id: interactive_source.id, source: interactive_source.source, label: interactive_source.label, height: interactive_source.height } } } },
     questions: test.question_rounds.flat_map { |round| round.questions.map { |question| flatten_question(question) } },
     question_rounds: test.question_rounds.map { |round| { id: round.id, question_ids: round.questions.pluck(:id) } }
   }
