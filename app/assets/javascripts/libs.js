@@ -1,1 +1,1 @@
-//= require jquery-2.0.min.js
+//= require jquery3

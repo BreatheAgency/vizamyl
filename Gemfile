@@ -12,7 +12,7 @@ gem 'globalize', '~> 6.0'
 gem 'i18n-js', '~> 3.0', '>= 3.0.2'
 gem 'passenger', '>= 5.0.8'
 gem 'ember-rails', '~> 0.16'
-gem 'ember-source', '~> 1.9.0'
+gem 'ember-source', '1.9.0', path: './patched-gems/ember-source-1.9.0'
 gem 'ember-data-source', '1.0.0.beta.19.2'
 gem 'mime-types', require: 'mime/types/full'
 
