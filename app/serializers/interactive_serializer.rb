@@ -1,5 +1,5 @@
 class InteractiveSerializer < PageSerializer
-  attributes :body, :interactive_ids
+  attributes :body, :interactive_source_ids
   has_many :interactive_sources
 
   def controller_name
@@ -10,7 +10,7 @@ class InteractiveSerializer < PageSerializer
     'interactive_page'
   end
 
-  def interactive_ids
+  def interactive_source_ids
     object.interactive_sources.ids
   end
 end
