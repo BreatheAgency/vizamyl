@@ -117,6 +117,9 @@ ActiveAdmin.register User, as: 'Users' do
       row('Representative Marketing') { |model| model.marketing_representative_opt_in? ? status_tag('yes') : status_tag('no') }
       row :created_at
       row :last_sign_in_at
+      row 'Course Completion Certificate' do
+        link_to 'Course Completion Certificate', users_course_complete_path(locale: user.locale, user_id: user.id, from_active_admin: true, format: :pdf)
+      end
     end
   end
 
