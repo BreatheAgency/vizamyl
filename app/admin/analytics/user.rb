@@ -1,5 +1,5 @@
 ActiveAdmin.register User, as: 'Users' do
-  actions :all, except: [:new, :edit]
+  actions :all, except: [:new]
   filter :locale, as: :select, label: 'Language', collection: [
     ['American', 'en-us'],
     ['Austrian', 'de-at'],
@@ -89,6 +89,10 @@ ActiveAdmin.register User, as: 'Users' do
   form do |f|
     f.inputs 'Details' do
       f.input :email
+      f.input :salutation
+      f.input :first_name
+      f.input :last_name
+      f.hidden_field :invite_code_required, value: true
       f.input :created_at, disabled: true, as: :date_select
     end
     f.actions
@@ -113,6 +117,9 @@ ActiveAdmin.register User, as: 'Users' do
       row('Representative Marketing') { |model| model.marketing_representative_opt_in? ? status_tag( 'yes', :ok )  : status_tag( 'no', :ok ) }
       row :created_at
       row :last_sign_in_at
+      row 'Course Completion Certificate' do
+        link_to 'Course Completion Certificate', users_course_complete_path(locale: user.locale, user_id: user.id, from_active_admin: true, format: :pdf)
+      end
     end
   end
 

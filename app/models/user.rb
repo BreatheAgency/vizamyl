@@ -24,6 +24,7 @@ class User < ActiveRecord::Base
     @marketing_overall_opt_out = (param == "1")
   end
 
+  attr_accessor :invite_code_required
   attr_accessor :form_step
   cattr_accessor :form_steps do
     %w(details institution terms marketing)
@@ -45,18 +46,22 @@ class User < ActiveRecord::Base
   validates :department, presence: true, if: Proc.new { new_record? && self.origin == 'jp' }
   validates :city_or_state, presence: true, if: Proc.new { new_record? && @works_in_us }
   validates :primary_specialty, presence: true, if: Proc.new { new_record? && @works_in_us }
+  validate :validate_invite_code_if_required  
 
-  with_options :if => -> { required_for_step?(:details) } do |step|
+  def validate_invite_code_if_required
+    return if invite_code_required == "true"
+
+    if required_for_step?(:details)
+      errors.add(:invite_code, :invalid, message: "%{value} is not a valid invite code") unless Rails.application.secrets.invite_codes.include?(invite_code)
+    end
+  end
+
+  with_options if: -> { required_for_step?(:details) } do |step|
     step.validates :first_name, presence: true
     step.validates :last_name, presence: true
     step.validates :email, email: true
-    step.validates :invite_code, inclusion: {
-      in: proc { Rails.application.secrets.invite_codes },
-      if: Proc.new { form_step == 'details' || form_step == nil },
-      message: "%{value} is not a valid invite code"
-    }
-  end
-
+  end  
+  
   with_options :if => -> { required_for_step?(:institution) } do |step|
     step.validates :institution, :presence => true
   end
