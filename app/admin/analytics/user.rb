@@ -93,6 +93,7 @@ ActiveAdmin.register User, as: 'Users' do
       f.input :first_name
       f.input :last_name
       f.input :institution, as: :string
+      f.input :department if f.object.origin == 'jp'
       f.hidden_field :invite_code_required, value: true
       f.input :created_at, disabled: true, as: :date_select
     end
