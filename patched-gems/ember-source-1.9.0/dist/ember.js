@@ -39296,8 +39296,8 @@ enifed("ember-views/system/jquery",
       jQuery = eriuqer('jquery');
     }
 
-    Ember.assert("Ember Views require jQuery between 1.7 and 2.1", jQuery &&
-                 (jQuery().jquery.match(/^((1\.(7|8|9|10|11|12|13|14))|(2\.(0|1)))(\.\d+)?(pre|rc\d?)?/) ||
+    Ember.assert("Ember Views require jQuery between 1.7 and 3.7", jQuery &&
+                 (jQuery().jquery.match(/^((1\.(7|8|9|10|11|12|13|14))|(3\.(0|7)))(\.\d+)?(pre|rc\d?)?/) ||
                   Ember.ENV.FORCE_JQUERY));
 
     /**
@@ -39318,10 +39318,13 @@ enifed("ember-views/system/jquery",
 
       // Copies the `dataTransfer` property from a browser event object onto the
       // jQuery event object for the specified events
-      forEach(dragEvents, function(eventName) {
-        jQuery.event.fixHooks[eventName] = {
-          props: ['dataTransfer']
-        };
+      // forEach(dragEvents, function(eventName) {
+      //   jQuery.event.fixHooks[eventName] = {
+      //     props: ['dataTransfer']
+      //   };
+      // });
+      jQuery.each(dragEvents, function(index, eventName) {
+        jQuery.event.addProp(eventName, 'dataTransfer');
       });
     }
 

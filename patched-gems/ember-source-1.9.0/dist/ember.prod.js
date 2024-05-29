@@ -37462,10 +37462,13 @@ enifed("ember-views/system/jquery",
 
       // Copies the `dataTransfer` property from a browser event object onto the
       // jQuery event object for the specified events
-      forEach(dragEvents, function(eventName) {
-        jQuery.event.fixHooks[eventName] = {
-          props: ['dataTransfer']
-        };
+      // forEach(dragEvents, function(eventName) {
+      //   jQuery.event.fixHooks[eventName] = {
+      //     props: ['dataTransfer']
+      //   };
+      // });
+      jQuery.each(dragEvents, function(index, eventName) {
+        jQuery.event.addProp(eventName, 'dataTransfer');
       });
     }
 

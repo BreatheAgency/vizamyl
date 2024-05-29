@@ -1,5 +1,5 @@
 class Admin::BecomeController < ApplicationController
-  before_filter :authenticate_user!
+  before_action :authenticate_user!
 
   def become
     if current_user.super_user?
