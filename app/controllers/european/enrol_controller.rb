@@ -30,7 +30,7 @@ class European::EnrolController < ApplicationController
     if user_should_skip_last_step?
       sign_in_and_redirect
     elsif @user.valid?
-      redirect_to users_locale_enrol_path(next_step, filter_params(step).merge(id: next_step))
+      redirect_to users_locale_enrol_path(filter_params(step)[:locale], next_step, **filter_params(step).to_h.except(:locale, :id).merge(id: next_step))
     else
       render_wizard @user
     end

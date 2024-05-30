@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
     return if invite_code_required == "true"
 
     if required_for_step?(:details)
-      errors.add(:invite_code, :invalid, message: "%{value} is not a valid invite code") unless Rails.application.secrets.invite_codes.include?(invite_code)
+      errors.add(:invite_code, :invalid, message: "%{value} is not a valid invite code") unless Rails.application.secrets.invite_codes.include?(invite_code.to_sym)
     end
   end
 
@@ -182,25 +182,25 @@ class User < ActiveRecord::Base
   end
 
   def inherit_invitation
-    invitation = Rails.application.secrets.invite_codes[self.invite_code]
+    invitation = Rails.application.secrets.invite_codes[self.invite_code&.to_sym]
     return unless invitation.present?
 
-    case invitation.fetch('type')
+    case invitation.fetch(:type)
     when 'in_person'
       self.in_person = true
     when 'fast_forward'
       self.fast_forward = true
     end
 
-    self.origin = invitation.fetch('origin')
-    self.locale = invitation.fetch('locale')
+    self.origin = invitation.fetch(:origin)
+    self.locale = invitation.fetch(:locale)
 
     true
   end
 
   def create_progressions
-    Chapter.includes(:steps).order(:position).all.each_with_index do |chapter, c_i|
-      chapter.steps.flatten.each_with_index do |step, s_i|
+    Chapter.includes(:steps).order(:position).each_with_index do |chapter, c_i|
+      chapter.steps.each_with_index do |step, s_i|
         if self.fast_forward && c_i <= 8
           # Ensure that when fast_forward is true that the amount of 1
           self.progressions.build(step: step, amount: 1)
@@ -213,7 +213,6 @@ class User < ActiveRecord::Base
         end
       end
     end
-
     true
   end
 
