@@ -3,13 +3,13 @@ class User < ActiveRecord::Base
                                   .application
                                   .secrets
                                   .invite_codes
-                                  .key({"locale"=>"jp", "origin"=>"jp", "type"=>"default"})
+                                  .key({locale: "jp", origin: "jp", type: "default"})
 
   US_NATIVE_DEFAULT_INVITE_CODE = Rails
                                    .application
                                    .secrets
                                    .invite_codes
-                                   .key({"locale"=>"en-us", "origin"=>"us", "type"=>"default"})
+                                   .key({locale: "en-us", origin: "us", type: "default"})
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
     return if invite_code_required == "true"
 
     if required_for_step?(:details)
-      errors.add(:invite_code, :invalid, message: "%{value} is not a valid invite code") unless Rails.application.secrets.invite_codes.include?(invite_code.to_sym)
+      errors.add(:invite_code, :invalid, message: "%{value} is not a valid invite code") unless Rails.application.secrets.invite_codes.include?(invite_code&.to_sym)
     end
   end
 
