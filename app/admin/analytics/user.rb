@@ -22,6 +22,7 @@ ActiveAdmin.register User, as: 'Users' do
     ['Finland', 'fi'],
     ['France', 'fr'],
     ['Germany', 'de'],
+    ['Greece', 'gr'],
     ['Hong Kong', 'hk'],
     ['Hungary', 'hu'],
     ['International', 'en'],
@@ -94,7 +95,7 @@ ActiveAdmin.register User, as: 'Users' do
       f.input :last_name
       f.input :institution, as: :string
       f.input :department if f.object.origin == 'jp'
-      f.hidden_field :invite_code_required, value: true
+      f.input :invite_code
       f.input :created_at, disabled: true, as: :date_select
     end
     f.actions

@@ -30,7 +30,6 @@ class User < ActiveRecord::Base
     @marketing_overall_opt_out = (param == "1")
   end
 
-  attr_accessor :invite_code_required
   attr_accessor :form_step
   cattr_accessor :form_steps do
     %w(details institution terms marketing)
@@ -55,8 +54,6 @@ class User < ActiveRecord::Base
   validate :validate_invite_code_if_required  
 
   def validate_invite_code_if_required
-    return if invite_code_required == "true"
-
     if required_for_step?(:details)
       errors.add(:invite_code, :invalid, message: "%{value} is not a valid invite code") unless Rails.application.secrets.invite_codes.include?(invite_code&.to_sym)
     end
