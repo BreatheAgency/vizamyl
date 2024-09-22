@@ -766,3 +766,39 @@
       }
     }
   }
+/* Global styling for all radio buttons */
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px; /* Width of the radio button */
+  height: 20px; /* Height of the radio button */
+  border: 1px solid #000; /* 1px border */
+  border-radius: 4px; /* Slightly rounded edges */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  background-color: transparent; /* No background color */
+  vertical-align: middle; /* Ensures alignment with label text */
+}
+
+/* Custom styling for when the radio button is checked */
+input[type="radio"]:checked::before {
+  content: "";
+  display: block;
+  width: 12px; /* Size of the inner square */
+  height: 12px; /* Size of the inner square */
+  background-color: #6022A6;
+  border-radius: 2px; /* Slightly rounded inner square */
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust position to be centered */
+}
+
+/* Ensuring proper label alignment */
+input[type="radio"] + label {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px; /* Space between radio button and label */
+}
