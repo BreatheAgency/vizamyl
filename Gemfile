@@ -16,12 +16,13 @@ gem 'ember-source', '1.9.0', path: './patched-gems/ember-source-1.9.0'
 gem 'ember-data-source', '1.0.0.beta.19.2'
 gem 'mime-types', require: 'mime/types/full'
 
-gem 'bootstrap', '~> 5.3.2'
-
 # gem 'mini_racer'
 gem 'ffi', '1.16.3'
 gem "simple_form", "~> 4.0"
 gem "font-awesome-sass", "~> 6.4.2"
+
+gem 'bootstrap', '~> 5.3.2'
+gem 'mini_racer'
 
 gem 'oj', '~> 2.16'
 gem 'pg'

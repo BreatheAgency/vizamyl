@@ -1,19 +1,27 @@
-<div class='devise passwords row'>
-  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
-  </div>
-  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
-    <h1 class='vh'><%= t('.forgot_your_password') %></h1>
-    <p><%= t('.forgot_your_password') %></p>
-    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-      <%= f.error_notification %>
-      <div class='form-inputs'>
-        <%= f.input :email, required: true, autofocus: true %>
-      </div>
-      <div class='button-container'>
-        <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
-          <%= t('.send') %><i class='fi-arrow-right'></i>
+<section id="login__area" class="login__area">
+  <div class="container">
+    <div class="login__wrap">
+      <div class="login__content">
+
+        <div class="login__part">
+        <h1 class='vh'><%= t('.forgot_your_password') %></h1>
+        <br>
+        <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+          <%= f.error_notification %>
+          <div class='form-inputs'>
+            <%= f.input :email, required: true, autofocus: true %>
+          </div>
+          <br>
+          <br>
+          <div class="submit d-flex justify-content-end">
+            <%= button_tag(type: 'submit', class: 'login') do %>
+              <%= t('.send') %>
+              <%= image_tag("right_angle_purple.svg") %>
+            <% end %>
+          </div>
         <% end %>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
+</section>

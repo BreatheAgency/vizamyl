@@ -52,9 +52,7 @@ en:
           - Ms
     sessions:
       new:
-        intro: |
-          Please enter your email address
-          and password to login.
+        intro: Please enter your email address and password to login.
         forgot_your_password: Forgotten your password?
         login: Login
     passwords:
@@ -70,9 +68,7 @@ en:
   devise:
     sessions:
       new:
-        intro: |
-          Please enter your email address
-          and password to log in.
+        intro: Please enter your email address and password to log in.
         login: Log in
 de:
   devise:
@@ -124,9 +120,7 @@ de:
           - Herr
     sessions:
       new:
-        intro: |
-          Bitte geben Sie Ihre E-Mail-Adresse
-          und Ihr Passwort ein, um sich anzumelden.
+        intro: Bitte geben Sie Ihre E-Mail-Adresse und Ihr Passwort ein, um sich anzumelden.
         forgot_your_password: Passwort vergessen?
         login: Login
     passwords:
@@ -190,9 +184,7 @@ fr:
           - Mlle
     sessions:
       new:
-        intro: |
-          Veuillez saisir votre adresse électronique
-          et votre mot de passe pour vous connecter.
+        intro: Veuillez saisir votre adresse électronique et votre mot de passe pour vous connecter.
         forgot_your_password: Mot de passe oublié?
         login: Se connecter
     passwords:
@@ -254,9 +246,7 @@ it:
           - Sig.ra
     sessions:
       new:
-        intro: |
-          Inserire il proprio indirizzo email e la
-          propria password per effettuare il login.
+        intro: Inserire il proprio indirizzo email e la propria password per effettuare il login.
         forgot_your_password: Password dimenticata?
         login: Login
     passwords:
@@ -314,9 +304,7 @@ es:
           - Dr.
     sessions:
       new:
-        intro: |
-          Introduzca su dirección de correo electrónico
-          y su contraseña para iniciar sesión.
+        intro: Introduzca su dirección de correo electrónico y su contraseña para iniciar sesión.
         forgot_your_password: ¿Ha olvidado su contraseña?
         login: Inicio de sesión
     passwords:

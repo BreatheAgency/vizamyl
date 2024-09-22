@@ -1,9 +1,9 @@
 Ember.Application.initializer({
-  name: 'bootstrap',
+  name: 'appData',
   after: 'store',
   initialize: function(container, application) {
     var store = container.lookup('store:main');
-    var data = JSON.parse($('meta[name="bootstrap"]').attr('content'));
+    var data = JSON.parse($('meta[name="appData"]').attr('content'));
     var user = store.push('user', store.normalize('user', data['user']));
     store.pushMany('step', store.normalize('step', data['steps']));
     store.pushMany('progression', store.normalize('progression', data['progressions']));

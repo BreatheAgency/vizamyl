@@ -1,9 +1,13 @@
-<div class='references row'>
-  <div class='large-6 columns with-content with-minimum'>
-    <h1><%= link_to t('.left.title'), request.path %></h1>
-    <%= t('.left.body_html') %>
+<section id="reference__area" class="reference__area">
+  <div class="container">
+    <div class="reference__wrap">
+      <div class="reference__content">
+        <div class="row">
+          <div class="col col-lg-7">
+        <%= link_to(content_tag(:h2,t('.left.title')), request.path)%>
+        <%= t('.left.body_html') %>
+        <%= t('.right.body_html') %>
+      </div>
+    </div>
   </div>
-  <div class='no-title large-6 columns with-content with-minimum'>
-    <%= t('.right.body_html') %>
-  </div>
-</div>
+</section>

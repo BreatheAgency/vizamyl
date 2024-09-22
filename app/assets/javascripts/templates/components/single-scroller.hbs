@@ -1,11 +1,15 @@
-<div {{bind-attr class=':image_wrapper :left loaded:loaded:loading' width=imageWidth height=imageHeight}}>
-  <img>
-  <div class='spinner'></div>
-  <div {{bind-attr class=':image_holder' style=style}}></div>
-</div>
-<div class='dragdealer'>
-  <div class='handle'>
-    <i class='fi-list'></i>
+{{ log "RENDER single-scroller.hbs" }}
+<div class="d-flex flex-row multi-scroll">
+  <div {{bind-attr class=':image_wrapper :xleft loaded:loaded:loading' width=imageWidth height=imageHeight}}>
+    <div class='spinner'></div>
+    <div {{bind-attr class=':image_holder' style=style}}>
+      <img>
+    </div>
+    <p {{bind-attr class=':label' style=labelStyle}}>{{label}}</p>
   </div>
+  <div class='dragdealer'>
+    <div class='handle'>
+    </div>
+  </div>
+  <p {{bind-attr class=':label' style=labelStyle}}>{{label}}</p>
 </div>
-<p {{bind-attr class=':label' style=labelStyle}}>{{label}}</p>

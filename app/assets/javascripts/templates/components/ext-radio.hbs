@@ -1,5 +1,24 @@
-{{#each question in content}}
-  <div class='question'>
-    <label>{{radio-button value=question name=view.name selection=view.value}}<div class='body'>{{{question.body}}}</div></label>
-  </div>
-{{/each}}
+{{ log '###################' }}
+<div class="assessment__select">
+  {{#each question in content}}
+    <div class="assessment__single__select">
+      {{radio-button id=question.id value=question name=view.name selection=view.value}}
+      <label class="question_box" {{bind-attr for=question.id}}>
+        <div class="assessment__list">
+          {{{question.body}}}
+        </div>
+      </label>
+
+      {{#unless hideCheats }}
+        {{#if question.correct }}
+          {{ log "          ✅" }}
+          {{ log " " }}
+        {{else}}
+          {{ log "          -" }}
+          {{ log " " }}
+        {{/if}}
+      {{/unless}}
+    </div>
+  {{/each}}
+</div>
+

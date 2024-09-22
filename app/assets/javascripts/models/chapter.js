@@ -14,5 +14,25 @@ Course.Chapter = DS.Model.extend({
 
   completed: Ember.computed('completedSteps.length', 'steps.length', function() {
     return this.get('completedSteps.length') === this.get('steps.length');
-  })
+  }),
+
+  itemId: function() {
+    return "accordion-item-".concat(this.id);
+  }.property('chapter'),
+
+  headingId: function() {
+    return "heading".concat(this.id);
+  }.property('chapter'),
+
+  collapseId: function() {
+    return "collapse".concat(this.id);
+  }.property('chapter'),
+
+  bsTarget: function() {
+    if(this.get('available')) {
+      return "#collapse".concat(this.id);
+    } else {
+      'noTarget'
+    }
+  }.property('chapter'),
 });

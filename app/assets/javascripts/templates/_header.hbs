@@ -1,22 +1,41 @@
-<nav role='nav'>
-	<div class='row'>
-		<ul class='inline-list'>
-			<li>{{#link-to 'locale.menu'}}{{i18n layouts.application.course_menu}}{{/link-to}}</li>
-			<li><a href='/{{unbound currentLocale}}/users/edit'>{{i18n layouts.application.my_account}}</a></li>
-			<li><a href='/{{unbound currentLocale}}/references'>{{i18n layouts.application.references}}</a></li>
-			{{#if isUS}}
-				<li><a href='/{{unbound currentLocale}}/important-risk-and-safety-information'>{{i18n layouts.application.important_risk_and_safety_information}}</a></li>
-			{{/if}}
-      <li><a href='/{{unbound currentLocale}}/contact'>{{i18n layouts.application.contact}}</a></li>
-			<li><a href='/{{unbound currentLocale}}/resources'>{{i18n layouts.application.resources}}</a></li>
-			<li><a href='/{{unbound currentLocale}}/users/logout'>{{i18n layouts.application.logout}}</a></li>
-			<li {{bind-attr class=':right currentLocale'}}>
-        <p class='global-brand'>
-          <a href='/{{unbound currentLocale}}'>{{{i18n layouts.application.logo.1_html}}}</a>
-          {{{i18n layouts.application.logo.2_html}}}
-          {{{i18n layouts.application.logo.3_html}}}
-				</p>
-			</li>
-		</ul>
-	</div>
-</nav>
+<div class="offcanvas-area">
+  <div class="menu-close">
+    <i class="far fa-times"></i>
+  </div>
+  <div class="offcanvas-menu">
+    <div class="main-menu">
+      <ul class="d-block">
+        {{partial 'menu_links'}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="offcanvas-overlay"></div>
+
+<header id="header__area" class="header__area">
+  <div class="container">
+    <div class="header__wrap">
+      <a href='/{{unbound currentLocale}}'>
+        {{partial 'logo1-svg'}}
+      </a>
+      <div class="header__nav d-none d-xl-block">
+        <ul>
+          {{partial 'menu_links'}}
+        </ul>
+      </div>
+      <div class="vizamyl_logo">
+        <div class="logo_text">
+          <p class="global_brand">
+            <a href='/{{unbound currentLocale}}'>{{{i18n layouts.application.logo.1_html}}}</a>
+            {{{i18n layouts.application.logo.2_html}}}
+            {{{i18n layouts.application.logo.3_html}}}
+          </p>
+        </div>
+        <div class="burger_menu d-xl-none d-block">
+          <a href="#"><i class="fa-solid fa-bars"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

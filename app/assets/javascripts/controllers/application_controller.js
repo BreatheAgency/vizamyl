@@ -33,6 +33,5 @@ Course.ApplicationController = Ember.Controller.extend({
 
   currentEnvironment: function() {
     return Course.get('env.environment')
-  }.property('Course.env.environment')
-
+  }.property('Course.env.environment'),
 });

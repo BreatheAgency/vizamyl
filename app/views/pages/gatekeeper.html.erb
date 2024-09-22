@@ -1,10 +1,24 @@
-<div class='row'>
-  <div class='large-12 large-centered map'>
-    <div style="background: rgba(255,255,255, 0.5);">
-      <h1>Vizamyl<sup class='trade-mark'>&trade;</sup> (Flutemetamol F 18 Injection)</h1>
-      <h2>Electronic Reader Training Program</h2>
-      <p><span class='blue'>This site is intended for medical professionals only.</span><br> To proceed, please select your country.</p>
-      <%= render partial: 'errors/locale_links' %>
+
+<section id="country__hero__area" class="country__hero__area">
+  <div class="container">
+    <div class="country__hero__wrap">
+      <div class="welcome__hero__content country_content">
+        <h3>Vizamyl<sup>TM</sup> (Flutemetamol F 18 Injection)</h3>
+        <h1 style="color: white;">Electronic Reader <br>Training Program</h1>
+        <p>This site is intended for medical professionals only. To proceed, please select your country.</p>
+      </div>
     </div>
   </div>
-</div>
+</section>
+<!-- ===================== COUNTRY-HERO AREA END ===================== -->
+
+<!-- ===================== COUNTRY-NAME AREA START ===================== -->
+<section id="country__area" class="country__area">
+  <div class="container">
+    <div class="country__wrap">
+      <div class="country__names">
+        <%= render partial: 'helpers/locale_links' %>
+      </div>
+    </div>
+  </div>
+</section>

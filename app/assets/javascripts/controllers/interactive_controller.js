@@ -4,15 +4,15 @@ Course.InteractivePageController = Ember.ObjectController.extend({
 
   columns: function(){
     switch(this.get('model.interactive_sources.length')) {
-      case 1:
-        return 'small-12 large-12';
-        break;
-      case 2:
-        return 'small-6 large-6';
-        break;
-      default:
-        return 'small-4 large-4';
-      }
+    case 1:
+      return 'one_slider';
+      break;
+    case 2:
+      return 'two_sliders';
+      break;
+    default:
+      return 'more_sliders';
+    }
   }.property('model.interactive_sources.[]'),
 
   interactiveWidth: function() {

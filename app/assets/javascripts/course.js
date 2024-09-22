@@ -1,5 +1,4 @@
 //= require underscore
-//= require es5-shim/es5-shim
 //= require video
 //= require ./videojs.ga
 //= require ./dragdealer
@@ -55,4 +54,17 @@ Ember.RSVP.on('error', function (error) {
     // User is not logged in
     window.location = '/';
   }
+});
+
+$(document).ready(function () {
+  $(".burger_menu , .offcanvas-overlay").click(function () {
+    if($(".offcanvas-area").hasClass('active')) {
+      $(".offcanvas-area , .offcanvas-overlay").removeClass("active");
+    } else {
+      $(".offcanvas-area , .offcanvas-overlay").addClass("active");
+    }
+  });
+  $(".menu-close , .offcanvas-overlay").click(function () {
+    $(".offcanvas-area , .offcanvas-overlay").removeClass("active");
+  });
 });

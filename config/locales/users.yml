@@ -1,4 +1,6 @@
 en:
+  login:
+    remember_me: "Remember me"
   non_european:
     enrol:
       new: &new_en
@@ -78,6 +80,8 @@ en:
         description_html: Thank you for participating in the Electronic Reader Training Program.<br><br>Please download the PDF of your results and keep it for your records.
         download_results: Download results
 de:
+  login:
+    remember_me: Angemeldet bleiben
   european:
     enrol:
       details:
@@ -124,6 +128,8 @@ de:
         description_html: Vielen Dank für Ihre Teilnahme am elektronischen Schulungsprogramm zu Vizamyl.<br><br>Bitte laden Sie die PDF-Datei mit Ihren Ergebnissen herunter und heben Sie diese für Ihre Unterlagen auf.
         download_results: Ergebnisse herunterladen
 fr:
+  login:
+    remember_me: Se souvenir de moi
   european:
     enrol:
       details:
@@ -168,6 +174,8 @@ fr:
         description_html: Nous vous remercions d’avoir participé au programme de formation électronique Vizamyl (flutémétamol (<sup>18</sup>F)).<br><br>Veuillez télécharger la version PDF de vos résultats et la garder pour référence.
         download_results: Télécharger les résultats
 it:
+  login:
+    remember_me: "Ricordami"
   european:
     enrol:
       details:
@@ -212,6 +220,8 @@ it:
         description_html: Grazie per aver partecipato al programma di formazion on-line di Vizamyl<br><br>Si prega di scaricare e conservare il PDF con i risultati.
         download_results: Scaricare i risultati
 es:
+  login:
+    remember_me: Recordar contraseña
   european:
     enrol:
       details:
@@ -256,6 +266,8 @@ es:
         description_html: Gracias por participar en el programa electrónico de formación de Vizamyl.<br><br>Descargue el PDF con sus resultados y guárdelo para posteriores consultas.
         download_results: Descargar resultados
 jp:
+  login:
+    remember_me: ログイン状態を保存する
   non_european:
     enrol:
       new: &new_jp

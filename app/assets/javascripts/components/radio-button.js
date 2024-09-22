@@ -1,7 +1,7 @@
 Course.RadioButtonComponent = Ember.Component.extend({
   tagName : 'input',
   type : 'radio',
-  attributeBindings : ['name', 'type', 'value', 'checked:checked'],
+  attributeBindings : ['id', 'name', 'type', 'value', 'checked:checked'],
 
   checked : function() {
     return this.get('value') === this.get('selection');

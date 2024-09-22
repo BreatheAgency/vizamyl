@@ -13,5 +13,8 @@ Course.Question = DS.Model.extend({
   hasInteractiveTriplet: Ember.computed.equal('interactive_sources.length', 3),
   hasImages: Ember.computed.notEmpty('image_sources'),
   incorrect_title: DS.attr('string'),
-  correct_title: DS.attr('string')
+  correct_title: DS.attr('string'),
+  qId: function() {
+    return "q".concat(this.id);
+  }.property('question'),
 });

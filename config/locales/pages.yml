@@ -26,6 +26,7 @@ en:
       right:
         body_html: |
     resources:
+      download: Download
       smpc_title: Vizamyl SmPC EU
       rainbow_title: Rainbow colour scale RGB values
     contact:
@@ -34,7 +35,7 @@ en:
          Medical Support
          and other enquiries:
         body_html: |
-          <p>If you would like further <strong>medical information</strong> about Vizamyl, please contact us at:</p>
+          <p>If you would like further <strong>medical information</strong> about Vizamyl, please contact us at:<p>
           <p><a href="mailto:vizamyl.medinfo@ge.com">vizamyl.medinfo@ge.com</a></p>
           <p>For other enquiries, including requests for <strong>image reader training</strong>, please contact us at:</p>
           <p><a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
@@ -212,6 +213,7 @@ de:
       left:
         title: Literaturangaben
     resources:
+      download: Herunterladen
       smpc_title: Vizamyl SmPC EU
       rainbow_title: Regenbogenskala RGB Werte
     contact:
@@ -322,6 +324,7 @@ fr:
       right:
         body_html: |
     resources:
+      download: Télécharger
       smpc_title: Vizamyl RCP UE
       rainbow_title: Valeurs RVB de l’échelle de couleurs Rainbow
     contact:
@@ -444,6 +447,7 @@ it:
       right:
         body_html: |
     resources:
+      download: Scaricamento
       smpc_title: Vizamyl SmPC IT
       rainbow_title: Scala di colori arcobaleno valori RVB
     contact:
@@ -558,6 +562,7 @@ es:
       right:
         body_html: |
     resources:
+      download: Descargar
       smpc_title: Ficha Técnica Vizamyl
       rainbow_title: Escala de color "Rainbow" valores RVA
     contact:
@@ -673,6 +678,7 @@ jp:
           <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. <i>Ann Neurol</i>. 2010;68(3):319-329.</p>
           <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE Healthcare 2014.</p>
     resources:
+      download: ダウンロード
       smpc_title: 放射性医薬品合成設備FASTlab（フルテメタモル合成用）添付文書
       prescribing_information_title: 放射性医薬品合成設備FASTlab（フルテメタモル合成用）添付文書
       rainbow_title: レインボーカラースケール　RGB値

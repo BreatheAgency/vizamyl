@@ -1,19 +1,25 @@
-$browser-minimum-versions: (
-  "ie": "9"
-);
+// required to get $orange variable
+@import "video-js";
+@import "fonts";
+@import "bootstrap/functions";
+@import "bootstrap/variables";
 
+$primary: #6022A6; // set the $primary variable
 
-@import '_mixins';
+// merge with existing $theme-colors map
+$theme-colors: map-merge($theme-colors, (
+  "primary": $primary
+));
 
-@import 'foundation_and_overrides';
+$link-color: $primary;
+$link-shade-percentage: 30%;
+$link-hover-color: shift-color($link-color, $link-shade-percentage);
 
-@import '_helpers';
-@import '_fonts';
-@import '_forms';
-@import '_mixins';
-@import '_global';
-@import '_application';
-@import '_course';
-@import '_gatekeeper';
+@import "bootstrap";
+@import "font-awesome";
+@import "style";
+@import "responsive";
+@import "course";
+@import "image_scroller";
 
-@import 'language_specific_overrides';
+@import "locale-specific-fixes"

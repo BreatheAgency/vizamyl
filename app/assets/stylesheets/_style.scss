@@ -1,0 +1,1034 @@
+/*===================== REUSABLE  CSS AREA START =====================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  font-family: 'Source Sans Pro';
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button, input {
+  border: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btns {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+main {
+  overflow: hidden !important;
+}
+
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  max-width: 1445px;
+  margin: 0 auto;
+}
+
+#bumper {
+  margin-top: 30px;
+}
+/*===================== REUSABLE CSS AREA END =====================*/
+
+/*===================== OFFCANVAS CSS AREA START =====================*/
+
+.menu-close {
+  font-size: 38px;
+  color: #fff;
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  cursor: pointer;
+  transition: 0.4s;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #000;
+    background: #fff;
+  }
+}
+
+.offcanvas-area {
+  position: fixed;
+  left: -100%;
+  height: 100%;
+  width: 318px;
+  z-index: 9999;
+  padding-top: 35px;
+  background: #6022A6;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  visibility: hidden;
+  top: 0;
+  overflow-y: scroll;
+
+  &.active {
+    left: 0;
+    visibility: visible;
+  }
+
+  .main-menu ul li {
+    a {
+      font-size: 18px;
+      color: #fff;
+      display: block;
+      transition: 0.3s;
+      padding: 16px 22px;
+      border-bottom: 1px solid #fff;
+      text-decoration: none;
+
+      &:hover {
+        color: #000 !important;
+        background: #fff;
+      }
+    }
+
+    &:first-child a {
+      border-top: 1px solid #fff;
+    }
+
+    a {
+      &:hover, &[aria-expanded="true"] {
+        color: #d5d5d5;
+      }
+    }
+  }
+}
+
+.offcanvas-menu .main-menu ul {
+  display: block;
+  padding-left: 0;
+  margin-bottom: 35px;
+  list-style: none;
+}
+
+.offcanvas-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  z-index: 99;
+
+  &.active {
+    opacity: 0.6;
+    visibility: visible;
+  }
+}
+
+.offcanvas-area {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.offcanvas-menu {
+  margin-top: 100px;
+}
+
+/*===================== OFFCANVAS CSS AREA END =====================*/
+
+/*===================== HEADER CSS AREA START =====================*/
+
+header#header__area {
+  background: #6022A6;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 24px 0px;
+  z-index: 99;
+}
+
+.header__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 75px;
+
+  > a {
+    display: inline-block;
+    width: 169px;
+    flex-shrink: 0;
+  }
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 75px;
+  flex-shrink: 0;
+  flex-basis: content;
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 28px;
+  }
+
+  > ul li a {
+    color: #fff;
+    font-size: 17px;
+
+    &:hover {
+      color: #cbcbcb;
+    }
+  }
+}
+
+.logo_text {
+  width: 137px;
+  flex-shrink: 0;
+}
+
+.vizamyl_logo {
+  display: flex;
+  align-items: center;
+}
+
+.burger_menu {
+  margin-left: 30px;
+
+  a {
+    color: #fff;
+    font-size: 26px;
+  }
+}
+
+.global_brand {
+  font-family: "geinspira";
+  color: #FFF;
+
+  a {
+    color: #FFF;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 27px;
+    line-height: 20px;
+  }
+
+  span {
+    display: block;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 13px;
+  }
+}
+
+
+/*===================== HEADER CSS AREA END =====================*/
+
+/*===================== COUNTRY-HERO CSS AREA START =====================*/
+
+section#country__hero__area {
+  background: #6022A6;
+  padding: 58px 0px;
+  margin-bottom: 26px;
+}
+
+.welcome__hero__content {
+  h3 {
+    font-size: 50px;
+    line-height: 93px;
+    font-weight: 400;
+  }
+
+  color: #ffffff;
+
+  > {
+    h1 {
+      font-size: 101px;
+      font-weight: 600;
+      line-height: 98px;
+      margin-bottom: 35px;
+    }
+
+    p {
+      font-size: 29px;
+      font-weight: 600;
+      line-height: 27px;
+      max-width: 668px;
+    }
+  }
+}
+
+/*===================== COUNTRY-HERO CSS AREA END =====================*/
+
+/*===================== COUNTRY-NAME CSS AREA START =====================*/
+
+.country__names {
+  a {
+    background: #E4E4E4;
+    color: #000;
+    max-width: 426px;
+    width: 100%;
+    height: 101px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 29px;
+  }
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 83px;
+  row-gap: 24px;
+}
+
+.gatekeeper__blurb {
+  padding-top: 29px;
+  p {
+    font-size: 29px;
+    margin-top: 9px;
+    margin-bottom: 20px;
+  }
+}
+/*===================== COUNTRY-NAME CSS AREA END =====================*/
+
+/*===================== FOOTER CSS AREA START =====================*/
+
+footer#footer__area {
+  padding-bottom: 18px;
+}
+
+.footer__content {
+  p, a {
+    font-size: 12px;
+    line-height: 19px;
+    max-width: 388px;
+  }
+}
+
+/*===================== FOOTER CSS AREA END =====================*/
+
+/*===================== WELCOME-HERO CSS AREA START =====================*/
+
+.welcome__hero__area {
+  padding-top: 140px;
+  margin-bottom: 150px;
+}
+
+.welcome__hero__content h1 {
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 100px;
+  color: #6022A6;
+  margin-bottom: 67px;
+}
+
+.welcomecontent h1 {
+  max-width: 956px;
+}
+
+.welcome__hero__content.welcomecontent {
+  > p {
+    font-size: 29px;
+    line-height: 35px;
+    color: #000;
+    font-weight: 400;
+  }
+
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.welcome__hero__wrap {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.welcome__hero__btns {
+  display: flex;
+  align-items: center;
+  gap: 87px;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #6022A6;
+    font-size: 29px;
+
+    img {
+      width: 11px;
+    }
+  }
+}
+
+section.welcome__hero__area.blue_hand {
+  padding-top: 32px;
+  margin-bottom: 32px;
+}
+
+section.blue_hand {
+  .blue_hand_text {
+    p {
+      color: #000;
+    }
+    margin-bottom: 42px;
+  }
+
+  h2, h3 {
+    color: #6022A6;
+  }
+
+  .disclaimer {
+    width: 60%;
+    font-weight: bold;
+    letter-spacing: 0.0em;
+  }
+  .ge_logo {
+    img {
+      max-width: 120px;
+    }
+  }
+  .blue_hand_logo {
+    img {
+      max-width: 150px;
+      float: right;
+    }
+  }
+}
+/*===================== WELCOME-HERO CSS AREA END =====================*/
+
+/*===================== LOGIN-AREA CSS AREA START =====================*/
+
+.login__content h2 {
+  font-size: 62px;
+  color: #6022A6;
+  font-weight: 600;
+  line-height: 65px;
+  margin-bottom: 85px;
+}
+
+.login__part form {
+  margin-top: 30px;
+  margin-bottom: 123px;
+}
+
+.input_label {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+
+  label {
+    font-size: 22px;
+  }
+
+  input {
+    border: 2px solid #A9A9A9;
+    border-radius: 8px;
+    background: #E4E4E4;
+    height: 46px;
+    padding: 2px 10px;
+  }
+  &.error {
+    small {
+      color: #ea3e3e;
+    }
+    input {
+      border: 2px solid #ea3e3e;
+      background: #ffdcdc;
+    }
+  }
+}
+
+.login__part {
+  max-width: 628px;
+}
+
+.input_label {
+  margin-bottom: 24px;
+
+  &:nth-child(5) {
+    margin-bottom: 0px;
+  }
+}
+
+.remember__forget {
+  margin-top: 21px;
+  margin-bottom: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-right: 15px;
+
+  label {
+    font-size: 22px;
+  }
+}
+
+.forget a {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+section#login__area {
+  padding-top: 130px;
+}
+
+.checkbox_wrap {
+  position: relative;
+  width: 21px;
+  height: 21px;
+  border: 1px solid #707070;
+  border-radius: 4px;
+  padding: 1px;
+  flex-shrink: 0;
+
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    &:checked ~ .check_field {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.check_field {
+  width: 100%;
+  height: 100%;
+  background: #6022A6;
+  border-radius: 3px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+div.user_remember_me {
+  display: none;
+}
+
+button.login {
+  font-size: 22px;
+  background-color: #fff;
+  color: #6022A6;
+  input {
+    background-color: white;
+    color: #6022A6;
+  }
+  img {
+    width: 11px;
+  }
+}
+/*===================== LOGIN-AREA CSS AREA END =====================*/
+
+/*===================== ENROL CSS AREA START =====================*/
+
+.radio_buttons {
+  height: 42px;
+}
+
+.radio_buttons label {
+  display: inline-block;
+  margin: 0 7px 16px 0;
+  padding: 0;
+}
+
+.please-tick {
+  font-weight: normal;
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.enrolment {
+  .form-check {
+    .invalid-feedback, abbr[title="required"] {
+      display: none;
+    }
+  }
+}
+
+.marketing_opt_in, .non_euro_enrol {
+  p {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+
+.marketing-purposes {
+  br {
+    display: none;
+  }
+}
+
+.input_label input[type="radio"] {
+    height: 13px;
+}
+
+/*===================== ENROL CSS AREA END =====================*/
+
+/*===================== LANDING CSS AREA START =====================*/
+
+section#landing__area {
+  padding-top: 140px;
+  margin-bottom: 200px;
+}
+
+.welcome__hero__content h4 {
+  color: #6022A6;
+  font-size: 46px;
+  font-weight: 600;
+}
+
+p.landing_para {
+  color: #000;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 40px;
+  max-width: 961px;
+
+  a {
+    color: #000;
+    font-weight: 600;
+
+    img {
+      width: 8px;
+      margin-left: 4px;
+    }
+  }
+}
+
+.landing__enroll a {
+  img {
+    width: 11px;
+    filter: brightness(66);
+  }
+
+  font-size: 29px;
+  font-weight: 600;
+  color: #fff;
+  background: #6022A6;
+  width: 148px;
+  height: 50px;
+  border-radius: 36px;
+  gap: 9px;
+  margin-left: auto;
+}
+
+p.landing_para {
+  &.landing_para1, &:last-child {
+    max-width: 1040px;
+    margin-bottom: 35px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+/*===================== LANDING CSS AREA END =====================*/
+
+/*===================== COURSE-NAME CSS AREA START =====================*/
+
+.coursemenu__cards {
+  max-width: 1083px;
+  margin: 0 auto 210px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.collapsed {
+  background-color: #8D8D8D;
+  border-radius: 6px !important;
+  padding: 10px 19px !important;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.accordion-button {
+  &:not(.collapsed) {
+    color: #fff;
+    background-color: #6022A6;
+    box-shadow: none !important;
+    border-radius: 6px !important;
+    padding: 10px 19px !important;
+  }
+
+  &:focus {
+    z-index: 3;
+    border-color: none !important;
+    outline: 0;
+    box-shadow: none !important;
+  }
+}
+
+.course_toggle_content {
+  padding: 0px 19px;
+}
+
+.course__content a {
+  display: block;
+  color: #000;
+  padding: 11px 0px;
+  border-bottom: 2px solid #D4D4D4;
+  font-size: 15px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.accordion-item {
+  background: #E4E4E4;
+  border-radius: 6px !important;
+  margin-bottom: 7px;
+}
+
+.accordion-button {
+  &::after, &:not(.collapsed)::after {
+    background-image: none;
+  }
+}
+
+.course__content > table {
+  width: 100%;
+
+  tbody tr td p {
+    img {
+      width: 10px;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 19px;
+    max-width: 69px;
+  }
+}
+
+/*===================== COURSE-NAME CSS AREA END =====================*/
+
+/*===================== MY-ACCOUNT CSS AREA START =====================*/
+
+.account__content h2,
+.account__form h2,
+.contact__content h2,
+.reference__content h2 {
+  font-size: 62px;
+  color: #6022A6;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.account__content p {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+p.accountp1 {
+  margin-bottom: 12px;
+}
+
+.account__content h6 {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 23px;
+}
+
+p.accountp2 {
+  margin-bottom: 16px;
+}
+
+.remember.accountcheck {
+  margin: 21px 0px;
+  gap: 13px;
+
+  label {
+    color: #6022A6;
+    font-size: 17px;
+  }
+}
+
+
+.edit_user {
+  .marketing_options {
+    .form-check {
+      margin: 0px;
+    }
+  }
+}
+
+.edit_user {
+  .form-check {
+    margin: 21px 0px;
+    gap: 13px;
+
+    label {
+      color: #6022A6;
+      font-size: 17px;
+    }
+  }
+}
+
+p.accountp3 {
+  color: #A9A9A9;
+}
+
+p.accountp4 {
+  margin-top: 21px;
+}
+
+.account__wrap {
+  margin-bottom: 137px;
+}
+
+.account__content {
+  max-width: 454px;
+}
+
+.solution__check {
+  margin-top: 7px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.account__solution span {
+  font-size: 25px;
+}
+
+.account_btn {
+  margin-top: 65px;
+}
+
+/*===================== MY-ACCOUNT CSS AREA END =====================*/
+
+/*===================== CONTACT CSS AREA START =====================*/
+
+.contact__content {
+  h2 {
+    color: #6022A6;
+    font-weight: 600;
+    font-size: 47px;
+    font-weight: 400;
+    line-height: 48px;
+    margin-bottom: 35px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 18px;
+  }
+}
+
+/*===================== CONTACT CSS AREA END =====================*/
+
+/*===================== SUCCESS CSS AREA START =====================*/
+
+.success__content {
+  h2 {
+    color: #6022A6;
+    font-size: 23px;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: 35px;
+    text-decoration: underline;
+    img {
+      width: 14px;
+    }
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 12px;
+  }
+}
+
+/*===================== SUCCESS CSS AREA END =====================*/
+
+/*===================== VIDEO CSS AREA START  =====================*/
+
+section#video__area {
+  &.refresher__video {
+    padding-top: 110px;
+    margin-bottom: 80px;
+  }
+}
+
+.video_viewpost {
+  width: 100%;
+}
+
+.video__content {
+  video {
+    width: 100%;
+  }
+  h2 {
+    color: #6022A6;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 31px;
+    margin-bottom: 35px;
+    img {
+      width: 14px;
+    }
+  }
+  p {
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 12px;
+  }
+  margin-bottom: 50px;
+}
+
+/*===================== VIDEO CSS AREA END =====================*/
+
+/*===================== REFERENCE CSS AREA START =====================*/
+
+.reference__content p {
+  font-size: 17px;
+  line-height: 26px;
+  margin-bottom: 12px;
+}
+
+.standerd_contents {
+  max-width: 735px !important;
+  width: 100%;
+
+  > p {
+    max-width: 637px;
+  }
+}
+
+.reference__content {
+  margin-bottom: 80px;
+
+  p:nth-child(2) {
+    margin-top: 23px;
+  }
+}
+
+.resource__file span {
+  font-size: 25px;
+}
+
+.resource__file__card {
+  background: #6022A6;
+  border-radius: 12px;
+  width: 302px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 17px;
+  margin-top: 12px;
+
+  img {
+    width: 82px;
+  }
+
+  a {
+    color: #fff;
+    font-size: 25px;
+    text-decoration: underline;
+  }
+}
+
+.resource__download {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  margin-bottom: 200px;
+}
+
+main#main {
+  section.download__area {
+    .download__content {
+      .resource__file span {
+        font-weight: 600;
+        line-height: 78px;
+      }
+      .resource__file {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+/*===================== REFERENCE CSS AREA END =====================*/
+
+.page__select__next__prev {
+  a {
+    img {
+      width: 11px;
+    }
+
+    color: #6022A6;
+    font-size: 29px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    cursor: pointer;
+
+    &.disabled {
+      color: #707070;
+      cursor: not-allowed;
+    }
+  }
+
+
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+

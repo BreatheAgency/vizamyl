@@ -1,27 +1,24 @@
-<div class='devise registrations institution row'>
-  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
-  </div>
-  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
-    <ul class='progress'>
-      <li></li>
-      <li class='selected'></li>
-      <li> </li>
-      <% unless italian? %>
-        <li></li>
-      <% end %>
-    </ul>
-    <h1><%= t('.title') %></h1>
-    <p><%= t('.description') %></p>
-    <%= simple_form_for(@user, url: users_locale_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
-      <%= render 'tmp_storage_fields', f: f %>
-      <div class='form-inputs'>
-        <%= f.input :institution, as: :string, required: true %>
+<section id="login__area" class="login__area">
+  <div class="container">
+    <div class="login__wrap">
+      <div class="login__content">
+        <h2><%= t('.title') %></h2>
+        <p><%= t('.description') %></p>
+
+        <div class="login__part">
+          <%= simple_form_for(@user, url: users_locale_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
+            <%= render 'tmp_storage_fields', f: f %>
+            <%= f.input :institution, as: :string, required: true %>
+
+            <div class="submit d-flex justify-content-end">
+              <%= button_tag(type: 'submit', class: 'login') do %>
+                <%= t('course.actions.next') %>
+                <%= image_tag("right_angle_purple.svg") %>
+              <% end %>
+            </div>
+          <% end %>
+        </div>
       </div>
-      <div class='form-actions button-container'>
-        <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
-          <%= t('course.actions.next') %><i class='fi-arrow-right'></i>
-        <% end %>
-      </div>
-    <% end %>
+    </div>
   </div>
-</div>
+</section>

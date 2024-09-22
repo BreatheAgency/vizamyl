@@ -1,179 +1,189 @@
-<div {{bind-attr class=':row :page :test-page'}}>
-  {{#if isInExpanded}}
-    <div class='small-12 large-12 columns with-content'>
-      <div class='row'>
-        <div class='expanded-image-scrollers'>
-          <div class='small-1 small-offset-1 large-1 large-offset-1 columns'>
-            <div class='rainbow-reference'></div>
-          </div>
-          {{#each interactive_source in question.interactive_sources}}
-            <div class='small-3 large-3 columns left'>
-              {{#if interactive_source.hasUnsafeHeight}}
-                {{multi-scroller imageWidth=219 imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-              {{else}}
-                {{single-scroller imageWidth=219 imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-              {{/if}}
-            </div>
-          {{/each}}
-        </div>
-      </div>
-    </div>
-  {{else}}
-    <div class='small-5 large-5 columns with-content with-minimum'>
-      {{#if isInCorrect}}
-        <h1>{{{results_title}}}</h1>
-        <div class='question-results'>
-          <ul>
+<section id="reference__area" class="reference__area test">
+  <div class="container">
+    <div class="reference__wrap assessment__wrap">
+      <div {{ bind-attr class=':test_wrap :row
+                              question.test_case:four-b_style_question:not_four-b_style_question
+                              isInCorrect:results__page:not__results__page
+                              isInIncorrect:results__page:not__results__page '}}>
+
+        <div {{ bind-attr class=':test_question question.test_case:col-lg-5:col-lg-6'}}>
+          {{#if isInCorrect}}
+            {{ log 'TODO: >> isInCorrect' }}
+            <span>{{{results_title}}}</span>
+
             {{#each question in questionsInOrder}}
+              {{ log question }}
               {{render 'question' question}}
             {{/each}}
-          </ul>
-        </div>
-        <p>{{{results_correct}}}</p>
-      {{/if}}
-      {{#if isInIncorrect}}
-        <h1>{{{results_title}}}</h1>
-        <div class='question-results'>
-          <ul>
-            {{#each question in questionsInOrder}}
-              {{render 'question' question}}
-            {{/each}}
-          </ul>
-        </div>
-        <p>{{{results_incorrect}}}</p>
-      {{/if}}
-      {{#if isInExpanded}}
-        <div class='small-7 large-7 columns with-media'>
-          <div class='row'>
-            <div class='image-scrollers'>
-              {{#each interactive_source in question.interactive_sources}}
-                <div {{bind-attr class=":columns columns"}}>
-                  {{#if interactive_source.hasUnsafeHeight}}
-                    {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                  {{else}}
-                    {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                  {{/if}}
-                </div>
-              {{/each}}
-            </div>
-          </div>
-        </div>
-      {{/if}}
-      {{#if isInUnanswered}}
-        {{#unless test_case}}
-          <div class='test-progress'>
-            <p>{{#if singleQuestion}}{{{i18n course.pages.test.question.single_title}}}{{else}}{{i18n course.pages.test.question.plural_title}}{{/if}}</p>
-            <ul>
-              {{#each question in answeredQuestions}}
-                <li class='answered'></li>
-              {{/each}}
-              {{#each question in unansweredQuestions}}
-                <li {{bind-attr class='question.active'}}></li>
-              {{/each}}
-            </ul>
-          </div>
-        {{/unless}}
-        {{#if question.test_case}}
-          <h1>{{{question.title}}}</h1>
-          <p>{{{i18n course.pages.test.test_case.description_html}}}</p>
-          <div class='test-case'>
-            <div class='question'>
-              <h2>{{i18n course.pages.test.test_case.question_one}}</h2>
-              {{#each answer in questionSetOne}}
-                <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<div class='body'>{{{answer.body}}}</div></label>
-              {{/each}}
-            </div>
-            <div class='question'>
-              <h2>{{i18n course.pages.test.test_case.question_two}}</h2>
-              {{#each answer in questionSetTwo}}
-                <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<div class='body'>{{{answer.body}}}</div></label>
-              {{/each}}
-            </div>
-            <div class='question'>
-              <h2>{{i18n course.pages.test.test_case.question_three}}</h2>
-              {{#each answer in questionSetThree}}
-                <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<div class='body'>{{{answer.body}}}</div></label>
-              {{/each}}
-            </div>
-            <div class='question'>
-              <h2>{{i18n course.pages.test.test_case.question_four}}</h2>
-              {{#each answer in questionSetFour}}
-                <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<div class='body'>{{{answer.body}}}</div></label>
-              {{/each}}
-            </div>
-            <div class='question'>
-              <h2>{{i18n course.pages.test.test_case.question_five}}</h2>
-              {{#each answer in questionSetFive}}
-                <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<div class='body'>{{{answer.body}}}</div></label>
-              {{/each}}
-            </div>
-            <div class='question'>
-              <h2>{{i18n course.pages.test.test_case.question_six}}</h2>
-              {{#each answer in question.answers}}
-                <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<div class='body'>{{{answer.body}}}</div></label>
-              {{/each}}
-            </div>
-          </div>
-        {{else}}
-          <h1>{{{question.title}}}</h1>
-          <div class='test'>
-            {{ext-radio content=question.answers value=selectedAnswer}}
-          </div>
-        {{/if}}
-      {{/if}}
-    </div>
-    <div class='small-7 large-7 columns with-media with-minimum'>
-      <div class='row'>
-        {{#if question.hasImages}}
-          {{#each image_source in question.image_sources}}
-            <div class="small-12 large-12 columns">
-              {{image-loader source=image_source.sourceWithUrl}}
-            </div>
-          {{/each}}
-        {{/if}}
-        {{#if question.hasInteractives}}
-          {{#if question.hasInteractiveTriplet}}
-            <div class='small-12 large-12 columns'>
-              <div class='image-scroller-zoom' {{action 'expand'}}></div>
-            </div>
-          {{else}}
-            <div class='image-scrollers'>
-              {{#each interactive_source in question.interactive_sources}}
-                <div {{bind-attr class=":columns columns"}}>
-                  {{#if interactive_source.hasUnsafeHeight}}
-                    {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                  {{else}}
-                    {{single-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                  {{/if}}
-                </div>
-              {{/each}}
+
+            <div class="answer__content">
+              <p>{{{results_correct}}}</p>
             </div>
           {{/if}}
+          {{#if isInIncorrect}}
+            <span>{{{results_title}}}</span>
+
+            {{#each question in questionsInOrder}}
+              {{ log question }}
+              {{render 'question' question}}
+            {{/each}}
+
+            <div class="answer__content">
+              <p>{{{results_incorrect}}}</p>
+            </div>
+          {{/if}}
+          {{#if isInUnanswered}}
+            {{ log '> isInUnanswered (so render title and description)' }}
+
+            {{#unless test_case}}
+              {{ log '> Not a test_case' }}
+              {{#if singleQuestion}}
+                {{ log '> is singleQuestion (render `single_title` )' }}
+                <span>{{{i18n course.pages.test.question.single_title}}}<span>
+              {{else}}
+                {{ log '> is NOT singleQuestion (render `pural_title` )' }}
+                  <span>{{i18n course.pages.test.question.plural_title}}</span>
+              {{/if}}
+              <div class='test_progress my-2'>
+                <ul>
+                  {{#each question in answeredQuestions}}
+                    {{ log '> answeredQuestion' }}
+                    <li class='answered'></li>
+                  {{/each}}
+                  {{#each question in unansweredQuestions}}
+                    <li {{bind-attr class='question.active'}}></li>
+                  {{/each}}
+                </ul>
+              </div>
+            {{/unless}}
+            {{#if question.test_case}}
+              {{ log '>> Four-b sytle test' }}
+
+              <div class="test_wrap assessment__answer position-relative">
+                <div class="popop">
+                  <span>{{{question.title}}}</span>
+
+                  <h6 class="testcase_title">
+                    {{{i18n course.pages.test.test_case.description_html}}}
+                  </h6>
+
+
+                  <div class='testcase__reports'>
+                    <div class='question testcase__single__report'>
+                      <h6>{{i18n course.pages.test.test_case.question_one}}</h6>
+                      <div class="test__report__field">
+                        {{#each answer in questionSetOne}}
+                            <div class="remember solution">
+                              <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                            </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                    <div class='question testcase__single__report'>
+                      <h6>{{i18n course.pages.test.test_case.question_two}}</h6>
+                      <div class="test__report__field">
+                        {{#each answer in questionSetTwo}}
+                            <div class="remember solution">
+                              <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                            </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                    <div class='question testcase__single__report'>
+                      <h6>{{i18n course.pages.test.test_case.question_three}}</h6>
+                      <div class="test__report__field">
+                        {{#each answer in questionSetThree}}
+                            <div class="remember solution">
+                              <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                            </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                    <div class='question testcase__single__report'>
+                      <h6>{{i18n course.pages.test.test_case.question_four}}</h6>
+                      <div class="test__report__field">
+                        {{#each answer in questionSetFour}}
+                            <div class="remember solution">
+                              <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                            </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                    <div class='question testcase__single__report'>
+                      <h6>{{i18n course.pages.test.test_case.question_five}}</h6>
+                      <div class="test__report__field">
+                        {{#each answer in questionSetFive}}
+                            <div class="remember solution">
+                              <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                            </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                    <div class='question testcase__single__report'>
+                      <h6>{{i18n course.pages.test.test_case.question_six}}</h6>
+                        <div class="test__report__field">
+                        {{#each answer in question.answers}}
+                            <div class="remember solution">
+                              <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<span class="posneg">{{{answer.body}}}</span></label>
+                            </div>
+                        {{/each}}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{else}}
+              {{ log "> Not four-b, not answered"}}
+              <h6 class="assessment_title pe-5 py-3">{{{question.title}}}</h6>
+
+              <div class="assessment__select">
+                {{ext-radio content=question.answers value=selectedAnswer hideCheats=isProduction}}
+              </div>
+            {{/if}}
+          {{/if}}
+        </div>
+        <div {{ bind-attr class=':test_material question.test_case:col-lg-7:col-lg-6'}}>
+          {{#if question.hasImages}}
+            {{ log '>> question.hasImages' }}
+            {{#each image_source in question.image_sources}}
+              {{image-loader source=image_source.sourceWithUrl}}
+            {{/each}}
+          {{/if}}
+          {{#if question.hasInteractives}}
+              <div class="testcase__all__slider">
+                {{#each interactive_source in question.interactive_sources}}
+                  <div {{bind-attr class=":columns columns"}}>
+                    {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                  </div>
+                {{/each}}
+              </div>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+
+    <div class="page__selection page__question__assessment">
+      <div class="page__select__next__prev py-5">
+        {{#if isInCorrect}}
+          <a {{bind-attr class=':right'}} {{action 'next' step}}>
+            {{i18n course.actions.next}}
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+        {{/if}}
+        {{#if isInIncorrect}}
+          <a {{bind-attr class=':right'}} {{action 'failure'}}>
+            {{i18n course.actions.next}}
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
+        {{/if}}
+        {{#if isInUnanswered}}
+          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>
+            {{i18n course.actions.next}}
+            <i class="fa-solid fa-angle-right"></i>
+          </a>
         {{/if}}
       </div>
     </div>
-  {{/if}}
-</div>
-<div class='row page-footer'>
-  <div class='small-6 medium-6 large-6 columns'>
-    <div class='page-abbreviations'>
-      <p>{{{abbreviations}}}</p>
-    </div>
   </div>
-  <div class='small-6 medium-6 large-6 columns'>
-    <div class='page-actions'>
-      {{#if isInCorrect}}
-        <a {{bind-attr class=':right'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
-      {{/if}}
-      {{#if isInIncorrect}}
-        <a {{bind-attr class=':right'}} {{action 'failure'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
-      {{/if}}
-      {{#if isInUnanswered}}
-        <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
-      {{/if}}
-      {{#if isInExpanded}}
-        <a {{bind-attr class=':right'}} {{action 'contract'}}>{{i18n course.actions.back}}<i class='fi-arrow-right'></i></a>
-      {{/if}}
-    </div>
-  </div>
-</div>
+</section>
+
