@@ -8,7 +8,15 @@
 }
 
 body {
-  font-family: 'Source Sans Pro';
+  font-family: 'Helvetica';
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 ul {
@@ -45,7 +53,14 @@ img {
 }
 
 main {
-  overflow: hidden !important;
+  margin-top: 93px;
+  width: 100%;
+  height: calc(100% - 116px - 95px);
+  overflow: auto!important;
+}
+.mainPage {
+  margin-top: 0!important;
+  height: calc(100% - 116px);
 }
 
 .container,
@@ -61,6 +76,7 @@ main {
 #bumper {
   margin-top: 30px;
 }
+
 /*===================== REUSABLE CSS AREA END =====================*/
 
 /*===================== OFFCANVAS CSS AREA START =====================*/
@@ -175,6 +191,7 @@ main {
 
 header#header__area {
   background: #6022A6;
+  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
@@ -320,17 +337,25 @@ section#country__hero__area {
 }
 
 .gatekeeper__blurb {
-  padding-top: 29px;
+  // padding-top: 29px;
   p {
-    font-size: 29px;
-    margin-top: 9px;
-    margin-bottom: 20px;
+    font-size: 20px;
+    // margin-top: 9px;
+    margin-bottom: 10px;
   }
 }
 /*===================== COUNTRY-NAME CSS AREA END =====================*/
 
 /*===================== FOOTER CSS AREA START =====================*/
-
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 10px 0;
+  box-shadow: 0px -1px 10px #E4E4E4;
+  background-color: #fff;
+}
 footer#footer__area {
   padding-bottom: 18px;
 }
@@ -348,7 +373,7 @@ footer#footer__area {
 /*===================== WELCOME-HERO CSS AREA START =====================*/
 
 .welcome__hero__area {
-  padding-top: 140px;
+  // padding-top: 140px;
   margin-bottom: 150px;
 }
 
@@ -360,12 +385,13 @@ footer#footer__area {
   margin-bottom: 67px;
 }
 
-.welcomecontent h1 {
-  max-width: 956px;
-}
+// .welcomecontent h1 {
+//   max-width: 956px;
+// }
 
 .welcome__hero__content.welcomecontent {
   > p {
+    font-family: 'Helvetica';
     font-size: 29px;
     line-height: 35px;
     color: #000;
@@ -379,22 +405,28 @@ footer#footer__area {
 }
 
 .welcome__hero__wrap {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
+  // display: flex;
+  // align-items: end;
+  // justify-content: space-between;
 }
 
 .welcome__hero__btns {
   display: flex;
   align-items: center;
   gap: 87px;
+  justify-content: flex-end;
+  margin-top: -40px;
+  max-width: 1080px;
 
   a {
+    font-family: 'Helvetica';
+    font-weight: 400;
     display: flex;
     align-items: center;
     gap: 6px;
     color: #6022A6;
     font-size: 29px;
+    line-height: 40px;
 
     img {
       width: 11px;
@@ -453,18 +485,33 @@ section.blue_hand {
   margin-bottom: 123px;
 }
 
-.input_label {
+.user_marketing_overall_opt_in {
+  margin-bottom: 15px;
+}
+
+.input,
+.input_label,
+.input.email.user_email,
+.input.password.user_password {
   display: flex;
   flex-direction: column;
   gap: 11px;
 
   label {
     font-size: 22px;
+    input[type="checkbox"] {
+      border-radius: 4px;
+      min-width: 22px;
+      height: 22px;
+      margin-right: 11px;
+      vertical-align: middle;
+      border: 1px solid #707070;
+    }
   }
 
   input {
     border: 2px solid #A9A9A9;
-    border-radius: 8px;
+    border-radius: 4px;
     background: #E4E4E4;
     height: 46px;
     padding: 2px 10px;
@@ -480,6 +527,10 @@ section.blue_hand {
   }
 }
 
+.input.email.user_email {
+  margin-bottom: 20px;
+}
+
 .login__part {
   max-width: 628px;
 }
@@ -493,8 +544,8 @@ section.blue_hand {
 }
 
 .remember__forget {
-  margin-top: 21px;
-  margin-bottom: 60px;
+  margin-top: 22px;
+  margin-bottom: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -509,17 +560,19 @@ section.blue_hand {
 
   label {
     font-size: 22px;
+    display: flex;
   }
 }
 
 .forget a {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
+  color: #000;
 }
 
-section#login__area {
-  padding-top: 130px;
-}
+// section#login__area {
+//   padding-top: 130px;
+// }
 
 .checkbox_wrap {
   position: relative;
@@ -552,9 +605,9 @@ section#login__area {
   visibility: hidden;
 }
 
-div.user_remember_me {
-  display: none;
-}
+// div.user_remember_me {
+//   display: none;
+// }
 
 button.login {
   font-size: 22px;
@@ -577,8 +630,9 @@ button.login {
 }
 
 .radio_buttons label {
-  display: inline-block;
-  margin: 0 7px 16px 0;
+  display: inline-flex;
+  align-items: center;
+  margin: 0 10px 16px 0;
   padding: 0;
 }
 
@@ -609,9 +663,9 @@ button.login {
   }
 }
 
-.input_label input[type="radio"] {
-    height: 13px;
-}
+// .input_label input[type="radio"] {
+//     height: 13px;
+// }
 
 /*===================== ENROL CSS AREA END =====================*/
 
@@ -771,10 +825,11 @@ p.landing_para {
 .account__content p {
   font-size: 20px;
   line-height: 26px;
+  margin-bottom: 15px;
 }
 
 p.accountp1 {
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .account__content h6 {
@@ -810,16 +865,16 @@ p.accountp2 {
   .form-check {
     margin: 21px 0px;
     gap: 13px;
-
-    label {
-      color: #6022A6;
-      font-size: 17px;
-    }
+  }
+  label {
+    color: #6022A6;
+    font-size: 16px;
   }
 }
 
 p.accountp3 {
   color: #A9A9A9;
+  font-size: 15px;
 }
 
 p.accountp4 {
@@ -842,8 +897,22 @@ p.accountp4 {
   gap: 16px;
 }
 
-.account__solution span {
-  font-size: 25px;
+.account__solution {
+  span {
+    label {
+      font-size: 20px;
+      color: #000;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+  div.input {
+    margin-bottom: 20px;
+    label {
+      color: #000;
+      font-size: 20px;
+    }
+  }
 }
 
 .account_btn {
@@ -983,12 +1052,12 @@ section#video__area {
   }
 }
 
-.resource__download {
-  display: flex;
-  flex-direction: column;
-  gap: 45px;
-  margin-bottom: 200px;
-}
+// .resource__download {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 45px;
+//   margin-bottom: 200px;
+// }
 
 main#main {
   section.download__area {
@@ -998,7 +1067,7 @@ main#main {
         line-height: 78px;
       }
       .resource__file {
-        margin-bottom: 32px;
+        margin-bottom: 15px;
       }
     }
   }

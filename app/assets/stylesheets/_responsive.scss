@@ -25,14 +25,14 @@
   }
 
   .welcome__hero__content h1 {
-    font-size: 50px;
-    line-height: 60px;
-    margin-bottom: 32px;
+    font-size: 80px;
+    line-height: 85px;
+    margin-bottom: 18px;
   }
 
-  .welcomecontent h1 {
-    max-width: 498px;
-  }
+  // .welcomecontent h1 {
+  //   max-width: 498px;
+  // }
 
   .welcome__content {
     p {
@@ -49,23 +49,24 @@
   }
 
   .welcome__hero__btns a {
-    font-size: 22px;
+    font-size: 29px;
 
     img {
-      width: 8px;
+      width: 12px;
     }
   }
 
   .welcome__hero__content {
     h3 {
-      font-size: 35px;
-      line-height: 42px;
-      margin-bottom: 24px;
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 10px;
     }
 
     p {
       font-size: 24px;
-      font-weight: 500;
+      line-height: 30px;
+      font-weight: 300;
     }
   }
 
@@ -111,20 +112,20 @@
     }
   }
 
-  .resource__download {
-    gap: 30px;
-    margin-bottom: 100px;
-  }
+  // .resource__download {
+  //   gap: 30px;
+  //   margin-bottom: 100px;
+  // }
 
-  section {
-    &#reference__area {
-      padding-top: 100px;
-    }
+  // section {
+  //   &#reference__area {
+  //     padding-top: 100px;
+  //   }
 
-    &#account__area {
-      padding-top: 110px;
-    }
-  }
+  //   &#account__area {
+  //     padding-top: 110px;
+  //   }
+  // }
 
   .account__content h6 {
     font-size: 22px;
@@ -150,9 +151,9 @@
     margin-bottom: 15px;
   }
 
-  .account__solution span {
-    font-size: 22px;
-  }
+  // .account__solution span {
+  //   font-size: 22px;
+  // }
 
   .solution__check {
     margin-top: 0px;
@@ -182,9 +183,9 @@
     margin-bottom: 10px;
   }
 
-  .assessment__wrap {
-    margin-top: 15px;
-  }
+  // .assessment__wrap {
+  //   margin-top: 15px;
+  // }
 
   .assessment__content {
     h3 {
@@ -263,9 +264,9 @@
     padding: 12px 0px;
   }
 
-  section#welcome__hero__area {
-    padding-top: 98px;
-  }
+  // section#welcome__hero__area {
+  //   padding-top: 98px;
+  // }
 
   .login__content h2 {
     font-size: 50px;
@@ -285,7 +286,7 @@
   }
 
   .remember__forget {
-    margin: 10px 0px 30px;
+    margin: 22px 22px 70px 0;
   }
 
   .remember {
@@ -335,8 +336,8 @@
   }
 
   .welcome__hero__content h1 {
-    font-size: 40px;
-    line-height: 50px;
+    font-size: 70px;
+    line-height: 80px;
   }
 
   .welcome__content p {
@@ -348,19 +349,19 @@
     gap: 50px;
   }
 
-  .welcome__hero__wrap {
-    flex-direction: column;
-    align-items: start;
-    gap: 30px;
-  }
+  // .welcome__hero__wrap {
+  //   flex-direction: column;
+  //   align-items: start;
+  //   gap: 30px;
+  // }
 
   .welcome__hero__btns {
     a {
-      font-size: 18px;
+      font-size: 26px;
       gap: 4px;
 
       img {
-        width: 6px;
+        width: 10px;
       }
     }
 
@@ -369,8 +370,8 @@
 
   .welcome__hero__content {
     h3 {
-      font-size: 28px;
-      line-height: 35px;
+      font-size: 40px;
+      line-height: 50px;
     }
 
     p {
@@ -462,7 +463,7 @@
 
   .welcome__hero__content {
     h3 {
-      font-size: 24px;
+      font-size: 30px;
     }
 
     p {
@@ -477,9 +478,9 @@
     max-width: 100%;
   }
 
-  section#login__area {
-    padding-top: 100px;
-  }
+  // section#login__area {
+  //   padding-top: 100px;
+  // }
 
   .login__content h2 {
     font-size: 35px;
@@ -558,9 +559,9 @@
   }
 
   .welcome__hero__content h1 {
-    font-size: 30px;
-    line-height: 38px;
-    margin-bottom: 24px;
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 18px;
   }
 
   .welcome__content p {
@@ -593,9 +594,9 @@
     }
   }
 
-  section#welcome__hero__area {
-    padding-top: 80px;
-  }
+  // section#welcome__hero__area {
+  //   padding-top: 80px;
+  // }
 
   .country__names {
     grid-template-columns: repeat(2, 1fr);
@@ -626,7 +627,7 @@
   }
 
   .remember__forget {
-    margin: 8px 0px 12px;
+    margin: 10px 10px 40px 0;
   }
 
   .forget a {
@@ -735,8 +736,8 @@
 
 @media (min-width: 320px) and (max-width: 575px) {
   .welcome__hero__content h1 {
-    font-size: 28px;
-    line-height: 35px;
+    font-size: 40px;
+    line-height: 50px;
   }
 
   .welcome__content p {
@@ -745,7 +746,7 @@
   }
 
   .welcome__hero__btns a {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .country__names {

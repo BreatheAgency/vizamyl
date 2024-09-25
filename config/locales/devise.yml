@@ -27,7 +27,7 @@ en:
         marketing_overall_opt_in_description_html: |
           If you do want to receive such information, please tick the box below.
         marketing_overall_opt_in_html: |
-          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<span>
+          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<>
         marketing_overall_opt_in_note_html: |
           (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
         marketing_overall_description_html: |
@@ -37,7 +37,7 @@ en:
         marketing_post_opt_in_label_html: |
           Post
         marketing_representative_opt_in_label_html: |
-          Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>
+          Visit from a GE Healthcare representative<br>(There is no obligation to see a representative)
         marketing_overall_opt_in_tick_html: |
           (Please tick one or more options)
         update: |
@@ -345,7 +345,7 @@ jp:
         marketing_overall_opt_in_description_html: |
           If you do want to receive such information, please tick the box below.
         marketing_overall_opt_in_html: |
-          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<span>
+          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<>
         marketing_overall_opt_in_note_html: |
           (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
         marketing_overall_description_html: |
@@ -355,7 +355,7 @@ jp:
         marketing_post_opt_in_label_html: |
           Post
         marketing_representative_opt_in_label_html: |
-          Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>
+          Visit from a GE Healthcare representative<br>(There is no obligation to see a representative)
         marketing_overall_opt_in_tick_html: |
           (Please tick one or more options)
         update: |
