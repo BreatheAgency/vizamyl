@@ -1,10 +1,15 @@
 .en-us {
   @media (min-width: 320px) and (max-width: 1399px) {
     .header__wrap {
-      justify-content: flex-end;
-      > a {
-        display: none;
+      justify-content: space-between;
+      .header__nav {
+        ul li a {
+          font-size: 13px;
+        }
       }
+      // > a {
+      //   display: none;
+      // }
     }
   }
 }
