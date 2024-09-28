@@ -22,7 +22,7 @@ gem "simple_form", "~> 4.0"
 gem "font-awesome-sass", "~> 6.4.2"
 
 gem 'bootstrap', '~> 5.3.2'
-gem 'mini_racer', '~> 0.6.0'
+# gem 'mini_racer', '~> 0.6.0'
 
 gem 'oj', '~> 2.16'
 gem 'pg'
