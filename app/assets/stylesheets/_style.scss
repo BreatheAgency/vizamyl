@@ -212,7 +212,11 @@ header#header__area {
     display: flex;
     align-items: center;
     flex-shrink: 0;
-    gap: 5px;
+    // gap: 5px;
+    flex-wrap: wrap;
+    li {
+      margin: 0 10px;
+    }
   }
 
   > ul li a {
