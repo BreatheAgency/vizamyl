@@ -207,6 +207,8 @@ header#header__area {
   gap: 75px;
   flex-shrink: 0;
   flex-basis: content;
+  margin-left: 25px;
+  max-width: 70%;
 
   ul {
     display: flex;
