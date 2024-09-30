@@ -14,7 +14,15 @@ test:
   database: vizamyl_test
 
 staging:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  url: <%= ENV['DATABASE_URL'] %>
+  sslmode: require  # Ensures SSL is used for Heroku
 
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  url: <%= ENV['DATABASE_URL'] %>
+  sslmode: require  # Ensures SSL is used for Heroku
