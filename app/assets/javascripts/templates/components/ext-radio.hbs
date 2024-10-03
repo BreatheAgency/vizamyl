@@ -3,11 +3,13 @@
   {{#each question in content}}
     <div class="assessment__single__select">
       {{radio-button id=question.id value=question name=view.name selection=view.value}}
-      <label class="question_box" {{bind-attr for=question.id}}>
-        <div class="assessment__list">
-          {{{question.body}}}
-        </div>
-      </label>
+
+      <!-- Render the heading -->
+      <h2>{{split-heading (unbound question.body)}}</h2>
+      
+      <div class="assessment__list">
+        {{{split-updated-body (unbound question.body)}}}
+      </div>
 
       {{#unless hideCheats }}
         {{#if question.correct }}
@@ -21,4 +23,3 @@
     </div>
   {{/each}}
 </div>
-
