@@ -63,7 +63,7 @@ img {
 }
 
 #bumper {
-  margin-top: 30px;
+  margin-top: 27px;
 }
 
 /*===================== REUSABLE CSS AREA END =====================*/
@@ -223,7 +223,7 @@ header#header__area {
 
   > ul li a {
     color: #fff;
-    font-size: 17px;
+    font-size: 16px;
 
     &:hover {
       color: #cbcbcb;
@@ -293,15 +293,20 @@ section#country__hero__area {
   > {
     h1 {
       font-size: 101px;
-      font-weight: 600;
+      font-weight: 400;
       line-height: 98px;
       margin-bottom: 35px;
+      span {
+        font-size: 46px;
+        font-weight: 400;
+        line-height: 48px;
+      }
     }
 
     p {
       font-size: 29px;
-      font-weight: 600;
-      line-height: 27px;
+      font-weight: 300;
+      line-height: 40px;
       max-width: 668px;
     }
   }
@@ -332,11 +337,18 @@ section#country__hero__area {
 }
 
 .gatekeeper__blurb {
-  // padding-top: 29px;
+  padding-top: 40px;
+  h3 {
+    color: $primary;
+  }
   p {
     font-size: 20px;
     // margin-top: 9px;
     margin-bottom: 10px;
+    img {
+      width: 11px;
+      margin-left: 5px;
+    }
   }
 }
 /*===================== COUNTRY-NAME CSS AREA END =====================*/
@@ -365,8 +377,8 @@ footer#footer__area {
 
 .welcome__hero__content h1 {
   font-size: 100px;
-  font-weight: 600;
-  line-height: 100px;
+  font-weight: 400;
+  line-height: 110px;
   color: #6022A6;
   margin-bottom: 67px;
 }
@@ -376,15 +388,18 @@ footer#footer__area {
 // }
 
 .welcome__hero__content.welcomecontent {
+  > h1 {
+    font-weight: 600;
+  }
   > p {
     font-family: 'Helvetica';
     font-size: 29px;
     line-height: 35px;
     color: #000;
-    font-weight: 400;
+    font-weight: 300;
   }
 
-  max-width: 900px;
+  max-width: 1250px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -466,6 +481,13 @@ section.blue_hand {
   margin-bottom: 85px;
 }
 
+.login__content p {
+  font-size: 20px;
+  color: #000;
+  font-weight: 300;
+  line-height: 30px;
+}
+
 .login__part form {
   margin-top: 30px;
   margin-bottom: 123px;
@@ -492,10 +514,11 @@ section.blue_hand {
 
   label {
     font-size: 22px;
+    color: #000;
     input[type="checkbox"] {
       border-radius: 4px;
-      min-width: 22px;
-      height: 22px;
+      min-width: 27px;
+      height: 27px;
       margin-right: 11px;
       vertical-align: middle;
       border: 1px solid #707070;
@@ -553,19 +576,21 @@ section.blue_hand {
 
   label {
     font-size: 22px;
+    font-weight: 400;
     display: flex;
+    align-items: center;
   }
 }
 
 .forget a {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   color: #000;
 }
 
-// section#login__area {
-//   padding-top: 130px;
-// }
+section#login__area {
+  padding-top: 20px;
+}
 
 .checkbox_wrap {
   position: relative;
@@ -603,30 +628,36 @@ section.blue_hand {
 // }
 
 button.login {
-  font-size: 22px;
+  font-size: 29px;
   background-color: #fff;
   color: #6022A6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   input {
     background-color: white;
     color: #6022A6;
   }
   img {
-    width: 11px;
+    width: 13px;
+    margin-left: 10px;
   }
 }
 /*===================== LOGIN-AREA CSS AREA END =====================*/
 
 /*===================== ENROL CSS AREA START =====================*/
 
-.radio_buttons {
-  height: 42px;
-}
+// .radio_buttons {
+//   height: 42px;
+// }
 
 .radio_buttons label {
   display: inline-flex;
   align-items: center;
-  margin: 0 10px 16px 0;
+  margin: 0 10px 10px 0;
   padding: 0;
+  font-size: 25px!important;
+  color: #000!important;
 }
 
 .please-tick {
@@ -741,6 +772,7 @@ p.landing_para {
 }
 
 .accordion-button {
+  font-size: 15px;
   &:not(.collapsed) {
     color: #fff;
     background-color: #6022A6;
@@ -765,8 +797,8 @@ p.landing_para {
   display: block;
   color: #000;
   padding: 11px 0px;
-  border-bottom: 2px solid #D4D4D4;
-  font-size: 15px;
+  // border-bottom: 2px solid #D4D4D4;
+  font-size: 19px;
 
   &:last-child {
     border-bottom: none;
@@ -861,13 +893,13 @@ p.accountp2 {
   }
   label {
     color: #6022A6;
-    font-size: 16px;
+    font-size: 17px;
   }
 }
 
 p.accountp3 {
   color: #A9A9A9;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 p.accountp4 {
@@ -891,7 +923,13 @@ p.accountp4 {
 }
 
 .account__solution {
-  span {
+  > span {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #000;
+    margin-bottom: 15px;
+    display: block;
     label {
       font-size: 20px;
       color: #000;
@@ -1021,6 +1059,7 @@ section#video__area {
 
 .resource__file span {
   font-size: 25px;
+  color: #000;
 }
 
 .resource__file__card {
@@ -1032,7 +1071,7 @@ section#video__area {
   align-items: center;
   justify-content: center;
   gap: 17px;
-  margin-top: 12px;
+  margin-bottom: 40px;
 
   img {
     width: 82px;
@@ -1053,7 +1092,7 @@ section#video__area {
 // }
 
 main {
-  margin-top: 100px;
+  margin-top: 116px;
 }
 .mainPage {
   margin-top: 0;
@@ -1063,8 +1102,9 @@ main#main {
   section.download__area {
     .download__content {
       .resource__file span {
-        font-weight: 600;
-        line-height: 78px;
+        font-weight: 500;
+        margin-bottom: 30px;
+        display: block;
       }
       .resource__file {
         margin-bottom: 15px;

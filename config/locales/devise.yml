@@ -27,7 +27,7 @@ en:
         marketing_overall_opt_in_description_html: |
           If you do want to receive such information, please tick the box below.
         marketing_overall_opt_in_html: |
-          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<>
+          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.
         marketing_overall_opt_in_note_html: |
           (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
         marketing_overall_description_html: |

@@ -120,11 +120,22 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 17px;
+  height: 100%;
 }
 
 .testcase__slide {
-  img {
+  height: 100%;
+  div {
     height: 100%;
+    img {
+      height: 100%!important;
+    }
+  }
+  .dragdealer .handle {
+    width: 8px;
+    height: 48px;
+    border-radius: 7px;
+    border: 0;
   }
 
   &::-webkit-scrollbar {

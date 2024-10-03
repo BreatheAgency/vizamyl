@@ -25,7 +25,7 @@ en:
           single_title: Self-assessment question
           plural_title: Self-assessment questions
         test_case:
-          description_html: Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.
+          description_html: Navigate the three views with the slider. Assess the five regions and then make an overall assessment.
           question_one: Frontal pole and lobe
           question_two: Posterior cingulate and precuneus
           question_three: Temporal lobe

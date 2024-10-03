@@ -25,8 +25,8 @@
   }
 
   .welcome__hero__content h1 {
-    font-size: 70px;
-    line-height: 80px;
+    font-size: 100px;
+    line-height: 110px;
     margin-bottom: 18px;
   }
 
@@ -36,12 +36,12 @@
 
   .welcome__content {
     p {
-      font-size: 22px;
-      line-height: 30px;
+      font-size: 29px;
+      line-height: 35px;
     }
 
-    max-width: 368px;
-    gap: 14px;
+    max-width: 450px;
+    // gap: 14px;
   }
 
   section#welcome__hero__area {
@@ -63,21 +63,20 @@
       margin-bottom: 10px;
     }
 
-    p {
-      font-size: 24px;
-      line-height: 30px;
-      font-weight: 300;
-    }
+    // p {
+    //   font-size: 24px;
+    //   line-height: 30px;
+    // }
   }
 
   .country__names a {
-    font-size: 25px;
+    font-size: 29px;
   }
 
   .login__content h2 {
-    font-size: 50px;
-    line-height: 55px;
-    margin-bottom: 55px;
+    font-size: 62px;
+    line-height: 65px;
+    margin-bottom: 84px;
   }
 
   .welcome__hero__content h4 {
@@ -89,33 +88,33 @@
     font-size: 24px;
   }
 
-  .account__content h2, .account__form h2, .reference__content h2 {
-    font-size: 50px;
-    margin-bottom: 10px;
-  }
+  // .account__content h2, .account__form h2, .reference__content h2 {
+  //   font-size: 50px;
+  //   margin-bottom: 10px;
+  // }
 
   .resource__file span {
-    font-size: 20px;
+    font-size: 25px;
   }
 
   .resource__file__card {
     margin-top: 6px;
-    width: 245px;
-    height: 110px;
+    width: 302px;
+    height: 130px;
 
     img {
       width: 58px;
     }
 
     a {
-      font-size: 20px;
+      font-size: 25px;
     }
   }
 
-  // .resource__download {
-  //   gap: 30px;
-  //   margin-bottom: 100px;
-  // }
+  .resource__download {
+    // gap: 30px;
+    margin-top: 30px;
+  }
 
   // section {
   //   &#reference__area {
@@ -127,10 +126,10 @@
   //   }
   // }
 
-  .account__content h6 {
-    font-size: 22px;
-    margin-bottom: 10px;
-  }
+  // .account__content h6 {
+  //   font-size: 22px;
+  //   margin-bottom: 10px;
+  // }
 
   .remember.accountcheck {
     margin: 12px 0px;
@@ -173,10 +172,10 @@
 
   .page__select__next__prev {
     a {
-      font-size: 25px;
+      font-size: 29px;
 
       img {
-        width: 9px;
+        width: 11px;
       }
     }
 

@@ -25,11 +25,11 @@
     }
 
     #bumper {
-      margin-top: 30px;
+      margin-top: 27px;
     }
 
     h1 {
-      font-size: 55px;
+      font-size: 62px;
       margin-bottom: 30px;
       color: $primary;
     }
@@ -66,9 +66,8 @@
     }
 
     p {
-      font-size: 16px;
-      line-height: 20px;
-      margin-top: 16px;
+      font-size: 20px;
+      line-height: 30px;
       margin-bottom: 16px;
     }
 
@@ -133,7 +132,7 @@
       h3 {
         color: #6022A6;
         font-size: 45px;
-        font-weight: 600;
+        font-weight: 500;
         margin-bottom: 34px;
       }
 
@@ -151,7 +150,7 @@
       // overflow: hidden;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      margin-bottom: 71px;
+      margin-bottom: 0;
 
       &.assessment__answer {
         grid-template-columns: repeat(1, 1fr);
@@ -169,8 +168,14 @@
     }
 
     .test_material {
-      padding-top: 13px;
-      padding-bottom: 13px;
+      padding: 0;
+      div {
+        height: 100%;
+        .image_wrapper {
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
     }
 
     .assessmentquestion__content,
@@ -180,7 +185,7 @@
       span {
         color: #6022A6;
         font-size: 20px;
-        font-weight: 600;
+        font-weight: 500;
 
         &.posneg {
           color: #000;
@@ -192,9 +197,10 @@
       h6 {
         color: #6022A6;
         font-size: 25px;
-        font-weight: 400;
+        font-weight: 500;
         line-height: 30px;
         margin: 13px 0px 35px;
+        max-width: 400px;
       }
     }
 
@@ -241,8 +247,20 @@
     .assessment__single__select {
       display: flex;
       align-items: start;
-      gap: 20px;
+      gap: 0;
       width: 90%;
+      input[type="radio"] {
+        width: 20px;
+        height: 20px;
+      }
+      input[type="radio"]:checked::before {
+        width: 15px;
+        height: 15px;
+      }
+      h2 {
+        font-size: 20px;
+        color: #000;
+      }
     }
 
     .question_box {
@@ -253,6 +271,11 @@
       background: #fff;
       padding: 10px 19px;
       border-radius: 8px;
+      margin-left: 20px;
+      min-width: 203px;
+      ol {
+        margin: 0;
+      }
     }
 
     .assessment__select {
@@ -364,6 +387,14 @@
         label {
           align-items: center;
         }
+        input[type="radio"] {
+          width: 20px;
+          height: 20px;
+        }
+        input[type="radio"]:checked::before {
+          width: 15px;
+          height: 15px;
+        }
         // position: relative;
 
         // input {
@@ -441,7 +472,7 @@
   }
 
   .accordion-body {
-    background-color: rgb(242, 242, 242);
+    background-color: #E4E4E4;
   }
 
   .course__content {
@@ -450,8 +481,8 @@
       display: block;
       color: #000;
       padding: 11px 0px;
-      border-bottom: 2px solid #D4D4D4;
-      font-size: 15px;
+      // border-bottom: 2px solid #D4D4D4;
+      font-size: 19px;
 
       &.unavailable {
         color: #000;
@@ -776,8 +807,8 @@ input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 20px; /* Width of the radio button */
-  height: 20px; /* Height of the radio button */
+  width: 27px; /* Width of the radio button */
+  height: 27px; /* Height of the radio button */
   border: 1px solid #707070; /* 1px border */
   border-radius: 4px; /* Slightly rounded edges */
   display: inline-block;
@@ -785,7 +816,7 @@ input[type="radio"] {
   cursor: pointer;
   background-color: transparent; /* No background color */
   vertical-align: middle; /* Ensures alignment with label text */
-  margin-right: 5px;
+  margin-right: 8px;
   padding: 0;
 }
 
@@ -793,10 +824,10 @@ input[type="radio"] {
 input[type="radio"]:checked::before {
   content: "";
   display: block;
-  width: 12px; /* Size of the inner square */
-  height: 12px; /* Size of the inner square */
+  width: 21px; /* Size of the inner square */
+  height: 21px; /* Size of the inner square */
   background-color: #6022A6;
-  border-radius: 2px; /* Slightly rounded inner square */
+  border-radius: 4px; /* Slightly rounded inner square */
   position: absolute;
   top: 50%; /* Center vertically */
   left: 50%; /* Center horizontally */
