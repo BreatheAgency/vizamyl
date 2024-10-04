@@ -18,7 +18,7 @@
             </a>
           <% else %>
             <% if us_locale? %>
-              <a href='<%= us_path %>'><%= t('layouts.application.enrol') %>
+              <a href='<%= us_path(locale: I18n.locale) %>'><%= t('layouts.application.enrol') %>
                 <%= image_tag("right_angle_purple.svg") %>
               </a>
             <% else #Japanese %>

@@ -8,27 +8,73 @@
     </div>
   </div>
 </section> -->
+<!doctype html>
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js <%= locale %>" lang="en"><!--<![endif]-->
+  <%= render partial: 'head' %>
+  <body class='application'>
 
-<section class="gatekeeper__blurb">
-  <div class="container">
-    <div class="country__hero__wrap">
-      <div class="welcome__hero__content country_content">
-        <h3>Vizamyl<sup>TM</sup> (Flutemetamol F 18 Injection)</h3>
-        <h1>Electronic Reader<br> Training Program</h1>
+    <div class="offcanvas-area">
+      <div class="menu-close">
+        <i class="fa fa-times"></i>
+      </div>
+      <div class="offcanvas-menu">
+        <div class="main-menu">
+          <ul class="d-block">
+            <%= render partial: 'menu_links' %>
+          </ul>
+        </div>
       </div>
     </div>
-    <div>
-      <p>This online program was developed for the United States.</p>
-      <p>Click here to proceed if you are a Healthcare Professional from the United States</p>
-      <a href="<%= new_non_european_enrol_url(locale: 'en-us', works_in_us: 'true') %>" class="locale">
-        <p class="language">I am from the United States <%= image_tag("right_angle_purple.svg") %></p>
-      </a>
-      <br/>
-      <br/>
-      <p>Click here to proceed if you are a Healthcare Professional from Hong Kong, Singapore, Australia or any other country</p>
-      <a href="<%= new_non_european_enrol_url(locale: 'en-us') %>" class="locale">
-        <p class="language">I am from Hong Kong, Singapore, Australia or any other country <%= image_tag("right_angle_purple.svg") %></p>
-      </a>
-    </div>
-  </div>
-</section>
+
+    <div class="offcanvas-overlay"></div>
+
+    <header id="header__area" class="header__area">
+      <div class="container">
+        <div class="header__wrap">
+          <a href="#">
+            <%= image_tag('logo.svg') %>
+          </a>
+          <div class="header__nav d-none d-xl-block">
+            <ul>
+              <%= render partial: 'menu_links' %>
+            </ul>
+          </div>
+          <%= render partial: 'vizamyl_logo' %>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" role='main', style="margin-bottom:100px;">
+      <div id="bumper" class="bumper">
+      <section class="gatekeeper__blurb">
+          <div class="container">
+            <div class="country__hero__wrap">
+              <div class="welcome__hero__content country_content">
+                <h3>Vizamyl<sup>TM</sup> (Flutemetamol F 18 Injection)</h3>
+                <h1>Electronic Reader<br> Training Program</h1>
+              </div>
+            </div>
+            <div>
+              <p>This online program was developed for the United States.</p>
+              <p>Click here to proceed if you are a Healthcare Professional from the United States</p>
+              <a href="<%= new_non_european_enrol_url(locale: 'en-us', works_in_us: 'true') %>" class="locale">
+                <p class="language">I am from the United States <%= image_tag("right_angle_purple.svg") %></p>
+              </a>
+              <br/>
+              <br/>
+              <p>Click here to proceed if you are a Healthcare Professional from Hong Kong, Singapore, Australia or any other country</p>
+              <a href="<%= new_non_european_enrol_url(locale: 'en-us') %>" class="locale">
+                <p class="language">I am from Hong Kong, Singapore, Australia or any other country <%= image_tag("right_angle_purple.svg") %></p>
+              </a>
+            </div>
+          </div>
+        </section>
+    </main>
+    <%= render partial: 'footer' %>
+    <%= render partial: 'ga' %>
+    <%= render partial: 'rollbar' %>
+    <%= render partial: 'pingdom' %>
+  </body>
+</html>
+
