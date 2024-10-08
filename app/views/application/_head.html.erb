@@ -13,4 +13,10 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag :libs %>
   <%= render partial: 'favicon' %>
+  <script type="text/javascript">
+    window.railsAssetPath = {
+      'right-arrow-black.png': "<%= asset_path('right-arrow-black.png') %>",
+      // Add more assets as needed
+    };
+  </script>
 </head>
