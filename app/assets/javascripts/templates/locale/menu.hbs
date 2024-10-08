@@ -23,6 +23,7 @@
                     <a {{action 'selectStep' step}}
                       {{bind-attr class=':step-link step.available:available:unavailable'}}>
                       {{{step.title}}}
+                      {{!-- <img src="{{asset-url 'right-arrow-black.png'}}" /> --}}
                     </a>
                   {{/each}}
                 </div>
@@ -52,6 +53,7 @@
                         <a {{action 'selectStep' step}}
                            {{bind-attr class=':step-link step.available:available:unavailable'}}>
                           {{{step.title}}}
+                          <i class="fa-solid fa-chevron-right"></i>
                         </a>
                       {{/each}}
                     </div>

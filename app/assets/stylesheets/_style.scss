@@ -357,7 +357,7 @@ section#country__hero__area {
 footer#footer__area {
   padding-bottom: 18px;
 }
-
+footer,
 .footer__content {
   p, a {
     font-size: 12px;
@@ -799,6 +799,9 @@ p.landing_para {
   padding: 11px 0px;
   // border-bottom: 2px solid #D4D4D4;
   font-size: 19px;
+  > i {
+    font-size: 18px;
+  }
 
   &:last-child {
     border-bottom: none;
