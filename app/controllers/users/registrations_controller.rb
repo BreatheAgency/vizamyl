@@ -16,7 +16,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def update_resource(resource, params)
-    resource.update_attributes(params)
+    resource.update(params)
   end
 
   def configure_permitted_parameters
