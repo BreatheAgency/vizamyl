@@ -1,6 +1,14 @@
 <% locales.each do |locale, country| %>
-  <a href='<%= locale %>' class="locale">
-    <p class="country"><%= country %></p>
-  </a>
+  <% if locale == 'en-us'.to_sym %>
+    <!-- Redirect to the US app for 'en-us' locale -->
+    <a href='https://vizamyl-app-us-9a31217b710a.herokuapp.com' class="locale" >
+      <p class="country"><%= country %></p>
+    </a>
+  <% else %>
+    <!-- Redirect to internal pages for other locales -->
+    <a href='/<%= locale %>' class="locale">
+      <p class="country"><%= country %></p>
+    </a>
+  <% end %>
 <% end %>
 
