@@ -169,12 +169,13 @@
 
     .test_material {
       padding: 0;
-      div {
+      div:not(.handle) {
         height: 100%;
-        .image_wrapper {
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-        }
+      }
+      .image_wrapper {
+        width: 100%;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
       }
     }
 
