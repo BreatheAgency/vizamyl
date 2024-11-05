@@ -201,7 +201,7 @@
         font-weight: 500;
         line-height: 30px;
         margin: 13px 0px 35px;
-        max-width: 400px;
+        max-width: 460px;
       }
     }
 
@@ -269,6 +269,9 @@
       flex-grow: 1;
     }
 
+    div.assessment__list:empty {
+      display: none;
+    }
     .assessment__list {
       background: #fff;
       padding: 10px 19px;
@@ -340,6 +343,10 @@
     .results__page {
       grid-template-columns: repeat(1, 1fr);
       max-width: 822px;
+    }
+
+    .results__page .test_question {
+      width: 66.66%;
     }
 
     .answer__content {

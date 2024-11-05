@@ -4,6 +4,13 @@ Ember.Handlebars.registerHelper('split-updated-body', function (body) {
   }
 
   // Remove the <h2> tag and return the rest of the body
-  var updatedBody = body.replace(/<h2>.*?<\/h2>/, '');
+  var updatedBody = body.replace(/<h2>.*?<\/h2>/, '').trim();
+
+  // Check if the updated body is now empty
+  if (!updatedBody) {
+    return ''; // Return false if no content remains
+  }
+  
+
   return new Ember.Handlebars.SafeString(updatedBody);  // Ensures the remaining HTML is rendered safely
 });
