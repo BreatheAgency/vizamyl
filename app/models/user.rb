@@ -3,13 +3,13 @@ class User < ActiveRecord::Base
                                   .application
                                   .secrets
                                   .invite_codes
-                                  .key({locale: "jp", origin: "jp", type: "default"})
+                                  .key({type: "default"})
 
   US_NATIVE_DEFAULT_INVITE_CODE = Rails
                                    .application
                                    .secrets
                                    .invite_codes
-                                   .key({locale: "en-us", origin: "us", type: "default"})
+                                   .key({type: "default"})
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 

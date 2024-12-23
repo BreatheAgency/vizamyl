@@ -55,7 +55,7 @@ class NonEuropean::EnrolController < ApplicationController
     :marketing_overall_opt_in, :marketing_overall_opt_out,
     :marketing_email_opt_in, :marketing_post_opt_in, :primary_specialty,
     :marketing_representative_opt_in, :terms_and_conditions_opt_in,
-    :institution, :department, :invite_code, :works_in_us, :city_or_state]
+    :institution, :department, :invite_code, :works_in_us, :city_or_state, :origin]
     params.require(:user).permit(permitted_attributes)
   end
 
