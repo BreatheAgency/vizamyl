@@ -1,7 +1,19 @@
-<% locales.each do |locale, country| %>
-  <a href='<%= locale %>' class="locale">
-    <p class="country"><%= country %></p>
-  </a>
-  <hr>
-<% end %>
+<form id="country-selector" action="" method="get" style="padding: 5px;">
+  <label for="countries">Select your country:</label>
+  <select id="countries" name="country_url">
+    <% locales.each do |origin, details| %>
+      <option value="<%= "#{details[:url]}/#{details[:locale]}?origin=#{origin}" %>">
+        <%= details[:country] %>
+      </option>
+    <% end %>
+  </select>
+  <button type="button" onclick="redirectToCountry()">Next</button>
+</form>
 
+<script>
+  function redirectToCountry() {
+    const select = document.getElementById('countries');
+    const selectedUrl = select.value;
+    window.location.href = selectedUrl;
+  }
+</script>

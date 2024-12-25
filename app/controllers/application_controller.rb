@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   helper_method :users_locale_enrol_index_path
   helper_method :has_department?
   helper_method :not_sent_invite_code?
-  helper_method :with_origin
+
 
   def after_sign_in_path_for(resource)
    if resource.is_a?(AdminUser)
@@ -127,23 +127,8 @@ class ApplicationController < ActionController::Base
   end
 
   def set_origin
-    # Set origin from params if provided
-    if params[:origin]
-      RequestStore.store[:origin] = params[:origin]
-    end
-  end
-
-  def with_origin(url)
-    binding.pry
-    origin = RequestStore.store[:origin]
-    if origin
-      uri = URI.parse(url)
-      query = URI.decode_www_form(uri.query || '') # Decode existing query parameters
-      query << ['origin', origin] # Append the origin parameter
-      uri.query = URI.encode_www_form(query) # Rebuild the query string
-      uri.to_s # Return the full URL with the origin parameter
-    else
-      url # Return the original URL if no origin is present
+    if params[:origin].present?
+      session[:origin] = params[:origin]  # Persist origin in session
     end
   end
 
