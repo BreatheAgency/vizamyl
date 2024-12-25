@@ -38,7 +38,7 @@ class User < ActiveRecord::Base
   has_many :progressions, dependent: :destroy
   has_many :steps, through: :progressions
 
-  before_validation :inherit_invitation
+  # before_validation :inherit_invitation
   before_create :create_progressions
   before_save :capitalize_names
   before_save :capitalize_institution
