@@ -157,4 +157,130 @@
   .swiss p {
     padding-right: rem-calc(60);
   }
+
+  .customPage {
+    nav {
+      background-image: none;
+      background-size: 100%;
+      background-color: #6400a0;
+      padding: 0;
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: inherit;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav {
+        width: 802px;
+        padding-left: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        list-style: none;
+      }
+      .global-brand {
+        margin-left: auto;
+        padding-top: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      .navbar a.logo {
+        font-family: 'geinspira';
+        color: #FFF;
+        font-size: 2em;
+        font-weight: normal;
+        line-height: 0;
+        padding: 0;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+      .navbar .global-brand span {
+        display: block;
+        color: #FFF;
+        font-size: 14px;
+        line-height: 18px;
+        sup {
+          top: -0.3em;
+        }
+      }
+    }
+    .map {
+      padding-top: 1.125rem;
+      color: #6400A0;
+      min-height: 400px;
+      padding-left: 20%;
+      padding-right: 20%;
+      position: relative;
+      margin-bottom: 100px;
+      h4 {
+        font-family: "Source Sans 3", serif;
+        margin-top: 10%;
+        margin-bottom: 42px;
+        color: #6400A0;
+        font-size: calc(1.275rem + 0.3vw);
+        line-height: 1.2;
+        font-weight: 500;
+      }
+      p {
+        font-family: "Source Sans 3", serif;
+        margin-top: 3.5rem;
+        color: #6400A0;
+        font-size: 1rem;
+        line-height: normal;
+        font-weight: 400;
+        padding: 0;
+        span.blue {
+          color: #6400A0;
+        }
+      }
+      label {
+        display: none;
+      }
+      select {
+        border-color: rgb(118, 118, 118);
+        color: #000;
+        margin: 0;
+        width: 334px;
+        height: 24px;
+        padding: 0 10px;
+        background-color: #fff;
+        font-weight: 400;
+      }
+      #next-button {
+        background-image: url(/app/assets/images/arrow-right.png);
+        background-size: 47px;
+        background-repeat: no-repeat;
+        background-position: 96% center;
+        width: 157px;
+        color: white;
+        border: none;
+        background-color: #6400a0;
+        height: 56px;
+        text-align: left;
+        padding: 0 6px 0 22px;
+        cursor: pointer;
+        font-family: "Source Sans 3", serif;
+        font-size: 33px;
+        font-weight: 400;
+        position: absolute;
+        bottom: -100px;
+        right: 15px;
+      }
+    }
+    .footer .row {
+      border-top: solid 1px #6400a0;
+      padding: 0 15px;
+      display: flex;
+      p {
+        font-family: "Source Sans 3", serif;
+        line-height: .9em;
+        font-size: 0.8rem;
+        color: #777;
+        margin: 0 0 8px 0;
+      }
+      a {
+        color: #6400a0;
+      }
+    }
+  }
 }

@@ -1,10 +1,44 @@
-<div class='row'>
-  <div class='large-12 large-centered map'>
-    <div style="background: rgba(255,255,255, 0.5);">
-      <h1>Vizamyl<sup class='trade-mark'>&trade;</sup> (Flutemetamol F 18 Injection)</h1>
-      <h2>Electronic Reader Training Program</h2>
-      <p><span class='blue'>This site is intended for medical professionals only.</span><br> To proceed, please select your country.</p>
-      <%= render partial: 'errors/locale_links' %>
+<div class="customPage">
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container ntb">
+      <ul class="nav">
+        <li class="nav-item">
+        </li>
+      </ul>
+      <p class="ms-auto global-brand pt-3">
+        <a class="logo">
+          Vizamyl<sup class="trade-mark">™</sup>
+        </a>
+        <span><span>Flutemetamol (<sup>18</sup>F)</span></span>
+        <span><span>Injection</span></span>
+      </p>
     </div>
+  </nav>
+  <div class='row'>
+    <div class='large-12 large-centered map choose-location'>
+      <h4>Vizamyl<sup class='trade-mark'>&trade;</sup> (Flutemetamol F 18 Injection)</h4>
+      <h4>Electronic Reader Training Program</h4>
+      <%= render partial: 'errors/locale_links' %>
+      <p><span class='blue'>This site is intended for medical professionals only.</span><br> To proceed, please select your country.</p>
+    </div>
+  </div>
+  <div class="container ntb">
+    <footer class="footer">
+      <div class="terms row">
+        <div class="large-6 text-left">
+          <div class="copyright">
+            <p>
+              <a href="/en">International English</a>
+            </p>
+          </div>
+        </div>
+        <div class="large-6 text-right">
+          <p>
+            <a href="/en" >GE Healthcare Representatives Use Only.</a>
+            <div><img id="ge_footer_logo" class="ge_footer_logo" src="/app/assets/images/ge-health-logo.png"></div>
+          </p>
+        </div>
+      </div>
+    </footer>
   </div>
 </div>
