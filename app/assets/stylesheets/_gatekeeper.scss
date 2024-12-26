@@ -247,7 +247,7 @@
         font-weight: 400;
       }
       #next-button {
-        background-image: url(/app/assets/images/arrow-right.png);
+        @include retina-background-image('arrow-right', 69px, 93px);
         background-size: 47px;
         background-repeat: no-repeat;
         background-position: 96% center;
