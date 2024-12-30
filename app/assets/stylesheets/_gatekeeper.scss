@@ -266,6 +266,10 @@
         bottom: -100px;
         right: 15px;
       }
+      #next-button:disabled,
+      #next-button[disabled]{
+        opacity: 0.3;
+      }
     }
     .footer .row {
       border-top: solid 1px #6400a0;
