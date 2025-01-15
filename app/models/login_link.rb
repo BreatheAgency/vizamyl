@@ -27,7 +27,7 @@ class LoginLink
         'es' => { country: 'Spain', url: 'https://stg-www.readvizamyl.com', locale: 'es', origin: 'es' },
         'se' => { country: 'Sweden', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'se' },
         'ch' => { country: 'Switzerland', url: 'https://stg-www.readvizamyl.com', locale: 'ch', origin: 'ch' },
-        'gb' => { country: 'United Kingdom', url: 'https://vizsamyl-app-uk-b6428ad77ff4.herokuapp.com', locale: 'en-gb', origin: 'gb' },
+        'gb' => { country: 'United Kingdom', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'gb' },
         'us' => { country: 'United States', url: 'https://stg-www.readvizamyl.com', locale: 'en-us', origin: 'us' }
       }
     end
