@@ -3,9 +3,12 @@
   <select id="countries" name="country_url" onchange="toggleNextButton()">
     <option value="" selected>Select a country</option> <!-- Default option -->
     <% locales.each do |origin, details| %>
-      <option value="<%= "#{details[:url]}/#{details[:locale]}?origin=#{origin}" %>">
-        <%= details[:country] %>
-      </option>
+      <% locales.each do |origin, details| %>
+        <option 
+          value="<%= origin == 'kr' ? details[:url] : "#{details[:url]}/#{details[:locale]}?origin=#{origin}" %>">
+          <%= details[:country] %>
+        </option>
+      <% end %>
     <% end %>
   </select>
   <button id="next-button" type="button" onclick="redirectToCountry()" disabled>Next</button>

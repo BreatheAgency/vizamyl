@@ -2,7 +2,7 @@ class LoginLink
   class << self
     def col
       {
-        'au' => { country: 'Australia', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'au' },
+        'au' => { country: 'Australia', url: 'https://stg-www.readvizamyl.com', locale: 'en-us', origin: 'au' },
         'at' => { country: 'Austria', url: 'https://stg-www.readvizamyl.com', locale: 'de-at', origin: 'at' },
         'be' => { country: 'Belgium', url: 'https://stg-www.readvizamyl.com', locale: 'be', origin: 'be' },
         'hr' => { country: 'Croatia', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'hr' },
@@ -13,14 +13,14 @@ class LoginLink
         'fr' => { country: 'France', url: 'https://stg-www.readvizamyl.com', locale: 'fr', origin: 'fr' },
         'de' => { country: 'Germany', url: 'https://stg-www.readvizamyl.com', locale: 'de', origin: 'de' },
         'gr' => { country: 'Greece', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'gr' },
-        'hk' => { country: 'Hong Kong', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'hk' },
+        'hk' => { country: 'Hong Kong', url: 'https://stg-www.readvizamyl.com', locale: 'en-us', origin: 'hk' },
         'hu' => { country: 'Hungary', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'hu' },
         'en' => { country: 'International', url: 'https://stg-www.readvizamyl.com', locale: 'en', origin: 'en' },
         'it' => { country: 'Italy', url: 'https://stg-www.readvizamyl.com', locale: 'it', origin: 'it' },
         'jp' => { country: 'Japan', url: 'https://stg-www.readvizamyl.com', locale: 'jp', origin: 'jp' },
         'nl' => { country: 'Netherlands', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'nl' },
         'no' => { country: 'Norway', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'no' },
-        'sg' => { country: 'Singapore', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'sg' },
+        'sg' => { country: 'Singapore', url: 'https://stg-www.readvizamyl.com', locale: 'en-us', origin: 'sg' },
         'sk' => { country: 'Slovakia', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'sk' },
         'si' => { country: 'Slovenia', url: 'https://stg-www.readvizamyl.com', locale: 'si', origin: 'si' },
         'kr' => { country: 'South Korea', url: 'http://www.vizamyl.co.kr', locale: 'kr', origin: 'kr' },
