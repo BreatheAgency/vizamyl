@@ -23,6 +23,15 @@ module Vizamyl
     # Run 'rake -D time' for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
+    config.vizamyl_base_url = case ENV['RACK_ENV']
+    when 'staging'
+      'https://stg-www.readvizamyl.com'
+    when 'production'
+      'https://www.readvizamyl.com'
+    else
+      'http://localhost:3000' # Default for other environments
+    end
+
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :en
