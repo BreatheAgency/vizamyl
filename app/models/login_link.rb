@@ -5,6 +5,7 @@ class LoginLink
         'au' => { country: 'Australia', url: 'https://stg-www.readvizamyl.com', locale: 'en-us', origin: 'au' },
         'at' => { country: 'Austria', url: 'https://stg-www.readvizamyl.com', locale: 'de-at', origin: 'at' },
         'be' => { country: 'Belgium', url: 'https://stg-www.readvizamyl.com', locale: 'be', origin: 'be' },
+        'bg' => { country: 'Bulgaria', url: "https://stg-www.readvizamyl.com", locale: 'bg', origin: 'bg' },
         'hr' => { country: 'Croatia', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'hr' },
         'cz' => { country: 'Czech Republic', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'cz' },
         'dk' => { country: 'Denmark', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'dk' },

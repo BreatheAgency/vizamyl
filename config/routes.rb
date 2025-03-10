@@ -65,6 +65,7 @@ Rails.application.routes.draw do
   get '/ch' => 'static#show', id: 'gatekeeper-swiss'
   get '/us' => 'static#show', id: 'gatekeeper-us'
   get '/si' => 'static#show', id: 'gatekeeper-slovenian'
+  get '/bg' => 'static#show', id: 'gatekeeper-bulgaria'
   get '/*id' => 'static#show', id: 'gatekeeper'
   root to: 'static#show', id: 'gatekeeper'
 end
