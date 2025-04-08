@@ -1,5 +1,6 @@
 <%= simple_form_for(@user, url: non_european_enrol_index_path) do |f| %>
   <%= f.hidden_field :works_in_us, value: @user.works_in_us %>
+  <%= f.hidden_field :origin, value: session[:origin] %>
   <div class="row">
     <div class="small-12 columns">
       <label><%= t('activerecord.attributes.user.salutation') %></label>
