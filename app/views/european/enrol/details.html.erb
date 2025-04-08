@@ -22,6 +22,7 @@
               b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
             end
             %>
+            <%= f.hidden_field :origin, value: session[:origin] %>
             <%= f.input :first_name, required: true %>
             <%= f.input :last_name, required: true %>
             <%= f.input :email, required: true %>

@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_action :set_locale
+  before_action :set_origin
   before_action :redirect_locale
   helper_method :european_locale?
   helper_method :non_european_locale?
@@ -11,6 +12,7 @@ class ApplicationController < ActionController::Base
   helper_method :users_locale_enrol_index_path
   helper_method :has_department?
   helper_method :not_sent_invite_code?
+
 
   def after_sign_in_path_for(resource)
    if resource.is_a?(AdminUser)
@@ -122,6 +124,12 @@ class ApplicationController < ActionController::Base
     end
 
     I18n.locale = RequestStore.store[:desired_locale]
+  end
+
+  def set_origin
+    if params[:origin].present?
+      session[:origin] = params[:origin]  # Persist origin in session
+    end
   end
 
 end

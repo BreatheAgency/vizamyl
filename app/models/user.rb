@@ -3,13 +3,13 @@ class User < ActiveRecord::Base
                                   .application
                                   .secrets
                                   .invite_codes
-                                  .key({locale: "jp", origin: "jp", type: "default"})
+                                  .key({type: "default"})
 
   US_NATIVE_DEFAULT_INVITE_CODE = Rails
                                    .application
                                    .secrets
                                    .invite_codes
-                                   .key({locale: "en-us", origin: "us", type: "default"})
+                                   .key({type: "default"})
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
@@ -189,8 +189,8 @@ class User < ActiveRecord::Base
       self.fast_forward = true
     end
 
-    self.origin = invitation.fetch(:origin)
-    self.locale = invitation.fetch(:locale)
+    # self.origin = invitation.fetch(:origin) #Storing when enrolling
+    # self.locale = invitation.fetch(:locale) #Storing when enrolling
 
     true
   end

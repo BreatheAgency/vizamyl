@@ -10,13 +10,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
   <link rel='dns-prefetch' href='//<%= Rails.application.secrets.asset_host %>'/>
   <link rel='dns-prefetch' href='//<%= Rails.application.secrets.content_host %>'/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <%= stylesheet_link_tag 'libs', media: 'all' %>
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= javascript_include_tag :libs %>
-  <%= render partial: 'favicon' %>
-  <!-- <script type="text/javascript">
-    window.railsAssetPath = {
-      'example.png': "<%= asset_path('example.png') %>",
-      // Add more assets as needed
-    };
-  </script> -->
+  <% if params[:locale].present? && ['file_not_found', 'unprocessable', 'internal_server_error'].exclude?(controller.action_name)%>
+    <%= render partial: 'favicon' %>
+  <% else %>
+    <%= render partial: 'favicon_purple' %>
+  <% end %>
 </head>
