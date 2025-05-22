@@ -9,9 +9,9 @@ en:
         <p><span class='blue'>We’re sorry, the page you were looking for could not be found</span><br> To proceed, please select which country you are from.</p>
     home:
       body_html: |
-        <h1><span>Welcome to the</span> <br>Vizamyl electronic<br> training programme</h1>
-        <p>If you are returning to the course,<br>welcome back and please login.</p>
-        <p>If you would like to begin the course,<br>welcome, and please enrol.</p>
+        <h1>Welcome to the Vizamyl<br> Electronic Reader<br> Training Program</h1>
+        <p>If you are returning to the course,<br><b>welcome back and please login.</b></p>
+        <p>If you would like to begin the course,<br><b>welcome, and please enrol.</b></p>
     references:
       left:
         title: |

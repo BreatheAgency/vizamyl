@@ -2,9 +2,9 @@
 
 /* XXL Device :1200px. */
 @media (min-width: 320px) and (max-width: 1680px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 1370px;
-  }
+  // .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  //   max-width: 1370px;
+  // }
 
   // .header__nav {
   //   ul {
@@ -12,47 +12,47 @@
   //   }
   // }
 
-  .header__wrap {
-    > a {
-      width: 140px;
-    }
+  // .header__wrap {
+  //   > a {
+  //     width: 140px;
+  //   }
 
-    // gap: 40px;
-  }
+  //   // gap: 40px;
+  // }
 
-  .header__logo2 {
-    width: 120px;
-  }
+  // .header__logo2 {
+  //   width: 120px;
+  // }
 
-  .welcome__hero__content h1 {
-    margin-bottom: 18px;
-  }
+  // .welcome__hero__content h1 {
+  //   margin-bottom: 18px;
+  // }
 
   // .welcomecontent h1 {
   //   max-width: 498px;
   // }
 
-  .welcome__content {
-    p {
-      font-size: 29px;
-      line-height: 35px;
-    }
+  // .welcome__content {
+  //   p {
+  //     font-size: 29px;
+  //     line-height: 35px;
+  //   }
 
-    max-width: 450px;
-    // gap: 14px;
-  }
+  //   max-width: 450px;
+  //   // gap: 14px;
+  // }
 
-  section#welcome__hero__area {
-    margin-bottom: 100px;
-  }
+  // section#welcome__hero__area {
+  //   margin-bottom: 100px;
+  // }
 
-  .welcome__hero__btns a {
-    font-size: 29px;
+  // .welcome__hero__btns a {
+  //   font-size: 29px;
 
-    img {
-      width: 12px;
-    }
-  }
+  //   img {
+  //     width: 12px;
+  //   }
+  // }
 
   .welcome__hero__content {
     h3 {
@@ -71,11 +71,11 @@
     font-size: 29px;
   }
 
-  .login__content h2 {
-    font-size: 62px;
-    line-height: 65px;
-    margin-bottom: 84px;
-  }
+  // .login__content h2 {
+  //   font-size: 62px;
+  //   line-height: 65px;
+  //   margin-bottom: 84px;
+  // }
 
   .welcome__hero__content h4 {
     font-size: 30px;
@@ -156,9 +156,9 @@
     margin-top: 0px;
   }
 
-  .welcome__hero__btns.account_btn {
-    margin-top: 18px;
-  }
+  // .welcome__hero__btns.account_btn {
+  //   margin-top: 18px;
+  // }
 
   .account_btn a {
     font-size: 18px;
@@ -235,19 +235,19 @@
 }
 
 @media (min-width: 320px) and (max-width: 1399px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 1140px;
-  }
+  // .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  //   max-width: 1140px;
+  // }
 
-  .header__nav {
-    ul {
-      // gap: 20px;
-    }
+  // .header__nav {
+  //   ul {
+  //     // gap: 20px;
+  //   }
 
-    > ul li a {
-      font-size: 15px;
-    }
-  }
+  //   > ul li a {
+  //     font-size: 15px;
+  //   }
+  // }
 
   // .header__wrap {
   //   gap: 20px;
@@ -257,22 +257,22 @@
     width: 115px;
   }
 
-  header#header__area {
-    padding: 12px 0px;
-  }
+  // header#header__area {
+  //   padding: 12px 0px;
+  // }
 
   // section#welcome__hero__area {
   //   padding-top: 98px;
   // }
 
-  .login__content h2 {
-    font-size: 50px;
-    line-height: 55px;
-    margin-bottom: 55px;
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 40px;
-  }
+  // .login__content h2 {
+  //   font-size: 50px;
+  //   line-height: 55px;
+  //   margin-bottom: 55px;
+  //   font-size: 40px;
+  //   line-height: 48px;
+  //   margin-bottom: 40px;
+  // }
 
   .input_label {
     gap: 6px;
@@ -282,16 +282,16 @@
     }
   }
 
-  .remember__forget {
-    margin: 22px 22px 70px 0;
-  }
+  // .remember__forget {
+  //   margin: 22px 22px 70px 0;
+  // }
 
   .remember {
     label {
       font-size: 18px;
     }
 
-    gap: 8px;
+    // gap: 8px;
   }
 
   .landing_para {
@@ -328,23 +328,23 @@
 
 /* LG Device :1200px. */
 @media (min-width: 320px) and (max-width: 1199px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 960px;
-  }
+  // .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  //   max-width: 960px;
+  // }
 
-  .welcome__hero__content h1 {
-    font-size: 70px;
-    line-height: 80px;
-  }
+  // .welcome__hero__content h1 {
+  //   font-size: 70px;
+  //   line-height: 80px;
+  // }
 
-  .welcome__content p {
-    font-size: 20px;
-    line-height: 27px;
-  }
+  // .welcome__content p {
+  //   font-size: 20px;
+  //   line-height: 27px;
+  // }
 
-  .welcome__hero__btns {
-    gap: 50px;
-  }
+  // .welcome__hero__btns {
+  //   gap: 50px;
+  // }
 
   // .welcome__hero__wrap {
   //   flex-direction: column;
@@ -352,29 +352,29 @@
   //   gap: 30px;
   // }
 
-  .welcome__hero__btns {
-    a {
-      font-size: 26px;
-      gap: 4px;
+  // .welcome__hero__btns {
+  //   a {
+  //     font-size: 26px;
+  //     gap: 4px;
 
-      img {
-        width: 10px;
-      }
-    }
+  //     img {
+  //       width: 10px;
+  //     }
+  //   }
 
-    gap: 30px;
-  }
+  //   gap: 30px;
+  // }
 
-  .welcome__hero__content {
-    h3 {
-      font-size: 40px;
-      line-height: 50px;
-    }
+  // .welcome__hero__content {
+  //   h3 {
+  //     font-size: 40px;
+  //     line-height: 50px;
+  //   }
 
-    p {
-      font-size: 22px;
-    }
-  }
+  //   p {
+  //     font-size: 22px;
+  //   }
+  // }
 
   .country__names a {
     font-size: 22px;
@@ -391,9 +391,9 @@
     }
   }
 
-  .welcome__hero__content h4 {
-    font-size: 25px;
-  }
+  // .welcome__hero__content h4 {
+  //   font-size: 25px;
+  // }
 
   section#landing__area {
     padding-top: 100px;
@@ -454,20 +454,20 @@
 
 /* MD Device :768px. */
 @media (min-width: 320px) and (max-width: 991px) {
-  .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 720px;
-  }
+  // .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  //   max-width: 720px;
+  // }
 
-  .welcome__hero__content {
-    h3 {
-      font-size: 30px;
-    }
+  // .welcome__hero__content {
+  //   h3 {
+  //     font-size: 30px;
+  //   }
 
-    p {
-      font-size: 18px;
-      line-height: 25px;
-    }
-  }
+  //   p {
+  //     font-size: 18px;
+  //     line-height: 25px;
+  //   }
+  // }
 
   .country__names a {
     font-size: 16px;
@@ -479,11 +479,11 @@
   //   padding-top: 100px;
   // }
 
-  .login__content h2 {
-    font-size: 35px;
-    line-height: 40px;
-    margin-bottom: 30px;
-  }
+  // .login__content h2 {
+  //   font-size: 35px;
+  //   line-height: 40px;
+  //   margin-bottom: 30px;
+  // }
 
   .checkbox {
     width: 17px;
@@ -555,20 +555,20 @@
     padding-top: 68px;
   }
 
-  .welcome__hero__content h1 {
-    font-size: 60px;
-    line-height: 70px;
-    margin-bottom: 18px;
-  }
+  // .welcome__hero__content h1 {
+  //   font-size: 60px;
+  //   line-height: 70px;
+  //   margin-bottom: 18px;
+  // }
 
-  .welcome__content p {
-    font-size: 18px;
-    line-height: 25px;
-  }
+  // .welcome__content p {
+  //   font-size: 18px;
+  //   line-height: 25px;
+  // }
 
-  .header__wrap > a > svg {
-    width: 128px;
-  }
+  // .header__wrap > a > svg {
+  //   width: 128px;
+  // }
 
   .header__logo2 {
     width: 85px;
@@ -578,18 +578,18 @@
     margin-left: 40px;
   }
 
-  header#header__area {
-    padding: 8px 0px;
-  }
+  // header#header__area {
+  //   padding: 8px 0px;
+  // }
 
-  .global_brand {
-    a {
-      margin-right: 10px;
-    }
-    span {
-      display: none;
-    }
-  }
+  // .global_brand {
+  //   a {
+  //     margin-right: 10px;
+  //   }
+  //   span {
+  //     display: none;
+  //   }
+  // }
 
   // section#welcome__hero__area {
   //   padding-top: 80px;
@@ -608,24 +608,24 @@
       margin-bottom: 26px;
     }
 
-    &#login__area {
-      padding-top: 74px;
-    }
+    // &#login__area {
+    //   padding-top: 74px;
+    // }
   }
 
-  .login__content h2 {
-    font-size: 30px;
-    line-height: 35px;
-    margin-bottom: 22px;
-  }
+  // .login__content h2 {
+  //   font-size: 30px;
+  //   line-height: 35px;
+  //   margin-bottom: 22px;
+  // }
 
   .input_label input {
     height: 40px;
   }
 
-  .remember__forget {
-    margin: 10px 10px 40px 0;
-  }
+  // .remember__forget {
+  //   margin: 10px 10px 40px 0;
+  // }
 
   .forget a {
     font-size: 15px;
@@ -635,9 +635,9 @@
     font-size: 16px;
   }
 
-  .welcome__hero__content h4 {
-    font-size: 20px;
-  }
+  // .welcome__hero__content h4 {
+  //   font-size: 20px;
+  // }
 
   .landing_para {
     font-size: 16px !important;
@@ -732,35 +732,35 @@
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
-  .welcome__hero__content h1 {
-    font-size: 40px;
-    line-height: 50px;
-  }
+  // .welcome__hero__content h1 {
+  //   font-size: 40px;
+  //   line-height: 50px;
+  // }
 
-  .welcome__content p {
-    font-size: 16px;
-    line-height: 24px;
-  }
+  // .welcome__content p {
+  //   font-size: 16px;
+  //   line-height: 24px;
+  // }
 
-  .welcome__hero__btns a {
-    font-size: 20px;
-  }
+  // .welcome__hero__btns a {
+  //   font-size: 20px;
+  // }
 
   .country__names {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 10px;
   }
 
-  .welcome__hero__content h3 {
-    font-size: 18px;
-    line-height: 27px;
-  }
+  // .welcome__hero__content h3 {
+  //   font-size: 18px;
+  //   line-height: 27px;
+  // }
 
-  .login__content h2 {
-    font-size: 25px;
-    line-height: 30px;
-    margin-bottom: 18px;
-  }
+  // .login__content h2 {
+  //   font-size: 25px;
+  //   line-height: 30px;
+  //   margin-bottom: 18px;
+  // }
 
   .questionscroll_img {
     height: 378px;
@@ -775,7 +775,116 @@
 
 /* SM Small Device :576px. */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+  // .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  //   max-width: 540px;
+  // }
+}
+
+
+
+// Mine Custom styling for rebranding
+
+@media (min-width: 580px) {
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  h3 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  #bumper {
+    padding: 50px 0;
+  }
+
+  .login__content h2 {
+    margin-bottom: 50px;
+  }
+  .login__content p {
+    font-size: 28px;
+    line-height: 35px;
+    margin-bottom: 40px;
+    max-width: 400px;
+  }
+
+  .welcome__hero__content.welcomecontent {
+    gap: 40px;
+
+    > p {
+      font-size: 28px;
+      line-height: 35px;
+    }
+  }
+  .welcome__hero__btns {
+    gap: 30px;
+  }
+
+  footer {
+    .footer__wrap {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 641px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-    max-width: 540px;
+    padding: 0 25px;
+  }
+
+  // Header nav
+  .header__nav {
+    ul li a {
+      font-size: 18px;
+      padding: 15px 0;
+    }
+  }
+
+}
+
+@media (min-width: 992px) {
+  // Header nav
+  .header__nav {
+    ul {
+      li {
+        position: relative;
+        &:not(:last-child):after {
+          content: "|";
+          position: absolute;
+          top: 50%;
+          right: -1px;
+          font-size: 12px;
+          color: #fff;
+          transform: translateY(-50%);
+          font-size: 16px;
+        }
+        a {
+          font-size: 14px;
+          padding: 0 8px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  main {
+    margin-top: 104px;
+  }
+  .global_brand {
+    span {
+      display: block;
+      color: #FFF;
+      font-size: 14px;
+      line-height: normal;
+      font-weight: 600;
+      sup {
+        top: -3px;
+      }
+    }
   }
 }

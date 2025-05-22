@@ -19,9 +19,10 @@
             <% end %>
 
             <div class="submit d-flex justify-content-end">
-              <%= button_tag(type: 'submit', class: 'login') do %>
+              <%= button_tag(type: 'submit', class: 'login btn btn-primary') do %>
                 <%= t('course.actions.next') %>
-                <%= image_tag("right_angle_purple.svg") %>
+                <!-- <%= image_tag("right_angle_purple.svg") %> -->
+                <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
               <% end %>
             </div>
           <% end %>

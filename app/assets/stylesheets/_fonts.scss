@@ -1,38 +1,143 @@
+// @font-face {
+//     font-family: 'geinspira';
+//     src: font-url('geinsprg-webfont.eot');
+//     src: font-url('geinsprg-webfont.eot?#iefix') format('embedded-opentype'),
+//          font-url('geinsprg-webfont.woff') format('woff'),
+//          font-url('geinsprg-webfont.ttf') format('truetype');
+//     font-style: normal;
+//     font-weight: normal;
+// }
+// @font-face {
+//     font-family: 'geinspira';
+//     src: font-url('geinspit-webfont.eot');
+//     src: font-url('geinspit-webfont.eot?#iefix') format('embedded-opentype'),
+//          font-url('geinspit-webfont.woff') format('woff'),
+//          font-url('geinspit-webfont.ttf') format('truetype');
+//     font-style: italic;
+//     font-weight: normal;
+// }
+// @font-face {
+//     font-family: 'geinspira';
+//     src: font-url('geinspbd-webfont.eot');
+//     src: font-url('geinspbd-webfont.eot?#iefix') format('embedded-opentype'),
+//          font-url('geinspbd-webfont.woff') format('woff'),
+//          font-url('geinspbd-webfont.ttf') format('truetype');
+//     font-style: normal;
+//     font-weight: bold;
+// }
+// @font-face {
+//     font-family: 'geinspira';
+//     src: font-url('geinspbi-webfont.eot');
+//     src: font-url('geinspbi-webfont.eot?#iefix') format('embedded-opentype'),
+//          font-url('geinspbi-webfont.woff') format('woff'),
+//          font-url('geinspbi-webfont.ttf') format('truetype');
+//     font-style: italic;
+//     font-weight: bold;
+// }
+
+
 @font-face {
-    font-family: 'geinspira';
-    src: font-url('geinsprg-webfont.eot');
-    src: font-url('geinsprg-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('geinsprg-webfont.woff') format('woff'),
-         font-url('geinsprg-webfont.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-BlackIt.woff2') format('woff2'),
+  url('SourceSansPro-BlackIt.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'geinspira';
-    src: font-url('geinspit-webfont.eot');
-    src: font-url('geinspit-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('geinspit-webfont.woff') format('woff'),
-         font-url('geinspit-webfont.ttf') format('truetype');
-    font-style: italic;
-    font-weight: normal;
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-Black.woff2') format('woff2'),
+  url('SourceSansPro-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'geinspira';
-    src: font-url('geinspbd-webfont.eot');
-    src: font-url('geinspbd-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('geinspbd-webfont.woff') format('woff'),
-         font-url('geinspbd-webfont.ttf') format('truetype');
-    font-style: normal;
-    font-weight: bold;
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-Bold.woff2') format('woff2'),
+  url('SourceSansPro-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
-    font-family: 'geinspira';
-    src: font-url('geinspbi-webfont.eot');
-    src: font-url('geinspbi-webfont.eot?#iefix') format('embedded-opentype'),
-         font-url('geinspbi-webfont.woff') format('woff'),
-         font-url('geinspbi-webfont.ttf') format('truetype');
-    font-style: italic;
-    font-weight: bold;
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-ExtraLight.woff2') format('woff2'),
+  url('SourceSansPro-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-BoldIt.woff2') format('woff2'),
+  url('SourceSansPro-BoldIt.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-ExtraLightIt.woff2') format('woff2'),
+  url('SourceSansPro-ExtraLightIt.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-It.woff2') format('woff2'),
+  url('SourceSansPro-It.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-Regular.woff2') format('woff2'),
+  url('SourceSansPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-LightIt.woff2') format('woff2'),
+  url('SourceSansPro-LightIt.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-Light.woff2') format('woff2'),
+  url('SourceSansPro-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-SemiboldIt.woff2') format('woff2'),
+  url('SourceSansPro-SemiboldIt.woff') format('woff');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('SourceSansPro-Semibold.woff2') format('woff2'),
+  url('SourceSansPro-Semibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 /*

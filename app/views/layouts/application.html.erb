@@ -22,13 +22,17 @@
     <header id="header__area" class="header__area">
       <div class="container">
         <div class="header__wrap">
-          <a href="#">
+          <!-- <a href="#">
             <%= image_tag('logo.svg') %>
-          </a>
+          </a> -->
           <div class="header__nav d-none d-xl-block">
             <ul>
               <%= render partial: 'menu_links' %>
             </ul>
+          </div>
+          
+          <div class="burger_menu d-xl-none d-block">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
           </div>
           <%= render partial: 'vizamyl_logo' %>
         </div>
