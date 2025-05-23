@@ -51,21 +51,6 @@ main {
   height: -webkit-fill-available;
 }
 
-main#main {
-  section.download__area {
-    .download__content {
-      .resource__file span {
-        font-weight: 500;
-        margin-bottom: 30px;
-        display: block;
-      }
-      .resource__file {
-        margin-bottom: 15px;
-      }
-    }
-  }
-}
-
 ul {
   padding: 0;
   margin: 0;
@@ -721,9 +706,9 @@ footer {
     color: #000;
     input[type="checkbox"] {
       border-radius: 4px;
-      min-width: 27px;
-      height: 27px;
-      margin-right: 11px;
+      min-width: 20px;
+      height: 20px;
+      margin-right: 10px;
       vertical-align: middle;
       border: 1px solid #707070;
     }
@@ -1072,82 +1057,97 @@ p.landing_para {
 
 /*===================== MY-ACCOUNT CSS AREA START =====================*/
 
-.account__content h2,
-.account__form h2,
-.contact__content h2,
-.reference__content h2 {
-  font-size: 62px;
-  color: #6022A6;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
+#account__area {
+  .account__wrap {
+    margin-bottom: 30px;
+    
+    h1 {
+      margin-bottom: 15px;
+    }
+    
+    .account__content {
+      p {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 15px;
+      }
 
-.account__content p {
-  font-size: 20px;
-  line-height: 26px;
-  margin-bottom: 15px;
-}
+      p.accountp1 {
+        margin-bottom: 15px;
+      }
 
-p.accountp1 {
-  margin-bottom: 15px;
-}
+      p.accountp2 {
+        margin-bottom: 16px;
+      }
 
-.account__content h6 {
-  font-size: 25px;
-  font-weight: 600;
-  margin-bottom: 23px;
-}
+      p.accountp3 {
+        color: #A9A9A9;
+        font-size: 16px;
+      }
+      
+      p.accountp4 {
+        margin-top: 21px;
+      }
 
-p.accountp2 {
-  margin-bottom: 16px;
-}
+    }
 
-.remember.accountcheck {
-  margin: 21px 0px;
-  gap: 13px;
-
-  label {
-    color: #6022A6;
-    font-size: 17px;
-  }
-}
-
-
-.edit_user {
-  .marketing_options {
-    .form-check {
-      margin: 0px;
+    .remember.accountcheck {
+      margin: 10px 0px;
+      gap: 13px;
+    
+      label {
+        color: #6022A6;
+        font-size: 15px;
+      }
+    }
+    
+    .edit_user {
+      .marketing_options {
+        .form-check {
+          margin: 0px;
+        }
+      }
+      .form-check {
+        margin: 21px 0px;
+        gap: 13px;
+      }
+      label {
+        color: #6022A6;
+        font-size: 15px;
+      }
+    }
+    
+    .account__solution {
+      > span {
+        font-size: 25px;
+        font-weight: 400;
+        line-height: 30px;
+        color: #000;
+        margin-bottom: 15px;
+        display: block;
+        label {
+          font-size: 20px;
+          color: #000;
+          display: inline-flex;
+          align-items: center;
+        }
+      }
+      div.input {
+        margin-bottom: 20px;
+        label {
+          color: #000;
+          font-size: 20px;
+        }
+      }
     }
   }
 }
 
-.edit_user {
-  .form-check {
-    margin: 21px 0px;
-    gap: 13px;
-  }
-  label {
-    color: #6022A6;
-    font-size: 17px;
-  }
-}
-
-p.accountp3 {
-  color: #A9A9A9;
-  font-size: 16px;
-}
-
-p.accountp4 {
-  margin-top: 21px;
-}
-
-.account__wrap {
-  margin-bottom: 137px;
-}
-
-.account__content {
-  max-width: 454px;
-}
+// .account__content h6 {
+//   font-size: 25px;
+//   font-weight: 600;
+//   margin-bottom: 23px;
+// }
 
 .solution__check {
   margin-top: 7px;
@@ -1155,30 +1155,6 @@ p.accountp4 {
   display: flex;
   align-items: center;
   gap: 16px;
-}
-
-.account__solution {
-  > span {
-    font-size: 25px;
-    font-weight: 400;
-    line-height: 30px;
-    color: #000;
-    margin-bottom: 15px;
-    display: block;
-    label {
-      font-size: 20px;
-      color: #000;
-      display: inline-flex;
-      align-items: center;
-    }
-  }
-  div.input {
-    margin-bottom: 20px;
-    label {
-      color: #000;
-      font-size: 20px;
-    }
-  }
 }
 
 .account_btn {
@@ -1190,18 +1166,14 @@ p.accountp4 {
 /*===================== CONTACT CSS AREA START =====================*/
 
 .contact__content {
-  h2 {
-    color: #6022A6;
-    font-weight: 600;
-    font-size: 47px;
-    font-weight: 400;
-    line-height: 48px;
-    margin-bottom: 35px;
+  margin-bottom: 30px;
+
+  h1 {
+    margin-bottom: 15px;
   }
   p {
-    font-size: 20px;
-    line-height: 28px;
-    margin-top: 18px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -1269,10 +1241,50 @@ section#video__area {
 
 /*===================== REFERENCE CSS AREA START =====================*/
 
-.reference__content p {
-  font-size: 17px;
-  line-height: 26px;
-  margin-bottom: 12px;
+.reference__content {
+  margin-bottom: 30px;
+  
+  h1,
+  h2 {
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 10px;
+  }
+
+  .resource__file span {
+    margin-bottom: 15px;
+    display: block;
+    font-size: 20px;
+  }
+  // .resource__file {
+  //   margin-bottom: 15px;
+  // }
+  
+  .resource__file__card {
+    background: #6022A6;
+    border-radius: 12px;
+    width: 250px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    margin-bottom: 40px;
+  
+    img {
+      width: 60px;
+    }
+  
+    a {
+      color: #fff;
+      font-size: 20px;
+      text-decoration: underline;
+    }
+  }
 }
 
 .standerd_contents {
@@ -1284,41 +1296,11 @@ section#video__area {
   }
 }
 
-.reference__content {
-  margin-bottom: 80px;
-
-  p:nth-child(2) {
-    margin-top: 23px;
-  }
-}
-
-.resource__file span {
-  font-size: 25px;
-  color: #000;
-}
-
-.resource__file__card {
-  background: #6022A6;
-  border-radius: 12px;
-  width: 302px;
-  height: 130px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 17px;
-  margin-bottom: 40px;
-
-  img {
-    width: 82px;
-  }
-
-  a {
-    color: #fff;
-    font-size: 25px;
-    font-weight: 300;
-    text-decoration: underline;
-  }
-}
+// .reference__content {
+//   // p:nth-child(2) {
+//   //   margin-top: 23px;
+//   // }
+// }
 
 // .resource__download {
 //   display: flex;
