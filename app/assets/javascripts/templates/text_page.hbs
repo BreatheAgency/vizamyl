@@ -5,6 +5,12 @@
       <p>{{{body}}}</p>
     </div>
     <div class="col-md">
+      <div class="page__select__next__prev">
+        <a class="btn btn-primary" {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' step}}>
+          {{i18n course.actions.next}}
+          <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+        </a>
+      </div>
     </div>
   </div>
 
@@ -13,12 +19,6 @@
       <div class='page-abbreviations'>
         <p>{{{abbreviations}}}</p>
       </div>
-    </div>
-    <div class="page__select__next__prev py-2">
-      <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' step}}>
-        {{i18n course.actions.next}}
-        <i class="fa-solid fa-angle-right"></i>
-      </a>
     </div>
   </div>
 </div>

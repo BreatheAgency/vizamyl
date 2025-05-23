@@ -55,11 +55,11 @@
   // }
 
   .welcome__hero__content {
-    h3 {
-      font-size: 45px;
-      line-height: 55px;
-      margin-bottom: 20px;
-    }
+    // h3 {
+    //   font-size: 45px;
+    //   line-height: 55px;
+    //   margin-bottom: 20px;
+    // }
 
     // p {
     //   font-size: 24px;
@@ -77,10 +77,10 @@
   //   margin-bottom: 84px;
   // }
 
-  .welcome__hero__content h4 {
-    font-size: 30px;
-    margin-bottom: 6px;
-  }
+  // .welcome__hero__content h4 {
+  //   font-size: 30px;
+  //   margin-bottom: 6px;
+  // }
 
   .landing__enroll a {
     font-size: 24px;
@@ -168,17 +168,17 @@
     }
   }
 
-  .page__select__next__prev {
-    a {
-      font-size: 29px;
+  // .page__select__next__prev {
+  //   a {
+  //     font-size: 29px;
 
-      img {
-        width: 11px;
-      }
-    }
+  //     img {
+  //       width: 11px;
+  //     }
+  //   }
 
-    margin-bottom: 10px;
-  }
+  //   margin-bottom: 10px;
+  // }
 
   // .assessment__wrap {
   //   margin-top: 15px;
@@ -229,9 +229,9 @@
     height: 573px;
   }
 
-  .coursemenu__cards {
-    margin-bottom: 100px;
-  }
+  // .coursemenu__cards {
+  //   margin-bottom: 100px;
+  // }
 }
 
 @media (min-width: 320px) and (max-width: 1399px) {
@@ -301,9 +301,9 @@
     max-width: 653px !important;
   }
 
-  .coursemenu__wrap {
-    margin-bottom: 80px;
-  }
+  // .coursemenu__wrap {
+  //   margin-bottom: 80px;
+  // }
 
   .account__content h2, .account__form h2, .reference__content h2 {
     font-size: 40px;
@@ -498,18 +498,18 @@
     margin-top: 10px;
   }
 
-  .page__select__next__prev {
-    margin-bottom: 8px;
+  // .page__select__next__prev {
+  //   margin-bottom: 8px;
 
-    a {
-      font-size: 20px;
-      gap: 4px;
+  //   a {
+  //     font-size: 20px;
+  //     gap: 4px;
 
-      img {
-        width: 7px;
-      }
-    }
-  }
+  //     img {
+  //       width: 7px;
+  //     }
+  //   }
+  // }
 
   .test__report__field {
     gap: 18px;
@@ -527,18 +527,18 @@
     height: 494px;
   }
 
-  .course__content > table tbody tr td p {
-    font-size: 16px;
-    max-width: 60px;
+  // .course__content > table tbody tr td p {
+  //   font-size: 16px;
+  //   max-width: 60px;
 
-    img {
-      width: 7px;
-    }
-  }
+  //   img {
+  //     width: 7px;
+  //   }
+  // }
 
-  .coursemenu__cards {
-    margin-bottom: -20px;
-  }
+  // .coursemenu__cards {
+  //   margin-bottom: -20px;
+  // }
 }
 
 /* SM Small Device :320px. */
@@ -722,13 +722,13 @@
     gap: 8px;
   }
 
-  .course__content {
-    > table {
-      width: 580px;
-    }
+  // .course__content {
+  //   > table {
+  //     width: 580px;
+  //   }
 
-    overflow-x: scroll;
-  }
+  //   overflow-x: scroll;
+  // }
 }
 
 @media (min-width: 320px) and (max-width: 575px) {
@@ -799,21 +799,35 @@
   }
 
   #bumper {
-    padding: 50px 0;
+    padding-top: 50px;
   }
 
-  .login__content h2 {
-    margin-bottom: 50px;
-  }
-  .login__content p {
-    font-size: 28px;
-    line-height: 35px;
-    margin-bottom: 40px;
-    max-width: 400px;
+  #course {
+    .page.text-page {
+      margin-bottom: 50px;
+    }
+  }  
+
+  .login__content {
+    h2 {
+      margin-bottom: 50px;
+    }
+    
+    p {
+      font-size: 28px;
+      line-height: 35px;
+      margin-bottom: 40px;
+      max-width: 400px;
+    }
+    
+    .login__part {
+      margin-bottom: 50px;
+    }
   }
 
   .welcome__hero__content.welcomecontent {
     gap: 40px;
+    margin-bottom: 50px;
 
     > p {
       font-size: 28px;
@@ -824,6 +838,13 @@
     gap: 30px;
   }
 
+  .coursemenu__cards {
+    margin-bottom: 50px;
+    .accordion {
+      padding: 20px 30px;
+    }
+  }
+
   footer {
     .footer__wrap {
       flex-direction: row;
@@ -832,7 +853,7 @@
   }
 }
 
-@media (min-width: 641px) {
+@media (min-width: 768px) {
   .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
     padding: 0 25px;
   }
@@ -843,6 +864,36 @@
       font-size: 18px;
       padding: 15px 0;
     }
+  }
+
+  .progress_indicator {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+    
+    h4 {
+      font-size: 18px;
+      margin-bottom: 0;
+    }
+
+    .progress_wrapper {
+      ul {
+        li {
+          span {
+            font-size: 14px;
+            padding: 5px 12px;
+          }
+        }
+      }
+      .progress-state {
+        margin-left: 30px;
+      }
+    }
+  }
+  
+  .page__select__next__prev {
+    justify-content: center;
   }
 
 }
@@ -870,11 +921,24 @@
       }
     }
   }
+
+  .progress_indicator {
+    .progress_wrapper {
+      ul {
+        li {
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }
 @media (min-width: 1200px) {
   main {
     margin-top: 104px;
   }
+
   .global_brand {
     span {
       display: block;

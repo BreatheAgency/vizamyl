@@ -16,13 +16,16 @@
 <header id="header__area" class="header__area">
   <div class="container">
     <div class="header__wrap">
-      <a href='/{{unbound currentLocale}}'>
+      {{!-- <a href='/{{unbound currentLocale}}'>
         {{partial 'logo1-svg'}}
-      </a>
+      </a> --}}
       <div class="header__nav d-none d-xl-block">
         <ul>
           {{partial 'menu_links'}}
         </ul>
+      </div>
+      <div class="burger_menu d-xl-none d-block">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
       </div>
       <div class="vizamyl_logo">
         <div class="logo_text">
@@ -31,9 +34,6 @@
             {{{i18n layouts.application.logo.2_html}}}
             {{{i18n layouts.application.logo.3_html}}}
           </p>
-        </div>
-        <div class="burger_menu d-xl-none d-block">
-          <a href="#"><i class="fa-solid fa-bars"></i></a>
         </div>
       </div>
     </div>

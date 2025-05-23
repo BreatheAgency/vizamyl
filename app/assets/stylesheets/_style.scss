@@ -8,6 +8,10 @@
   font-family: 'Source Sans Pro';
   font-weight: normal;
 }
+html,
+body {
+  height: 100%;
+}
 
 body {
   font-family: 'Source Sans Pro';
@@ -15,7 +19,51 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+}
+
+body > .ember-view {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  #bumper,
+  .course__wrap {
+    height: 100%;
+  }
+  .course__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+main {
+  margin-top: 68px;
+  flex: 1;
+}
+#bumper {
+  padding-top: 30px;
+}
+
+.mainPage {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  height: -webkit-fill-available;
+}
+
+main#main {
+  section.download__area {
+    .download__content {
+      .resource__file span {
+        font-weight: 500;
+        margin-bottom: 30px;
+        display: block;
+      }
+      .resource__file {
+        margin-bottom: 15px;
+      }
+    }
+  }
 }
 
 ul {
@@ -33,7 +81,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'Source Sans Pro';
   font-weight: 400;
   color: #000;
-  margin: 0;
+  margin-bottom: 10px;
   padding: 0;
 }
 h1 {
@@ -181,10 +229,6 @@ img {
   max-width: 1050px;
   margin: 0 auto;
   padding: 0 15px;
-}
-
-#bumper {
-  padding: 30px 0;
 }
 
 /*===================== REUSABLE CSS AREA END =====================*/
@@ -414,42 +458,49 @@ header#header__area {
 /*===================== HEADER CSS AREA END =====================*/
 
 /*===================== COUNTRY-HERO CSS AREA START =====================*/
+section#country__area {
+  margin-bottom: auto;
+}
 
 section#country__hero__area {
   background: #6022A6;
-  padding: 58px 0px;
+  padding: 50px 0px 34px;
   margin-bottom: 26px;
-}
+  
+  .welcome__hero__content {
+    > * {
+      color: #fff;
+    }
 
-.welcome__hero__content {
-  // h3 {
-  //   font-size: 50px;
-  //   line-height: 93px;
-  //   font-weight: 400;
-  // }
-
-  // color: #ffffff;
-
-  // > {
-  //   h1 {
-  //     font-size: 101px;
-  //     font-weight: 400;
-  //     line-height: 98px;
-  //     margin-bottom: 35px;
-  //     span {
-  //       font-size: 46px;
-  //       font-weight: 400;
-  //       line-height: 48px;
-  //     }
-  //   }
-
-  //   p {
-  //     font-size: 29px;
-  //     font-weight: 300;
-  //     line-height: 40px;
-  //     max-width: 668px;
-  //   }
-  // }
+    // h3 {
+    //   font-size: 50px;
+    //   line-height: 93px;
+    //   font-weight: 400;
+    // }
+  
+    // color: #ffffff;
+  
+    // > {
+    //   h1 {
+    //     font-size: 101px;
+    //     font-weight: 400;
+    //     line-height: 98px;
+    //     margin-bottom: 35px;
+    //     span {
+    //       font-size: 46px;
+    //       font-weight: 400;
+    //       line-height: 48px;
+    //     }
+    //   }
+  
+    //   p {
+    //     font-size: 29px;
+    //     font-weight: 300;
+    //     line-height: 40px;
+    //     max-width: 668px;
+    //   }
+    // }
+  }
 }
 
 /*===================== COUNTRY-HERO CSS AREA END =====================*/
@@ -539,6 +590,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-bottom: 30px;
 
   > h1 {
     margin-bottom: 0;
@@ -618,23 +670,30 @@ footer {
 /*===================== WELCOME-HERO CSS AREA END =====================*/
 
 /*===================== LOGIN-AREA CSS AREA START =====================*/
-.login__content h2 {
-  margin-bottom: 30px;
-}
-
-.login__content p {
-  font-size: 20px;
-  // color: #000;
-  // font-weight: 300;
-  line-height: 30px;
-  max-width: 300px;
-}
-
-.login__part form {
-  // margin-top: 30px;
-  // margin-bottom: 123px;
-  div.input:not(.user_remember_me) {
-    margin-bottom: 20px;
+.login__content {
+  h2 {
+    margin-bottom: 30px;
+  }
+  
+  p {
+    font-size: 20px;
+    // color: #000;
+    // font-weight: 300;
+    line-height: 30px;
+    max-width: 300px;
+  }
+  
+  .login__part {
+    max-width: 628px;
+    margin-bottom: 30px;
+  
+    form {
+      // margin-top: 30px;
+      // margin-bottom: 123px;
+      div.input:not(.user_remember_me) {
+        margin-bottom: 20px;
+      }
+    }
   }
 }
 
@@ -690,10 +749,6 @@ footer {
 
 .input.email.user_email {
   margin-bottom: 20px;
-}
-
-.login__part {
-  max-width: 628px;
 }
 
 .input_label {
@@ -850,11 +905,11 @@ footer {
 //   margin-bottom: 200px;
 // }
 
-.welcome__hero__content h4 {
-  color: #6022A6;
-  font-size: 46px;
-  font-weight: 600;
-}
+// .welcome__hero__content h4 {
+//   color: #6022A6;
+//   font-size: 46px;
+//   font-weight: 600;
+// }
 
 p.landing_para {
   color: #000;
@@ -904,87 +959,114 @@ p.landing_para {
 
 /*===================== COURSE-NAME CSS AREA START =====================*/
 
+// .collapsed {
+//   background-color: #8D8D8D;
+//   border-radius: 6px !important;
+//   padding: 10px 19px !important;
+//   color: #fff;
+//   font-size: 15px;
+//   font-weight: 600;
+// }
+
 .coursemenu__cards {
-  max-width: 1083px;
-  margin: 0 auto 210px;
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-}
-
-.collapsed {
-  background-color: #8D8D8D;
-  border-radius: 6px !important;
-  padding: 10px 19px !important;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.accordion-button {
-  font-size: 15px;
-  &:not(.collapsed) {
-    color: #fff;
+  max-width: 470px;
+  margin-bottom: 30px;
+  // display: flex;
+  // flex-direction: column;
+  // gap: 7px;
+  .accordion {
     background-color: #6022A6;
-    box-shadow: none !important;
-    border-radius: 6px !important;
-    padding: 10px 19px !important;
-  }
+    color: #fff;
+    padding: 20px 10px;
+    border-radius: 6px;
+    .accordion-item {
+      background-color: #6022A6;
+      border: 0;
+      .accordion-button {
+        font-size: 18px;
+        font-weight: 600;
+        padding: 5px;
+        line-height: normal;
+        background: transparent;
+        color: #fff;
+        border: 0;
+        box-shadow: none;
 
-  &:focus {
-    z-index: 3;
-    border-color: none !important;
-    outline: 0;
-    box-shadow: none !important;
-  }
-}
-
-.course_toggle_content {
-  padding: 0px 19px;
-}
-
-.course__content a {
-  display: block;
-  color: #000;
-  padding: 11px 0px;
-  // border-bottom: 2px solid #D4D4D4;
-  font-size: 19px;
-  > i {
-    font-size: 18px;
-  }
-
-  &:last-child {
-    border-bottom: none;
-  }
-}
-
-.accordion-item {
-  background: #E4E4E4;
-  border-radius: 6px !important;
-  margin-bottom: 7px;
-}
-
-.accordion-button {
-  &::after, &:not(.collapsed)::after {
-    background-image: none;
-  }
-}
-
-.course__content > table {
-  width: 100%;
-
-  tbody tr td p {
-    img {
-      width: 10px;
+        &:after {
+          display: none;
+        }
+      
+        &:hover,
+        &:focus,
+        &[aria-expanded="true"] {
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          outline: 0;
+          box-shadow: none;
+        }
+      }
+      
+      .course_toggle_content {
+        padding: 0px 15px;
+        
+        .course__content {
+          padding-bottom: 15px;
+          a {
+            display: block;
+            padding-top: 10px;
+            color: #fff;
+            // border-bottom: 2px solid #D4D4D4;
+            font-size: 16px;
+            line-height: normal;
+            cursor: pointer;
+            // > i {
+            //   font-size: 18px;
+            // }
+          
+            // &:last-child {
+            //   border-bottom: none;
+            // }
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+              text-underline-offset: 4px;
+            }
+          }
+          
+          > table {
+            width: 100%;
+          
+            tbody tr td p {
+              img {
+                width: 10px;
+              }
+          
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 19px;
+              max-width: 69px;
+            }
+          }
+        }
+      }
     }
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 19px;
-    max-width: 69px;
   }
 }
+
+
+
+// .accordion-item {
+//   background: #E4E4E4;
+//   border-radius: 6px !important;
+//   margin-bottom: 7px;
+// }
+
+// .accordion-button {
+//   &::after, &:not(.collapsed)::after {
+//     background-image: none;
+//   }
+// }
 
 /*===================== COURSE-NAME CSS AREA END =====================*/
 
@@ -1245,41 +1327,19 @@ section#video__area {
 //   margin-bottom: 200px;
 // }
 
-main {
-  margin-top: 68px;
-}
-.mainPage {
-  margin-top: 0;
-}
-
-main#main {
-  section.download__area {
-    .download__content {
-      .resource__file span {
-        font-weight: 500;
-        margin-bottom: 30px;
-        display: block;
-      }
-      .resource__file {
-        margin-bottom: 15px;
-      }
-    }
-  }
-}
-
 /*===================== REFERENCE CSS AREA END =====================*/
 
 .page__select__next__prev {
   a {
-    img {
-      width: 11px;
-    }
+    // img {
+    //   width: 11px;
+    // }
 
-    color: #6022A6;
-    font-size: 29px;
-    display: flex;
-    align-items: center;
-    gap: 9px;
+    // color: #6022A6;
+    // font-size: 29px;
+    // display: flex;
+    // align-items: center;
+    // gap: 9px;
     cursor: pointer;
 
     &.disabled {
@@ -1288,10 +1348,61 @@ main#main {
     }
   }
 
-
-  margin-bottom: 24px;
+  // margin-bottom: 24px;
   display: flex;
-  align-items: center;
-  justify-content: end;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;
 }
 
+/*===================== Progress Indicator CSS AREA Start =====================*/
+.progress_indicator {
+  // display: flex;
+  // align-items: center;
+  // justify-content: space-between;
+  // background: #8D8D8D;
+  padding: 10px;
+  // border-radius: 9px;
+  border-top: 1px solid #6022A6;
+
+  h4 {
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+
+  .progress_wrapper {
+    display: flex;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2px;
+
+      li {
+        margin-bottom: 2px;
+        &.available {
+          span {
+            background-color: #6022A6;
+            color: #fff;
+          }
+        }
+
+        span {
+          color: #000;
+          font-size: 12px;
+          font-weight: 600;
+          padding: 5px 10px;
+          background: #fff;
+          border-radius: 5px;
+        }
+      }
+    }
+    .progress-state {
+      color: #6022A6;
+      margin-left: 15px;
+    }
+  }
+}
+/*===================== Progress Indicator CSS AREA END =====================*/
