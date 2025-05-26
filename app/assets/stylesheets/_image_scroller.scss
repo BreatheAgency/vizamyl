@@ -19,12 +19,19 @@
     }
   }
 
-  .body_wrap {
-    background: #E4E4E4;
-    border-radius: 13px;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    margin-bottom: 0px !important;
+  .assessment__content {
+    background: #6022A6;
+    border-radius: 10px;
+    padding: 30px;
+    // display: grid;
+    // grid-template-columns: repeat(1, 1fr);
+    // margin-bottom: 0px !important;
+    > * {
+      color: #fff;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .label {

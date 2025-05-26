@@ -109,9 +109,11 @@ a {
 //   font-weight: bold;
 // }
 
-a.disabled {
+a.disabled,
+button.disabled {
  pointer-events: none;
- cursor: default;
+ color: #707070;
+ cursor: not-allowed;
 }
 
 button {
@@ -129,6 +131,7 @@ button {
   font-size: 20px;
   font-weight: 600;
   line-height: normal;
+  cursor: pointer;
   .arrow-circle {
     width: 30px;
     height: 30px;
@@ -1237,7 +1240,66 @@ section#video__area {
   margin-bottom: 50px;
 }
 
+.video-page,
+.text-page,
+.reference__wrap {
+  
+  h1,
+  h2 {
+    margin-bottom: 30px;
+  }
+  p {
+    ul {
+      margin: 20px auto;
+    }
+  }
+
+  .custom-tag {
+    background-color: #6022A6;
+    padding: 4px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 14px;
+    display: inline-block;
+  }
+
+  .content-container,
+  .media-container {
+    // display: flex;
+    // justify-content: space-between;
+    // flex-direction: column;
+    // height: 100%;
+    margin-bottom: 30px;
+  }
+
+  .page__select__next__prev {
+    margin-top: auto;
+    margin-right: 25px;
+    padding-top: 50px;
+    text-align: right;
+  }
+
+  .page-abbreviations {
+    p {
+      font-size: 15px;
+      line-height: normal;
+      margin: 0 auto;
+    }
+  }
+}
+
 /*===================== VIDEO CSS AREA END =====================*/
+
+
+/*===================== Assessment Question Answer AREA START =====================*/
+
+.assessment__wrap {
+  margin-bottom: 50px;
+}
+
+/*===================== Assessment Question Answer AREA END =====================*/
+
 
 /*===================== REFERENCE CSS AREA START =====================*/
 
@@ -1311,31 +1373,31 @@ section#video__area {
 
 /*===================== REFERENCE CSS AREA END =====================*/
 
-.page__select__next__prev {
-  a {
-    // img {
-    //   width: 11px;
-    // }
+// .page__select__next__prev {
+//   a {
+//     img {
+//       width: 11px;
+//     }
 
-    // color: #6022A6;
-    // font-size: 29px;
-    // display: flex;
-    // align-items: center;
-    // gap: 9px;
-    cursor: pointer;
+//     color: #6022A6;
+//     font-size: 29px;
+//     display: flex;
+//     align-items: center;
+//     gap: 9px;
+//     cursor: pointer;
 
-    &.disabled {
-      color: #707070;
-      cursor: not-allowed;
-    }
-  }
+//     &.disabled {
+//       color: #707070;
+//       cursor: not-allowed;
+//     }
+//   }
 
-  // margin-bottom: 24px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  height: 100%;
-}
+//   margin-bottom: 24px;
+//   display: flex;
+//   align-items: flex-end;
+//   justify-content: flex-end;
+//   height: 100%;
+// }
 
 /*===================== Progress Indicator CSS AREA Start =====================*/
 .progress_indicator {
@@ -1363,7 +1425,7 @@ section#video__area {
       gap: 2px;
 
       li {
-        margin-bottom: 2px;
+        display: inline-flex;
         &.available {
           span {
             background-color: #6022A6;

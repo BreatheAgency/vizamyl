@@ -3,42 +3,39 @@
     <div class="reference__wrap assessment__wrap">
 
       <div {{ bind-attr class=':row :d-flex' }}>
-        <div class="col-xxl-5">
-          <div class="body_wrap">
-            <div class="assessmentquestion__content">
-              <div class="multipart__span">
-                <span>
-                  {{{title}}}
-                </span>
+        <div class="col-lg-5">
+          <div class="content-container">
+            <div class="content-header assessment__content">
+              <h3>{{{title}}}</h2>
+              {{{body}}}
+            </div>
+            <div class="content-footer">
+              <div class='page-abbreviations'>
+                <p>{{{abbreviations}}}</p>
               </div>
-              <h6 class="assessment2_title">
-                {{{body}}}
-              </h6>
-              <p>{{{abbreviations}}}</p>
             </div>
           </div>
-        <br>
-        <br>
-        <br>
         </div>
 
-        <div {{ bind-attr class=':interactive_column :col-xxl-7 :d-flex :justify-content-around' }}>
-          {{#each interactive_source in interactive_sources}}
-            <div {{bind-attr class=":slidy"}}>
-              {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
-                source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-            </div>
-          {{/each}}
+        <div {{ bind-attr class=':interactive_column :col-lg-7' }}>
+          <div class="media-container">
+            {{#each interactive_source in interactive_sources}}
+              <div {{bind-attr class=":slidy"}}>
+                {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                  source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+              </div>
+            {{/each}}
+          </div>
+          <div class="page__select__next__prev">
+            <a {{bind-attr class=':right :btn :btn-primary complete:enabled:disabled'}}
+              {{action 'next' step}}>
+              {{i18n course.actions.next}}
+              {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+              <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+            </a>
+          </div>
         </div>
-
       </div>
-    </div>
-    <div class="page__select__next__prev py-5">
-      <a {{bind-attr class=':right complete:enabled:disabled'}}
-         {{action 'next' step}}>
-        {{i18n course.actions.next}}
-        <i class="fa-solid fa-angle-right"></i>
-      </a>
     </div>
   </div>
 </section>

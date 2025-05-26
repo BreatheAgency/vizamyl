@@ -9,7 +9,7 @@
         <div {{ bind-attr class=':test_question question.test_case:col-lg-5:col-lg-6'}}>
           {{#if isInCorrect}}
             {{ log 'TODO: >> isInCorrect' }}
-            <span>{{{results_title}}}</span>
+            <span class="custom-tag">{{{results_title}}}</span>
 
             {{#each question in questionsInOrder}}
               {{ log question }}
@@ -21,7 +21,7 @@
             </div>
           {{/if}}
           {{#if isInIncorrect}}
-            <span>{{{results_title}}}</span>
+            <span class="custom-tag">{{{results_title}}}</span>
 
             {{#each question in questionsInOrder}}
               {{ log question }}
@@ -39,12 +39,12 @@
               {{ log '> Not a test_case' }}
               {{#if singleQuestion}}
                 {{ log '> is singleQuestion (render `single_title` )' }}
-                <span>{{{i18n course.pages.test.question.single_title}}}<span>
+                <span class="custom-tag">{{{i18n course.pages.test.question.single_title}}}<span>
               {{else}}
                 {{ log '> is NOT singleQuestion (render `pural_title` )' }}
-                  <span>{{i18n course.pages.test.question.plural_title}}</span>
+                  <span class="custom-tag">{{i18n course.pages.test.question.plural_title}}</span>
               {{/if}}
-              <div class='test_progress my-2'>
+              <div class='test_progress mt-2 mb-3'>
                 <ul>
                   {{#each question in answeredQuestions}}
                     {{ log '> answeredQuestion' }}
@@ -134,7 +134,7 @@
               </div>
             {{else}}
               {{ log "> Not four-b, not answered"}}
-              <h6 class="assessment_title pe-5 py-3">{{{question.title}}}</h6>
+              <h4 class="assessment_title pe-5 mb-4">{{{question.title}}}</h4>
 
               <div class="assessment__select">
                 {{ext-radio content=question.answers value=selectedAnswer hideCheats=isProduction}}
@@ -143,45 +143,48 @@
           {{/if}}
         </div>
         <div {{ bind-attr class=':test_material question.test_case:col-lg-7:col-lg-6'}}>
-          {{#if question.hasImages}}
-            {{ log '>> question.hasImages' }}
-            {{#each image_source in question.image_sources}}
-              {{image-loader source=image_source.sourceWithUrl}}
-            {{/each}}
-          {{/if}}
-          {{#if question.hasInteractives}}
-              <div class="testcase__all__slider">
-                {{#each interactive_source in question.interactive_sources}}
-                  <div {{bind-attr class=":columns columns"}}>
-                    {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                  </div>
-                {{/each}}
-              </div>
-          {{/if}}
-        </div>
-      </div>
-    </div>
+          <div class="media-container">
+            {{#if question.hasImages}}
+              {{ log '>> question.hasImages' }}
+              {{#each image_source in question.image_sources}}
+                {{image-loader source=image_source.sourceWithUrl}}
+              {{/each}}
+            {{/if}}
+            {{#if question.hasInteractives}}
+                <div class="testcase__all__slider">
+                  {{#each interactive_source in question.interactive_sources}}
+                    <div {{bind-attr class=":columns columns"}}>
+                      {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                    </div>
+                  {{/each}}
+                </div>
+            {{/if}}
 
-    <div class="page__selection page__question__assessment">
-      <div class="page__select__next__prev py-5">
-        {{#if isInCorrect}}
-          <a {{bind-attr class=':right'}} {{action 'next' step}}>
-            {{i18n course.actions.next}}
-            <i class="fa-solid fa-angle-right"></i>
-          </a>
-        {{/if}}
-        {{#if isInIncorrect}}
-          <a {{bind-attr class=':right'}} {{action 'failure'}}>
-            {{i18n course.actions.next}}
-            <i class="fa-solid fa-angle-right"></i>
-          </a>
-        {{/if}}
-        {{#if isInUnanswered}}
-          <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>
-            {{i18n course.actions.next}}
-            <i class="fa-solid fa-angle-right"></i>
-          </a>
-        {{/if}}
+            <div class="page__select__next__prev">
+              {{#if isInCorrect}}
+                <a {{bind-attr class=':right :btn :btn-primary'}} {{action 'next' step}}>
+                  {{i18n course.actions.next}}
+                  {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                  <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+                </a>
+              {{/if}}
+              {{#if isInIncorrect}}
+                <a {{bind-attr class=':right :btn :btn-primary'}} {{action 'failure'}}>
+                  {{i18n course.actions.next}}
+                  {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                  <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+                </a>
+              {{/if}}
+              {{#if isInUnanswered}}
+                <a {{bind-attr class=':right :btn :btn-primary answered:enabled:disabled'}} {{action 'submit'}}>
+                  {{i18n course.actions.next}}
+                  {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                  <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+                </a>
+              {{/if}}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -154,26 +154,29 @@
             </div>
           {{/if}}
           <p>{{{abbreviations}}}</p>
-          <div class="page__select__next__prev py-5">
+          <div class="page__select__next__prev">
             {{#if isInAnswered}}
               {{ log 'TODO: >> isInAnswered (2)' }}
               {{#if showRetakeButton }}
-                <a class='right' {{action 'retakeTest'}}>
+                <a class='right btn btn-primary' {{action 'retakeTest'}}>
                   {{{i18n course.actions.retake_test}}}
-                  <i class="fa-solid fa-angle-right"></i>
+                  {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                  <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
                 </a>
               {{else}}
-                <a {{bind-attr class=':right testFailedTwice:disabled:enabled'}} {{action 'next'}}>
+                <a {{bind-attr class=':right :btn :btn-primary testFailedTwice:disabled:enabled'}} {{action 'next'}}>
                   {{i18n course.actions.next}}
-                  <i class="fa-solid fa-angle-right"></i>
+                  {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                  <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
                 </a>
               {{/if}}
             {{/if}}
             {{#if isInUnanswered}}
               {{ log 'TODO: >> isInUnanswered' }}
-              <a {{bind-attr class=':right answered:enabled:disabled'}} {{action 'submit'}}>
+              <a {{bind-attr class=':right :btn :btn-primary answered:enabled:disabled'}} {{action 'submit'}}>
                 {{i18n course.actions.next}}
-                <i class="fa-solid fa-angle-right"></i>
+                {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
               </a>
             {{/if}}
           </div>

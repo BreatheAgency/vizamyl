@@ -1,5 +1,5 @@
 {{ log "RENDER: mulity-scroller.hbs" }}
-<div class="d-flex flex-row multi-scroll w-100">
+<div class="d-flex flex-row justify-content-center multi-scroll w-100">
   <div {{bind-attr class=':image_wrapper :interactive loaded:loaded:loading' xwidth=imageWidth xheight=imageHeight}}>
     <div class='spinner'></div>
     <div {{bind-attr class=':image_holder' xstyle=style}}>

@@ -184,42 +184,42 @@
   //   margin-top: 15px;
   // }
 
-  .assessment__content {
-    h3 {
-      font-size: 38px;
-      margin-bottom: 20px;
-    }
+  // .assessment__content {
+  //   h3 {
+  //     font-size: 38px;
+  //     margin-bottom: 20px;
+  //   }
 
-    padding: 20px 30px;
-  }
+  //   padding: 20px 30px;
+  // }
 
-  .assessmentquestion__content {
-    span {
-      font-size: 18px;
-    }
+  // .assessmentquestion__content {
+  //   span {
+  //     font-size: 18px;
+  //   }
 
-    h6, h2 {
-      font-size: 22px;
-      line-height: 28px;
-      margin-bottom: 22px;
-    }
-  }
+  //   h6, h2 {
+  //     font-size: 22px;
+  //     line-height: 28px;
+  //     margin-bottom: 22px;
+  //   }
+  // }
 
-  .assessment__single__select {
-    gap: 6px;
-  }
+  // .assessment__single__select {
+  //   gap: 6px;
+  // }
 
-  .assessment__select {
-    gap: 27px;
-  }
+  // .assessment__select {
+  //   gap: 27px;
+  // }
 
-  .assessmentquestion__content {
-    padding: 20px 30px;
-  }
+  // .assessmentquestion__content {
+  //   padding: 20px 30px;
+  // }
 
-  .assessment__list p {
-    font-size: 16px;
-  }
+  // .assessment__list p {
+  //   font-size: 16px;
+  // }
 
   .assessmentquestion__content__img {
     margin-bottom: 50px;
@@ -309,17 +309,17 @@
   //   font-size: 40px;
   // }
 
-  .assessment__content {
-    p {
-      font-size: 18px;
-      line-height: 25px;
-    }
+  // .assessment__content {
+  //   p {
+  //     font-size: 18px;
+  //     line-height: 25px;
+  //   }
 
-    h3 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-  }
+  //   h3 {
+  //     font-size: 32px;
+  //     margin-bottom: 15px;
+  //   }
+  // }
 
   .page__assessment2 {
     margin-top: 50px;
@@ -422,18 +422,18 @@
   //   }
   // }
 
-  .assessmentquestion__content {
-    h6 {
-      font-size: 18px;
-      line-height: 25px;
-      margin-top: 6px;
-      margin-bottom: 22px;
-    }
+  // .assessmentquestion__content {
+  //   h6 {
+  //     font-size: 18px;
+  //     line-height: 25px;
+  //     margin-top: 6px;
+  //     margin-bottom: 22px;
+  //   }
 
-    span {
-      font-size: 16px;
-    }
-  }
+  //   span {
+  //     font-size: 16px;
+  //   }
+  // }
 
   .page__assessment2 {
     margin-top: 30px;
@@ -700,19 +700,19 @@
   //   line-height: 24px;
   // }
 
-  .assessment__content {
-    h3 {
-      font-size: 26px;
-      margin-bottom: 10px;
-    }
+  // .assessment__content {
+  //   h3 {
+  //     font-size: 26px;
+  //     margin-bottom: 10px;
+  //   }
 
-    p {
-      font-size: 16px;
-      line-height: 24px;
-    }
+  //   p {
+  //     font-size: 16px;
+  //     line-height: 24px;
+  //   }
 
-    padding: 14px;
-  }
+  //   padding: 14px;
+  // }
 
   .assessment__wrap {
     margin-top: 8px;
@@ -790,8 +790,8 @@
     line-height: 60px;
   }
   h2 {
-    font-size: 35px;
-    line-height: 45px;
+    font-size: 36px;
+    line-height: 46px;
   }
   h3 {
     font-size: 25px;
@@ -930,6 +930,17 @@
     }
   }
 
+  .reference__wrap {
+    .interactive_column {
+      .media-container {
+        display: flex;
+        justify-content: space-around !important;
+        flex-direction: row !important;
+        height: auto!important;
+      }
+    }
+  }
+
   footer {
     .footer__wrap {
       flex-direction: row;
@@ -976,10 +987,32 @@
       }
     }
   }
-  
-  .page__select__next__prev {
-    justify-content: center;
+
+  .video-page,
+  .text-page,
+  .reference__wrap {
+    margin-bottom: 50px;
+    
+    .content-container,
+    .media-container {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      height: 100%;
+      margin-bottom: 0;
+    }
   }
+
+  .reference__wrap {
+    .content-container,
+    .media-container {
+      margin-bottom: 30px;
+    }
+  }
+  
+  // .page__select__next__prev {
+  //   justify-content: center;
+  // }
 
 }
 
@@ -1024,6 +1057,13 @@
       .account__content {
         max-width: 454px;
       }
+    }
+  }
+
+  .reference__wrap {
+    .content-container,
+    .media-container {
+      margin-bottom: 0;
     }
   }
 }

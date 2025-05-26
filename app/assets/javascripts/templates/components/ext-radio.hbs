@@ -2,13 +2,15 @@
 <div class="assessment__select">
   {{#each question in content}}
     <div class="assessment__single__select">
-      {{radio-button id=question.id value=question name=view.name selection=view.value}}
+      <div class="input-container">
+        {{radio-button id=question.id value=question name=view.name selection=view.value}}
 
-      <!-- Render the heading -->
-      <h2>{{split-heading (unbound question.body)}}</h2>
-      
+        <!-- Render the heading -->
+        <span><h5>{{split-heading (unbound question.body)}}</h5></span>
+      </div>
+
       {{#if question.body }}
-          <div class="assessment__list">{{{ split-updated-body (unbound question.body) }}}</div>
+          <div class="assessment__list mt-2">{{{ split-updated-body (unbound question.body) }}}</div>
       {{/if}}
 
       {{#unless hideCheats }}
