@@ -1348,6 +1348,8 @@ section#video__area {
     // margin-right: 25px;
     // padding-top: 50px;
     text-align: right;
+    position: relative;
+    z-index: 2;
   }
 
   .page-abbreviations {
