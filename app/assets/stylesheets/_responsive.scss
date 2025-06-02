@@ -930,17 +930,20 @@
     }
   }
 
-  .reference__wrap {
-    .interactive_column {
-      .media-container {
-        display: flex;
-        justify-content: space-around !important;
-        flex-direction: row !important;
-        height: auto!important;
-        width: 100%;
-      }
-    }
-  }
+  // .reference__wrap {
+  //   .interactive_column {
+  //     .media-container {
+  //       display: flex;
+  //       justify-content: space-around !important;
+  //       flex-direction: row !important;
+  //       height: auto!important;
+  //       width: 100%;
+  //     }
+  //   }
+  //   .not_four-b_style_question {
+  //     height: 100%;
+  //   }
+  // }
 
   footer {
     .footer__wrap {
@@ -1012,7 +1015,8 @@
   }
 
   .video-page,
-  .text-page {
+  .text-page,
+  .reference__wrap {
     padding-bottom: 50px;
     
     .content-container,
@@ -1025,33 +1029,32 @@
     }
   }
   .reference__wrap {
-    padding-bottom: 50px;
-    width: 100%;
+    // padding-bottom: 50px;
+    // width: 100%;
     
-    .content-container,
-    .media-container {
-      padding-bottom: 0;
-    }
-    .media-container > *,
+    // .content-container,
+    // .media-container {
+    //   padding-bottom: 0;
+    // }
+    // .media-container > *,
     .image_wrapper.interactive {
       width: 100%;
     }
   }
 
-  .video-page {
-    .media-container {
-      // margin-top: 55px;
-      > div {
-        position: sticky;
-        top: 54px;
-        z-index: 2;
-      }
-    }
-  }
+  // .video-page {
+  //   .media-container {
+  //     margin-top: 55px;
+  //     > div {
+  //       position: sticky;
+  //       top: 54px;
+  //       z-index: 2;
+  //     }
+  //   }
+  // }
 
   .reference__wrap {
-    .content-container,
-    .media-container {
+    .content-container {
       padding-bottom: 30px;
     }
   }
@@ -1115,12 +1118,12 @@
     }
   }
 
-  .reference__wrap {
-    .content-container,
-    .media-container {
-      padding-bottom: 0;
-    }
-  }
+  // .reference__wrap {
+  //   .content-container,
+  //   .media-container {
+  //     padding-bottom: 0;
+  //   }
+  // }
 }
 @media (min-width: 1200px) {
   main {

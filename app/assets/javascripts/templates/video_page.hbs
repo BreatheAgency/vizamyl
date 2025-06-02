@@ -17,7 +17,11 @@
 
     <div class="col-md-6">
       <div class="media-container">
-        {{video-player finished='finished' mandatory=mandatoryOverride source=source}}
+        <div class="media-wrapper">
+          <div class="media-holder">
+            {{video-player finished='finished' mandatory=mandatoryOverride source=source}}
+          </div>
+        </div>
         <div class="page__select__next__prev">
           <a {{bind-attr class=':right :btn :btn-primary complete:enabled:disabled'}} {{action 'next' step}}>
             {{i18n course.actions.next}}
