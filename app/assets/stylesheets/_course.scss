@@ -34,10 +34,12 @@
   }
 
   .test {
-    .test_material {
+    .test_material,
+    .testcase__all__slider {
       position: sticky;
       top: 104px;
       z-index: 2;
+      padding-bottom: 50px;
     }
   }
 
@@ -154,6 +156,7 @@
       img {
         position: unset;
         width: auto;
+        max-width: 100%;
         margin: 0 auto;
       }
     }
@@ -214,7 +217,11 @@
         color: #fff;
       }
     }
-
+    .assessment__list {
+      ol {
+        padding-left: 16px;
+      }
+    }
   }
 
   .test_progress {
@@ -837,8 +844,8 @@ input[type="radio"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  width: 27px; /* Width of the radio button */
-  height: 27px; /* Height of the radio button */
+  width: 24px; /* Width of the radio button */
+  height: 24px; /* Height of the radio button */
   border: 1px solid #707070; /* 1px border */
   border-radius: 4px; /* Slightly rounded edges */
   display: inline-block;

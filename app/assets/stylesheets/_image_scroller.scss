@@ -42,6 +42,7 @@
     font-size: 16px;
     margin-top: 5px;
     padding-left: 15px;
+    min-width: auto!important;
   }
 
   @keyframes spinner-rotation {
@@ -189,7 +190,8 @@
     position: relative;
     background: black;
     width: 31px;
-    height: 500px;
+    // height: 500px;
+    height: auto;
     // border-top-right-radius: 13px;
     // border-bottom-right-radius: 13px;
 }
@@ -206,7 +208,7 @@
     font-size: 14px;
     line-height: 30px;
     text-align: center;
-    left: 10px;
+    left: 0;
     z-index: 9;
 }
 
@@ -222,33 +224,33 @@ xxl	≥1400px
 */
 
 @include media-breakpoint-down(xxl) {
-  .dragdealer .handle {
-    left: 4px;
-  }
+  // .dragdealer .handle {
+  //   left: 4px;
+  // }
 }
 
 @include media-breakpoint-down(xl) {
-  .dragdealer .handle {
-    left: 0px;
-  }
+  // .dragdealer .handle {
+  //   left: 0px;
+  // }
 }
 
 @include media-breakpoint-down(lg) {
-  .dragdealer .handle {
-    left: 7px;
-  }
+  // .dragdealer .handle {
+  //   left: 7px;
+  // }
 }
 
 @include media-breakpoint-down(md) {
-  .dragdealer .handle {
-    left: 0px;
-  }
+  // .dragdealer .handle {
+  //   left: 0px;
+  // }
 }
 
 @include media-breakpoint-down(sm) {
-  .dragdealer .handle {
-    left: 10px;
-  }
+  // .dragdealer .handle {
+  //   left: 10px;
+  // }
 
   // .testcase__all__slider {
   //   justify-items: center;
@@ -262,33 +264,33 @@ xxl	≥1400px
   }
 
   @include media-breakpoint-down(xxl) {
-    .dragdealer .handle {
-      left: 0px;
-    }
+    // .dragdealer .handle {
+    //   left: 0px;
+    // }
   }
 
   @include media-breakpoint-down(xl) {
-    .dragdealer .handle {
-      left: 0px;
-    }
+    // .dragdealer .handle {
+    //   left: 0px;
+    // }
   }
 
   @include media-breakpoint-down(lg) {
-    .dragdealer .handle {
-      left: 0px;
-    }
+    // .dragdealer .handle {
+    //   left: 0px;
+    // }
   }
 
   @include media-breakpoint-down(md) {
-    .dragdealer .handle {
-      left: 0px;
-    }
+    // .dragdealer .handle {
+    //   left: 0px;
+    // }
   }
 
   @include media-breakpoint-down(sm) {
-    .dragdealer .handle {
-      left: 10px;
-    }
+    // .dragdealer .handle {
+    //   left: 10px;
+    // }
 
     // .testcase__all__slider {
     //   justify-items: center;

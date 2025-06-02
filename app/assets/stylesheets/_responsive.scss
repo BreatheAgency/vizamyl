@@ -277,9 +277,9 @@
   .input_label {
     gap: 6px;
 
-    label {
-      font-size: 18px;
-    }
+    // label {
+    //   font-size: 18px;
+    // }
   }
 
   // .remember__forget {
@@ -791,7 +791,7 @@
   }
   h2 {
     font-size: 36px;
-    line-height: 42px;
+    line-height: 40px;
   }
   h3 {
     font-size: 25px;
@@ -814,10 +814,10 @@
     }
     
     p {
-      font-size: 28px;
-      line-height: 35px;
+      font-size: 24px;
+      line-height: 34px;
       margin-bottom: 40px;
-      max-width: 400px;
+      // max-width: 400px;
     }
     
     .login__part {
@@ -937,6 +937,7 @@
         justify-content: space-around !important;
         flex-direction: row !important;
         height: auto!important;
+        width: 100%;
       }
     }
   }
@@ -945,6 +946,9 @@
     .footer__wrap {
       flex-direction: row;
       align-items: center;
+      .footer__logo {
+        padding-left: 15px;
+      }
     }
   }
 }
@@ -960,6 +964,24 @@
       font-size: 18px;
       padding: 15px 0;
     }
+  }
+
+  .login__content {
+    .login__part {
+      form {
+        .form-check-input {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+
+  .form-group label,
+  .input_label label,
+  .radio_buttons label {
+    font-size: 22px!important;
   }
 
   .progress_indicator {
@@ -984,15 +1006,14 @@
         }
       }
       .progress-state {
-        margin-left: 30px;
+        margin-left: 10px;
       }
     }
   }
 
   .video-page,
-  .text-page,
-  .reference__wrap {
-    margin-bottom: 50px;
+  .text-page {
+    padding-bottom: 50px;
     
     .content-container,
     .media-container {
@@ -1000,7 +1021,20 @@
       justify-content: space-between;
       flex-direction: column;
       height: 100%;
-      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+  .reference__wrap {
+    padding-bottom: 50px;
+    width: 100%;
+    
+    .content-container,
+    .media-container {
+      padding-bottom: 0;
+    }
+    .media-container > *,
+    .image_wrapper.interactive {
+      width: 100%;
     }
   }
 
@@ -1018,7 +1052,7 @@
   .reference__wrap {
     .content-container,
     .media-container {
-      margin-bottom: 30px;
+      padding-bottom: 30px;
     }
   }
   
@@ -1052,6 +1086,12 @@
     }
   }
 
+  .four-b_style_question {
+    .test_question {
+      margin-bottom: 0;
+    }
+  }
+
   .progress_indicator {
     .progress_wrapper {
       ul {
@@ -1060,6 +1100,9 @@
             font-size: 16px;
           }
         }
+      }
+      .progress-state {
+        margin-left: 30px;
       }
     }
   }
@@ -1075,7 +1118,7 @@
   .reference__wrap {
     .content-container,
     .media-container {
-      margin-bottom: 0;
+      padding-bottom: 0;
     }
   }
 }
