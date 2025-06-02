@@ -851,6 +851,7 @@ footer {
   padding: 0;
   font-size: 25px!important;
   color: #000!important;
+  cursor: pointer;
 }
 
 .please-tick {
@@ -971,9 +972,9 @@ p.landing_para {
       background-color: #6022A6;
       border: 0;
       .accordion-button {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 600;
-        padding: 5px;
+        padding: 8px;
         line-height: normal;
         background: transparent;
         color: #fff;
@@ -1117,6 +1118,7 @@ p.landing_para {
       label {
         color: #6022A6;
         font-size: 15px;
+        cursor: pointer;
       }
     }
     
@@ -1266,16 +1268,16 @@ section#video__area {
 
   .content-container,
   .media-container {
-    // display: flex;
-    // justify-content: space-between;
-    // flex-direction: column;
-    // height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
     margin-bottom: 30px;
   }
 
   .page__select__next__prev {
     margin-top: auto;
-    margin-right: 25px;
+    // margin-right: 25px;
     padding-top: 50px;
     text-align: right;
   }
@@ -1296,6 +1298,10 @@ section#video__area {
 
 .assessment__wrap {
   margin-bottom: 50px;
+}
+
+.terms-and-conditions {
+  padding: 0 15px;
 }
 
 /*===================== Assessment Question Answer AREA END =====================*/
@@ -1405,9 +1411,13 @@ section#video__area {
   // align-items: center;
   // justify-content: space-between;
   // background: #8D8D8D;
-  padding: 10px;
+  padding: 10px 0;
   // border-radius: 9px;
   border-top: 1px solid #6022A6;
+
+  > div {
+    padding: 0 15px;
+  }
 
   h4 {
     color: #000;
@@ -1446,6 +1456,8 @@ section#video__area {
     .progress-state {
       color: #6022A6;
       margin-left: 15px;
+      display: flex;
+      align-items: center;
     }
   }
 }
