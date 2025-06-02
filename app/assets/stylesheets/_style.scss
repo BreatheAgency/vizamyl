@@ -1331,6 +1331,13 @@ section#video__area {
     display: inline-block;
   }
 
+  .media-wrapper {
+    position: sticky;
+    top: 104px;
+    z-index: 2;
+    padding-bottom: 70px;
+  }
+
   .content-container,
   .media-container {
     padding-bottom: 30px;
@@ -1339,7 +1346,7 @@ section#video__area {
   .page__select__next__prev {
     margin-top: auto;
     // margin-right: 25px;
-    padding-top: 50px;
+    // padding-top: 50px;
     text-align: right;
   }
 
@@ -1349,6 +1356,18 @@ section#video__area {
       line-height: normal;
       margin: 0 auto;
     }
+  }
+}
+
+.video-page {
+  .media-wrapper {
+    top: 54px;
+  }
+}
+
+.reference__wrap {
+  .media-container {
+    padding-bottom: 0;
   }
 }
 

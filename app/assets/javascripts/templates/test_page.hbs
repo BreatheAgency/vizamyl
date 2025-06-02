@@ -144,21 +144,25 @@
         </div>
         <div {{ bind-attr class=':test_material question.test_case:col-lg-7:col-lg-6'}}>
           <div class="media-container">
-            {{#if question.hasImages}}
-              {{ log '>> question.hasImages' }}
-              {{#each image_source in question.image_sources}}
-                {{image-loader source=image_source.sourceWithUrl}}
-              {{/each}}
-            {{/if}}
-            {{#if question.hasInteractives}}
-                <div class="testcase__all__slider">
-                  {{#each interactive_source in question.interactive_sources}}
-                    <div {{bind-attr class=":columns columns"}}>
-                      {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
-                    </div>
+            <div class="media-wrapper">
+              <div class="media-holder">
+                {{#if question.hasImages}}
+                  {{ log '>> question.hasImages' }}
+                  {{#each image_source in question.image_sources}}
+                    {{image-loader source=image_source.sourceWithUrl}}
                   {{/each}}
-                </div>
-            {{/if}}
+                {{/if}}
+                {{#if question.hasInteractives}}
+                    <div class="testcase__all__slider">
+                      {{#each interactive_source in question.interactive_sources}}
+                        <div {{bind-attr class=":columns columns"}}>
+                          {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                        </div>
+                      {{/each}}
+                    </div>
+                {{/if}}
+              </div>
+            </div>
 
             <div class="page__select__next__prev">
               {{#if isInCorrect}}
