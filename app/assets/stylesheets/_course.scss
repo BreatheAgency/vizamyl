@@ -17,14 +17,27 @@
 #course {
   .page.text-page {
     margin-bottom: 30px;
+    flex: 1;
+    > .row {
+      height: 100%;
+    }
   }
 
   #player {
     width: 100%;
-    border-radius: 9px;
+    // border-radius: 9px;
+    margin-top: 50px;
 
-    .vjs-tech {
-      border-radius: 9px;
+    // .vjs-tech {
+    //   border-radius: 9px;
+    // }
+  }
+
+  .test {
+    .test_material {
+      position: sticky;
+      top: 104px;
+      z-index: 2;
     }
   }
 
@@ -180,6 +193,7 @@
       display: inline-flex;
       align-items: center;
       border-radius: 4px;
+      min-width: 52px;
 
       input[type="radio"] {
         width: 15px;
@@ -245,6 +259,7 @@
   }
 
   .assessment__single__select {
+    margin-bottom: 10px;
     // display: flex;
     // align-items: start;
     // gap: 0;
@@ -353,10 +368,10 @@
     margin-top: 10px;
 
     h6 {
-      margin-left: -90px;
+      // margin-left: -90px;
       background: #45B2C5;
       padding: 5px 15px;
-      padding-left: 90px;
+      // padding-left: 90px;
       color: #fff;
       margin-bottom: 12px;
 
@@ -422,6 +437,7 @@
     display: flex;
     flex-direction: column;
     gap: 19px;
+    margin-top: 30px;
   }
 
   .color__field {
@@ -723,7 +739,7 @@
 @media (min-width: 320px) and (max-width: 991px) {
   #course {
     .four-b_style_question {
-      .test_question {}
+      // .test_question {}
 
       // .test_material {
       //   padding-top: 50px;

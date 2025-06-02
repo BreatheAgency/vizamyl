@@ -515,13 +515,13 @@
     gap: 18px;
   }
 
-  .testcase__reports {
-    gap: 10px;
-  }
+  // .testcase__reports {
+  //   gap: 10px;
+  // }
 
-  .testcase__all__slider {
-    margin-top: -50px;
-  }
+  // .testcase__all__slider {
+  //   margin-top: -50px;
+  // }
 
   .questionscroll_img {
     height: 494px;
@@ -718,9 +718,9 @@
     margin-top: 8px;
   }
 
-  .testcase__all__slider {
-    gap: 8px;
-  }
+  // .testcase__all__slider {
+  //   gap: 8px;
+  // }
 
   // .course__content {
   //   > table {
@@ -791,7 +791,7 @@
   }
   h2 {
     font-size: 36px;
-    line-height: 46px;
+    line-height: 42px;
   }
   h3 {
     font-size: 25px;
@@ -966,7 +966,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 15px;
+    // padding: 10px 15px;
     
     h4 {
       font-size: 18px;
@@ -974,6 +974,7 @@
     }
 
     .progress_wrapper {
+      justify-content: flex-end;
       ul {
         li {
           span {
@@ -1000,6 +1001,17 @@
       flex-direction: column;
       height: 100%;
       margin-bottom: 0;
+    }
+  }
+
+  .video-page {
+    .media-container {
+      // margin-top: 55px;
+      > div {
+        position: sticky;
+        top: 54px;
+        z-index: 2;
+      }
     }
   }
 
