@@ -541,24 +541,43 @@ footer {
     flex-direction: column-reverse;
     padding: 18px 0 30px;
     border-top: 1px solid $primary;
+
     .footer__content {
-      p, a {
+      p,
+      a {
         font-size: 12px;
         line-height: 19px;
         max-width: 388px;
         margin-bottom: 0;
       }
+
       a {
         text-decoration: underline;
       }
     }
+
     .footer__logo {
+      // Used in ERB (image_tag)
       img {
         width: 250px;
+        height: auto;
+        display: block;
+      }
+
+      // Used in HBS (background-image)
+      .footer-logo {
+        width: 250px;
+        height: 90px; // Set to match visual height of logo
+        background-image: asset-url('ge-logo-purple.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        display: block;
       }
     }
   }
 }
+
 
 /*===================== FOOTER CSS AREA END =====================*/
 
