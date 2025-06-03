@@ -595,11 +595,11 @@
   //   padding-top: 80px;
   // }
 
-  .country__names {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
-    row-gap: 20px;
-  }
+  // .country__names {
+  //   grid-template-columns: repeat(2, 1fr);
+  //   column-gap: 20px;
+  //   row-gap: 20px;
+  // }
 
   section {
     &#country__hero__area {
@@ -746,10 +746,10 @@
   //   font-size: 20px;
   // }
 
-  .country__names {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 10px;
-  }
+  // .country__names {
+  //   grid-template-columns: repeat(1, 1fr);
+  //   row-gap: 10px;
+  // }
 
   // .welcome__hero__content h3 {
   //   font-size: 18px;

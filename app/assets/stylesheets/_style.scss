@@ -509,10 +509,27 @@ section#country__hero__area {
     font-size: 29px;
   }
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 83px;
-  row-gap: 24px;
+  #country-selector {
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    select {
+      width: 100%;
+      margin-bottom: 30px;
+      padding: 5px;
+    }
+
+    .page__select__next__prev {
+      text-align: right;
+    }
+  }
+
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // column-gap: 83px;
+  // row-gap: 24px;
 }
 
 .gatekeeper__blurb {
