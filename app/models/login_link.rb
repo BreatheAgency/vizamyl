@@ -7,7 +7,7 @@ class LoginLink
         'be' => { country: 'Belgium', url: 'https://stg-www.readvizamyl.com', locale: 'be', origin: 'be' },
         'bg' => { country: 'Bulgaria', url: "https://stg-www.readvizamyl.com", locale: 'bg', origin: 'bg' },
         'hr' => { country: 'Croatia', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'hr' },
-        'cz' => { country: 'Czech Republic', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'cz' },
+        'cz' => { country: 'Czechia', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'cz' },
         'dk' => { country: 'Denmark', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'dk' },
         'ee' => { country: 'Estonia', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'ee' },
         'fi' => { country: 'Finland', url: 'https://stg-www.readvizamyl.com', locale: 'en-gb', origin: 'fi' },
