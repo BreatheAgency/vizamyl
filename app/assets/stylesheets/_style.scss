@@ -52,9 +52,8 @@ main {
 }
 
 ul {
-  padding: 0;
   margin: 0;
-  list-style: none;
+  padding-left: 1rem;
 }
 
 button, input {
@@ -374,6 +373,8 @@ header#header__area {
     // flex-shrink: 0;
     // gap: 5px;
     flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
     li {
       margin: 0;
       a {
@@ -907,6 +908,16 @@ section#reference__area {
       }
     }
   }
+  &.interactive__area {
+    .assessment__content {
+      background: transparent;
+      border-radius: 0;
+      padding: 0;
+      > * {
+        color: #000;
+      }
+    }
+  }
 }
 
 /*===================== ENROL CSS AREA START =====================*/
@@ -1326,6 +1337,33 @@ section#video__area {
 
 .video-page,
 .text-page,
+.test-page,
+.video__area,
+.reference__wrap {
+  .vizamyl-tag,
+  .custom-tag {
+    background-color: #6022A6;
+    padding: 4px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    color: #fff!important;
+    font-size: 14px;
+    display: inline-block;
+  }
+}
+
+.video__area {
+  .custom-tag {
+    padding: 30px;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 38px;
+    border-radius: 10px;
+  }
+}
+
+.video-page,
+.text-page,
 .reference__wrap {
   
   h1,
@@ -1338,12 +1376,13 @@ section#video__area {
     }
   }
 
+  .vizamyl-tag,
   .custom-tag {
     background-color: #6022A6;
     padding: 4px 15px;
     border-radius: 4px;
     margin-bottom: 20px;
-    color: #fff;
+    color: #fff!important;
     font-size: 14px;
     display: inline-block;
   }

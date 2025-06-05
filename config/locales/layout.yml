@@ -14,11 +14,11 @@ en:
       resources: Resources
       contact: Contact
       copyright_html: |
-        <p>&copy;2025 GE HealthCare</p>
+        <p>&copy;2025 GE HealthCare.</p>
         <p>Vizamyl is a trademark of GE HealthCare.</p>
         <p>GE is a trademark of General Electric Company used under trademark license.</p>
         <p>Any third-party trademarks are the property of their respective owners.</p>
-        <p><a href="https://www.gehealthcare.com/about/terms-and-conditions" target="_blank">Terms and conditions</a></p>
+        <p><a href="https://www.readvizamyl.com/en/terms-and-conditions" target="_blank">Terms and conditions</a></p>
       reference_html: |
         <p class="right"></p>
 es:
@@ -56,11 +56,11 @@ es:
       contact: Contact Us
       important_risk_and_safety_information: 'Indications, Usage and Important Safety Information'
       copyright_html: |
-        <p>&copy;2025 GE HealthCare</p>
+        <p>&copy;2025 GE HealthCare.</p>
         <p>Vizamyl is a trademark of GE HealthCare.</p>
         <p>GE is a trademark of General Electric Company used under trademark license.</p>
         <p>Any third-party trademarks are the property of their respective owners.</p>
-        <p><a href="https://www.gehealthcare.com/about/terms-and-conditions" target="_blank">Terms and conditions</a></p>
+        <p><a href="https://www.readvizamyl.com/en/terms-and-conditions" target="_blank">Terms and conditions</a></p>
 de:
   layouts:
     application:
