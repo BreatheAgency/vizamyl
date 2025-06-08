@@ -135,15 +135,21 @@
           {{#if isInUnanswered}}
             {{ log 'TODO: >>> isInUnanswered' }}
             <div class="col-lg-7">
-              <div class="testcase__all__slider">
-                {{#each interactive_source in question.interactive_sources}}
-                  <div {{bind-attr class=""}}>
-                    <div class="testcase__slide">
-                        {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
-                          source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+              <div class="media-container">
+                <div class="media-wrapper">
+                  <div class="media-holder">
+                    <div class="testcase__all__slider">
+                      {{#each interactive_source in question.interactive_sources}}
+                        <div {{bind-attr class=""}}>
+                          <div class="testcase__slide">
+                              {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                                source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                          </div>
+                        </div>
+                      {{/each}}
                     </div>
                   </div>
-                {{/each}}
+                </div>
               </div>
             </div>
           {{/if}}

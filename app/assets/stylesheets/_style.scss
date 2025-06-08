@@ -1340,6 +1340,8 @@ section#video__area {
 .test-page,
 .video__area,
 .reference__wrap {
+  padding-bottom: 30px!important;
+  
   .vizamyl-tag,
   .custom-tag {
     background-color: #6022A6;
@@ -1397,6 +1399,9 @@ section#video__area {
   .content-container,
   .media-container {
     padding-bottom: 30px;
+    .content-footer {
+      margin-top: 100px;
+    }
   }
 
   .page__select__next__prev {

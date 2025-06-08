@@ -802,11 +802,11 @@
     padding-top: 50px;
   }
 
-  #course {
-    .page.text-page {
-      margin-bottom: 50px;
-    }
-  }  
+  // #course {
+  //   .page.text-page {
+  //     margin-bottom: 50px;
+  //   }
+  // }  
 
   .login__content {
     h2 {
@@ -1017,8 +1017,6 @@
   .video-page,
   .text-page,
   .reference__wrap {
-    padding-bottom: 50px;
-    
     .content-container,
     .media-container {
       display: flex;

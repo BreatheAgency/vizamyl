@@ -66,7 +66,7 @@ en:
         required_field: Required Feild
         password_length: Password must be at least eight characters long
         marketing_privacy: 'Privacy Statement:'
-        marketing_overall_opt_in: 'I would like to opt-in to receive other materials or information from GE Healthcare about Vizamyl.' 
+        marketing_overall_opt_in: 'I would like to opt-in to receive other materials or information from GE HealthCare about Vizamyl.' 
         marketing_overall_opt_out: I opt-out to receive any information regarding Vizamyl. By opting-out you are not prohibited from taking this training.
         acknowledge_privacy: 'I have reviewed the Privacy Statement. Please <a href="http://www.ge.com/privacy" target="_blank">click here</a> to view.'
         submit: 'Submit'

@@ -8,7 +8,7 @@ en:
         four_html: |
           <p>If you didn’t request this reminder, please ignore this email. Your password will not be changed until you access the link above and create a new one.</p>
           <p>Thank you,</p>
-          <p>GE Healthcare</p>
+          <p>GE HealthCare</p>
     registrations:
       edit:
         title: My account
@@ -23,7 +23,7 @@ en:
           - Miss
           - Ms
         description_html: |
-          If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
+          If you pass the course, GE HealthCare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
         marketing_overall_opt_in_description_html: |
           If you do want to receive such information, please tick the box below.
         marketing_overall_opt_in_html: |
@@ -31,13 +31,13 @@ en:
         marketing_overall_opt_in_note_html: |
           (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
         marketing_overall_description_html: |
-          If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:
+          If you would like to be contacted for & marketing purposes, please select one of the following options so that we know your preferred method of contact:
         marketing_email_opt_in_label_html: |
           E-Mail
         marketing_post_opt_in_label_html: |
           Post
         marketing_representative_opt_in_label_html: |
-          Visit from a GE Healthcare representative<br>(There is no obligation to see a representative)
+          Visit from a GE HealthCare representative<br>(There is no obligation to see a representative)
         marketing_overall_opt_in_tick_html: |
           (Please tick one or more options)
         update: |
@@ -80,7 +80,7 @@ de:
         four_html: |
           <p>Falls Sie die Erinnerung nicht angefordert haben, ignorieren Sie bitte diese Nachricht. Die Änderung Ihres Passworts erfolgt nur, wenn Sie auf den Link oben klicken und ein neues Passwort erstellen.</p>
           <p>Vielen Dank,</p>
-          <p>GE Healthcare</p>
+          <p>GE HealthCare</p>
     registrations:
       edit:
         title: Mein Konto
@@ -93,7 +93,7 @@ de:
           - Frau
           - Herr
         description_html: |
-          Falls Sie den Kurs bestehen, möchte GE Healthcare Ihnen Informationen über unsere Produkte, Dienstleistungen und weitere für Sie interessante Schulungsangebote zukommen lassen.
+          Falls Sie den Kurs bestehen, möchte GE HealthCare Ihnen Informationen über unsere Produkte, Dienstleistungen und weitere für Sie interessante Schulungsangebote zukommen lassen.
         marketing_overall_opt_in_description_html: |
           Bitte markieren Sie das Kästchen unten, falls Sie solche Informationen erhalten möchten.
         marketing_overall_opt_in_html: |
@@ -107,7 +107,7 @@ de:
         marketing_post_opt_in_label_html: |
           Post
         marketing_representative_opt_in_label_html: |
-          Besuch eines Vertreters von GE Healthcare<br><span class="obligation">(Es besteht keinerlei Verpflichtung zu Treffen mit GE-Vertretern)</span>
+          Besuch eines Vertreters von GE HealthCare<br><span class="obligation">(Es besteht keinerlei Verpflichtung zu Treffen mit GE-Vertretern)</span>
         marketing_overall_opt_in_tick_html: |
           (Bitte markieren Sie mindestens eine Option)
         update: |
@@ -142,7 +142,7 @@ fr:
         four_html: |
           <p>Si vous n’avez pas demandé de recevoir ce rappel, veuillez ignorer ce courriel. Votre mot de passe sera uniquement changé lorsque vous aurez accédé au lien ci-dessus et que vous aurez créé un nouveau mot de passe.</p>
           <p>Merci de votre attention,</p>
-          <p>GE Healthcare</p>
+          <p>GE HealthCare</p>
     registrations:
       edit:
         title: Mon compte
@@ -156,7 +156,7 @@ fr:
           - Mme
           - Mlle
         description_html: |
-          Si vous réussissez le cours, GE Healthcare souhaiterait vous contacter pour vous fournir des informations sur ses produits, ses services ou une formation supplémentaire susceptibles de vous intéresser.
+          Si vous réussissez le cours, GE HealthCare souhaiterait vous contacter pour vous fournir des informations sur ses produits, ses services ou une formation supplémentaire susceptibles de vous intéresser.
         marketing_overall_opt_in_description_html: |
           Si vous souhaitez recevoir ces informations, veuillez cocher la case ci-dessous.
         marketing_overall_opt_in_html: |
@@ -170,7 +170,7 @@ fr:
         marketing_post_opt_in_label_html: |
           Courrier postal
         marketing_representative_opt_in_label_html: |
-          Visite d’un représentant de GE Healthcare<br><span class="obligation">(La visite d’un représentant n’est pas obligatoire)</span>
+          Visite d’un représentant de GE HealthCare<br><span class="obligation">(La visite d’un représentant n’est pas obligatoire)</span>
         marketing_overall_opt_in_tick_html: |
           (Veuillez cocher une ou plusieurs options)
         update: |
@@ -206,7 +206,7 @@ it:
         four_html: |
           <p>Nel caso non si sia effettuata questa richiesta, ignorare questa email. La sua password non sarà cambiata fino a che lei non acceda al link qui sopra e se ne abbia creato una nuova.</p>
           <p>Grazie,</p>
-          <p>GE Healthcare</p>
+          <p>GE HealthCare</p>
     registrations:
       edit:
         title: Il mio account
@@ -219,7 +219,7 @@ it:
           - Sig
           - Sig.ra
         description_html: |
-          Se supera il corso, GE Healthcare desidererebbe contattarla per fornirle i dettagli, servizi o formazioni supplementari relative al nostro prodotto e che crediamo essere di interesse per Lei.
+          Se supera il corso, GE HealthCare desidererebbe contattarla per fornirle i dettagli, servizi o formazioni supplementari relative al nostro prodotto e che crediamo essere di interesse per Lei.
         marketing_overall_opt_in_description_html: |
           Se si desiderano ricevere tali informazioni, spuntare la casella in basso.
         marketing_overall_opt_in_html: |
@@ -233,7 +233,7 @@ it:
         marketing_post_opt_in_label_html: |
           Indirizzo postale
         marketing_representative_opt_in_label_html: |
-          Visita di un rappresentante GE Healthcare<br><span class="obligation">(Non esiste l’obbligo di incontrare un rappresentante)</span>
+          Visita di un rappresentante GE HealthCare<br><span class="obligation">(Non esiste l’obbligo di incontrare un rappresentante)</span>
         marketing_overall_opt_in_tick_html: |
           (Spuntare una o più opzioni)
         update: |
@@ -268,7 +268,7 @@ es:
         four_html: |
           <p>Si no ha solicitado este recordatorio, ignore este correo electrónico. Su contraseña no se modificará hasta que acceda al hipervínculo incluido anteriormente y cree una nueva.</p>
           <p>Le agradecemos su colaboración,</p>
-          <p>GE Healthcare</p>
+          <p>GE HealthCare</p>
     registrations:
       edit:
         title: Mi cuenta
@@ -279,7 +279,7 @@ es:
           - Dra.
           - Dr.
         description_html: |
-          Si supera el curso, a GE Healthcare le gustaría ponerse en contacto con usted para proporcionarle detalles de nuestros productos, servicios o más formación que creemos que pueden resultarle interesantes.
+          Si supera el curso, a GE HealthCare le gustaría ponerse en contacto con usted para proporcionarle detalles de nuestros productos, servicios o más formación que creemos que pueden resultarle interesantes.
         marketing_overall_opt_in_description_html: |
           Si desea recibir dicha información, marque la casilla que encontrará a continuación.
         marketing_overall_opt_in_html: |
@@ -293,7 +293,7 @@ es:
         marketing_post_opt_in_label_html: |
           Correo ordinario
         marketing_representative_opt_in_label_html: |
-          Visita de un representante de GE Healthcare<br><span class="obligation">(No hay obligación de ver a un representante)</span>
+          Visita de un representante de GE HealthCare<br><span class="obligation">(No hay obligación de ver a un representante)</span>
         marketing_overall_opt_in_tick_html: |
           (Marque una o más opciones)
         update: |
@@ -341,7 +341,7 @@ jp:
           - Miss
           - Ms
         description_html: |
-          If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
+          If you pass the course, GE HealthCare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
         marketing_overall_opt_in_description_html: |
           If you do want to receive such information, please tick the box below.
         marketing_overall_opt_in_html: |
@@ -349,13 +349,13 @@ jp:
         marketing_overall_opt_in_note_html: |
           (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
         marketing_overall_description_html: |
-          If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:
+          If you would like to be contacted for & marketing purposes, please select one of the following options so that we know your preferred method of contact:
         marketing_email_opt_in_label_html: |
           E-Mail
         marketing_post_opt_in_label_html: |
           Post
         marketing_representative_opt_in_label_html: |
-          Visit from a GE Healthcare representative<br>(There is no obligation to see a representative)
+          Visit from a GE HealthCare representative<br>(There is no obligation to see a representative)
         marketing_overall_opt_in_tick_html: |
           (Please tick one or more options)
         update: |

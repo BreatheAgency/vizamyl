@@ -41,7 +41,7 @@ en:
           <p><a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
           <p>If you are interested in finding out more about <strong>SPECT imaging and DaTSCAN&#0153;</strong> visit:</p>
           <p><a href="http://www.gehealthcare.co.uk/datscan" target="_blank">www.gehealthcare.co.uk/datscan</a></p>
-          <p><small>Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.</small></p>
+          <p><small>Vizamyl and DaTSCAN are tradmarks of GE HealthCare Limited.</small></p>
     terms-and-conditions:
       title: Terms and conditions (8/2024)
       body_html: |
@@ -59,7 +59,7 @@ en:
         <p><b>b. Privacy and storage</b></p>
         <p>
         This data will be stored on a server based in the EU.
-        The data will only be used for administrative purposes unless you have consented to other uses such as your data being used for marketing purposes.
+        The data will only be used for administrative purposes unless you have consented to other uses such as your data being used for & marketing purposes.
         You can update your contact preferences at any time in the "My account" heroku.
         Data will only be accessed by GE HealthCare employees, unless in case of breakdown of the system or website where administrators based at <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> may be able to access data for administrative or maintenance purposes.
         Furthermore, our server platform at <a target="_blank" href="http://www.heroku.com">http://www.heroku.com</a> is hosted and managed by Amazon Web Services (<a target="_blank" href="http://aws.amazon.com/">http://aws.amazon.com/</a>) and therefore Amazon employees may have access to the data if there is a legitimate business need for such privileges.
@@ -159,11 +159,11 @@ en:
           <p>Querfurth HW, LaFerla FM. Alzheimer’s disease. <i>N Engl J Med</i>. 2010;362(4):329-344.</p>
           <p>Rowe CC, Ng S, Ackermann U, et al. Imaging beta-amyloid burden in aging and dementia. <i>Neurology</i>. 2007;68(20):1718-1725.</p>
           <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. <i>Ann Neurol</i>. 2010;68(3):319-329.</p>
-          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE Healthcare 2024.</p>
+          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE HealthCare 2024.</p>
     important-risk-and-safety-information:
       title_html: Important Risk and Safety Information<br>About Vizamyl&#0153; (Flutemetamol F 18 Injection)
       body_html: |
-        <p><b>INDICATIONS AND USAGE:</b> Vizamyl is indicated for positron-emission tomography (PET) imaging of the brain to estimate β-amyloid neuritic plaque density in adult patients with cognitive impairment who are being evaluated for Alzheimer’s disease (AD) and other causes of cognitive decline. A negative scan indicates sparse to no neuritic plaques, inconsistent with a diagnosis of AD at the time of image acquisition. A negative scan result reduces the likelihood that a patient’s cognitive impairment is due to AD. A positive scan indicates moderate to frequent amyloid neuritic plaques. This amount of amyloid neuritic plaque has been shown to be present in patients with AD but may also be present in patients with other neurologic conditions as well as in older people with normal cognition. Vizamyl is an adjunct to other diagnostic evaluations. <b>Limitations</b>: A positive scan does not establish a diagnosis of AD or other cognitive disorder. The safety and effectiveness of Vizamyl have not been established for predicting the development of dementia or other neurologic conditions or for monitoring responses to therapies. <b>CONTRAINDICATIONS: </b>Known hypersensitivity to Vizamyl or any excipient, including polysorbate 80. <b>WARNINGS AND PRECAUTIONS — Hypersensitivity Reactions: </b>Reactions such as flushing and dyspnea have been observed within minutes following administration and may occur in patients with no history of exposure to Vizamyl. Have resuscitation equipment and trained personnel available. <b>Image Misinterpretation</b>: Errors may occur while interpreting Vizamyl PET images. Image interpretation is performed independently of the patient’s clinical information. The use of clinical information in the interpretation of Vizamyl images has not been evaluated and may lead to errors. Extensive brain atrophy may limit the ability to distinguish grey and white matter on a Vizamyl scan. Motion artifacts may distort the image. Images should be interpreted only by readers who have completed a reader training program available from GE Healthcare. <b>Radiation Risk</b>: Like all radiopharmaceuticals, Vizamyl contributes to a patient’s long-term, cumulative radiation exposure and cancer risk. Ensure safe handling to protect patients and healthcare workers from unintentional radiation exposure. <b>ADVERSE REACTIONS</b>: The most commonly reported adverse reactions in NDA clinical trials were flushing, increased blood pressure, headache, nausea, and dizziness. <b>DRUG INTERACTIONS:</b> Drug-drug interaction studies have not been performed in patients to establish the extent, if any, to which concomitant medications may alter Vizamyl image results. <b>SPECIFIC POPULATIONS — Pregnancy: </b>It is not known whether Vizamyl can cause fetal harm when administered to a pregnant woman or if it can affect reproductive capacity. Radiopharmaceuticals, including Vizamyl, have the potential to cause fetal harm, the likelihood of which depends on the stage of fetal development and the magnitude of the radiopharmaceutical dose. Vizamyl should be given to a pregnant woman only if clearly needed. <b>Nursing Mothers:</b> It is not known whether flutemetamol is excreted in human milk. Because many drugs are excreted in human milk and there is a potential for radiation exposure to nursing infants, avoid use of Vizamyl in a breastfeeding mother or have the mother temporarily interrupt breastfeeding for 24 hours after exposure. <b>Pediatric Use:</b> Vizamyl is not indicated for use in pediatric patients. <b>Geriatric Use:</b> No overall differences in safety were observed between older and younger subjects. <b>OVERDOSAGE:</b> The clinical consequence of overdosing with Vizamyl has not been reported. It is unknown whether or not flutemetamol is dialyzable. In case of overdose of radioactivity, hydration and frequent urination should be encouraged.</p
+        <p><b>INDICATIONS AND USAGE:</b> Vizamyl is indicated for positron-emission tomography (PET) imaging of the brain to estimate β-amyloid neuritic plaque density in adult patients with cognitive impairment who are being evaluated for Alzheimer’s disease (AD) and other causes of cognitive decline. A negative scan indicates sparse to no neuritic plaques, inconsistent with a diagnosis of AD at the time of image acquisition. A negative scan result reduces the likelihood that a patient’s cognitive impairment is due to AD. A positive scan indicates moderate to frequent amyloid neuritic plaques. This amount of amyloid neuritic plaque has been shown to be present in patients with AD but may also be present in patients with other neurologic conditions as well as in older people with normal cognition. Vizamyl is an adjunct to other diagnostic evaluations. <b>Limitations</b>: A positive scan does not establish a diagnosis of AD or other cognitive disorder. The safety and effectiveness of Vizamyl have not been established for predicting the development of dementia or other neurologic conditions or for monitoring responses to therapies. <b>CONTRAINDICATIONS: </b>Known hypersensitivity to Vizamyl or any excipient, including polysorbate 80. <b>WARNINGS AND PRECAUTIONS — Hypersensitivity Reactions: </b>Reactions such as flushing and dyspnea have been observed within minutes following administration and may occur in patients with no history of exposure to Vizamyl. Have resuscitation equipment and trained personnel available. <b>Image Misinterpretation</b>: Errors may occur while interpreting Vizamyl PET images. Image interpretation is performed independently of the patient’s clinical information. The use of clinical information in the interpretation of Vizamyl images has not been evaluated and may lead to errors. Extensive brain atrophy may limit the ability to distinguish grey and white matter on a Vizamyl scan. Motion artifacts may distort the image. Images should be interpreted only by readers who have completed a reader training program available from GE HealthCare. <b>Radiation Risk</b>: Like all radiopharmaceuticals, Vizamyl contributes to a patient’s long-term, cumulative radiation exposure and cancer risk. Ensure safe handling to protect patients and healthcare workers from unintentional radiation exposure. <b>ADVERSE REACTIONS</b>: The most commonly reported adverse reactions in NDA clinical trials were flushing, increased blood pressure, headache, nausea, and dizziness. <b>DRUG INTERACTIONS:</b> Drug-drug interaction studies have not been performed in patients to establish the extent, if any, to which concomitant medications may alter Vizamyl image results. <b>SPECIFIC POPULATIONS — Pregnancy: </b>It is not known whether Vizamyl can cause fetal harm when administered to a pregnant woman or if it can affect reproductive capacity. Radiopharmaceuticals, including Vizamyl, have the potential to cause fetal harm, the likelihood of which depends on the stage of fetal development and the magnitude of the radiopharmaceutical dose. Vizamyl should be given to a pregnant woman only if clearly needed. <b>Nursing Mothers:</b> It is not known whether flutemetamol is excreted in human milk. Because many drugs are excreted in human milk and there is a potential for radiation exposure to nursing infants, avoid use of Vizamyl in a breastfeeding mother or have the mother temporarily interrupt breastfeeding for 24 hours after exposure. <b>Pediatric Use:</b> Vizamyl is not indicated for use in pediatric patients. <b>Geriatric Use:</b> No overall differences in safety were observed between older and younger subjects. <b>OVERDOSAGE:</b> The clinical consequence of overdosing with Vizamyl has not been reported. It is unknown whether or not flutemetamol is dialyzable. In case of overdose of radioactivity, hydration and frequent urination should be encouraged.</p
     resources:
       prescribing_information_title: US Full Prescribing Information for Vizamyl
       rainbow_title: Rainbow Colour Scale RGB Values
@@ -453,13 +453,13 @@ it:
     contact:
       left:
         title: |
-         Contatti di GE Healthcare Italia
+         Contatti di GE HealthCare Italia
         body_html: |
           <p>Se si desiderano informazioni <strong>mediche supplementari</strong> su Vizamyl, ci contatti all’indirizzo email:</p>
           <p><a href="mailto:PDxMA.ITALY@ge.com">PDxMA.ITALY@ge.com</a></p>
           <p>Per ulteriori richieste, comprese le richieste di formazione per <strong>la lettura delle immagini</strong>, ci contatti all’indirizzo email:</p>
           <p><a href="mailto:GE_ITA.MarketingPDx@ge.com">GE_ITA.MarketingPDx@ge.com</a></p>
-          <p><small>Vizamyl è un marchio di GE Healthcare.</small></p>
+          <p><small>Vizamyl è un marchio di GE HealthCare.</small></p>
     terms-and-conditions:
       title: Termini e Condizioni (8/2024)
       body_html: |
@@ -577,7 +577,7 @@ es:
           <p><a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
           <p>Si está interesado en saber más sobre imágenes <strong>SPECT y DaTSCAN&#0153; visite</strong>:</p>
           <p><a href="http://www.gehealthcare.co.uk/datscan" target="_blank">www.gehealthcare.co.uk/datscan</a></p>
-          <p><small>Vizamyl y DaTSCAN son marcas comerciales de GE Healthcare Limited.</small></p>
+          <p><small>Vizamyl y DaTSCAN son marcas comerciales de GE HealthCare Limited.</small></p>
     terms-and-conditions:
       title: Términos y Condiciones (8/2024)
       body_html: |
@@ -676,7 +676,7 @@ jp:
           <p>Querfurth HW, LaFerla FM. Alzheimer’s disease. <i>N Engl J Med</i>. 2010;362(4):329-344.</p>
           <p>Rowe CC, Ng S, Ackermann U, et al. Imaging beta-amyloid burden in aging and dementia. <i>Neurology</i>. 2007;68(20):1718-1725.</p>
           <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. <i>Ann Neurol</i>. 2010;68(3):319-329.</p>
-          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE Healthcare 2014.</p>
+          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE HealthCare 2014.</p>
     resources:
       download: ダウンロード
       smpc_title: 放射性医薬品合成設備FASTlab（フルテメタモル合成用）添付文書

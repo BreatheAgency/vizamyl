@@ -9,7 +9,7 @@ en:
         required_field: Required Field
         password_length: Password must be at least eight characters long
         marketing_privacy: 'Privacy Statement:'
-        marketing_overall_opt_in: 'I would like to opt-in to receive other materials or information from GE Healthcare about Vizamyl.' 
+        marketing_overall_opt_in: 'I would like to opt-in to receive other materials or information from GE HealthCare about Vizamyl.' 
         marketing_overall_opt_out: I opt-out to receive any information regarding Vizamyl. By opting-out you are not prohibited from taking this training.
         acknowledge_privacy: 'I have reviewed the Privacy Statement. Please <a href="http://www.ge.com/privacy" target="_blank">click here</a> to view.'
         submit: 'Submit'
@@ -17,7 +17,7 @@ en:
         invite_code_placeholder: "OPTIONAL INVITE CODE HERE"
       new_us_native:
         <<: *new_en
-        preamble: "<p>This course is intended for US Healthcare Professionals only for the purpose of educating and aiding HCP’s interpretation of Vizamyl scans. By registering, you certify that you are a licensed US Healthcare Professional. The Personal Information collected below will, unless designated otherwise, be used solely to identify you in the test results section of this training program. For more information regarding our privacy policy, please view our Privacy Statement.</p>"
+        preamble: "<p>This course is intended for US HealthCare Professionals only for the purpose of educating and aiding HCP’s interpretation of Vizamyl scans. By registering, you certify that you are a licensed US HealthCare Professional. The Personal Information collected below will, unless designated otherwise, be used solely to identify you in the test results section of this training program. For more information regarding our privacy policy, please view our Privacy Statement.</p>"
         instructions: |
           <p>To get started, please fill in all required fields below and click the Submit button.<p/>
           <p>Once your account has been successfully created, you will have the opportunity to save your progress, review information, or print results upon completion of the course. Following completion of this course, you will be able to return and view/print course content at any time via the name & email address provided on your account.</p>
@@ -41,7 +41,7 @@ en:
       terms:
         title_html: Vizamyl&#174; Training
         description_one_html: |
-          <p>GE Healthcare will collect your data in order to assess whether you have understood how to use Vizamyl&#174; in accordance with Vizamyl&#174;’s Summary of Product Characteristics and whether Vizamyl&#174; should be supplied to you for use in the event that you have passed an exam in relation to this. In the event that: (i) you pass the exam, we will use your data in order to supply Vizamyl&#174; to you, or your institution; OR (ii) you fail the exam, we will use your data in order to provide you with face-to-face training in your country. For this purpose, we may share personal data relating to you with other companies in the GE Healthcare group. We may also hold your data for a reasonable amount of time. You can exercise your right of access and rectification and your right to object to data processing by sending a request to us at <a href="mailto:contactus@ge.com">contactus@ge.com</a>.</p>
+          <p>GE HealthCare will collect your data in order to assess whether you have understood how to use Vizamyl&#174; in accordance with Vizamyl&#174;’s Summary of Product Characteristics and whether Vizamyl&#174; should be supplied to you for use in the event that you have passed an exam in relation to this. In the event that: (i) you pass the exam, we will use your data in order to supply Vizamyl&#174; to you, or your institution; OR (ii) you fail the exam, we will use your data in order to provide you with face-to-face training in your country. For this purpose, we may share personal data relating to you with other companies in the GE HealthCare group. We may also hold your data for a reasonable amount of time. You can exercise your right of access and rectification and your right to object to data processing by sending a request to us at <a href="mailto:contactus@ge.com">contactus@ge.com</a>.</p>
           <p>Due to the international dimension of our group, the data may be transferred to countries outside the EU which do not grant the same level of protection to personal data.</p>
         cookies_accept_html: ""
         description_two_html: ""
@@ -51,7 +51,7 @@ en:
         title_html: |
           Vizamyl&#174; Training<br>Marketing and promotional use of data
         description_html: |
-          If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
+          If you pass the course, GE HealthCare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
         marketing_overall_opt_in_description_html: |
           If you do want to receive such information, please tick the box below
         marketing_overall_opt_in_html: |
@@ -59,13 +59,13 @@ en:
         marketing_overall_opt_in_note_html: |
           (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
         marketing_overall_description_html: |
-          If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:
+          If you would like to be contacted for & marketing purposes, please select one of the following options so that we know your preferred method of contact:
         marketing_email_opt_in_label_html: |
           E-Mail
         marketing_post_opt_in_label_html: |
           Post
         marketing_representative_opt_in_label_html: |
-          Visit from a GE Healthcare representative<br>(There is no obligation to see a representative)
+          Visit from a GE HealthCare representative<br>(There is no obligation to see a representative)
         marketing_overall_opt_in_tick_html: |
           (Please tick one or more options)
   users:
@@ -93,8 +93,8 @@ de:
       terms:
         title_html: Vizamyl&#8482; Schulung
         description_one_html: |
-          <p>GE Healthcare erhebt Ihre Daten, um zu bewerten, ob Sie über ausreichende Kenntnisse zur Anwendung von Vizamyl&#8482; gemäß Fachinformation zu Vizamyl&#8482; verfügen und ob Vizamyl&#8482; an Sie geliefert werden soll, nachdem Sie eine diesbezügliche Prüfung bestanden haben. Falls Sie (i) die Prüfung bestehen, verwenden wir Ihre Daten, um Vizamyl&#8482; an Sie oder Ihre Organisation zu liefern. (ii) Falls Sie die Prüfung nicht bestehen, verwenden wir Ihre Daten, um Ihnen eine Präsenzschulung in Ihrem Land anzubieten. Zu diesem Zweck können wir Ihre persönlichen Daten an andere Unternehmen innerhalb der GE Healthcare-Gruppe weitergeben. Wir sind berechtigt, Ihre Daten während eines angemessenen Zeitraums zu speichern. Sie sind berechtigt, auf Ihre bei GE Healthcare gespeicherten Daten zuzugreifen, diese Daten zu ändern und Einwände gegen die Datenverarbeitung zu erheben. Sie können von diesem Recht Gebrauch machen, indem Sie eine entsprechende Anfrage an <a href="mailto:contactus@ge.com">contactus@ge.com</a> senden.</p>
-          <p>Aufgrund der internationalen Ausrichtung von GE Healthcare kann es zur Übertragung Ihrer Daten in Länder außerhalb der EU kommen, in denen keine der EU vergleichbaren Datenschutzbestimmungen gelten.</p>
+          <p>GE HealthCare erhebt Ihre Daten, um zu bewerten, ob Sie über ausreichende Kenntnisse zur Anwendung von Vizamyl&#8482; gemäß Fachinformation zu Vizamyl&#8482; verfügen und ob Vizamyl&#8482; an Sie geliefert werden soll, nachdem Sie eine diesbezügliche Prüfung bestanden haben. Falls Sie (i) die Prüfung bestehen, verwenden wir Ihre Daten, um Vizamyl&#8482; an Sie oder Ihre Organisation zu liefern. (ii) Falls Sie die Prüfung nicht bestehen, verwenden wir Ihre Daten, um Ihnen eine Präsenzschulung in Ihrem Land anzubieten. Zu diesem Zweck können wir Ihre persönlichen Daten an andere Unternehmen innerhalb der GE Healthcare-Gruppe weitergeben. Wir sind berechtigt, Ihre Daten während eines angemessenen Zeitraums zu speichern. Sie sind berechtigt, auf Ihre bei GE HealthCare gespeicherten Daten zuzugreifen, diese Daten zu ändern und Einwände gegen die Datenverarbeitung zu erheben. Sie können von diesem Recht Gebrauch machen, indem Sie eine entsprechende Anfrage an <a href="mailto:contactus@ge.com">contactus@ge.com</a> senden.</p>
+          <p>Aufgrund der internationalen Ausrichtung von GE HealthCare kann es zur Übertragung Ihrer Daten in Länder außerhalb der EU kommen, in denen keine der EU vergleichbaren Datenschutzbestimmungen gelten.</p>
         cookies_accept_html: |
           <span class="terms-accept">Ich erkläre mich mit der Verwendung von Cookies einverstanden</span><br><span class="please-tick">(Bitte markieren)</span>
         description_two_html: |
@@ -105,7 +105,7 @@ de:
         title_html: |
           Vizamyl&#8482; Schulung<br>Nutzung von Daten für Marketing- und Promotion-Zwecke
         description_html: |
-          Falls Sie den Kurs bestehen, möchte GE Healthcare Ihnen Informationen über unsere Produkte, Dienstleistungen und weitere für Sie interessante Schulungsangebote zukommen lassen.
+          Falls Sie den Kurs bestehen, möchte GE HealthCare Ihnen Informationen über unsere Produkte, Dienstleistungen und weitere für Sie interessante Schulungsangebote zukommen lassen.
         marketing_overall_opt_in_description_html: |
           Bitte markieren Sie das Kästchen unten, falls Sie solche Informationen erhalten möchten.
         marketing_overall_opt_in_html: |
@@ -141,7 +141,7 @@ fr:
       terms:
         title_html: Formation Vizamyl&#8482;
         description_one_html: |
-          <p>GE Healthcare recueillera vos données pour déterminer si vous avez compris comment utiliser Vizamyl&#8482; conformément au Résumé des caractéristiques du produit Vizamyl&#8482; et si Vizamyl&#8482; devrait vous être fourni pour utilisation si vous avez réussi à l’examen en la matière. Si : (i) vous réussissez à l’examen, nous utiliserons vos données pour vous fournir Vizamyl&#8482; ou le fournir à votre établissement ; OU (ii) vous échouez à l’examen, nous utiliserons vos données pour vous fournir une formation en face-à-face dans votre pays. À ces fins, nous sommes susceptibles de partager des données personnelles vous concernant avec d’autres sociétés du groupe GE Healthcare. Nous sommes également susceptibles de conserver vos données pendant une durée raisonnable. Vous pouvez exercer votre droit d’accès et de rectification et votre droit d’objecter au traitement des données en nous envoyant une demande à <a href="mailto:contactus@ge.com">contactus@ge.com</a>.</p>
+          <p>GE HealthCare recueillera vos données pour déterminer si vous avez compris comment utiliser Vizamyl&#8482; conformément au Résumé des caractéristiques du produit Vizamyl&#8482; et si Vizamyl&#8482; devrait vous être fourni pour utilisation si vous avez réussi à l’examen en la matière. Si : (i) vous réussissez à l’examen, nous utiliserons vos données pour vous fournir Vizamyl&#8482; ou le fournir à votre établissement ; OU (ii) vous échouez à l’examen, nous utiliserons vos données pour vous fournir une formation en face-à-face dans votre pays. À ces fins, nous sommes susceptibles de partager des données personnelles vous concernant avec d’autres sociétés du groupe GE Healthcare. Nous sommes également susceptibles de conserver vos données pendant une durée raisonnable. Vous pouvez exercer votre droit d’accès et de rectification et votre droit d’objecter au traitement des données en nous envoyant une demande à <a href="mailto:contactus@ge.com">contactus@ge.com</a>.</p>
           <p>En raison de l’envergure internationale de notre groupe, les données sont susceptibles d’être transférées vers des pays à l’extérieur de l’Union européenne (UE) qui n’accordent pas le même niveau de protection des données personnelles.</p>
         cookies_accept_html: ""
         description_two_html: ""
@@ -151,7 +151,7 @@ fr:
         title_html: |
           Formation Vizamyl&#8482;<br><br>Commercialisation et utilisation promotionnelle des données
         description_html: |
-          Si vous réussissez le cours, GE Healthcare souhaiterait vous contacter pour vous fournir des informations sur ses produits, ses services ou une formation supplémentaire susceptibles de vous intéresser.
+          Si vous réussissez le cours, GE HealthCare souhaiterait vous contacter pour vous fournir des informations sur ses produits, ses services ou une formation supplémentaire susceptibles de vous intéresser.
         marketing_overall_opt_in_description_html: |
           Si vous souhaitez recevoir ces informations, veuillez cocher la case ci-dessous.
         marketing_overall_opt_in_html: |
@@ -187,7 +187,7 @@ it:
       terms:
         title_html: Formazione Vizamyl&#8482;
         description_one_html: |
-          <p>GE Healthcare raccoglierà i suoi dati ai soli fini di valutare la sua comprensione dell’utilizzo del Vizamyl&#8482; secondo il Riepilogo delle caratteristiche del prodotto Vizamyl&#8482; e se Vizamyl&#8482; le debba essere fornito per l’utilizzo nel caso che abbia superato l’esame relativo. Nel caso in cui: (i)Lei supera l’esame, utilizzeremo i suoi dati per fornire a Lei o alla sua istituzione il Vizamyl&#8482; OPPURE (ii) Lei non supera l’esame, utilizzeremo i suoi dati per offrirle una formazione presenziale nel suo paese. A questo scopo, possiamo condividere i dati personali che le riguardano con altre aziende del gruppo GE Healthcare. Possiamo anche conservare i suoi dati per un periodo di tempo ragionevole. È possibile esercitare il proprio diritto di accedere ai propri dati e il proprio diritto di opposizione all’elaborazione degli stessi inviandoci una richiesta a questo indirizzo email: <a href="mailto:contactus@ge.com">contactus@ge.com</a>.</p>
+          <p>GE HealthCare raccoglierà i suoi dati ai soli fini di valutare la sua comprensione dell’utilizzo del Vizamyl&#8482; secondo il Riepilogo delle caratteristiche del prodotto Vizamyl&#8482; e se Vizamyl&#8482; le debba essere fornito per l’utilizzo nel caso che abbia superato l’esame relativo. Nel caso in cui: (i)Lei supera l’esame, utilizzeremo i suoi dati per fornire a Lei o alla sua istituzione il Vizamyl&#8482; OPPURE (ii) Lei non supera l’esame, utilizzeremo i suoi dati per offrirle una formazione presenziale nel suo paese. A questo scopo, possiamo condividere i dati personali che le riguardano con altre aziende del gruppo GE Healthcare. Possiamo anche conservare i suoi dati per un periodo di tempo ragionevole. È possibile esercitare il proprio diritto di accedere ai propri dati e il proprio diritto di opposizione all’elaborazione degli stessi inviandoci una richiesta a questo indirizzo email: <a href="mailto:contactus@ge.com">contactus@ge.com</a>.</p>
           <p>Viste le dimensioni internazionali del gruppo, i dati possono essere trasferiti a paesi esterni alla UE in cui non vengono garantiti gli stessi livelli di protezione dei dati personali.</p>
         cookies_accept_html: ""
         description_two_html: ""
@@ -197,7 +197,7 @@ it:
         title_html: |
           Formazione Vizamyl&#8482;<br>Utilizzo dei dati a fini commerciali e promozionali
         description_html: |
-          Se supera il corso, GE Healthcare desidererebbe contattarla per fornirle i dettagli, servizi o formazioni supplementari relative al nostro prodotto e che crediamo essere di interesse per Lei.
+          Se supera il corso, GE HealthCare desidererebbe contattarla per fornirle i dettagli, servizi o formazioni supplementari relative al nostro prodotto e che crediamo essere di interesse per Lei.
         marketing_overall_opt_in_description_html: |
           Se si desiderano ricevere tali informazioni, spuntare la casella in basso.
         marketing_overall_opt_in_html: |
@@ -233,7 +233,7 @@ es:
       terms:
         title_html: Formación en Vizamyl&#174;
         description_one_html: |
-          <p>GE Healthcare recopilará sus datos a fin de evaluar si ha comprendido cómo usar Vizamyl&#174; de acuerdo con el resumen de las características del producto Vizamyl&#174; y en relación al suministro Vizamyl&#174; en el caso de que haya superado el examen sobre el tema. En caso de que: (i) haya superado el examen, emplearemos sus datos para suministrarle Vizamyl&#174; a usted o a su centro; O (ii) haya suspendido el examen, emplearemos sus datos para proporcionarle formación presencial en su país. Con este propósito, puede que compartamos sus datos personales con otras compañías del grupo GE Healthcare. También puede que conservemos sus datos durante un periodo de tiempo razonable. Puede ejercitar su derecho de acceso y rectificación y su derecho a objetar sobre el procesamiento de los datos remitiéndonos una solicitud a <a href="mailto:contactus@ge.com">contactus@ge.com</a>.</p>
+          <p>GE HealthCare recopilará sus datos a fin de evaluar si ha comprendido cómo usar Vizamyl&#174; de acuerdo con el resumen de las características del producto Vizamyl&#174; y en relación al suministro Vizamyl&#174; en el caso de que haya superado el examen sobre el tema. En caso de que: (i) haya superado el examen, emplearemos sus datos para suministrarle Vizamyl&#174; a usted o a su centro; O (ii) haya suspendido el examen, emplearemos sus datos para proporcionarle formación presencial en su país. Con este propósito, puede que compartamos sus datos personales con otras compañías del grupo GE Healthcare. También puede que conservemos sus datos durante un periodo de tiempo razonable. Puede ejercitar su derecho de acceso y rectificación y su derecho a objetar sobre el procesamiento de los datos remitiéndonos una solicitud a <a href="mailto:contactus@ge.com">contactus@ge.com</a>.</p>
           <p>Debido a la dimensión internacional de nuestro grupo, los datos pueden transferirse a países fuera de la UE que no garantizan el mismo nivel de protección de los datos personales.</p>
         cookies_accept_html: ""
         description_two_html: ""
@@ -243,7 +243,7 @@ es:
         title_html: |
           Formación en Vizamyl&#174;<br>Uso de los datos con fines de marketing y promocionales
         description_html: |
-          Si supera el curso, a GE Healthcare le gustaría ponerse en contacto con usted para proporcionarle detalles de nuestros productos, servicios o más formación que creemos que pueden resultarle interesantes.
+          Si supera el curso, a GE HealthCare le gustaría ponerse en contacto con usted para proporcionarle detalles de nuestros productos, servicios o más formación que creemos que pueden resultarle interesantes.
         marketing_overall_opt_in_description_html: |
           Si desea recibir dicha información, marque la casilla que encontrará a continuación.
         marketing_overall_opt_in_html: |
