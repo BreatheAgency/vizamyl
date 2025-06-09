@@ -6,6 +6,7 @@ class LoginLink
         'au' => { country: 'Australia', url: "#{base_url}", locale: 'en-us', origin: 'au' },
         'at' => { country: 'Austria', url: "#{base_url}", locale: 'de-at', origin: 'at' },
         'be' => { country: 'Belgium', url: "#{base_url}", locale: 'be', origin: 'be' },
+        'bg' => { country: 'Bulgaria', url: "#{base_url}", locale: 'bg', origin: 'bg' },
         'hr' => { country: 'Croatia', url: "#{base_url}", locale: 'en-gb', origin: 'hr' },
         'cz' => { country: 'Czechia', url: "#{base_url}", locale: 'en-gb', origin: 'cz' },
         'dk' => { country: 'Denmark', url: "#{base_url}", locale: 'en-gb', origin: 'dk' },
