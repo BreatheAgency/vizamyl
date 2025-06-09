@@ -21,7 +21,7 @@ en:
         instructions: |
           <p>To get started, please fill in all required fields below and click the Submit button.<p/>
           <p>Once your account has been successfully created, you will have the opportunity to save your progress, review information, or print results upon completion of the course. Following completion of this course, you will be able to return and view/print course content at any time via the name & email address provided on your account.</p>
-        marketing_overall_opt_in: Yes, please send me occasional email communications containing relevant product updates and upcoming events from GE Healthcare
+        marketing_overall_opt_in: Yes, please send me occasional email communications containing relevant product updates and upcoming events from GE HealthCare
         required_field: Indicates a required field
       new_other_country:
         <<: *new_en
