@@ -522,9 +522,9 @@ section#country__hero__area {
       padding: 5px;
     }
 
-    .page__select__next__prev {
-      text-align: right;
-    }
+    // .page__select__next__prev {
+    //   text-align: right;
+    // }
   }
 
   // display: grid;
@@ -1341,7 +1341,7 @@ section#video__area {
 .video__area,
 .reference__wrap {
   padding-bottom: 30px!important;
-  
+
   .vizamyl-tag,
   .custom-tag {
     background-color: #6022A6;
@@ -1404,15 +1404,6 @@ section#video__area {
     }
   }
 
-  .page__select__next__prev {
-    margin-top: auto;
-    // margin-right: 25px;
-    // padding-top: 50px;
-    text-align: right;
-    position: relative;
-    z-index: 2;
-  }
-
   .page-abbreviations {
     p {
       font-size: 15px;
@@ -1420,6 +1411,15 @@ section#video__area {
       margin: 0 auto;
     }
   }
+}
+
+.page__select__next__prev {
+  margin-top: auto;
+  // margin-right: 25px;
+  // padding-top: 50px;
+  text-align: right;
+  position: relative;
+  z-index: 2;
 }
 
 .video-page {
@@ -1587,6 +1587,7 @@ section#video__area {
       flex-wrap: wrap;
       align-items: center;
       gap: 2px;
+      padding: 0;
 
       li {
         display: inline-flex;

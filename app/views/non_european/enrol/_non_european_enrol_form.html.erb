@@ -112,7 +112,14 @@
     </div>
   </div>
 
-  <div class="">
+  <div class="page__select__next__prev py-5">
+    <%= button_tag(type: 'submit', class: 'login btn btn-primary') do %>
+      <%= t('non_european.enrol.new.submit') %>
+      <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+      <% end %>
+  </div>
+
+  <!-- <div class="">
     <div class="">
       <div class='form-actions button-container'>
         <br>
@@ -122,5 +129,5 @@
         <% end %>
       </div>
     </div>
-  </div>
+  </div> -->
 <% end %>
