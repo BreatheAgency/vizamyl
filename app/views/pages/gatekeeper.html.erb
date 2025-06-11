@@ -1,5 +1,36 @@
+<div class="offcanvas-area">
+  <div class="menu-close">
+    <i class="fa fa-times"></i>
+  </div>
+  <div class="offcanvas-menu">
+    <div class="main-menu">
+      <ul class="d-block">
+        <%= render partial: 'menu_links' %>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<section id="country__hero__area" class="country__hero__area">
+<div class="offcanvas-overlay"></div>
+
+<header id="header__area" class="header__area">
+  <div class="container">
+    <div class="header__wrap">
+      <div class="header__nav d-none d-xl-block">
+        <ul class="disable">
+          <%= render partial: 'menu_links' %>
+        </ul>
+      </div>
+      
+      <div class="burger_menu d-xl-none d-block">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>
+      </div>
+      <%= render partial: 'vizamyl_logo' %>
+    </div>
+  </div>
+</header>
+
+<!-- <section id="country__hero__area" class="country__hero__area">
   <div class="container">
     <div class="country__hero__wrap">
       <div class="welcome__hero__content country_content">
@@ -9,19 +40,23 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- ===================== COUNTRY-HERO AREA END ===================== -->
 
 <!-- ===================== COUNTRY-NAME AREA START ===================== -->
-<section id="country__area" class="country__area">
-  <div class="container">
-    <div class="country__wrap">
-      <div class="country__names">
-        <%= render partial: 'helpers/locale_links' %>
+<main id="main" role='main'>
+  <div id="bumper" class="bumper">
+    <section id="country__area" class="country__area">
+      <div class="container">
+        <div class="country__wrap">
+          <div class="country__names">
+            <%= render partial: 'helpers/locale_links' %>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   </div>
-</section>
+</main>
 
 <%= render partial: 'footer' %>
 

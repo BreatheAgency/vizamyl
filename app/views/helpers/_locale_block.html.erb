@@ -1,22 +1,42 @@
-<div class="col-md-8">
-  <form id="country-selector" action="" method="get">
-    <label for="countries">Select your country:</label>
-    <select id="countries" name="country_url" onchange="toggleNextButton()">
-      <option value="" selected>Select a country</option> <!-- Default option -->
-      <% locales.each do |origin, details| %>
-        <option 
-          value="<%= origin == 'kr' ? details[:url] : "#{details[:url]}/#{details[:locale]}?origin=#{origin}" %>">
-          <%= details[:country] %>
-        </option>
-      <% end %>
-    </select>
-    <div class="page__select__next__prev">
-      <button id="next-button" class="btn btn-primary" type="button" onclick="redirectToCountry()" disabled>
-        Next
-        <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
-      </button>
+<div class="row">
+  <div class="col-md-7">
+    <div class="content-container">
+      <div class="content-header">
+        <h1>Welcome to the Vizamyl<sup>TM</sup> training for image readers</h1>
+
+        <form id="country-selector" action="" method="get">
+          <label for="countries" class="custom-tag">Please Select your country where you are located</label>
+          <select id="countries" name="country_url" onchange="toggleNextButton()">
+            <option value="" selected>Select a country</option> <!-- Default option -->
+            <% locales.each do |origin, details| %>
+              <option 
+                value="<%= origin == 'kr' ? details[:url] : "#{details[:url]}/#{details[:locale]}?origin=#{origin}" %>">
+                <%= details[:country] %>
+              </option>
+            <% end %>
+          </select>
+        </form>
+        <h6>This site is intended for healthcare professionals only.</h6>
+        <h6>By proceeding, you confirm that you are a healthcare professional.</h6>
+      </div>
     </div>
-  </form>
+  </div>
+  
+  <div class="col-md-5">
+    <div class="media-container">
+      <div class="media-wrapper">
+        <div class="media-holder worldImage">
+          <%= image_tag('world-image.png') %>
+        </div>
+      </div>
+      <div class="page__select__next__prev">
+        <button id="next-button" class="btn btn-primary" type="button" onclick="redirectToCountry()" disabled>
+          Next
+          <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script>
