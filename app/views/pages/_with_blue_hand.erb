@@ -1,10 +1,10 @@
 <section class="welcome__hero__area blue_hand">
   <div class='row justify-content-between'>
     <div class='col-4 ge_logo '>
-      <%= image_tag('blue-hand.png', id: 'blue-hand') %>
+      <%= image_tag('purple-hand.png', id: 'blue-hand') %>
     </div>
     <div class='col-4 blue_hand_logo'>
-      <%= image_tag('ge-logo.png', id: 'ge-logo') %>
+      <%= image_tag('ge-logo-purple.png', id: 'ge-logo') %>
     </div>
   </div>
 </section>
@@ -16,16 +16,19 @@
     </div>
 
     <div class="welcome__hero__btns my-5">
-      <a href='<%= new_user_session_path %>'><%= t('layouts.application.login') %>
-        <%= image_tag("right_angle_purple.svg") %>
+      <a class="btn btn-primary" href='<%= new_user_session_path %>'><%= t('layouts.application.login') %>
+        <!-- <%= image_tag("right_angle_purple.svg") %> -->
+        <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
       </a>
       <% if european_locale? %>
-        <a href='<%= european_enrol_path(id: User.form_steps.first, locale: I18n.locale) %>'><%= t('layouts.application.enrol') %>
-          <%= image_tag("right_angle_purple.svg") %>
+        <a class="btn btn-secondary" href='<%= european_enrol_path(id: User.form_steps.first, locale: I18n.locale) %>'><%= t('layouts.application.enrol') %>
+          <!-- <%= image_tag("right_angle_purple.svg") %> -->
+          <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
         </a>
       <% else %>
-        <a href='<%= new_non_european_enrol_path(locale: I18n.locale) %>'><%= t('layouts.application.enrol') %>
-          <%= image_tag("right_angle_purple.svg") %>
+        <a class="btn btn-secondary" href='<%= new_non_european_enrol_path(locale: I18n.locale) %>'><%= t('layouts.application.enrol') %>
+          <!-- <%= image_tag("right_angle_purple.svg") %> -->
+          <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
         </a>
       <% end %>
     </div>

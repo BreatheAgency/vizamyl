@@ -36,11 +36,10 @@ es:
       contact: Contact Us
       important_risk_and_safety_information: 'Indications, Usage and Important Safety Information'
       copyright_html: |
-        <p>&copy;2016-2025 General Electric Company.</p>
-        <p>GE, the GE Monogram, and Vizamyl are trademarks of General Electric Company.</p>
-        <p>Any third-party trademarks are the property of the respective owners.</p>
-        <p>June 2025 JB37321USb(1)</p>
-        <p><a href="/es/terms-and-conditions">Terms and conditions</a></p>
+        <p>&copy; 2025 GE HealthCare.</p>
+        <p>Vizamyl es una marca registrada de GE HealthCare.</p>
+        <p>GE es una marca registrada de General Electric Company utilizada bajo licencia de marca registrada.</p>
+        <p><a href="https://www.gehealthcare.es/footer/terms-and-conditions">Términos y condiciones</a></p>
 'en-us':
   layouts:
     application:
@@ -77,22 +76,21 @@ de:
       resources: Ressourcen
       contact: Kontakt
       copyright_html: |
-        <p>VIZAMYL DE Version 1.2 – Oktober 2025</p>
-        <p>&copy;2025 General Electric Company - Alle Rechte vorbehalten.</p>
-        <p>GE und GE Monogram sind Handelsmarken der General Electric Company</p>
-        <p>Vizamyl ist eine Marke der General Electric Company oder eines ihrer Tochterunternehmen</p>
-        <p><a href="/de/terms-and-conditions">Nutzungsbedingungen</a></p>
+        <p>&copy; 2025 GE HealthCare.</p>
+        <p>Vizamyl ist eine Marke von GE HealthCare.</p>
+        <p>GE ist eine Marke von General Electric Company, die unter Markenlizenz verwendet wird.</p>
+        <p><a href="/de/terms-and-conditions">Datenschutzrichtlinien</a></p>
+        <p style="color: #6022A6;">VIZAMYL DE Version 3.1 – 052023</p>
       reference_html: |
         <p class="right"></p>
 'de-at':
   layouts:
     application:
       copyright_html: |
-        <p>VIZAMYL AT Version 1.1 – Oktober 2025</p>
-        <p>&copy;2025 General Electric Company - Alle Rechte vorbehalten.</p>
-        <p>GE und GE Monogram sind Handelsmarken der General Electric Company</p>
-        <p>Vizamyl ist eine Marke der General Electric Company oder eines ihrer Tochterunternehmen</p>
-        <p><a href="/de-at/terms-and-conditions">Nutzungsbedingungen</a></p>
+        <p>&copy; 2025 GE HealthCare.</p>
+        <p>Vizamyl ist eine Marke von GE HealthCare.</p>
+        <p>GE ist eine Marke von General Electric Company, die unter Markenlizenz verwendet wird.</p>
+        <p><a href="/de/terms-and-conditions">Datenschutzrichtlinien</a></p>
 fr:
   layouts:
     application:
@@ -109,11 +107,11 @@ fr:
       resources: Ressources
       contact: Contact
       copyright_html: |
-        <p>VIZA/FR @/003/10/2025</p>
-        <p>&copy;2025 General Electric Company – Tous droits réservés.</p>
-        <p>GE et le monogramme GE sont des marques commerciales de General Electric Company.</p>
-        <p>Vizamyl est une marque commerciale de General Electric Company ou de l’une de ses filiales.</p>
-        <p><a href="/fr/terms-and-conditions">Conditions générales</a></p>
+        <p>VIZA/FR @/Juin 2025</p>
+        <p>&copy; 2025 GE HealthCare.</p>
+        <p>Vizamyl est une marque déposée de GE HealthCare.</p>
+        <p>GE est une marque de General Electric Company utilisée sous licence.</p>
+        <p><a href="https://www.gehealthcare.fr/footer/terms-and-conditions">Conditions générales</a></p>
       reference_html: |
         <p class="right"></p>
 it:
@@ -132,9 +130,9 @@ it:
       resources: Risorse
       contact: Contatto
       copyright_html: |
-        <p>&copy;2025 Società General Electric - Tutti i diritti riservati</p>
-        <p>GE e il monogramma GE sono marchi depositati della società General Electric.</p>
-        <p>Vizamyl è un marchio depositato della società General Electric una delle sue filiali.</p>
+        <p>&copy; 2025 GE HealthCare.</p>
+        <p>Vizamyl è un marchio registrato di GE HealthCare.</p>
+        <p>GE è un marchio di General Electric Company utilizzato su licenza.</p>
         <p><a href="/it/terms-and-conditions">Termini e condizioni</a></p>
       reference_html: |
         <p class="right"></p>
@@ -154,9 +152,9 @@ jp:
       resources: 関連資料
       contact: 連絡先 
       copyright_html: |
-        <p>&copy;2018 General Electric Company - All rights reserved.</p>
-        <p>GE and the GE Monogram are trademarks of General Electric Company.</p>
-        <p>Vizamyl is a trademark of General Electric Company or one of its subsidiaries.</p>
-        <p><a href="http://www3.gehealthcare.co.jp/ja-jp/footer/terms_of_use">ウェブサイトの利用約款</a></p>
+        <p>&copy; 2025 GE HealthCare.</p>
+        <p>Vizamyl is a trademark of GE HealthCare.</p>
+        <p>GE is a trademark of General Electric Company used under trademark license.</p>
+        <p><a href="https://www.gehealthcare.co.jp/about/terms-and-conditions">ウェブサイトの利用約款</a></p>
       reference_html: |
         <p class="right"></p>
