@@ -553,7 +553,7 @@ section#country__hero__area {
 }
 
 .gatekeeper__blurb {
-  padding-top: 40px;
+  padding: 40px 0;
   h3 {
     color: $primary;
   }
@@ -561,6 +561,7 @@ section#country__hero__area {
     font-size: 20px;
     // margin-top: 9px;
     margin-bottom: 10px;
+    line-height: 24px;
     img {
       width: 11px;
       margin-left: 5px;
@@ -624,6 +625,9 @@ footer {
 .welcome__hero__area {
   // padding: 30px 0;
   // margin-bottom: 150px;
+  &.blue_hand {
+    margin-bottom: 50px;
+  }
 }
 
 // .welcomecontent h1 {
