@@ -246,7 +246,7 @@ it:
           - Sig.ra
     sessions:
       new:
-        intro: Inserire il proprio indirizzo email e la propria password per effettuare il login.
+        intro: Inserire il proprio indirizzo email e la propria password per effettuare il log in.
         forgot_your_password: Password dimenticata?
         login: Login
     passwords:

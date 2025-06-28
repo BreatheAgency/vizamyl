@@ -427,7 +427,7 @@ it:
     home:
       body_html: |
         <h1>Benvenuti al<br><strong>programma di formazione on-line di Vizamyl</strong></h1>
-        <p>Nel caso si ritorni al corso,<br><strong>le diamo di nuovo il benvenuto e la invitiamo a effettuare il login.</strong></p>
+        <p>Nel caso si ritorni al corso,<br><strong>le diamo di nuovo il benvenuto e la invitiamo a effettuare il log in.</strong></p>
         <p>Se desidera iniziare il corso,<br><strong>le diamo il benvenuto e la invitiamo ad iscriversi.</strong></p>
     references:
       left:

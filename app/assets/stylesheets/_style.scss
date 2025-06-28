@@ -93,6 +93,21 @@ a {
   text-decoration: none;
 }
 
+.textPurple {
+  color: #6022A6
+}
+
+.black-box {
+  border: 1px solid black;
+  padding: 20px;
+  margin-left: rem-calc(40);
+  margin-right: rem-calc(40);
+  p {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+}
+
 // .btns {
 //   text-decoration: none;
 //   display: flex;
