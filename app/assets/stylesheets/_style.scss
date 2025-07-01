@@ -1380,6 +1380,10 @@ section#video__area {
 .reference__wrap,
 .country__area {
   padding-bottom: 30px!important;
+  flex: 1;
+  > div.row {
+    height: 100%;
+  }
 
   .vizamyl-tag,
   .custom-tag {

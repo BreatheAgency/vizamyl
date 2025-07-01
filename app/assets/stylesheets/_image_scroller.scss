@@ -65,9 +65,12 @@
     p {
       line-height: 1.6;
       color: #fff;
-      &:last-child {
-        margin-bottom: 0;
-      }
+      // > div:last-child p {
+      //   margin-bottom: 0;
+      // }
+    }
+    h3 + p:last-child {
+      margin-bottom: 0;
     }
   }
 
