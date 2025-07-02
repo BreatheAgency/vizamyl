@@ -582,6 +582,12 @@ section#country__hero__area {
       margin-left: 5px;
     }
   }
+
+  .swiss-languages {
+    .btn {
+      min-width: 136px;
+    }
+  }
 }
 /*===================== COUNTRY-NAME CSS AREA END =====================*/
 
@@ -807,6 +813,7 @@ footer {
     }
     abbr[title] {
       text-decoration: none;
+      border-bottom: 0;
     }
   }
 
