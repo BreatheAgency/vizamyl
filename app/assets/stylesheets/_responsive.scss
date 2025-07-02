@@ -933,13 +933,13 @@
   .testcase__all__slider {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     > div {
-      padding-right: 10px;
-      flex-basis: 50%;
-      &:last-child {
-        padding-right: 0;
-      }
+      // padding-right: 10px;
+      // flex-basis: 50%;
+      // &:last-child {
+      //   padding-right: 0;
+      // }
     }
   }
 
