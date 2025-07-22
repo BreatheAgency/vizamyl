@@ -3,7 +3,10 @@
     <div class="footer__wrap">
       <div class="footer__content">
 			  <%= t('layouts.application.copyright_html') %>
-			  <%= t('layouts.application.reference_html') %>
+        <% if locale&.to_s == 'de' && params[:probably_swiss] != 'true' %>
+          <p style="color: #6022A6;">VIZAMYL DE Version 3.1 – 052023</p>
+			  <% end %>
+        <%= t('layouts.application.reference_html') %>
       </div>
       <div class="footer__logo">
         <a href="#">
