@@ -18,7 +18,7 @@ en:
         <p>Vizamyl is a trademark of GE HealthCare.</p>
         <p>GE is a trademark of General Electric Company used under trademark license.</p>
         <p>Any third-party trademarks are the property of their respective owners.</p>
-        <p><a href="https://www.gehealthcare.co.uk/footer/terms-and-conditions" target="_blank">Terms and conditions</a></p>
+        <p><a href="/en/terms-and-conditions" target="_blank">Terms and conditions</a></p>
       reference_html: |
         <p class="right"></p>
 es:
@@ -39,7 +39,7 @@ es:
         <p>&copy; 2025 GE HealthCare.</p>
         <p>Vizamyl es una marca registrada de GE HealthCare.</p>
         <p>GE es una marca registrada de General Electric Company utilizada bajo licencia de marca registrada.</p>
-        <p><a href="https://www.gehealthcare.es/footer/terms-and-conditions">Términos y condiciones</a></p>
+        <p><a href="/es/terms-and-conditions">Términos y condiciones</a></p>
 'en-us':
   layouts:
     application:
@@ -79,7 +79,7 @@ de:
         <p>&copy; 2025 GE HealthCare.</p>
         <p>Vizamyl ist eine Marke von GE HealthCare.</p>
         <p>GE ist eine Marke von General Electric Company, die unter Markenlizenz verwendet wird.</p>
-        <p><a href="/de/terms-and-conditions">Datenschutzrichtlinien</a></p>
+        <p><a href="/de/terms-and-conditions">Nutzungsbedingungen</a></p>
         <p style="color: #6022A6;">VIZAMYL DE Version 3.1 – 052023</p>
       reference_html: |
         <p class="right"></p>
@@ -111,7 +111,7 @@ fr:
         <p>&copy; 2025 GE HealthCare.</p>
         <p>Vizamyl est une marque déposée de GE HealthCare.</p>
         <p>GE est une marque de General Electric Company utilisée sous licence.</p>
-        <p><a href="https://www.gehealthcare.fr/footer/terms-and-conditions">Conditions générales</a></p>
+        <p><a href="/fr/terms-and-conditions">Conditions générales</a></p>
       reference_html: |
         <p class="right"></p>
 it:
@@ -155,6 +155,6 @@ jp:
         <p>&copy; 2025 GE HealthCare.</p>
         <p>Vizamyl is a trademark of GE HealthCare.</p>
         <p>GE is a trademark of General Electric Company used under trademark license.</p>
-        <p><a href="https://www.gehealthcare.co.jp/about/terms-and-conditions">ウェブサイトの利用約款</a></p>
+        <p><a href="/en/terms-and-conditions">ウェブサイトの利用約款</a></p>
       reference_html: |
         <p class="right"></p>
