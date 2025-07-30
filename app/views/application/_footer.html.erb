@@ -3,9 +3,6 @@
     <div class="footer__wrap">
       <div class="footer__content">
 			  <%= t('layouts.application.copyright_html') %>
-        <% if session[:origin].present? && session[:origin] == 'de' %>
-          <p style="color: #6022A6;">VIZAMYL DE Version 3.1 – 052023</p>
-			  <% end %>
         <%= t('layouts.application.reference_html') %>
       </div>
       <div class="footer__logo">
