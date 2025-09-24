@@ -15,18 +15,21 @@ class ApplicationController < ActionController::Base
 
 
   def after_sign_in_path_for(resource)
-   if resource.is_a?(AdminUser)
-     return admin_root_path
-   else
-     return request.env['omniauth.origin'] || stored_location_for(resource) || "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
-   end
+    if resource.is_a?(AdminUser)
+      admin_root_path
+    else
+      origin_param = session[:origin].present? ? "?origin=#{session[:origin]}" : ""
+      request.env['omniauth.origin'] || stored_location_for(resource) ||
+        "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}#{origin_param}"
+    end
   end
 
   def after_sign_up_path_for(resource)
     if resource.is_a?(AdminUser)
-      return admin_root_path
+      admin_root_path
     else
-      return "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
+      origin_param = session[:origin].present? ? "?origin=#{session[:origin]}" : ""
+      "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}#{origin_param}"
     end
   end
 
