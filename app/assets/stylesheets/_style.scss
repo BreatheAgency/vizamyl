@@ -446,6 +446,12 @@ header#header__area {
   }
 }
 
+.vizamyl_logo {
+  img {
+    width: 150px;
+  }
+}
+
 .global_brand {
   // font-family: "geinspira";
   // color: #FFF;
@@ -475,6 +481,16 @@ header#header__area {
   }
 }
 
+.japan-resource-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+  li {
+    .resource__file__card {
+      margin-bottom: 0;
+    }
+  }
+}
 
 /*===================== HEADER CSS AREA END =====================*/
 
@@ -1496,6 +1512,16 @@ section#video__area {
 .country__area {
   .media-container {
     padding-bottom: 0;
+  }
+}
+.content-container {
+  .content-header {
+    h1 {
+      sup {
+        font-size: 0.4em;
+        top: -1.45em;
+      }
+    }
   }
 }
 

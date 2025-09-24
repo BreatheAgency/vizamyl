@@ -1069,11 +1069,33 @@
       padding-bottom: 30px;
     }
   }
+
+  .japanese_contact_page {
+    .contact__content .col-md-12 {
+      p {
+        display: inline-block;
+        width: 49%;
+        margin-bottom: 3rem;
+      }
+    }
+  }
   
   // .page__select__next__prev {
   //   justify-content: center;
   // }
 
+  .japan-resource-list {
+    display: flex;
+    margin-bottom: 40px;
+    li {
+      &:not(:first-child) {
+        margin-left: 20px;
+      }
+      .resource__file {
+        text-align: center;
+      }
+    }
+  }
 }
 
 @media (min-width: 992px) {

@@ -9,7 +9,7 @@ en:
       my_account: My account
       login: Log in
       logout: Logout
-      enrol: Enrol
+      enrol: Enroll
       references: References
       resources: Resources
       contact: Contact
@@ -58,7 +58,7 @@ es:
         <p>&copy;2025 GE HealthCare.</p>
         <p>Vizamyl is a trademark of GE HealthCare.</p>
         <p>GE is a trademark of General Electric Company used under trademark license.</p>
-        <p>June 2025 JB09221US</p>
+        <p>August 2025 JB09221US</p>
         <p><a href="https://www.gehealthcare.com/about/terms-and-conditions" target="_blank">Terms and conditions</a></p>
 de:
   layouts:
@@ -95,9 +95,9 @@ fr:
   layouts:
     application:
       logo:
-        1_html: Vizamyl<sup class='trade-mark'>&trade;</sup>
-        2_html: <span>Flutemetamol (<sup>18</sup>F)</span>
-        3_html: <span>Injectable</span>
+        1_html: VIZAMYL<sup class='trade-mark'>&trade;</sup>
+        2_html: <span>flutémétamol (<sup>18</sup>F)</span>
+        3_html: <span>Solution injectable</span>
       course_menu: Menu du cours
       my_account: Mon compte
       login: Se connecter
@@ -155,6 +155,6 @@ jp:
         <p>&copy; 2025 GE HealthCare.</p>
         <p>Vizamyl is a trademark of GE HealthCare.</p>
         <p>GE is a trademark of General Electric Company used under trademark license.</p>
-        <p><a href="/en/terms-and-conditions">ウェブサイトの利用約款</a></p>
+        <p><a href="https://www.gehealthcare.co.jp/gatekeeper?ReturnURL=%2fabout%2fterms-and-conditions&id=40EB76EDE6E44795B87C6DD59BBCD7A1">Terms of Use ウェブサイトの利用約款 | GE HealthCare (Japan)</a></p>
       reference_html: |
         <p class="right"></p>

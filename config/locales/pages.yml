@@ -28,7 +28,7 @@ en:
     resources:
       download: Download PDF
       smpc_title: Vizamyl SmPC EU
-      rainbow_title: Rainbow colour scale RGB values
+      rainbow_title: Rainbow color scale RGB values
     contact:
       left:
         title: |
@@ -159,14 +159,14 @@ en:
           <p>Querfurth HW, LaFerla FM. Alzheimer’s disease. <i>N Engl J Med</i>. 2010;362(4):329-344.</p>
           <p>Rowe CC, Ng S, Ackermann U, et al. Imaging beta-amyloid burden in aging and dementia. <i>Neurology</i>. 2007;68(20):1718-1725.</p>
           <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. <i>Ann Neurol</i>. 2010;68(3):319-329.</p>
-          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE HealthCare 2024.</p>
+          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE HealthCare 2025.</p>
     important-risk-and-safety-information:
       title_html: Important Risk and Safety Information<br>About Vizamyl&#0153; (Flutemetamol F 18 Injection)
       body_html: |
         <p><b>INDICATIONS AND USAGE:</b> Vizamyl is indicated for positron-emission tomography (PET) imaging of the brain to estimate β-amyloid neuritic plaque density in adult patients with cognitive impairment who are being evaluated for Alzheimer’s disease (AD) and other causes of cognitive decline. A negative scan indicates sparse to no neuritic plaques, inconsistent with a diagnosis of AD at the time of image acquisition. A negative scan result reduces the likelihood that a patient’s cognitive impairment is due to AD. A positive scan indicates moderate to frequent amyloid neuritic plaques. This amount of amyloid neuritic plaque has been shown to be present in patients with AD but may also be present in patients with other neurologic conditions as well as in older people with normal cognition. Vizamyl is an adjunct to other diagnostic evaluations. <b>Limitations</b>: A positive scan does not establish a diagnosis of AD or other cognitive disorder. The safety and effectiveness of Vizamyl have not been established for predicting the development of dementia or other neurologic conditions or for monitoring responses to therapies. <b>CONTRAINDICATIONS: </b>Known hypersensitivity to Vizamyl or any excipient, including polysorbate 80. <b>WARNINGS AND PRECAUTIONS — Hypersensitivity Reactions: </b>Reactions such as flushing and dyspnea have been observed within minutes following administration and may occur in patients with no history of exposure to Vizamyl. Have resuscitation equipment and trained personnel available. <b>Image Misinterpretation</b>: Errors may occur while interpreting Vizamyl PET images. Image interpretation is performed independently of the patient’s clinical information. The use of clinical information in the interpretation of Vizamyl images has not been evaluated and may lead to errors. Extensive brain atrophy may limit the ability to distinguish grey and white matter on a Vizamyl scan. Motion artifacts may distort the image. Images should be interpreted only by readers who have completed a reader training program available from GE HealthCare. <b>Radiation Risk</b>: Like all radiopharmaceuticals, Vizamyl contributes to a patient’s long-term, cumulative radiation exposure and cancer risk. Ensure safe handling to protect patients and healthcare workers from unintentional radiation exposure. <b>ADVERSE REACTIONS</b>: The most commonly reported adverse reactions in NDA clinical trials were flushing, increased blood pressure, headache, nausea, and dizziness. <b>DRUG INTERACTIONS:</b> Drug-drug interaction studies have not been performed in patients to establish the extent, if any, to which concomitant medications may alter Vizamyl image results. <b>SPECIFIC POPULATIONS — Pregnancy: </b>It is not known whether Vizamyl can cause fetal harm when administered to a pregnant woman or if it can affect reproductive capacity. Radiopharmaceuticals, including Vizamyl, have the potential to cause fetal harm, the likelihood of which depends on the stage of fetal development and the magnitude of the radiopharmaceutical dose. Vizamyl should be given to a pregnant woman only if clearly needed. <b>Nursing Mothers:</b> It is not known whether flutemetamol is excreted in human milk. Because many drugs are excreted in human milk and there is a potential for radiation exposure to nursing infants, avoid use of Vizamyl in a breastfeeding mother or have the mother temporarily interrupt breastfeeding for 24 hours after exposure. <b>Pediatric Use:</b> Vizamyl is not indicated for use in pediatric patients. <b>Geriatric Use:</b> No overall differences in safety were observed between older and younger subjects. <b>OVERDOSAGE:</b> The clinical consequence of overdosing with Vizamyl has not been reported. It is unknown whether or not flutemetamol is dialyzable. In case of overdose of radioactivity, hydration and frequent urination should be encouraged.</p
     resources:
       prescribing_information_title: US Full Prescribing Information for Vizamyl
-      rainbow_title: Rainbow Colour Scale RGB Values
+      rainbow_title: Rainbow Color Scale RGB Values
     contact:
       left:
         title: |
@@ -334,14 +334,14 @@ fr:
          et autres demandes de renseignements:
         body_html: |
           <p>Si vous souhaitez obtenir d’autres <strong>informations médicales</strong> sur Vizamyl, veuillez nous contacter à:</p>
-          <p><a href="mailto:vizamyl.medinfo@gehealthcare.com">vizamyl.medinfo@gehealthcare.com</a></p>
+          <p><a href="mailto:infomedfrance@gehealthcare.com">infomedfrance@gehealthcare.com</a></p>
           <p>Pour les autres demandes, y compris les demandes de formation <strong>à la lecture des images</strong>, veuillez nous contacter à:</p>
-          <p><a href="mailto:vizamyl.enquiries@gehealthcare.com">vizamyl.enquiries@gehealthcare.com</a></p>
+          <p><a href="mailto:infomedfrance@gehealthcare.com">infomedfrance@gehealthcare.com</a></p>
     terms-and-conditions:
       title: Conditions générales (8/2023)
       body_html: |
         <p><b>1. Conditions d’utilisation</b></p>
-        <p>Le site internet Vizamyl™ E-Training est le site qui donne aux utilisateurs, accès au matériel de formation en lien avec le Vizamyl™ de GE HealthCare (dénommé le « Produit ») et qui permet au besoin de passer un examen afin de déterminer si l’utilisateur a compris comment utiliser le Produit conformément au résumé des caractéristiques du Produit. Ce site est hébergé pour le compte de GE HealthCare par <a href="www.sevenstones.co.uk" target="_blank">www.sevenstones.co.uk</a>
+        <p>Le site internet Vizamyl™ E-Training est le site qui donne aux utilisateurs, accès au matériel de formation en lien avec le Vizamyl™ de GE HealthCare (dénommé le « Produit ») et qui permet au besoin de passer un examen afin de déterminer si l’utilisateur a compris comment utiliser le Produit conformément au Résumé des Caractéristiques du Produit. Ce site est hébergé pour le compte de GE HealthCare par <a href="www.sevenstones.co.uk" target="_blank">www.sevenstones.co.uk</a>
         de Olympic House, 317-321 Latimer Road, London, W10 6RA, Royaume Uni. Les Conditions Générales ci-après s’appliquent à quiconque consulte le site.
         </p>
         <p><b>2. Informations recueillies par GE HealthCare et comment nous les utilisons</b></p>
@@ -369,12 +369,12 @@ fr:
         la fourniture de solutions, la réponse à des questions d’ordre général puis la résolution du problème sera fournie par 
         des administrateurs basés à <a target="_blank" href="http://www.heroku.com">www.heroku.com</a>.
         </p>
-        <p>Vos données seront conservées pendant une période raisonnable. Ceci afin d'évaluer si le Produit peut vous être fourni pour un usage clinique en fonction de votre réussite au test relatif à l’utilisation en toute sécurité du Produit conformément au Résumé des caractéristiques du Produit (« l’Examen »). Si vous avez échoué à l’Examen, nous devrons utiliser vos données à des fins administratives afin d’organiser une formation en face à face dans votre pays. Vos données ne seront alors utilisées que pour des fins administratives et de formation. Si vous estimez que vos données ont été utilisées de manière inappropriée, vous pouvez nous contacter à
+        <p>Vos données seront conservées pendant une période raisonnable. Ceci afin d'évaluer si le Produit peut vous être fourni pour un usage clinique en fonction de votre réussite au test relatif à l’utilisation en toute sécurité du Produit conformément au Résumé des Caractéristiques du Produit (« l’Examen »). Si vous avez échoué à l’Examen, nous devrons utiliser vos données à des fins administratives afin d’organiser une formation en face à face dans votre pays. Vos données ne seront alors utilisées que pour des fins administratives et de formation. Si vous estimez que vos données ont été utilisées de manière inappropriée, vous pouvez nous contacter à
         <a href="mailto:Privacy.GEHC@gehealthcare.com">Privacy.GEHC@gehealthcare.com</a></p>
         <p><b>c. Transfert</b></p>
         <p>Les informations que vous fournissez à GE HealthCare seront stockées et transférées dans l’UE et au Royaume Uni qui est considéré comme un pays adéquat par la Commission Européenne. Seul le personnel de GE HealthCare aura accès à vos informations, sauf en cas de panne ou de procédure judiciaire, comme décrit ci-dessus.</p>
         <p><b>3. Protection des données personnelles</b></p>
-        <p>Chez GE HealthCare, notre objectif est d’assurer la protection de vos données personnelles fournies via nos sites Avec nos sous-traitants, nous maintenons des mesures de protection organisationnelles, techniques et physiques pour empêcher la divulgation, l’utilisation, l’altération ou la destruction non autorisée des données personnelles que vous fournissez sur ce site et sur les autres sites de GE HealthCare.</p>
+        <p>Chez GE HealthCare, notre objectif est d’assurer la protection de vos données personnelles fournies via nos sites. Avec nos sous-traitants, nous maintenons des mesures de protection organisationnelles, techniques et physiques pour empêcher la divulgation, l’utilisation, l’altération ou la destruction non autorisée des données personnelles que vous fournissez sur ce site et sur les autres sites de GE HealthCare.</p>
         <p><b>4. Droits de propriété</b></p>
         <p><b>Droits de propriété intellectuelle</b></p>
         <p>GE HealthCare, ses affiliés et ses concédants possèdent et conservent tous les droits sur le site internet, ce qui peut inclure des informations confidentielles telles que celles décrites dans la clause 2a. L’ensemble du contenu du site et l’ensemble des marques et logos de GE HealthCare sont la propriété de GE HealthCare ou lui sont concédés sous licence. Aucune disposition des présentes Conditions Générales ne doit être interprétée comme transférant, implicitement ou autrement une licence ou un droit en relation avec ces droits à une tierce personne, sauf disposition expresse.</p>
@@ -412,9 +412,8 @@ fr:
         Nightingales Lane<br>
         Buckinghamshire,<br>
         HP8 4SP<br>
-        Royaume-Uni
-        </p>
-        <p>Pour toute question relative à nos Gonditions Générales, merci de vous adresser à : vizamyl.enquiries@gehealthcare.com</p>
+        Royaume-Uni<br>
+        Pour toute question relative à nos Conditions Générales, merci de vous adresser à : <br> <a href="mailto:vizamyl.enquiries@gehealthcare.com">vizamyl.enquiries@gehealthcare.com</a></p>
         <p><b>12. Modification des présentes Conditions Générales</b></p>
         <p>Les présentes Conditions Générales pourront être mises à jour par GE HealthCare périodiquement et sans préavis afin de refléter les modifications apportées à nos pratiques en matière d'information en ligne. Les mises à jour de ces Conditions Générales seront publiées sur le site internet. Nous encourageons également les utilisateurs à consulter régulièrement ce document pour comprendre comment GE HealthCare protège et utilise vos données personnelles.</p>
         <br>
@@ -679,7 +678,7 @@ jp:
           <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE HealthCare 2014.</p>
     resources:
       download: ダウンロード
-      smpc_title: 放射性医薬品合成設備FASTlab（フルテメタモル合成用）添付文書
+      smpc_title: 放射性医薬品合成設備FASTlab及びFASTlab2（フルテメタモル合成用）添付文書
       prescribing_information_title: 放射性医薬品合成設備FASTlab（フルテメタモル合成用）添付文書
       rainbow_title: レインボーカラースケール　RGB値
     contact:
@@ -693,4 +692,4 @@ jp:
             <p class='indent'><a href="mailto:vizamyletraining@gehealthcare.com">vizamyletraining@gehealthcare.com</a></p>
           <p>投与後の副作用等に関する問い合わせ：</p>
             <p class='indent'>副作用コールセンターTEL：0120-203-169</p>
-            <p class='indent'>受付時間： 9:00-17:00(土日祝日を除く)</p>
+            <p class='indent'>受付時間： 9:00-17:30(土日祝日を除く)</p>

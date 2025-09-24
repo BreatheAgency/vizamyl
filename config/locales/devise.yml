@@ -331,8 +331,8 @@ jp:
       edit:
         title: アカウント情報
         my_details: アカウント情報
-        registrations_description: You can update your contact preferences and personal details using the boxes below
-        contact_preferences: Contact preferences
+        registrations_description: 下記の欄を使用して、連絡先の設定や個人情報を更新できます。
+        contact_preferences: 連絡方法の希望について
         salutations:
           - Prof
           - Dr
@@ -341,21 +341,21 @@ jp:
           - Miss
           - Ms
         description_html: |
-          If you pass the course, GE HealthCare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
+          コースに合格された場合、GEヘルスケアから製品・サービス・追加トレーニングなど、お客様にとって有益と思われる情報をご案内させていただくことがあります。
         marketing_overall_opt_in_description_html: |
-          If you do want to receive such information, please tick the box below.
+          このような情報の受け取りを希望される場合は、以下のチェックボックスにチェックを入れてください
         marketing_overall_opt_in_html: |
-          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.</span>
+          <span class="marketing-purposes">はい、マーケティング目的での連絡を希望します。</span>
         marketing_overall_opt_in_note_html: |
-          (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
+          （チェックを入れてください）チェックを入れない場合、マーケティング情報は送信されません。
         marketing_overall_description_html: |
-          If you would like to be contacted for & marketing purposes, please select one of the following options so that we know your preferred method of contact:
+          マーケティング目的で連絡を受けたい場合は、以下のオプションのいずれかを選択してください。
         marketing_email_opt_in_label_html: |
-          E-Mail
+          メール
         marketing_post_opt_in_label_html: |
-          Post
+          郵送
         marketing_representative_opt_in_label_html: |
-          Visit from a GE HealthCare representative<br>(There is no obligation to see a representative)
+          GEヘルスケアの担当者の訪問
         marketing_overall_opt_in_tick_html: |
           (Please tick one or more options)
         update: |

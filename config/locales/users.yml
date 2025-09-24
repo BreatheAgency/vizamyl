@@ -5,7 +5,7 @@ en:
     enrol:
       new: &new_en
         registration: Registration
-        privacy_link: Privacy Statement for Vizamyl (flutemetamol F 18 injection) Electronic Reader Training Program
+        privacy_link: Privacy Statement for Vizamyl™ (flutemetamol F 18 injection) Electronic Reader Training Program
         required_field: Required Field
         password_length: Password must be at least eight characters long
         marketing_privacy: 'Privacy Statement:'

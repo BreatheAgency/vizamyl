@@ -6,7 +6,11 @@
         <div class="col-lg-5">
           <div class="content-container">
             <div class="content-header assessment__content">
-              <span class="vizamyl-tag">Vizamyl electronic training programme</span>
+              {{#if isJapan}}
+                <span class="vizamyl-tag">ビザミルオンライントレーニングプログラム</span>
+              {{else}}
+                <span class="vizamyl-tag">Vizamyl electronic training program</span>
+              {{/if}}
               <h2>{{{title}}}</h2>
               {{{body}}}
             </div>

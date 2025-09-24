@@ -3,7 +3,11 @@
     <div class="col-md-6">
       <div class="content-container">
         <div class="content-header">
-          <span class="vizamyl-tag">Vizamyl electronic training programme</span>
+          {{#if isJapan}}
+            <span class="vizamyl-tag">ビザミルオンライントレーニングプログラム</span>
+          {{else}}
+            <span class="vizamyl-tag">Vizamyl electronic training program</span>
+          {{/if}}
           <h2>{{{title}}}</h2>
           <p>{{{body}}}</p>
         </div>

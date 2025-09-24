@@ -27,15 +27,24 @@
       <div class="burger_menu d-xl-none d-block">
         <a href="#"><i class="fa-solid fa-bars"></i></a>
       </div>
-      <div class="vizamyl_logo">
-        <div class="logo_text">
-          <p class="global_brand">
-            <a href='/{{unbound currentLocale}}'>{{{i18n layouts.application.logo.1_html}}}</a>
-            {{{i18n layouts.application.logo.2_html}}}
-            {{{i18n layouts.application.logo.3_html}}}
-          </p>
+
+      {{#if isUS}}
+        <div class="vizamyl_logo">
+          <a href='/{{unbound currentLocale}}'>
+            <img src="/assets/vizamyl-logo.png" alt="Vizamyl Logo">
+          </a>
         </div>
-      </div>
+      {{else}}
+        <div class="vizamyl_logo">
+          <div class="logo_text">
+            <p class="global_brand">
+              <a href='/{{unbound currentLocale}}'>{{{i18n layouts.application.logo.1_html}}}</a>
+              {{{i18n layouts.application.logo.2_html}}}
+              {{{i18n layouts.application.logo.3_html}}}
+            </p>
+          </div>
+        </div>
+      {{/if}}
     </div>
   </div>
 </header>

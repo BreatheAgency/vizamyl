@@ -9,13 +9,42 @@
               <span><%= t('.prescribing_information_title') %></span>
               <div class="resource__file__card">
                 <%= image_tag('download_file.svg') %>
-                <a target="_blank" href="<%= asset_url("/pdfs/#{I18n.locale}/prescribing_information.pdf") %>">
+                <a target="_blank" href="<%= asset_url("/pdfs/#{I18n.locale}/Vizamyl_PI.pdf") %>">
                   <%= t('.download') %>
                 </a>
               </div>
             </div>
 
           <% else %>
+            <h2><%= t('.smpc_title')%></h2>      
+              
+            <% if I18n.locale == :'jp' %>
+              <ul class="japan-resource-list">
+                <li>
+                  <div class="resource__file">
+                    <div class="resource__file__card">
+                      <%= image_tag('download_file.svg') %>
+                      <a target="_blank" href='<%= asset_url("/pdfs/#{I18n.locale}/fastlab.pdf")%>'>
+                        <%= t('.download') %>
+                      </a>
+                    </div>
+                    <span>FASTlab</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="resource__file">
+                    <div class="resource__file__card">
+                      <%= image_tag('download_file.svg') %>
+                      <a target="_blank" href='<%= asset_url("/pdfs/#{I18n.locale}/fastlab2.pdf")%>'>
+                        <%= t('.download') %>
+                      </a>
+                    </div>
+                    <span>FASTlab2</span>
+                  </div>
+                </li>
+              </ul>
+
+            <% else %>
 
             <div class="resource__file">
               <span><%= t('.smpc_title')%></span>
@@ -26,6 +55,7 @@
                 </a>
               </div>
             </div>
+          <% end %>
 
           <% end %>
 
