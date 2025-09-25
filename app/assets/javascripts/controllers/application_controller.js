@@ -8,10 +8,6 @@ Course.ApplicationController = Ember.Controller.extend({
   isComplete: Ember.computed.bool('currentUser.completed'),
   isSkippable: Ember.computed.bool('currentUser.skippable'),
   isUS: Ember.computed.equal('currentLocale', 'en-us'),
-  isUSLogo: Ember.computed('currentLocale', 'currentOrigin', function() {
-    return this.get('currentLocale') === 'en-us' &&
-           this.get('currentOrigin') === 'us';
-  }),
   isJapan: Ember.computed.equal('currentLocale', 'jp'),
   hasItalianOrigin: Ember.computed.equal('currentUserOrigin', 'it'),
 
