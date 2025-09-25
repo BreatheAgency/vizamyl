@@ -10,6 +10,7 @@ Course.ApplicationController = Ember.Controller.extend({
   isUS: Ember.computed.equal('currentLocale', 'en-us'),
   isJapan: Ember.computed.equal('currentLocale', 'jp'),
   hasItalianOrigin: Ember.computed.equal('currentUserOrigin', 'it'),
+  hasUSOrigin: Ember.computed.equal('currentUserOrigin', 'us'),
 
   isEuropean: function() {
     return !(this.get('isUS') || this.get('isJapan'))
