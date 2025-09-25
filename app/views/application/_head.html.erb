@@ -22,4 +22,10 @@
   <% else %>
     <%= render partial: 'favicon_purple' %>
   <% end %>
+  <script type="text/javascript">
+    window.railsAssetPath = {
+      'vizamyl-logo.png': "<%= asset_path('vizamyl-logo.png') %>"
+      // Add more assets as needed
+    };
+  </script>
 </head>
