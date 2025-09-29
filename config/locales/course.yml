@@ -1,5 +1,6 @@
 en:
   course:
+    heading: Vizamyl electronic training programme
     actions:
       back: Back
       next: Next
@@ -42,6 +43,7 @@ en:
           review_explanation_video: Review explanation video <span class="index">%{count}</span>
 'en-us':
   course:
+    heading: Vizamyl electronic training program
     pages:
       test:
         question:
@@ -59,6 +61,7 @@ en:
           review_explanation_video: Review Explanation Video <span class="index">%{count}</span>
 de:
   course:
+    heading: Vizamyl electronic training programme
     actions:
       back: Zurück
       next: Weiter
@@ -100,6 +103,7 @@ de:
           review_explanation_video: Lehrvideo %{count} anschauen
 fr:
   course:
+    heading: Vizamyl electronic training programme
     actions:
       back: Retour
       next: Suivant
@@ -141,6 +145,7 @@ fr:
           review_explanation_video: Voir la vidéo d’explication <span class="index">%{count}</span>
 it:
   course:
+    heading: Vizamyl electronic training programme
     actions:
       back: Indietro
       next: Avanti
@@ -182,6 +187,7 @@ it:
           review_explanation_video: Rivedere video esplicativo <span class="index">%{count}</span>
 es:
   course:
+    heading: Vizamyl electronic training programme
     actions:
       back: Atrás
       next: Siguiente
@@ -223,6 +229,7 @@ es:
           review_explanation_video: Revisión de la explicación del vídeo <span class="index">%{count}</span>
 jp:
   course:
+    heading: ビザミルオンライントレーニングプログラム
     actions:
       back: 戻る
       next: 次へ
