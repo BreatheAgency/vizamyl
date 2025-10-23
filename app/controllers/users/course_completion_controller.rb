@@ -8,12 +8,12 @@ class CourseCompletionLetter < Prawn::Document
       }
     })
     font('geinspira')
-    image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['LETTER'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['LETTER'])
+    image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}-updated.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['LETTER'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['LETTER'])
     left = 68
-    top = 382
+    top = 415
     height = 31.5
     margin = 2
-    fill_color '005cb9'
+    fill_color '6022A6'
     text_box(I18n.t('course_completion.salutation') + ': ' + user.salutation, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14) if user.salutation.present?
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
@@ -33,12 +33,12 @@ class CourseCompletionA4 < Prawn::Document
       }
     })
     font('geinspira')
-    image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
-    left = 212
-    top = 422
+    image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}-updated.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
+    left = 68
+    top = %i[en-gb it].include?(I18n.locale) ? 415 : 445
     height = 32
-    margin = 2.1
-    fill_color '005cb9'
+    margin = 1.6
+    fill_color '6022A6'
     text_box(I18n.t('course_completion.salutation') + ': ' + user.salutation, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14) if user.salutation.present?
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
@@ -58,12 +58,12 @@ class CourseCompletionA4WithDepartment < Prawn::Document
       }
     })
     font('arial-ms')
-    image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
-    left = 38
-    top = 375
-    height = 36
-    margin = 3.5
-    fill_color '3d3d3d'
+    image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}-updated.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
+    left = 150
+    top = 410
+    height = 32
+    margin = 1.6
+    fill_color '6022A6'
     text_box(I18n.t('course_completion.institution') + ': ' + user.institution, at: [left, top + (margin*5) + (height*5)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.department') + ': ' + user.department.to_s, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
