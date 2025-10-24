@@ -67,5 +67,5 @@ Rails.application.routes.draw do
   get '/si' => 'static#show', id: 'gatekeeper-slovenian'
   get '/bg' => 'static#show', id: 'gatekeeper-bulgaria'
   get '/*id' => 'static#show', id: 'gatekeeper'
-  root to: 'static#show', defaults: { id: 'home', locale: 'en-us', origin: 'us' }
+  root to: 'static#show', defaults: { id: 'home', locale: 'en-us' }
 end
