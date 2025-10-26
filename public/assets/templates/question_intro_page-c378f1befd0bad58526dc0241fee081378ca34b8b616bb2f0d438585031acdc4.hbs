@@ -1,0 +1,17 @@
+<section id="qi__area" class="qi__area">
+  <div class="container page question-into-page">
+    <div class="reference__wrap assessment__wrap">
+      <div class="assessment__content">
+        <h3>{{{title}}}</h3>
+        <p>{{{body}}}</p>
+      </div>
+
+      <div class="page__select__next__prev">
+        <a {{bind-attr class=':right :btn :btn-primary complete:enabled:disabled' }} {{action 'next' step}}>{{i18n course.actions.next}}
+          {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+          <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

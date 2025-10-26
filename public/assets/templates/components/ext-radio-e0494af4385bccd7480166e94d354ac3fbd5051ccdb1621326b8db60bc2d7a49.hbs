@@ -1,0 +1,27 @@
+{{ log '###################' }}
+<div class="assessment__select">
+  {{#each question in content}}
+    <div class="assessment__single__select">
+      <div class="input-container">
+        {{radio-button id=question.id value=question name=view.name selection=view.value}}
+
+        <!-- Render the heading -->
+        <span><h5>{{split-heading (unbound question.body)}}</h5></span>
+      </div>
+
+      {{#if question.body }}
+          <div class="assessment__list mt-2">{{{ split-updated-body (unbound question.body) }}}</div>
+      {{/if}}
+
+      {{#unless hideCheats }}
+        {{#if question.correct }}
+          {{ log "          ✅" }}
+          {{ log " " }}
+        {{else}}
+          {{ log "          -" }}
+          {{ log " " }}
+        {{/if}}
+      {{/unless}}
+    </div>
+  {{/each}}
+</div>
