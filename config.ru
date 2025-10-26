@@ -11,7 +11,7 @@ run Rack::Builder.new {
     when :staging
       use Rack::CanonicalHost, 'stg-www.readvizamyl.com'
     when :production
-      use Rack::CanonicalHost, 'www.readvizamyl.com'
+      use Rack::CanonicalHost, 'it.readvizamyl.com'
   end
 
   use Rack::Noindex, -> (_env) { true }

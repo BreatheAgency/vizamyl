@@ -27,7 +27,7 @@ module Vizamyl
     when 'staging'
       'https://stg-www.readvizamyl.com'
     when 'production'
-      'https://www.readvizamyl.com'
+      'https://it.readvizamyl.com'
     else
       'http://localhost:3000' # Default for other environments
     end
