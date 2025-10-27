@@ -3,8 +3,13 @@
   <li><%= link_to t('layouts.application.my_account'), edit_user_registration_path(locale: I18n.locale) %></li>
 <% else %>
   <li><%= link_to t('layouts.application.login'), new_user_session_path(locale: I18n.locale) %></li>
+  
   <% if I18n.locale == :'en-us' %>
-    <li><%= link_to t('layouts.application.enrol'), us_path(locale: I18n.locale) %></li>
+    <% if session[:origin].present? && session[:origin] == 'us' %>
+      <li><%= link_to t('layouts.application.enrol'), new_non_european_enrol_url(locale: I18n.locale, works_in_us: 'true') %></li>
+    <% else %>
+      <li><%= link_to t('layouts.application.enrol'), new_non_european_enrol_url(locale: I18n.locale) %></li>
+    <% end %>
   <% else %>
     <li><%= link_to t('layouts.application.enrol'), users_locale_enrol_path(id: User.form_steps.first, locale: I18n.locale) %></li>
   <% end %>
