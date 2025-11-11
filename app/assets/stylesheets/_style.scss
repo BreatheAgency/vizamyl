@@ -663,7 +663,16 @@ footer {
   // padding: 30px 0;
   // margin-bottom: 150px;
   &.blue_hand {
-    margin-bottom: 50px;
+    margin-bottom: 21px;
+  }
+  #blue-hand{
+    height: 220px;
+    width: auto;
+  }
+  p.disclaimer{
+    max-width: 546px;
+    margin-left: auto;
+    text-align: right;
   }
 }
 
