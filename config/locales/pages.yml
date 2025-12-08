@@ -567,16 +567,11 @@ es:
     contact:
       left:
         title: |
-         Apoyo médico
-         y otras consultas:
+         Departamento Médico
         body_html: |
-          <p>Si desea más <strong>información médica</strong> sobre Vizamyl, póngase en contacto con nosotros en:</p>
-          <p><a href="mailto:vizamyl.medinfo@gehealthcare.com">vizamyl.medinfo@gehealthcare.com</a></p>
-          <p>Para otras consultas, incluyendo solicitudes de formación <strong>en lectura de imágenes</strong>, póngase en contacto con nosotros en:</p>
-          <p><a href="mailto:vizamyl.enquiries@gehealthcare.com">vizamyl.enquiries@gehealthcare.com</a></p>
-          <p>Si está interesado en saber más sobre imágenes <strong>SPECT y DaTSCAN&#0153; visite</strong>:</p>
-          <p><a href="https://www.gehealthcare.es" target="_blank">https://www.gehealthcare.es</a></p>
-          <p><small>Vizamyl y DaTSCAN son marcas comerciales de GE HealthCare Limited.</small></p>
+          <p>Si desea información médica sobre Vizamyl póngase en contacto con nuestro equipo médico <br><a href="mailto:infomedica.iberia@gehealthcare.com">infomedica.iberia@gehealthcare.com</a></p>
+          <h2>Farmacovigilancia</h2>
+          <p>En el caso de que desee notificar un posible acontecimiento adverso/reacción adversa relacionado con Vizamyl o alguno de nuestros medicamentos, por favor, siga este enlace <a href="https://www.notificaram.es" target="_blank">https://www.notificaram.es</a> para realizar la notificación a la Agencia Española de Medicamentos y Productos Sanitarios. También puede notificar un posible acontecimiento adverso/reacción adversa directamente a GE HealthCare a través del siguiente correo: <br><a href="mailto:drugsafetyregion4@gehealthcare.com">drugsafetyregion4@gehealthcare.com</a></p>
     terms-and-conditions:
       title: Términos y condiciones (8/2023)
       body_html: |

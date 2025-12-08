@@ -61,6 +61,10 @@ Rails.application.routes.draw do
     get '/' => 'static#show', id: 'home'
   end
 
+  get '/sk' => 'static#show', id: 'gatekeeper-slovakia'
+  get '/hr' => 'static#show', id: 'gatekeeper-croatia'
+  get '/cz' => 'static#show', id: 'gatekeeper-czechnia'
+  get '/hu' => 'static#show', id: 'gatekeeper-hungary'
   get '/be' => 'static#show', id: 'gatekeeper-belgian'
   get '/ch' => 'static#show', id: 'gatekeeper-swiss'
   get '/us' => 'static#show', id: 'gatekeeper-us'
