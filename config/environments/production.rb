@@ -105,5 +105,5 @@ Rails.application.configure do
   config.i18n.available_locales = [:en, :'en-us', :'en-gb', :'de-at', :de, :fr, :it, :es, :jp]
 
   #
-  config.action_mailer.default_url_options = { host: 'www.readvizamyl.com' }
+  config.action_mailer.default_url_options = { host: 'es.readvizamyl.com' }
 end
