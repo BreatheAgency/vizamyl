@@ -35,7 +35,7 @@ class CourseCompletionA4 < Prawn::Document
     font('geinspira')
     image(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}-updated.jpg"), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
     left = 68
-    top = %i[en-gb it].include?(I18n.locale) ? 415 : 445
+    top = %i[it].include?(I18n.locale) ? 415 : 445
     height = 32
     margin = 1.6
     fill_color '6022A6'
