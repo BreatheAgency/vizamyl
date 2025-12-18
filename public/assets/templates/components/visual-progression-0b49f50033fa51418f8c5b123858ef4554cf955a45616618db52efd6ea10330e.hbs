@@ -1,0 +1,5 @@
+{{#each chapter in chapters}}
+  <li {{bind-attr class=':block chapter.available:available'}}>
+    <span>{{chapter.short_title}}</span>
+  </li>
+{{/each}}
