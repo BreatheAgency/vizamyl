@@ -891,10 +891,13 @@ footer {
     font-size: 22px;
     line-height: normal;
     font-weight: 400;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     width: auto;
     cursor: pointer;
+  }
+  .form-check-input {
+    margin-top: 0.4em;
   }
 }
 
