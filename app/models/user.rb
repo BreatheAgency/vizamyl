@@ -15,6 +15,7 @@ class User < ActiveRecord::Base
 
   # Singapore & Australian users also share US login screens as they don't have a regional office.
   attr_reader :works_in_us
+  attr_accessor :skip_invite_code_validation
   def self.ransackable_associations(auth_object = nil)
     ["progressions", "steps"]
   end
@@ -54,8 +55,16 @@ class User < ActiveRecord::Base
   validate :validate_invite_code_if_required  
 
   def validate_invite_code_if_required
+    return if skip_invite_code_validation
+
     if required_for_step?(:details)
-      errors.add(:invite_code, :invalid, message: "%{value} is not a valid invite code") unless Rails.application.secrets.invite_codes.include?(invite_code&.to_sym)
+      unless Rails.application.secrets.invite_codes.include?(invite_code&.to_sym)
+        errors.add(
+          :invite_code,
+          :invalid,
+          message: "%{value} is not a valid invite code"
+        )
+      end
     end
   end
 
@@ -106,10 +115,12 @@ class User < ActiveRecord::Base
   end
 
   def pass!
-    self.transaction do
-      self.progressions.update_all(amount: 1)
-      self.passed_round_two = Time.now
-      self.save!
+    transaction do
+      progressions.update_all(amount: 1)
+
+      self.skip_invite_code_validation = true
+      self.passed_round_two = Time.current
+      save!
     end
   end
 
