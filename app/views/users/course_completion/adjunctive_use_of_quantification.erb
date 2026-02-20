@@ -1,0 +1,18 @@
+<div class="course">
+  <main>
+    <div class="row page video-page">
+      <div class="small-5 large-5 columns with-content with-minimum">
+        <h1><%= t('.title_html') %></h1>
+        <p><%= t('.copy') %></p>
+      </div>
+      <div class="small-7 large-7 columns with-media with-minimum">
+        <%- source = I18n.locale[0..1].upcase + '_AUofQ' %>
+        <%= video_tag([
+          "//#{Rails.application.secrets.content_host}/videos/#{source}/playlist.m3u8",
+          "//#{Rails.application.secrets.content_host}/videos/#{source}/web.mp4",
+          "//#{Rails.application.secrets.content_host}/videos/#{source}/web.webm"
+        ], controls: true, autobuffer: true, size: '550x413') %>
+      </div>
+    </div>
+  </main>
+</div>

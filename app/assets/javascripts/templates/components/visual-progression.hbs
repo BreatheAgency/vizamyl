@@ -1,0 +1,8 @@
+<div class='progression-amount right'>
+  <h4>{{totalPercent}}</h4>
+</div>
+<ul class='progression-blocks right'>
+  {{#each chapter in chapters}}
+    <li {{bind-attr class=':block chapter.available:available'}}>{{chapter.short_title}}</li>
+  {{/each}}
+</ul>

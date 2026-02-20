@@ -1,0 +1,76 @@
+<div class='devise registrations row'>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { role: 'form', method: :put }) do |f| %>
+    <% if european_locale? %>
+      <% if resource.origin == 'it' %>
+        <div class='small-6 medium-6 large-6 columns with-content with-minimum my-account'>
+        </div>
+      <% else %>
+        <div class='small-6 medium-6 large-6 columns with-content with-minimum my-account'>
+            <h2><%= t('.title') %></h2>
+            <p><%= t('.registrations_description') %></p>
+            <h4><%= t('.contact_preferences') %></h4>
+            <p><%= t('.description_html') %></p>
+            <p><%= t('.marketing_overall_opt_in_description_html') %></p>
+            <%= f.input :marketing_overall_opt_in, label: t('.marketing_overall_opt_in_html') %>
+            <p class='small'><%= t('.marketing_overall_opt_in_note_html') %><p>
+            <p><%= t('.marketing_overall_description_html') %></p>
+            <%= f.input :marketing_email_opt_in, label: t('.marketing_email_opt_in_label_html') %>
+            <%= f.input :marketing_post_opt_in, label: t('.marketing_post_opt_in_label_html') %>
+            <%= f.input :marketing_representative_opt_in, label: t('.marketing_representative_opt_in_label_html') %>
+            <p class='small small-right'><%= t('.marketing_overall_opt_in_tick_html') %></p>
+        </div>
+      <% end %>
+      <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+        <h2><%= t('.my_details') %></h2>
+        <div class='form-inputs'>
+          <label><%= t('activerecord.attributes.user.salutation') %></label>
+          <%= f.collection_radio_buttons(:salutation, t('.salutations'), :to_s, :to_s, checked: resource.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
+              b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
+            end
+          %>
+          <%= f.input :first_name, required: true %>
+          <%= f.input :last_name, required: true %>
+          <%= f.input :email, required: false, disabled: true %>
+          <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank_if_you_don_t_want_to_change_it'), required: false %>
+          <%= f.input :password_confirmation, required: false %>
+        </div>
+        <div class='form-actions button-container'>
+          <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+            <%= t('.update') %><i class='fi-arrow-right'></i>
+          <% end %>
+        </div>
+      </div>
+    <% else %>
+      <div class='small-6 medium-6 large-6 columns with-content with-minimum my-account'>
+        <h2><%= t('.my_details') %></h2>
+        <div class='form-inputs'>
+          <label><%= t('activerecord.attributes.user.salutation') %></label>
+          <%= f.collection_radio_buttons(:salutation, t('.salutations'), :to_s, :to_s, checked: resource.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
+              b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
+            end
+          %>
+          <%= f.input :first_name, required: true %>
+          <%= f.input :last_name, required: true %>
+          <%= f.input :institution, required: true %>
+          <% if has_department? %>
+          <%= f.input :department, required: false %>
+          <% end %>
+          <% if us_locale? && @user.origin == 'us' %>
+            <%= f.input :city_or_state, required: false %>
+            <%= f.input :primary_specialty, required: false %>
+          <% end %>
+          <%= f.input :email, required: false, disabled: true %>
+          <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank_if_you_don_t_want_to_change_it'), required: false %>
+          <%= f.input :password_confirmation, required: false %>
+        </div>
+        <div class='form-actions button-container'>
+          <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+            <%= t('.update') %><i class='fi-arrow-right'></i>
+          <% end %>
+        </div>
+      </div>
+      <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+      </div>
+    <% end %>
+  <% end %>
+</div>

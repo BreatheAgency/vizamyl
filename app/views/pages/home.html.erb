@@ -1,0 +1,40 @@
+<div class='home row <%= display_blue_hand_logo? ? 'blue_hand' : 'regular' %>'>
+  <% if display_blue_hand_logo? %>
+    <%= render 'pages/with_blue_hand' %>
+  <% else  %>
+  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+  </div>
+  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+    <%= t('.body_html') %>
+    <div class='button-container row'>
+      <div class='small-12 medium-12 large-12 columns'>
+        <a href='<%= new_user_session_path %>'><%= t('layouts.application.login') %><i class='fi-arrow-right'></i></a>
+        <% if european_locale? %>
+          <a href='<%= european_enrol_path(id: User.form_steps.first, locale: I18n.locale) %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+        <% else %>
+          <% if us_locale? %>
+            <% if session[:origin].present? && session[:origin] == 'us' %>
+              <a href='<%= new_non_european_enrol_url(locale: 'en-us', works_in_us: 'true') %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+            <% else %>
+              <a href='<%= new_non_european_enrol_url(locale: 'en-us') %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+            <% end %>     
+          <% else #Japanese %>
+            <a href='<%= new_non_european_enrol_path(locale: I18n.locale) %>'><%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i></a>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+    <% if locale.to_sym == :jp %>
+      <br>
+      <p class='care-of'>
+        日本語監修：<br>
+        地方独立行政法人東京都健康長寿医療センター研究所 研究部長<br>
+        <span>石井 賢二</span> 先生<br>
+        地方独立行政法人　神戸市民病院機構　神戸市立医療センター中央市民病院<br>
+        臨床研究推進センター分子イメージング研究グループ長<br>
+        <span>千田 道雄</span>先生<br>
+      </p>
+    <% end %>
+  </div>
+  <% end  %>
+</div>

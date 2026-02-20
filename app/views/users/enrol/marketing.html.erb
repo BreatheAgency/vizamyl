@@ -1,0 +1,30 @@
+<div class='devise registrations marketing row'>
+  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+  </div>
+  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+    <ul class='progress'>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li class='selected'></li>
+    </ul>
+    <h1><%= t('.title_html') %></h1>
+    <p><%= t('.description_html') %></p>
+    <%= simple_form_for(@user, url: users_locale_enrol_index_path, html: { class: 'form' }) do |f| %>
+      <%= render 'tmp_storage_fields', f: f %>
+      <p><%= t('.marketing_overall_opt_in_description_html') %></p>
+      <%= f.input :marketing_overall_opt_in, label: t('.marketing_overall_opt_in_html') %>
+      <p class='small'><%= t('.marketing_overall_opt_in_note_html') %><p>
+      <p><%= t('.marketing_overall_description_html') %></p>
+      <%= f.input :marketing_email_opt_in, label: t('.marketing_email_opt_in_label_html') %>
+      <%= f.input :marketing_post_opt_in, label: t('.marketing_post_opt_in_label_html') %>
+      <%= f.input :marketing_representative_opt_in, label: t('.marketing_representative_opt_in_label_html') %>
+      <p class='small small-right'><%= t('.marketing_overall_opt_in_tick_html') %></p>
+      <div class='form-actions button-container'>
+        <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+          <%= t('layouts.application.enrol') %><i class='fi-arrow-right'></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

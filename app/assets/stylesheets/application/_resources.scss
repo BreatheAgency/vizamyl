@@ -1,0 +1,31 @@
+.resources {
+
+  .columns {
+    padding-top: rem-calc(20);
+    padding-left: rem-calc(50);
+    padding-right: rem-calc(50);
+  }
+
+  h2 {
+    font-size: $h4-font-size;
+    font-weight: normal;
+    line-height: rem-calc(40);
+    background: #E4F3FC;
+    padding-left: rem-calc(20);
+  }
+
+  .blue-bar {
+    line-height: rem-calc(50);
+    background: #E4F3FC;
+    height:rem-calc(40);
+  }
+
+  .download-pdf-button {
+    width: 69px;
+    height: 93px;
+    @include retina-background-image('pdf-download', 69px, 93px);
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+}

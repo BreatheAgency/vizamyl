@@ -1,0 +1,22 @@
+.application {
+  background-color: white;
+
+  .motion {
+    background-repeat: no-repeat;
+    background-position: left middle;
+    @include retina-background-image('motion', 500px, 500px);
+  }
+
+  @import 'application/home';
+  @import 'application/contact';
+  @import 'application/references';
+  @import 'application/resources';
+  @import 'application/course_completion';
+  @import 'application/terms_and_conditions';
+  @import 'application/important_risk_and_safety_information';
+
+  @import 'application/passwords';
+  @import 'application/sessions';
+  @import 'application/registrations';
+
+}

@@ -1,0 +1,37 @@
+<div class='devise registrations details row'>
+  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+  </div>
+  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+    <ul class='progress'>
+      <li class='selected'></li>
+      <li></li>
+      <li></li>
+      <% unless italian? %>
+        <li></li>
+      <% end %>
+    </ul>
+    <h1><%= t('.title') %></h1>
+    <%= simple_form_for(@user, url: users_locale_enrol_path, html: { method: :put, class: 'form' }) do |f| %>
+      <%= render 'tmp_storage_fields', f: f %>
+      <div class='form-inputs'>
+        <%= f.hidden_field :origin, value: session[:origin] %>
+        <label><abbr title="required">*</abbr> <%= t('activerecord.attributes.user.salutation') %></label>
+        <%= f.collection_radio_buttons(:salutation, t('devise.registrations.edit.salutations'), :to_s, :to_s, checked: @user.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
+            b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
+          end
+        %>
+        <%= f.input :first_name, required: true %>
+        <%= f.input :last_name, required: true %>
+        <%= f.input :email, required: true %>
+        <%= f.input :invite_code, required: true %>
+        <%= f.input :password, required: true %>
+        <%= f.input :password_confirmation, required: true %>
+      </div>
+      <div class='form-actions button-container'>
+        <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+          <%= t('course.actions.next') %><i class='fi-arrow-right'></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

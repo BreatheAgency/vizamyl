@@ -1,0 +1,28 @@
+<form id="country-selector" action="" method="get" style="padding: 5px;">
+  <label for="countries">Select your country:</label>
+  <select id="countries" name="country_url" onchange="toggleNextButton()">
+    <option value="" selected>Select a country</option> <!-- Default option -->
+    <% locales.each do |origin, details| %>
+      <option 
+        value="<%= origin == 'kr' ? details[:url] : "#{details[:url]}/#{details[:locale]}?origin=#{origin}" %>">
+        <%= details[:country] %>
+      </option>
+    <% end %>
+  </select>
+  <button id="next-button" type="button" onclick="redirectToCountry()" disabled>Next</button>
+</form>
+
+<script>
+  function toggleNextButton() {
+    const select = document.getElementById('countries');
+    const nextButton = document.getElementById('next-button');
+    // Enable the button only if a valid option is selected
+    nextButton.disabled = !select.value;
+  }
+
+  function redirectToCountry() {
+    const select = document.getElementById('countries');
+    const selectedUrl = select.value;
+    window.location.href = selectedUrl;
+  }
+</script>

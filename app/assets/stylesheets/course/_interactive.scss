@@ -1,0 +1,9 @@
+.interactive-page, .interactive-question-page {
+
+  h1 {
+    margin-bottom: rem-calc(20);
+  }
+
+  @import 'image_scroller';
+
+}

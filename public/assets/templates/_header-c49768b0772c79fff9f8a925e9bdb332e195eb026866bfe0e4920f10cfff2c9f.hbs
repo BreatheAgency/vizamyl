@@ -1,0 +1,22 @@
+<nav role='nav'>
+	<div class='row'>
+		<ul class='inline-list'>
+			<li>{{#link-to 'locale.menu'}}{{i18n layouts.application.course_menu}}{{/link-to}}</li>
+			<li><a href='/{{unbound currentLocale}}/users/edit'>{{i18n layouts.application.my_account}}</a></li>
+			<li><a href='/{{unbound currentLocale}}/references'>{{i18n layouts.application.references}}</a></li>
+			{{#if isUS}}
+				<li><a href='/{{unbound currentLocale}}/important-risk-and-safety-information'>{{i18n layouts.application.important_risk_and_safety_information}}</a></li>
+			{{/if}}
+      <li><a href='/{{unbound currentLocale}}/contact'>{{i18n layouts.application.contact}}</a></li>
+			<li><a href='/{{unbound currentLocale}}/resources'>{{i18n layouts.application.resources}}</a></li>
+			<li><a href='/{{unbound currentLocale}}/users/logout'>{{i18n layouts.application.logout}}</a></li>
+			<li {{bind-attr class=':right currentLocale'}}>
+        <p class='global-brand'>
+          <a href='/{{unbound currentLocale}}'>{{{i18n layouts.application.logo.1_html}}}</a>
+          {{{i18n layouts.application.logo.2_html}}}
+          {{{i18n layouts.application.logo.3_html}}}
+				</p>
+			</li>
+		</ul>
+	</div>
+</nav>

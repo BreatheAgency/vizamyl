@@ -1,0 +1,21 @@
+<div class='devise passwords row'>
+  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+  </div>
+  <div class='small-6 medium-6 large-6 columns with-content with-minimum'>
+    <h1 class='vh'><%= t('.change_your_password') %></h1>
+    <p><%= t('.change_your_password') %></p>
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.input :reset_password_token, as: :hidden %>
+      <%= f.full_error :reset_password_token %>
+      <div class='form-inputs'>
+        <%= f.input :password, label: t('.password_label'), required: true, autofocus: true %>
+        <%= f.input :password_confirmation, label: t('.password_confirmation_label'), required: true %>
+      </div>
+      <div class='button-container'>
+        <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+          <%= t('.submit') %><i class='fi-arrow-right'></i>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

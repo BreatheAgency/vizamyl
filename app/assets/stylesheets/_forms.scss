@@ -1,0 +1,18 @@
+input[type='checkbox'] {
+  margin-right: rem-calc(10);
+}
+
+.error input {
+  border: 1px solid #f04124;
+  color: #111;
+}
+
+.error input:focus {
+  border: 1px solid #f04124;
+}
+
+input+small {
+  font-weight: normal;
+  font-size: rem-calc(14);
+  color: #f04124;
+}

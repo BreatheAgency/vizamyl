@@ -1,0 +1,27 @@
+.question-intro-page {
+
+  .with-content {
+    padding: rem-calc(20) rem-calc(20) 0 rem-calc(20);
+  }
+
+  .title-box {
+    background: #005DBA;
+    padding: rem-calc(20);
+    border-bottom: 1px solid white;
+    h1 {
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  .body-box {
+    background: #005DBA;
+    color: white;
+    padding: rem-calc(20);
+    font-weight: normal;
+    p {
+      margin-bottom: none;
+    }
+  }
+
+}

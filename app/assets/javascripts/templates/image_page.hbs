@@ -1,0 +1,17 @@
+<div {{bind-attr class=':row :page :image-page'}}>
+  <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
+    <img {{bind-attr src=sourceWithUrl}} height='460' width='968' class='img-responsive' style='border: solid 1px #CCC;'>
+  </div>
+</div>
+<div class='row page-footer'>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-abbreviations'>
+      <p>{{{abbreviations}}}</p>
+    </div>
+  </div>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-actions'>
+      <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+    </div>
+  </div>
+</div>

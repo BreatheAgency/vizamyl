@@ -1,0 +1,47 @@
+<div class="customPage">
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container ntb">
+      <ul class="nav">
+        <li class="nav-item">
+        </li>
+      </ul>
+      <p class="ms-auto global-brand pt-3">
+        <a class="logo">
+          Vizamyl<sup class="trade-mark">™</sup>
+        </a>
+        <span><span>Flutemetamol (<sup>18</sup>F)</span></span>
+        <span><span>Injection</span></span>
+      </p>
+    </div>
+  </nav>
+  <div class='row'>
+    <div class='large-12 large-centered map choose-location'>
+      <h4>Welcome to the Vizamyl<sup class='trade-mark'>&trade;</sup> training for image readers</h4>
+      <h4>Please select the country where you are located</h4>
+      <% if ['file_not_found', 'unprocessable', 'internal_server_error'].include?(controller.action_name) %>
+        <%= render partial: 'errors/error_message' %>
+      <% end %>
+      <%= render partial: 'errors/locale_links' %>
+      <p><span class='blue'>This site is intended for healthcare professionals only.</span><br> By proceeding, you confirm that you are a healthcare professional.</p>
+    </div>
+  </div>
+  <div class="container ntb">
+    <footer class="footer">
+      <div class="terms row" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="large-6 text-left">
+          <div class="copyright">
+            <p style="padding-left: 0;">© 2025 GE HealthCare.</p>
+            <p style="padding-left: 0;">Vizamyl is a trademark of GE HealthCare.</p>
+            <p style="padding-left: 0; white-space: nowrap;">GE is a trademark of General Electric Company used under trademark license.</p>
+            <p style="padding-left: 0;"><a href="/en/terms-and-conditions">Terms and conditions</a></p>
+          </div>
+        </div>
+        <div class="large-6 text-right" style="display: flex; justify-content: flex-end; align-items: center;">
+          <img id="ge_footer_logo" class="ge_footer_logo" src="<%= asset_path('ge-health-logo.png') %>">
+        </div>
+      </div>
+    </footer>
+
+
+  </div>
+</div>

@@ -1,0 +1,22 @@
+<div {{bind-attr class=':row :page :question-intro-page'}}>
+  <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
+    <div class='title-box'>
+      <h1>{{{title}}}</h1>
+    </div>
+    <div class='body-box'>
+      <p>{{{body}}}</p>
+    </div>
+  </div>
+</div>
+<div class='row page-footer'>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-abbreviations'>
+      <p>{{{abbreviations}}}</p>
+    </div>
+  </div>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-actions'>
+      <a {{bind-attr class=':right complete:enabled:disabled'}} {{action 'next' step}}>{{i18n course.actions.next}}<i class='fi-arrow-right'></i></a>
+    </div>
+  </div>
+</div>

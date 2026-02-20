@@ -1,0 +1,20 @@
+.course-completion {
+
+  .columns {
+    padding-top: rem-calc(40);
+    padding-left: rem-calc(50);
+    padding-right: rem-calc(50);
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: $h3-font-size;
+    padding-bottom: rem-calc(6);
+    line-height: rem-calc(30);
+  }
+
+  .use {
+    margin-top: 268px;
+    margin-left: 427px;
+  }
+}

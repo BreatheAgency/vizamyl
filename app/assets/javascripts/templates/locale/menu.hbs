@@ -1,0 +1,76 @@
+<div class='row page menu'>
+  <div class='small-12 medium-12 large-12 columns with-content with-minimum' id='accordion'>
+    <ol>
+      {{#each chapter in visibleChapters}}
+        <li {{bind-attr class=':panel :panel-default chapter.available:available:unavailable chapter.selected:selected:collapsed'}}>
+          <div {{action 'toggle' chapter}} class='panel-heading'>
+            <h2 class='panel-title'>
+              <a>{{{chapter.title}}}</a>
+            </h2>
+          </div>
+          <div {{bind-attr id=chapter.id}} class='panel-collapse collapse'>
+            <ol class='list-group'>
+              {{#each step in chapter.visibleSteps}}
+                <li {{action 'selectStep' step}} {{bind-attr class='step.available:available:unavailable'}}>
+                  <h3>
+                    <a class='list-group-item'>
+                      {{{step.title}}}
+                    </a>
+                  </h3>
+                </li>
+              {{/each}}
+            </ol>
+          </div>
+        </li>
+      {{/each}}
+      {{#if isComplete}}
+        {{#each chapter in hiddenChapters}}
+          <li {{bind-attr class=':panel :panel-default chapter.available:available:unavailable chapter.selected:selected:collapsed'}}>
+            <div {{action 'toggle' chapter}} class='panel-heading'>
+              <h2 class='panel-title'>
+                <a>{{{chapter.title}}}</a>
+              </h2>
+            </div>
+            <div {{bind-attr id=chapter.id}} class='panel-collapse collapse'>
+              <ul class="small-block-grid-6 list-block">
+                {{#each step in chapter.visibleSteps}}
+                <li {{action 'selectStep' step}}><p class='container'>{{{step.title}}} <i class='fi-arrow-right right'></i></p></li>
+                {{/each}}
+              </ul>
+            </div>
+          </li>
+        {{/each}}
+      {{/if}}
+      {{! Link to Adjunctive Use of Quantification }}
+      {{#if isEuropean }}
+        <li class='panel panel-default available collapsed'>
+          <div class='panel-heading'>
+            <h2 class='panel-title'>
+              <a {{bind-attr href=useVideoLink}}>{{{ videoLinkText }}}</a>
+            </h2>
+          </div>
+        </li>
+      {{/if}}
+      {{! Link to Vizamyl Refresher Video for Italians }}
+      {{#if hasItalianOrigin }}
+        <li class='panel panel-default available collapsed'>
+          <div class='panel-heading'>
+            <h2 class='panel-title'>
+              <a href="/it/users/refresher" >Corso di aggiornamento</a>
+            </h2>
+          </div>
+        </li>
+      {{/if}}
+    </ol>
+  </div>
+</div>
+<div class='row page-footer'>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-abbreviations'>
+    </div>
+  </div>
+  <div class='small-6 medium-6 large-6 columns'>
+    <div class='page-actions'>
+    </div>
+  </div>
+</div>

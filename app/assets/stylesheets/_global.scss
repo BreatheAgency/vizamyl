@@ -1,0 +1,261 @@
+html {
+  min-height:100%;
+  height: 100%;
+  user-select: none;
+}
+
+body {
+  font-family: $global-font;
+  font-weight: bold;
+  min-height: 400px;
+  background: #fff;
+  color: #666;
+}
+
+a, button {
+  font-weight: bold;
+}
+
+a.disabled {
+ pointer-events: none;
+ cursor: default;
+}
+
+button {
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,h2,h3,h4,h5 {
+  font-family: $global-font;
+  color: $primary-color;
+}
+
+.trade-mark {
+  top: -0.3rem;
+}
+
+.tt {
+  vertical-align: text-top;
+}
+
+.columns.with-minimum {
+  min-height: 580px;
+}
+
+span.triangle {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  @include retina-background-image('indicator', 16px, 16px);
+}
+
+nav {
+  @include background-image(linear-gradient(to right, $primary-highlight, $primary-color));
+  padding:0;
+
+  li {
+    margin: 35px 0 40px 0;
+    line-height: 16px;
+    border-left: solid 1px rgba(255,255,255, 0.8);
+  }
+
+  li.right {
+    margin:0;
+  }
+
+  a {
+    color: #FFF;
+    padding: 0 8px;
+    line-height: 16px;
+    font-weight: normal;
+  }
+
+  a:hover, a:focus {
+    color: white;
+  }
+
+  li:first-child, li.right {
+    border: none;
+  }
+
+  @each $locale in $available-locales {
+    .#{$locale} {
+      .global-brand {
+        margin: 15px 0 0 0;
+        padding: 4px 20px 0 0;
+        background-repeat: no-repeat;
+        background-position: right top;
+      }
+    }
+  }
+
+  .es {
+    .global-brand {
+      margin: 18px 0 0 0;
+      padding: 4px 0 0 20px;
+      background-repeat: no-repeat;
+      background-position: left top;
+    }
+  }
+
+  .global-brand a {
+    padding: 0;
+    text-transform: uppercase;
+    font-size: rem-calc(28);
+    line-height: rem-calc(20);
+  }
+
+  .global-brand span {
+    display: block;
+    color: #FFF;
+    font-size: rem-calc(13);
+    line-height: rem-calc(13);
+  }
+}
+
+main {
+
+  form {
+
+    input[type='radio'] {
+      @extend .visuallyhidden;
+    }
+
+    .radio_buttons {
+      height: 35px;
+    }
+
+    .radio_buttons label {
+      display: inline-block;
+      margin: 0 7px 16px 0;
+      padding: 0;
+    }
+
+    input[type='radio'] + span {
+      position: relative;
+      display: inline-block;
+      margin: 0 6px 0 0;
+      vertical-align: middle;
+      width: 16px;
+      height: 16px;
+      border: solid 1px $primary-color;
+      border-radius: 8px;
+    }
+
+    input[type='radio']:checked + span > span {
+      position: absolute;
+      display: inline-block;
+      left: 5px;
+      top: 5px;
+      width: 4px;
+      height: 4px;
+      background: $primary-color;
+      border-radius:2px;
+    }
+
+    input[type='checkbox'] + label {
+      vertical-align: middle;
+    }
+
+  }
+
+  .columns.with-content {
+    background:#fff;
+  }
+
+  .button-container {
+    padding: 20px 0 0 0;
+
+    a, i, .btn, button {
+      font-family: $global-font;
+      font-size: rem-calc(28);
+      line-height: rem-calc(40);
+      color: $primary-color;
+    }
+
+    i {
+      display:inline-block;
+      width: 40px;
+      height: 40px;
+      margin-left: 12px;
+      padding-left: 8px;
+      border: solid 2px $primary-color;
+      border-radius: 22px;
+    }
+
+    button {
+      line-height: rem-calc(44);
+
+      i {
+        padding-left: 0;
+      }
+
+    }
+
+    .btn {
+      border:none;
+      background:transparent;
+      margin:0;
+      padding:0;
+      cursor:pointer;
+    }
+
+    a:hover, a:hover i {
+      color: $primary-highlight;
+      border-color: $primary-highlight;
+    }
+
+    button:hover, button:hover i {
+      color: $primary-highlight;
+      border-color: $primary-highlight;
+    }
+
+    .disabled {
+      color: #bbb;
+      i {
+        color: #bbb;
+        border-color: #bbb;
+      }
+    }
+  }
+}
+
+footer {
+  min-height: 120px;
+  margin: 0;
+
+  .columns {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .row {
+    border-top: solid 1px $primary-highlight;
+    padding: 0 2px 0 2px;
+  }
+
+  .terms {
+    p {
+      line-height: .9em;
+      font-size: rem-calc(12);
+      color: #777;
+      margin:0 0 8px 0;
+    }
+
+    p:first-child {
+      padding:20px 0 0 0;
+    }
+
+    a {
+      // color: #777;
+      text-decoration: underline;
+      font-weight: normal;
+    }
+  }
+}
+
+@media #{$large-up} {
+  main {
+     @include background-image(linear-gradient($background-top, $background-bottom 450px));
+  }
+}

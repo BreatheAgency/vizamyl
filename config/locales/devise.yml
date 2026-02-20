@@ -1,0 +1,397 @@
+en:
+  devise:
+    mailer:
+      reset_password_instructions:
+        one: "Hello %{name}"
+        two: We have received a request to remind you of your login details for the Vizamyl electronic training programme.
+        three: Please click here to reset your password.
+        four_html: |
+          <p>If you didn’t request this reminder, please ignore this email. Your password will not be changed until you access the link above and create a new one.</p>
+          <p>Thank you,</p>
+          <p>GE Healthcare</p>
+    registrations:
+      edit:
+        title: My account
+        my_details: My details
+        registrations_description: You can update your contact preferences and personal details using the boxes below
+        contact_preferences: Contact preferences
+        salutations:
+          - Prof
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
+        description_html: |
+          If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
+        marketing_overall_opt_in_description_html: |
+          If you do want to receive such information, please tick the box below.
+        marketing_overall_opt_in_html: |
+          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<span>
+        marketing_overall_opt_in_note_html: |
+          (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
+        marketing_overall_description_html: |
+          If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:
+        marketing_email_opt_in_label_html: |
+          E-Mail
+        marketing_post_opt_in_label_html: |
+          Post
+        marketing_representative_opt_in_label_html: |
+          Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>
+        marketing_overall_opt_in_tick_html: |
+          (Please tick one or more options)
+        update: |
+          Update
+      new:
+        salutations:
+          - Prof
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
+    sessions:
+      new:
+        intro: |
+          Please enter your email address
+          and password to login.
+        forgot_your_password: Forgotten your password?
+        login: Login
+    passwords:
+      new:
+        forgot_your_password: Forgotten your password?
+        send: Send
+      edit:
+        change_your_password: Change your password
+        password_label: New password
+        password_confirmation_label: Confirm new password
+        submit: Submit
+'en-us':
+  devise:
+    sessions:
+      new:
+        intro: |
+          Please enter your email address
+          and password to log in.
+        login: Log in
+de:
+  devise:
+    mailer:
+      reset_password_instructions:
+        one: "Sehr geehrte(r) %{name}"
+        two: Sie haben um eine Erinnerung an die Bearbeitung Ihrer Anmeldedaten für das elektronische Schulungsprogramm zu Vizamyl gebeten.
+        three: Bitte klicken Sie hier, um Ihr Passwort zurückzusetzen.
+        four_html: |
+          <p>Falls Sie die Erinnerung nicht angefordert haben, ignorieren Sie bitte diese Nachricht. Die Änderung Ihres Passworts erfolgt nur, wenn Sie auf den Link oben klicken und ein neues Passwort erstellen.</p>
+          <p>Vielen Dank,</p>
+          <p>GE Healthcare</p>
+    registrations:
+      edit:
+        title: Mein Konto
+        my_details: Meine persönlichen Daten
+        registrations_description: In den Feldern unten können Sie Ihre Kontaktpräferenzen und persönlichen Daten bearbeiten
+        contact_preferences: Kontaktpräferenzen
+        salutations:
+          - Prof
+          - Dr
+          - Frau
+          - Herr
+        description_html: |
+          Falls Sie den Kurs bestehen, möchte GE Healthcare Ihnen Informationen über unsere Produkte, Dienstleistungen und weitere für Sie interessante Schulungsangebote zukommen lassen.
+        marketing_overall_opt_in_description_html: |
+          Bitte markieren Sie das Kästchen unten, falls Sie solche Informationen erhalten möchten.
+        marketing_overall_opt_in_html: |
+          <span class="marketing-purposes">JA, ich möchte zu Marketingzwecken kontaktiert werden.<span>
+        marketing_overall_opt_in_note_html: |
+          (Bitte markieren) Bitte beachten: Falls Sie die JA-Option nicht markieren, erhalten Sie zukünftig keine Marketing-Materialien.
+        marketing_overall_description_html: |
+          Wenn Sie zu Marketingzwecken kontaktiert werden möchten, wählen Sie eine der folgenden Optionen und geben Sie Ihre bevorzugte Kontaktart an:
+        marketing_email_opt_in_label_html: |
+          E-Mail
+        marketing_post_opt_in_label_html: |
+          Post
+        marketing_representative_opt_in_label_html: |
+          Besuch eines Vertreters von GE Healthcare<br><span class="obligation">(Es besteht keinerlei Verpflichtung zu Treffen mit GE-Vertretern)</span>
+        marketing_overall_opt_in_tick_html: |
+          (Bitte markieren Sie mindestens eine Option)
+        update: |
+          Aktualisieren
+      new:
+        salutations:
+          - Prof
+          - Dr
+          - Frau
+          - Herr
+    sessions:
+      new:
+        intro: |
+          Bitte geben Sie Ihre E-Mail-Adresse
+          und Ihr Passwort ein, um sich anzumelden.
+        forgot_your_password: Passwort vergessen?
+        login: Login
+    passwords:
+      new:
+        forgot_your_password: Passwort vergessen?
+        send: Senden
+      edit:
+        change_your_password: Passwort ändern
+        password_label: Neues Passwort
+        password_confirmation_label: Neues Passwort bestätigen
+        submit: Senden
+fr:
+  devise:
+    mailer:
+      reset_password_instructions:
+        one: "Bonjour %{name}"
+        two: Nous avons reçu une demande pour vous rappeler vos données de connexion liées au programme de formation électronique Vizamyl.
+        three: Veuillez cliquer ici pour réinitialiser votre mot de passe.
+        four_html: |
+          <p>Si vous n’avez pas demandé de recevoir ce rappel, veuillez ignorer ce courriel. Votre mot de passe sera uniquement changé lorsque vous aurez accédé au lien ci-dessus et que vous aurez créé un nouveau mot de passe.</p>
+          <p>Merci de votre attention,</p>
+          <p>GE Healthcare</p>
+    registrations:
+      edit:
+        title: Mon compte
+        my_details: Mes données
+        registrations_description: Vous pouvez mettre à jour vos préférences en matière de contact et vos données personnelles en utilisant les cases ci-dessous
+        contact_preferences: Préférences de contact
+        salutations:
+          - Pr
+          - Dr
+          - M.
+          - Mme
+          - Mlle
+        description_html: |
+          Si vous réussissez le cours, GE Healthcare souhaiterait vous contacter pour vous fournir des informations sur ses produits, ses services ou une formation supplémentaire susceptibles de vous intéresser.
+        marketing_overall_opt_in_description_html: |
+          Si vous souhaitez recevoir ces informations, veuillez cocher la case ci-dessous.
+        marketing_overall_opt_in_html: |
+          <span class="marketing-purposes">OUI, je souhaiterais être contacté(e)<br>à des fins commerciales.<span>
+        marketing_overall_opt_in_note_html: |
+          (Veuillez cocher) Si vous ne cochez pas l’option OUI, vous ne recevrez pas d’informations commerciales.
+        marketing_overall_description_html: |
+          Si vous souhaitez être contacté(e) à des fins commerciales, veuillez choisir l’une des options suivantes pour nous faire connaître votre méthode de contact préférée:
+        marketing_email_opt_in_label_html: |
+          Courrier électronique
+        marketing_post_opt_in_label_html: |
+          Courrier postal
+        marketing_representative_opt_in_label_html: |
+          Visite d’un représentant de GE Healthcare<br><span class="obligation">(La visite d’un représentant n’est pas obligatoire)</span>
+        marketing_overall_opt_in_tick_html: |
+          (Veuillez cocher une ou plusieurs options)
+        update: |
+          Mettre à jour
+      new:
+        salutations:
+          - Pr
+          - Dr
+          - M.
+          - Mme
+          - Mlle
+    sessions:
+      new:
+        intro: |
+          Veuillez saisir votre adresse électronique
+          et votre mot de passe pour vous connecter.
+        forgot_your_password: Mot de passe oublié?
+        login: Se connecter
+    passwords:
+      new:
+        forgot_your_password: Mot de passe oublié?
+        send: Envoi
+      edit:
+        change_your_password: Changer votre mot de passe
+        password_label: Nouveau mot de passe
+        password_confirmation_label: Confirmer le nouveau mot de passe
+        submit: Envoyer
+it:
+  devise:
+    mailer:
+      reset_password_instructions:
+        one: "Salve %{name}"
+        two: Abbiamo ricevuto una richiesta di ricordarle i suoi dati di login per il programma di formazione online Vizamyl.
+        three: Cliccare qui per resettare la propria password.
+        four_html: |
+          <p>Nel caso non si sia effettuata questa richiesta, ignorare questa email. La sua password non sarà cambiata fino a che lei non acceda al link qui sopra e se ne abbia creato una nuova.</p>
+          <p>Grazie,</p>
+          <p>GE Healthcare</p>
+    registrations:
+      edit:
+        title: Il mio account
+        my_details: I miei dati
+        registrations_description: È possibile aggiornare le proprie preferenze di contatto e i dettagli personali utilizzando le caselle qui di seguito
+        contact_preferences: Preferenze di contatto
+        salutations:
+          - Prof
+          - Dott
+          - Sig
+          - Sig.ra
+        description_html: |
+          Se supera il corso, GE Healthcare desidererebbe contattarla per fornirle i dettagli, servizi o formazioni supplementari relative al nostro prodotto e che crediamo essere di interesse per Lei.
+        marketing_overall_opt_in_description_html: |
+          Se si desiderano ricevere tali informazioni, spuntare la casella in basso.
+        marketing_overall_opt_in_html: |
+          <span class="marketing-purposes">SÌ, desidero essere contattato <br>per fini commerciali.<span>
+        marketing_overall_opt_in_note_html: |
+          (Spuntare) NOTA BENE se non si seleziona l’opzione SÌ non si riceveranno informazioni a carattere commerciale.
+        marketing_overall_description_html: |
+          Se si desidera essere contattati a fini commerciali, selezionare una delle opzioni seguenti in modo da metterci a conoscenza del metodo di contatto preferito:
+        marketing_email_opt_in_label_html: |
+          Indirizzo email
+        marketing_post_opt_in_label_html: |
+          Indirizzo postale
+        marketing_representative_opt_in_label_html: |
+          Visita di un rappresentante GE Healthcare<br><span class="obligation">(Non esiste l’obbligo di incontrare un rappresentante)</span>
+        marketing_overall_opt_in_tick_html: |
+          (Spuntare una o più opzioni)
+        update: |
+          Aggiornamento
+      new:
+        salutations:
+          - Prof
+          - Dott
+          - Sig
+          - Sig.ra
+    sessions:
+      new:
+        intro: |
+          Inserire il proprio indirizzo email e la
+          propria password per effettuare il login.
+        forgot_your_password: Password dimenticata?
+        login: Login
+    passwords:
+      new:
+        forgot_your_password: Password dimenticata?
+        send: Inviare
+      edit:
+        change_your_password: Cambiare la propria password
+        password_label: Nuova password
+        password_confirmation_label: Confermare la nuova password
+        submit: Inviare
+es:
+  devise:
+    mailer:
+      reset_password_instructions:
+        one: "Hola %{name}"
+        two: Hemos recibido una solicitud para recordarle su información de inicio de sesión para el programa de formación electrónica de Vizamyl.
+        three: Haga clic aquí para resetear su contraseña.
+        four_html: |
+          <p>Si no ha solicitado este recordatorio, ignore este correo electrónico. Su contraseña no se modificará hasta que acceda al hipervínculo incluido anteriormente y cree una nueva.</p>
+          <p>Le agradecemos su colaboración,</p>
+          <p>GE Healthcare</p>
+    registrations:
+      edit:
+        title: Mi cuenta
+        my_details: Mi información
+        registrations_description: Puede actualizar sus preferencias de contacto y su información personal empleando las casillas que encontrará a continuación
+        contact_preferences: Preferencias de contacto
+        salutations:
+          - Dra.
+          - Dr.
+        description_html: |
+          Si supera el curso, a GE Healthcare le gustaría ponerse en contacto con usted para proporcionarle detalles de nuestros productos, servicios o más formación que creemos que pueden resultarle interesantes.
+        marketing_overall_opt_in_description_html: |
+          Si desea recibir dicha información, marque la casilla que encontrará a continuación.
+        marketing_overall_opt_in_html: |
+          <span class="marketing-purposes">SÍ, me gustaría que se pusieran en contacto conmigo con fines de marketing.<span>
+        marketing_overall_opt_in_note_html: |
+          (Marque la casilla) TENGA EN CUENTA que si no marca la opción "SÍ", no recibirá ninguna información de marketing.
+        marketing_overall_description_html: |
+          Si desea que nos pongamos en contacto con usted con fines de marketing, seleccione su método preferido de contacto:
+        marketing_email_opt_in_label_html: |
+          Correo electrónico
+        marketing_post_opt_in_label_html: |
+          Correo ordinario
+        marketing_representative_opt_in_label_html: |
+          Visita de un representante de GE Healthcare<br><span class="obligation">(No hay obligación de ver a un representante)</span>
+        marketing_overall_opt_in_tick_html: |
+          (Marque una o más opciones)
+        update: |
+          Actualizar
+      new:
+        salutations:
+          - Dra.
+          - Dr.
+    sessions:
+      new:
+        intro: |
+          Introduzca su dirección de correo electrónico
+          y su contraseña para iniciar sesión.
+        forgot_your_password: ¿Ha olvidado su contraseña?
+        login: Inicio de sesión
+    passwords:
+      new:
+        forgot_your_password: ¿Ha olvidado su contraseña?
+        send: Enviar
+      edit:
+        change_your_password: Cambiar su contraseña
+        password_label: Nueva contraseña
+        password_confirmation_label: Confirme la nueva contraseña
+        submit: Enviar
+jp:
+  devise:
+    mailer:
+      reset_password_instructions:
+        one: "%{name} 様"
+        two: このメールは、パスワード変更をご希望の方に送らせていただいております。
+        three: パスワードを変更するにはこちらをクリックしてください。
+        four_html: |
+          <p>このメールに 心当たりがない場合は、お手数ですが削除して下さい。上記リンクにアクセスして新しいパスワードを設定するまで、パスワードは変更されません。</p>
+          <p>よろしくお願いいたします。</p>
+          <p>GEヘルスケア・ジャパン株式会社</p>
+    registrations:
+      edit:
+        title: アカウント情報
+        my_details: アカウント情報
+        registrations_description: You can update your contact preferences and personal details using the boxes below
+        contact_preferences: Contact preferences
+        salutations:
+          - Prof
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
+        description_html: |
+          If you pass the course, GE Healthcare would like to contact you in order to provide you with details of our products, services or further training which we believe may be of interest to you.
+        marketing_overall_opt_in_description_html: |
+          If you do want to receive such information, please tick the box below.
+        marketing_overall_opt_in_html: |
+          <span class="marketing-purposes">YES, I would like to be contacted for<br>marketing purposes.<span>
+        marketing_overall_opt_in_note_html: |
+          (Please tick) NOTE that if you do not tick the YES option you will not receive any marketing information.
+        marketing_overall_description_html: |
+          If you would like to be contacted for marketing purposes, please select one of the following options so that we know your preferred method of contact:
+        marketing_email_opt_in_label_html: |
+          E-Mail
+        marketing_post_opt_in_label_html: |
+          Post
+        marketing_representative_opt_in_label_html: |
+          Visit from a GE Healthcare representative<br><span class="obligation">(There is no obligation to see a representative)</span>
+        marketing_overall_opt_in_tick_html: |
+          (Please tick one or more options)
+        update: |
+          更新
+      new:
+        salutations:
+          - Prof
+          - Dr
+          - Mr
+          - Mrs
+          - Miss
+          - Ms
+    sessions:
+      new:
+        intro: |
+          メールアドレスとパスワードを入力して<br>ログインしてください。
+        forgot_your_password: パスワードをお忘れですか？
+        login: ログイン
+    passwords:
+      new:
+        forgot_your_password: パスワードをお忘れですか？
+        send: 送信
+      edit:
+        change_your_password: パスワードを変更してください。
+        password_label: 新しいパスワード
+        password_confirmation_label: 新しいパスワードの確認
+        submit: 送信

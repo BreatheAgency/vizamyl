@@ -1,0 +1,265 @@
+en:
+  course:
+    actions:
+      back: Back
+      next: Next
+      retake_test: Retake
+    pages:
+      test:
+        question_one:
+          answer_one: Negative
+          answer_two: Positive
+        question_two:
+          answer_one: Negative
+          answer_two: Positive
+        question_three:
+          answer_one: Negative
+          answer_two: Positive
+        question_four:
+          answer_one: Negative
+          answer_two: Positive
+        question_five:
+          answer_one: Negative
+          answer_two: Positive
+        question:
+          single_title: Self-assessment question
+          plural_title: Self-assessment questions
+        test_case:
+          description_html: Navigate the three views with the slider.<br>Assess the five regions and then make an overall assessment.
+          question_one: Frontal pole and lobe
+          question_two: Posterior cingulate and precuneus
+          question_three: Temporal lobe
+          question_four: Parietal lobe
+          question_five: Striatum
+          question_six: Overall classification
+        four_b:
+          title: Assessment Summary
+          correct: Congratulations! You have successfully completed the Vizamyl electronic training programme by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the "next" button to finish the programme.
+          incorrect_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the "next" button to be re-challenged on a further 15 cases.
+          incorrect_two_one_html: Unfortunately, in order to complete the Vizamyl electronic training programme, you needed to accurately classify at least 14 of the 15 cases.<br>If you would like to review the explanation for any of the cases, simply click on the case.<br><br>Please contact your local GE representative via the
+          incorrect_two_link: Contact section
+          incorrect_two_two_html: to schedule an in-person training session.
+          review_explanation_video: Review explanation video <span class="index">%{count}</span>
+'en-us':
+  course:
+    pages:
+      test:
+        question:
+          single_title: Self-Assessment Question
+          plural_title: Self-Assessment Questions
+        test_case:
+          description_html: First, to access the views, please click on the image at the right. You can navigate through the views by clicking on the scroll bar at the right and dragging with your mouse.<br><br>Assess the five regions and then make an overall assessment.
+        four_b:
+          title: Assessment Summary
+          correct: Congratulations! You have successfully completed the Vizamyl Electronic Reader Training Program by accurately classifying at least 14 of the 15 cases.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. Otherwise, click the Next button to finish the program.
+          incorrect_one_html: To successfully complete the Vizamyl Electronic Reader Training Program, you needed to accurately classify at least 14 of the 15 cases.<br><br>Unfortunately, you did not accurately complete at least 14.<br><br>If you would like to review the explanation for any of the cases, simply click on the case. When you are ready, you can click the Next button to be re-challenged on an additional 15 cases.
+          incorrect_two_one_html: As you know, to successfully complete the Vizamyl Electronic Reader Training Program, you needed to accurately classify at least 14 of the 15 cases. Unfortunately, you did not accurately complete at least 14 on your second attempt.<br><br>If you would like to review the explanation for any of the cases, simply click on the case.<br><br>Please contact your local GE Healthcare Representative via the
+          incorrect_two_link: Contact section
+          incorrect_two_two_html: to schedule an in-person training session.
+          review_explanation_video: Review Explanation Video <span class="index">%{count}</span>
+de:
+  course:
+    actions:
+      back: Zurück
+      next: Weiter
+    pages:
+      test:
+        question_one:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_two:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_three:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_four:
+          answer_one: Negativ
+          answer_two: Positiv
+        question_five:
+          answer_one: Negativ
+          answer_two: Positiv
+        question:
+          single_title: Frage zur Selbsbewertung
+          plural_title: Fragen zur Selbstbewertung
+        test_case:
+          description_html: Navigieren Sie mit dem Slider durch die drei Ansichten.<br>Beurteilen Sie die fünf Bereiche und nehmen Sie dann eine Gesamtbewertung vor.
+          question_one: Frontalpol und -lappen
+          question_two: Posteriores Cingulum und Precuneus
+          question_three: Temporallappen
+          question_four: Parietallappen
+          question_five: Striatum
+          question_six: Gesamtbeurteilung
+        four_b:
+          title: Zusammenfassung der Bewertung
+          correct: Herzlichen Glückwunsch! Mit der richtigen Beurteilung von mindestens 14 der 15 Fälle haben Sie das elektronische Schulungsprogramm zu Vizamyl erfolgreich abgeschlossen. Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall. Klicken Sie andernfalls zum Beenden des Programms auf die Taste "Weiter".
+          incorrect_one_html: Leider hätten Sie mindestens 14 der 15 Fälle richtig beurteilen müssen, um das elektronische Schulungsprogramm zu Vizamyl abzuschließen.<br><br>Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall. Wenn Sie bereit sind, können Sie die Taste "Weiter" drücken, um anhand von 15 weiteren Fällen erneut geprüft zu werden.
+          incorrect_two_one_html: Leider hätten Sie mindestens 14 der 15 Fälle richtig beurteilen müssen, um das elektronische Schulungsprogramm zu Vizamyl abzuschließen. Wenn Sie die Erklärung für einen der Fälle noch einmal anschauen möchten, klicken Sie einfach auf den entsprechenden Fall.<br><br>Bitte wenden Sie sich für eine persönliche Schulung über die
+          incorrect_two_link: Vizamyl-Website
+          incorrect_two_two_html: an Ihren örtlichen GE-Vertreter.
+          review_explanation_video: Lehrvideo %{count} anschauen
+fr:
+  course:
+    actions:
+      back: Retour
+      next: Suivant
+    pages:
+      test:
+        question_one:
+          answer_one: Négative
+          answer_two: Positive
+        question_two:
+          answer_one: Négatif&nbsp;&nbsp;
+          answer_two: Positif
+        question_three:
+          answer_one: Négative
+          answer_two: Positive
+        question_four:
+          answer_one: Négative
+          answer_two: Positive
+        question_five:
+          answer_one: Négatif&nbsp;&nbsp;
+          answer_two: Positif
+        question:
+          single_title: Question d’auto-évaluation
+          plural_title: Questions d’auto-évaluation
+        test_case:
+          description_html: Explorez les trois vues à l’aide du curseur. Évaluez les cinq régions et procédez à une évaluation générale.
+          question_one: Région frontale
+          question_two: Cortex cingulaire postérieur et précunéus
+          question_three: Région temporale
+          question_four: Région pariétale
+          question_five: Striatum
+          question_six: Classification générale
+        four_b:
+          title: Résumé de l’évaluation
+          correct: Félicitations! Vous avez réussi la formation Vizamyl programme électronique en interprétant correctement au moins 14 tests sur 15.<br><br>Si vous souhaitez consulter les explications pour chacun des tests, il vous suffit de cliquer sur le test. Sinon, cliquez sur le bouton « Suivant » pour terminer le programme.
+          incorrect_one_html: Malheureusement, pour réussir la formation Vizamyl programme électronique, vous deviez interpréter correctement au moins 14 cas sur 15.<br><br>Si vous souhaitez consulter les explications pour chacun des tests, il vous suffit de cliquer sur le test. Dès que vous êtes prêt, cliquez sur « Suivant » pour tester à nouveau vos connaissances sur 15 autres tests.
+          incorrect_two_one_html: Malheureusement, pour réussir la formation Vizamyl programme électronique, vous deviez interpréter correctement au moins 14 cas sur 15.<br><br>Si vous souhaitez consulter les explications pour chacun des tests, il vous suffit de cliquer sur le test.<br><br>Veuillez contacter votre représentant GE local via le site
+          incorrect_two_link: Web Vizamyl
+          incorrect_two_two_html: afin de planifier votre séance de formation en personne.
+          review_explanation_video: Voir la vidéo d’explication <span class="index">%{count}</span>
+it:
+  course:
+    actions:
+      back: Indietro
+      next: Avanti
+    pages:
+      test:
+        question_one:
+          answer_one: Negativa
+          answer_two: Positiva
+        question_two:
+          answer_one: Negativa
+          answer_two: Positiva
+        question_three:
+          answer_one: Negativa
+          answer_two: Positiva
+        question_four:
+          answer_one: Negativa
+          answer_two: Positiva
+        question_five:
+          answer_one: Negativa
+          answer_two: Positiva
+        question:
+          single_title: Autovalutazione domanda
+          plural_title: Domande di autovalutazione
+        test_case:
+          description_html: Spostarsi nelle tre proiezioni con il cursore. Valutare le cinque regioni e successivamente effettuare una valutazione complessiva.
+          question_one: Polo e lobo frontale
+          question_two: Cingolato posteriore e precuneo
+          question_three: Lobo temporale
+          question_four: Lobo parietale
+          question_five: Corpo striato
+          question_six: Classificazione complessiva
+        four_b:
+          title: Riepilogo della valutazione
+          correct: Congratulazioni! Il programma formativo on-line di Vizamyl è stato completato correttamente classificando in modo accurato almeno 14 dei 15 casi.<br><br>Per rivedere la spiegazione di un caso, fare clic sul caso. Altrimenti, fare clic sul pulsante "avanti" per concludere il programma.
+          incorrect_one_html: Siamo spiacenti, ma per completare il programma di formazione on-line di Vizamyl è necessario classificare in modo accurato almeno 14 dei 15 casi.<br><br>Per rivedere la spiegazione di un caso, fare clic sul caso. Altrimenti, fare clic sul pulsante "avanti" per concludere il programma.
+          incorrect_two_one_html: Siamo spiacenti, ma per completare il programma di formazione on-line di Vizamyl è necessario classificare in modo accurato almeno 14 dei 15 casi.<br>Per rivedere la spiegazione di un caso, fare clic sul caso.<br><br>È possibile contattare il proprio rappresentante GE attraverso
+          incorrect_two_link: il sito web Vizamyl
+          incorrect_two_two_html: per programmare una sessione formativa presenziale.
+          review_explanation_video: Rivedere video esplicativo <span class="index">%{count}</span>
+es:
+  course:
+    actions:
+      back: Atrás
+      next: Siguiente
+    pages:
+      test:
+        question_one:
+          answer_one: Negativo
+          answer_two: Positivo
+        question_two:
+          answer_one: Negativo
+          answer_two: Positivo
+        question_three:
+          answer_one: Negativo
+          answer_two: Positivo
+        question_four:
+          answer_one: Negativo
+          answer_two: Positivo
+        question_five:
+          answer_one: Negativo
+          answer_two: Positivo
+        question:
+          single_title: Pregunta Autoevaluación
+          plural_title: Preguntas de autoevaluación
+        test_case:
+          description_html: Explore las tres vistas con los controles.<br>Evalúe las cinco regiones y luego haga una evaluación general.
+          question_one: Lóbulo frontal
+          question_two: Cíngulo posterior y precúneo
+          question_three: Lóbulo temporal
+          question_four: Lóbulo parietal
+          question_five: Estriado
+          question_six: Clasificación
+        four_b:
+          title: Resumen de la evaluación
+          correct: ¡Enhorabuena! Ha completado con éxito el programa de formación electrónica de Vizamyl clasificando de forma precisa al menos 14 de los 15 casos.<br><br>Si desea revisar la explicación de cualquiera de los casos, simplemente haga clic sobre dicho caso. De lo contrario, haga clic en el botón “siguiente” para terminar el programa.
+          incorrect_one_html: Lamentablemente, para completar el programa de formación electrónico de Vizamyl es necesario que clasifique correctamente al menos 14 de los 15 casos.<br><br>Si desea revisar la explicación de cualquiera de los casos, simplemente haga clic sobre dicho caso. Cuando esté listo, puede hacer clic en el botón "siguiente" para volver a realizar otros 15 casos.
+          incorrect_two_one_html: Lamentablemente, para completar el programa de formación electrónica de Vizamyl es necesario que clasifique correctamente al menos 14 de los 15 casos. Si desea revisar la explicación de cualquiera de los casos, simplemente haga clic sobre dicho caso.<br><br>Comuníquese con el representante local de GE a través de
+          incorrect_two_link: la página web de Vizamyl
+          incorrect_two_two_html: para fijar una fecha para una sesión de formación presencial.
+          review_explanation_video: Revisión de la explicación del vídeo <span class="index">%{count}</span>
+jp:
+  course:
+    actions:
+      back: 戻る
+      next: 次へ
+      retake_test: 再テスト
+    pages:
+      test:
+        question_one:
+          answer_one: 陰性
+          answer_two: 陽性
+        question_two:
+          answer_one: 陰性
+          answer_two: 陽性
+        question_three:
+          answer_one: 陰性
+          answer_two: 陽性
+        question_four:
+          answer_one: 陰性
+          answer_two: 陽性
+        question_five:
+          answer_one: 陰性
+          answer_two: 陽性
+        question:
+          single_title: 練習問題
+          plural_title: 練習問題
+        test_case:
+          description_html: 3つの断面画像をスライダーを使って観察してください。5つの領域を評価した後、総合評価をしてください。
+          question_one: 前頭極と前頭葉
+          question_two: 後帯状回と楔前部
+          question_three: 側頭葉
+          question_four: 頭頂葉
+          question_five: 線条体
+          question_six: 総合評価
+        four_b:
+          title: テスト症例 - 評価のまとめ
+          correct: おめでとうございます！ あなたは15症例中14症例以上を正確に読影し、ビザミル読影トレーニングプログラムを修了されました。<br><br>症例の解説をご覧になりたい場合は、各症例をクリックしてください。解説が不要な場合、「次へ」をクリックしてプログラムを終了してください。
+          incorrect_one_html: 残念ながら、ビザミル読影トレーニングプログラムを修了するためには15症例中14症例以上を正確に読影しなければなりません。<br><br>症例の解説をご覧になりたい場合は、各症例をクリックしてください。確認できたら、「次へ」をクリックして別の15症例に関する再テストを受けてください。
+          incorrect_two_one_html: 残念ながら、ビザミル読影トレーニングプログラムを修了するためには15症例中14症例以上を正確に読影しなければなりません。<br><br>症例の解説をご覧になりたい場合は、各症例をクリックしてください。確認できたら、「次へ」をクリックして別の15症例に関する再テストを受けてください。
+          incorrect_two_link:
+          incorrect_two_two_html:
+          review_explanation_video: 症例の解説<span class="index">%{count}</span>

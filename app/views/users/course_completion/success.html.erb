@@ -1,0 +1,13 @@
+<div class='course-completion row'>
+  <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
+    <p><%= t('.description_html') %></p>
+    <p><%= link_to t('.download_results'), users_course_complete_path(format: :pdf) %></p>
+    <meta http-equiv='refresh' content="3;<%= users_course_complete_path(format: :pdf) %>">
+
+    <% if european_locale? %>
+      <div class="use button-container">
+        <a href='<%= users_use_path %>'><%= t('.adjunctive_use_of_quantification_html') %><i class='fi-arrow-right'></i></a>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class='devise registrations us row'>
+  <div class='small-12 medium-12 large-12 columns with-content with-minimum'>
+    <div class="row">
+      <div class="small-12 columns">
+        <h1><%= t('.registration') %></h1>
+        <%= raw t('.preamble') %>
+        <p><a href="http://www.ge.com/privacy" target="_blank"><%= t('.privacy_link') %></a></p>
+        <%= raw t('.instructions') %>
+        <p>* <%= raw t('.required_field') %></p>
+      </div>
+    </div>
+
+    <%= render partial: 'non_european_enrol_form' %>
+
+    <script>
+      $(document).ready(function() {
+        $('#user_marketing_overall_opt_in').click(function(e){
+          let opt_in = $('#user_marketing_overall_opt_in').prop('checked');
+          $('#user_marketing_overall_opt_out').prop('checked', !opt_in);
+        });
+      });
+    </script>
+  </div>
+</div>

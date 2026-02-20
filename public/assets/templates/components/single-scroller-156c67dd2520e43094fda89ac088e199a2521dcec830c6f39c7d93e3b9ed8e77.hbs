@@ -1,0 +1,11 @@
+<div {{bind-attr class=':image_wrapper :left loaded:loaded:loading' width=imageWidth height=imageHeight}}>
+  <img>
+  <div class='spinner'></div>
+  <div {{bind-attr class=':image_holder' style=style}}></div>
+</div>
+<div class='dragdealer'>
+  <div class='handle'>
+    <i class='fi-list'></i>
+  </div>
+</div>
+<p {{bind-attr class=':label' style=labelStyle}}>{{label}}</p>

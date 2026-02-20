@@ -1,0 +1,7 @@
+Customizing our maintenance page
+================================
+
+* Upload page to S3 (perhaps use the vizamyl-production bucket)
+* Make public
+* Get object URL
+* heroku config:set MAINTENANCE_PAGE_URL=//s3.amazonaws.com/<your_bucket>/down-for-maintenence.html

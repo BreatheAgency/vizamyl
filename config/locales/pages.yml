@@ -1,0 +1,690 @@
+en:
+  pages:
+    error:
+      heading: |
+        <h1>Vizamyl<sup class='trade-mark'>&trade;</sup> Flutemetamol F <sup class='one-eight'>18</sup> Injection</h1>
+      tagline: |
+        <h2>Electronic Reader Training Program</h2>
+      message: |
+        <p><span class='blue'>We’re sorry, the page you were looking for could not be found</span><br> To proceed, please select which country you are from.</p>
+    home:
+      body_html: |
+        <h1>Welcome to the <br><strong>Vizamyl electronic training programme</strong></h1>
+        <p>If you are returning to the course,<br><strong>welcome back and please login.</strong></p>
+        <p>If you would like to begin the course,<br><strong>welcome, and please enrol.</strong></p>
+    references:
+      left:
+        title: |
+         References
+        body_html: |
+          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. Acta Neuropathol 1991; 82: 239-59.</p>
+          <p>Hyman BT, Phelps CH, Beach TG <i>et al</i>. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. Alzheimers Dement 2012; 8: 1-13.</p>
+          <p>McKhann G, Drachman D, Folstein M <i>et al</i>. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. Neurology 1984; 34: 939-44.</p>
+          <p>McKhann G, Knopman D, Chertkow H <i>et al</i>. The diagnosis of dementia due to Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 263-9.</p>
+          <p>Mirra SS, Heyman A, McKeel D <i>et al</i>. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
+          <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G <i>et al</i>. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-25.</p>
+      right:
+        body_html: |
+    resources:
+      smpc_title: Vizamyl SmPC EU
+      rainbow_title: Rainbow colour scale RGB values
+    contact:
+      left:
+        title: |
+         Medical Support
+         and other enquiries:
+        body_html: |
+          <p>If you would like further <strong>medical information</strong> about Vizamyl, please contact us at:</p>
+          <p><a href="mailto:vizamyl.medinfo@ge.com">vizamyl.medinfo@ge.com</a></p>
+          <p>For other enquiries, including requests for <strong>image reader training</strong>, please contact us at:</p>
+          <p><a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
+          <p>If you are interested in finding out more about <strong>SPECT imaging and DaTSCAN&#0153;</strong> visit:</p>
+          <p><a href="http://www.gehealthcare.co.uk/datscan" target="_blank">www.gehealthcare.co.uk/datscan</a></p>
+          <p><small>Vizamyl and DaTSCAN are tradmarks of GE Healthcare Limited.</small></p>
+    terms-and-conditions:
+      title: Terms and conditions (8/2023)
+      body_html: |
+        <p><b>1. Terms of Use </b></p>
+        <p>The Vizamyl™ E-Training website is where users can access training material relating to GE HealthCare's Vizamyl™ product (the "Product") and eventually take an exam in order to assess whether the user has understood how to safely use the Product in accordance with the Product's summary of Product Characteristics. The website is hosted on behalf of GE HealthCare by <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a>  of Olympic House, 317-321 Latimer Road, London, W10 6RA, United Kingdom. The following terms and conditions apply to anyone who uses the website.</p>
+        <p><b>2. Information GE HealthCare Collects and How We Use It</b></p>
+        <p><b>a. Use of Personal Information </b></p>
+        <p>For optimal use of the website and your training, GE HealthCare will need to collate information regarding names, position, progress through the course and whether the course has been completed.</p>
+        <p>We may disclose information about you if:</p>
+        <p>i. Required to do so by law or legal process</p>
+        <p>ii. To law enforcement or other government officials as required to comply with a legitimate legal request, or</p>
+        <p>iii. When we believe disclosure is necessary to prevent physical harm or financial loss, or in connection with an investigation of suspected or actual illegal activity</p>
+        <p>iv. We reserve the right to transfer any information we have about you in the event that we sell or transfer all or a portion of our business assets (including through bankruptcy).</p>
+        <p>We do not sell or otherwise disclose personal information about users of the website outside of the GE HealthCare group and its affiliates except as described in this document and in the Contact Permission document.</p>
+        <p><b>b. Privacy and storage</b></p>
+        <p>
+        This data will be stored on a server based in the EU.
+        The data will only be used for administrative purposes unless you have consented to other uses such as your data being used for marketing purposes.
+        You can update your contact preferences at any time in the "My account" heroku.
+        Data will only be accessed by GE HealthCare employees, unless in case of breakdown of the system or website where administrators based at <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> may be able to access data for administrative or maintenance purposes.
+        Furthermore, our server platform at <a target="_blank" href="http://www.heroku.com">http://www.heroku.com</a> is hosted and managed by Amazon Web Services (<a target="_blank" href="http://aws.amazon.com/">http://aws.amazon.com/</a>) and therefore Amazon employees may have access to the data if there is a legitimate business need for such privileges.
+        This privilege terminates at the moment this need ceases.
+        If the problem lies in the starting up or running of an application or software, providing solutions to known problems, answering general questions then the issue will be resolved by administrators based at <a target="_blank" href="http://www.heroku.com">www.heroku.com</a>.
+        </p>
+        <p>Your data will be stored for a reasonable period of time. This is in order to assess whether the Product should be supplied to you for clinical use based on whether you have passed the test relating to the safe usage of the Product in accordance with the Product's Summary of Product Characteristics (the "Exam"). Should you have failed the Exam, we will need to use your data for administrative purposes in order to arrange face-to-face training in your country. Therefore, your data will only be used for administrative and training purposes. If you feel as though your data has been used inappropriately, contact us at <a href="mailto:Privacy.GEHC@ge.com">Privacy.GEHC@ge.com</a></p>
+        <p><b>c. Transfer </b></p>
+        <p>Your information supplied to GE HealthCare will be stored and transferred across the EU and the United Kingdom which is considered as an adequate country by the EU Commission. Your information will only be accessed by internal staff of GE HealthCare unless in case of breakdown or necessary legal process as described above.</p>
+        <p><b>3. Protection of Personal Information </b></p>
+        <p>At GE HealthCare, our goal is to protect your personal information submitted to us through our sites. We and our data processors maintain organizational, technical and physical safeguards to protect against unauthorized disclosure, use, alteration or destruction of the personal information that you provide on this and other GE HealthCare websites.</p>
+        <p><b>4. Proprietary Rights</b></p>
+        <p><b>a. Intellectual Property Rights</b></p>
+        <p>GE HealthCare, its affiliates and licensors own and retain all rights in the website, which may include confidential information such as that outlined in clause 2a. All content on the website and all GE HealthCare trademarks and logos are owned by or licensed to GE HealthCare. Nothing in these Terms and Conditions shall be interpreted as transferring by implication or otherwise any licence or right in relation to such rights to any third party except as expressly provided.</p>
+        <p>"GE HealthCare" and the GE logo are trademarks registered in the United Kingdom under number 2347097, in the European Community under numbers 003173151 and 003485745, in USA under numbers 2961099 and 3142821, and in other countries. GE and the GE Monogram are trademarks of General Electric Company.</p>
+        <p><b>b. Copyrights</b></p>
+        <p>All content on the website, including but not limited to design, text, software, technical drawings, configurations, graphics, other files, and their selection and arrangement ("Content"), are either Copyright ©2015 General Electric Company, or are the proprietary property of GE HealthCare, its affiliates or licensors. All rights reserved.</p>
+        <p>You may not republish any content on the website any Internet, Intranet or Extranet site or to incorporate the information in any other database or compilation without prior written permission. Any use other than for clinical purposes of the Content is strictly prohibited. You further agree that you will not systematically extract, collect or harvest, through electronic means or otherwise, any data from this website.</p>
+        <p><b>c. Patents</b></p>
+        <p>GE HealthCare's products and processes may be covered by one or more patents and are subject to other trade secret and proprietary rights. GE HealthCare reserves all such rights. No transfer or grant of rights under any patents is made or is to be implied by any provision of this Terms and Conditions or by anything displayed on the website.</p>
+        <p><b>d. Trademarks</b></p>
+        <p>All trademarks on the website are either trademarks or registered trademarks of GE HealthCare, its affiliates or licensors and may not be copied, imitated, or used, in whole or in part, without the prior written permission of GE HealthCare. All page headers, custom graphics, button icons, and scripts are property of GE HealthCare or its affiliates or licensors, and may not be copied, imitated, or used, in whole or in part, without the prior written permission of GE HealthCare.</p>
+        <p><b>5. Use of Cookies and Similar Technologies</b></p>
+        <p>The website will store cookies. For a signed in user: a single cookie will only be stored while the user has the site open. It will be deleted when the user leaves the page or closes their browser. In order to monitor usage of the site: Google Analytics will be used for this function. Google Analytics report on visitor interactions on the website.</p>
+        <p><b>6. Software</b></p>
+        <p>Any software, including any files, images, code, and data accompanying the software (collectively, "Software"), used or accessible through this website may be used solely by you, provided that such uses are not competitive with or derogatory to GE HealthCare. GE HealthCare retains full and complete title to and all intellectual property rights in the Software. You agree not to copy, transfer, distribute, sell, modify, decompile, reverse engineer, disassemble or create derivative works from any Software.</p>
+        <p><b>7. User Conduct</b></p>
+        <p>By using this website you agree:</p>
+        <p>i. not to disrupt or interfere with the security of, or otherwise abuse, the website, or any services, system resources, accounts, servers or networks connected to or accessible through the website;</p>
+        <p>ii. not to interfere with another user's training session or use of the website; </p>
+        <p>iii. not to share information about the training course and share answers with those who have not yet completed and passed the course;</p>
+        <p>iv. not to upload, post, or otherwise transmit through this website any viruses or other harmful, disruptive or destructive files.</p>
+        <p><b>8. Jurisdiction, Applicable Law and Dispute Notice</b></p>
+        <p>These Terms and Conditions are governed by and construed in accordance with the laws of England and Wales and you submit to the non-exclusive jurisdiction of the English courts in respect of any disputes which may arise in relation to your use of the website.</p>
+        <p><b>9. Limitation of Liability</b></p>
+        <p>SUBJECT TO THE REMAINDER OF THIS CLAUSE, GE HEALTHCARE OR ITS PARENTS, SUBSIDIARIES, AFFILIATES, OFFICERS, DIRECTORS, EMPLOYEES, AGENTS, OR SUPPLIERS SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING FROM OR IN CONNECTION WITH THE USE OF OR THE INABILITY TO USE THIS SITE OR ANY CONTENT CONTAINED ON THE SITE, OR RESULTING FROM UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR TRANSMISSIONS OR DATA, OR OTHER INFORMATION THAT IS SENT OR RECEIVED OR NOT SENT OR RECEIVED, INCLUDING BUT NOT LIMITED TO, DAMAGES FOR LOSS OF PROFITS, USE, DATA OR OTHER INTANGIBLES, EVEN IF GE HEALTHCARE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</p>
+        <p>NOTHING IN THESE TERMS AND CONDITIONS EXCLUDES OR LIMITS GE HEALTHCARE’S LIABILTY FOR FRAUD OR FOR DEATH OR PERSONAL INJURY ARISING FROM ITS NEGLIGENCE OR FOR ANY OTHER CIRCUMSTANCES IN RESPECT OF WHICH IT WOULD BE UNLAWFUL TO LIMIT OR EXCLUDE LIABILITY.</p>
+        <p><b>10. Waiver</b></p>
+        <p>The failure of GE HealthCare to enforce any provision of these Terms and Conditions shall not be deemed a waiver of such provision nor the right to enforce such provision. Furthermore, any waiver of any provision of these Terms and Conditions by any party will be effective only if in writing and signed by a party.</p>
+        <p><b>11. Notices and Contact </b></p>
+        <p>
+        GE HealthCare's address for notices relating to this website is as follows: <br/>
+        GE HealthCare <br/>
+        Pollards Wood <br/>
+        Nightingales Lane <br/>
+        Buckinghamshire, <br/>
+        HP8 4SP <br/>
+        <br/>
+        United Kingdom<br/>
+        </p>
+        <p>If you have any queries about these Terms and Conditions, please contact us at: <a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
+        <p><b>12. Changes to these Terms and Conditions</b></p>
+        <p>These Terms and Conditions may be updated by GE HealthCare periodically and without prior notice to you to reflect changes in our online information practices. Updates to these Terms and Conditions will be posted to the website. We also encourage users to periodically check this document to understand how GE HealthCare protects and uses your information.</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+'en-gb':
+  pages:
+    references:
+      left:
+        title: |
+          References
+        body_html: |
+          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. Acta Neuropathol 1991; 82: 239-59.</p>
+          <p>Curtis C. et al. Phase 3 Trial of Flutemetamol Labeled With Radioactive Fluorine 18 Imaging and Neuritic Plaque Density. JAMA Neurol. 2015 Mar; 72(3): 287-94.</p>
+          <p>Hyman BT, Phelps CH, Beach TG <i>et al</i>. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. Alzheimers Dement 2012; 8: 1-13.</p>
+          <p>McKhann G, Drachman D, Folstein M <i>et al</i>. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. Neurology 1984; 34: 939-44.</p>
+          <p>McKhann G, Knopman D, Chertkow H <i>et al</i>. The diagnosis of dementia due to Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 263-9.</p>
+          <p>Mirra SS, Heyman A, McKeel D <i>et al</i>. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
+          <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G <i>et al</i>. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-25.</p>
+      right:
+        body_html: |
+'en-us':
+  pages:
+    home:
+      body_html: |
+        <h1>Welcome to the <br><strong>Vizamyl Electronic Reader Training Program</strong></h1>
+        <p>If you are returning to the course,<br><strong>welcome back and please log in.</strong></p>
+        <p>If you would like to begin the course,<br><strong>welcome, and please enroll.</strong></p>
+    references:
+      left:
+        title: |
+         References
+        body_html: |
+          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. <i>Acta Neuropathol</i>. 1991;82(4):239-259.</p>
+          <p>Curtis C, Gamez JE, Singh U, et al. Phase 3 trial of flutemetamol labeled with radioactive fluorine 18 imaging and neuritic plaque density. <i>JAMA Neurol</i>. 2015;72(3):287-294.</p>
+          <p>Jack CR Jr, Knopman DS, Jagust WJ, et al. Hypothetical model of dynamic biomarkers of the Alzheimer’s pathological cascade. <i>Lancet Neurol.</i> 2010;9(1):119-128.</p>
+          <p>Hyman BT, Phelps CH, Beach TG, et al. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. <i>Alzheimers Dement</i>. 2012;8(1):1-13.</i></p>
+          <p>Mathis CA, Lopresti BJ, Klunk WE. Impact of amyloid imaging on drug development in Alzheimer’s disease. <i>Nuc Med Biol</i>. 2007;34(7):809-822.</p>
+          <p>McKhann G, Drachman D, Folstein M, Katzman R, Price D, Stadlan EM. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. <i>Neurology</i>. 1984;34(7):939-944.</p>
+          <p>McKhann GM, Knopman DS, Chertkow H, et al. The diagnosis of dementia due to Alzheimer’s disease: recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. <i>Alzheimers Dement</i>. 2011;7(3):263-269.</p>
+      right:
+        body_html: |
+          <p>Mirra SS, Heyman A, McKeel D, et al. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. <i>Neurology</i>. 1991;41(4):479-486.</p>
+          <p>Nelissen N, Van Laere K, Thurfjell L, et al. Phase I study of the Pittsburgh Compound B derivative 18F-flutemetamol in healthy volunteers and patients with probable Alzheimer disease. <i>J Nucl Med</i>. 2009;50(8):1251-1259.</p>
+          <p>Querfurth HW, LaFerla FM. Alzheimer’s disease. <i>N Engl J Med</i>. 2010;362(4):329-344.</p>
+          <p>Rowe CC, Ng S, Ackermann U, et al. Imaging beta-amyloid burden in aging and dementia. <i>Neurology</i>. 2007;68(20):1718-1725.</p>
+          <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. <i>Ann Neurol</i>. 2010;68(3):319-329.</p>
+          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE Healthcare 2020.</p>
+    important-risk-and-safety-information:
+      title_html: Important Risk and Safety Information<br>About Vizamyl&#0153; (Flutemetamol F 18 Injection)
+      body_html: |
+        <p><b>INDICATIONS AND USAGE:</b> Vizamyl is indicated for positron-emission tomography (PET) imaging of the brain to estimate β-amyloid neuritic plaque density in adult patients with cognitive impairment who are being evaluated for Alzheimer’s disease (AD) and other causes of cognitive decline. A negative scan indicates sparse to no neuritic plaques, inconsistent with a diagnosis of AD at the time of image acquisition. A negative scan result reduces the likelihood that a patient’s cognitive impairment is due to AD. A positive scan indicates moderate to frequent amyloid neuritic plaques. This amount of amyloid neuritic plaque has been shown to be present in patients with AD but may also be present in patients with other neurologic conditions as well as in older people with normal cognition. Vizamyl is an adjunct to other diagnostic evaluations. <b>Limitations</b>: A positive scan does not establish a diagnosis of AD or other cognitive disorder. The safety and effectiveness of Vizamyl have not been established for predicting the development of dementia or other neurologic conditions or for monitoring responses to therapies. <b>CONTRAINDICATIONS: </b>Known hypersensitivity to Vizamyl or any excipient, including polysorbate 80. <b>WARNINGS AND PRECAUTIONS — Hypersensitivity Reactions: </b>Reactions such as flushing and dyspnea have been observed within minutes following administration and may occur in patients with no history of exposure to Vizamyl. Have resuscitation equipment and trained personnel available. <b>Image Misinterpretation</b>: Errors may occur while interpreting Vizamyl PET images. Image interpretation is performed independently of the patient’s clinical information. The use of clinical information in the interpretation of Vizamyl images has not been evaluated and may lead to errors. Extensive brain atrophy may limit the ability to distinguish grey and white matter on a Vizamyl scan. Motion artifacts may distort the image. Images should be interpreted only by readers who have completed a reader training program available from GE Healthcare. <b>Radiation Risk</b>: Like all radiopharmaceuticals, Vizamyl contributes to a patient’s long-term, cumulative radiation exposure and cancer risk. Ensure safe handling to protect patients and healthcare workers from unintentional radiation exposure. <b>ADVERSE REACTIONS</b>: The most commonly reported adverse reactions in NDA clinical trials were flushing, increased blood pressure, headache, nausea, and dizziness. <b>DRUG INTERACTIONS:</b> Drug-drug interaction studies have not been performed in patients to establish the extent, if any, to which concomitant medications may alter Vizamyl image results. <b>SPECIFIC POPULATIONS — Pregnancy: </b>It is not known whether Vizamyl can cause fetal harm when administered to a pregnant woman or if it can affect reproductive capacity. Radiopharmaceuticals, including Vizamyl, have the potential to cause fetal harm, the likelihood of which depends on the stage of fetal development and the magnitude of the radiopharmaceutical dose. Vizamyl should be given to a pregnant woman only if clearly needed. <b>Nursing Mothers:</b> It is not known whether flutemetamol is excreted in human milk. Because many drugs are excreted in human milk and there is a potential for radiation exposure to nursing infants, avoid use of Vizamyl in a breastfeeding mother or have the mother temporarily interrupt breastfeeding for 24 hours after exposure. <b>Pediatric Use:</b> Vizamyl is not indicated for use in pediatric patients. <b>Geriatric Use:</b> No overall differences in safety were observed between older and younger subjects. <b>OVERDOSAGE:</b> The clinical consequence of overdosing with Vizamyl has not been reported. It is unknown whether or not flutemetamol is dialyzable. In case of overdose of radioactivity, hydration and frequent urination should be encouraged.</p
+    resources:
+      prescribing_information_title: US Full Prescribing Information for Vizamyl
+      rainbow_title: Rainbow Colour Scale RGB Values
+    contact:
+      left:
+        title: |
+          For additional support and other inquiries:
+        body_html: |
+          <p>
+          <span>Medical Affairs:</span> 800 654 0118 (option 2, then option 3) or <a href="mailto:medical.affairs@ge.com">medical.affairs@ge.com</a>
+          </p>
+          <p>
+          <span>Reimbursement Hotline:</span> 800 767 6664
+          </p>
+          <p>
+          <span>Customer Service:</span> 800 292 8514
+          </p>
+          <p>
+          <span>
+          <a href="https://gehealthcare.com">gehealthcare.com</a>
+          </span>
+          </p>
+de:
+  pages:
+    home:
+      body_html: |
+        <h1>Willkommen beim <br><strong>elektronischen Schulungsprogramm zu Vizamyl</strong></h1>
+        <p>Bitte melden Sie sich an,<br><strong>wenn Sie die Kursbearbeitung nach einer Unterbrechung fortsetzen möchten.</strong></p>
+        <p>Wenn Sie erstmalig mit dem Kurs arbeiten möchten,<br><strong>registrieren Sie sich bitte zunächst.</strong></p>
+      # Only German speaking German natives should see this (i.e not German speaking Swiss or Austrians)
+      blue_hand_body_html: |
+        <div class="blue-hand"/>
+        <p class="disclaimer"> Dieses Schulungsmaterial ist verpflichtender
+        Teil der Zulassung von Flutemetamol ( 18 F) und wurde als zusätzliche
+        risikominimierende Maßnahme beauflagt, um das Risiko des Auftretens
+        einer falschen Interpretation von PET-Bildern mit Vizamyl zu
+        minimieren und das Nutzen-Risiko-Verhältnis von Flutemetamol ( 18 F)
+        zu erhöhen. Dieses Schulungsmaterial soll dazu dienen, das Risiko für
+        Vizamyl weiter zu minimieren und Ärzten Hilfestellung zu geben, mit
+        diesem Risiko umzugehen. </p>
+        <h3>Elektronisches</h3>
+        <h2>Schulungsprogramm zu Vizamyl</h2>
+        <p> Bitte melden Sie sich an, <strong>wenn Sie die Kursbearbeitung nach einer
+        Unterbrechung fortsetzen möchten</strong>. Wenn Sie erstmalig mit dem Kurs
+        arbeiten möchten, <strong>registrieren Sie sich bitte zunächst</strong>. </p>
+    references:
+      left:
+        title: Literaturangaben
+    resources:
+      smpc_title: Vizamyl SmPC EU
+      rainbow_title: Regenbogenskala RGB Werte
+    contact:
+      left:
+        title: |
+         Medizinische Unterstützung
+         und sonstige Anfragen:
+        body_html: |
+          <p>Sollten Sie weitere <strong>medizinische Informationen</strong> zu Vizamyl wünschen, kontaktieren Sie uns bitte unter:</p>
+          <p><a href="mailto:vizamyl.medinfo@ge.com">vizamyl.medinfo@ge.com</a></p>
+          <p>Für sonstige Anfragen, einschließlich Anfragen hinsichtlich des Schulungsprogramms zur <strong>Auswertung von Aufnahmen</strong>, kontaktieren Sie uns bitte unter:</p>
+          <p><a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
+        terms: ""
+    terms-and-conditions:
+      title: Allgemeine Geschäftsbedingungen (8/2023)
+      body_html: |
+        <p><b>1. Nutzungsbedingungen</b></p>
+        <p>Auf der Vizamyl™ E-Training-Website haben die Nutzer Zugriff auf Schulungsmaterialien, die sich auf das Vizamyl™ Produkt von GE HealthCare (das „Produkt“) beziehen, und legen abschließend eine Prüfung ab, mit der beurteilt wird, ob sie verstanden haben, wie das Produkt auf sichere Weise und gemäß der Fachinformation genutzt wird. Die Website wird im Auftrag von GE HealthCare von <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a>, Adresse: Olympic House, 317-321 Latimer Road, London, W10 6RA, United Kingdom gehostet. Die folgenden Allgemeinen Geschäftsbedingungen gelten für sämtliche Nutzer der Website.</p>
+        <p><b>2. Von GE HealthCare erhobene Informationen und deren Verwendung</b></p>
+        <p><b>a. Verwendung personenbezogener Informationen</b></p>
+        <p>Um die Website bestmöglich nutzen zu können und Ihre Schulung optimal zu gestalten, erhebt GE HealthCare bestimmte Informationen, darunter Name(n), Position, Kursfortschritt und ob der Kurs abgeschlossen wurde.</p>
+        <pUnter folgenden Umständen geben wir Ihre Informationen weiter:</p>
+        <p>i. Die Offenlegung ist gemäß Gesetz oder rechtlicher Verfahren erforderlich</p>
+        <p>ii. Die Offenlegung gegenüber Strafverfolgungsbehörden oder anderen Amtsträgern ist erforderlich, um einer legitimen rechtlichen Forderung nachzukommen, oder</p>
+        <p>iii. Wir sind der Auffassung, dass eine Offenlegung notwendig ist, um physischen Schaden oder finanzielle Verluste zu vermeiden oder dass eine Offenlegung im Rahmen einer Untersuchung vermuteter oder tatsächlicher illegaler Aktivitäten erforderlich ist</p>
+        <p>iv. Wir behalten uns das Recht vor, sämtliche Informationen, die uns über Sie vorliegen, in dem Falle zu übertragen, dass wir einen Teil oder unsere gesamten geschäftlichen Vermögenswerte verkaufen oder übertragen (darunter auch Übertragung bzw. Verkauf aufgrund von Insolvenzverfahren).</p>
+        <p>Sofern nicht in diesem Dokument oder im Dokument zur Kontakterlaubnis beschrieben, verkaufen oder geben wir personenbezogene Daten über die Nutzer der Website nicht an Parteien außerhalb der GE HealthCare Gruppe und ihrer verbundenen Unternehmen weiter.</p>
+        <p><b>b. Datenschutz und -speicherung</b></p>
+        <p>
+        Diese Daten werden auf einem Server in der EU gespeichert. Diese Daten werden lediglich zu administrativen Zwecken genutzt, es sei denn, dass Sie sich mit der Nutzung der Daten zu anderen Zwecken wie etwa zu Marketingzwecken einverstanden erklärt haben. Sie können Ihre Kontaktpräferenzen jederzeit im Abschnitt „Mein Konto“ aktualisieren. Lediglich die Angestellten von HealthCare haben Zugriff auf die Daten, es sei denn, dass ein Absturz des Systems oder der Website eintritt. In diesem Fall kann ein Administrator von 
+        <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> 
+        zu Verwaltungs- oder Wartungszwecken auf die Daten zugreifen. Darüber hinaus wird unsere Server-Plattform <a target="_blank" href="http://www.heroku.com">http://www.heroku.com</a>
+        von Amazon Web Services
+        (<a target="_blank" href="http://aws.amazon.com/">http://aws.amazon.com/</a>) 
+        gehostet und verwaltet. Aus diesem Grund können Angestellte von Amazon gegebenenfalls auf Ihre Daten zugreifen, sofern ein legitimes Geschäftsinteresse vorliegt. Dieses Zugriffsrecht verfällt, sobald das Geschäftsinteresse nicht mehr gegeben ist. Sofern das Problem im Start oder der Ausführung einer Anwendung oder Software, in der Bereitstellung von Lösungen auf bekannte Probleme oder in der Beantwortung allgemeiner Fragen begründet ist, wird es von Administratoren von
+        <a target="_blank" href="http://www.heroku.com">www.heroku.com</a> gelöst.</p>
+        <p>Ihre Daten werden für einen angemessenen Zeitraum gespeichert, um anhand des Ergebnisses Ihrer Prüfung in Bezug auf die sichere Verwendung des Produkts gemäß der Fachinformation (die „Prüfung“) beurteilen zu können, ob Sie das Produkt für die klinische Nutzung erhalten dürfen. Sofern Sie die Prüfung nicht bestanden haben, benötigen wir Ihre Daten zu administrativen Zwecken, um eine physische Schulung in Ihrem Land organisieren zu können. Demnach werden Ihre Daten lediglich zu administrativen und Schulungszwecken genutzt. Falls Sie der Meinung sind, dass Ihre Daten unangemessen verwendet wurden, wenden Sie sich bitte an <a href="mailto:Privacy.GEHC@ge.com">Privacy.GEHC@ge.com</a></p>
+        <p><b>c. Übertragung </b></p>
+        <p>Die Informationen, die Sie GE HealthCare zur Verfügung gestellt haben, werden in Ländern in der EU und im Vereinigten Königreich, das von der EU-Kommission als geeignetes Land angesehen wird, gespeichert und in diese übertragen. Nur das interne Personal von GE HealthCare hat Zugriff auf Ihre Daten, insofern kein Absturz oder ein rechtliches Verfahren gemäß vorstehender Beschreibung einen anderweitigen Zugriff erforderlich machen.</p>
+        <p><b>3. Schutz personenbezogener Daten</b></p>
+        <p>GE HealthCare ist bestrebt, die personenbezogenen Daten zu schützen, die Sie uns über unsere Sites eingereicht haben. Wir und unsere Datenverarbeiter nutzen organisatorische, technische und physische Sicherheitsmaßnahmen, um die personenbezogenen Daten, die Sie auf dieser oder auf anderen Websites von GE HealthCare eingereicht haben, gegen unbefugte Offenlegung, Nutzung, Änderung oder Vernichtung zu schützen.</p>
+        <p><b>4. Eigentumsrechte</b></p>
+        <p><b>a. Rechte an geistigem Eigentum</b></p>
+        <p>GE HealthCare und seine verbundenen Unternehmen und Lizenzgeber besitzen und behalten sich alle Rechte an der Website vor, die vertrauliche Daten wie die in Abschnitt 2a beschriebenen Informationen umfassen können. GE HealthCare ist Eigentümer und Lizenzinhaber sämtlicher Inhalte der Website und aller Handelsmarken und Logos von GE HealthCare. Sofern nicht ausdrücklich vorgesehen, ist keine der Bestimmungen in diesen Allgemeinen Geschäftsbedingungen so auszulegen, dass eine Lizenz oder ein Recht in Bezug auf diese Rechte stillschweigend oder auf andere Weise an Dritte übertragen wird.</p>
+        <p>„GE HealthCare“ und das GE Logo sind im Vereinigten Königreich unter der Nummer 2347097, in der Europäischen Gemeinschaft unter den Nummern 003173151 und 003485745, in den USA unter den Nummern 2961099 und 314282 und in anderen Ländern eingetragene Handelsmarken. GE und das GE Monogram sind Handelsmarken der General Electric Company.</p>
+        <p><b>b. Urheberrechte</b></p>
+        <p>Alle Inhalte der Website, darunter insbesondere Design, Texte, Software, technische Zeichnungen, Konfigurationen, Grafiken, andere Dateien sowie deren Auswahl und Anordnung (der „Inhalt“), unterliegen entweder dem Urheberrecht ©2015 General Electric Company oder sind Eigentum von GE HealthCare, seinen verbundenen Unternehmen oder Lizenzgebern. Alle Rechte vorbehalten.</p>
+        <p>Ohne vorherige schriftliche Genehmigung sind Sie nicht dazu berechtigt, Inhalte der Website im Internet, Intranet oder Extranet zu vervielfältigen oder die Informationen in jedwede andere Datenbank oder Sammlung zu integrieren. Jegliche Nutzung des Inhalts zu anderen als zu klinischen Zwecken ist streng untersagt. Darüber hinaus erklären Sie sich damit einverstanden, keine Daten dieser Website auf systematische Weise und auf elektronischem oder anderweitigem Wege zu extrahieren oder zu sammeln.</p>
+        <p><b>c. Patente</b></p>
+        <p>Die Produkte und Prozesse von GE HealthCare können durch ein oder mehrere Patente geschützt sein und anderen Geschäftsgeheimnissen und Eigentumsrechten unterliegen. GE HealthCare behält sich sämtliche derartigen Rechte vor. Keine Bestimmung in diesen Allgemeinen Geschäftebedingungen oder jegliche anzeigten Inhalte auf der Website implizieren eine Übertragung oder Gewährung von Rechten an jeglichen Patenten.</p>
+        <p><b>d. Handelsmarken</b></p>d. Trademarks 
+        <p>Sämtliche Handelsmarken auf der Website sind entweder Handelsmarken oder eingetragene Marken von GE HealthCare, seinen verbundenen Unternehmen oder Lizenzgebern und dürfen ohne vorherige schriftliche Genehmigung von GE HealthCare weder ganz noch teilweise kopiert, nachgeahmt oder verwendet werden. Sämtliche Kopfzeilen auf Seiten, benutzerdefinierten Grafiken, Schaltflächensymbole und Skripte sind Eigentum von GE HealthCare oder seinen verbundenen Unternehmen oder Lizenzgebern und dürfen ohne vorherige schriftliche Genehmigung von GE HealthCare weder ganz noch teilweise kopiert, nachgeahmt oder verwendet werden.</p>
+        <p><b>5. Einsatz von Cookies und ähnlichen Technologien</b></p>
+        <p>Auf der Website werden Cookies verwendet. Angemeldeter Nutzer: Ein einzelner Cookie wird gesetzt, während der Nutzer die Site geöffnet hat. Der Cookie wird gelöscht, wenn der Nutzer die Seite verlässt oder seinen Browser schließt. Zwecks Überwachung der Nutzung der Site wird Google Analytics verwendet. Google Analytics erhebt Daten über die Interaktionen der Nutzer mit der Website.</p>
+        <p><b>6. Software</b></p>
+        <p>Jegliche Software, darunter Dateien, Bilder, Codes und Daten, die der Software beiliegen (kollektiv als „Software bezeichnet), die über diese Website genutzt werden oder zugänglich sind, dürfen nur von Ihnen selbst genutzt werden, sofern eine solche Nutzung nicht im Rahmen der Konkurrenz mit GE HealthCare erfolgt oder für GE HealthCare von Nachteil ist. GE HealthCare behält sich das vollständige Eigentum und sämtliche geistigen Eigentumsrechte an der Software vor. Sie erklären sich damit einverstanden, die Software nicht zu kopieren, zu übertragen, zu verbreiten, zu verkaufen, zu modifizieren, zu dekompilieren, zurückzuentwickeln, zu disassemblieren oder abgeleitete Werke daraus zu erstellen.</p>
+        <p><b>7. Verhalten des Nutzers</b></p>
+        <p>Indem Sie diese Website nutzen, erklären Sie sich damit einverstanden,</p>
+        <p>i. die Website oder jeglicher Dienste, Systemressourcen, Konten, Server oder Netzwerken, die mit der Website verbunden sind über die Website zugänglich sind, nicht zu missbrauchen oder deren Sicherheit zu stören oder zu beeinträchtigen;</p>
+        <p>ii. die Schulungssitzung anderer Nutzer oder deren Verwendung der Website nicht zu beeinträchtigen;</p>
+        <p>iii. keine Informationen über die Kurse und entsprechende Antworten mit Personen zu teilen, die den Kurs noch nicht abgeschlossen und bestanden haben;</p>
+        <p>iv. keine Viren oder anderweitige schädliche, disruptive oder destruktive Daten auf dieser Website hochzuladen, zu posten oder anderweitig über die Website zu übertragen.</p>
+        <p><b>8. Gerichtsstand, anwendbares Recht und Streitbeilegung</b></p>
+        <p>Diese Allgemeinen Geschäftsbedingungen unterliegen den Gesetzen von England und Wales und werden in Übereinstimmung mit diesen ausgelegt. Sie erkennen die nicht ausschließliche Zuständigkeit der englischen Gerichte in Bezug auf sämtliche Streitigkeiten an, die im Zusammenhang mit Ihrer Nutzung der Website entstehen können.</p>
+        <p><b>9. Haftungsbeschränkung</b></p>
+        <p>VORBEHALTLICH DER ÜBRIGEN BESTIMMUNGEN DIESER KLAUSEL HAFTEN GE HEALTHCARE ODER SEINE MUTTERGESELLSCHAFTEN, TOCHTERGESELLSCHAFTEN, VERBUNDENEN UNTERNEHMEN, FÜHRUNGSKRÄFTE, DIREKTOREN, ANGESTELLTEN, VERTRETER ODER LIEFERANTEN NICHT FÜR DIREKTE, INDIREKTE, ZUFÄLLIGE, BESONDERE ODER FOLGESCHÄDEN, DIE SICH AUS ODER IM ZUSAMMENHANG MIT DER NUTZUNG DIESER WEBSITE, DER UNMÖGLICHKEIT DER NUTZUNG DIESER WEBSITE ODER DEN AUF DER WEBSITE AUFGEFÜHRTEN INHALTEN ODER DEM UNBEFUGTEN ZUGRIFF AUF ODER EINER ÄNDERUNG IHRER ÜBERTRAGUNGEN ODER DATEN ODER AUS JEGLICHEN ANDERWEITIGEN INFORMATIONEN ERGEBEN, DIE (NICHT) GESENDET ODER EMPFANGEN WURDEN, DARUNTER INSBESONERE SCHADENSERSATZ FÜR GEWINN-, NUTZUNGS-, DATEN- ODER ANDERE IMMATERIELLE VERMÖGENSWERTE, DIES AUCH IN DEM FALL, DASS GE HEALTHCARE ÜBER DIE MÖGLICHKEIT SOLCHER SCHÄDEN INFORMIERT WURDE.</p>
+        <p>KEINE BESTIMMUNG IN DIESEN ALLGEMEINEN GESCHÄFTSBEDINGUNGEN SCHLIESST DIE HAFTUNG VON GE HEALTHCARE FÜR BETRUG ODER TOD ODER PERSONENSCHÄDEN AUFGRUND VON FAHRLÄSSIGKEIT SEITENS GE HEALTHCARE ODER FÜR ANDERE UMSTÄNDE AUS, UNTER DENEN DIE BEGRENZUNG ODER DER AUSSCHLUSS DER HAFTUNG UNGESETZLICH WÄRE.</p>
+        <p><b>10. Verzicht</b></p>
+        <p>Das Versäumnis von GE HealthCare, eine Bestimmung in diesen Allgemeinen Geschäftsbedingungen durchzusetzen, stellt weder einen Verzicht auf diese Bestimmung noch das Recht dar, eine solche Bestimmung geltend zu machen. Darüber hinaus tritt ein Verzicht auf jedwede Bestimmung in diesen Allgemeinen Geschäftsbedingungen durch jedwede Partei erst in Kraft soweit dieser schriftlich erfolgt und von einer Partei unterzeichnet wurde.</p>
+        <p><b>11. Mitteilungen und Kontakt </b></p>
+        <p>
+        Kontaktadresse von GE HealthCare für diese Website betreffende Mitteilungen:<br/>
+        GE HealthCare <br/>
+        Pollards Wood <br/>
+        Nightingales Lane <br/>
+        Buckinghamshire, <br/>
+        HP8 4SP <br/>
+        <br/>
+        United Kingdom<br/>
+        </p>
+        <p>Bei Fragen zu diesen Allgemeinen Geschäftsbedingungen wenden Sie sich bitte an: <a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
+        <p><b>12. Änderungen dieser Allgemeinen Geschäftsbedingungen</b></p>
+        <p>Diese Allgemeinen Geschäftsbedingungen können von GE HealthCare von Zeit zu Zeit und ohne vorherige Ankündigung aktualisiert werden, damit sie die Änderungen in unseren Online-Informationsverfahren reflektieren. Neuerungen dieser Allgemeinen Geschäftsbedingungen werden auf der Website veröffentlicht. Darüber hinaus möchten wir Nutzer dazu auffordern, dieses Dokument regelmäßig zu prüfen, um zu verstehen, wie GE HealthCare die Daten der Nutzer schützt und verwendet.</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+fr:
+  pages:
+    home:
+      body_html: |
+        <h1>Bienvenue dans le <br><strong>Programme de formation électronique Vizamyl</strong></h1>
+        <p>Si vous reprenez le cours,<br><strong>bienvenue à nouveau et veuillez vous connecter.<strong></p>
+        <p>Si vous souhaitez entreprendre le cours,<br><strong>bienvenue, et veuillez vous inscrire.</strong></p>
+    references:
+      left:
+        title: |
+         Références
+        body_html: |
+          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. Acta Neuropathol 1991; 82: 239-59.</p>
+          <p>Hyman BT, Phelps CH, Beach TG <i>et al</i>. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. Alzheimers Dement 2012; 8: 1-13.</p>
+          <p>McKhann G, Drachman D, Folstein M <i>et al</i>. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. Neurology 1984; 34: 939-44.</p>
+          <p>McKhann G, Knopman D, Chertkow H <i>et al</i>. The diagnosis of dementia due to Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 263-9.</p>
+          <p>Mirra SS, Heyman A, McKeel D <i>et al</i>. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
+          <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G <i>et al</i>. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-25.</p>
+          <p>Vandenberghe R, Van Laere K, Ivanoiu A <i>et al</i>. <sup>18</sup>F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. Ann Neurol 2010; 68: 319-29.</p>
+          <p>Vizamyl, European Summary of Product Characteristics, August 2014.</p>
+      right:
+        body_html: |
+    resources:
+      smpc_title: Vizamyl RCP UE
+      rainbow_title: Valeurs RVB de l’échelle de couleurs Rainbow
+    contact:
+      left:
+        title: |
+         Encadrement médical
+         et autres demandes de renseignements:
+        body_html: |
+          <p>Si vous souhaitez obtenir d’autres <strong>informations médicales</strong> sur Vizamyl, veuillez nous contacter à:</p>
+          <p><a href="mailto:vizamyl.medinfo@ge.com">vizamyl.medinfo@ge.com</a></p>
+          <p>Pour les autres demandes, y compris les demandes de formation <strong>à la lecture des images</strong>, veuillez nous contacter à:</p>
+          <p><a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
+    terms-and-conditions:
+      title: Conditions générales (8/2023)
+      body_html: |
+        <p><b>1. Conditions d’utilisation</b></p>
+        <p>Le site internet Vizamyl™ E-Training est le site qui donne aux utilisateurs, accès au matériel de formation en lien avec le Vizamyl™ de GE HealthCare (dénommé le « Produit ») et qui permet au besoin de passer un examen afin de déterminer si l’utilisateur a compris comment utiliser le Produit conformément au résumé des caractéristiques du Produit. Ce site est hébergé pour le compte de GE HealthCare par <a href="www.sevenstones.co.uk" target="_blank">www.sevenstones.co.uk</a>
+        de Olympic House, 317-321 Latimer Road, London, W10 6RA, Royaume Uni. Les Conditions Générales ci-après s’appliquent à quiconque consulte le site.
+        </p>
+        <p><b>2. Informations recueillies par GE HealthCare et comment nous les utilisons</b></p>
+        <p><b>a. Utilisation des données personnelles</b></p>
+        <p>Pour une utilisation optimale du site et de votre formation, GE HealthCare sera tenue de collecter des informations telles que nom, poste occupé, progression dans le cours et si la formation est bien achevée.</p>
+        <p>Nous pourrions divulguer des informations vous concernant dans les cas suivants :</p>
+        <p>i. Si nous y sommes tenus en vertu de la loi ou d’une procédure judiciaire</p>
+        <p>ii. Aux autorités chargées de l’application de la loi ou à d’autres représentants de l’État dans la mesure où cela est nécessaire pour répondre à une demande légale et légitime, ou,</p>
+        <p>iii. Lorsque nous estimons que la divulgation s’avère nécessaire pour prévenir des dommages corporels ou des pertes 
+        financières, ou en rapport avec une enquête portant sur une activité illégale présumée ou avérée</p>
+        <p>iv. Nous nous réservons le droit de transférer toute information vous concernant que nous détenons dans le cas où nous vendrions ou
+        transfèrerions l’ensemble ou une partie de nos actifs (y compris en cas de faillite).</p>
+        <p>Nous ne vendons ni ne divulguons, de quelque manière que ce soit, des informations personnelles concernant les utilisateurs de ce site en dehors du groupe GE HealthCare et de ses filiales, sauf dans les cas décrits dans le présent document ainsi que dans le document « Autorisation de Contact ».</p>
+        <p><b>b. Vie privée et stockage</b></p>
+        <p>Les données seront stockées dans un serveur basé dans l’UE. Vos données ne seront utilisées qu’à des fins 
+        administratives, sauf si vous avez accepté qu’elles soient utilisées à d’autres fins comme par exemple pour du 
+        marketing. Vous pouvez mettre à jour vos préférences de contact à tout moment sous la rubrique « Mon compte ». 
+        Seuls des employés de GE HealthCare auront accès à ces données, sauf en cas de panne du système ou du site, auquel 
+        cas les administrateurs basés à  <a href="www.sevenstones.co.uk" target="_blank">www.sevenstones.co.uk</a> pourront avoir 
+        accès aux données pour des fins administratives ou de maintenance. En outre, notre plate-forme serveur 
+        <a target="_blank" href="http://www.heroku.com">www.heroku.com</a> est hébergée et gérée par Amazon Web Services 
+        (<a target="_blank" href="http://aws.amazon.com">http://aws.amazon.com</a>/) aussi les employés d’Amazon peuvent avoir
+        accès aux données s’il existe un besoin professionnel légitime pour de tels accès. Ce privilège prend fin à l’instant 
+        même où le besoin cesse. Si le problème concerne le démarrage ou le fonctionnement d’une application ou d’un logiciel, 
+        la fourniture de solutions, la réponse à des questions d’ordre général puis la résolution du problème sera fournie par 
+        des administrateurs basés à <a target="_blank" href="http://www.heroku.com">www.heroku.com</a>.
+        </p>
+        <p>Vos données seront conservées pendant une période raisonnable. Ceci afin d'évaluer si le Produit peut vous être fourni pour un usage clinique en fonction de votre réussite au test relatif à l’utilisation en toute sécurité du Produit conformément au Résumé des caractéristiques du Produit (« l’Examen »). Si vous avez échoué à l’Examen, nous devrons utiliser vos données à des fins administratives afin d’organiser une formation en face à face dans votre pays. Vos données ne seront alors utilisées que pour des fins administratives et de formation. Si vous estimez que vos données ont été utilisées de manière inappropriée, vous pouvez nous contacter à
+        <a href="mailto:Privacy.GEHC@ge.com">Privacy.GEHC@ge.com</a></p>
+        <p><b>c. Transfert</b></p>
+        <p>Les informations que vous fournissez à GE HealthCare seront stockées et transférées dans l’UE et au Royaume Uni qui est considéré comme un pays adéquat par la Commission Européenne. Seul le personnel de GE HealthCare aura accès à vos informations, sauf en cas de panne ou de procédure judiciaire, comme décrit ci-dessus.</p>
+        <p><b>3. Protection des données personnelles</b></p>
+        <p>Chez GE HealthCare, notre objectif est d’assurer la protection de vos données personnelles fournies via nos sites Avec nos sous-traitants, nous maintenons des mesures de protection organisationnelles, techniques et physiques pour empêcher la divulgation, l’utilisation, l’altération ou la destruction non autorisée des données personnelles que vous fournissez sur ce site et sur les autres sites de GE HealthCare.</p>
+        <p><b>4. Droits de propriété</b></p>
+        <p><b>Droits de propriété intellectuelle</b></p>
+        <p>GE HealthCare, ses affiliés et ses concédants possèdent et conservent tous les droits sur le site internet, ce qui peut inclure des informations confidentielles telles que celles décrites dans la clause 2a. L’ensemble du contenu du site et l’ensemble des marques et logos de GE HealthCare sont la propriété de GE HealthCare ou lui sont concédés sous licence. Aucune disposition des présentes Conditions Générales ne doit être interprétée comme transférant, implicitement ou autrement une licence ou un droit en relation avec ces droits à une tierce personne, sauf disposition expresse.</p>
+        <p>« GE HealthCare » et le logo GE sont des marques déposées au Royaume-Uni sous le numéro 2347097, dans l’Union Européenne sous les numéros 003173151 et 003485745, aux États-Unis sous les numéros 2961099 et 3142821, et dans d’autres pays. GE et le monogramme GE sont des marques déposées de General Electric Company.</p>
+        <p><b>b. Droits d’auteur</b></p>
+        <p>Tout le contenu du site internet, y compris, mais sans s'y limiter, la conception, les textes, les logiciels, les schémas techniques, les configurations, les graphiques, les autres fichiers, ainsi que leur sélection et leur disposition (« <b>Contenu</b> »), sont soit protégés par le droit d'auteur ©2015 General Electric Company, soit la propriété exclusive de GE HealthCare, de ses filiales ou de ses concédants. Tous droits réservés.</p>
+        <p>Il est interdit de rééditer tout contenu du site, tout site internet ou extranet ou d'incorporer des informations dans toute autre base de données ou compilation sans autorisation écrite préalable. Toute utilisation du Contenu à des fins autres que cliniques est strictement interdit. Vous acceptez en outre de ne pas récupérer, collecter ou récolter systématiquement, par des moyens électroniques ou autres, des données provenant de ce site internet.</p>
+        <p><b>c. Licences</b></p>
+        <p>Les produits et processus de GE HealthCare peuvent être protégés par une ou plusieurs licences et sont couverts par d’autres secrets commerciaux et droits de propriété. GE HealthCare se réserve tous ces droits. Aucun transfert ou octroi de droits en vertu d'un brevet n'est effectué ou ne doit être sous-entendu par une quelconque disposition des présentes Conditions Générales ou par tout ce qui est affiché sur le site internet.</p>
+        <p><b>d. Marques déposées</b></p>
+        <p>Toutes les marques déposées figurant sur le site internet sont des marques commerciales ou des marques déposées de GE HealthCare, de ses filiales ou de ses concédants de licence et ne peuvent être copiées, imitées ou utilisées, en totalité ou en partie, sans l'autorisation écrite préalable de GE HealthCare. Tous les en-têtes de page, les graphiques personnalisés, les boutons icônes et les scripts sont la propriété de GE HealthCare, de ses filiales ou de ses concédants de licence et ne peuvent être copiés, imités ou utilisés, en totalité ou en partie, sans l'autorisation écrite préalable de GE HealthCare.</p>
+        <p><b>5. Utilisation de cookies et de technologies semblables</b></p>
+        <p>Le site stocke des cookies. Pour un utilisateur connecté : un seul cookie sera stocké aussi longtemps que l’utilisateur sera sur le site. Il sera supprimé lorsque l’utilisateur quittera la page ou fermera son navigateur. Pour contrôler l’utilisation du site : Google Analytics sera utilisé pour remplir cette fonction. Google Analytics publie des rapports sur les interactions des visiteurs sur le site.</p>
+        <p><b>6. Logiciel</b></p>
+        <p>Tout logiciel, y compris les fichiers, images, codes et données accompagnant le logiciel (génériquement dénommé, le 
+        « <b>Logiciel</b> »"), utilisé ou accessible par l'intermédiaire de ce site internet ne peut être utilisé que par vous, à condition que ces utilisations ne soient pas concurrentielles ou désobligeantes pour GE HealthCare. GE HealthCare conserve l’intégralité des droits de propriété intellectuelle sur le Logiciel. Vous acceptez de ne pas copier, transférer, distribuer, vendre, modifier, décompiler, inverser la conception, désassembler ou créer des œuvres dérivées de tout Logiciel.</p>
+        <p><b>7. Comportement de l’utilisateur</b></p>
+        <p>En utilisant ce site internet vous acceptez :</p>
+        <p>i. de ne pas perturber ou interférer avec la sécurité du site, ou d’abuser de quelque manière le site, ou tout service, ressource système, compte, serveur ou réseau connecté au site internet ou accessible via ce dernier ;</p>
+        <p>ii. de ne pas interférer avec la session de formation d'un autre utilisateur ou avec l'utilisation du site ;</p>
+        <p>iii. de ne pas partager des informations sur le cours de formation ni de partager les réponses avec ceux qui n'ont pas encore terminé et réussi le cours ;</p>
+        <p>iv. de ne pas télécharger, publier ou transmettre autrement et via ce site des virus ou d'autres fichiers nuisibles, perturbateurs ou destructeurs.</p>
+        <p><b>8. Juridiction compétente et droit applicable</b></p>
+        <p>Ces Conditions Générales sont régies et interprétées conformément au droit anglais. Tout litige relatif à la pouvant survenir dans le cadre de votre utilisation du site sera soumis à la compétence exclusive des tribunaux anglais.</p>
+        <p><b>9. Limitation de responsabilité</b></p>
+        <p>SOUS RESERVE DES AUTRES TERMES DE CETTE CLAUSE, GE HEALTHCARE OU SES SOCIETES MERES, FILIALES, SUCCURSALES, DIRIGEANTS, ADMINISTRATEURS, EMPLOYÉS, AGENTS OU FOURNISSEURS NE POURRONT EN AUCUN CAS ETRE TENUS RESPONSABLES DES DOMMAGES DIRECTS, INDIRECTS, ACCESSOIRES, SPÉCIAUX OU CONSÉCUTIFS DÉCOULANT DE OU EN RAPPORT AVEC L’UTILISATION OU L’INCAPACITÉ D’UTILISER CE SITE OU TOUT CONTENU FIGURANT SUR LE SITE, OU RÉSULTANT D’UN ACCÈS NON AUTORISÉ OU D’UNE ALTÉRATION DE VOS TRANSMISSIONS OU DONNÉES, OU D’AUTRES INFORMATIONS ENVOYÉES OU REÇUES OU NON ENVOYÉES OU REÇUES, Y COMPRIS, MAIS SANS SE LIMITER, LES DOMMAGES POUR PERTE DE PROFITS, D’UTILISATION, DE DONNÉES OU D’AUTRES BIENS INCORPORELS, ET CE MÊME AU CAS OU GE HEALTHCARE A ÉTÉ INFORMÉE DE LA POSSIBILITÉ DE TELS DOMMAGES.</p>
+        <p>RIEN DANS LES PRÉSENTES CONDITIONS GENERALES N'EXCLUT NI NE LIMITE LA RESPONSABILITÉ DE GE HEALTHCARE EN CAS DE FRAUDE, DE DÉCÈS OU DE DOMMAGES CORPORELS RÉSULTANT DE SA NÉGLIGENCE OU DE TOUTE AUTRE CIRCONSTANCE POUR LAQUELLE IL SERAIT ILLÉGAL DE LIMITER OU D'EXCLURE LA RESPONSABILITÉ.</p>
+        <p><b>10. Renonciation</b></p>
+        <p>Le fait que GE HealthCare n'applique pas une disposition des présentes Conditions Générales ne doit pas être interprété comme une renonciation à cette disposition ou au droit de l'appliquer. En outre, toute renonciation à une disposition des présentes conditions par l'une ou l'autre des parties ne sera effective que si elle est écrite et signée par une partie.</p>
+        <p><b>11. Avis et Contact</b></p>
+        <p>L’adresse de GE HealthCare pour des notifications relatives à ce site est la suivante :</p>
+        <p>
+        GE HealthCare<br>
+        Pollards Wood<br>
+        Nightingales Lane<br>
+        Buckinghamshire,<br>
+        HP8 4SP<br>
+        Royaume-Uni
+        </p>
+        <p>Pour toute question relative à nos Gonditions Générales, merci de vous adresser à : vizamyl.enquiries@ge.com</p>
+        <p><b>12. Modification des présentes Conditions Générales</b></p>
+        <p>Les présentes Conditions Générales pourront être mises à jour par GE HealthCare périodiquement et sans préavis afin de refléter les modifications apportées à nos pratiques en matière d'information en ligne. Les mises à jour de ces Conditions Générales seront publiées sur le site internet. Nous encourageons également les utilisateurs à consulter régulièrement ce document pour comprendre comment GE HealthCare protège et utilise vos données personnelles.</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+it:
+  pages:
+    home:
+      body_html: |
+        <h1>Benvenuti al<br><strong>programma di formazione on-line di Vizamyl</strong></h1>
+        <p>Nel caso si ritorni al corso,<br><strong>le diamo di nuovo il benvenuto e la invitiamo a effettuare il login.</strong></p>
+        <p>Se desidera iniziare il corso,<br><strong>le diamo il benvenuto e la invitiamo ad iscriversi.</strong></p>
+    references:
+      left:
+        title: |
+         Riferimenti
+        body_html: |
+          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. Acta Neuropathol 1991; 82: 239-59.</p>
+          <p>Hyman BT, Phelps CH, Beach TG <i>et al</i>. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. Alzheimers Dement 2012; 8: 1-13.</p>
+          <p>Leuzy A., Savitcheva I., Chiotis K., Lilja J., Andersen P., Bogdanovic N. Jelic V., Nordberg A. Clinical impact of [18F]flutemetamol PET among memory clinic patients with an unclear diagnosis. Eur J. Nucl Med and Mol Imaging 2019; 46:1276–1286</p>
+          <p>McKhann G, Drachman D, Folstein M <i>et al</i>. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. Neurology 1984; 34: 939-44.</p>
+          <p>McKhann G, Knopman D, Chertkow H <i>et al</i>. The diagnosis of dementia due to Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 263-9.</p>
+          <p>Mirra SS, Heyman A, McKeel D <i>et al</i>. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
+          <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G <i>et al</i>. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-25.</p>
+          <p>Thurfjell L., Lilja J., Lundqvist R., Buckley C., Smith A., Vandenberghe R., Sherwin P.  Automated Quantification of 18F-Flutemetamol PET Activity for Categorizing Scans as Negative or Positive for Brain Amyloid: Concordance with Visual Image Reads. J Nucl Med. 2014; 55:1–6</p>
+          <p>Vandenberghe R, Van Laere K, Ivaniou A et al.18F-Flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. Ann Neurol 2010; 68: 319-29.</p>
+          <p>Vizamyl Summary of Product Characteristics</p>
+      right:
+        body_html: |
+    resources:
+      smpc_title: Vizamyl SmPC IT
+      rainbow_title: Scala di colori arcobaleno valori RVB
+    contact:
+      left:
+        title: |
+         Contatti di GE Healthcare Italia
+        body_html: |
+          <p>Se si desiderano informazioni <strong>mediche supplementari</strong> su Vizamyl, ci contatti all’indirizzo email:</p>
+          <p><a href="mailto:PDxMA.ITALY@ge.com">PDxMA.ITALY@ge.com</a></p>
+          <p>Per ulteriori richieste, comprese le richieste di formazione per <strong>la lettura delle immagini</strong>, ci contatti all’indirizzo email:</p>
+          <p><a href="mailto:GE_ITA.MarketingPDx@ge.com">GE_ITA.MarketingPDx@ge.com</a></p>
+          <p><small>Vizamyl è un marchio di GE Healthcare.</small></p>
+    terms-and-conditions:
+      title: Termini e Condizioni (8/2023)
+      body_html: |
+        <p><b>1. Condizioni d’uso</b></p>
+        <p>Il sito Web Vizamyl™ E-Training è il luogo in cui gli utenti possono accedere al materiale di formazione relativo al prodotto Vizamyl™ di GE HealthCare (il “Prodotto”) ed eventualmente sostenere un esame per valutare se hanno compreso come utilizzare in sicurezza il Prodotto in conformità con il Riassunto delle caratteristiche del prodotto.  Il sito Web è ospitato per conto di GE HealthCare da <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> con sede in Olympic House, 317-321 Latimer Road, Londra, W10 6RA, UK.  I seguenti Termini e Condizioni si applicano a chiunque utilizzi il sito Web.</p>
+        <p><b>2. Quali informazioni vengono raccolte da GE HealthCare e come vengono utilizzate</b></p>
+        <p><b>a. Uso delle informazioni personali</b></p>
+        <p>Per una fruizione ottimale del sito Web e del corso di formazione, GE HealthCare dovrà raccogliere informazioni relative a nome, posizione, progressi nel corso e all’avvenuto completamento del corso.</p>
+        <p>Potremmo divulgare informazioni sul conto dell’utente se:</p>
+        <p>i. tenuti a farlo per legge o procedimento legale</p>
+        <p>ii. alle forze dell’ordine o ad altri funzionari governativi come richiesto per soddisfare una legittima richiesta legale, oppure</p>
+        <p>iii. quando riteniamo che la divulgazione sia necessaria per prevenire danni fisici o perdite finanziarie, o in relazione a un’indagine su attività illegali sospette o effettive</p>
+        <p>iv. Ci riserviamo il diritto di trasferire qualsiasi informazione in nostro possesso sul conto dell’utente nel caso in cui vendessimo o trasferissimo tutti o una parte dei nostri beni aziendali (anche attraverso fallimento).</p>
+        <p>Non vendiamo né divulghiamo in altro modo informazioni personali sugli utenti del sito Web al di fuori del gruppo GE HealthCare e delle sue affiliate, ad eccezione di quanto descritto in questo documento e nel documento di autorizzazione al contatto.</p>
+        <p><b>b. Privacy e archiviazione</b></p>
+        <p>
+        Questi dati saranno archiviati su un server con sede nell’UE e saranno utilizzati solo per scopi amministrativi, a meno che l’utente non abbia acconsentito ad altri usi, come il loro utilizzo per scopi di marketing. L’utente può aggiornare le proprie preferenze di contatto in qualsiasi momento nella sezione “Il mio account”.  I dati saranno accessibili solo ai dipendenti di GE HealthCare, salvo in caso di guasto del sistema o del sito Web, circostanza in cui gli amministratori con sede a 
+        <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> 
+        potrebbero essere in grado di accedere ai dati per scopi amministrativi o di manutenzione.  Inoltre, la nostra piattaforma server all’indirizzo 
+        <a target="_blank" href="http://www.heroku.com">www.heroku.com</a>
+        è ospitata e gestita da Amazon Web Services 
+        (<a target="_blank" href="http://aws.amazon.com/">http://aws.amazon.com/</a>), 
+        pertanto i dipendenti Amazon potrebbero avere accesso ai dati se ci fosse una legittima esigenza aziendale di tali privilegi.  Questo privilegio cessa nel momento in cui cessa questa esigenza.  Se il problema consiste nell’avvio o nell’esecuzione di un’applicazione o di un software, nel fornire soluzioni a problemi noti o nel rispondere a domande generali, esso verrà risolto dagli amministratori che si trovano su 
+        <a target="_blank" href="http://www.heroku.com">www.heroku.com</a>
+        </p>
+        <p>
+        I dati dell’utente saranno conservati per un periodo di tempo ragionevole,  al fine di valutare se il Prodotto debba essere fornito all’utente per uso clinico a seguito del superamento del test relativo al suo utilizzo sicuro in conformità con il Riassunto delle caratteristiche del prodotto (l’“Esame”).  Qualora l’utente non superasse l’esame, dovremo utilizzare i suoi dati per scopi amministrativi al fine di organizzare una formazione frontale nel suo Paese.  Pertanto, i dati dell’utente saranno utilizzati esclusivamente per finalità amministrative e formative.  Ove l’utente ritenga che i suoi dati siano stati utilizzati in modo scorretto, può contattarci sul sito
+        <a href="mailto:Privacy.GEHC@ge.com">Privacy.GEHC@ge.com</a>
+        </p>
+        <p><b>C. Trasferimento</b></p>
+        <p>Le informazioni che l’utente fornisce a GE HealthCare verranno archiviate e trasferite in tutta l’UE e nel Regno Unito, che è considerato un Paese adeguato dalla Commissione europea.  Le informazioni dell’utente saranno accessibili solo al personale interno di GE HealthCare, salvo in caso di guasto o procedimento legale necessario come sopra descritto.</p>
+        <p><b>3. Protezione delle informazioni personali</b></p>
+        <p>In GE HealthCare, il nostro obiettivo è proteggere le informazioni personali che l’utente ci invia attraverso i nostri siti.  Noi e i nostri responsabili del trattamento dei dati attuiamo misure di tutela organizzative, tecniche e fisiche per proteggere le informazioni personali fornite su questo e altri siti Web di GE HealthCare dalla divulgazione, dall’uso, dall’alterazione o dalla distruzione non autorizzati.</p>
+        <p><b>4. Diritti di proprietà</b></p>
+        <p><b>a. Diritti di proprietà intellettuale</b></p>
+        <p>GE HealthCare, le sue affiliate e licenziatari possiedono e detengono tutti i diritti sul sito Web, che può includere informazioni riservate come quelle indicate nella clausola 2a.  Tutto il contenuto del sito Web e tutti i marchi e i loghi di GE HealthCare sono di proprietà o concessi in licenza a GE HealthCare. Nulla in questi Termini e condizioni deve essere interpretato come trasferimento implicito o in altro modo di qualsiasi licenza o diritto in relazione a tali diritti a terzi, salvo quanto espressamente previsto.</p>
+        <p>“GE HealthCare” e il logo GE sono marchi registrati nel Regno Unito con il numero 2347097, nella Comunità Europea con i numeri 003173151 e 003485745, negli USA con i numeri 2961099 e 3142821 e in altri Paesi.  GE e il monogramma GE sono marchi di fabbrica di General Electric Company.</p>
+        <p><b>b. Diritti d’autore</b></p>
+        <p>Tutti i contenuti del sito Web, come ad esempio design, testo, software, disegni tecnici, configurazioni, grafica, altri file e la loro selezione e disposizione (“Contenuto”), sono protetti da Copyright ©2015 General Electric Company oppure sono di proprietà esclusiva di GE HealthCare, delle sue affiliate o licenziatari.  Tutti i diritti riservati.</p>
+        <p>L’utente non può ripubblicare alcun contenuto sul sito Web, su qualsiasi sito Internet, su Intranet o su Extranet, né incorporare le informazioni in qualsiasi altro database o raccolta senza previa autorizzazione scritta.  Qualsiasi utilizzo diverso da quello clinico del Contenuto è severamente vietato.  L’utente accetta inoltre di non estrarre, raccogliere o recuperare sistematicamente, tramite mezzi elettronici o in altro modo, alcun dato da questo sito Web.</p>
+        <p><b>c. Brevetti</b></p>
+        <p>I prodotti e i processi di GE HealthCare possono essere protetti da uno o più brevetti e sono soggetti ad altri segreti commerciali e diritti di proprietà.  GE HealthCare si riserva tutti questi diritti.  Non viene effettuato né deve essere sottinteso alcun trasferimento o concessione di diritti su eventuali brevetti da nessuna disposizione di questi Termini e condizioni o da qualsiasi cosa visualizzata sul sito Web.</p>
+        <p><b>d. Marchi</b></p>
+        <p>Tutti i marchi presenti nel sito Web sono marchi o marchi registrati di GE HealthCare, delle sue affiliate o licenziatari e non possono essere copiati, imitati o utilizzati, in tutto o in parte, senza la previa autorizzazione scritta di GE HealthCare.  Tutte le intestazioni di pagina, la grafica personalizzata, le icone dei pulsanti e gli script sono di proprietà di GE HealthCare o delle sue affiliate o licenziatari e non possono essere copiati, imitati o utilizzati, in tutto o in parte, senza la previa autorizzazione scritta di GE HealthCare.</p>
+        <p><b>5. Uso di cookie e tecnologie simili</b></p>
+        <p>Il sito Web memorizzerà i cookie.  Per un utente che ha effettuato l’accesso: verrà memorizzato un singolo cookie solo mentre l’utente ha il sito aperto. Il cookie verrà eliminato quando l’utente lascia la pagina o chiude il browser.  Per monitorare l’utilizzo del sito: per questa funzione verrà utilizzato Google Analytics.  Report di Google Analytics sulle interazioni dei visitatori sul sito Web.</p>
+        <p><b>6. Software</b></p>
+        <p>Qualsiasi software, inclusi file, immagini, codice e dati che accompagnano il software (collettivamente, “<b>Software</b>”), utilizzato o accessibile tramite questo sito Web può essere utilizzato esclusivamente dall’utente, a condizione che tali usi non siano concorrenziali o dispregiativi per GE HealthCare.  GE HealthCare detiene la piena e completa titolarità e tutti i diritti di proprietà intellettuale del Software.  L’utente accetta di non copiare, trasferire, distribuire, vendere, modificare, decompilare, decodificare, disassemblare o creare opere derivate da qualsiasi Software.</p>
+        <p><b>7. Condotta dell’utente</b></p>
+        <p>Utilizzando questo sito l’utente accetta di:</p>
+        <p>i. non interrompere o interferire con la sicurezza o altrimenti abusare del sito Web o di qualsiasi servizio, risorsa di sistema, account, server o rete connessa o accessibile tramite il sito Web;</p>
+        <p>ii. non interferire con la sessione di formazione di un altro utente o con l’utilizzo del sito Web; </p>
+        <p>iii. non condividere informazioni sul corso di formazione e non condividere le risposte con coloro che non hanno ancora completato e superato il corso;</p>
+        <p>iv. non caricare, pubblicare o trasmettere in altro modo attraverso questo sito Web virus o altri file dannosi o distruttivi.</p>
+        <p><b>8. Giurisdizione, legge applicabile e contestazioni</b></p>
+        <p>I presenti Termini e Condizioni sono regolati e interpretati in conformità con le leggi dell’Inghilterra e del Galles e l’utente si sottopone alla giurisdizione non esclusiva dei tribunali inglesi in relazione a qualsiasi controversia che possa sorgere in relazione al suo utilizzo del sito Web.</p>
+        <p><b>9. Limitazione di responsabilità</b></p>
+        <p>FATTO SALVO QUANTO DIVERSAMENTE PREVISTO NELLA PARTE RIMANENTE DELLA PRESENTE CLAUSOLA, GE HEALTHCARE O LE SUE SOCIETÀ CONTROLLANTI, FILIALI, AFFILIATE, FUNZIONARI, DIRETTORI, DIPENDENTI, AGENTI O FORNITORI NON SARANNO RESPONSABILI PER ALCUN DANNO DIRETTO, INDIRETTO, ACCIDENTALE, SPECIALE O CONSEQUENZIALE DERIVANTE DA O IN CONNESSIONE CON L’UTILIZZO O L’INCAPACITÀ DI UTILIZZARE QUESTO SITO O QUALSIASI CONTENUTO PRESENTE NEL SITO, O DERIVANTE DALL’ACCESSO NON AUTORIZZATO O DALL’ALTERAZIONE DELLE TRASMISSIONI O DEI DATI DELL’UTENTE, O DI ALTRE INFORMAZIONI INVIATE O RICEVUTE O NON INVIATE O RICEVUTE, INCLUSE MA NON LIMITATE A, DANNI PER MANCATO GUADAGNO, UTILIZZO, DATI O ALTRI BENI INTANGIBILI, ANCHE SE GE HEALTHCARE È STATA INFORMATA DELLA POSSIBILITÀ DI TALI DANNI.</p>
+        <p>NULLA IN QUESTI TERMINI E CONDIZIONI D’USO ESCLUDE O LIMITA LA RESPONSABILITÀ DI GE HEALTHCARE PER FRODE O PER MORTE O LESIONI PERSONALI DERIVANTI DALLA SUA NEGLIGENZA O PER QUALSIASI ALTRA CIRCOSTANZA NELLA QUALE SAREBBE ILLEGALE LIMITARE O ESCLUDERE LA RESPONSABILITÀ.</p>
+        <p><b>10. Rinuncia</b></p>
+        <p>La mancata applicazione da parte di GE HealthCare di qualsiasi disposizione delle presenti Condizioni d’uso non sarà considerata una rinuncia a tale disposizione né al diritto di farla valere.  Inoltre, l’eventuale rinuncia a qualsiasi disposizione dei presenti Termini e Condizioni da parte di una parte sarà efficace solo se in forma scritta e firmata da una parte.</p>
+        <p><b>11. Avvisi e recapiti</b></p>
+        <p>
+        L’indirizzo di GE HealthCare per gli avvisi relativi a questo sito Web è il seguente:<br/>
+        GE HealthCare <br/>
+        Pollards Wood <br/>
+        Nightingales Lane <br/>
+        Buckinghamshire, <br/>
+        HP8 4SP <br/>
+        <br/>
+        Regno Unito<br/>
+        </p>
+        <p>In caso di domande sui presenti Termini, si prega di contattarci all’indirizzo: <a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
+        <p><b>12. Modifiche ai presenti Termini e Condizioni</b></p>
+        <p>I presenti Termini e Condizioni possono essere aggiornati da GE HealthCare periodicamente e senza preavviso per riflettere i cambiamenti nelle sue pratiche di informazione online.  Gli aggiornamenti a questi Termini e Condizioni saranno pubblicati sul sito Web.  Invitiamo inoltre gli utenti a controllare periodicamente questo documento per comprendere in che modo GE HealthCare protegge e utilizza le informazioni dell’utente.</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+es:
+  pages:
+    home:
+      body_html: |
+        <h1>Le damos la bienvenida<br><strong>al programa de formación electrónica de Vizamyl</strong></h1>
+        <p>Si vuelve al curso,<br><strong>le damos la bienvenida de nuevo; por favor, inicie sesión.</strong></p>
+        <p>Si desea iniciar el curso,<br><strong>le damos la bienvenida y, por favor, regístrese.</strong></p>
+    references:
+      left:
+        title: |
+         Referencias
+        body_html: |
+          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. Acta Neuropathol 1991; 82: 239-59.</p>
+          <p>Hyman BT, Phelps CH, Beach TG <i>et al</i>. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. Alzheimers Dement 2012; 8: 1-13.</p>
+          <p>McKhann G, Drachman D, Folstein M <i>et al</i>. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. Neurology 1984; 34: 939-44.</p>
+          <p>McKhann G, Knopman D, Chertkow H <i>et al</i>. The diagnosis of dementia due to Alzheimer’s disease: Recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. Alzheimers Dement 2011; 7: 263-9.</p>
+          <p>Mirra SS, Heyman A, McKeel D <i>et al</i>. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. Neurology 1991; 41: 479-86.</p>
+          <p>Rowe CC, Ng S, Ackermann U, Gong SJ, Pike K, Savage G <i>et al</i>. Imaging b-amyloid burden in aging and dementia.  Neurology 2007, 68: 1718-25.</p>
+          <p>Vandenberghe R, Van Laere K, Ivaniou A <i>et al</i>.<sup>18</sup>F-Flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. Ann Neurol 2010; 68: 319-29.</p>
+          <p>Vizamyl European Summary of Product Characteristics, August 2014.</p>
+      right:
+        body_html: |
+    resources:
+      smpc_title: Ficha Técnica Vizamyl
+      rainbow_title: Escala de color "Rainbow" valores RVA
+    contact:
+      left:
+        title: |
+         Apoyo médico
+         y otras consultas:
+        body_html: |
+          <p>Si desea más <strong>información médica</strong> sobre Vizamyl, póngase en contacto con nosotros en:</p>
+          <p><a href="mailto:vizamyl.medinfo@ge.com">vizamyl.medinfo@ge.com</a></p>
+          <p>Para otras consultas, incluyendo solicitudes de formación <strong>en lectura de imágenes</strong>, póngase en contacto con nosotros en:</p>
+          <p><a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
+          <p>Si está interesado en saber más sobre imágenes <strong>SPECT y DaTSCAN&#0153; visite</strong>:</p>
+          <p><a href="http://www.gehealthcare.co.uk/datscan" target="_blank">www.gehealthcare.co.uk/datscan</a></p>
+          <p><small>Vizamyl y DaTSCAN son marcas comerciales de GE Healthcare Limited.</small></p>
+    terms-and-conditions:
+      title: Términos y Condiciones (8/2023)
+      body_html: |
+        <p><b>1. Términos de uso</b></p>
+        <p>El sitio web de la formación digital Vizamyl™ es donde los usuarios pueden acceder al material de formación relacionado con el producto Vizamyl™ de GE HealthCare (en lo sucesivo, el «Producto») y eventualmente pasar un examen para valorar si el usuario ha entendido cómo utilizar el Producto de forma segura y de conformidad con el Resumen de las características de producto del Producto. <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> aloja el sitio web en nombre de GE HealthCare de Olympic House, 317-321 Latimer Road, Londres, W10 6R, Reino Unido. Los siguientes Términos y Condiciones son aplicables a cualquiera que utilice el sitio web.</p>
+        <p><b>2. La información que GE HealthCare recopila y cómo la utilizamos</b></p>
+        <p><b>a. Uso de información personal</b></p>
+        <p>Para un uso óptimo del sitio web y su formación, GE HealthCare necesitará recopilar información relacionada con nombres, puesto, avances en el curso y si el curso se ha completado.</p>
+        <p>Podríamos divulgar información sobre usted en los siguientes casos:</p>
+        <p>i. Lo requiera la ley o un proceso legal</p>
+        <p>ii. Ante los cuerpos policiales u otros funcionarios públicos y según sea necesario para cumplir una solicitud legal legítima, o</p>
+        <p>iii. Cuando la divulgación sea necesaria para evitar daños físicos o pérdidas financieras, o esté relacionada con una investigación de actividad ilegal sospechada o real.</p>
+        <p>iv. Nos reservamos el derecho a transferir cualquier información que tengamos sobre usted si vendemos o transferimos todos o parte de nuestros activos comerciales (caso de bancarrota incluido).</p>
+        <p>No venderemos ni divulgaremos de cualquier otra forma información personal sobre los usuarios del sitio web fuera del grupo GE HealthCare y sus afiliados, salvo en los casos recogidos en el presente documento y en el documento Permiso de contacto.</p>
+        <p><b>b. Privacidad y almacenamiento</b></p>
+        <p>Estos datos se almacenarán en un servidor en la UE. Los datos solo se utilizarán para fines administrativos, a menos que haya consentido otros usos como que sus datos se utilicen para fines de marketing. Puede actualizar sus preferencias de contacto en cualquier momento en el apartado «Mi cuenta». Solo los empleados de GE HealthCare accederán a los datos, excepto en el caso de un fallo del sistema o sitio web donde los administradores en <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> deberían poder acceder a los datos para fines administrativos o de mantenimiento. De manera adicional, nuestra plataforma de servidor en <a target="_blank" href="http://www.heroku.com">www.heroku.com</a> está alojada y gestionada por Amazon Web Services (<a target="_blank" href="http://aws.amazon.com/">http://aws.amazon.com/</a>) y, por lo tanto, los empleados de Amazon podrían acceder a los datos si existiera una necesidad comercial legítima para dichos privilegios. El privilegio termina en el momento en que cesa esta causa. Si el problema reside en la puesta en servicio o ejecución de una aplicación o software, ofrecer soluciones a problemas conocidos, responder a preguntas generales, entonces el problema lo resolverán los administradores en <a target="_blank" href="http://www.heroku.com">www.heroku.com</a>.</p>
+        <p>Sus datos se almacenarán durante un periodo de tiempo razonable. La razón de ello es valorar si el Producto se le debería suministrar para uso clínico con base en si ha superado la prueba relacionada con el uso seguro del Producto de acuerdo con el Resumen de características del producto del Producto (en lo sucesivo, el «Examen»). En caso de no superar el Examen, necesitaremos utilizar sus datos para fines administrativos para organizar una formación presencial en su país. Por lo tanto, sus datos solo se utilizarán para fines administrativos y de formación. Si tiene la impresión de que sus datos se han utilizado incorrectamente, contacte con nosotros en <a href="mailto:Privacy.GEHC@ge.com">Privacy.GEHC@ge.com</a></p>
+        <p><b>c. Transferencia</b></p>
+        <p>Su información suministrada a GE HealthCare se almacenará y transferirá entre la UE y Reino Unido, considerado un país adecuado por la Comisión de la UE. Solo personal interno de GE HealthCare accederá a su información en caso de fallo o proceso legal necesario, de la forma anteriormente descrita. </p>
+        <p><b>3. Protección de la información personal</b></p>
+        <p>En GE HealthCare, nuestro objetivo es proteger su información personal enviada a nosotros a través de nuestros centros. Tanto nosotros como nuestros procesadores de datos disponemos de protecciones organizativas, técnicas y físicas para proteger la información personal que facilita en este y otros sitios web de GE HealthCare contra divulgación, uso, alteración o destrucción no autorizados. </p>
+        <p><b>4. Derechos de propiedad</b></p>
+        <p><b>a. Derechos de propiedad intelectual</b></p>
+        <p>GE HealthCare, sus afiliados y licenciadores son propietarios y conservan todos los derechos en el sitio web, los cuales podrían incluir información confidencial como la recogida en la cláusula 2a. Todo el contenido en el sitio web y las marcas comerciales y logotipos GE HealthCare son propiedad de GE HealthCare o posee la licencia. Ningún contenido de los presentes Términos y Condiciones se podrá interpretar como una transferencia por inferencia o de cualquier otra forma de ninguna licencia o derecho relacionado con dichos derechos a ningún tercero, a menos que se estipule expresamente.</p>
+        <p>«GE HealthCare» y el logotipo GE son marcas comerciales registradas en Reino Unido con el número 2347097, en la Comunidad Europea con los números 003173151 y 003485745, en EE. UU. con los números 2961099 y 3142821, y en otros países. GE y el monograma de GE son marcas comerciales de General Electric Company.</p>
+        <p><b>b. Derechos de autor</b></p>
+        <p>Todo el contenido del sitio web, en particular y de forma enunciativa el diseño, texto, software, planos técnicos, configuraciones, gráficos, otros archivos, y su selección y disposición (en los sucesivo, «<b>Contenido</b>»), son Copyright ©2015 General Electric Company, o son propiedad de GE HealthCare, sus afiliados o licenciadores. Todos los derechos reservados.</p>
+        <p>No podrá repetir la publicación de ningún contenido del sitio web, sitio en internet, intranet o extranet ni incorporar la información a cualquier otra base de datos o compilación sin un permiso por escrito previo. Queda prohibido cualquier uso del Contenido aparte de para fines clínicos. De la misma manera, acepta que no extraerá, recopilará o cosechará de forma sistemática, a través de medios electrónicos o de cualquier otra forma, ningún dato de este sitio web.</p>
+        <p><b>c. Patentes</b></p>
+        <p>Los productos y procesos de GE HealthCare pueden estar cubiertos por una o más patentes, y están sujetos a otros secretos comerciales y derechos de propiedad. GE HealthCare se reserva todos esos derechos. Ninguna disposición de los presentes Términos y Condiciones ni ningún elemento mostrado en el sitio web supone ni implica ninguna transferencia ni garantía de derechos.</p>
+        <p><b>d. Marcas comerciales</b></p>
+        <p>Todas las marcas comerciales en el sitio web son marcas comerciales o marcas comerciales registradas de GE HealthCare, sus afiliados o licenciadores y no se podrán copiar, imitar o utilizar, ya sea total o parcialmente, sin el permiso por escrito previo de GE HealthCare. Todos los encabezados de página, gráficos personalizados, iconos de botones y scripts son propiedad de GE HealthCare, sus afiliados o licenciadores y no se podrán copiar, imitar o utilizar, ya sea total o parcialmente, sin el permiso por escrito previo de GE HealthCare.</p>
+        <p><b>5. Uso de cookies y tecnologías similares</b></p>
+        <p>El sitio web almacenará cookies. Para un usuario que ha iniciado sesión: solo se utilizará una única cookie mientras el usuario tiene el sitio abierto. Se eliminará cuando el usuario abandone la página o cierre su navegador. Para monitorizar el uso del sitio: Se utilizará Google Analytics para esta función. Informe de Google Analytics sobre interacciones del visitante en el sitio web.</p>
+        <p><b>6. Software</b></p>
+        <p>Solo usted podrá utilizar cualquier software, incluido cualquier archivo, imagen, código y datos que acompañe al software (en lo sucesivo y de forma colectiva, el «Software»), utilizado o accesible a través de este sitio web, siempre que dichos usos no compitan o sean peyorativos contra GE HealthCare. GE HealthCare conserva la titularidad total y completa de todos los derechos de propiedad intelectual en el Software. Acepta no copiar, transferir, distribuir, vender, modificar, decompilar, realizar ingeniería inversa, desmontar o crear trabajos derivados de ningún Software.</p>
+        <p><b>7. Conducta del usuario</b></p>
+        <p>Al utilizar este sitio web, accede a lo siguiente:</p>
+        <p>i. no alterar, intervenir ni abusar de ninguna otra forma de la seguridad del sitio web o de cualquier servicio, recurso del sistema, cuenta, servidor o red conectado a accesible a través del sitio web;</p>
+        <p>ii. no interferir en la sesión de formación o el uso del sitio web de otro usuario;</p>
+        <p>iii. no compartir información sobre el curso de formación y ni compartir respuestas con aquellas personas que aún no hayan completado y superado el curso;</p>
+        <p>iv. no cargar, publicar ni transmitir de cualquier otra forma a través de este sitio web ningún virus u otros archivos dañinos, nocivos o destructivos.</p>
+        <p><b>8. Jurisdicción, legislación aplicable y notificación de conflicto</b></p>
+        <p>Los presentes Términos y Condiciones se rigen e interpretan según la legislación de Inglaterra y Gales, y queda sujeto a la jurisdicción no exclusiva de los tribunales ingleses en lo que respecta a cualquier conflicto que pudiera surgir relacionado con su uso del sitio web.</p>
+        <p><b>9. Limitación de responsabilidad</b></p>
+        <p>SUJETO AL RECORDATORIO DE LA PRESENTE CLÁUSULA, GE HEALTHCARE O SUS SOCIEDADES CONTROLANTES, SUBSIDIARIAS, AFILIADOS, RESPONSABLES, DIRECTORES, EMPLEADOS, AGENTES O PROVEEDORES, NO SERÁN RESPONSABLES DE NINGÚN DAÑO DIRECTO, INDIRECTO, FORTUITO, ESPECIAL O CONSECUENTE RESULTANTE DE O RELACIONADO CON EL USO O LA IMPOSIBILIDAD DE UTILIZAR ESTE SITIO O CUALQUIER OTRO CONTENIDO RECOGIDO EN EL SITIO, O RESULTANTE DE UN ACCESO NO AUTORIZADO O LA ALTERACIÓN DE SUS TRANSMISIONES O DATOS, O CUALQUIER OTRA INFORMACIÓN QUE SE ENVÍE O RECIBA O NO ENVIADA O RECIBIDA, EN PARTICULAR Y DE FORMA ENUNCIATIVA, DAÑOS POR PÉRDIDAS DE BENEFICIOS, USO, DATOS U OTROS INTANGIBLES, INCLUSO SI GE HEALTHCARE HUBIERA SIDO INFORMADO SOBRE LA POSIBILIDAD DE DICHOS DAÑOS.</p>
+        <p>NADA EN LOS PRESENTES TÉRMINOS Y CONDICIONES EXCLUYE O LÍMITA LA RESPONSABILIDAD DE GE HEALTHCARE POR FRAUDE O POR MUERTE O LESIÓN FÍSICA RESULTANTE DE SU NEGLIGENCIA O CUALQUIER OTRA CIRCUNSTANCIA CON RESPECTO A LA CUAL SERÍA ILEGÍTIMO LIMITAR O EXCLUIR LA RESPONSABILIDAD.</p>
+        <p><b>10. Renuncia</b></p>
+        <p>El incumplimiento por parte de GE HealthCare de aplicar cualquier disposición de los presentes Términos y Condiciones no se considerará una renuncia a dicha disposición ni como el derecho a aplicar dicha disposición. De la misma manera, ninguna renuncia a ninguna disposición de los presentes Términos y Condiciones por cualquiera de las partes tendrá efecto si no se realiza por escrito y está firmada por una de las partes.</p>
+        <p><b>11. Notificaciones y contacto</b></p>
+        <p>
+        La dirección de GE HealthCare para notificaciones relacionadas con este sitio web es la siguiente: <br>
+        GE HealthCare<br>
+        Pollards Wood<br>
+        Nightingales Lane<br>
+        Buckinghamshire,<br>
+        HP8 4SP<br>
+        Reino Unido<br>
+        </p>
+        <p>Si tuviera cualquier duda sobre los presentes Términos y Condiciones, contacte con nosotros escribiendo a: <a href="mailto:vizamyl.enquiries@ge.com">vizamyl.enquiries@ge.com</a></p>
+        <p><b>12. Cambios en estos Términos y Condiciones</b></p>
+        <p>Los presentes Términos y Condiciones podrían sufrir modificaciones a cargo de GE HealthCare de forma periódica y sin aviso previo para reflejar cambios en nuestras prácticas de información en línea. Las actualizaciones de los presentes Términos y Condiciones se publicarán en el sitio web. También recomendamos a los usuarios que revisen periódicamente el presente documento para entender la forma en que GE HealthCare protege y utiliza su información.</p>
+jp:
+  pages:
+    error:
+      heading: |
+        <h1>ビザミル読影トレーニングプログラム</h1>
+      tagline: ''
+      message: |
+        <p><span class='blue'>申し訳ございません。お探しのページが見つかりませんでした。</span><br>以下のリストからご希望の国名をクリックしてください。</p>
+    home:
+      body_html: |
+        <br>
+        <br>
+        <h4>ビザミル読影トレーニングプログラム<br>
+        へようこそ</h4>
+        <br>
+        <p>登録済みの方はログインしてください。</p>
+        <p>初めての方は登録が必要です。</p>
+    references:
+      left:
+        title: |
+          参考文献
+        body_html: |
+          <p>Braak H, Braak E. Neuropathological staging of Alzheimer-related changes. <i>Acta Neuropathol</i>. 1991;82(4):239-259.</p>
+          <p>Curtis C, Gamez JE, Singh U, et al. Phase 3 trial of flutemetamol labeled with radioactive fluorine 18 imaging and neuritic plaque density. <i>JAMA Neurol</i>. 2015;72(3):287-294.</p>
+          <p>Jack CR Jr, Knopman DS, Jagust WJ, et al. Hypothetical model of dynamic biomarkers of the Alzheimer’s pathological cascade. <i>Lancet Neurol.</i> 2010;9(1):119-128.</p>
+          <p>Hyman BT, Phelps CH, Beach TG, et al. National Institute on Aging-Alzheimer’s Association guidelines for the neuropathologic assessment of Alzheimer’s disease. <i>Alzheimers Dement</i>. 2012;8(1):1-13.</i></p>
+          <p>Mathis CA, Lopresti BJ, Klunk WE. Impact of amyloid imaging on drug development in Alzheimer’s disease. <i>Nuc Med Biol</i>. 2007;34(7):809-822.</p>
+          <p>McKhann G, Drachman D, Folstein M, Katzman R, Price D, Stadlan EM. Clinical diagnosis of Alzheimer’s disease: report of the NINCDS-ADRDA Work Group under the auspices of Department of Health and Human Services Task Force on Alzheimer’s Disease. <i>Neurology</i>. 1984;34(7):939-944.</p>
+          <p>McKhann GM, Knopman DS, Chertkow H, et al. The diagnosis of dementia due to Alzheimer’s disease: recommendations from the National Institute on Aging-Alzheimer’s Association workgroups on diagnostic guidelines for Alzheimer’s disease. <i>Alzheimers Dement</i>. 2011;7(3):263-269.</p>
+      right:
+        body_html: |
+          <p>Mirra SS, Heyman A, McKeel D, et al. The Consortium to Establish a Registry for Alzheimer’s Disease (CERAD). Part II. Standardization of the neuropathologic assessment of Alzheimer’s disease. <i>Neurology</i>. 1991;41(4):479-486.</p>
+          <p>Nelissen N, Van Laere K, Thurfjell L, et al. Phase I study of the Pittsburgh Compound B derivative 18F-flutemetamol in healthy volunteers and patients with probable Alzheimer disease. <i>J Nucl Med</i>. 2009;50(8):1251-1259.</p>
+          <p>Querfurth HW, LaFerla FM. Alzheimer’s disease. <i>N Engl J Med</i>. 2010;362(4):329-344.</p>
+          <p>Rowe CC, Ng S, Ackermann U, et al. Imaging beta-amyloid burden in aging and dementia. <i>Neurology</i>. 2007;68(20):1718-1725.</p>
+          <p>Vandenberghe R, Van Laere K, Ivaniou A et al. 18F-flutemetamol amyloid imaging in Alzheimer disease and mild cognitive impairment: a phase 2 trial. <i>Ann Neurol</i>. 2010;68(3):319-329.</p>
+          <p>Vizamyl [prescribing information]. Arlington Heights, IL: GE Healthcare 2014.</p>
+    resources:
+      smpc_title: 放射性医薬品合成設備FASTlab（フルテメタモル合成用）添付文書
+      prescribing_information_title: 放射性医薬品合成設備FASTlab（フルテメタモル合成用）添付文書
+      rainbow_title: レインボーカラースケール　RGB値
+    contact:
+      left:
+        title: |
+          お問い合わせ窓口
+        body_html: |
+          <p>製品に関するお問い合わせ：</p>
+            <p class='indent'>カスタマーコールセンターTEL：0120-202-021</p>
+          <p>読影トレーニングに関するお問い合わせ：</p>
+            <p class='indent'><a href="mailto:vizamyletraining@gehealthcare.com">vizamyletraining@gehealthcare.com</a></p>
+          <p>投与後の副作用等に関する問い合わせ：</p>
+            <p class='indent'>副作用コールセンターTEL：0120-203-169</p>
+            <p class='indent'>受付時間： 9:00-17:00(土日祝日を除く)</p>

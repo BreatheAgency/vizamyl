@@ -1,0 +1,74 @@
+en:
+  course_completion:
+    salutation: Salutation
+    first_name: First name
+    last_name: Last name
+    date: Date
+  users:
+    course_completion:
+      success:
+        adjunctive_use_of_quantification_html: To learn about adjunctive use of quantification, please click here 
+      adjunctive_use_of_quantification:
+        title_html: Quantitative assessment of Vizamyl&#8482 images
+        copy: Please watch the video play through 
+de:
+  course_completion:
+    salutation: Anrede
+    first_name: Vorname
+    last_name: Nachname
+    date: Datum
+  users:
+    course_completion:
+      success:
+        adjunctive_use_of_quantification_html: Um mehr über die zusätzliche Anwendung der Quantifizierung zu lernen, klicken Sie bitte hier
+      adjunctive_use_of_quantification:
+        title_html: Quantitative Auswertung der Bildgebung mit Vizamyl&#8482
+        copy: Bitte sehen Sie sich das ganze Video an
+fr:
+  course_completion:
+    salutation: Civilités
+    first_name: Prénom
+    last_name: Nom
+    date: Date
+  users:
+    course_completion:
+      success:
+        adjunctive_use_of_quantification_html: Pour en savoir plus sur l'utilisation complémentaire de la quantification, cliquez ici
+      adjunctive_use_of_quantification:
+        title_html: Analyse quantitative des images VIZAMYL™ 
+        copy: Veuillez regarder la lecture de la vidéo
+it:
+  course_completion:
+    salutation: Saluti
+    first_name: Nome
+    last_name: Cognome
+    date: Data
+  users:
+    course_completion:
+      success:
+        adjunctive_use_of_quantification_html: Per informazioni sull'uso aggiuntivo della quantificazione, fare clic qui
+      adjunctive_use_of_quantification:
+        title_html: Valutazione quantitativa delle immagini Vizamyl&#8482
+        copy: Si prega di guardare il video 
+
+es:
+  course_completion:
+    salutation: Título
+    first_name: Nombre
+    last_name: Apellido
+    date: Fecha
+  users:
+    course_completion:
+      success:
+        adjunctive_use_of_quantification_html: Para formación adicional sobre el uso complementario de  la cuantificación, haga click aquí
+      adjunctive_use_of_quantification:
+        title_html: Evaluación cuantitativa de las imágenes con Vizamyl
+        copy: Vea el siguiente video
+    
+jp:
+  course_completion:
+    institution: ご施設
+    department: ご所属
+    last_name: 姓
+    first_name: 名
+    date: 日付

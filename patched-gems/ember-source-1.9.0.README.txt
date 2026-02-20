@@ -1,0 +1,10 @@
+We needed to upgrade to jQuery 1.12 from 1.11.
+
+ember-source needed a fix to be able to detect jQuery 1.12 as legitimate, as it was blowing up having only checked for older versions
+
+Ember.assert("Ember Views require jQuery between 1.7 and 2.1", jQuery &&
+  (jQuery().jquery.match(/^((1\.(7|8|9|10|11) ...
+  
+I added 12,13,14 in the above check.
+
+The original Github repo is gone, hence this "Vendored" Gem.

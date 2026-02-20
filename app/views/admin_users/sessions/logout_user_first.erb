@@ -1,0 +1,3 @@
+<h2>Can not sign into Admin area</h2>
+<h3>You must sign out of your regular user account before you can log in as the Admin. You are currently logged in as <%= link_to current_user.email, edit_user_registration_path(locale: I18n.locale)  %>.</h3>
+<h3>Please <%= link_to "log out", destroy_user_session_path(locale: I18n.locale) %> first.</h3>

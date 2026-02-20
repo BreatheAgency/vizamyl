@@ -1,0 +1,59 @@
+.contact {
+
+  .columns {
+    padding-top: rem-calc(20);
+    padding-left: rem-calc(50);
+    padding-right: rem-calc(50);
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: $h3-font-size;
+    padding-bottom: rem-calc(6);
+    line-height: rem-calc(30);
+  }
+
+  h3 {
+    font-size: $h5-font-size;
+    color: #666;
+    line-height: $h5-font-size;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: rem-calc(12);
+    margin-bottom: 0;
+  }
+
+  span {
+    font-size: 1.2em;
+    color: $primary-color;
+  }
+
+  p.indent {
+    margin-left: 52px;
+  }
+
+  .right {
+    margin-bottom: rem-calc(40);
+
+    h3:first-of-type {
+      margin-top: rem-calc(18);
+    }
+
+    p {
+      margin-top: rem-calc(4);
+      margin-bottom: 0;
+    }
+
+    p + p {
+      margin-top: 0;
+    }
+
+    hr {
+      margin: rem-calc(18) 0 rem-calc(18) 0;
+    }
+
+  }
+
+}

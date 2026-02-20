@@ -1,0 +1,46 @@
+$available-locales: <%= I18n.available_locales.map(&:to_s).join(',') %>;
+$global-font: 'geinspira', Helvetica, Arial, sans-serif;
+$primary-color: #005cb9;
+$primary-highlight: #009ee2;
+$background-top: #e8e7e7;
+$background-bottom: white;
+
+@mixin non-retina {
+  @media all and (-webkit-device-pixel-ratio: 1),
+         all and (min-resolution: 96dpi) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+         only screen and (min--moz-device-pixel-ratio: 2),
+         only screen and (-o-min-device-pixel-ratio: 2/1),
+         only screen and (min-device-pixel-ratio: 2),
+         only screen and (min-resolution: 120dpi),
+         only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin background-size($width, $height) {
+  background-size: $width $height;
+}
+
+@mixin background-image($url) {
+  background-image: $url;
+}
+
+@mixin retina-background-image($image, $width: 50%, $height: auto, $type: 'png') {
+  @include background-size($width, $height);
+  @include background-image(asset-url("#{$image}@2x.#{$type}"));
+
+  //
+  // @include retina {
+  //   @include background-image(asset-url("#{$image}@2x.#{$type}"));
+  // }
+  //
+  // @include non-retina {
+  //   @include background-image(asset-url("#{$image}.#{$type}"));
+  // }
+}

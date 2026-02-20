@@ -1,0 +1,119 @@
+<%= simple_form_for(@user, url: non_european_enrol_index_path) do |f| %>
+  <%= f.hidden_field :works_in_us, value: @user.works_in_us %>
+  <div class="row">
+    <div class="small-12 columns">
+      <label><%= t('activerecord.attributes.user.salutation') %></label>
+      <%= f.collection_radio_buttons(:salutation, t('devise.registrations.edit.salutations'), :to_s, :to_s, checked: @user.salutation, collection_wrapper_tag: 'div', collection_wrapper_class: 'radio_buttons') do |b|
+          b.label { b.radio_button + '<span><span></span></span>'.html_safe + ' ' + b.text.html_safe }
+        end
+      %>
+    </div>
+  </div>
+
+  <div class="row row-input">
+    <%= f.hidden_field :locale, value: locale %>
+    <%= f.hidden_field :origin, value: session[:origin] %>
+    <div class="small-6 columns">
+      <%= f.input :first_name, required: true %>
+    </div>
+    <div class="small-6 columns">
+      <%= f.input :last_name, required: true %>
+    </div>
+  </div>
+
+  <div class="row row-input">
+    <div class="small-6 columns">
+      <%= f.input :email, required: true %>
+    </div>
+  </div>
+
+  <div class="row row-input">
+    <div class="small-8 columns">
+      <%= f.input :institution, as: :string, required: true %>
+    </div>
+  </div>
+
+  <% if has_department? %>
+  <div class="row row-input">
+    <div class="small-8 columns">
+      <%= f.input :department, as: :string, required: true %>
+    </div>
+  </div>
+  <% end %>
+
+  <% if @user.works_in_us %>
+    <div class="row row-input">
+      <div class="small-8 columns">
+        <%= f.input :city_or_state, as: :string, required: true %>
+      </div>
+    </div>
+    <div class="row row-input">
+      <div class="small-8 columns">
+        <%= f.input :primary_specialty, as: :string, required: true %>
+      </div>
+    </div>
+  <% end %>
+
+  <% if not_sent_invite_code? %>
+    <%# Japanese only have one input code in use, so we enter it for them. %>
+    <%= f.hidden_field :invite_code, value: User::JAPANESE_DEFAULT_INVITE_CODE %>
+  <% elsif @user.works_in_us %>
+    <div class="row row-input">
+      <div class="small-8 columns">
+        <%= f.hint t('non_european.enrol.new.invite_code_hint') %>
+        <%= f.input :invite_code, required: false, placeholder: t('non_european.enrol.new.invite_code_placeholder')%>
+        <p>If you have previously been provided with an invite code, please input it here. If you do not have an invite code,  please leave this box blank.</p>
+      </div>
+    </div>
+  <% else%>
+    <div class="row row-input">
+      <div class="small-8 columns">
+        <%= f.input :invite_code, required: true %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="row row-input">
+    <div class="small-6 columns">
+      <%= f.input :password, required: true %>
+      <p><%= t('non_european.enrol.new.password_length') %></p>
+    </div>
+    <div class="small-6 columns">
+      <%= f.input :password_confirmation, required: true %>
+    </div>
+  </div>
+
+  <div class="row row-input">
+    <div class="small-12 columns">
+      <% if @user.works_in_us %>
+        <%= f.input :marketing_overall_opt_in, label: t('non_european.enrol.new_us_native.marketing_overall_opt_in') %>
+        <div class="hidden_input">
+          <%= f.input :marketing_overall_opt_out, label: t('non_european.enrol.new.marketing_overall_opt_out'), as: :boolean, :input_html => { :checked => true } %>
+        </div>
+      <% else %>
+        <%= f.input :marketing_overall_opt_in, required: true, label: t('non_european.enrol.new.marketing_overall_opt_in') %>
+        <%= f.input :marketing_overall_opt_out, required: true, label: t('non_european.enrol.new.marketing_overall_opt_out'), as: :boolean %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row row-input privacy">
+    <div class="small-12 columns">
+      <p><%= t('non_european.enrol.new.marketing_privacy') %></p>
+      <% if locale.to_sym == :jp %>
+        <p>こちらの<a href="http://www3.gehealthcare.co.jp/ja-jp/footer/privacy_policy">個人情報保護に対する基本方針</a>をご確認ください。ご同意いただける場合は「個人情報保護方針に同意する」にチェックしてください。</p>
+      <% end %>
+      <%= f.input :privacy_opt_in, required: true, label: (raw t('non_european.enrol.new.acknowledge_privacy')) %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <div class='form-actions button-container'>
+        <%= button_tag(type: 'submit', class: 'btn btn-primary') do %>
+          <%= t('non_european.enrol.new.submit') %> <i class='fi-arrow-right'></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

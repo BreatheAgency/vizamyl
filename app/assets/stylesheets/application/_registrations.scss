@@ -1,0 +1,168 @@
+.registrations {
+
+  .columns {
+    padding-top: rem-calc(20);
+    padding-left: rem-calc(50);
+    padding-right: rem-calc(50);
+  }
+
+  h1 {
+    font-weight: bold;
+    font-size: $h3-font-size;
+    padding-bottom: rem-calc(18);
+    line-height: rem-calc(30);
+  }
+
+  p {
+    line-height: 1.25;
+  }
+
+  .input {
+    padding: rem-calc(10) 0 rem-calc(10) 0;
+  }
+
+  .input + .input {
+    padding: rem-calc(5) 0 rem-calc(10) 0;
+  }
+
+  input[type='checkbox'] {
+    margin-bottom: 0;
+  }
+
+  ::placeholder {
+    color: #777;
+    font-weight: normal;
+    font-size: 1.1em;
+  }
+
+  .hidden_input {
+    display: none;
+  }
+
+  .marketing-purposes {
+    line-height: 1.25;
+  }
+
+  .obligation {
+    font-weight: normal;
+    font-size: rem-calc(14);
+    margin-left: rem-calc(24);
+  }
+
+  .small {
+    color: #999;
+    padding-top: rem-calc(10);
+    padding-bottom: rem-calc(5);
+    font-size: rem-calc(14);
+  }
+
+  .small-right {
+    padding-left: rem-calc(22);
+  }
+
+  .progress {
+    @extend .inline-list;
+    background: white;
+    height: 36px;
+    margin-bottom: rem-calc(16);
+
+    li {
+      width: 28px;
+      height: 28px;
+      border: solid 1px $primary-color;
+      border-radius: 14px;
+      margin-left: rem-calc(16);
+    }
+
+    li:first-child {
+      margin-left: 0;
+    }
+
+    .selected {
+      background: $primary-color;
+    }
+  }
+
+  .my-account {
+    padding-bottom: rem-calc(10);
+
+    p {
+      margin-bottom: rem-calc(10);
+    }
+
+  }
+
+  .button-container {
+    padding-top: rem-calc(15);
+    padding-bottom: rem-calc(30);
+  }
+
+}
+
+.registrations.details {
+  h1 {
+    padding-bottom: rem-calc(12);
+  }
+}
+
+.registrations.institution {
+  p {
+    color: $primary-color;
+  }
+}
+
+.registrations.terms {
+  p {
+    font-size: rem-calc(14);
+  }
+
+  .terms-accept {
+    line-height: 1.25;
+  }
+
+  .please-tick {
+    font-weight: normal;
+    font-size: rem-calc(14);
+    color: #999;
+  }
+}
+
+.registrations.institution, .registrations.terms, .registrations.marketing, .registrations.details {
+  > div:first-of-type {
+    @extend .motion;
+  }
+}
+
+.registrations.us {
+  a {
+    text-decoration: underline;
+    font-weight: normal;
+  }
+
+  label+small {
+    margin-top: 2em;
+    font-size: rem-calc(14);
+    font-weight: normal;
+    color: #f04124;
+  }
+
+  .user_marketing_overall_opt_in {
+    padding-bottom: 0;
+  }
+
+  .privacy {
+    p {
+      margin-top: 1.5em;
+      margin-bottom: 0.4em;
+    }
+    .user_privacy_opt_in {
+      padding-top: 0;
+    }
+  }
+
+  .row-input {
+    .columns {
+      padding-top: 0;
+    }
+  }
+}

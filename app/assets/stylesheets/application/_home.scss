@@ -1,0 +1,68 @@
+.home {
+  background-color: white;
+
+  div:first-of-type {
+    @extend .motion;
+  }
+
+  h1 {
+    margin: 50px 0;
+    line-height: rem-calc(48);
+    letter-spacing: rem-calc(1);
+  }
+
+  p {
+    color: $primary-color;
+    font-size: rem-calc(18);
+    line-height: rem-calc(22);
+    letter-spacing: rem-calc(1);
+  }
+
+  .button-container a:first-child {
+    padding-right: rem-calc(22);
+  }
+
+}
+
+.home.blue_hand {
+  padding: 30px;
+
+  #blue-hand {
+  height: 220px;
+  float: right;
+  }
+
+  #ge-logo{
+    height: 120px;
+    float: left;
+  }
+
+  p.disclaimer {
+    text-align: right;
+    font-weight: bold;
+    letter-spacing: 0.0em;
+    margin-top: 21px;
+    width: 60%;
+    float: right;
+  }
+
+  h3 {
+    font-size: 3.5em;
+    font-weight: bold;
+    height: 266px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    padding-top: 221px;
+  }
+
+  h2 {
+    font-size: 4em;
+    font-weight: bolder;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  div:first-of-type {
+    background-image: none;
+  }
+}

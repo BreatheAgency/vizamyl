@@ -1,0 +1,15 @@
+<!doctype html>
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js <%= locale %>" lang="en"><!--<![endif]-->
+  <%= render partial: 'head' %>
+  <body class='course'>
+    <%= tag(:meta, content: UserSerializer.new(current_user, scope: current_user).to_json, name: 'bootstrap') %>
+    <%= tag(:meta, content: Rails.application.secrets.asset_host, name: 'env-asset-host') %>
+    <%= tag(:meta, content: Rails.application.secrets.content_host, name: 'env-content-host') %>
+    <%= tag(:meta, content: Rails.env, name: 'env-environment') %>
+    <%= render partial: 'ga' %>
+    <%= render partial: 'rollbar' %>
+    <%= render partial: 'pingdom' %>
+    <%= javascript_include_tag :course %>
+  </body>
+</html>
