@@ -7,11 +7,8 @@ run Rack::Builder.new {
     run proc { |_env| Rack::Response.new('PING', 200) }
   end
 
-  case ENV['RACK_ENV'].to_sym
-    when :staging
-      use Rack::CanonicalHost, 'stg-www.readvizamyl.com'
-    when :production
-      use Rack::CanonicalHost, 'www.readvizamyl.com'
+  if ENV['CANONICAL_HOST']
+    use Rack::CanonicalHost, ENV['CANONICAL_HOST']
   end
 
   use Rack::Noindex, -> (_env) { true }
