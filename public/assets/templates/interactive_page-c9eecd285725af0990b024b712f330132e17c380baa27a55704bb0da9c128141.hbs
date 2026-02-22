@@ -1,0 +1,46 @@
+<section id="reference__area" class="reference__area interactive__area">
+  <div {{ bind-attr class=':container' id='columns' }}>
+    <div class="reference__wrap assessment__wrap">
+
+      <div {{ bind-attr class=':row :d-flex' }}>
+        <div class="col-lg-5">
+          <div class="content-container">
+            <div class="content-header assessment__content">
+              <span class="vizamyl-tag">{{i18n course.heading}}</span>
+              <h2>{{{title}}}</h2>
+              {{{body}}}
+            </div>
+            <div class="content-footer">
+              <div class='page-abbreviations'>
+                <p>{{{abbreviations}}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div {{ bind-attr class=':interactive_column :col-lg-7' }}>
+          <div class="media-container">
+            <div class="media-wrapper">
+              <div class="media-holder">
+                {{#each interactive_source in interactive_sources}}
+                  <div {{bind-attr class=":slidy"}}>
+                    {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                      source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                  </div>
+                {{/each}}
+              </div>
+            </div>
+            <div class="page__select__next__prev">
+              <a {{bind-attr class=':right :btn :btn-primary complete:enabled:disabled'}}
+                {{action 'next' step}}>
+                {{i18n course.actions.next}}
+                {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

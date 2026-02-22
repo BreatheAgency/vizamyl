@@ -1,0 +1,193 @@
+<section id="reference__area" class="reference__area pt-0">
+  <div class="container">
+    <div class="reference__wrap assessment__wrap">
+      <div class="testcase__row row">
+        {{#if isInAnswered}}
+          <div {{bind-attr class=':col-lg-5 :row :g-3 :page :test-page :four-b-page'}}>
+            {{ log 'TODO: >>> isInAnswered' }}
+            <div class="explanation_question_results mb-5">
+              <h1 class="mt-0">{{{i18n course.pages.test.four_b.title}}}</h1>
+              {{#if testCorrect}}
+                {{ log 'TODO: >> testCorrect' }}
+                <p>{{{i18n course.pages.test.four_b.correct}}}</p>
+              {{else}}
+                {{#if testFailedOnce}}
+                  <p>{{{i18n course.pages.test.four_b.incorrect_one_html}}}</p>
+                {{else}}
+                  <p>{{{i18n course.pages.test.four_b.incorrect_two_one_html}}} <a href='/{{unbound currentLocale}}/contact'>{{i18n course.pages.test.four_b.incorrect_two_link}}</a> {{{i18n course.pages.test.four_b.incorrect_two_two_html}}}</p>
+                {{/if}}
+              {{/if}}
+              <ul>
+                {{#each question in questionsWithIndex}}
+                  <a {{action 'selectExplanation' question.object.explanation_source}}>
+                    <li {{bind-attr class='question.object.correct:correct:incorrect'}}>
+                      <div {{bind-attr class=':circle'}}>
+                      </div>
+                      {{{i18n course.pages.test.four_b.review_explanation_video count=question.index}}}
+                    </li>
+                  </a>
+                {{/each}}
+              </ul>
+            </div>
+          {{/if}}
+
+          {{#if isInUnanswered}}
+            {{ log 'TODO: >>> isInUnanswered' }}
+            {{#if question.test_case}}
+              {{ log 'TODO: >> question.test_case' }}
+
+              <div class="col-lg-5 isInUnanswered">
+                <div class="assessmentquestion__content__img assessment__answer position-relative">
+                  <div class="assessmentquestion__content testcasecontent">
+                    <h2>{{{question.title}}}</h2>
+
+                    <h6 class="testcase_title">
+                      {{{i18n course.pages.test.test_case.description_html}}}
+                    </h6>
+
+
+                    <div class='testcase__reports'>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_one}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetOne}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetOneSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_two}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetTwo}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetTwoSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_three}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetThree}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetThreeSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_four}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetFour}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetFourSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_five}}</h6>
+                        <div class="test__report__field">
+                          {{#each answer in questionSetFive}}
+                              <div class="remember solution">
+                                <label>{{radio-button value=answer name=view.name selection=questionSetFiveSelection}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                      <div class='question testcase__single__report'>
+                        <h6>{{i18n course.pages.test.test_case.question_six}}</h6>
+                          <div class="test__report__field">
+                          {{#unless hideCheats }}
+                            {{ log '###################' }}
+                          {{/unless}}
+                          {{#each answer in question.answers}}
+                              <div class="remember solution">
+                                {{#unless hideCheats }}
+                                  {{#if answer.correct }}
+                                    {{ log "          ✅" }}
+                                    {{ log " " }}
+                                  {{else}}
+                                    {{ log "          -" }}
+                                    {{ log " " }}
+                                  {{/if}}
+                                {{/unless}}
+                                <label>{{radio-button value=answer name=view.name selection=selectedAnswer}}<span class="posneg">{{{answer.body}}}</span></label>
+                              </div>
+                          {{/each}}
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+             {{else}}
+                {{ log " >> ??? Unreachable? "}}
+                <h1>{{{question.title}}}</h1>
+                <div class='test'>
+                  {{ext-radio content=question.answers value=selectedAnswer hideCheats=isProduction}}
+                </div>
+            {{/if}}
+          {{/if}}
+          {{#if isInUnanswered}}
+            {{ log 'TODO: >>> isInUnanswered' }}
+            <div class="col-lg-7">
+              <div class="media-container">
+                <div class="media-wrapper">
+                  <div class="media-holder">
+                    <div class="testcase__all__slider">
+                      {{#each interactive_source in question.interactive_sources}}
+                        <div {{bind-attr class=""}}>
+                          <div class="testcase__slide">
+                              {{multi-scroller imageWidth=interactiveWidth imageHeightMax=interactive_source.height
+                                source=interactive_source.sourceWithUrl images=interactive_source.images label=interactive_source.label}}
+                          </div>
+                        </div>
+                      {{/each}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          {{/if}}
+          {{#if isInAnswered}}
+            {{ log 'TODO: >> isInAnswered (1)' }}
+            <div class="col-lg-7">
+              {{video-player finished='finished' mandatory=false source=explanationSource}}
+            </div>
+          {{/if}}
+          <p>{{{abbreviations}}}</p>
+          <div class="page__select__next__prev">
+            {{#if isInAnswered}}
+              {{ log 'TODO: >> isInAnswered (2)' }}
+              {{#if showRetakeButton }}
+                <a class='right btn btn-primary' {{action 'retakeTest'}}>
+                  {{{i18n course.actions.retake_test}}}
+                  {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                  <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+                </a>
+              {{else}}
+                <a {{bind-attr class=':right :btn :btn-primary testFailedTwice:disabled:enabled'}} {{action 'next'}}>
+                  {{i18n course.actions.next}}
+                  {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                  <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+                </a>
+              {{/if}}
+            {{/if}}
+            {{#if isInUnanswered}}
+              {{ log 'TODO: >> isInUnanswered' }}
+              <a {{bind-attr class=':right :btn :btn-primary answered:enabled:disabled'}} {{action 'submit'}}>
+                {{i18n course.actions.next}}
+                {{!-- <i class="fa-solid fa-angle-right"></i> --}}
+                <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
+              </a>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
