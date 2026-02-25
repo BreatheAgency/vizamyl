@@ -1,4 +1,4 @@
-# Redirect locale paths to live readvizamyl.com (dev only)
+%w[jp en en-us de-at de it es].each do |locale|X# Redirect locale paths to live readvizamyl.com (dev only)
 # Excludes French (/fr)
 if ENV['REDIRECT_LOCALES_TO_LIVE'] == 'true'
   Rails.application.config.middleware.insert_before 0, Rack::Rewrite do
