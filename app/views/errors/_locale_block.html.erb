@@ -1,11 +1,10 @@
 <form id="country-selector" action="" method="get" style="padding: 5px;">
   <label for="countries">Select your country:</label>
   <select id="countries" name="country_url" onchange="toggleNextButton()">
-    <option value="" selected>Select a country</option> <!-- Default option -->
-    <% locales.each do |origin, details| %>
-      <option 
-        value="<%= origin == 'kr' ? details[:url] : "#{details[:url]}/#{details[:locale]}?origin=#{origin}" %>">
-        <%= details[:country] %>
+    <option value="" selected>Select a country</option>
+    <% LoginLink.generate_links(request.host).each do |origin, details| %>
+      <option value="<%= details[:url] %>">
+        <%= LoginLink.col[origin][:country] %>
       </option>
     <% end %>
   </select>
@@ -16,13 +15,11 @@
   function toggleNextButton() {
     const select = document.getElementById('countries');
     const nextButton = document.getElementById('next-button');
-    // Enable the button only if a valid option is selected
     nextButton.disabled = !select.value;
   }
 
   function redirectToCountry() {
     const select = document.getElementById('countries');
-    const selectedUrl = select.value;
-    window.location.href = selectedUrl;
+    window.location.href = select.value;
   }
 </script>
