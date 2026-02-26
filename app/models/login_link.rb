@@ -1,79 +1,65 @@
 class LoginLink
   class << self
+
+    # Determine root domain from the actual request host
+    def extract_root_domain(host)
+      return "langselector.com" if host.include?("langselector.com")
+      return "readvizamyl.com" if host.include?("readvizamyl.com")
+
+      raise ArgumentError, "Unknown host: #{host}"
+    end
+
+    def build_url(subdomain, root_domain)
+      "https://#{subdomain}.#{root_domain}"
+    end
+
     def col
-      base_url = Rails.application.config.vizamyl_base_url
       {
-        'au' => { country: 'Australia', url: "https://si.readvizamyl.com", locale: 'en-us', origin: 'au' },
-        'at' => { country: 'Austria', url: "https://at.readvizamyl.com", locale: 'de-at', origin: 'at' },
-        'be' => { country: 'Belgium', url: "#{base_url}", locale: 'be', origin: 'be' },
-        'bg' => { country: 'Bulgaria', url: "#{base_url}", locale: 'bg', origin: 'bg' },
-        'hr' => { country: 'Croatia', url: "#{base_url}", locale: 'en-gb', origin: 'hr' },
-        'cz' => { country: 'Czechia', url: "#{base_url}", locale: 'en-gb', origin: 'cz' },
-        'dk' => { country: 'Denmark', url: "#{base_url}", locale: 'en-gb', origin: 'dk' },
-        'ee' => { country: 'Estonia', url: "#{base_url}", locale: 'en-gb', origin: 'ee' },
-        'fi' => { country: 'Finland', url: "#{base_url}", locale: 'en-gb', origin: 'fi' },
-        'fr' => { country: 'France', url: "#{base_url}", locale: 'fr', origin: 'fr' },
-        'de' => { country: 'Germany', url: "https://de.readvizamyl.com", locale: 'de', origin: 'de' },
-        'gr' => { country: 'Greece', url: "#{base_url}", locale: 'en-gb', origin: 'gr' },
-        'hk' => { country: 'Hong Kong', url: "https://si.readvizamyl.com", locale: 'en-us', origin: 'hk' },
-        'hu' => { country: 'Hungary', url: "#{base_url}", locale: 'en-gb', origin: 'hu' },
-        'il' => { country: 'Israel', url: "https://si.readvizamyl.com", locale: 'en-us', origin: 'il' },
-        'it' => { country: 'Italy', url: "https://it.readvizamyl.com", locale: 'it', origin: 'it' },
-        'jp' => { country: 'Japan', url: "https://jp.readvizamyl.com", locale: 'jp', origin: 'jp' },        
-        'lu' => { country: 'Luxembourg', url: "#{base_url}", locale: 'be', origin: 'lu' },
-        'nl' => { country: 'Netherlands', url: "#{base_url}", locale: 'en-gb', origin: 'nl' },
-        'no' => { country: 'Norway', url: "#{base_url}", locale: 'en-gb', origin: 'no' },
-        'pl' => { country: 'Poland', url: "#{base_url}", locale: 'en-gb', origin: 'pl' },
-        'sg' => { country: 'Singapore', url: "https://si.readvizamyl.com", locale: 'en-us', origin: 'sg' },
-        'sk' => { country: 'Slovakia', url: "#{base_url}", locale: 'en-gb', origin: 'sk' },
-        'si' => { country: 'Slovenia', url: "#{base_url}", locale: 'si', origin: 'si' },        
-        'kr' => { country: 'South Korea', url: 'http://www.vizamyl.co.kr', locale: 'kr', origin: 'kr' },
-        'es' => { country: 'Spain', url: "https://es.readvizamyl.com", locale: 'es', origin: 'es' },
-        'se' => { country: 'Sweden', url: "#{base_url}", locale: 'en-gb', origin: 'se' },
-        'ch' => { country: 'Switzerland', url: "#{base_url}", locale: 'ch', origin: 'ch' },        
-        'tw' => { country: 'Taiwan', url: "https://si.readvizamyl.com", locale: 'en-us', origin: 'tw' },
-        'tr' => { country: 'Turkey', url: "https://si.readvizamyl.com", locale: 'en-us', origin: 'tr' },        
-        'gb' => { country: 'United Kingdom', url: "#{base_url}", locale: 'en-gb', origin: 'gb' },
-        'us' => { country: 'United States', url: "https://us.readvizamyl.com", locale: 'en-us', origin: 'us' }
+        'au' => { country: 'Australia',        sub: 'si', locale: 'en-us', origin: 'au' },
+        'at' => { country: 'Austria',          sub: 'at', locale: 'de-at', origin: 'at' },
+        'be' => { country: 'Belgium',          sub: 'be', locale: 'be',    origin: 'be' },
+        'bg' => { country: 'Bulgaria',         sub: 'bg', locale: 'bg',    origin: 'bg' },
+        'hr' => { country: 'Croatia',          sub: 'hr', locale: 'en-gb', origin: 'hr' },
+        'cz' => { country: 'Czechia',          sub: 'cz', locale: 'en-gb', origin: 'cz' },
+        'dk' => { country: 'Denmark',          sub: 'dk', locale: 'en-gb', origin: 'dk' },
+        'ee' => { country: 'Estonia',          sub: 'ee', locale: 'en-gb', origin: 'ee' },
+        'fi' => { country: 'Finland',          sub: 'fi', locale: 'en-gb', origin: 'fi' },
+        'fr' => { country: 'France',           sub: 'fr', locale: 'fr',    origin: 'fr' },
+        'de' => { country: 'Germany',          sub: 'de', locale: 'de',    origin: 'de' },
+        'gr' => { country: 'Greece',           sub: 'gr', locale: 'en-gb', origin: 'gr' },
+        'hk' => { country: 'Hong Kong',        sub: 'si', locale: 'en-us', origin: 'hk' },
+        'hu' => { country: 'Hungary',          sub: 'hu', locale: 'en-gb', origin: 'hu' },
+        'il' => { country: 'Israel',           sub: 'si', locale: 'en-us', origin: 'il' },
+        'it' => { country: 'Italy',            sub: 'it', locale: 'it',    origin: 'it' },
+        'jp' => { country: 'Japan',            sub: 'jp', locale: 'jp',    origin: 'jp' },
+        'lu' => { country: 'Luxembourg',       sub: 'be', locale: 'be',    origin: 'lu' },
+        'nl' => { country: 'Netherlands',      sub: 'nl', locale: 'en-gb', origin: 'nl' },
+        'no' => { country: 'Norway',           sub: 'no', locale: 'en-gb', origin: 'no' },
+        'pl' => { country: 'Poland',           sub: 'pl', locale: 'en-gb', origin: 'pl' },
+        'sg' => { country: 'Singapore',        sub: 'si', locale: 'en-us', origin: 'sg' },
+        'sk' => { country: 'Slovakia',         sub: 'sk', locale: 'en-gb', origin: 'sk' },
+        'si' => { country: 'Slovenia',         sub: 'si', locale: 'si',    origin: 'si' },
+        'kr' => { country: 'South Korea',      external: 'http://www.vizamyl.co.kr', locale: 'kr', origin: 'kr' },
+        'es' => { country: 'Spain',            sub: 'es', locale: 'es',    origin: 'es' },
+        'se' => { country: 'Sweden',           sub: 'se', locale: 'en-gb', origin: 'se' },
+        'ch' => { country: 'Switzerland',      sub: 'ch', locale: 'ch',    origin: 'ch' },
+        'tw' => { country: 'Taiwan',           sub: 'si', locale: 'en-us', origin: 'tw' },
+        'tr' => { country: 'Turkey',           sub: 'si', locale: 'en-us', origin: 'tr' },
+        'gb' => { country: 'United Kingdom',   sub: 'gb', locale: 'en-gb', origin: 'gb' },
+        'us' => { country: 'United States',    sub: 'us', locale: 'en-us', origin: 'us' }
       }
     end
 
-    def generate_links
+    def generate_links(current_host)
+      root_domain = extract_root_domain(current_host)
+
       col.transform_values do |info|
-        "#{info[:url]}?origin=#{info[:origin]}"
+        if info[:external]
+          "#{info[:external]}?origin=#{info[:origin]}"
+        else
+          "#{build_url(info[:sub], root_domain)}?origin=#{info[:origin]}"
+        end
       end
     end
   end
 end
-
-
-# class LoginLink
-#   class << self
-#     def col_1
-#       {
-#        'en-us': 'United States',
-#        'en-gb': 'United Kingdom',
-#        'de-at': 'Austria',
-#        'be': 'Belgium / Luxembourg',
-#       }
-#     end
-
-#     def col_2
-#       {
-#        'fr': 'France',
-#        'de': 'Germany',
-#        'it': 'Italy',
-#        'jp': 'Japan',
-#       }
-#     end
-
-#     def col_3
-#       {
-#        'si': 'Slovenia',
-#        'es': 'Spain',
-#        'http://www.vizamyl.co.kr': 'South Korea',
-#        'ch': 'Switzerland'
-#       }
-#     end
-#   end
-# end
