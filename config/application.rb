@@ -10,7 +10,6 @@ require 'sprockets/railtie'
 # require 'rails/test_unit/railtie'
 
 # Require the gems listed in Gemfile, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
 module Vizamyl
@@ -19,40 +18,44 @@ module Vizamyl
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run 'rake -D time' for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
-
-    config.vizamyl_base_url = case ENV['RACK_ENV']
-    when 'staging'
-      'https://stg-www.readvizamyl.com'
-    when 'production'
-      'https://www.readvizamyl.com'
-    else
-      'http://localhost:3000' # Default for other environments
+    # Base URL per environment
+    config.vizamyl_base_url = ENV.fetch('VIZAMYL_BASE_URL') do
+      case Rails.env
+      when 'production'
+        'https://www.readvizamyl.com'
+      else
+        'https://www.langselector.com'  # Staging / dev
+      end
     end
 
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+    # I18n configuration
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
-    config.i18n.default_locale = :en
-    config.before_configuration do
-      I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
-      I18n.locale = :en
-      I18n.default_locale = :en
-      I18n.reload!
-    end
-
-    config.i18n.enforce_available_locales = false
-
     config.i18n.available_locales = [:en, :'en-us', :'en-gb', :'de-at', :de, :fr, :it, :es, :jp]
-
+    config.i18n.default_locale = :en
+    config.i18n.enforce_available_locales = false
     config.i18n.fallbacks = [:'en-us', :'en-gb', :en, :'de-at', :de, :pt, :it, :fr, :es, :nl, :jp]
 
-    config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
-    config.assets.precompile += %w(course.js libs.js libs.css)
+    # Asset precompile
+    config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff course.js libs.js libs.css)
     config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
     config.assets.initialize_on_precompile = true
 
+    # Exceptions routing
     config.exceptions_app = self.routes
+
+    # Dev-only locale redirect initializer
+    config.after_initialize do
+      if Rails.env.development? && ENV['REDIRECT_LOCALES_TO_LIVE'] == 'true'
+        Rails.application.config.middleware.insert_before 0, Rack::Rewrite do
+          %w[jp en en-us de-at de it es].each do |locale|
+            r301 %r{^/#{Regexp.escape(locale)}(/.*)?(\?.*)?$}, lambda { |match, rack_env|
+              path = match[1] || ''
+              query = rack_env['QUERY_STRING'].present? ? "?#{rack_env['QUERY_STRING']}" : ''
+              "https://#{locale}.readvizamyl.com/#{locale}#{path}#{query}"
+            }
+          end
+        end
+      end
+    end
   end
 end
