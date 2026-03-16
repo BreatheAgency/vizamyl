@@ -1,6 +1,13 @@
 Rails.application.routes.draw do
 
   mount_roboto
+
+  # France maintenance redirect - redirects /fr and /fr/* to maintenance page
+  # This only affects France (origin=fr, locale=fr)
+  # Other French-speaking countries (Belgium=be, Luxembourg=lu, Switzerland=ch) are NOT affected
+  get '/fr' => redirect('/down-for-maintenence.html')
+  get '/fr/*path' => redirect('/down-for-maintenence.html')
+
   get '/upgrade' => 'errors#upgrade'
   get 'sitemap.xml', to: 'sitemap#index', defaults: { format: 'xml' }
 
