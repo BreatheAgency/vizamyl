@@ -12,7 +12,7 @@ class LoginLink
         'dk' => { country: 'Denmark', url: "https://ch.readvizamyl.com", locale: 'en-gb', origin: 'dk' },
         'ee' => { country: 'Estonia', url: "https://ch.readvizamyl.com", locale: 'en-gb', origin: 'ee' },
         'fi' => { country: 'Finland', url: "https://ch.readvizamyl.com", locale: 'en-gb', origin: 'fi' },
-        'fr' => { country: 'France', url: "#{base_url}", locale: 'fr', origin: 'fr' },
+        # 'fr' => { country: 'France', url: "#{base_url}", locale: 'fr', origin: 'fr' },
         'de' => { country: 'Germany', url: "https://de.readvizamyl.com", locale: 'de', origin: 'de' },
         'gr' => { country: 'Greece', url: "https://ch.readvizamyl.com", locale: 'en-gb', origin: 'gr' },
         'hk' => { country: 'Hong Kong', url: "https://si.readvizamyl.com", locale: 'en-us', origin: 'hk' },
