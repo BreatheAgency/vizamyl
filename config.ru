@@ -7,13 +7,6 @@ run Rack::Builder.new {
     run proc { |_env| Rack::Response.new('PING', 200) }
   end
 
-  case ENV['RACK_ENV'].to_sym
-    when :staging
-      use Rack::CanonicalHost, 'stg-www.readvizamyl.com'
-    when :production
-      use Rack::CanonicalHost, 'at.readvizamyl.com'
-  end
-
   use Rack::Noindex, -> (_env) { true }
   use Rack::Deflater
   run Rails.application
