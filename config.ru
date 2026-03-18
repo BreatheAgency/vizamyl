@@ -7,7 +7,12 @@ run Rack::Builder.new {
     run proc { |_env| Rack::Response.new('PING', 200) }
   end
 
-  use Rack::CanonicalHost, -> (env) { Rack::Request.new(env).host }
+  case ENV['RACK_ENV'].to_sym
+    when :staging
+      use Rack::CanonicalHost, 'stg-www.langselector.com'
+    when :production
+      use Rack::CanonicalHost, 'jp.langselector.com'
+  end
 
   use Rack::Noindex, -> (_env) { true }
   use Rack::Deflater
