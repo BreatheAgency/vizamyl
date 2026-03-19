@@ -8,6 +8,7 @@ COUNTRY_REDIRECTS = {
   'dk' => { subdomain: 'ch',  redirect: true  },
   'ee' => { subdomain: 'ch',  redirect: true  },
   'fi' => { subdomain: 'ch',  redirect: true  },
+  'fr' => { subdomain: 'fr',  redirect: false },
   'de' => { subdomain: 'de',  redirect: true  },
   'gr' => { subdomain: 'ch',  redirect: true  },
   'hk' => { subdomain: 'si',  redirect: true  },
