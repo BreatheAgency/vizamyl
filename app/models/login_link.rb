@@ -56,7 +56,6 @@ class LoginLink
       host = base_url.gsub(%r{https?://}, '').split('/').first
 
       parsed = PublicSuffix.parse(host)
-      # parsed.domain gives you the root regardless of ccTLD
       parsed.domain
     rescue PublicSuffix::Error
       host
