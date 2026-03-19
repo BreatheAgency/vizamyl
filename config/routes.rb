@@ -1,12 +1,49 @@
+COUNTRY_REDIRECTS = {
+  'au' => { subdomain: 'si',  redirect: true  },
+  'at' => { subdomain: 'at',  redirect: true  },
+  'be' => { subdomain: 'ch',  redirect: false },
+  'bg' => { subdomain: 'ch',  redirect: false },
+  'hr' => { subdomain: 'ch',  redirect: true  },
+  'cz' => { subdomain: 'ch',  redirect: true  },
+  'dk' => { subdomain: 'ch',  redirect: true  },
+  'ee' => { subdomain: 'ch',  redirect: true  },
+  'fi' => { subdomain: 'ch',  redirect: true  },
+  'de' => { subdomain: 'de',  redirect: true  },
+  'gr' => { subdomain: 'ch',  redirect: true  },
+  'hk' => { subdomain: 'si',  redirect: true  },
+  'hu' => { subdomain: 'ch',  redirect: true  },
+  'il' => { subdomain: 'si',  redirect: true  },
+  'it' => { subdomain: 'it',  redirect: true  },
+  'jp' => { subdomain: 'jp',  redirect: true  },
+  'lu' => { subdomain: 'ch',  redirect: true  },
+  'nl' => { subdomain: 'ch',  redirect: true  },
+  'no' => { subdomain: 'ch',  redirect: true  },
+  'pl' => { subdomain: 'ch',  redirect: true  },
+  'sg' => { subdomain: 'si',  redirect: true  },
+  'sk' => { subdomain: 'ch',  redirect: true  },
+  'si' => { subdomain: 'ch',  redirect: false },
+  'kr' => { subdomain: nil,   redirect: true  },
+  'es' => { subdomain: 'es',  redirect: true  },
+  'se' => { subdomain: 'ch',  redirect: true  },
+  'ch' => { subdomain: 'ch',  redirect: false },
+  'tw' => { subdomain: 'si',  redirect: true  },
+  'tr' => { subdomain: 'si',  redirect: true  },
+  'gb' => { subdomain: 'uk',  redirect: true  },
+  'us' => { subdomain: 'us',  redirect: false }
+}.freeze
+
 Rails.application.routes.draw do
 
   mount_roboto
 
-  # France maintenance redirect - redirects /fr and /fr/* to maintenance page
-  # This only affects France (origin=fr, locale=fr)
-  # Other French-speaking countries (Belgium=be, Luxembourg=lu, Switzerland=ch) are NOT affected
+  # France maintenance redirect
   get '/fr' => redirect('/down-for-maintenence.html')
   get '/fr/*path' => redirect('/down-for-maintenence.html')
+
+  # Country origin redirects — only registers routes where redirect: true
+  COUNTRY_REDIRECTS.select { |_, v| v[:redirect] }.each_key do |code|
+    get "/#{code}", to: 'redirects#country', defaults: { origin: code }
+  end
 
   get '/upgrade' => 'errors#upgrade'
   get 'sitemap.xml', to: 'sitemap#index', defaults: { format: 'xml' }
