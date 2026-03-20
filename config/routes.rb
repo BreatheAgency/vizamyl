@@ -1,8 +1,8 @@
 COUNTRY_REDIRECTS = {
   'au' => { subdomain: 'si',  redirect: true  },
   'at' => { subdomain: 'at',  redirect: true  },
-  'be' => { subdomain: 'ch',  redirect: false },
-  'bg' => { subdomain: 'ch',  redirect: false },
+  'be' => { subdomain: 'ch',  redirect: true  },
+  'bg' => { subdomain: 'ch',  redirect: true  },
   'hr' => { subdomain: 'ch',  redirect: true  },
   'cz' => { subdomain: 'ch',  redirect: true  },
   'dk' => { subdomain: 'ch',  redirect: true  },
@@ -22,15 +22,15 @@ COUNTRY_REDIRECTS = {
   'pl' => { subdomain: 'ch',  redirect: true  },
   'sg' => { subdomain: 'si',  redirect: true  },
   'sk' => { subdomain: 'ch',  redirect: true  },
-  'si' => { subdomain: 'ch',  redirect: false },
+  'si' => { subdomain: 'ch',  redirect: true  },
   'kr' => { subdomain: nil,   redirect: true  },
   'es' => { subdomain: 'es',  redirect: true  },
   'se' => { subdomain: 'ch',  redirect: true  },
-  'ch' => { subdomain: 'ch',  redirect: false },
+  'ch' => { subdomain: 'ch',  redirect: true  },
   'tw' => { subdomain: 'si',  redirect: true  },
   'tr' => { subdomain: 'si',  redirect: true  },
   'gb' => { subdomain: 'uk',  redirect: true  },
-  'us' => { subdomain: 'us',  redirect: false }
+  'us' => { subdomain: 'us',  redirect: true  }
 }.freeze
 
 Rails.application.routes.draw do
