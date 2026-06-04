@@ -18,7 +18,7 @@ class CourseCompletionLetter < Prawn::Document
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
     completion_date = from_active_admin ? user.passed_round_two_at : Time.now
-    completion_date ||= Time.now # Fallback to Time.now if user.passed_round_two_at is nil
+    completion_date ||= Time.now
     text_box(I18n.t('course_completion.date') + ': ' + I18n.l(completion_date, locale: user.locale, format: "%m/%d/%Y"), at: [left, top + margin + height], style: :normal, size: 14)
   end
 end
@@ -43,7 +43,7 @@ class CourseCompletionA4 < Prawn::Document
     text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
     text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
     completion_date = from_active_admin ? user.passed_round_two_at : Time.now
-    completion_date ||= Time.now # Fallback to Time.now if user.passed_round_two_at is nil
+    completion_date ||= Time.now
     date_format = (user.locale == 'en-us') ? "%m/%d/%Y" : "%d/%m/%Y"
     text_box(I18n.t('course_completion.date') + ': ' + I18n.l(completion_date, locale: user.locale, format: date_format), at: [left, top + margin + height], style: :normal, size: 14)
   end
@@ -64,14 +64,16 @@ class CourseCompletionA4WithDepartment < Prawn::Document
     height = 32
     margin = 1.6
     fill_color '6022A6'
-    text_box(I18n.t('course_completion.institution') + ': ' + user.institution, at: [left, top + (margin*5) + (height*5)], style: :normal, size: 14)
-    text_box(I18n.t('course_completion.department') + ': ' + user.department.to_s, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
-    text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
-    text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
+
+    # Values only — labels are pre-printed on the Japanese JPG template
+    text_box(user.institution, at: [left, top + (margin*5) + (height*5)], style: :normal, size: 14)
+    text_box(user.department.to_s, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
+    text_box(user.last_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
+    text_box(user.first_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
     completion_date = from_active_admin ? user.passed_round_two_at : Time.now
-    completion_date ||= Time.now # Fallback to Time.now if user.passed_round_two_at is nil
+    completion_date ||= Time.now
     date_format = (user.locale == 'en-us') ? "%m/%d/%Y" : "%d/%m/%Y"
-    text_box(I18n.t('course_completion.date') + ': ' + I18n.l(completion_date, locale: user.locale, format: date_format), at: [left, top + margin + height], style: :normal, size: 14)
+    text_box(I18n.l(completion_date, locale: user.locale, format: date_format), at: [left, top + margin + height], style: :normal, size: 14)
   end
 end
 
