@@ -5,28 +5,28 @@ require 'open-uri'
 # HELPER FOR SAFE IMAGE LOADING
 # =========================================================================
 module CertificateAssetHelper
-def self.load_image(pdf, locale, filename)
+def self.load_image(pdf, locale, filename, size)
   local_path = Rails.root.join("app/assets/images", filename)
 
   if File.exist?(local_path)
     # 1. Use the local file if it exists on this server branch
-    pdf.image(local_path, at: [pdf.bounds.absolute_left, PDF::Core::PageGeometry::SIZES[pdf.page_size][1] - pdf.bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES[pdf.page_size])
+    pdf.image(local_path, at: [pdf.bounds.absolute_left, PDF::Core::PageGeometry::SIZES[size][1] - pdf.bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES[size])
   else
     # 2. Fallback: stream the asset from the specific localized live server over HTTPS
     fallback_domain = locale == 'en-us' ? 'www' : locale
     remote_url = "https://#{fallback_domain}.langselector.com/assets/#{filename}"
     
     begin
-      pdf.image(URI.open(remote_url), at: [pdf.bounds.absolute_left, PDF::Core::PageGeometry::SIZES[pdf.page_size][1] - pdf.bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES[pdf.page_size])
+      pdf.image(URI.open(remote_url), at: [pdf.bounds.absolute_left, PDF::Core::PageGeometry::SIZES[size][1] - pdf.bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES[size])
     rescue => e
       # 3. Last resort fallback: try to load the non-updated version of the local image
       legacy_filename = filename.gsub('-updated', '')
       legacy_local_path = Rails.root.join("app/assets/images", legacy_filename)
       
       if File.exist?(legacy_local_path)
-        pdf.image(legacy_local_path, at: [pdf.bounds.absolute_left, PDF::Core::PageGeometry::SIZES[pdf.page_size][1] - pdf.bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES[pdf.page_size])
+        pdf.image(legacy_local_path, at: [pdf.bounds.absolute_left, PDF::Core::PageGeometry::SIZES[size][1] - pdf.bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES[size])
       else
-        # Final fail-safe: Raise a descriptive error instead of a hard crash if no background image is available
+        # Final fail-safe: Render message to page instead of hard crashing
         pdf.text "Certificate background asset could not be loaded. Please contact support.", align: :center, valign: :center
       end
     end
@@ -49,7 +49,7 @@ def initialize(user, from_active_admin = false)
   font('geinspira')
   
   # Load background image safely
-  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}-updated.jpg")
+  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}-updated.jpg", 'LETTER')
   
   left = 68
   top = 415
@@ -76,7 +76,7 @@ def initialize(user, from_active_admin = false)
   font('geinspira')
   
   # Load background image safely
-  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}-updated.jpg")
+  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}-updated.jpg", 'A4')
 
   left = 68
   top = %i[it].include?(I18n.locale) ? 415 : 445
@@ -97,17 +97,16 @@ class UpdatedCourseCompletionA4WithDepartment < Prawn::Document
 def initialize(user, from_active_admin = false)
   super(page_size: 'A4', page_layout: :portrait, left_margin: 0, right_margin: 0, top_margin: 0, bottom_margin: 0)
   
-  # Safe check for localized font path on main branch
   font_path = Rails.root.join('app/assets/fonts/ArialUnicodeMS.ttf')
   if File.exist?(font_path)
     font_families.update({ 'arial-ms' => { normal: font_path } })
     font('arial-ms')
   else
-    font('Helvetica') # Fallback if file doesn't exist on main branch
+    font('Helvetica')
   end
   
   # Load background image safely
-  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}-updated.jpg")
+  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}-updated.jpg", 'A4')
 
   left = 68
   top = 410
@@ -141,7 +140,7 @@ def initialize(user, from_active_admin = false)
   font('geinspira')
   
   # Load background image safely
-  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}.jpg")
+  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}.jpg", 'LETTER')
 
   left = 68
   top = 382
@@ -168,7 +167,7 @@ def initialize(user, from_active_admin = false)
   font('geinspira')
   
   # Load background image safely
-  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}.jpg")
+  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}.jpg", 'A4')
 
   left = 212
   top = 422
@@ -198,7 +197,7 @@ def initialize(user, from_active_admin = false)
   end
 
   # Load background image safely
-  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}.jpg")
+  CertificateAssetHelper.load_image(self, I18n.locale.to_s, "course-completion-#{I18n.locale}.jpg", 'A4')
 
   left = 38
   top = 375
