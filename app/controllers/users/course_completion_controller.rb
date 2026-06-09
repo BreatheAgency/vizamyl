@@ -1,3 +1,6 @@
+# Ensure Prawn is loaded in this file
+require 'prawn'
+
 # =========================================================================
 # 1. UPDATED TEMPLATES (Used when COUNTRY_REDIRECTS[origin][:redirect] is true)
 # =========================================================================
@@ -170,22 +173,21 @@ def success
 
   from_active_admin = params[:from_active_admin] == 'true' if params[:from_active_admin]
 
-  # Evaluate everything inside the target user's language scope
   I18n.with_locale(user.locale) do
     if redirect_country?(user)
       # Load the updated design classes
-      if european_locale?
+      if is_european?(user)
         @pdf = UpdatedCourseCompletionA4.new(user, from_active_admin)
-      elsif japanese_locale?
+      elsif is_japanese?(user)
         @pdf = UpdatedCourseCompletionA4WithDepartment.new(user, from_active_admin)
       else
         @pdf = UpdatedCourseCompletionLetter.new(user, from_active_admin)
       end
     else
       # Load the legacy design classes
-      if european_locale?
+      if is_european?(user)
         @pdf = LegacyCourseCompletionA4.new(user, from_active_admin)
-      elsif japanese_locale?
+      elsif is_japanese?(user)
         @pdf = LegacyCourseCompletionA4WithDepartment.new(user, from_active_admin)
       else
         @pdf = LegacyCourseCompletionLetter.new(user, from_active_admin)
@@ -207,13 +209,25 @@ end
 
 private
 
-# Decides whether to use the updated layout based on your routes configuration
+# Clean locale checks evaluated directly on the user object to avoid scope issues
+def is_european?(user)
+  return false unless user&.locale
+  !['en-us', 'jp'].include?(user.locale.to_s.downcase)
+end
+
+def is_japanese?(user)
+  return false unless user&.locale
+  user.locale.to_s.downcase == 'jp'
+end
+
+# Safe configuration lookup check
 def redirect_country?(user)
-  return false unless user.origin.present?
+  return false unless user&.origin.present?
   
-  # Resolves COUNTRY_REDIRECTS defined globally in config/routes.rb
+  # Use Kernel.const_get to safely fallback if COUNTRY_REDIRECTS hasn't finished loading yet
+  return false unless Object.const_defined?(:COUNTRY_REDIRECTS)
+  
   redirect_config = COUNTRY_REDIRECTS[user.origin.to_s.downcase]
-  
   redirect_config.present? && redirect_config[:redirect] == true
 end
 end
