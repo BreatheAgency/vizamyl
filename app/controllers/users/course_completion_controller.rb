@@ -59,8 +59,8 @@ class CourseCompletionA4WithDepartment < Prawn::Document
     })
     font('arial-ms')
     image(StringIO.new(File.binread(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}-updated.jpg"))), image_identifier: "course-completion-#{I18n.locale}-#{PDF_IMAGE_VERSION}", at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
-    left = 28
-    label_width = 150
+    left = 38
+    label_width = 120
     top = 410
     height = 32
     margin = 1.6
