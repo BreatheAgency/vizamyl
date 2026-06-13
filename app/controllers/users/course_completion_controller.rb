@@ -58,22 +58,28 @@ class CourseCompletionA4WithDepartment < Prawn::Document
       }
     })
     font('arial-ms')
-    image(StringIO.new(File.binread(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}-updated.jpg"))), at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
+    image(StringIO.new(File.binread(Rails.root.join("app/assets/images/course-completion-#{I18n.locale}-updated.jpg"))), image_identifier: "course-completion-#{I18n.locale}-#{PDF_IMAGE_VERSION}", at: [bounds.absolute_left, PDF::Core::PageGeometry::SIZES['A4'][1] - bounds.absolute_bottom], fit: PDF::Core::PageGeometry::SIZES['A4'])
     left = 68
+    tab = 220
     top = 410
     height = 32
     margin = 1.6
     fill_color '6022A6'
 
     # Labels from translation + values — clean JPG template (no pre-printed labels)
-    text_box(I18n.t('course_completion.institution') + ': ' + user.institution, at: [left, top + (margin*5) + (height*5)], style: :normal, size: 14)
-    text_box(I18n.t('course_completion.department') + ': ' + user.department.to_s, at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
-    text_box(I18n.t('course_completion.last_name') + ': ' + user.last_name, at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
-    text_box(I18n.t('course_completion.first_name') + ': ' + user.first_name, at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.institution') + ':', at: [left, top + (margin*5) + (height*5)], style: :normal, size: 14)
+    text_box(user.institution, at: [tab, top + (margin*5) + (height*5)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.department') + ':', at: [left, top + (margin*4) + (height*4)], style: :normal, size: 14)
+    text_box(user.department.to_s, at: [tab, top + (margin*4) + (height*4)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.last_name') + ':', at: [left, top + (margin*3) + (height*3)], style: :normal, size: 14)
+    text_box(user.last_name, at: [tab, top + (margin*3) + (height*3)], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.first_name') + ':', at: [left, top + (margin*2) + (height*2)], style: :normal, size: 14)
+    text_box(user.first_name, at: [tab, top + (margin*2) + (height*2)], style: :normal, size: 14)
     completion_date = from_active_admin ? user.passed_round_two_at : Time.now
     completion_date ||= Time.now
     date_format = (user.locale == 'en-us') ? "%m/%d/%Y" : "%d/%m/%Y"
-    text_box(I18n.t('course_completion.date') + ': ' + I18n.l(completion_date, locale: user.locale, format: date_format), at: [left, top + margin + height], style: :normal, size: 14)
+    text_box(I18n.t('course_completion.date') + ':', at: [left, top + margin + height], style: :normal, size: 14)
+    text_box(I18n.l(completion_date, locale: user.locale, format: date_format), at: [tab, top + margin + height], style: :normal, size: 14)
   end
 end
 
