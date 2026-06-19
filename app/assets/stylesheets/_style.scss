@@ -660,19 +660,28 @@ footer {
 /*===================== WELCOME-HERO CSS AREA START =====================*/
 
 .welcome__hero__area {
-  // padding: 30px 0;
-  // margin-bottom: 150px;
+
   &.blue_hand {
     margin-bottom: 21px;
   }
-  #blue-hand{
+
+  #blue-hand {
     height: 220px;
     width: auto;
   }
-  p.disclaimer{
+
+  p.disclaimer {
     max-width: 546px;
     margin-left: auto;
     text-align: right;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 768px) {
+    p.disclaimer {
+      text-align: left;
+      margin-left: 0;
+    }
   }
 }
 
