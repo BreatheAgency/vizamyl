@@ -193,7 +193,7 @@ de:
       # Only German speaking German natives should see this (i.e not German speaking Swiss or Austrians)
       blue_hand_body_html: |
         <div class="blue-hand"/>
-        <p class="disclaimer"> Dieses Schulungsmaterial ist verpflichtender
+        <p class="disclaimer mb-5"> Dieses Schulungsmaterial ist verpflichtender
         Teil der Zulassung von Flutemetamol ( 18 F) und wurde als zusätzliche
         risikominimierende Maßnahme beauflagt, um das Risiko des Auftretens
         einer falschen Interpretation von PET-Bildern mit Vizamyl zu
