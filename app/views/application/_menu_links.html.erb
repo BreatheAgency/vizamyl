@@ -10,6 +10,14 @@
   <% end %>
 <% end %>
 <li><%= link_to t('layouts.application.references'), static_path(id: 'references', locale: I18n.locale) %></li>
+<% if I18n.locale == :'en-us' %>
+  <li><%= link_to t('layouts.application.formations_importantes_risques_securite'),
+          static_path(
+            id: 'formations-importantes-risques-securite',
+            locale: I18n.locale
+          ) %>
+  </li>
+<% end %>
 <li><%= link_to t('layouts.application.contact'), static_path(id: 'contact', locale: I18n.locale) %></li>
 <li><%= link_to t('layouts.application.resources'), static_path(id: 'resources', locale: I18n.locale) %></li>
 <% if user_signed_in? %>
