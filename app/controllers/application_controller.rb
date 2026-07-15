@@ -14,8 +14,8 @@ class ApplicationController < ActionController::Base
   helper_method :has_department?
   helper_method :not_sent_invite_code?
 
-  # Surgically Added: Keeps absolute URLs pointing to the current domain (local.com or live.com)
-  # instead of hardcoding a single domain fallback.
+  # Dynamic URL compilation. This prevents Rails/Devise redirects from jumping 
+  # to a static fallback domain in production, matching our active subdomain instead.
   def default_url_options
     { 
       host: request.host, 
@@ -128,7 +128,7 @@ class ApplicationController < ActionController::Base
       RequestStore.store[:desired_locale] = current_user.locale
     elsif I18n.available_locales.include?(RequestStore.store[:locale_in_url].to_sym)
       RequestStore.store[:desired_locale] = RequestStore.store[:locale_in_url]
-    end host: request.host,
+    end
 
     if params[:force_locale] && I18n.available_locales.include?(params[:force_locale])
       RequestStore.store[:desired_locale] = params[:force_locale]
