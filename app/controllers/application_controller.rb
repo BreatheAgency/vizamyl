@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_origin
-  before_action :redirect_locale
+  before_action :set_locale
 
   # Dynamic default url options. Ensures absolute links are compiled against
   # whichever subdomain/domain the user is currently interacting with.
