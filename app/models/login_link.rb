@@ -16,7 +16,7 @@ class LoginLink
         'dk' => { country: 'Denmark',         url: "#{protocol}://ch.#{domain}",  locale: 'en-gb', origin: 'dk' },
         'ee' => { country: 'Estonia',         url: "#{protocol}://ch.#{domain}",  locale: 'en-gb', origin: 'ee' },
         'fi' => { country: 'Finland',         url: "#{protocol}://ch.#{domain}",  locale: 'en-gb', origin: 'fi' },
-        # 'fr' => { country: 'France',        url: "#{protocol}://#{domain}",     locale: 'fr',    origin: 'fr' },
+        'fr' => { country: 'France',        url: "#{protocol}://#{domain}",     locale: 'fr',    origin: 'fr' },
         'de' => { country: 'Germany',         url: "#{protocol}://de.#{domain}",  locale: 'de',    origin: 'de' },
         'gr' => { country: 'Greece',          url: "#{protocol}://ch.#{domain}",  locale: 'en-gb', origin: 'gr' },
         'hk' => { country: 'Hong Kong',       url: "#{protocol}://si.#{domain}",  locale: 'en-us', origin: 'hk' },
