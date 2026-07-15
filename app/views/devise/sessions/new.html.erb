@@ -10,6 +10,7 @@
               <%= simple_format t('.intro') %>
             </p>
           </div>
+          
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
             <%= f.error_notification %>
             <%= f.input :email, required: true, autofocus: true %>
@@ -20,19 +21,18 @@
                 <%= f.input :remember_me, as: :boolean, input_html: { checked: true } %>
               </div>
               <div class="forget">
-                <%= link_to t('.forgot_your_password'), new_user_password_path %>
+                <%= link_to t('.forgot_your_password'), new_password_path(resource_name) %>
               </div>
             </div>
 
             <div class="submit d-flex justify-content-end">
               <%= button_tag(type: 'submit', class: 'login btn btn-primary') do %>
                 <%= t('.login') %>
-                <!-- <%= image_tag("right_angle_purple.svg") %> -->
                 <span class="arrow-circle"><i class="fa fa-arrow-right-long arrow right"></i></span>
               <% end %>
             </div>
           <% end %>
-          </form>
+
           <script>
            $("#fake_check").change(function() {
              if(this.checked) {
