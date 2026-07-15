@@ -1,7 +1,53 @@
 # config/routes.rb
+
+COUNTRY_REDIRECTS = {
+  'au' => { subdomain: 'si',  redirect: true  },
+  'at' => { subdomain: 'at',  redirect: true  },
+  'be' => { subdomain: 'ch',  redirect: true  },
+  'bg' => { subdomain: 'ch',  redirect: true  },
+  'hr' => { subdomain: 'ch',  redirect: true  },
+  'cz' => { subdomain: 'ch',  redirect: true  },
+  'dk' => { subdomain: 'ch',  redirect: true  },
+  'ee' => { subdomain: 'ch',  redirect: true  },
+  'fi' => { subdomain: 'ch',  redirect: true  },
+  'fr' => { subdomain: 'fr',  redirect: false },
+  'de' => { subdomain: 'de',  redirect: true  },
+  'gr' => { subdomain: 'ch',  redirect: true  },
+  'hk' => { subdomain: 'si',  redirect: true  },
+  'hu' => { subdomain: 'ch',  redirect: true  },
+  'il' => { subdomain: 'si',  redirect: true  },
+  'it' => { subdomain: 'it',  redirect: true  },
+  'jp' => { subdomain: 'jp',  redirect: true  },
+  'lu' => { subdomain: 'ch',  redirect: true  },
+  'nl' => { subdomain: 'ch',  redirect: true  },
+  'no' => { subdomain: 'ch',  redirect: true  },
+  'pl' => { subdomain: 'ch',  redirect: true  },
+  'sg' => { subdomain: 'si',  redirect: true  },
+  'sk' => { subdomain: 'ch',  redirect: true  },
+  'si' => { subdomain: 'ch',  redirect: true  },
+  'kr' => { subdomain: nil,   redirect: true  },
+  'es' => { subdomain: 'es',  redirect: true  },
+  'se' => { subdomain: 'ch',  redirect: true  },
+  'ch' => { subdomain: 'ch',  redirect: true  },
+  'tw' => { subdomain: 'si',  redirect: true  },
+  'tr' => { subdomain: 'si',  redirect: true  },
+  'gb' => { subdomain: 'uk',  redirect: true  },
+  'us' => { subdomain: 'us',  redirect: true  }
+}.freeze
+
 Rails.application.routes.draw do
 
   mount_roboto
+
+  # France maintenance redirect
+  get '/fr' => redirect('/down-for-maintenence.html')
+  get '/fr/*path' => redirect('/down-for-maintenence.html')
+
+  # Country origin redirects — only registers routes where redirect: true
+  COUNTRY_REDIRECTS.select { |_, v| v[:redirect] }.each_key do |code|
+    get "/#{code}", to: 'redirects#country', defaults: { origin: code }
+  end
+
   get '/upgrade' => 'errors#upgrade'
   get 'sitemap.xml', to: 'sitemap#index', defaults: { format: 'xml' }
 
@@ -74,5 +120,5 @@ Rails.application.routes.draw do
   get '/si' => 'static#show', id: 'gatekeeper-slovenian'
   get '/bg' => 'static#show', id: 'gatekeeper-bulgaria'
   get '/*id' => 'static#show', id: 'gatekeeper'
-  root to: 'static#show', defaults: { id: 'home', locale: 'en-us' }
+  root to: 'static#show', id: 'gatekeeper'
 end
