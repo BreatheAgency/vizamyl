@@ -1,3 +1,4 @@
+# config/routes.rb
 Rails.application.routes.draw do
 
   mount_roboto
@@ -57,7 +58,13 @@ Rails.application.routes.draw do
       get '/use' => 'course_completion#adjunctive_use_of_quantification'
       get '/refresher' => 'course_completion#refresher_video'
     end
-    get '/*id' => 'static#show', id: 'home', as: :static
+
+    # This matches static pages, but ignores Devise authentication paths
+    # (users/login, users/logout, etc.) preventing routing collision.
+    get '/*id' => 'static#show', id: 'home', as: :static, constraints: lambda { |req| 
+      !req.path.include?('/users/') && !req.path.include?('/login') && !req.path.include?('/logout')
+    }
+    
     get '/' => 'static#show', id: 'home'
   end
 
