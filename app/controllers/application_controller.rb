@@ -4,8 +4,7 @@ class ApplicationController < ActionController::Base
 
   before_action :set_origin
   
-  # ActiveAdmin and Devise try to skip this callback on boot. 
-  # We MUST keep this defined here, otherwise the app crashes on startup with an ArgumentError.
+  # ActiveAdmin and Devise look for this callback on boot to skip it.
   before_action :set_locale
 
   # Dynamically builds absolute links/redirects based on the user's current subdomain
@@ -34,25 +33,25 @@ class ApplicationController < ActionController::Base
     redirect_locale
   end
 
-  # Handles country/locale path routing redirects without getting stuck in infinite loops
+  # Handles country/locale path routing redirects cleanly
   def redirect_locale
     # Skip assets entirely
     return if request.path.start_with?('/assets')
 
     desired_locale = params[:locale] || session[:locale] || I18n.default_locale
 
-    # Only redirect if we aren't already on the correct localized path
+    # Swap or prepend the locale in the raw path string.
     unless request.path.start_with?("/#{desired_locale}")
-      redirect_to url_for(safe_locale_params(desired_locale)) and return
+      new_path = if params[:locale].present?
+                   request.fullpath.sub(%r{\A/[^/]+}, "/#{desired_locale}")
+                 else
+                   "/#{desired_locale}#{request.fullpath}"
+                 end
+      
+      redirect_to new_path and return
     end
 
     I18n.locale = desired_locale
     session[:locale] = desired_locale
-  end
-
-  # Normalize parameters safely across older and newer Rails versions
-  def safe_locale_params(locale)
-    safe_params = params.respond_to?(:to_unsafe_h) ? params.to_unsafe_h : params
-    safe_params.merge(locale: locale, only_path: true)
   end
 end
