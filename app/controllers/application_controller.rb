@@ -1,14 +1,15 @@
 # app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
 
   before_action :set_origin
+  
+  # ActiveAdmin and Devise try to skip this callback on boot. 
+  # We MUST keep this defined here, otherwise the app crashes on startup with an ArgumentError.
   before_action :set_locale
 
-  # Dynamic default url options. Ensures absolute links are compiled against
-  # whichever subdomain/domain the user is currently interacting with.
+  # Dynamically builds absolute links/redirects based on the user's current subdomain
+  # instead of falling back to a hardcoded host config.
   def default_url_options
     { 
       host: request.host, 
@@ -20,22 +21,27 @@ class ApplicationController < ActionController::Base
 
   private
 
-  # Set origin ONLY if the parameter is present. This prevents navigating
-  # to `/users/login` (where ?origin= is missing) from wiping out your selection!
+  # Save the origin parameter ONLY if it's actually in the request.
+  # This stops /users/login from wiping out our saved session[:origin] when the parameter is missing.
   def set_origin
     if params[:origin].present?
       session[:origin] = params[:origin]
     end
   end
 
-  # Dynamically redirect or set locale based on the incoming path parameters
+  # Wrapper method to keep our boot callback happy
+  def set_locale
+    redirect_locale
+  end
+
+  # Handles country/locale path routing redirects without getting stuck in infinite loops
   def redirect_locale
-    # Skip routing/locale checks on asset pipelines or API requests
+    # Skip assets entirely
     return if request.path.start_with?('/assets')
 
     desired_locale = params[:locale] || session[:locale] || I18n.default_locale
 
-    # Avoid infinite redirect loops if already on the correct path
+    # Only redirect if we aren't already on the correct localized path
     unless request.path.start_with?("/#{desired_locale}")
       redirect_to url_for(safe_locale_params(desired_locale)) and return
     end
@@ -44,8 +50,9 @@ class ApplicationController < ActionController::Base
     session[:locale] = desired_locale
   end
 
-  # Safe parameter filtering for redirect compilation
+  # Normalize parameters safely across older and newer Rails versions
   def safe_locale_params(locale)
-    params.to_unsafe_h.merge(locale: locale, only_path: true)
+    safe_params = params.respond_to?(:to_unsafe_h) ? params.to_unsafe_h : params
+    safe_params.merge(locale: locale, only_path: true)
   end
 end
