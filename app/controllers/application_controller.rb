@@ -1,9 +1,13 @@
 # app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_action :set_locale
-  before_action :set_origin
-  before_action :redirect_locale
+
+  # Bypass our locale and country checks if we are on a Devise auth page.
+  # This stops /users/login from getting hijacked and redirecting to the country selector.
+  before_action :set_locale, unless: :devise_controller?
+  before_action :set_origin, unless: :devise_controller?
+  before_action :redirect_locale, unless: :devise_controller?
+
   helper_method :european_locale?
   helper_method :non_european_locale?
   helper_method :us_locale?
