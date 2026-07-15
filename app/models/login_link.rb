@@ -16,7 +16,7 @@ class LoginLink
         'dk' => { country: 'Denmark',         url: "#{protocol}://ch.#{domain}",  locale: 'en-gb', origin: 'dk' },
         'ee' => { country: 'Estonia',         url: "#{protocol}://ch.#{domain}",  locale: 'en-gb', origin: 'ee' },
         'fi' => { country: 'Finland',         url: "#{protocol}://ch.#{domain}",  locale: 'en-gb', origin: 'fi' },
-        'fr' => { country: 'France',        url: "#{protocol}://#{domain}",     locale: 'fr',    origin: 'fr' },
+        'fr' => { country: 'France',          url: "#{protocol}://#{domain}",     locale: 'fr',    origin: 'fr' },
         'de' => { country: 'Germany',         url: "#{protocol}://de.#{domain}",  locale: 'de',    origin: 'de' },
         'gr' => { country: 'Greece',          url: "#{protocol}://ch.#{domain}",  locale: 'en-gb', origin: 'gr' },
         'hk' => { country: 'Hong Kong',       url: "#{protocol}://si.#{domain}",  locale: 'en-us', origin: 'hk' },
@@ -62,35 +62,3 @@ class LoginLink
     end
   end
 end
-
-
-# class LoginLink
-#   class << self
-#     def col_1
-#       {
-#        'en-us': 'United States',
-#        'en-gb': 'United Kingdom',
-#        'de-at': 'Austria',
-#        'be': 'Belgium / Luxembourg',
-#       }
-#     end
-
-#     def col_2
-#       {
-#        'fr': 'France',
-#        'de': 'Germany',
-#        'it': 'Italy',
-#        'jp': 'Japan',
-#       }
-#     end
-
-#     def col_3
-#       {
-#        'si': 'Slovenia',
-#        'es': 'Spain',
-#        'http://www.vizamyl.co.kr': 'South Korea',
-#        'ch': 'Switzerland'
-#       }
-#     end
-#   end
-# end
