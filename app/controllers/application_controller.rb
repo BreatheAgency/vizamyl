@@ -161,6 +161,7 @@ class ApplicationController < ActionController::Base
     default_or_subdomain_locale = inferred_subdomain_locale
 
     RequestStore.store[:desired_locale] = default_or_subdomain_locale
+    # Don't fallback locale_in_url so we can detect if it's missing from the path!
     RequestStore.store[:locale_in_url] = request.params.fetch(:locale, nil).to_s
 
     if user_signed_in?
