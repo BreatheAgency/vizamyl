@@ -24,4 +24,4 @@ Rails.application.config.session_store :cookie_store,
     rescue PublicSuffix::Error
       nil
     end
-  } 
+  }

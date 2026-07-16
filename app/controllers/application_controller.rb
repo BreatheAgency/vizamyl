@@ -118,15 +118,54 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # Strict Routing Enforcer: If a request arrives on a subdomain but is missing 
+  # the subdomain's native locale in the path (e.g. jp.com/ instead of jp.com/jp),
+  # we force a redirect to the fully localized URL instantly.
   def redirect_locale
-    if RequestStore.store[:locale_in_url].to_s != RequestStore.store[:desired_locale].to_s && request.fullpath != '/'
-      redirect_to(request.fullpath.sub(RequestStore.store[:locale_in_url].to_s, RequestStore.store[:desired_locale].to_s))
+    # Skip routing checks on asset pipeline calls
+    return if request.path.start_with?('/assets')
+
+    # Force a redirect if the current path does not start with the desired locale
+    if RequestStore.store[:locale_in_url].to_s != RequestStore.store[:desired_locale].to_s
+      target_path = if params[:locale].present?
+                      request.fullpath.sub(%r{\A/[^/]+}, "/#{RequestStore.store[:desired_locale]}")
+                    else
+                      "/#{RequestStore.store[:desired_locale]}#{request.fullpath}"
+                    end
+
+      redirect_to(target_path) and return
+    end
+  end
+
+  # Directly maps the request's subdomain to its respective target locale.
+  # This matches the subdomains and locales defined in your LoginLink.
+  def inferred_subdomain_locale
+    subdomain = request.subdomains.first
+    return I18n.default_locale.to_s if subdomain.blank? || subdomain == 'www'
+
+    case subdomain
+    when 'jp' then 'jp'
+    when 'de' then 'de'
+    when 'fr' then 'fr'
+    when 'it' then 'it'
+    when 'es' then 'es'
+    when 'at' then 'de-at'
+    when 'uk' then 'en-gb'
+    when 'us' then 'en-us'
+    when 'ch' then 'ch'
+    when 'si' then 'en-us' # SI subdomain shares en-us screens
+    else
+      I18n.default_locale.to_s
     end
   end
 
   def set_locale
-    RequestStore.store[:desired_locale] = I18n.default_locale
-    RequestStore.store[:locale_in_url] = request.params.fetch(:locale, I18n.default_locale).to_s
+    # Enforce fallback strictly to the subdomain's native locale
+    default_or_subdomain_locale = inferred_subdomain_locale
+
+    RequestStore.store[:desired_locale] = default_or_subdomain_locale
+    # Don't fallback locale_in_url so we can detect if it's missing from the path!
+    RequestStore.store[:locale_in_url] = request.params.fetch(:locale, nil).to_s
 
     if user_signed_in?
       RequestStore.store[:desired_locale] = current_user.locale
