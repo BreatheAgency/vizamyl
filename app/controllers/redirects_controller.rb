@@ -4,11 +4,25 @@ class RedirectsController < ApplicationController
   def country
     origin = params[:origin] || params[:id]
     
-    # Save the country selection to the shared session
+    # 1. Save the country selection to the shared session
     session[:origin] = origin if origin.present?
 
-    # Redirect them to the localized landing page
-    redirect_to "/#{I18n.locale}"
+    # 2. Get the target subdomain configuration for this country from COUNTRY_REDIRECTS
+    redirect_config = COUNTRY_REDIRECTS[origin]
+
+    if redirect_config.present? && redirect_config[:subdomain].present?
+      # If the country has a designated subdomain (like 'jp' or 'us'),
+      # redirect them to that subdomain's clean root homepage (preserving secure protocols)
+      protocol = request.ssl? ? 'https' : 'http'
+      domain = request.domain
+      port = request.port == 80 || request.port == 443 ? "" : ":#{request.port}"
+      
+      # Clean, absolute redirect
+      redirect_to "#{protocol}://#{redirect_config[:subdomain]}.#{domain}#{port}/#{I18n.locale}"
+    else
+      # Fallback: if there is no subdomain configuration, just redirect to localized root
+      redirect_to "/#{I18n.locale}"
+    end
   end
 
 end

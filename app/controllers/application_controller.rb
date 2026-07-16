@@ -125,16 +125,13 @@ class ApplicationController < ActionController::Base
     # Skip routing checks on asset pipeline calls
     return if request.path.start_with?('/assets')
 
-    # Force a redirect if the current path does not start with the desired locale
-    if RequestStore.store[:locale_in_url].to_s != RequestStore.store[:desired_locale].to_s
-      target_path = if params[:locale].present?
-                      request.fullpath.sub(%r{\A/[^/]+}, "/#{RequestStore.store[:desired_locale]}")
-                    else
-                      "/#{RequestStore.store[:desired_locale]}#{request.fullpath}"
-                    end
+    # Guard Clause: If the path already has the target locale (e.g. starting with /jp or /jp/),
+    # do NOT redirect! This completely prevents /jp/jp redirect loops.
+    return if request.path.start_with?("/#{RequestStore.store[:desired_locale]}")
 
-      redirect_to(target_path) and return
-    end
+    # Build the correct target path by prepending the desired locale
+    target_path = "/#{RequestStore.store[:desired_locale]}#{request.fullpath}"
+    redirect_to(target_path) and return
   end
 
   # Directly maps the request's subdomain to its respective target locale.
@@ -164,7 +161,6 @@ class ApplicationController < ActionController::Base
     default_or_subdomain_locale = inferred_subdomain_locale
 
     RequestStore.store[:desired_locale] = default_or_subdomain_locale
-    # Don't fallback locale_in_url so we can detect if it's missing from the path!
     RequestStore.store[:locale_in_url] = request.params.fetch(:locale, nil).to_s
 
     if user_signed_in?
