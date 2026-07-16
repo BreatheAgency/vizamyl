@@ -157,7 +157,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-    # Enforce fallback strictly to the subdomain's native locale instead of default 'en'
+    # Enforce fallback strictly to the subdomain's native locale
     default_or_subdomain_locale = inferred_subdomain_locale
 
     RequestStore.store[:desired_locale] = default_or_subdomain_locale
@@ -175,6 +175,11 @@ class ApplicationController < ActionController::Base
     end
 
     I18n.locale = RequestStore.store[:desired_locale]
+
+    # Automatically overrides and binds all mailer/absolute URL configurations
+    # to the exact host domain currently in the user's browser in real-time.
+    ActionMailer::Base.default_url_options[:host] = request.host_with_port
+    ActionMailer::Base.default_url_options[:protocol] = request.ssl? ? 'https' : 'http'
   end
 
   def set_origin
