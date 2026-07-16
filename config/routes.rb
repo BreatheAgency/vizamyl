@@ -40,8 +40,8 @@ Rails.application.routes.draw do
   mount_roboto
 
   # France maintenance redirect
-  get '/fr' => redirect('/down-for-maintenence.html')
-  get '/fr/*path' => redirect('/down-for-maintenence.html')
+  # get '/fr' => redirect('/down-for-maintenence.html')
+  # get '/fr/*path' => redirect('/down-for-maintenence.html')
 
   # Country origin redirects — only registers routes where redirect: true
   COUNTRY_REDIRECTS.select { |_, v| v[:redirect] }.each_key do |code|
