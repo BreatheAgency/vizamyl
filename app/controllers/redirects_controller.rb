@@ -17,10 +17,10 @@ class RedirectsController < ApplicationController
       domain = request.domain
       port = request.port == 80 || request.port == 443 ? "" : ":#{request.port}"
       
-      # Clean, absolute redirect pointing straight to the localized home view
+      # Clean, absolute redirect pointing straight to the localised home view
       redirect_to "#{protocol}://#{redirect_config[:subdomain]}.#{domain}#{port}/#{I18n.locale}/home"
     else
-      # Fallback: if there is no subdomain configuration, redirect to localized home root
+      # Fallback: if there is no subdomain configuration, redirect to localised home root
       redirect_to "/#{I18n.locale}/home"
     end
   end
