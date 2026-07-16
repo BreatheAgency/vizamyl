@@ -1,8 +1,13 @@
+# app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_action :set_locale
-  before_action :set_origin
-  before_action :redirect_locale
+
+  # Bypass our locale and country checks if we are on a Devise auth page.
+  # This stops /users/login from getting hijacked and redirecting to the country selector.
+  before_action :set_locale, unless: :devise_controller?
+  before_action :set_origin, unless: :devise_controller?
+  before_action :redirect_locale, unless: :devise_controller?
+
   helper_method :european_locale?
   helper_method :non_european_locale?
   helper_method :us_locale?
@@ -13,6 +18,16 @@ class ApplicationController < ActionController::Base
   helper_method :has_department?
   helper_method :not_sent_invite_code?
 
+  # Dynamic URL compilation. This prevents Rails/Devise redirects from jumping 
+  # to a static fallback domain in production, matching our active subdomain instead.
+  def default_url_options
+    { 
+      host: request.host, 
+      port: request.port, 
+      protocol: request.protocol,
+      locale: I18n.locale 
+    }
+  end
 
   def after_sign_in_path_for(resource)
    if resource.is_a?(AdminUser)
@@ -67,7 +82,7 @@ class ApplicationController < ActionController::Base
     I18n.locale == :jp
   end
 
-  # Only Japanses want / need to collect this field
+  # Only Japanese want / need to collect this field
   def has_department?
     japanese_locale?
   end
@@ -103,15 +118,51 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # Strict Routing Enforcer: If a request arrives on a subdomain but is missing 
+  # the subdomain's native locale in the path (e.g. jp.com/ instead of jp.com/jp),
+  # we force a redirect to the fully localized URL instantly.
   def redirect_locale
-    if RequestStore.store[:locale_in_url].to_s != RequestStore.store[:desired_locale].to_s && request.fullpath != '/'
-      redirect_to(request.fullpath.sub(RequestStore.store[:locale_in_url].to_s, RequestStore.store[:desired_locale].to_s))
+    # Skip routing checks on asset pipeline calls
+    return if request.path.start_with?('/assets')
+
+    # Guard Clause: If the path already has the target locale (e.g. starting with /jp or /jp/),
+    # do NOT redirect! This completely prevents /jp/jp redirect loops.
+    return if request.path.start_with?("/#{RequestStore.store[:desired_locale]}")
+
+    # Build the correct target path by prepending the desired locale
+    target_path = "/#{RequestStore.store[:desired_locale]}#{request.fullpath}"
+    redirect_to(target_path) and return
+  end
+
+  # Directly maps the request's subdomain to its respective target locale.
+  # This matches the subdomains and locales defined in your LoginLink.
+  def inferred_subdomain_locale
+    subdomain = request.subdomains.first
+    return I18n.default_locale.to_s if subdomain.blank? || subdomain == 'www'
+
+    case subdomain
+    when 'jp' then 'jp'
+    when 'de' then 'de'
+    when 'fr' then 'fr'
+    when 'it' then 'it'
+    when 'es' then 'es'
+    when 'at' then 'de-at'
+    when 'uk' then 'en-gb'
+    when 'us' then 'en-us'
+    when 'ch' then 'ch'
+    when 'si' then 'en-us' # SI subdomain shares en-us screens
+    else
+      I18n.default_locale.to_s
     end
   end
 
   def set_locale
-    RequestStore.store[:desired_locale] = I18n.default_locale
-    RequestStore.store[:locale_in_url] = request.params.fetch(:locale, I18n.default_locale).to_s
+    # Enforce fallback strictly to the subdomain's native locale
+    default_or_subdomain_locale = inferred_subdomain_locale
+
+    RequestStore.store[:desired_locale] = default_or_subdomain_locale
+    # Don't fallback locale_in_url so we can detect if it's missing from the path!
+    RequestStore.store[:locale_in_url] = request.params.fetch(:locale, nil).to_s
 
     if user_signed_in?
       RequestStore.store[:desired_locale] = current_user.locale
