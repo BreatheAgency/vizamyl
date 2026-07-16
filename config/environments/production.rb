@@ -82,3 +82,5 @@ Rails.application.configure do
     host: 'localhost:3000',
     protocol: 'http'
   }
+  
+end
