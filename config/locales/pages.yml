@@ -324,6 +324,12 @@ fr:
       download: Télécharger
       smpc_title: Vizamyl RCP UE
       rainbow_title: Valeurs RVB de l’échelle de couleurs Rainbow
+    # File to be updated on the French site
+    resources:
+      download: Télécharger
+      smpc_title: Vizamyl RCP UE
+      rainbow_title: Valeurs RVB de l’échelle de couleurs Rainbow
+      additional_resource_title: File Name Here
     contact:
       left:
         title: |
