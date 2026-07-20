@@ -5,6 +5,7 @@
 /.bundle
 /.env
 /.foreman
+.rubymate
 /coverage/*
 /db/*.sqlite3
 /log/*
