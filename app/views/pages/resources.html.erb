@@ -3,69 +3,86 @@
     <div class="reference__wrap">
       <div class="reference__content download__content">
         <h1><%= t('layouts.application.resources') %></h1>
+
         <div class="resource__download">
           <% if I18n.locale == :'en-us' %>
             <div class="resource__file">
               <span><%= t('.prescribing_information_title') %></span>
+
               <div class="resource__file__card">
                 <%= image_tag('download_file.svg') %>
+
                 <a target="_blank" href="<%= asset_url("/pdfs/#{I18n.locale}/Vizamyl_PI.pdf") %>">
                   <%= t('.download') %>
                 </a>
               </div>
             </div>
-
           <% else %>
-            <h2><%= t('.smpc_title')%></h2>      
-              
+            <h2><%= t('.smpc_title') %></h2>
+
             <% if I18n.locale == :'jp' %>
               <ul class="japan-resource-list">
                 <li>
                   <div class="resource__file">
                     <div class="resource__file__card">
                       <%= image_tag('download_file.svg') %>
-                      <a target="_blank" href='<%= asset_url("/pdfs/#{I18n.locale}/fastlab.pdf")%>'>
+
+                      <a target="_blank" href="<%= asset_url("/pdfs/#{I18n.locale}/fastlab.pdf") %>">
                         <%= t('.download') %>
                       </a>
                     </div>
+
                     <span>FASTlab</span>
                   </div>
                 </li>
+
                 <li>
                   <div class="resource__file">
                     <div class="resource__file__card">
                       <%= image_tag('download_file.svg') %>
-                      <a target="_blank" href='<%= asset_url("/pdfs/#{I18n.locale}/fastlab2.pdf")%>'>
+
+                      <a target="_blank" href="<%= asset_url("/pdfs/#{I18n.locale}/fastlab2.pdf") %>">
                         <%= t('.download') %>
                       </a>
                     </div>
+
                     <span>FASTlab2</span>
                   </div>
                 </li>
               </ul>
-
             <% else %>
+              <div class="resource__file">
+                <span><%= t('.smpc_title') %></span>
 
-            <div class="resource__file">
-              <span><%= t('.smpc_title')%></span>
-              <div class="resource__file__card">
-                <%= image_tag('download_file.svg') %>
-                <a target="_blank" href="<%= asset_url("/pdfs/#{I18n.locale}/smpc.pdf") %>">
-                  <%= t('.download') %>
-                </a>
+                <div class="resource__file__card">
+                  <%= image_tag('download_file.svg') %>
+
+                  <% if I18n.locale.to_s.start_with?('es') %>
+                    <a
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      href="https://cima.aemps.es/cima/dochtml/ft/114941002/FT_114941002.html"
+                    >
+                      <%= t('.download') %>
+                    </a>
+                  <% else %>
+                    <a target="_blank" href="<%= asset_url("/pdfs/#{I18n.locale}/smpc.pdf") %>">
+                      <%= t('.download') %>
+                    </a>
+                  <% end %>
+                </div>
               </div>
-            </div>
-          <% end %>
-
+            <% end %>
           <% end %>
 
           <% if I18n.locale != :it %>
-
             <div class="resource__file">
               <span><%= t('.rainbow_title') %></span>
+
               <div class="resource__file__card">
                 <%= image_tag('download_file.svg') %>
-                <a target="_blank" href='<%= asset_url("/pdfs/#{I18n.locale}/rainbow_colour_scale_rgb_values.pdf")%>'>
+
+                <a target="_blank" href="<%= asset_url("/pdfs/#{I18n.locale}/rainbow_colour_scale_rgb_values.pdf") %>">
                   <%= t('.download') %>
                 </a>
               </div>
