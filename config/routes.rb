@@ -10,7 +10,7 @@ COUNTRY_REDIRECTS = {
   'dk' => { subdomain: 'ch',  redirect: true  },
   'ee' => { subdomain: 'ch',  redirect: true  },
   'fi' => { subdomain: 'ch',  redirect: true  },
-  'fr' => { subdomain: 'fr',  redirect: true  },
+  'fr' => { subdomain: 'fr',  redirect: false },
   'de' => { subdomain: 'de',  redirect: true  },
   'gr' => { subdomain: 'ch',  redirect: true  },
   'hk' => { subdomain: 'si',  redirect: true  },
@@ -36,14 +36,13 @@ COUNTRY_REDIRECTS = {
 }.freeze
 
 Rails.application.routes.draw do
-
   mount_roboto
 
   # France maintenance redirect
-  # get '/fr' => redirect('/down-for-maintenence.html')
-  # get '/fr/*path' => redirect('/down-for-maintenence.html')
+  get '/fr' => redirect('/down-for-maintenence.html')
+  get '/fr/*path' => redirect('/down-for-maintenence.html')
 
-  # Country origin redirects — only registers routes where redirect: true
+  # Country origin redirects
   COUNTRY_REDIRECTS.select { |_, v| v[:redirect] }.each_key do |code|
     get "/#{code}", to: 'redirects#country', defaults: { origin: code }
   end
@@ -54,11 +53,15 @@ Rails.application.routes.draw do
   get 'errors/file_not_found'
   get 'errors/unprocessable'
   get 'errors/internal_server_error'
+
   match '/404', to: 'errors#file_not_found', via: [:get, :post]
   match '/422', to: 'errors#unprocessable', via: [:get, :post]
   match '/500', to: 'errors#internal_server_error', via: [:get, :post]
 
-  devise_for :admin_users, ActiveAdmin::Devise.config.merge(controllers: {sessions: 'admin_users/sessions'})
+  devise_for :admin_users,
+             ActiveAdmin::Devise.config.merge(
+               controllers: { sessions: 'admin_users/sessions' }
+             )
 
   ActiveAdmin.routes(self)
 
@@ -71,33 +74,53 @@ Rails.application.routes.draw do
   resources :chapters, only: %i(index show)
   resources :progressions, only: %i(create show index update)
 
-  get '/course/:locale/*other' => 'static#show', id: 'course'
+  get '/course/:locale/*other',
+      to: 'static#show',
+      id: 'course',
+      as: :course,
+      constraints: {
+        locale: /#{I18n.available_locales.join("|")}/
+      }
 
-  # if !Rails.env.production?
-    scope 'admin' do
-      get 'become', to: 'admin/become#become'
-    end
-  # end
+  get '/:site_locale/course/:course_locale/*other',
+      to: redirect { |params, _request|
+        "/course/#{params[:course_locale]}/#{params[:other]}"
+      },
+      constraints: {
+        site_locale: /#{I18n.available_locales.join("|")}/,
+        course_locale: /#{I18n.available_locales.join("|")}/
+      }
 
-  # European
-  scope ':locale', locale: /#{I18n.available_locales.reject {|x| x == :"en-us" || x == :"jp"}.join("|")}/ do
+  scope 'admin' do
+    get 'become', to: 'admin/become#become'
+  end
+
+  scope ':locale',
+        locale: /#{I18n.available_locales.reject { |x|
+          x == :'en-us' || x == :jp
+        }.join("|")}/ do
     scope module: 'european' do
-      resources :enrol, only: [:new, :create, :show, :update], as: 'european_enrol'
+      resources :enrol,
+                only: [:new, :create, :show, :update],
+                as: 'european_enrol'
     end
   end
 
-  # Non European
   scope ':locale', locale: /en-us|jp/ do
     scope module: 'non_european' do
-      resources :enrol, only: [:new, :create, :show, :update], as: 'non_european_enrol'
+      resources :enrol,
+                only: [:new, :create, :show, :update],
+                as: 'non_european_enrol'
     end
   end
 
-  # All locales
   scope ':locale', locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users,
                path_names: { sign_in: 'login', sign_out: 'logout' },
-               controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
+               controllers: {
+                 registrations: 'users/registrations',
+                 sessions: 'users/sessions'
+               }
 
     namespace :users do
       get '/course-complete' => 'course_completion#success'
@@ -105,12 +128,16 @@ Rails.application.routes.draw do
       get '/refresher' => 'course_completion#refresher_video'
     end
 
-    # This matches static pages, but ignores Devise authentication paths
-    # (users/login, users/logout, etc.) preventing routing collision.
-    get '/*id' => 'static#show', id: 'home', as: :static, constraints: lambda { |req| 
-      !req.path.include?('/users/') && !req.path.include?('/login') && !req.path.include?('/logout')
-    }
-    
+    get '/*id',
+        to: 'static#show',
+        id: 'home',
+        as: :static,
+        constraints: lambda { |req|
+          !req.path.include?('/users/') &&
+            !req.path.include?('/login') &&
+            !req.path.include?('/logout')
+        }
+
     get '/' => 'static#show', id: 'home'
   end
 
@@ -119,6 +146,7 @@ Rails.application.routes.draw do
   get '/us' => 'static#show', id: 'gatekeeper-us'
   get '/si' => 'static#show', id: 'gatekeeper-slovenian'
   get '/bg' => 'static#show', id: 'gatekeeper-bulgaria'
+
   get '/*id' => 'static#show', id: 'gatekeeper'
   root to: 'static#show', id: 'gatekeeper'
 end
