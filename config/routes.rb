@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   get '/fr', to: redirect('/down-for-maintenence.html')
   get '/fr/*path', to: redirect('/down-for-maintenence.html')
 
-  # Country-origin redirects — only register countries marked redirect: true
+  # Country-origin redirects
   COUNTRY_REDIRECTS.select { |_, value| value[:redirect] }.each_key do |code|
     get "/#{code}", to: 'redirects#country', defaults: { origin: code }
   end
@@ -75,9 +75,7 @@ Rails.application.routes.draw do
   resources :chapters, only: [:index, :show]
   resources :progressions, only: [:create, :show, :index, :update]
 
-  # Supports:
-  # /course/de/menu
-  # /course/fr/menu
+  # Course pages
   get '/course/:locale/*other',
       to: 'static#show',
       id: 'course',
@@ -110,7 +108,7 @@ Rails.application.routes.draw do
     end
   end
 
-  # All locale-specific routes
+  # Localised pages and authentication
   scope ':locale', locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users,
                path_names: {
@@ -128,29 +126,6 @@ Rails.application.routes.draw do
       get '/refresher', to: 'course_completion#refresher_video'
     end
 
-    # IMPORTANT:
-    # Matches /de/course/de/menu before the generic /*id route below.
-    #
-    # Examples:
-    # /de/course/de/menu
-    # /fr/course/fr/menu
-    # /en-us/course/en-us/menu
-    #
-    # Outer locale = website/current locale
-    # course_locale = locale embedded in the course URL
-    get 'course/:course_locale/*other',
-        to: 'static#show',
-        id: 'course',
-        constraints: {
-          course_locale: /#{I18n.available_locales.join("|")}/
-        }
-
-    # Optional: supports /de/course/menu too.
-    get 'course/*other',
-        to: 'static#show',
-        id: 'course'
-
-    # Generic locale static pages.
     get '/*id',
         to: 'static#show',
         id: 'home',
@@ -171,7 +146,6 @@ Rails.application.routes.draw do
   get '/si', to: 'static#show', id: 'gatekeeper-slovenian'
   get '/bg', to: 'static#show', id: 'gatekeeper-bulgaria'
 
-  # Final fallback
   get '/*id', to: 'static#show', id: 'gatekeeper'
   root to: 'static#show', id: 'gatekeeper'
 end
