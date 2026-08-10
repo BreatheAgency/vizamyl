@@ -36,89 +36,142 @@ COUNTRY_REDIRECTS = {
 }.freeze
 
 Rails.application.routes.draw do
-
   mount_roboto
 
   # France maintenance redirect
-  get '/fr' => redirect('/down-for-maintenence.html')
-  get '/fr/*path' => redirect('/down-for-maintenence.html')
+  get '/fr', to: redirect('/down-for-maintenence.html')
+  get '/fr/*path', to: redirect('/down-for-maintenence.html')
 
-  # Country origin redirects — only registers routes where redirect: true
-  COUNTRY_REDIRECTS.select { |_, v| v[:redirect] }.each_key do |code|
+  # Country-origin redirects — only register countries marked redirect: true
+  COUNTRY_REDIRECTS.select { |_, value| value[:redirect] }.each_key do |code|
     get "/#{code}", to: 'redirects#country', defaults: { origin: code }
   end
 
-  get '/upgrade' => 'errors#upgrade'
+  get '/upgrade', to: 'errors#upgrade'
   get 'sitemap.xml', to: 'sitemap#index', defaults: { format: 'xml' }
 
   get 'errors/file_not_found'
   get 'errors/unprocessable'
   get 'errors/internal_server_error'
+
   match '/404', to: 'errors#file_not_found', via: [:get, :post]
   match '/422', to: 'errors#unprocessable', via: [:get, :post]
   match '/500', to: 'errors#internal_server_error', via: [:get, :post]
 
-  devise_for :admin_users, ActiveAdmin::Devise.config.merge(controllers: {sessions: 'admin_users/sessions'})
+  devise_for :admin_users,
+             ActiveAdmin::Devise.config.merge(
+               controllers: { sessions: 'admin_users/sessions' }
+             )
 
   ActiveAdmin.routes(self)
 
-  scope ':type', type: /#{%w(videos texts images interactives question_intros).join("|")}/ do
-    get '/:id' => 'pages#show'
+  scope ':type',
+        type: /#{%w[videos texts images interactives question_intros].join("|")}/ do
+    get '/:id', to: 'pages#show'
   end
 
-  resources :tests, only: %i(show)
-  resources :four_bs, only: %i(show)
-  resources :chapters, only: %i(index show)
-  resources :progressions, only: %i(create show index update)
+  resources :tests, only: [:show]
+  resources :four_bs, only: [:show]
+  resources :chapters, only: [:index, :show]
+  resources :progressions, only: [:create, :show, :index, :update]
 
-  get '/course/:locale/*other' => 'static#show', id: 'course'
+  # Supports:
+  # /course/de/menu
+  # /course/fr/menu
+  get '/course/:locale/*other',
+      to: 'static#show',
+      id: 'course',
+      constraints: {
+        locale: /#{I18n.available_locales.join("|")}/
+      }
 
-  # if !Rails.env.production?
-    scope 'admin' do
-      get 'become', to: 'admin/become#become'
-    end
-  # end
+  scope 'admin' do
+    get 'become', to: 'admin/become#become'
+  end
 
-  # European
-  scope ':locale', locale: /#{I18n.available_locales.reject {|x| x == :"en-us" || x == :"jp"}.join("|")}/ do
+  # European enrolment
+  scope ':locale',
+        locale: /#{I18n.available_locales.reject { |locale|
+          locale == :'en-us' || locale == :jp
+        }.join("|")}/ do
     scope module: 'european' do
-      resources :enrol, only: [:new, :create, :show, :update], as: 'european_enrol'
+      resources :enrol,
+                only: [:new, :create, :show, :update],
+                as: 'european_enrol'
     end
   end
 
-  # Non European
+  # Non-European enrolment
   scope ':locale', locale: /en-us|jp/ do
     scope module: 'non_european' do
-      resources :enrol, only: [:new, :create, :show, :update], as: 'non_european_enrol'
+      resources :enrol,
+                only: [:new, :create, :show, :update],
+                as: 'non_european_enrol'
     end
   end
 
-  # All locales
+  # All locale-specific routes
   scope ':locale', locale: /#{I18n.available_locales.join("|")}/ do
     devise_for :users,
-               path_names: { sign_in: 'login', sign_out: 'logout' },
-               controllers: { registrations: 'users/registrations', sessions: 'users/sessions' }
+               path_names: {
+                 sign_in: 'login',
+                 sign_out: 'logout'
+               },
+               controllers: {
+                 registrations: 'users/registrations',
+                 sessions: 'users/sessions'
+               }
 
     namespace :users do
-      get '/course-complete' => 'course_completion#success'
-      get '/use' => 'course_completion#adjunctive_use_of_quantification'
-      get '/refresher' => 'course_completion#refresher_video'
+      get '/course-complete', to: 'course_completion#success'
+      get '/use', to: 'course_completion#adjunctive_use_of_quantification'
+      get '/refresher', to: 'course_completion#refresher_video'
     end
 
-    # This matches static pages, but ignores Devise authentication paths
-    # (users/login, users/logout, etc.) preventing routing collision.
-    get '/*id' => 'static#show', id: 'home', as: :static, constraints: lambda { |req| 
-      !req.path.include?('/users/') && !req.path.include?('/login') && !req.path.include?('/logout')
-    }
-    
-    get '/' => 'static#show', id: 'home'
+    # IMPORTANT:
+    # Matches /de/course/de/menu before the generic /*id route below.
+    #
+    # Examples:
+    # /de/course/de/menu
+    # /fr/course/fr/menu
+    # /en-us/course/en-us/menu
+    #
+    # Outer locale = website/current locale
+    # course_locale = locale embedded in the course URL
+    get 'course/:course_locale/*other',
+        to: 'static#show',
+        id: 'course',
+        constraints: {
+          course_locale: /#{I18n.available_locales.join("|")}/
+        }
+
+    # Optional: supports /de/course/menu too.
+    get 'course/*other',
+        to: 'static#show',
+        id: 'course'
+
+    # Generic locale static pages.
+    get '/*id',
+        to: 'static#show',
+        id: 'home',
+        as: :static,
+        constraints: lambda { |req|
+          !req.path.include?('/users/') &&
+            !req.path.include?('/login') &&
+            !req.path.include?('/logout')
+        }
+
+    get '/', to: 'static#show', id: 'home'
   end
 
-  get '/be' => 'static#show', id: 'gatekeeper-belgian'
-  get '/ch' => 'static#show', id: 'gatekeeper-swiss'
-  get '/us' => 'static#show', id: 'gatekeeper-us'
-  get '/si' => 'static#show', id: 'gatekeeper-slovenian'
-  get '/bg' => 'static#show', id: 'gatekeeper-bulgaria'
-  get '/*id' => 'static#show', id: 'gatekeeper'
+  # Gatekeeper pages
+  get '/be', to: 'static#show', id: 'gatekeeper-belgian'
+  get '/ch', to: 'static#show', id: 'gatekeeper-swiss'
+  get '/us', to: 'static#show', id: 'gatekeeper-us'
+  get '/si', to: 'static#show', id: 'gatekeeper-slovenian'
+  get '/bg', to: 'static#show', id: 'gatekeeper-bulgaria'
+
+  # Final fallback
+  get '/*id', to: 'static#show', id: 'gatekeeper'
   root to: 'static#show', id: 'gatekeeper'
 end
