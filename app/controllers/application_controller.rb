@@ -30,19 +30,19 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
     if resource.is_a?(AdminUser)
       return admin_root_path
-    else
-      return request.env['omniauth.origin'] ||
-        stored_location_for(resource) ||
-        "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
     end
+
+    request.env['omniauth.origin'] ||
+      stored_location_for(resource) ||
+      "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
   end
 
   def after_sign_up_path_for(resource)
     if resource.is_a?(AdminUser)
       return admin_root_path
-    else
-      return "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
     end
+
+    "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
   end
 
   def set_admin_locale
@@ -94,22 +94,23 @@ class ApplicationController < ActionController::Base
     return current_user.origin == 'de' if current_user
     return false if via_swiss_gatekeeper?
 
-    locale == :de
+    I18n.locale == :de
   end
 
   def users_locale_enrol_path(*args, &block)
     if european_locale
-      return european_enrol_path(*args, &block    else
-      return new_non_european_enrol_path
+      return european_enrol_path(*args, &block)
     end
+
+    new_non_european_enrol_path
   end
 
   def users_locale_enrol_index_path(*args, &block)
     if european_locale
       return european_enrol_index_path(*args, &block)
-    else
-      return non_european_enrol_index_path(*args, &block)
     end
+
+    non_european_enrol_index_path(*args, &block)
   end
 
   private
@@ -166,8 +167,6 @@ class ApplicationController < ActionController::Base
   end
 
   def set_origin
-    if params[:origin].present?
-      session[:origin] = params[:origin]
-    end
+    session[:origin] = params[:origin] if params[:origin].present?
   end
 end
