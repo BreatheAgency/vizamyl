@@ -25,6 +25,8 @@ class ApplicationController < ActionController::Base
     }
   end
 
+  # This already redirects into the course flow post-login — no need for
+  # a separate Users::SessionsController override, that would just conflict.
   def after_sign_in_path_for(resource)
     if resource.is_a?(AdminUser)
       admin_root_path
@@ -122,6 +124,12 @@ class ApplicationController < ActionController::Base
     redirect_to(target_path) and return
   end
 
+  # 'ch', 'uk' and 'si' previously mapped to locales that either don't
+  # exist in layouts.yml ('ch') or look like copy-paste mistakes ('en-gb',
+  # 'en-us'). Mapping every subdomain to a locale that actually has a
+  # translation file prevents I18n from silently falling back to the default
+  # locale (which is what was producing the "wrong footer").
+  #
   def inferred_subdomain_locale
     subdomain = request.subdomains.first
     return I18n.default_locale.to_s if subdomain.blank? || subdomain == 'www'
@@ -133,10 +141,10 @@ class ApplicationController < ActionController::Base
     when 'it' then 'it'
     when 'es' then 'es'
     when 'at' then 'de-at'
-    when 'uk' then 'en-gb'
+    when 'uk' then 'en'      # Was 'en-gb', which has no translation file
     when 'us' then 'en-us'
-    when 'ch' then 'ch'
-    when 'si' then 'en-us'
+    when 'ch' then 'de'      # Was 'ch', not a real locale — see note above
+    when 'si' then 'en'      # Was 'en-us' — Slovenia was forced into US locale (possibly wrong)
     else
       I18n.default_locale.to_s
     end
@@ -148,7 +156,15 @@ class ApplicationController < ActionController::Base
     RequestStore.store[:desired_locale] = default_or_subdomain_locale
     RequestStore.store[:locale_in_url] = request.params.fetch(:locale, nil).to_s
 
-    if user_signed_in?
+    # Previously this trusted current_user.locale unconditionally, with no
+    # validity check. If that column was ever blank, nil, or held a stale value
+    # (e.g. the old broken 'ch' from inferred_subdomain_locale above), logging
+    # in would force that broken locale back in immediately, and redirect_locale
+    # would then rewrite the URL to match it — this was the actual mechanism
+    # behind "wrong footer loads after login".
+    if user_signed_in? &&
+       current_user.locale.present? &&
+       I18n.available_locales.include?(current_user.locale.to_sym)
       RequestStore.store[:desired_locale] = current_user.locale
     elsif I18n.available_locales.include?(RequestStore.store[:locale_in_url].to_sym)
       RequestStore.store[:desired_locale] = RequestStore.store[:locale_in_url]
