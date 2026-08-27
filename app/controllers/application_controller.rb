@@ -151,37 +151,38 @@ class ApplicationController < ActionController::Base
   end
 
   def set_locale
-  default_or_subdomain_locale = inferred_subdomain_locale
+    default_or_subdomain_locale = inferred_subdomain_locale
 
-  RequestStore.store[:desired_locale] = default_or_subdomain_locale
-  RequestStore.store[:locale_in_url] = request.params.fetch(:locale, nil).to_s
+    RequestStore.store[:desired_locale] = default_or_subdomain_locale
+    RequestStore.store[:locale_in_url] = request.params.fetch(:locale, nil).to_s
 
-  # Explicit locale in the URL now takes precedence over a stored
-  # current_user.locale. Previously current_user.locale always won, so a
-  # stale/incorrect stored value would silently override a correct URL,
-  # with no way for the user to fix it themselves.
-  if I18n.available_locales.include?(RequestStore.store[:locale_in_url].to_sym)
-    RequestStore.store[:desired_locale] = RequestStore.store[:locale_in_url]
+    # Explicit locale in the URL now takes precedence over a stored
+    # current_user.locale. Previously current_user.locale always won, so a
+    # stale/incorrect stored value would silently override a correct URL,
+    # with no way for the user to fix it themselves.
+    if I18n.available_locales.include?(RequestStore.store[:locale_in_url].to_sym)
+      RequestStore.store[:desired_locale] = RequestStore.store[:locale_in_url]
 
-    # Self-heal: if this user is signed in and their stored locale doesn't
-    # match the URL they're actually on, update it. This corrects any bad
-    # data left over from the earlier bug without needing a manual fix per
-    # account.
-    if user_signed_in? && current_user.locale != RequestStore.store[:locale_in_url]
-      current_user.update_column(:locale, RequestStore.store[:locale_in_url])
+      # Self-heal: if this user is signed in and their stored locale doesn't
+      # match the URL they're actually on, update it. This corrects any bad
+      # data left over from the earlier bug without needing a manual fix per
+      # account.
+      if user_signed_in? && current_user.locale != RequestStore.store[:locale_in_url]
+        current_user.update_column(:locale, RequestStore.store[:locale_in_url])
+      end
+    elsif user_signed_in? &&
+          current_user.locale.present? &&
+          I18n.available_locales.include?(current_user.locale.to_sym)
+      RequestStore.store[:desired_locale] = current_user.locale
     end
-  elsif user_signed_in? &&
-        current_user.locale.present? &&
-        I18n.available_locales.include?(current_user.locale.to_sym)
-    RequestStore.store[:desired_locale] = current_user.locale
+
+    if params[:force_locale] && I18n.available_locales.include?(params[:force_locale])
+      RequestStore.store[:desired_locale] = params[:force_locale]
+    end
+
+    I18n.locale = RequestStore.store[:desired_locale]
+
+    ActionMailer::Base.default_url_options[:host] = request.host_with_port
+    ActionMailer::Base.default_url_options[:protocol] = request.ssl? ? 'https' : 'http'
   end
-
-  if params[:force_locale] && I18n.available_locales.include?(params[:force_locale])
-    RequestStore.store[:desired_locale] = params[:force_locale]
-  end
-
-  I18n.locale = RequestStore.store[:desired_locale]
-
-  ActionMailer::Base.default_url_options[:host] = request.host_with_port
-  ActionMailer::Base.default_url_options[:protocol] = request.ssl? ? 'https' : 'http'
 end
