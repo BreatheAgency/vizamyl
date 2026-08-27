@@ -14,3 +14,23 @@
     </div>
   </div>
 </footer>
+
+
+
+<footer id="footer__area" class="footer__area">
+  <div class="container">
+    <div class="footer__wrap">
+      <div class="footer__content">
+        <% footer_locale = current_user&.locale.presence || I18n.locale %>
+			  <%= t('layouts.application.copyright_html', locale: footer_locale) %>
+        <%= t('layouts.application.reference_html', locale: footer_locale) %>
+      </div>
+      <div class="footer__logo">
+        <a href="#">
+          <!-- <%= image_tag('ge-logo-purple.png') %> -->
+          <%= image_tag('ge-health-logo.png') %>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
