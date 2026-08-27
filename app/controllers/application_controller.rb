@@ -115,6 +115,11 @@ class ApplicationController < ActionController::Base
 
   private
 
+  # Set origin
+  def set_origin
+    session[:origin] = params[:origin] if params[:origin].present?
+  end
+
   def redirect_locale
     return if request.path.start_with?('/assets')
     return if request.path.start_with?('/course/')
@@ -124,12 +129,12 @@ class ApplicationController < ActionController::Base
     redirect_to(target_path) and return
   end
 
-  # 'ch', 'uk' and 'si' previously mapped to locales that either don't
-  # exist in layouts.yml ('ch') or look like copy-paste mistakes ('en-gb',
-  # 'en-us'). Mapping every subdomain to a locale that actually has a
-  # translation file prevents I18n from silently falling back to the default
-  # locale (which is what was producing the "wrong footer").
-  #
+  # ch, uk, and si were previously linked to language settings that were either wrong or did not exist.
+  # For example, ch did not have a matching language in layouts.yml, while uk and si were using en-gb and en-us, 
+  # which were likely mistakes.
+  # 
+  # Now, each subdomain is linked to a language that actually has a translation file. This prevents the system from 
+  # automatically using the default language, which was causing the wrong footer to appear.
   def inferred_subdomain_locale
     subdomain = request.subdomains.first
     return I18n.default_locale.to_s if subdomain.blank? || subdomain == 'www'
@@ -156,17 +161,12 @@ class ApplicationController < ActionController::Base
     RequestStore.store[:desired_locale] = default_or_subdomain_locale
     RequestStore.store[:locale_in_url] = request.params.fetch(:locale, nil).to_s
 
-    # Explicit locale in the URL now takes precedence over a stored
-    # current_user.locale. Previously current_user.locale always won, so a
-    # stale/incorrect stored value would silently override a correct URL,
-    # with no way for the user to fix it themselves.
+    # The language/locale in the URL now takes priority over the language saved on the user's account.
     if I18n.available_locales.include?(RequestStore.store[:locale_in_url].to_sym)
       RequestStore.store[:desired_locale] = RequestStore.store[:locale_in_url]
 
-      # Self-heal: if this user is signed in and their stored locale doesn't
-      # match the URL they're actually on, update it. This corrects any bad
-      # data left over from the earlier bug without needing a manual fix per
-      # account.
+      # If the user is logged in and their saved language does not match the language in the URL, 
+      # the system automatically updates their saved language.
       if user_signed_in? && current_user.locale != RequestStore.store[:locale_in_url]
         current_user.update_column(:locale, RequestStore.store[:locale_in_url])
       end
