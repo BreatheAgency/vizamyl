@@ -471,19 +471,20 @@ it:
         <p>iv. Ci riserviamo il diritto di trasferire qualsiasi informazione in nostro possesso sul conto dell’utente nel caso in cui vendessimo o trasferissimo tutti o una parte dei nostri beni aziendali (anche attraverso fallimento).</p>
         <p>Non vendiamo né divulghiamo in altro modo informazioni personali sugli utenti del sito Web al di fuori del gruppo GE HealthCare e delle sue affiliate, ad eccezione di quanto descritto in questo documento e nel documento di autorizzazione al contatto.</p>
         <p><b>b. Privacy e archiviazione</b></p>
+        <p>I dati saranno archiviati esclusivamente per finalità amministrative su server situati nell'Unione Europea. L'accesso a tali dati sarà consentito solo in circostanze eccezionali, quali malfunzionamenti del sistema o del sito web, da parte degli amministratori di Sevenstone 
+        (<a href="http://www.sevenstone.co.uk/" target="_blank" rel="noopener noreferrer">www.sevenstone.co.uk</a>), qualora sia necessario svolgere attività di manutenzione o supporto tecnico.</p>
         <p>
-        Questi dati saranno archiviati su un server con sede nell’UE e saranno utilizzati solo per scopi amministrativi, a meno che l’utente non abbia acconsentito ad altri usi, come il loro utilizzo per scopi di marketing. L’utente può aggiornare le proprie preferenze di contatto in qualsiasi momento nella sezione “Il mio account”.  I dati saranno accessibili solo ai dipendenti di GE HealthCare, salvo in caso di guasto del sistema o del sito Web, circostanza in cui gli amministratori con sede a 
-        <a target="_blank" href="http://www.sevenstones.co.uk">www.sevenstones.co.uk</a> 
-        potrebbero essere in grado di accedere ai dati per scopi amministrativi o di manutenzione.  Inoltre, la nostra piattaforma server all’indirizzo 
-        <a target="_blank" href="http://www.heroku.com">www.heroku.com</a>
-        è ospitata e gestita da Amazon Web Services 
-        (<a target="_blank" href="http://aws.amazon.com/">http://aws.amazon.com/</a>), 
-        pertanto i dipendenti Amazon potrebbero avere accesso ai dati se ci fosse una legittima esigenza aziendale di tali privilegi.  Questo privilegio cessa nel momento in cui cessa questa esigenza.  Se il problema consiste nell’avvio o nell’esecuzione di un’applicazione o di un software, nel fornire soluzioni a problemi noti o nel rispondere a domande generali, esso verrà risolto dagli amministratori che si trovano su 
-        <a target="_blank" href="http://www.heroku.com">www.heroku.com</a>
+          La piattaforma server utilizzata è fornita da Heroku
+          (<a href="http://www.heroku.com/" target="_blank" rel="noopener noreferrer">www.heroku.com</a>)
+          ed è ospitata e gestita tramite Amazon Web Services (AWS)
+          (<a href="http://aws.amazon.com/" target="_blank" rel="noopener noreferrer">aws.amazon.com</a>).
+          Pertanto, personale autorizzato di Amazon potrebbe avere accesso ai dati esclusivamente in presenza di una legittima necessità operativa o aziendale. Tali autorizzazioni sono limitate al periodo strettamente necessario al perseguimento di tali finalità e vengono revocate quando non più necessarie.
         </p>
         <p>
-        I dati dell’utente saranno conservati per un periodo di tempo ragionevole,  al fine di valutare se il Prodotto debba essere fornito all’utente per uso clinico a seguito del superamento del test relativo al suo utilizzo sicuro in conformità con il Riassunto delle caratteristiche del prodotto (l’“Esame”).  Qualora l’utente non superasse l’esame, dovremo utilizzare i suoi dati per scopi amministrativi al fine di organizzare una formazione frontale nel suo Paese.  Pertanto, i dati dell’utente saranno utilizzati esclusivamente per finalità amministrative e formative.  Ove l’utente ritenga che i suoi dati siano stati utilizzati in modo scorretto, può contattarci sul sito
-        <a href="mailto:Privacy.GEHC@gehealthcare.com">Privacy.GEHC@gehealthcare.com</a>
+          Le attività di supporto relative all'avvio o al funzionamento di applicazioni e software, alla risoluzione di problemi tecnici noti o alla gestione di richieste di assistenza generale sono svolte dagli amministratori della piattaforma Heroku.
+        </p>
+        <p>
+          Per ulteriori informazioni sul trattamento dei dati personali, si invita a consultare l'Informativa sulla Privacy di GE HealthCare disponibile qui.
         </p>
         <p><b>C. Trasferimento</b></p>
         <p>Le informazioni che l’utente fornisce a GE HealthCare verranno archiviate e trasferite in tutta l’UE e nel Regno Unito, che è considerato un Paese adeguato dalla Commissione europea.  Le informazioni dell’utente saranno accessibili solo al personale interno di GE HealthCare, salvo in caso di guasto o procedimento legale necessario come sopra descritto.</p>
