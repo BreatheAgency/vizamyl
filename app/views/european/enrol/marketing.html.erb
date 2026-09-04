@@ -9,14 +9,6 @@
           <%= simple_form_for(@user, url: users_locale_enrol_index_path, html: { class: 'form' }) do |f| %>
             <%= render 'tmp_storage_fields', f: f %>
             <p><%= t('.marketing_overall_opt_in_description_html') %></p>
-
-            <%= f.input :marketing_overall_opt_in, label: t('.marketing_overall_opt_in_html') %>
-            <p class='small'><%= t('.marketing_overall_opt_in_note_html') %></p>
-            <p><%= t('.marketing_overall_description_html') %></p>
-            <%= f.input :marketing_email_opt_in, label: t('.marketing_email_opt_in_label_html') %>
-            <%= f.input :marketing_post_opt_in, label: t('.marketing_post_opt_in_label_html') %>
-            <%= f.input :marketing_representative_opt_in, label: t('.marketing_representative_opt_in_label_html') %>
-
             <div class="submit d-flex justify-content-end">
               <%= button_tag(type: 'submit', class: 'login btn btn-primary') do %>
                 <%= t('layouts.application.enrol') %>

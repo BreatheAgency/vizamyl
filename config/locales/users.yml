@@ -196,6 +196,24 @@ it:
       marketing:
         title_html: |
           Formazione Vizamyl&#8482;<br>Utilizzo dei dati a fini commerciali e promozionali
+        description_html: |
+          Se supera il corso, GE HealthCare desidererebbe contattarla per fornirle i dettagli, servizi o formazioni supplementari relative al nostro prodotto e che crediamo essere di interesse per Lei.
+        marketing_overall_opt_in_description_html: |
+          Se si desiderano ricevere tali informazioni, spuntare la casella in basso.
+        marketing_overall_opt_in_html: |
+          <span class="marketing-purposes">SÌ, desidero essere contattato a <br>fini commerciali.<span>
+        marketing_overall_opt_in_note_html: |
+          (Spuntare) NOTA BENE: se non si seleziona l’opzione SÌ non si riceveranno informazioni a carattere commerciale.
+        marketing_overall_description_html: |
+          Se si desidera essere contattati a fini commerciali, selezionare una delle opzioni seguenti in modo da metterci a conoscenza del metodo di contatto preferito:
+        marketing_email_opt_in_label_html: |
+          Indirizzo email
+        marketing_post_opt_in_label_html: |
+          Indirizzo postale
+        marketing_representative_opt_in_label_html: |
+          Visita di un rappresentante GE Healthcare<br><span class="obligation">(Non esiste l’obbligo di incontrare un rappresentante).</span>
+        marketing_overall_opt_in_tick_html: |
+          (Spuntare una o più opzioni)
   users:
     course_completion:
       success:
