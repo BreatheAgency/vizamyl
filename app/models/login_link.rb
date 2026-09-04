@@ -7,8 +7,8 @@ class LoginLink
         'at' => { country: 'Austria', url: "#{base_url}", locale: 'de-at', origin: 'at' },
         'be' => { country: 'Belgium', url: "#{base_url}", locale: 'be', origin: 'be' },
         'bg' => { country: 'Bulgaria', url: "#{base_url}", locale: 'bg', origin: 'bg' },
-        'hr' => { country: 'Croatia', url: "#{base_url}", locale: 'en-gb', origin: 'hr' },
-        'cz' => { country: 'Czechia', url: "#{base_url}", locale: 'en-gb', origin: 'cz' },
+        'hr' => { country: 'Croatia', url: "#{base_url}", locale: 'hr', origin: 'hr' },
+        'cz' => { country: 'Czechia', url: "#{base_url}", locale: 'cz', origin: 'cz' },
         'dk' => { country: 'Denmark', url: "#{base_url}", locale: 'en-gb', origin: 'dk' },
         'ee' => { country: 'Estonia', url: "#{base_url}", locale: 'en-gb', origin: 'ee' },
         'fi' => { country: 'Finland', url: "#{base_url}", locale: 'en-gb', origin: 'fi' },
@@ -16,7 +16,7 @@ class LoginLink
         'de' => { country: 'Germany', url: "#{base_url}", locale: 'de', origin: 'de' },
         'gr' => { country: 'Greece', url: "#{base_url}", locale: 'en-gb', origin: 'gr' },
         'hk' => { country: 'Hong Kong', url: "#{base_url}", locale: 'en-us', origin: 'hk' },
-        'hu' => { country: 'Hungary', url: "#{base_url}", locale: 'en-gb', origin: 'hu' },
+        'hu' => { country: 'Hungary', url: "#{base_url}", locale: 'hu', origin: 'hu' },
         'il' => { country: 'Israel', url: "#{base_url}", locale: 'en-us', origin: 'il' },
         'it' => { country: 'Italy', url: "#{base_url}", locale: 'it', origin: 'it' },
         'jp' => { country: 'Japan', url: "#{base_url}", locale: 'jp', origin: 'jp' },        
@@ -25,7 +25,7 @@ class LoginLink
         'no' => { country: 'Norway', url: "#{base_url}", locale: 'en-gb', origin: 'no' },
         'pl' => { country: 'Poland', url: "#{base_url}", locale: 'en-gb', origin: 'pl' },
         'sg' => { country: 'Singapore', url: "#{base_url}", locale: 'en-us', origin: 'sg' },
-        'sk' => { country: 'Slovakia', url: "#{base_url}", locale: 'en-gb', origin: 'sk' },
+        'sk' => { country: 'Slovakia', url: "#{base_url}", locale: 'sk', origin: 'sk' },
         'si' => { country: 'Slovenia', url: "#{base_url}", locale: 'si', origin: 'si' },        
         'kr' => { country: 'South Korea', url: 'http://www.vizamyl.co.kr', locale: 'kr', origin: 'kr' },
         'es' => { country: 'Spain', url: "#{base_url}", locale: 'es', origin: 'es' },
@@ -45,35 +45,3 @@ class LoginLink
     end
   end
 end
-
-
-# class LoginLink
-#   class << self
-#     def col_1
-#       {
-#        'en-us': 'United States',
-#        'en-gb': 'United Kingdom',
-#        'de-at': 'Austria',
-#        'be': 'Belgium / Luxembourg',
-#       }
-#     end
-
-#     def col_2
-#       {
-#        'fr': 'France',
-#        'de': 'Germany',
-#        'it': 'Italy',
-#        'jp': 'Japan',
-#       }
-#     end
-
-#     def col_3
-#       {
-#        'si': 'Slovenia',
-#        'es': 'Spain',
-#        'http://www.vizamyl.co.kr': 'South Korea',
-#        'ch': 'Switzerland'
-#       }
-#     end
-#   end
-# end
