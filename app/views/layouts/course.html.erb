@@ -1,15 +1,11 @@
-<!DOCTYPE html>
 <html class="no-js lt-ie10" lang="en">
-<head>
-  <%= render partial: 'head' %>
+<head></head>
+<body class="course"><%= render partial: 'head' %>
 
   <%= tag(:meta, content: UserSerializer.new(current_user, scope: current_user).to_json, name: 'appData') %>
   <%= tag(:meta, content: Rails.application.secrets.asset_host, name: 'env-asset-host') %>
   <%= tag(:meta, content: Rails.application.secrets.content_host, name: 'env-content-host') %>
   <%= tag(:meta, content: Rails.env, name: 'env-environment') %>
-</head>
-
-<body class="course">
 
   <header id="header__area" class="header__area">
     <div class="container">
@@ -35,12 +31,28 @@
     <div id="course-app"></div>
   </main>
 
+  <%= render partial: 'footer' %>
+
   <%= render partial: 'ga' %>
   <%= render partial: 'rollbar' %>
   <%= render partial: 'pingdom' %>
   <%= javascript_include_tag :course %>
 
-  <%= render partial: 'footer' %>
+  <script>
+    (function () {
+      function removeInjectedVersionFooter() {
+        document.querySelectorAll('body > *').forEach(function (el) {
+          if (el.id !== 'footer__area' && el.textContent && /version\s*\d+(\.\d+)+/i.test(el.textContent)) {
+            el.parentNode.removeChild(el);
+          }
+        });
+      }
+      removeInjectedVersionFooter();
+      new MutationObserver(removeInjectedVersionFooter)
+        .observe(document.body, { childList: true, subtree: true });
+    })();
+  </script>
+
 
 </body>
 </html>
