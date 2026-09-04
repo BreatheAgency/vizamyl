@@ -40,15 +40,20 @@
 
   <script>
     (function () {
-      function removeInjectedVersionFooter() {
-        document.querySelectorAll('body > *').forEach(function (el) {
-          if (el.id !== 'footer__area' && el.textContent && /version\s*\d+(\.\d+)+/i.test(el.textContent)) {
-            el.parentNode.removeChild(el);
+      function removeInjectedVersionText() {
+        var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+        var node;
+        while ((node = walker.nextNode())) {
+          if (/version\s*\d+(\.\d+)+/i.test(node.textContent)) {
+            var el = node.parentElement;
+            if (el && el.closest('#footer__area') === null) {
+              el.remove(); // removes only the smallest element wrapping this text node
+            }
           }
-        });
+        }
       }
-      removeInjectedVersionFooter();
-      new MutationObserver(removeInjectedVersionFooter)
+      removeInjectedVersionText();
+      new MutationObserver(removeInjectedVersionText)
         .observe(document.body, { childList: true, subtree: true });
     })();
   </script>
