@@ -1,30 +1,28 @@
+# app/models/user.rb
 class User < ActiveRecord::Base
-  JAPANESE_DEFAULT_INVITE_CODE = Rails
-                                  .application
-                                  .secrets
-                                  .invite_codes
-                                  .key({type: "default"})
-
-  US_NATIVE_DEFAULT_INVITE_CODE = Rails
-                                   .application
-                                   .secrets
-                                   .invite_codes
-                                   .key({type: "default"})
+  
+  # Safe search for default regional invite codes in your secrets
+  JAPANESE_DEFAULT_INVITE_CODE = Rails.application.secrets.invite_codes.find { |_, v| v[:type] == 'default' && v[:origin] == 'jp' }&.first
+  US_NATIVE_DEFAULT_INVITE_CODE = Rails.application.secrets.invite_codes.find { |_, v| v[:type] == 'default' && v[:origin] == 'us' }&.first
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
   # Singapore & Australian users also share US login screens as they don't have a regional office.
   attr_reader :works_in_us
   attr_accessor :skip_invite_code_validation
+  
   def self.ransackable_associations(auth_object = nil)
     ["progressions", "steps"]
   end
+
   def self.ransackable_attributes(auth_object = nil)
     ["city_or_state", "confirmation_sent_at", "confirmation_token", "confirmed_at", "cookies_opt_in", "created_at", "current_sign_in_at", "current_sign_in_ip", "department", "email", "encrypted_password", "failed_round_one", "failed_round_one_at", "failed_round_two", "failed_round_two_at", "fast_forward", "first_name", "id", "id_value", "in_person", "institution", "invite_code", "last_name", "last_sign_in_at", "last_sign_in_ip", "locale", "marketing_email_opt_in", "marketing_overall_opt_in", "marketing_post_opt_in", "marketing_representative_opt_in", "origin", "passed_round_one", "passed_round_one_at", "passed_round_two", "passed_round_two_at", "primary_specialty", "privacy_opt_in", "remember_created_at", "reset_password_sent_at", "reset_password_token", "salutation", "sign_in_count", "super_user", "terms_and_conditions_opt_in", "unconfirmed_email", "updated_at"]
   end
+
   def works_in_us=(param)
     @works_in_us = (param == "true")
   end
+
   # For non-Europeans, who click 1 marketing consent box instead of 3
   attr_reader :marketing_overall_opt_out
   def marketing_overall_opt_out=(param)
@@ -181,12 +179,12 @@ class User < ActiveRecord::Base
   end
 
   def capitalize_institution
-    self.institution = institution.capitalize
+    self.institution = institution.capitalize if institution.present?
   end
 
   def capitalize_names
-    self.first_name = first_name.capitalize
-    self.last_name = last_name.capitalize
+    self.first_name = first_name.capitalize if first_name.present?
+    self.last_name = last_name.capitalize if last_name.present?
   end
 
   def inherit_invitation
@@ -199,9 +197,6 @@ class User < ActiveRecord::Base
     when 'fast_forward'
       self.fast_forward = true
     end
-
-    # self.origin = invitation.fetch(:origin) #Storing when enrolling
-    # self.locale = invitation.fetch(:locale) #Storing when enrolling
 
     true
   end
