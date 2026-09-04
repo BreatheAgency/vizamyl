@@ -9,16 +9,12 @@
               <p class="accountp1">
                 <%= t('.registrations_description') %>
               </p>
-              <h3 class="textPurple"><%= t('.contact_preferences') %></h3>
-              <p><%= t('.description_html') %></p>
             </div>
           </div>
-
           <div class="col-lg-6">
             <div class="account__form">
               <h1><%= t('.my_details') %></h1>
               <div class="account__solution">
-
                 <span><%= t('activerecord.attributes.user.salutation') %></span>
                 <%= f.collection_radio_buttons(:salutation, t('.salutations'),
                                                :to_s,
@@ -42,7 +38,6 @@
                 <%= f.input :email, required: false, disabled: true %>
                 <%= f.input :password, autocomplete: 'off', hint: t('.leave_blank_if_you_don_t_want_to_change_it'), required: false %>
                 <%= f.input :password_confirmation, required: false %>
-
                 <div class='d-flex justify-content-end mt-5'>
                   <%= button_tag(type: 'submit', class: 'login btn btn-primary') do %>
                     <%= t('.update') %>
