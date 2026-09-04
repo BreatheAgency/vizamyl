@@ -1,63 +1,15 @@
-<html class="no-js lt-ie10" lang="en">
-<head></head>
-<body class="course"><%= render partial: 'head' %>
-
-  <%= tag(:meta, content: UserSerializer.new(current_user, scope: current_user).to_json, name: 'appData') %>
-  <%= tag(:meta, content: Rails.application.secrets.asset_host, name: 'env-asset-host') %>
-  <%= tag(:meta, content: Rails.application.secrets.content_host, name: 'env-content-host') %>
-  <%= tag(:meta, content: Rails.env, name: 'env-environment') %>
-
-  <header id="header__area" class="header__area">
-    <div class="container">
-      <div class="header__wrap">
-
-        <div class="header__nav d-none d-xl-block">
-          <ul>
-            <%= render partial: 'menu_links' %>
-          </ul>
-        </div>
-
-        <div class="burger_menu d-xl-none d-block">
-          <a href="#"><i class="fa-solid fa-bars"></i></a>
-        </div>
-
-        <%= render partial: 'vizamyl_logo' %>
-
-      </div>
-    </div>
-  </header>
-
-  <main id="main" role="main">
-    <div id="course-app"></div>
-  </main>
-
-  <%= render partial: 'footer' %>
-
-  <%= render partial: 'ga' %>
-  <%= render partial: 'rollbar' %>
-  <%= render partial: 'pingdom' %>
-  <%= javascript_include_tag :course %>
-
-  <script>
-    (function () {
-      function removeInjectedVersionText() {
-        var walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
-        var node;
-        while ((node = walker.nextNode())) {
-          if (/version\s*\d+(\.\d+)+/i.test(node.textContent)) {
-            var el = node.parentElement;
-            if (el && el.closest('#footer__area') === null) {
-              el.remove(); // removes only the smallest element wrapping this text node
-            }
-          }
-        }
-      }
-      removeInjectedVersionText();
-      new MutationObserver(removeInjectedVersionText)
-        .observe(document.body, { childList: true, subtree: true });
-    })();
-  </script>
-
-
-</body>
+<!doctype html>
+<!--[if IE 9]><html class="no-js lt-ie10" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js <%= locale %>" lang="en"><!--<![endif]-->
+  <%= render partial: 'head' %>
+  <body class='course'>
+    <%= tag(:meta, content: UserSerializer.new(current_user, scope: current_user).to_json, name: 'appData') %>
+    <%= tag(:meta, content: Rails.application.secrets.asset_host, name: 'env-asset-host') %>
+    <%= tag(:meta, content: Rails.application.secrets.content_host, name: 'env-content-host') %>
+    <%= tag(:meta, content: Rails.env, name: 'env-environment') %>
+    <%= render partial: 'ga' %>
+    <%= render partial: 'rollbar' %>
+    <%= render partial: 'pingdom' %>
+    <%= javascript_include_tag :course %>
+  </body>
 </html>
