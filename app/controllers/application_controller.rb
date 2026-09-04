@@ -2,7 +2,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_action :set_locale, unless: :devise_controller?
+  before_action :set_locale,
   before_action :set_origin, unless: :devise_controller?
   before_action :redirect_locale, unless: :devise_controller?
 
