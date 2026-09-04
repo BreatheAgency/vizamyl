@@ -130,10 +130,10 @@ class ApplicationController < ActionController::Base
   end
 
   # ch, uk, and si were previously linked to language settings that were either wrong or did not exist.
-  # For example, ch did not have a matching language in layouts.yml, while uk and si were using en-gb and en-us, 
+  # For example, ch did not have a matching language in layouts.yml, while uk and si were using en-gb and en-us,
   # which were likely mistakes.
-  # 
-  # Now, each subdomain is linked to a language that actually has a translation file. This prevents the system from 
+  #
+  # Now, each subdomain is linked to a language that actually has a translation file. This prevents the system from
   # automatically using the default language, which was causing the wrong footer to appear.
   def inferred_subdomain_locale
     subdomain = request.subdomains.first
@@ -164,8 +164,9 @@ class ApplicationController < ActionController::Base
     # The language/locale in the URL now takes priority over the language saved on the user's account.
     if I18n.available_locales.include?(RequestStore.store[:locale_in_url].to_sym)
       RequestStore.store[:desired_locale] = RequestStore.store[:locale_in_url]
+      session[:locale] = RequestStore.store[:locale_in_url]   # persist locale from URL
 
-      # If the user is logged in and their saved language does not match the language in the URL, 
+      # If the user is logged in and their saved language does not match the language in the URL,
       # the system automatically updates their saved language.
       if user_signed_in? && current_user.locale != RequestStore.store[:locale_in_url]
         current_user.update_column(:locale, RequestStore.store[:locale_in_url])
@@ -174,6 +175,9 @@ class ApplicationController < ActionController::Base
           current_user.locale.present? &&
           I18n.available_locales.include?(current_user.locale.to_sym)
       RequestStore.store[:desired_locale] = current_user.locale
+    elsif session[:locale].present? &&
+          I18n.available_locales.include?(session[:locale].to_sym)   # fallback for locale-less/guest requests
+      RequestStore.store[:desired_locale] = session[:locale]
     end
 
     if params[:force_locale] && I18n.available_locales.include?(params[:force_locale])
