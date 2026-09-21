@@ -9,8 +9,11 @@ require 'public_suffix'
 Rails.application.config.session_store :cookie_store, 
   key: '_vizamyl_session',
   same_site: :lax, # Explicitly lax for cross-app redirects
+    secure: Rails.env.production? || Rails.env.staging?
+
+=begin
   # Enforce encrypted cookies only in production/staging environments
-  secure: Rails.env.production? || Rails.env.staging?, 
+  secure: Rails.env.production? ||= Rails.env.staging?, 
   domain: ->(request) {
     host = request.host
 
@@ -25,3 +28,4 @@ Rails.application.config.session_store :cookie_store,
       nil
     end
   } 
+=end
