@@ -1,14 +1,14 @@
 source 'https://rubygems.org'
-ruby '3.1.0'
+ruby '3.4.9'
 
 gem 'activeadmin'
 gem 'active_admin_editor', github: 'ejholmes/active_admin_editor'
-gem 'sassc-rails'
+gem 'dartsass-rails'
 gem 'rake', '~> 13.2'
-gem 'rails', '~> 7.0'
+gem 'rails', '~> 8.0.0'
 gem 'json', '~> 2.5'
 gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
-gem 'globalize', '~> 6.0'
+gem 'globalize', '~> 7.0'
 gem 'i18n-js', '~> 3.0', '>= 3.0.2'
 gem 'passenger', '>= 5.0.8'
 gem 'ember-rails', '~> 0.16'
@@ -19,18 +19,17 @@ gem 'mime-types', require: 'mime/types/full'
 # gem 'mini_racer'
 gem 'ffi', '1.16.3'
 gem "simple_form", "~> 4.0"
-gem "font-awesome-sass", "~> 6.4.2"
 
 gem 'bootstrap', '~> 5.3.2'
 # gem 'mini_racer', '~> 0.6.0'
 
-gem 'oj', '~> 2.16'
+gem 'oj', '~> 3.17'
 gem 'pg'
 gem 'wicked'
 gem 'roboto'
 gem 'rollbar'
 gem 'uglifier'
-gem 'rails-i18n'
+gem 'rails-i18n', '~> 8.0'
 gem 'devise-i18n'
 gem 'prawn-rails'
 gem 'browsernizer'
@@ -47,12 +46,12 @@ gem 'rack-canonical-host'
 gem 'active_model_serializers'
 gem 'puma'
 gem "sprockets", "<4"
+gem 'sprockets-rails'
 gem 'videojs_rails'
 gem 'es5-shim-rails'
 gem 'normalize-rails', '~> 3.0.3'
 gem 'foundation-rails', '~> 5.5'
 gem 'autoprefixer-rails'
-
 
 group :development do
   gem "letter_opener"
@@ -60,7 +59,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'brakeman', require: false
-  gem 'bullet'
+  gem 'bullet', '~> 8.0'
   # gem 'meta_request' # Not supported with active admin and used only for development purposes.
   gem 'pry-byebug'
   # gem 'quiet_assets'
@@ -73,4 +72,3 @@ end
 group :sandbox, :staging, :production do
   gem 'rails_12factor'
 end
-
