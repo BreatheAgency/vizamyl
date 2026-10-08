@@ -10,9 +10,9 @@
           <div id="video-viewport" class="col-md-7 flex-row justify-content-start">
             <%- source = I18n.locale[0..1].upcase + '_AUofQ' %>
             <%= video_tag([
-              "//#{Rails.application.secrets.content_host}/videos/#{source}/playlist.m3u8",
-              "//#{Rails.application.secrets.content_host}/videos/#{source}/web.mp4",
-              "//#{Rails.application.secrets.content_host}/videos/#{source}/web.webm"
+              "//#{Rails.configuration.x.vizamyl.content_host}/videos/#{source}/playlist.m3u8",
+              "//#{Rails.configuration.x.vizamyl.content_host}/videos/#{source}/web.mp4",
+              "//#{Rails.configuration.x.vizamyl.content_host}/videos/#{source}/web.webm"
             ], controls: true, autobuffer: true, size: '550x413') %>
           </div>
         </div>

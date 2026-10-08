@@ -43,9 +43,9 @@ ActiveAdmin.register Video, namespace: :content do
       row(:mandatory) { |model| model['mandatory'] ? status_tag('yes',:ok)  : status_tag('no',:ok) }
       row :source do |video|
         video_tag([
-          "//#{Rails.application.secrets.content_host}/videos/#{video.source}/playlist.m3u8",
-          "//#{Rails.application.secrets.content_host}/videos/#{video.source}/web.mp4",
-          "//#{Rails.application.secrets.content_host}/videos/#{video.source}/web.webm"
+          "//#{Rails.configuration.x.vizamyl.content_host}/videos/#{video.source}/playlist.m3u8",
+          "//#{Rails.configuration.x.vizamyl.content_host}/videos/#{video.source}/web.mp4",
+          "//#{Rails.configuration.x.vizamyl.content_host}/videos/#{video.source}/web.webm"
         ], controls: true, autobuffer: true, size: '550x413')
       end
       row :abbreviations

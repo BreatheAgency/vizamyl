@@ -2,8 +2,8 @@
 class User < ActiveRecord::Base
   
   # Safe search for default regional invite codes in your secrets
-  JAPANESE_DEFAULT_INVITE_CODE = Rails.application.secrets.invite_codes.find { |_, v| v[:type] == 'default' && v[:origin] == 'jp' }&.first
-  US_NATIVE_DEFAULT_INVITE_CODE = Rails.application.secrets.invite_codes.find { |_, v| v[:type] == 'default' && v[:origin] == 'us' }&.first
+  JAPANESE_DEFAULT_INVITE_CODE = Rails.configuration.x.vizamyl.invite_codes.find { |_, v| v[:type] == 'default' && v[:origin] == 'jp' }&.first
+  US_NATIVE_DEFAULT_INVITE_CODE = Rails.configuration.x.vizamyl.invite_codes.find { |_, v| v[:type] == 'default' && v[:origin] == 'us' }&.first
 
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable
 
@@ -56,7 +56,7 @@ class User < ActiveRecord::Base
     return if skip_invite_code_validation
 
     if required_for_step?(:details)
-      unless Rails.application.secrets.invite_codes.include?(invite_code&.to_sym)
+      unless Rails.configuration.x.vizamyl.invite_codes.include?(invite_code&.to_sym)
         errors.add(
           :invite_code,
           :invalid,
@@ -188,7 +188,7 @@ class User < ActiveRecord::Base
   end
 
   def inherit_invitation
-    invitation = Rails.application.secrets.invite_codes[self.invite_code&.to_sym]
+    invitation = Rails.configuration.x.vizamyl.invite_codes[self.invite_code&.to_sym]
     return unless invitation.present?
 
     case invitation.fetch(:type)
