@@ -8,7 +8,7 @@ gem 'rake', '~> 13.2'
 gem 'rails', '~> 8.0.0'
 gem 'nokogiri', '~> 1.18'
 gem 'json', '~> 2.5'
-gem 'devise', '~> 5.0'
+gem 'devise', '~> 4.9'
 gem 'globalize', '~> 7.0'
 gem 'i18n-js', '~> 3.0', '>= 3.0.2'
 gem 'passenger', '>= 5.0.8'
@@ -71,5 +71,5 @@ group :test, :development do
 end
 
 group :sandbox, :staging, :production do
-  gem 'rails_12factor'
+  # gem 'rails_12factor'
 end
