@@ -6,7 +6,7 @@
 ENV['SECRET_KEY_BASE'] ||= ENV['VIZAMYL_KEY_BASE']
 
 Rails.application.config.session_store :cookie_store,
-  key: '_vizamyl_session',
+  key: '_vizamyl_session_v2',
   same_site: :lax,
   secure: Rails.env.production? || Rails.env.staging?
 
