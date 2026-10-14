@@ -2,14 +2,13 @@
 # Be sure to restart your server when you modify this file.
 
 # Tell Rails to use your custom Heroku key if the standard one isn't present
+# Fallback for environments that provide VIZAMYL_KEY_BASE instead.
 ENV['SECRET_KEY_BASE'] ||= ENV['VIZAMYL_KEY_BASE']
 
-require 'public_suffix'
-
-Rails.application.config.session_store :cookie_store, 
+Rails.application.config.session_store :cookie_store,
   key: '_vizamyl_session',
-  same_site: :lax, # Explicitly lax for cross-app redirects
-    secure: Rails.env.production? || Rails.env.staging?
+  same_site: :lax,
+  secure: Rails.env.production? || Rails.env.staging?
 
 =begin
   # Enforce encrypted cookies only in production/staging environments

@@ -50,5 +50,7 @@ module Vizamyl
     config.assets.initialize_on_precompile = true
 
     config.exceptions_app = self.routes
+
+    config.load_defaults 8.0
   end
 end
