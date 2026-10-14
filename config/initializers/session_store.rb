@@ -2,7 +2,7 @@
 # Be sure to restart your server when you modify this file.
 
 # Fallback: use VIZAMYL_KEY_BASE when SECRET_KEY_BASE isn't set.
-ENV['SECRET_KEY_BASE'] ||= ENV['VIZAMYL_KEY_BASE']
+#ENV['SECRET_KEY_BASE'] ||= ENV['VIZAMYL_KEY_BASE']
 
 # Session cookie settings.
 #
