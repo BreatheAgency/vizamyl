@@ -13,4 +13,5 @@
 Rails.application.config.session_store :cookie_store,
   key: '_vizamyl_session',
   same_site: :lax,
-  secure: Rails.env.production? || Rails.env.staging?
+  secure: Rails.env.production? || Rails.env.staging?,
+  httponly: true
