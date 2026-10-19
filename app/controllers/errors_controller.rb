@@ -15,4 +15,4 @@ class ErrorsController < ApplicationController
 
   def upgrade
   end
-e
+end
