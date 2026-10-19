@@ -4,6 +4,7 @@ class ErrorsController < ApplicationController
   skip_before_action :redirect_locale
 
   def file_not_found
+    render status: :not_found
   end
 
   def unprocessable
@@ -14,5 +15,4 @@ class ErrorsController < ApplicationController
 
   def upgrade
   end
-
-end
+e
