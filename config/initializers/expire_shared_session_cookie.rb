@@ -22,7 +22,7 @@ class ExpireSharedSessionCookie
                  "expires=Thu, 01 Jan 1970 00:00:00 GMT; secure; samesite=lax"
         existing = headers["Set-Cookie"]
         list = existing.is_a?(Array) ? existing : existing.to_s.split("\n")
-        headers["Set-Cookie"] = list + [expire]
+        headers["Set-Cookie"] = (list + [expire]).join("\n")
       end
     end
 
