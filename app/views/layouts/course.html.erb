@@ -4,7 +4,7 @@
   <%= render partial: 'head' %>
   <body class='course'>
     <%= tag(:meta, content: UserSerializer.new(current_user, scope: current_user).to_json, name: 'appData') %>
-    <%= tag(:meta, content: Rails.configuration.x.site_settings.asset_host, name: 'env-asset-host') %>
+    <%= tag(:meta, content: request.host_with_port, name: 'env-asset-host') %>
     <%= tag(:meta, content: Rails.configuration.x.vizamyl.content_host, name: 'env-content-host') %>
     <%= tag(:meta, content: Rails.env, name: 'env-environment') %>
     <%= render partial: 'ga' %>

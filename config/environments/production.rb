@@ -51,7 +51,9 @@ Rails.application.configure do
   config.secret_key_base = ENV["SECRET_KEY_BASE"].presence || ENV["VIZAMYL_KEY_BASE"].presence
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = "//#{Rails.application.config_for(:secrets).asset_host}"
+  config.action_controller.asset_host = ->(source, request = nil) {
+  request ? "//#{request.host_with_port}" : nil
+}
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
