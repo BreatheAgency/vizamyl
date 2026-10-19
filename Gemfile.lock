@@ -487,7 +487,7 @@ DEPENDENCIES
   browsernizer
   bullet (~> 8.0)
   dartsass-rails
-  devise (~> 4.9)
+  devise (~> 4.9.4)
   devise-i18n
   devise-i18n-views
   email_validator
