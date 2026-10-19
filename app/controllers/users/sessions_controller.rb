@@ -12,8 +12,10 @@ class Users::SessionsController < Devise::SessionsController
   private
 
   def log_session_state
+    raw_cookie = request.headers["Cookie"].to_s
     Rails.logger.info(
-      "SESSION_DEBUG cookies=#{request.cookies.keys.inspect} " \
+      "SESSION_DEBUG session_cookie_count=#{raw_cookie.scan('_vizamyl_session=').size} " \
+      "cookies=#{request.cookies.keys.inspect} " \
       "session_keys=#{session.keys.inspect} " \
       "csrf_in_session=#{session[:_csrf_token].present?}"
     )
