@@ -29,7 +29,7 @@ ActiveAdmin.register ImageSource, namespace: :content do
   show do
     attributes_table do
       row :source do |image|
-        image_tag("//#{Rails.application.secrets.content_host}/images/#{image.source}.jpg")
+        image_tag("//#{Rails.configuration.x.vizamyl.content_host}/images/#{image.source}.jpg")
       end
     end
   end
