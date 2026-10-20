@@ -19,24 +19,16 @@ module Vizamyl
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
-    # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
-    # Run 'rake -D time' for a list of tasks for finding time zone names. Default is UTC.
-    # config.time_zone = 'Central Time (US & Canada)'
-
-    config.vizamyl_base_url = case ENV['RACK_ENV']
-    when 'staging'
-      'https://stg-www.readvizamyl.com'
-    when 'production'
-      'https://es.readvizamyl.com'
-    else
-      'http://localhost:3000' # Default for other environments
-    end
-
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
-    config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+    # Set the default locale and load translations.
+    config.i18n.load_path += Dir[
+      Rails.root.join('config', 'locales', '*.{rb,yml}').to_s
+    ]
     config.i18n.default_locale = :en
+
     config.before_configuration do
-      I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.{rb,yml}').to_s]
+      I18n.load_path += Dir[
+        Rails.root.join('config', 'locales', '*.{rb,yml}').to_s
+      ]
       I18n.locale = :en
       I18n.default_locale = :en
       I18n.reload!
@@ -44,9 +36,13 @@ module Vizamyl
 
     config.i18n.enforce_available_locales = false
 
-    config.i18n.available_locales = [:en, :'en-us', :'en-gb', :'de-at', :de, :fr, :it, :es, :jp]
+    config.i18n.available_locales = [
+      :en, :'en-us', :'en-gb', :'de-at', :de, :fr, :it, :es, :jp
+    ]
 
-    config.i18n.fallbacks = [:'en-us', :'en-gb', :en, :'de-at', :de, :pt, :it, :fr, :es, :nl, :jp]
+    config.i18n.fallbacks = [
+      :'en-us', :'en-gb', :en, :'de-at', :de, :pt, :it, :fr, :es, :nl, :jp
+    ]
 
     config.assets.precompile += %w(video-js.swf vjs.eot vjs.svg vjs.ttf vjs.woff)
     config.assets.precompile += %w(course.js libs.js)
@@ -54,5 +50,7 @@ module Vizamyl
     config.assets.initialize_on_precompile = true
 
     config.exceptions_app = self.routes
+
+    config.load_defaults 8.0
   end
 end
