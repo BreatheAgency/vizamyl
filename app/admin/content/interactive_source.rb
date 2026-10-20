@@ -33,7 +33,7 @@ ActiveAdmin.register InteractiveSource, namespace: :content do
     attributes_table do
       row :label
       row :source do |image|
-        image_tag("//#{Rails.application.secrets.content_host}/interactives/#{image.source}.jpg")
+        image_tag("//#{Rails.configuration.x.vizamyl.content_host}/interactives/#{image.source}.jpg")
       end
       row :height
     end
