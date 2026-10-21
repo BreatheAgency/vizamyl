@@ -16,7 +16,6 @@ $link-shade-percentage: 30%;
 $link-hover-color: shift-color($link-color, $link-shade-percentage);
 
 @import "bootstrap";
-@import "font-awesome";
 @import "style";
 @import "responsive";
 @import "course";
