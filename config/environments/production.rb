@@ -29,7 +29,8 @@ Rails.application.configure do
 
   # Compress JavaScripts and CSS.
   config.assets.js_compressor = NoCompression.new
-  config.assets.css_compressor = :sass
+  #config.assets.css_compressor = :sass
+  config.assets.css_compressor = nil
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
@@ -46,8 +47,14 @@ Rails.application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
+  # Set one explicit production secret
+  #config.secret_key_base = ENV["SECRET_KEY_BASE"].presence
+  config.secret_key_base = ENV["SECRET_KEY_BASE"].presence || ENV["VIZAMYL_KEY_BASE"].presence
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = "//#{Rails.application.secrets.asset_host}"
+  config.action_controller.asset_host = ->(source, request = nil) {
+  request ? "//#{request.host_with_port}" : nil
+}
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
@@ -82,5 +89,4 @@ Rails.application.configure do
     host: 'localhost:3000',
     protocol: 'http'
   }
-  
 end

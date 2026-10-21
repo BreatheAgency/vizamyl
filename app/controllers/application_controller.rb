@@ -1,10 +1,9 @@
 # app/controllers/application_controller.rb
 class ApplicationController < ActionController::Base
-  protect_from_forgery
+  #protect_from_forgery
+  protect_from_forgery with: :exception
 
-  # Bypass our locale and country checks if we are on a Devise auth page.
-  # This stops /users/login from getting hijacked and redirecting to the country selector.
-  before_action :set_locale, unless: :devise_controller?
+  before_action :set_locale
   before_action :set_origin, unless: :devise_controller?
   before_action :redirect_locale, unless: :devise_controller?
 
@@ -27,22 +26,24 @@ class ApplicationController < ActionController::Base
     }
   end
 
+  # This already redirects into the course flow post-login — no need for
+  # a separate Users::SessionsController override, that would just conflict.
   def after_sign_in_path_for(resource)
     if resource.is_a?(AdminUser)
-      return admin_root_path
+      admin_root_path
+    else
+      request.env['omniauth.origin'] ||
+        stored_location_for(resource) ||
+        "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
     end
-
-    request.env['omniauth.origin'] ||
-      stored_location_for(resource) ||
-      "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
   end
 
   def after_sign_up_path_for(resource)
     if resource.is_a?(AdminUser)
-      return admin_root_path
+      admin_root_path
+    else
+      "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
     end
-
-    "/course/#{I18n.locale}/#{resource.latest_step.page_type.underscore.dasherize.downcase}/#{resource.latest_step.page_id}"
   end
 
   def set_admin_locale
@@ -51,7 +52,7 @@ class ApplicationController < ActionController::Base
 
   def reject_admin
     if current_admin_user
-      flash[:error] = "You must logout of this Admin area before you can sign in as a regular user."
+      flash[:error] = 'You must logout of this Admin area before you can sign in as a regular user.'
       redirect_to(admin_root_path)
     end
   end
@@ -94,26 +95,31 @@ class ApplicationController < ActionController::Base
     return current_user.origin == 'de' if current_user
     return false if via_swiss_gatekeeper?
 
-    I18n.locale == :de
+    locale == :de
   end
 
   def users_locale_enrol_path(*args, &block)
     if european_locale
-      return european_enrol_path(*args, &block)
+      european_enrol_path(*args, &block)
+    else
+      new_non_european_enrol_path
     end
-
-    new_non_european_enrol_path
   end
 
   def users_locale_enrol_index_path(*args, &block)
     if european_locale
-      return european_enrol_index_path(*args, &block)
+      european_enrol_index_path(*args, &block)
+    else
+      non_european_enrol_index_path(*args, &block)
     end
-
-    non_european_enrol_index_path(*args, &block)
   end
 
   private
+
+  # Set origin
+  def set_origin
+    session[:origin] = params[:origin] if params[:origin].present?
+  end
 
   def redirect_locale
     return if request.path.start_with?('/assets')
@@ -124,6 +130,12 @@ class ApplicationController < ActionController::Base
     redirect_to(target_path) and return
   end
 
+  # ch, uk, and si were previously linked to language settings that were either wrong or did not exist.
+  # For example, ch did not have a matching language in layouts.yml, while uk and si were using en-gb and en-us,
+  # which were likely mistakes.
+  #
+  # Now, each subdomain is linked to a language that actually has a translation file. This prevents the system from
+  # automatically using the default language, which was causing the wrong footer to appear.
   def inferred_subdomain_locale
     subdomain = request.subdomains.first
     return I18n.default_locale.to_s if subdomain.blank? || subdomain == 'www'
@@ -135,10 +147,10 @@ class ApplicationController < ActionController::Base
     when 'it' then 'it'
     when 'es' then 'es'
     when 'at' then 'de-at'
-    when 'uk' then 'en-gb'
+    when 'uk' then 'en'      # Was 'en-gb', which has no translation file
     when 'us' then 'en-us'
-    when 'ch' then 'ch'
-    when 'si' then 'en-us'
+    when 'ch' then 'de'      # Was 'ch', not a real locale — see note above
+    when 'si' then 'en'      # Was 'en-us' — Slovenia was forced into US locale (possibly wrong)
     else
       I18n.default_locale.to_s
     end
@@ -150,10 +162,23 @@ class ApplicationController < ActionController::Base
     RequestStore.store[:desired_locale] = default_or_subdomain_locale
     RequestStore.store[:locale_in_url] = request.params.fetch(:locale, nil).to_s
 
-    if user_signed_in?
-      RequestStore.store[:desired_locale] = current_user.locale
-    elsif I18n.available_locales.include?(RequestStore.store[:locale_in_url].to_sym)
+    # The language/locale in the URL now takes priority over the language saved on the user's account.
+    if I18n.available_locales.include?(RequestStore.store[:locale_in_url].to_sym)
       RequestStore.store[:desired_locale] = RequestStore.store[:locale_in_url]
+      session[:locale] = RequestStore.store[:locale_in_url]   # persist locale from URL
+
+      # If the user is logged in and their saved language does not match the language in the URL,
+      # the system automatically updates their saved language.
+      if user_signed_in? && current_user.locale != RequestStore.store[:locale_in_url]
+        current_user.update_column(:locale, RequestStore.store[:locale_in_url])
+      end
+    elsif user_signed_in? &&
+          current_user.locale.present? &&
+          I18n.available_locales.include?(current_user.locale.to_sym)
+      RequestStore.store[:desired_locale] = current_user.locale
+    elsif session[:locale].present? &&
+          I18n.available_locales.include?(session[:locale].to_sym)   # fallback for locale-less/guest requests
+      RequestStore.store[:desired_locale] = session[:locale]
     end
 
     if params[:force_locale] && I18n.available_locales.include?(params[:force_locale])
@@ -164,9 +189,5 @@ class ApplicationController < ActionController::Base
 
     ActionMailer::Base.default_url_options[:host] = request.host_with_port
     ActionMailer::Base.default_url_options[:protocol] = request.ssl? ? 'https' : 'http'
-  end
-
-  def set_origin
-    session[:origin] = params[:origin] if params[:origin].present?
   end
 end
