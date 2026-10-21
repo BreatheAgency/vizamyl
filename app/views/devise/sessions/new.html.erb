@@ -10,7 +10,13 @@
               <%= simple_format t('.intro') %>
             </p>
           </div>
-          
+
+          <% if flash[:alert].present? %>
+            <div class="alert alert-danger" role="alert" aria-live="assertive">
+              <%= alert %>
+            </div>
+          <% end %>
+
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: 'form' }) do |f| %>
             <%= f.error_notification %>
             <%= f.input :email, required: true, autofocus: true %>
@@ -34,13 +40,13 @@
           <% end %>
 
           <script>
-           $("#fake_check").change(function() {
-             if(this.checked) {
-               $("#user_remember_me").prop( "checked", true );
-             } else {
-               $("#user_remember_me").prop( "checked", false );
-             }
-           });
+            $("#fake_check").change(function() {
+              if (this.checked) {
+                $("#user_remember_me").prop("checked", true);
+              } else {
+                $("#user_remember_me").prop("checked", false);
+              }
+            });
           </script>
         </div>
       </div>
