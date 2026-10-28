@@ -446,7 +446,7 @@ it:
       right:
         body_html: |
     resources:
-      download: Scaricamento
+      download: Download
       smpc_title: Vizamyl SmPC IT
       rainbow_title: Scala di colori arcobaleno valori RVB
     contact:
