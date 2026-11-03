@@ -8,8 +8,8 @@ Course.Page = DS.Model.extend({
   step: DS.belongsTo('step'),
   progression: DS.belongsTo('progression'),
 
-  progress: function(){
-    this.get('progression').get('amount')
+  progress: function() {
+    return this.get('progression.amount');
   }.property('progression.amount'),
 
   available: function() {
