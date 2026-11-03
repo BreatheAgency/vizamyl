@@ -8,6 +8,9 @@ end
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
+  #
+  config.i18n.available_locales = [:en, :'en-us', :'en-gb', :'de-at', :de, :fr, :it, :es, :jp]
+
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -41,7 +44,7 @@ Rails.application.configure do
   config.assets.digest = true
 
   # Version of your assets, change this if you want to expire all your assets.
-  config.assets.version = "5.2.#{(Random.rand(6) + 1)}.#{Time.now.hour}"
+  config.assets.version = "5.2.#{Time.now.day}"
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = 'X-Sendfile' # for apache
@@ -63,7 +66,7 @@ Rails.application.configure do
   # config.cache_store = :mem_cache_store
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
-  config.action_controller.asset_host = "//#{Rails.application.secrets.asset_host}"
+  config.action_controller.asset_host = "//#{Rails.application.config_for(:secrets).fetch("asset_host")}"
 
   # Precompile additional assets.
   # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
@@ -102,5 +105,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #
-  config.action_mailer.default_url_options = { host: 'vizamyl-sandbox.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'stg-www.readvizamyl.com' }
 end

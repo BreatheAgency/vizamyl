@@ -17,19 +17,31 @@ class ChaptersController < JsonController
     steps_json = ActiveModelSerializers::SerializableResource.new(
       steps,
       each_serializer: StepSerializer,
-      scope: current_user  # Pass current_user as scope
-    )
+      scope: current_user
+    ).as_json
 
-    render json: { chapters: chapters_json, steps: steps_json }, root: false
+    render_json(chapters: chapters_json, steps: steps_json)
   end
-
 
   def show
     @chapter = Chapter.includes(:translations, steps: [page: [:translations]]).find(params[:id])
-    render json: {
+
+    steps_json = ActiveModelSerializers::SerializableResource.new(
+      @chapter.steps,
+      each_serializer: StepSerializer,
+      scope: current_user
+    ).as_json
+
+    render_json(
       chapter: @chapter.attributes.merge(step_ids: @chapter.steps.pluck(:id)),
-      steps: ActiveModelSerializers::SerializableResource.new(@chapter.steps, each_serializer: StepSerializer)
-    }, root: false
+      steps: steps_json
+    )
   end
 
+  private
+
+  # Bypasses the serializer gem's render hook, which raises FrozenError on Rails 8.
+  def render_json(payload)
+    render body: payload.to_json, content_type: "application/json"
+  end
 end

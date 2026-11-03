@@ -154,7 +154,7 @@ ActiveAdmin.setup do |config|
 
   # == Setting a Favicon
   #
-  config.favicon = "//#{Rails.application.secrets.asset_host}/favicon-128.png"
+  config.favicon = "//#{Rails.application.config_for(:secrets).asset_host}/favicon-128.png"
 
 
   # == Removing Breadcrumbs
