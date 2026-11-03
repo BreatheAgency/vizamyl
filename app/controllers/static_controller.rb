@@ -17,7 +17,11 @@ class StaticController < ApplicationController
   end
 
   def force_course_authentication!
-    authenticate_user! if params[:id] == 'course'
+    return unless params[:id] == 'course'
+    return if user_signed_in?
+
+    store_location_for(:user, request.fullpath)
+    redirect_to new_user_session_path(locale: params[:locale])
   end
 
   def layout_for_page
